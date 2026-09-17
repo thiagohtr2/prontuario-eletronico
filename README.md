@@ -35,11 +35,18 @@ O app sobe em `http://localhost:5173`.
 
 ## Configuração do Supabase
 
+O banco do piloto já está criado no projeto **aurelia**
+(`fybdlgbyxzfuzmhhrexp`), com as duas migrações aplicadas.
+
+Para recriar o banco do zero em outro projeto:
+
 1. Crie um projeto no [Supabase](https://supabase.com).
-2. No **SQL Editor**, execute o conteúdo de `supabase/migrations/0001_prontuario_init.sql`.
-   Esse script cria as tabelas `doctors`, `clinics`, `patients` e `encounters`, os índices,
-   os gatilhos de `updated_at`, a criação automática do perfil do médico no cadastro e as
-   políticas de Row Level Security.
+2. No **SQL Editor**, execute na ordem os arquivos de `supabase/migrations/`:
+   - `0001_prontuario_init.sql` — tabelas `doctors`, `clinics`, `patients` e `encounters`,
+     índices, gatilhos de `updated_at`, criação automática do perfil do médico no cadastro
+     e políticas de Row Level Security.
+   - `0002_endurece_funcoes_e_indices.sql` — fixa o `search_path` das funções, remove o
+     acesso público às funções de gatilho e indexa a chave estrangeira de clínica.
 3. Em **Project Settings → API**, copie a **Project URL** e a **anon/publishable key**.
 4. Preencha o `.env`:
 
