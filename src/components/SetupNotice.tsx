@@ -1,8 +1,9 @@
 import { Settings2 } from 'lucide-react'
-import { missingEnvVars } from '../lib/supabase'
+import { configuredUrl, missingEnvVars, urlProblem } from '../lib/supabase'
 
 /**
- * Exibido quando as credenciais do Supabase não chegaram ao site.
+ * Exibido quando as credenciais do Supabase não chegaram ao site, ou chegaram
+ * com um endereço inválido.
  *
  * As variáveis VITE_* são embutidas no JavaScript durante o build, não lidas
  * quando a página abre. Por isso, cadastrá-las no Netlify só tem efeito no
@@ -17,30 +18,50 @@ export function SetupNotice() {
         </div>
         <h1 className="text-xl font-semibold text-ink">Configuração pendente</h1>
 
-        <p className="mt-2 text-sm leading-6 text-muted">
-          {missingEnvVars.length === 2
-            ? 'O site não recebeu as credenciais do Supabase.'
-            : 'O site recebeu apenas parte das credenciais do Supabase.'}{' '}
-          Faltou:
-        </p>
-        <ul className="mt-3 space-y-1.5">
-          {missingEnvVars.map((name) => (
-            <li key={name}>
-              <code className="rounded bg-slate-100 px-2 py-1 text-xs font-medium text-ink">{name}</code>
-            </li>
-          ))}
-        </ul>
+        {urlProblem ? (
+          <>
+            <p className="mt-2 text-sm leading-6 text-muted">
+              O endereço do Supabase configurado no site não é válido. {urlProblem}
+            </p>
+            <div className="mt-3 rounded-lg border border-line bg-slate-50 px-4 py-3">
+              <p className="text-xs font-medium text-muted">Endereço configurado</p>
+              <code className="mt-1 block break-all text-xs text-ink">{configuredUrl}</code>
+            </div>
+            <p className="mt-3 text-sm leading-6 text-muted">
+              O endereço correto está no Supabase, em{' '}
+              <span className="font-medium text-ink">Project Settings → Data API → Project URL</span>,
+              e tem este formato:{' '}
+              <code className="rounded bg-slate-100 px-1.5 py-0.5 text-xs text-ink">
+                https://seu-projeto.supabase.co
+              </code>
+            </p>
+          </>
+        ) : (
+          <>
+            <p className="mt-2 text-sm leading-6 text-muted">
+              {missingEnvVars.length === 2
+                ? 'O site não recebeu as credenciais do Supabase.'
+                : 'O site recebeu apenas parte das credenciais do Supabase.'}{' '}
+              Faltou:
+            </p>
+            <ul className="mt-3 space-y-1.5">
+              {missingEnvVars.map((name) => (
+                <li key={name}>
+                  <code className="rounded bg-slate-100 px-2 py-1 text-xs font-medium text-ink">{name}</code>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
 
         <div className="mt-6 border-t border-line pt-5">
           <h2 className="text-md font-semibold text-ink">Se o site está no Netlify</h2>
           <p className="mt-2 text-sm leading-6 text-muted">
-            Cadastrar as variáveis não basta: elas entram no site durante o build. Depois de
-            salvá-las em <span className="font-medium text-ink">Site configuration → Environment
-            variables</span>, publique de novo em{' '}
+            Corrija as variáveis em{' '}
+            <span className="font-medium text-ink">Site configuration → Environment variables</span> e
+            publique de novo em{' '}
             <span className="font-medium text-ink">Deploys → Trigger deploy → Clear cache and deploy site</span>.
-          </p>
-          <p className="mt-2 text-sm leading-6 text-muted">
-            Se a tela continuar, abra o último deploy e verifique se o build terminou com sucesso.
+            Elas entram no site durante o build, então salvar não basta.
           </p>
         </div>
 

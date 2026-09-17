@@ -1,11 +1,13 @@
-import { supabase } from './supabase'
+import { configuredUrl, supabase } from './supabase'
 import type { Clinic, Encounter, EncounterWithRefs, Patient, PatientListItem } from './types'
 
 /** Mensagem de erro legível para o médico, sem jargão técnico. */
 export function errorMessage(error: unknown, fallback = 'Não foi possível concluir. Tente novamente.'): string {
   if (error instanceof Error && error.message) {
     if (/Failed to fetch|NetworkError/i.test(error.message)) {
-      return 'Sem conexão com o servidor. Verifique sua internet e tente novamente.'
+      // Não é só falta de internet: um endereço errado do Supabase falha do
+      // mesmo jeito. Mostrar o endereço usado deixa isso visível na hora.
+      return `Não foi possível falar com o servidor em ${configuredUrl}. Verifique sua conexão e se esse endereço está correto.`
     }
     return error.message
   }

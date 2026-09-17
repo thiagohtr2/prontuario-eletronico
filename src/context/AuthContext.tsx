@@ -1,7 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import type { ReactNode } from 'react'
 import type { Session } from '@supabase/supabase-js'
-import { supabase } from '../lib/supabase'
+import { configuredUrl, supabase } from '../lib/supabase'
 import type { Doctor } from '../lib/types'
 
 type SignUpInput = {
@@ -103,6 +103,9 @@ export function useAuth(): AuthApi {
 
 /** Mensagens do Supabase Auth em português, na linguagem do sistema. */
 function translateAuthError(message: string): string {
+  if (/Failed to fetch|NetworkError/i.test(message)) {
+    return `Não foi possível falar com o servidor em ${configuredUrl}. Verifique sua conexão e se esse endereço está correto.`
+  }
   const map: Record<string, string> = {
     'Invalid login credentials': 'E-mail ou senha incorretos.',
     'Email not confirmed': 'Confirme seu e-mail antes de entrar.',
