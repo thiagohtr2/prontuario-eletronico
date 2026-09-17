@@ -103,7 +103,17 @@ supabase/
 
 ## Padrão visual
 
-- Cores: azul petróleo `#1E3A5F`, azul médio `#2563EB`, fundo `#F8FAFC`, cards `#FFFFFF`,
-  texto `#1E293B` / `#64748B`, bordas `#E2E8F0`.
+Paleta em ameixa e rosé: acolhedora, mas sóbria o bastante para um prontuário.
+
+- Menu lateral: ameixa `#4A2B4A`.
+- Ações principais e links: rosé `#A8326B`.
+- Fundo `#FBF7F9`, cards `#FFFFFF`, texto `#2B2430` / `#7A6B77`, bordas `#EDE3E9`.
+- Cinzas levemente amalvados no lugar do cinza padrão do Tailwind, para não destoarem.
+- Vermelho, âmbar e verde aparecem só como sinal (erro, alerta e sucesso), nunca como
+  enfeite.
+
+Todos os pares de texto e fundo foram conferidos e passam no WCAG AA (contraste mínimo
+de 4,5:1 para texto e 3:1 para ícones).
+
 - Tipografia Inter, espaçamento em múltiplos de 4 px, cantos de 8 a 12 px e sombras discretas.
 - Datas no padrão brasileiro (DD/MM/AAAA) e horários em 24 h.

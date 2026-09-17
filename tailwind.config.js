@@ -4,26 +4,42 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Paleta em ameixa e rosé: acolhedora, mas sóbria o suficiente para um
+        // prontuário. Todos os pares de texto e fundo passam no WCAG AA.
         primary: {
-          DEFAULT: '#1E3A5F',
-          hover: '#17304f',
+          DEFAULT: '#4A2B4A',
+          hover: '#3C223C',
         },
         accent: {
-          DEFAULT: '#2563EB',
-          hover: '#1D4ED8',
-          pressed: '#1E40AF',
-          soft: '#EFF6FF',
+          DEFAULT: '#A8326B',
+          hover: '#8E2A5B',
+          pressed: '#77234C',
+          soft: '#FBEFF5',
         },
-        canvas: '#F8FAFC',
+        canvas: '#FBF7F9',
         surface: '#FFFFFF',
-        ink: '#1E293B',
-        muted: '#64748B',
-        line: '#E2E8F0',
-        success: '#16A34A',
-        warning: '#F59E0B',
+        ink: '#2B2430',
+        muted: '#7A6B77',
+        line: '#EDE3E9',
+        success: '#15803D',
+        warning: '#B45309',
         danger: {
-          DEFAULT: '#DC2626',
-          hover: '#B91C1C',
+          DEFAULT: '#C81E3C',
+          hover: '#A81833',
+        },
+        // Cinzas levemente amalvados, para não destoarem do restante da paleta.
+        // Substituem o cinza padrão do Tailwind em todo o sistema.
+        slate: {
+          50: '#FAF6F8',
+          100: '#F4EEF2',
+          200: '#E8DCE4',
+          300: '#D3C2CD',
+          400: '#96808E',
+          500: '#7E6B77',
+          600: '#63525C',
+          700: '#4E3F48',
+          800: '#382C33',
+          900: '#251C21',
         },
       },
       fontFamily: {
@@ -47,9 +63,9 @@ export default {
         xl: '12px',
       },
       boxShadow: {
-        card: '0 1px 3px rgba(0,0,0,0.05)',
-        modal: '0 10px 30px rgba(15,23,42,0.12)',
-        toast: '0 4px 16px rgba(15,23,42,0.12)',
+        card: '0 1px 3px rgba(74,43,74,0.06)',
+        modal: '0 10px 30px rgba(74,43,74,0.14)',
+        toast: '0 4px 16px rgba(74,43,74,0.14)',
       },
       maxWidth: {
         content: '1280px',

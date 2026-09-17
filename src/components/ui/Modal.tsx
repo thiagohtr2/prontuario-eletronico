@@ -41,7 +41,7 @@ export function Modal({ open, onClose, title, description, size = 'md', children
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-slate-900/40 p-0 sm:items-center sm:p-6"
+      className="fixed inset-0 z-50 flex items-end justify-center bg-[#2B2430]/45 p-0 sm:items-center sm:p-6"
       role="dialog"
       aria-modal="true"
       aria-label={title}

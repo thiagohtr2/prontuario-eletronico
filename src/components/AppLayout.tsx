@@ -138,7 +138,7 @@ export function AppLayout() {
       {mobileOpen && (
         <>
           <div
-            className="fixed inset-0 z-40 bg-slate-900/40 lg:hidden"
+            className="fixed inset-0 z-40 bg-[#2B2430]/45 lg:hidden"
             onClick={() => setMobileOpen(false)}
             aria-hidden
           />
