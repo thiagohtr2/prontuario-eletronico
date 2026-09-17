@@ -4,6 +4,11 @@
 
 [build.environment]
   NODE_VERSION = "20"
+  # A chave publicável do Supabase é pública por natureza: ela é embutida no
+  # JavaScript do site, como manda a documentação do Supabase, e a proteção dos
+  # dados vem do Row Level Security. Sem esta linha, o detector de segredos do
+  # Netlify encontra a chave no build e falha o deploy.
+  SECRETS_SCAN_OMIT_KEYS = "VITE_SUPABASE_ANON_KEY,VITE_SUPABASE_URL"
 
 [[redirects]]
   from = "/*"

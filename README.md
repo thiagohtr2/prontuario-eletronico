@@ -75,8 +75,17 @@ O `netlify.toml` já está configurado:
 - Publicação: `dist`
 - Redirect SPA: `/*` → `/index.html`
 
-No painel do Netlify, em **Site settings → Environment variables**, defina
-`VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` antes do primeiro deploy.
+No painel do Netlify, em **Site configuration → Environment variables**, defina
+`VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY`.
+
+> **Importante:** variáveis `VITE_*` são embutidas no JavaScript durante o build, não lidas
+> quando a página abre. Cadastrá-las não afeta um site já publicado — é preciso publicar de
+> novo em **Deploys → Trigger deploy → Clear cache and deploy site**.
+
+O `netlify.toml` também define `SECRETS_SCAN_OMIT_KEYS` para as duas variáveis. Sem isso, o
+detector de segredos do Netlify encontra a chave publicável dentro do JavaScript gerado e
+falha o deploy. A chave é pública por natureza — como manda a documentação do Supabase, ela
+vai no frontend, e a proteção dos dados vem do Row Level Security.
 
 ## Estrutura
 
