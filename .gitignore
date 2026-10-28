@@ -8,3 +8,4 @@ dist
 *.tsbuildinfo
 dist-qa
 qa-output
+*.log
