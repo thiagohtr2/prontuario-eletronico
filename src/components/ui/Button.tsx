@@ -3,7 +3,7 @@ import type { ButtonHTMLAttributes, ReactNode } from 'react'
 import { Loader2 } from 'lucide-react'
 import { cn } from '../../lib/cn'
 
-type Variant = 'primary' | 'secondary' | 'ghost' | 'danger'
+type Variant = 'primary' | 'secondary' | 'ghost' | 'danger' | 'inverse'
 type Size = 'md' | 'sm'
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -14,34 +14,41 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   fullWidth?: boolean
 }
 
-const variants: Record<Variant, string> = {
-  primary:
-    'bg-accent text-white border border-transparent hover:bg-accent-hover active:bg-accent-pressed',
-  secondary:
-    'bg-surface text-ink border border-line hover:bg-slate-50 active:bg-slate-100',
-  ghost:
-    'bg-transparent text-muted border border-transparent hover:bg-slate-100 hover:text-ink active:bg-slate-200',
-  danger:
-    'bg-danger text-white border border-transparent hover:bg-danger-hover active:bg-[#991B1B]',
+/**
+ * Botões Soft Pill: pílula sem borda nem sombra. O secundário é o fundo
+ * claro com texto e ícone escuros da referência aprovada.
+ */
+export const buttonVariants: Record<Variant, string> = {
+  primary: 'bg-primary text-primary-fg hover:bg-primary-hover active:bg-primary-pressed',
+  secondary: 'bg-surface-hover text-ink hover:bg-primary-soft active:bg-selection',
+  ghost: 'bg-transparent text-muted hover:bg-surface-hover hover:text-ink active:bg-primary-soft',
+  danger: 'bg-danger text-primary-fg hover:brightness-90 active:brightness-[.85]',
+  // Para fundos escuros (hero da landing): fundo claro, texto no tom de marca.
+  inverse: 'bg-primary-soft text-ink hover:bg-surface active:bg-selection',
 }
 
 const sizes: Record<Size, string> = {
-  md: 'h-11 px-5 text-sm',
-  sm: 'h-9 px-3.5 text-sm',
+  md: 'h-control px-6 text-sm',
+  sm: 'h-control-sm px-5 text-sm',
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
-  { variant = 'secondary', size = 'md', loading, icon, fullWidth, className, children, disabled, ...props },
+  { variant = 'secondary', size = 'md', loading, icon, fullWidth, className, children, disabled, type = 'button', ...props },
   ref,
 ) {
   return (
     <button
       ref={ref}
+      type={type}
       disabled={disabled || loading}
+      aria-busy={loading || undefined}
       className={cn(
-        'inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors',
-        'disabled:cursor-not-allowed disabled:opacity-50',
-        variants[variant],
+        'inline-flex min-w-touch shrink-0 items-center justify-center gap-2 rounded-pill font-medium transition-colors',
+        'disabled:cursor-not-allowed',
+        buttonVariants[variant],
+        // Desabilitado de verdade fica neutro; carregando mantém a cor da ação.
+        disabled && !loading && '!bg-disabled !text-disabled-fg hover:!brightness-100',
+        loading && 'cursor-wait',
         sizes[size],
         fullWidth && 'w-full',
         className,
@@ -50,6 +57,43 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
     >
       {loading ? <Loader2 size={18} className="animate-spin" aria-hidden /> : icon}
       {children}
+    </button>
+  )
+})
+
+type IconButtonProps = Omit<ButtonHTMLAttributes<HTMLButtonElement>, 'children'> & {
+  label: string
+  icon: ReactNode
+  variant?: 'soft' | 'ghost' | 'danger' | 'inverse'
+}
+
+const iconVariants = {
+  soft: 'bg-surface-hover text-ink hover:bg-primary-soft hover:text-primary active:bg-selection',
+  ghost: 'bg-transparent text-icon hover:bg-surface-hover hover:text-icon-hover active:bg-primary-soft',
+  danger: 'bg-transparent text-icon hover:bg-danger-soft hover:text-danger active:bg-danger-soft',
+  inverse: 'bg-transparent text-primary-fg hover:bg-primary-hover active:bg-primary-pressed',
+}
+
+/** Botão de ícone Soft Pill: 44×44 px, sempre com nome acessível. */
+export const IconButton = forwardRef<HTMLButtonElement, IconButtonProps>(function IconButton(
+  { label, icon, variant = 'ghost', className, type = 'button', title, ...props },
+  ref,
+) {
+  return (
+    <button
+      ref={ref}
+      type={type}
+      aria-label={label}
+      title={title ?? label}
+      className={cn(
+        'inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-pill transition-colors',
+        'disabled:cursor-not-allowed disabled:bg-disabled disabled:text-disabled-fg',
+        iconVariants[variant],
+        className,
+      )}
+      {...props}
+    >
+      {icon}
     </button>
   )
 })

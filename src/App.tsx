@@ -5,8 +5,9 @@ import { LoadingState } from './components/ui/States'
 import { SetupNotice } from './components/SetupNotice'
 import { useAuth } from './context/AuthContext'
 import { isSupabaseConfigured } from './lib/supabase'
-import { LoginPage } from './pages/Login'
-import { SignupPage } from './pages/Signup'
+import { HOME_PATH } from './lib/navigation'
+import { LandingPage } from './pages/Landing'
+import { AuthPage, ResetPasswordPage } from './pages/Auth'
 import { DashboardPage } from './pages/Dashboard'
 import { PatientsPage } from './pages/Patients'
 import { PatientRecordPage } from './pages/PatientRecord'
@@ -21,22 +22,34 @@ function RequireAuth({ children }: { children: ReactNode }) {
 
   if (loading) {
     return (
-      <div className="flex min-h-full items-center justify-center">
+      <div className="flex min-h-[100dvh] items-center justify-center">
         <LoadingState />
       </div>
     )
   }
-  if (!session) return <Navigate to="/login" replace state={{ from: location.pathname }} />
+  if (!session) return <Navigate to="/entrar" replace state={{ from: location.pathname }} />
   return <>{children}</>
 }
 
 export function App() {
-  if (!isSupabaseConfigured) return <SetupNotice />
+  // A landing é pública e funciona mesmo sem o Supabase configurado.
+  if (!isSupabaseConfigured) {
+    return (
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="*" element={<SetupNotice />} />
+      </Routes>
+    )
+  }
 
   return (
     <Routes>
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/cadastro" element={<SignupPage />} />
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/entrar" element={<AuthPage mode="entrar" />} />
+      <Route path="/cadastro" element={<AuthPage mode="cadastro" />} />
+      <Route path="/recuperar-senha" element={<AuthPage mode="recuperar" />} />
+      <Route path="/redefinir-senha" element={<ResetPasswordPage />} />
+      <Route path="/login" element={<Navigate to="/entrar" replace />} />
       <Route
         element={
           <RequireAuth>
@@ -44,7 +57,7 @@ export function App() {
           </RequireAuth>
         }
       >
-        <Route path="/" element={<DashboardPage />} />
+        <Route path={HOME_PATH} element={<DashboardPage />} />
         <Route path="/pacientes" element={<PatientsPage />} />
         <Route path="/pacientes/:id" element={<PatientRecordPage />} />
         <Route path="/atendimentos" element={<EncountersPage />} />

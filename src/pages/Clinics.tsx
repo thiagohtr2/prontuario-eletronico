@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Building2, MapPin, Pencil, Phone, Plus, Trash2 } from 'lucide-react'
 import { PageBody, PageHeader } from '../components/PageHeader'
 import { Card } from '../components/ui/Card'
-import { Button } from '../components/ui/Button'
+import { Button, IconButton } from '../components/ui/Button'
 import { EmptyState, ErrorState, LoadingState } from '../components/ui/States'
 import { ConfirmDialog } from '../components/ConfirmDialog'
 import { ClinicForm } from '../forms/ClinicForm'
@@ -106,22 +106,22 @@ export function ClinicsPage() {
             {clinics.map((clinic) => (
               <Card key={clinic.id} className="flex flex-col">
                 <div className="flex items-start gap-3">
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent-soft text-accent">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-pill bg-primary-soft text-primary">
                     <Building2 size={19} aria-hidden />
                   </span>
-                  <h2 className="min-w-0 flex-1 text-md font-semibold leading-6 text-ink">{clinic.nome}</h2>
+                  <h2 className="min-w-0 flex-1 break-words pt-2 text-md font-semibold leading-6 text-ink">{clinic.nome}</h2>
                 </div>
 
-                <dl className="mt-4 flex-1 space-y-2.5 text-sm">
+                <dl className="mt-4 flex-1 flex flex-col gap-3 text-sm">
                   {clinic.endereco && (
                     <div className="flex items-start gap-2 text-muted">
-                      <MapPin size={16} className="mt-0.5 shrink-0 text-slate-400" aria-hidden />
+                      <MapPin size={16} className="mt-0.5 shrink-0 text-icon" aria-hidden />
                       <span className="leading-6 text-ink">{clinic.endereco}</span>
                     </div>
                   )}
                   {clinic.telefone && (
                     <div className="flex items-center gap-2 text-muted">
-                      <Phone size={16} className="shrink-0 text-slate-400" aria-hidden />
+                      <Phone size={16} className="shrink-0 text-icon" aria-hidden />
                       <span className="text-ink">{formatPhone(clinic.telefone)}</span>
                     </div>
                   )}
@@ -133,20 +133,16 @@ export function ClinicsPage() {
                   )}
                 </dl>
 
-                <div className="mt-5 flex justify-end gap-2 border-t border-line pt-4">
+                <div className="mt-5 flex items-center justify-end gap-3 border-t border-line pt-4">
                   <Button variant="secondary" size="sm" icon={<Pencil size={16} />} onClick={() => openEdit(clinic)}>
                     Editar
                   </Button>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    icon={<Trash2 size={16} />}
-                    className="hover:text-danger"
+                  <IconButton
+                    variant="danger"
+                    label={`Excluir ${clinic.nome}`}
+                    icon={<Trash2 size={17} />}
                     onClick={() => setToDelete(clinic)}
-                    aria-label={`Excluir ${clinic.nome}`}
-                  >
-                    <span className="sr-only">Excluir clínica</span>
-                  </Button>
+                  />
                 </div>
               </Card>
             ))}

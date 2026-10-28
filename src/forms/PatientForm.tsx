@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import type { FormEvent } from 'react'
 import { Modal } from '../components/ui/Modal'
 import { Button } from '../components/ui/Button'
-import { Input, Select, Textarea } from '../components/ui/Field'
+import { Input, Select, Textarea, FormError } from '../components/ui/Field'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { createPatient, errorMessage, updatePatient } from '../lib/api'
@@ -115,7 +115,7 @@ export function PatientForm({
         </>
       }
     >
-      <form id="patient-form" onSubmit={handleSubmit} className="space-y-4" noValidate>
+      <form id="patient-form" onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
         <Input
           label="Nome completo"
           required
@@ -183,9 +183,7 @@ export function PatientForm({
           placeholder="Informações relevantes sobre o paciente"
         />
         {error && (
-          <p className="rounded-md border border-red-100 bg-red-50 px-3 py-2.5 text-sm text-danger" role="alert">
-            {error}
-          </p>
+          <FormError>{error}</FormError>
         )}
       </form>
     </Modal>

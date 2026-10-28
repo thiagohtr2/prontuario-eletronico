@@ -1,3 +1,5 @@
+@import './styles/design-tokens.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,52 +9,136 @@
     color-scheme: light;
   }
 
-  html,
-  body,
-  #root {
-    height: 100%;
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
 
   body {
     @apply bg-canvas text-ink font-sans antialiased;
+    min-height: 100dvh;
     font-size: 15px;
+  }
+
+  #root {
+    min-height: 100dvh;
   }
 
   * {
     -webkit-tap-highlight-color: transparent;
   }
 
+  ::selection {
+    background: var(--brand-selection);
+    color: var(--brand-text);
+  }
+
+  /*
+   * Foco visível: contorno sólido no token de foco (9,6:1 sobre o branco) e o
+   * anel suave da identidade por fora. Sobre fundos escuros, ver .on-dark.
+   */
   :focus-visible {
-    @apply outline-none ring-2 ring-accent/60 ring-offset-2 ring-offset-canvas;
+    outline: 2px solid var(--brand-border-focus);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px var(--brand-focus-ring);
+  }
+
+  .on-dark :focus-visible {
+    outline-color: var(--brand-primary-text);
+    box-shadow: none;
+  }
+
+  /* Campos de iOS com fonte menor que 16px disparam zoom automático. */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--brand-placeholder);
+    opacity: 1;
   }
 }
 
 @layer components {
   .field-label {
-    @apply block text-sm font-medium text-ink mb-1.5;
+    @apply mb-2 block text-sm font-medium text-ink;
   }
 
   .field-hint {
-    @apply mt-1.5 text-xs text-muted;
+    @apply mt-2 text-xs text-muted;
   }
 
   .field-error {
-    @apply mt-1.5 text-xs font-medium text-danger;
+    @apply mt-2 text-xs font-medium text-danger;
+  }
+
+  .display-title {
+    @apply font-display font-semibold tracking-tight text-ink;
   }
 }
 
-/* Scrollbar discreta */
+/*
+ * Espaço no fim do conteúdo autenticado. No celular, reserva a altura do dock
+ * flutuante e a safe area, para nenhum campo ou botão ficar coberto.
+ */
+:root {
+  --main-bottom-space: calc(var(--dock-clearance) + 24px);
+}
+@media (min-width: 768px) {
+  :root {
+    --main-bottom-space: 32px;
+  }
+}
+
+/*
+ * Ao navegar por Tab, o navegador rola até o elemento focado; o scroll-padding
+ * evita que ele pare escondido sob o header fixo ou atrás do dock.
+ */
+html.has-dock {
+  scroll-padding-top: calc(64px + env(safe-area-inset-top) + 16px);
+  scroll-padding-bottom: calc(var(--dock-clearance) + 16px);
+}
+@media (min-width: 768px) {
+  html.has-dock {
+    scroll-padding-top: calc(var(--layout-gap) * 2 + var(--layout-header-height) + 8px);
+    scroll-padding-bottom: 16px;
+  }
+}
+@media (max-width: 767.98px) {
+  html.has-dock {
+    --toast-bottom: calc(var(--dock-clearance) + 8px);
+  }
+}
+
+/* Scrollbar discreta, nos tons da identidade */
+* {
+  scrollbar-color: var(--brand-focus-ring) transparent;
+}
 ::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: var(--brand-focus-ring);
   border-radius: 8px;
   border: 3px solid transparent;
   background-clip: content-box;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: var(--brand-border-hover);
   background-clip: content-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

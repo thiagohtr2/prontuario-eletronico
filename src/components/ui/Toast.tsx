@@ -1,6 +1,7 @@
 import { CheckCircle2, AlertTriangle, XCircle, X } from 'lucide-react'
 import type { ToastItem, ToastKind } from '../../context/toast-types'
 import { cn } from '../../lib/cn'
+import { IconButton } from './Button'
 
 const icons: Record<ToastKind, typeof CheckCircle2> = {
   success: CheckCircle2,
@@ -14,6 +15,10 @@ const tones: Record<ToastKind, string> = {
   warning: 'text-warning',
 }
 
+/**
+ * Avisos temporários. No celular ficam acima do dock flutuante (a variável
+ * --toast-bottom é definida pelo layout autenticado); no desktop, no canto.
+ */
 export function ToastViewport({
   toasts,
   onDismiss,
@@ -24,7 +29,8 @@ export function ToastViewport({
   if (toasts.length === 0) return null
   return (
     <div
-      className="pointer-events-none fixed inset-x-4 bottom-4 z-[60] flex flex-col items-center gap-2 sm:inset-x-auto sm:right-6 sm:bottom-6 sm:items-end"
+      className="pointer-events-none fixed inset-x-4 z-toast flex flex-col items-center gap-2 sm:inset-x-auto sm:right-6 sm:items-end"
+      style={{ bottom: 'var(--toast-bottom, max(16px, env(safe-area-inset-bottom)))' }}
       aria-live="polite"
       role="status"
     >
@@ -33,18 +39,11 @@ export function ToastViewport({
         return (
           <div
             key={toast.id}
-            className="pointer-events-auto flex w-full max-w-sm items-start gap-3 rounded-lg border border-line bg-surface px-4 py-3 shadow-toast"
+            className="pointer-events-auto flex w-full max-w-sm items-center gap-3 rounded-brand border border-line bg-surface py-1 pl-4 pr-1 shadow-toast"
           >
-            <Icon size={18} className={cn('mt-0.5 shrink-0', tones[toast.kind])} aria-hidden />
-            <p className="flex-1 text-sm text-ink">{toast.message}</p>
-            <button
-              type="button"
-              onClick={() => onDismiss(toast.id)}
-              aria-label="Fechar aviso"
-              className="-mr-1 -mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-muted transition-colors hover:bg-slate-100 hover:text-ink"
-            >
-              <X size={15} />
-            </button>
+            <Icon size={18} className={cn('shrink-0', tones[toast.kind])} aria-hidden />
+            <p className="min-w-0 flex-1 py-2 text-sm text-ink">{toast.message}</p>
+            <IconButton label="Fechar aviso" icon={<X size={16} />} onClick={() => onDismiss(toast.id)} />
           </div>
         )
       })}

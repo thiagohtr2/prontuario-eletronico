@@ -1,24 +1,42 @@
-# Prontuário
+# Singulare — Prontuário eletrônico
 
-Sistema web para médicos acompanharem seus pacientes em um único lugar, mesmo quando os
+Sistema web para médicas acompanharem seus pacientes em um único lugar, mesmo quando os
 atendimentos acontecem em clínicas diferentes. Cada paciente tem um histórico único, em ordem
-cronológica, reunindo todos os atendimentos do médico independentemente da clínica.
+cronológica, reunindo todas as consultas independentemente da clínica.
 
 ## O que o sistema faz
 
-- Cadastro e login do médico (Supabase Auth).
+- Página pública de apresentação (landing) em `/`.
+- Acesso em uma única tela: entrar, criar conta e recuperar senha (Supabase Auth).
 - Cadastro de pacientes, com busca rápida por nome ou CPF.
-- Cadastro das clínicas onde o médico atende.
+- Cadastro das clínicas onde a médica atende.
 - Registro de atendimentos com data, horário, clínica, tipo de atendimento, queixa principal,
   história clínica, exame físico, evolução, diagnóstico, conduta, prescrição, solicitação de
   exames e observações.
 - Prontuário do paciente em uma única tela, com o histórico em formato de timeline.
 - Edição e exclusão de pacientes, clínicas e atendimentos.
 
+Em construção: receituário impresso com logomarca, dados da médica e da clínica (a landing já
+o apresenta como "Em breve").
+
+## Rotas
+
+| Rota | Tela |
+| --- | --- |
+| `/` | Landing pública |
+| `/entrar`, `/cadastro`, `/recuperar-senha` | Acesso (mesma composição, alterna entre os modos) |
+| `/redefinir-senha` | Destino do link de redefinição enviado por e-mail |
+| `/inicio` | Painel (área autenticada) |
+| `/pacientes`, `/pacientes/:id` | Pacientes e prontuário |
+| `/atendimentos`, `/atendimentos/novo`, `/atendimentos/:id/editar` | Atendimentos |
+| `/clinicas`, `/configuracoes` | Clínicas e perfil |
+
+`/login` redireciona para `/entrar`.
+
 ## Stack
 
 - React 18 + TypeScript + Vite
-- Tailwind CSS
+- Tailwind CSS, com as cores vindas de tokens CSS
 - React Router
 - Supabase (Postgres, Auth e Row Level Security)
 - Lucide Icons
@@ -31,7 +49,8 @@ cp .env.example .env   # preencha com as credenciais do seu projeto Supabase
 npm run dev
 ```
 
-O app sobe em `http://localhost:5173`.
+O app sobe em `http://localhost:5173`. Sem o `.env`, a landing abre normalmente e as demais
+telas mostram as instruções de configuração.
 
 ## Configuração do Supabase
 
@@ -55,15 +74,29 @@ VITE_SUPABASE_URL=https://seu-projeto.supabase.co
 VITE_SUPABASE_ANON_KEY=sua-chave-publica
 ```
 
-### Confirmação de e-mail
+### Autenticação: ajustes necessários no painel
 
-Por padrão o Supabase exige confirmação de e-mail no cadastro. Para o piloto, é possível
-desativar em **Authentication → Providers → Email → Confirm email**. Assim o médico entra
-direto após criar a conta.
+- **Authentication → URL Configuration → Redirect URLs**: inclua
+  `https://SEU-DOMINIO/redefinir-senha` e `https://SEU-DOMINIO/inicio` (e as versões
+  `http://localhost:5173/...` para desenvolvimento). Sem isso, os links de redefinição de
+  senha e de confirmação de e-mail voltam para a URL padrão do projeto.
+- **Authentication → Providers → Email → Minimum password length**: use **8**, o mesmo
+  mínimo que o app exige no cadastro e na redefinição.
+- **Confirm email**: por padrão o Supabase exige confirmação de e-mail no cadastro. A tela de
+  cadastro já mostra o estado "Confirme seu e-mail", com reenvio limitado a um a cada 60 s.
+- **Rate limits** (Authentication → Rate Limits): o Supabase limita tentativas de login e
+  envios de e-mail no servidor. O app traduz essas respostas ("aguarde N segundos").
+
+As mensagens de erro não revelam se um e-mail tem conta: a recuperação de senha sempre
+responde "se houver uma conta com este e-mail, o link já está a caminho", e o cadastro de um
+e-mail já existente recebe uma mensagem neutra. Nenhum provedor social (SSO) está ativo.
+
+A sessão é gerenciada pelo `supabase-js` (token de acesso e de renovação no armazenamento do
+navegador, padrão para aplicações SPA). Senhas nunca são guardadas pelo app.
 
 ### Segurança dos dados
 
-Todas as tabelas usam Row Level Security: cada médico só enxerga e altera os próprios
+Todas as tabelas usam Row Level Security: cada médica só enxerga e altera os próprios
 pacientes, clínicas e atendimentos (`doctor_id = auth.uid()`). Nenhum dado é compartilhado
 entre contas.
 
@@ -91,29 +124,74 @@ vai no frontend, e a proteção dos dados vem do Row Level Security.
 
 ```
 src/
-  components/       Layout, header, busca, timeline, diálogos
-    ui/             Componentes reutilizáveis (Button, Input, Card, Modal, Badge, estados)
+  styles/           design-tokens.css — fonte única das cores e da geometria
+  components/       Layout (sidebar, header, dock), logo, busca, timeline, diálogos
+    ui/             Componentes reutilizáveis (Button, IconButton, Field, Card, Modal,
+                    Menu, SegmentedControl, Breadcrumbs, Badge, estados)
   context/          Autenticação e notificações (toast)
   forms/            Formulários de paciente e clínica (modais)
-  lib/              Cliente Supabase, tipos, acesso a dados e formatação
-  pages/            Telas do sistema
+  lib/              Cliente Supabase, navegação, tipos, acesso a dados e formatação
+  pages/            Landing, acesso e telas do sistema
+scripts/qa/         Testes de responsividade e teclado em navegador real
 supabase/
   migrations/       Script SQL de criação do banco
 ```
 
-## Padrão visual
+## Identidade visual
 
-Paleta em ameixa e rosé: acolhedora, mas sóbria o bastante para um prontuário.
+A fonte de verdade é `src/styles/design-tokens.css`. O Tailwind só aponta para esses tokens
+(`tailwind.config.js`); nenhum componente define cor própria.
 
-- Menu lateral: ameixa `#4A2B4A`.
-- Ações principais e links: rosé `#A8326B`.
-- Fundo `#FBF7F9`, cards `#FFFFFF`, texto `#2B2430` / `#7A6B77`, bordas `#EDE3E9`.
-- Cinzas levemente amalvados no lugar do cinza padrão do Tailwind, para não destoarem.
-- Vermelho, âmbar e verde aparecem só como sinal (erro, alerta e sucesso), nunca como
-  enfeite.
-
-Todos os pares de texto e fundo foram conferidos e passam no WCAG AA (contraste mínimo
-de 4,5:1 para texto e 3:1 para ícones).
-
-- Tipografia Inter, espaçamento em múltiplos de 4 px, cantos de 8 a 12 px e sombras discretas.
+- **Paleta:** Burgundy (Vinho editorial). Primária `#881337` (hover `#75102f`, pressionado
+  `#660e29`), fundo `#fff7f8`, superfícies `#ffffff`, texto `#4c0519`, bordas `#e6d5d9`.
+  Estados semânticos: sucesso `#15803d`, aviso `#a16207`, erro `#b91c1c`, informação `#0369a1`.
+- **Tipografia:** Cormorant Garamond nos títulos (refinada, editorial) e Inter no texto e na
+  interface. Campos usam 16 px para evitar o zoom automático do iOS.
+- **Layout desktop:** Sidebar flutuante compacta (224 px), afastada do topo e da borda,
+  com header flutuante de 64 px e espaçamento de 16 px. Pode ser recolhida para o rail.
+- **Tablet (768–1023 px):** a mesma topologia, com o rail de ícones e rótulos.
+- **Celular (< 768 px):** Dock flutuante na base, com Início, Pacientes, Novo atendimento,
+  Consultas e Clínicas. Configurações e Sair ficam no menu da conta, no topo. O dock
+  respeita a safe area e some enquanto o teclado virtual está aberto.
+- **Componentes:** botões e botões de ícone Soft Pill; header e cards Dark Luxury (cantos de
+  17 px, borda fina, sombra profunda); sidebar e menus Soft Neumorphic; KPIs e passos Swiss
+  Minimal (cantos de 6 px, borda de 1 px); segmented controls e breadcrumbs Soft Pill;
+  diálogos com a geometria dos Drawers (bottom sheet no celular). As famílias definem forma e
+  estrutura; as cores vêm sempre da paleta global (por isso o header Dark Luxury é claro, e não
+  grafite). Halos e gradientes da família Aurora ficam para a fase de acabamento visual.
+- **Páginas de entrada:** landing imersiva (composição "Pixel Arcade" adaptada: hero em
+  vinho de borda a borda e um coração em pixels como símbolo de cuidado) e acesso "Clássico
+  central" com cadastro na mesma tela. Acabamento plano: sem sombras, gradientes ou
+  transparências.
+- **Espaçamento:** escala de 4/8/12/16/20/24/32 px; pelo menos 8 px entre controles e alvos
+  de toque de 44×44 px.
 - Datas no padrão brasileiro (DD/MM/AAAA) e horários em 24 h.
+
+### Exceções de acessibilidade (aguardando aprovação)
+
+Duas cores derivadas foram adicionadas para cumprir o WCAG 2.2 AA. Estão no bloco 2 de
+`design-tokens.css` e podem ser revistas:
+
+| Uso | Token aprovado | Problema | Solução aplicada |
+| --- | --- | --- | --- |
+| Texto secundário | `textMuted` `#a27984` | 3,75:1 no branco (exige 4,5:1) | `--text-secondary` `#835866` (5,91:1 no branco, 4,75:1 no `primarySoft`) |
+| Borda de campos | `border` `#e6d5d9` | 1,41:1 (exige 3:1 para limites de controles) | campos usam o token `icon` `#a27984` (3,75:1) |
+
+O `textMuted` original continua em ícones, texto grande e estados desabilitados. Verde e
+âmbar não atingem 4,5:1 sobre os próprios fundos suaves; nesses selos o texto usa a cor de
+leitura e a cor semântica fica no ícone.
+
+## Testes de responsividade e teclado
+
+Os testes rodam o app de verdade no Chromium (Playwright), com o Supabase **simulado**: as
+chamadas de rede são interceptadas e respondidas com dados fictícios (`scripts/qa/mock-supabase.cjs`).
+Nenhum dado real é lido ou gravado.
+
+```bash
+npm run qa:build                 # build apontando para o Supabase simulado (.env.qa)
+npm run qa:responsive            # mede todas as telas em 21 tamanhos de tela
+node scripts/qa/keyboard.cjs     # navegação por Tab, Escape e prisão de foco
+```
+
+Requer Playwright com Chromium (`npm i -D playwright && npx playwright install chromium`).
+O relatório mais recente está em [`docs/qa/responsividade.md`](docs/qa/responsividade.md).

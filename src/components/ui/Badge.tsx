@@ -1,14 +1,17 @@
 import type { ReactNode } from 'react'
 import { cn } from '../../lib/cn'
 
-type Tone = 'neutral' | 'accent' | 'success' | 'warning' | 'danger'
+type Tone = 'neutral' | 'accent' | 'success' | 'warning' | 'danger' | 'info'
 
+// Verde e âmbar não atingem 4,5:1 sobre os próprios fundos suaves, então o
+// texto fica no tom de leitura e a cor semântica vai para o ícone.
 const tones: Record<Tone, string> = {
-  neutral: 'bg-slate-100 text-slate-600 border-slate-200',
-  accent: 'bg-accent-soft text-accent border-[#F3DCE8]',
-  success: 'bg-green-50 text-success border-green-100',
-  warning: 'bg-amber-50 text-amber-700 border-amber-100',
-  danger: 'bg-red-50 text-danger border-red-100',
+  neutral: 'bg-surface-hover text-ink',
+  accent: 'bg-primary-soft text-primary',
+  success: 'bg-success-soft text-ink [&_svg]:text-success',
+  warning: 'bg-warning-soft text-ink [&_svg]:text-warning',
+  danger: 'bg-danger-soft text-danger',
+  info: 'bg-info-soft text-info',
 }
 
 export function Badge({
@@ -25,13 +28,13 @@ export function Badge({
   return (
     <span
       className={cn(
-        'inline-flex items-center gap-1.5 rounded-md border px-2 py-0.5 text-xs font-medium',
+        'inline-flex max-w-full items-center gap-1.5 rounded-pill px-3 py-1 text-xs font-medium',
         tones[tone],
         className,
       )}
     >
       {icon}
-      {children}
+      <span className="min-w-0 break-words">{children}</span>
     </span>
   )
 }

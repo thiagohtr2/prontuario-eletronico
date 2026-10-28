@@ -16,7 +16,7 @@ import {
 } from 'lucide-react'
 import { PageBody, PageHeader } from '../components/PageHeader'
 import { Card } from '../components/ui/Card'
-import { Button } from '../components/ui/Button'
+import { Button, IconButton } from '../components/ui/Button'
 import { Badge } from '../components/ui/Badge'
 import { EmptyState, ErrorState, LoadingState } from '../components/ui/States'
 import { TimelineItem } from '../components/TimelineItem'
@@ -150,15 +150,15 @@ export function PatientRecordPage() {
         }
       />
 
-      <PageBody className="space-y-6">
+      <PageBody className="flex flex-col gap-6">
         <Card>
           <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
             <div className="flex min-w-0 gap-4">
-              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-accent-soft text-lg font-semibold text-accent">
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-pill bg-primary-soft text-lg font-semibold text-primary">
                 {initials(patient.nome)}
               </span>
               <div className="min-w-0">
-                <h2 className="truncate text-xl font-semibold text-ink">{patient.nome}</h2>
+                <h2 className="break-words text-xl font-semibold text-ink">{patient.nome}</h2>
                 <dl className="mt-3 grid gap-x-8 gap-y-2 sm:grid-cols-2 lg:grid-cols-3">
                   <Info icon={<Cake size={16} />} label="Nascimento">
                     {formatDate(patient.data_nascimento)}
@@ -183,27 +183,23 @@ export function PatientRecordPage() {
               </div>
             </div>
 
-            <div className="flex shrink-0 gap-2">
+            <div className="flex shrink-0 items-center gap-2">
               <Button variant="secondary" size="sm" icon={<Pencil size={16} />} onClick={() => setEditOpen(true)}>
                 Editar
               </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                icon={<Trash2 size={16} />}
-                className="hover:text-danger"
+              <IconButton
+                variant="danger"
+                label="Excluir paciente"
+                icon={<Trash2 size={17} />}
                 onClick={() => setPatientDeleteOpen(true)}
-                aria-label="Excluir paciente"
-              >
-                <span className="sr-only">Excluir paciente</span>
-              </Button>
+              />
             </div>
           </div>
 
           {(patient.alergias || patient.observacoes) && (
-            <div className="mt-5 space-y-3 border-t border-line pt-5">
+            <div className="mt-5 flex flex-col gap-3 border-t border-line pt-5">
               {patient.alergias && (
-                <div className="flex items-start gap-2.5 rounded-lg border border-amber-100 bg-amber-50 px-3.5 py-3">
+                <div className="flex items-start gap-3 rounded-brand bg-warning-soft px-4 py-3">
                   <AlertTriangle size={17} className="mt-0.5 shrink-0 text-warning" aria-hidden />
                   <p className="text-sm leading-6 text-ink">
                     <span className="font-semibold">Alergias: </span>
@@ -222,8 +218,8 @@ export function PatientRecordPage() {
         </Card>
 
         <section>
-          <div className="mb-4 flex items-center justify-between gap-4">
-            <h2 className="text-xl font-semibold text-ink">Histórico do paciente</h2>
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+            <h2 className="display-title text-[28px] leading-tight">Histórico do paciente</h2>
             {encounters.length > 0 && (
               <Badge>
                 {encounters.length} {encounters.length === 1 ? 'atendimento' : 'atendimentos'}
@@ -302,13 +298,13 @@ function Info({
 }) {
   return (
     <div className="min-w-0">
-      <dt className="flex items-center gap-1.5 text-xs text-muted">
-        <span className="text-slate-400" aria-hidden>
+      <dt className="flex items-center gap-2 text-xs text-muted">
+        <span className="text-icon" aria-hidden>
           {icon}
         </span>
         {label}
       </dt>
-      <dd className="mt-0.5 truncate text-sm font-medium text-ink">{children}</dd>
+      <dd className="mt-1 break-words text-sm font-medium text-ink">{children}</dd>
     </div>
   )
 }

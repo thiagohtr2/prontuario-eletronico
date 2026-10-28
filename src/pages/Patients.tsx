@@ -108,20 +108,20 @@ export function PatientsPage() {
                   {filtered.length} {filtered.length === 1 ? 'paciente' : 'pacientes'}
                 </p>
               </div>
-              <ul className="divide-y divide-line">
+              <ul className="flex flex-col gap-2 p-2">
                 {filtered.map((patient) => (
                   <li key={patient.id}>
                     <Link
                       to={`/pacientes/${patient.id}`}
-                      className="flex items-center gap-4 px-4 py-4 transition-colors hover:bg-slate-50 sm:px-5"
+                      className="flex items-center gap-4 rounded-[12px] px-3 py-3 transition-colors hover:bg-surface-hover sm:px-4"
                     >
-                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-accent-soft text-sm font-semibold text-accent">
+                      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-pill bg-primary-soft text-sm font-semibold text-primary">
                         {initials(patient.nome)}
                       </span>
 
                       <span className="min-w-0 flex-1">
-                        <span className="block truncate text-md font-medium text-ink">{patient.nome}</span>
-                        <span className="mt-0.5 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-xs text-muted">
+                        <span className="block break-words text-md font-medium text-ink">{patient.nome}</span>
+                        <span className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted">
                           <span>{formatAge(patient.data_nascimento)}</span>
                           {patient.telefone && (
                             <span className="inline-flex items-center gap-1">
@@ -130,7 +130,7 @@ export function PatientsPage() {
                             </span>
                           )}
                         </span>
-                        <span className="mt-1 flex flex-wrap items-center gap-x-2 text-xs text-muted sm:hidden">
+                        <span className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-muted sm:hidden">
                           <span>
                             Última consulta:{' '}
                             <span className="font-medium text-ink">
@@ -154,12 +154,12 @@ export function PatientsPage() {
                         {patient.ultima_clinica && (
                           <span className="mt-0.5 flex items-center justify-end gap-1 text-xs text-muted">
                             <Building2 size={13} aria-hidden />
-                            <span className="max-w-[160px] truncate">{patient.ultima_clinica}</span>
+                            <span className="max-w-[200px] break-words">{patient.ultima_clinica}</span>
                           </span>
                         )}
                       </span>
 
-                      <ChevronRight size={18} className="shrink-0 text-slate-300" aria-hidden />
+                      <ChevronRight size={18} className="shrink-0 text-icon" aria-hidden />
                     </Link>
                   </li>
                 ))}

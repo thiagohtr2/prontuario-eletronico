@@ -5,7 +5,7 @@ import { ArrowLeft, Plus, Save } from 'lucide-react'
 import { PageBody, PageHeader } from '../components/PageHeader'
 import { Card } from '../components/ui/Card'
 import { Button } from '../components/ui/Button'
-import { Input, Select, Textarea } from '../components/ui/Field'
+import { Input, Select, Textarea, FormError } from '../components/ui/Field'
 import { LoadingState } from '../components/ui/States'
 import { ClinicForm } from '../forms/ClinicForm'
 import { useAuth } from '../context/AuthContext'
@@ -200,8 +200,8 @@ export function EncounterEditorPage() {
         {loading ? (
           <LoadingState />
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-            <Card className="space-y-4">
+          <form onSubmit={handleSubmit} className="flex flex-col gap-6" noValidate>
+            <Card className="flex flex-col gap-4">
               <h2 className="text-md font-semibold text-ink">Dados do atendimento</h2>
               <div className="grid gap-4 sm:grid-cols-2">
                 <Select
@@ -249,7 +249,7 @@ export function EncounterEditorPage() {
                   <button
                     type="button"
                     onClick={() => setClinicModalOpen(true)}
-                    className="mt-1.5 inline-flex items-center gap-1 text-xs font-medium text-accent hover:underline"
+                    className="-ml-3 mt-2 inline-flex min-h-touch items-center gap-2 rounded-pill px-3 text-sm font-medium text-primary hover:bg-primary-soft"
                   >
                     <Plus size={14} aria-hidden />
                     Cadastrar nova clínica
@@ -270,7 +270,7 @@ export function EncounterEditorPage() {
               </div>
             </Card>
 
-            <Card className="space-y-4">
+            <Card className="flex flex-col gap-4">
               <h2 className="text-md font-semibold text-ink">Avaliação</h2>
               <Textarea
                 label="Queixa principal"
@@ -302,7 +302,7 @@ export function EncounterEditorPage() {
               />
             </Card>
 
-            <Card className="space-y-4">
+            <Card className="flex flex-col gap-4">
               <h2 className="text-md font-semibold text-ink">Diagnóstico e condutas</h2>
               <Textarea
                 label="Diagnóstico"
@@ -342,12 +342,7 @@ export function EncounterEditorPage() {
             </Card>
 
             {error && (
-              <p
-                className="rounded-md border border-red-100 bg-red-50 px-4 py-3 text-sm text-danger"
-                role="alert"
-              >
-                {error}
-              </p>
+              <FormError>{error}</FormError>
             )}
 
             <div className="flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
@@ -362,7 +357,7 @@ export function EncounterEditorPage() {
             {patients.length === 0 && (
               <p className="text-center text-sm text-muted">
                 Você ainda não tem pacientes.{' '}
-                <Link to="/pacientes" className="font-medium text-accent hover:underline">
+                <Link to="/pacientes" className="font-medium text-primary underline underline-offset-2">
                   Cadastrar primeiro paciente
                 </Link>
               </p>

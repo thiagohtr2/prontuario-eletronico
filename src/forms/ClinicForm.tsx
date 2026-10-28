@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import type { FormEvent } from 'react'
 import { Modal } from '../components/ui/Modal'
 import { Button } from '../components/ui/Button'
-import { Input, Textarea } from '../components/ui/Field'
+import { Input, Textarea, FormError } from '../components/ui/Field'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { createClinic, errorMessage, updateClinic } from '../lib/api'
@@ -95,7 +95,7 @@ export function ClinicForm({
         </>
       }
     >
-      <form id="clinic-form" onSubmit={handleSubmit} className="space-y-4" noValidate>
+      <form id="clinic-form" onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
         <Input
           label="Nome da clínica"
           required
@@ -124,9 +124,7 @@ export function ClinicForm({
           placeholder="Dias de atendimento, sala, recepção..."
         />
         {error && (
-          <p className="rounded-md border border-red-100 bg-red-50 px-3 py-2.5 text-sm text-danger" role="alert">
-            {error}
-          </p>
+          <FormError>{error}</FormError>
         )}
       </form>
     </Modal>

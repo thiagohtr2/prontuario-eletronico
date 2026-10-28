@@ -88,7 +88,7 @@ export function EncountersPage() {
         }
       />
 
-      <PageBody className="space-y-5">
+      <PageBody className="flex flex-col gap-5">
         {!loading && !error && encounters.length > 0 && (
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <Select

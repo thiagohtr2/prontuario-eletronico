@@ -73,7 +73,7 @@ export function DashboardPage() {
         }
       />
 
-      <PageBody className="space-y-6">
+      <PageBody className="flex flex-col gap-6">
         {error ? (
           <Card padded={false}>
             <ErrorState
@@ -87,7 +87,7 @@ export function DashboardPage() {
           </Card>
         ) : (
           <>
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className="grid gap-3 sm:grid-cols-3 sm:gap-4">
               <StatCard
                 icon={<Users size={19} />}
                 label="Pacientes cadastrados"
@@ -113,7 +113,7 @@ export function DashboardPage() {
 
             <div className="grid gap-6 lg:grid-cols-2">
               <Card padded={false}>
-                <div className="flex items-center justify-between border-b border-line px-5 py-4">
+                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-4">
                   <h2 className="text-lg font-semibold text-ink">Atendimentos de hoje</h2>
                   <Badge tone={today.length > 0 ? 'accent' : 'neutral'}>
                     {today.length} {today.length === 1 ? 'consulta' : 'consultas'}
@@ -133,7 +133,7 @@ export function DashboardPage() {
                     }
                   />
                 ) : (
-                  <ul className="divide-y divide-line">
+                  <ul className="flex flex-col gap-2 p-2">
                     {today.map((encounter) => (
                       <EncounterRow key={encounter.id} encounter={encounter} showTime />
                     ))}
@@ -142,9 +142,12 @@ export function DashboardPage() {
               </Card>
 
               <Card padded={false}>
-                <div className="flex items-center justify-between border-b border-line px-5 py-4">
+                <div className="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-4">
                   <h2 className="text-lg font-semibold text-ink">Atendimentos recentes</h2>
-                  <Link to="/atendimentos" className="text-sm font-medium text-accent hover:underline">
+                  <Link
+                    to="/atendimentos"
+                    className="-my-2 -mr-3 inline-flex min-h-touch items-center rounded-pill px-3 text-sm font-medium text-primary hover:bg-primary-soft"
+                  >
                     Ver todos
                   </Link>
                 </div>
@@ -162,7 +165,7 @@ export function DashboardPage() {
                     }
                   />
                 ) : (
-                  <ul className="divide-y divide-line">
+                  <ul className="flex flex-col gap-2 p-2">
                     {recent.map((encounter) => (
                       <EncounterRow key={encounter.id} encounter={encounter} />
                     ))}
@@ -177,6 +180,7 @@ export function DashboardPage() {
   )
 }
 
+/** KPI Swiss Minimal: borda de 1 px, cantos de 6 px, sem sombra. */
 function StatCard({
   icon,
   label,
@@ -193,21 +197,21 @@ function StatCard({
   return (
     <Link
       to={to}
-      className="rounded-xl border border-line bg-surface p-5 shadow-card transition-colors hover:border-slate-300"
+      className="group flex min-w-0 items-center justify-between gap-4 rounded-kpi border border-line bg-surface px-4 py-3 transition-colors hover:border-line-hover sm:flex-col sm:items-stretch sm:p-5"
     >
-      <div className="flex items-center gap-3">
-        <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent-soft text-accent">
+      <div className="flex min-w-0 items-center gap-3 sm:justify-between">
+        <span className="shrink-0 text-icon transition-colors group-hover:text-icon-hover sm:order-2" aria-hidden>
           {icon}
         </span>
-        <div className="min-w-0">
-          {loading ? (
-            <Skeleton className="h-7 w-12" />
-          ) : (
-            <p className="text-2xl font-semibold leading-none text-ink">{value ?? 0}</p>
-          )}
-          <p className="mt-1.5 truncate text-sm text-muted">{label}</p>
-        </div>
+        <p className="min-w-0 text-sm font-medium text-muted sm:order-1">{label}</p>
       </div>
+      {loading ? (
+        <Skeleton className="h-8 w-12 sm:h-10 sm:w-16" />
+      ) : (
+        <p className="shrink-0 text-[28px] font-semibold leading-none tracking-tight text-ink tabular-nums sm:text-[40px]">
+          {value ?? 0}
+        </p>
+      )}
     </Link>
   )
 }
@@ -218,19 +222,19 @@ function EncounterRow({ encounter, showTime }: { encounter: EncounterWithRefs; s
     <li>
       <Link
         to={encounter.patient ? `/pacientes/${encounter.patient.id}` : '/atendimentos'}
-        className="flex items-center gap-3 px-5 py-3.5 transition-colors hover:bg-slate-50"
+        className="flex min-h-[60px] items-center gap-3 rounded-[12px] px-3 py-3 transition-colors hover:bg-surface-hover"
       >
-        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-semibold text-slate-600">
+        <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-pill bg-primary-soft text-xs font-semibold text-primary">
           {initials(nome)}
         </span>
         <span className="min-w-0 flex-1">
-          <span className="block truncate text-sm font-medium text-ink">{nome}</span>
-          <span className="block truncate text-xs text-muted">
+          <span className="block break-words text-sm font-medium text-ink">{nome}</span>
+          <span className="mt-0.5 block break-words text-xs text-muted">
             {encounter.clinic?.nome ?? 'Clínica não informada'}
             {encounter.tipo_atendimento ? ` · ${encounter.tipo_atendimento}` : ''}
           </span>
         </span>
-        <span className="shrink-0 text-xs font-medium text-muted">
+        <span className="shrink-0 text-xs font-medium tabular-nums text-muted">
           {showTime ? formatTime(encounter.data_hora) : formatDate(encounter.data_hora)}
         </span>
       </Link>
@@ -240,11 +244,11 @@ function EncounterRow({ encounter, showTime }: { encounter: EncounterWithRefs; s
 
 function ListSkeleton() {
   return (
-    <div className="space-y-3 px-5 py-5">
+    <div className="flex flex-col gap-3 px-5 py-5">
       {[0, 1, 2].map((index) => (
         <div key={index} className="flex items-center gap-3">
-          <Skeleton className="h-9 w-9 rounded-full" />
-          <div className="flex-1 space-y-2">
+          <Skeleton className="h-10 w-10 rounded-pill" />
+          <div className="flex-1 flex flex-col gap-2">
             <Skeleton className="h-3.5 w-40" />
             <Skeleton className="h-3 w-24" />
           </div>

@@ -1,49 +1,63 @@
 /** @type {import('tailwindcss').Config} */
+
+// As cores apontam para os tokens de src/styles/design-tokens.css, a fonte
+// única da identidade. Nenhuma cor é definida aqui diretamente.
+const token = (name) => `var(--${name})`
+
 export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        // Paleta em ameixa e rosé: acolhedora, mas sóbria o suficiente para um
-        // prontuário. Todos os pares de texto e fundo passam no WCAG AA.
         primary: {
-          DEFAULT: '#4A2B4A',
-          hover: '#3C223C',
+          DEFAULT: token('brand-primary'),
+          hover: token('brand-primary-hover'),
+          pressed: token('brand-primary-pressed'),
+          soft: token('brand-primary-soft'),
+          fg: token('brand-primary-text'),
         },
-        accent: {
-          DEFAULT: '#A8326B',
-          hover: '#8E2A5B',
-          pressed: '#77234C',
-          soft: '#FBEFF5',
+        secondary: {
+          DEFAULT: token('brand-secondary'),
+          hover: token('brand-secondary-hover'),
         },
-        canvas: '#FBF7F9',
-        surface: '#FFFFFF',
-        ink: '#2B2430',
-        muted: '#7A6B77',
-        line: '#EDE3E9',
-        success: '#15803D',
-        warning: '#B45309',
-        danger: {
-          DEFAULT: '#C81E3C',
-          hover: '#A81833',
+        accent: token('brand-accent'),
+        canvas: token('brand-background'),
+        surface: {
+          DEFAULT: token('brand-surface'),
+          alt: token('brand-surface-alt'),
+          hover: token('brand-surface-hover'),
         },
-        // Cinzas levemente amalvados, para não destoarem do restante da paleta.
-        // Substituem o cinza padrão do Tailwind em todo o sistema.
-        slate: {
-          50: '#FAF6F8',
-          100: '#F4EEF2',
-          200: '#E8DCE4',
-          300: '#D3C2CD',
-          400: '#96808E',
-          500: '#7E6B77',
-          600: '#63525C',
-          700: '#4E3F48',
-          800: '#382C33',
-          900: '#251C21',
+        ink: token('brand-text'),
+        // Texto secundário acessível (exceção registrada no design-tokens.css).
+        muted: token('text-secondary'),
+        // Token original de texto atenuado: ícones, texto grande e desabilitados.
+        subtle: token('brand-text-muted'),
+        placeholder: token('brand-placeholder'),
+        icon: {
+          DEFAULT: token('brand-icon'),
+          hover: token('brand-icon-hover'),
         },
+        line: {
+          DEFAULT: token('brand-border'),
+          hover: token('brand-border-hover'),
+          focus: token('brand-border-focus'),
+          control: token('control-border'),
+        },
+        focus: token('brand-focus-ring'),
+        selection: token('brand-selection'),
+        overlay: token('brand-overlay'),
+        disabled: {
+          DEFAULT: token('brand-disabled'),
+          fg: token('brand-disabled-text'),
+        },
+        success: { DEFAULT: token('brand-success'), soft: token('brand-success-soft') },
+        warning: { DEFAULT: token('brand-warning'), soft: token('brand-warning-soft') },
+        danger: { DEFAULT: token('brand-danger'), soft: token('brand-danger-soft') },
+        info: { DEFAULT: token('brand-info'), soft: token('brand-info-soft') },
       },
       fontFamily: {
-        sans: ['Inter', 'Roboto', 'SF Pro Text', '-apple-system', 'system-ui', 'sans-serif'],
+        sans: token('font-sans'),
+        display: token('font-display'),
       },
       fontSize: {
         xs: ['13px', '18px'],
@@ -61,14 +75,57 @@ export default {
         md: '8px',
         lg: '10px',
         xl: '12px',
+        brand: token('brand-radius'),
+        field: token('field-radius'),
+        pill: '999px',
+        card: token('card-radius'),
+        kpi: token('kpi-radius'),
+        header: token('header-radius'),
+        sidebar: token('sidebar-radius'),
+        menu: token('menu-radius'),
+        drawer: token('drawer-radius'),
+        tabs: token('tabs-radius'),
       },
       boxShadow: {
-        card: '0 1px 3px rgba(74,43,74,0.06)',
-        modal: '0 10px 30px rgba(74,43,74,0.14)',
-        toast: '0 4px 16px rgba(74,43,74,0.14)',
+        card: token('card-shadow'),
+        header: token('header-shadow'),
+        sidebar: token('sidebar-shadow'),
+        menu: token('menu-shadow'),
+        drawer: token('drawer-shadow'),
+        toast: token('drawer-shadow'),
+      },
+      height: {
+        control: token('control-height'),
+        'control-sm': token('control-height-sm'),
+        header: token('layout-header-height'),
+        dock: token('dock-height'),
+      },
+      minHeight: {
+        touch: token('touch-target'),
+        control: token('control-height'),
+      },
+      minWidth: {
+        touch: token('touch-target'),
+      },
+      width: {
+        sidebar: token('layout-sidebar-width'),
+        rail: token('layout-rail-width'),
       },
       maxWidth: {
-        content: '1280px',
+        content: token('layout-content-max'),
+      },
+      zIndex: {
+        header: token('z-header'),
+        sidebar: token('z-sidebar'),
+        dock: token('z-dock'),
+        menu: token('z-menu'),
+        modal: token('z-modal'),
+        toast: token('z-toast'),
+      },
+      screens: {
+        // Abaixo de 768px vale o Dock flutuante; a partir daqui, o layout desktop.
+        md: '768px',
+        lg: '1024px',
       },
     },
   },

@@ -12,18 +12,18 @@ import { configuredUrl, missingEnvVars, urlProblem } from '../lib/supabase'
 export function SetupNotice() {
   return (
     <div className="flex min-h-full items-center justify-center bg-canvas px-4 py-10">
-      <div className="w-full max-w-xl rounded-xl border border-line bg-surface p-7 shadow-card">
-        <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-accent-soft text-accent">
+      <div className="w-full max-w-xl rounded-card border border-line bg-surface p-6 shadow-card sm:p-8">
+        <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-pill bg-primary-soft text-primary">
           <Settings2 size={21} />
         </div>
-        <h1 className="text-xl font-semibold text-ink">Configuração pendente</h1>
+        <h1 className="display-title text-[32px] leading-tight">Configuração pendente</h1>
 
         {urlProblem ? (
           <>
             <p className="mt-2 text-sm leading-6 text-muted">
               O endereço do Supabase configurado no site não é válido. {urlProblem}
             </p>
-            <div className="mt-3 rounded-lg border border-line bg-slate-50 px-4 py-3">
+            <div className="mt-3 rounded-brand border border-line bg-surface-alt px-4 py-3">
               <p className="text-xs font-medium text-muted">Endereço configurado</p>
               <code className="mt-1 block break-all text-xs text-ink">{configuredUrl}</code>
             </div>
@@ -31,7 +31,7 @@ export function SetupNotice() {
               O endereço correto está no Supabase, em{' '}
               <span className="font-medium text-ink">Project Settings → Data API → Project URL</span>,
               e tem este formato:{' '}
-              <code className="rounded bg-slate-100 px-1.5 py-0.5 text-xs text-ink">
+              <code className="rounded bg-surface-hover px-1.5 py-0.5 text-xs text-ink">
                 https://seu-projeto.supabase.co
               </code>
             </p>
@@ -44,10 +44,10 @@ export function SetupNotice() {
                 : 'O site recebeu apenas parte das credenciais do Supabase.'}{' '}
               Faltou:
             </p>
-            <ul className="mt-3 space-y-1.5">
+            <ul className="mt-3 flex flex-col gap-2">
               {missingEnvVars.map((name) => (
                 <li key={name}>
-                  <code className="rounded bg-slate-100 px-2 py-1 text-xs font-medium text-ink">{name}</code>
+                  <code className="rounded bg-surface-hover px-2 py-1 text-xs font-medium text-ink">{name}</code>
                 </li>
               ))}
             </ul>
@@ -68,10 +68,10 @@ export function SetupNotice() {
         <div className="mt-6 border-t border-line pt-5">
           <h2 className="text-md font-semibold text-ink">Se está rodando no seu computador</h2>
           <p className="mt-2 text-sm leading-6 text-muted">
-            Crie um arquivo <code className="rounded bg-slate-100 px-1.5 py-0.5 text-xs text-ink">.env</code>{' '}
+            Crie um arquivo <code className="rounded bg-surface-hover px-1.5 py-0.5 text-xs text-ink">.env</code>{' '}
             na raiz do projeto e reinicie o servidor:
           </p>
-          <pre className="mt-3 overflow-x-auto rounded-lg border border-line bg-slate-50 px-4 py-3 text-xs leading-6 text-ink">
+          <pre className="mt-3 overflow-x-auto rounded-brand border border-line bg-surface-alt px-4 py-3 text-xs leading-6 text-ink">
 {`VITE_SUPABASE_URL=https://seu-projeto.supabase.co
 VITE_SUPABASE_ANON_KEY=sua-chave-publica`}
           </pre>

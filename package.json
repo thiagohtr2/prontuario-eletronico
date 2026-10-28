@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "qa:build": "vite build --mode qa --outDir dist-qa",
+    "qa:responsive": "node scripts/qa/responsive.cjs"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.4",

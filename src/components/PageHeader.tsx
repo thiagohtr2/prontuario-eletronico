@@ -1,6 +1,10 @@
 import type { ReactNode } from 'react'
 import { cn } from '../lib/cn'
 
+/**
+ * Abertura da página dentro da área de conteúdo: título em serifa, descrição
+ * e ações. A localização (breadcrumbs) fica no header flutuante do layout.
+ */
 export function PageHeader({
   title,
   description,
@@ -15,23 +19,23 @@ export function PageHeader({
   className?: string
 }) {
   return (
-    <header className={cn('border-b border-line bg-surface', className)}>
-      <div className="mx-auto flex max-w-content flex-col gap-4 px-4 py-5 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:py-6">
+    <header className={cn('pb-6 pt-2 md:pt-0', className)}>
+      <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
         <div className="min-w-0">
-          <h1 className="text-2xl font-semibold tracking-tight text-ink lg:text-3xl">{title}</h1>
-          {description && <p className="mt-1 text-sm text-muted">{description}</p>}
+          <h1 className="display-title break-words text-[34px] leading-[1.1] sm:text-[40px]">{title}</h1>
+          {description && <p className="mt-2 max-w-2xl text-sm text-muted sm:text-base">{description}</p>}
         </div>
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center lg:justify-end">
-          {search}
-          {action}
-        </div>
+        {(search || action) && (
+          <div className="flex min-w-0 flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center lg:shrink-0 lg:justify-end">
+            {search}
+            {action}
+          </div>
+        )}
       </div>
     </header>
   )
 }
 
 export function PageBody({ children, className }: { children: ReactNode; className?: string }) {
-  return (
-    <div className={cn('mx-auto max-w-content px-4 py-6 sm:px-6 lg:py-8', className)}>{children}</div>
-  )
+  return <div className={cn('max-w-content pb-8', className)}>{children}</div>
 }

@@ -4,7 +4,7 @@ import { LogOut, Save } from 'lucide-react'
 import { PageBody, PageHeader } from '../components/PageHeader'
 import { Card, CardHeader } from '../components/ui/Card'
 import { Button } from '../components/ui/Button'
-import { Input } from '../components/ui/Field'
+import { Input, FormError } from '../components/ui/Field'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { errorMessage } from '../lib/api'
@@ -63,10 +63,10 @@ export function SettingsPage() {
     <>
       <PageHeader title="Configurações" description="Seus dados de identificação no sistema." />
 
-      <PageBody className="max-w-2xl space-y-6">
+      <PageBody className="max-w-2xl flex flex-col gap-6">
         <Card>
-          <CardHeader title="Perfil do médico" description="Aparece no menu e identifica sua conta." />
-          <form onSubmit={handleSubmit} className="mt-5 space-y-4" noValidate>
+          <CardHeader title="Seu perfil profissional" description="Aparece no menu e identifica sua conta." />
+          <form onSubmit={handleSubmit} className="mt-5 flex flex-col gap-5" noValidate>
             <Input
               label="Nome completo"
               value={form.nome}
@@ -97,9 +97,7 @@ export function SettingsPage() {
             <Input label="E-mail" value={session?.user.email ?? ''} disabled hint="O e-mail de acesso não pode ser alterado aqui." />
 
             {error && (
-              <p className="rounded-md border border-red-100 bg-red-50 px-3 py-2.5 text-sm text-danger" role="alert">
-                {error}
-              </p>
+              <FormError>{error}</FormError>
             )}
 
             <div className="flex justify-end pt-1">

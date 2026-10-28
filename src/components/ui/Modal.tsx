@@ -1,7 +1,9 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useId, useRef } from 'react'
 import type { ReactNode } from 'react'
 import { X } from 'lucide-react'
 import { cn } from '../../lib/cn'
+import { IconButton } from './Button'
+import { useFocusTrap } from '../../lib/useFocusTrap'
 
 type ModalProps = {
   open: boolean
@@ -14,65 +16,70 @@ type ModalProps = {
 }
 
 const sizes = {
-  sm: 'max-w-md',
-  md: 'max-w-xl',
-  lg: 'max-w-3xl',
+  sm: 'sm:max-w-md',
+  md: 'sm:max-w-xl',
+  lg: 'sm:max-w-3xl',
 }
 
+/**
+ * Diálogo modal. No celular vira bottom sheet (geometria Drawers — Aurora),
+ * respeitando a safe area; a partir de 640 px, diálogo centralizado.
+ * Prende o foco, fecha com Escape e devolve o foco a quem o abriu.
+ */
 export function Modal({ open, onClose, title, description, size = 'md', children, footer }: ModalProps) {
   const panelRef = useRef<HTMLDivElement>(null)
+  const titleId = useId()
+  const descriptionId = useId()
+
+  useFocusTrap(panelRef, open, onClose)
 
   useEffect(() => {
     if (!open) return
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') onClose()
-    }
-    document.addEventListener('keydown', onKeyDown)
     const previousOverflow = document.body.style.overflow
     document.body.style.overflow = 'hidden'
-    panelRef.current?.querySelector<HTMLElement>('input, textarea, select, button')?.focus()
     return () => {
-      document.removeEventListener('keydown', onKeyDown)
       document.body.style.overflow = previousOverflow
     }
-  }, [open, onClose])
+  }, [open])
 
   if (!open) return null
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-end justify-center bg-[#2B2430]/45 p-0 sm:items-center sm:p-6"
-      role="dialog"
-      aria-modal="true"
-      aria-label={title}
-      onMouseDown={(event) => {
-        if (event.target === event.currentTarget) onClose()
-      }}
-    >
+    <div className="fixed inset-0 z-modal flex items-end justify-center sm:items-center sm:p-6">
+      <div className="absolute inset-0 bg-overlay opacity-60" onMouseDown={onClose} aria-hidden />
       <div
         ref={panelRef}
+        tabIndex={-1}
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={titleId}
+        aria-describedby={description ? descriptionId : undefined}
         className={cn(
-          'flex max-h-[92vh] w-full flex-col rounded-t-xl bg-surface shadow-modal sm:rounded-xl',
+          'relative flex max-h-[92dvh] w-full flex-col rounded-t-drawer border border-line bg-surface shadow-drawer sm:rounded-drawer',
           sizes[size],
         )}
       >
-        <div className="flex items-start justify-between gap-4 border-b border-line px-5 py-4">
-          <div className="min-w-0">
-            <h2 className="text-lg font-semibold text-ink">{title}</h2>
-            {description && <p className="mt-1 text-sm text-muted">{description}</p>}
+        <div className="flex items-start justify-between gap-4 border-b border-line px-5 py-4 sm:px-6">
+          <div className="min-w-0 pt-1">
+            <h2 id={titleId} className="display-title text-2xl">
+              {title}
+            </h2>
+            {description && (
+              <p id={descriptionId} className="mt-1 text-sm text-muted">
+                {description}
+              </p>
+            )}
           </div>
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label="Fechar"
-            className="-mr-1 -mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-md text-muted transition-colors hover:bg-slate-100 hover:text-ink"
-          >
-            <X size={18} />
-          </button>
+          <IconButton label="Fechar" icon={<X size={19} />} onClick={onClose} className="-mr-2" />
         </div>
-        <div className="min-h-0 flex-1 overflow-y-auto px-5 py-5">{children}</div>
+        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-5 py-5 sm:px-6">{children}</div>
         {footer && (
-          <div className="flex flex-wrap justify-end gap-3 border-t border-line px-5 py-4">{footer}</div>
+          <div
+            className="flex flex-col-reverse gap-3 border-t border-line px-5 py-4 sm:flex-row sm:flex-wrap sm:justify-end sm:px-6"
+            style={{ paddingBottom: 'max(16px, env(safe-area-inset-bottom))' }}
+          >
+            {footer}
+          </div>
         )}
       </div>
     </div>

@@ -15,10 +15,10 @@ export function SearchInput({
   className?: string
 }) {
   return (
-    <div className={cn('relative w-full sm:w-80', className)}>
+    <div className={cn('relative w-full min-w-0 sm:w-80', className)}>
       <Search
         size={18}
-        className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-muted"
+        className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-icon"
         aria-hidden
       />
       <input
@@ -27,16 +27,17 @@ export function SearchInput({
         value={value}
         onChange={(event) => onChange(event.target.value)}
         placeholder={placeholder}
-        className="h-11 w-full rounded-md border border-line bg-surface pl-10 pr-10 text-sm text-ink placeholder:text-slate-400 transition-colors focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/25 [&::-webkit-search-cancel-button]:hidden"
+        enterKeyHint="search"
+        className="h-control w-full rounded-field border border-line-control bg-surface pl-11 pr-12 text-md text-ink transition-colors placeholder:text-placeholder hover:border-line-hover focus:border-line-focus focus:shadow-[0_0_0_3px_var(--brand-focus-ring)] focus:outline-none focus-visible:outline-none [&::-webkit-search-cancel-button]:hidden"
       />
       {value && (
         <button
           type="button"
           onClick={() => onChange('')}
           aria-label="Limpar busca"
-          className="absolute right-2 top-1/2 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-md text-muted transition-colors hover:bg-slate-100 hover:text-ink"
+          className="absolute right-0.5 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-pill text-icon transition-colors hover:bg-surface-hover hover:text-icon-hover"
         >
-          <X size={15} />
+          <X size={16} aria-hidden />
         </button>
       )}
     </div>

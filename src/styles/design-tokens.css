@@ -1,0 +1,161 @@
+/*
+ * Singulare — design tokens (fonte única da identidade).
+ *
+ * Bloco 1 é o Color System "Burgundy (Vinho editorial)" aprovado, copiado sem
+ * alterações. Os demais blocos derivam dele: nenhum componente define cor
+ * própria. Exceções de acessibilidade estão no bloco 2 e documentadas no README.
+ */
+
+/* 1. Color System aprovado ------------------------------------------------ */
+:root {
+  --brand-primary: #881337;
+  --brand-primary-hover: #75102f;
+  --brand-primary-pressed: #660e29;
+  --brand-primary-soft: #f4e2e7;
+  --brand-primary-text: #ffffff;
+  --brand-secondary: #9f1239;
+  --brand-secondary-hover: #860f30;
+  --brand-accent: #9f1239;
+  --brand-background: #fff7f8;
+  --brand-surface: #ffffff;
+  --brand-surface-alt: #fffafb;
+  --brand-surface-hover: #f7f0f2;
+  --brand-text: #4c0519;
+  --brand-text-muted: #a27984;
+  --brand-placeholder: #9e7480;
+  --brand-border: #e6d5d9;
+  --brand-border-hover: #a44d68;
+  --brand-border-focus: #881337;
+  --brand-focus-ring: #d4a5b3;
+  --brand-icon: #a27984;
+  --brand-icon-hover: #881337;
+  --brand-selection: #e1bec8;
+  --brand-success: #15803d;
+  --brand-success-soft: #e3f0e8;
+  --brand-warning: #a16207;
+  --brand-warning-soft: #f5eee4;
+  --brand-danger: #b91c1c;
+  --brand-danger-soft: #f8e8e8;
+  --brand-info: #0369a1;
+  --brand-info-soft: #e3eff5;
+  --brand-disabled: #efe9ea;
+  --brand-disabled-text: #a27984;
+  --brand-overlay: #666363;
+  --brand-radius: 14px;
+}
+
+/* 2. Exceções de acessibilidade (registradas, aguardando aprovação) --------
+ *
+ * --brand-text-muted (#a27984) tem contraste 3,75:1 sobre o branco, abaixo dos
+ * 4,5:1 que o WCAG AA exige para texto comum. Ele continua sendo usado em
+ * ícones, texto grande e estados desabilitados (onde 3:1 basta). Texto
+ * secundário legível usa a variação abaixo, do mesmo matiz, que passa em
+ * todas as superfícies do sistema (5,91:1 no branco, 4,75:1 no primary-soft).
+ *
+ * Bordas de campos de formulário precisam de 3:1 contra o fundo (WCAG 1.4.11).
+ * --brand-border (#e6d5d9) tem 1,41:1, então os campos usam o token de ícone
+ * (3,75:1). Cards e divisórias continuam com --brand-border.
+ */
+:root {
+  --text-secondary: #835866;
+  --control-border: var(--brand-icon);
+}
+
+/* 3. Espaçamento, tipografia e camadas ------------------------------------ */
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+
+  --font-sans: 'Inter', 'SF Pro Text', -apple-system, system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif;
+
+  --control-height: 48px;
+  --control-height-sm: 44px;
+  --touch-target: 44px;
+
+  --z-header: 20;
+  --z-sidebar: 30;
+  --z-dock: 40;
+  --z-menu: 45;
+  --z-modal: 50;
+  --z-toast: 60;
+}
+
+/* 4. Layout aprovado — Sidebar flutuante compacta + Dock flutuante -------- */
+:root {
+  --layout-sidebar-width: 224px;
+  --layout-rail-width: 100px;
+  --layout-header-height: 64px;
+  --layout-gap: 16px;
+  --layout-radius: 16px;
+  --layout-content-max: 1360px;
+
+  --dock-height: 60px;
+  --dock-offset: 12px;
+  /* Espaço que o conteúdo reserva para não ficar escondido atrás do dock. */
+  --dock-clearance: calc(var(--dock-height) + var(--dock-offset) * 2 + env(safe-area-inset-bottom, 0px));
+}
+
+/* 5. Componentes aprovados (geometria; as cores vêm do bloco 1) ----------- */
+:root {
+  /* Botões e botões de ícone — Soft Pill */
+  --button-radius: 999px;
+  --button-border-width: 0px;
+  --button-shadow: none;
+
+  /* Headers / Topbars — Dark Luxury */
+  --header-radius: 17px;
+  --header-border-width: 1px;
+  --header-shadow: 0 13px 31px #10182824;
+
+  /* Sidebars — Soft Neumorphic */
+  --sidebar-radius: 20px;
+  --sidebar-border-width: 0px;
+  --sidebar-shadow: 9px 9px 24px #bac1ce88, -8px -8px 24px #ffffff;
+
+  /* Tabs — Swiss Minimal */
+  --tabs-radius: 6px;
+  --tabs-border-width: 1px;
+
+  /* Segmented controls — Soft Pill */
+  --segmented-radius: 999px;
+
+  /* Breadcrumbs — Soft Pill */
+  --breadcrumb-radius: 999px;
+
+  /* Menus contextuais — Soft Neumorphic */
+  --menu-radius: 20px;
+  --menu-shadow: 9px 9px 24px #bac1ce88, -8px -8px 24px #ffffff;
+
+  /* Paginação — Dark Luxury */
+  --pagination-radius: 17px;
+  --pagination-border-width: 1px;
+  --pagination-shadow: 0 13px 31px #10182824;
+
+  /* Step indicators — Swiss Minimal */
+  --stepper-radius: 6px;
+  --stepper-border-width: 1px;
+
+  /* Drawers — Aurora (bottom sheets e diálogos) */
+  --drawer-radius: 18px;
+  --drawer-border-width: 1px;
+  --drawer-shadow: 0 12px 35px #6e39c027;
+
+  /* Cards — Dark Luxury */
+  --card-radius: 17px;
+  --card-border-width: 1px;
+  --card-shadow: 0 13px 31px #10182824;
+
+  /* KPIs / Stat cards — Swiss Minimal */
+  --kpi-radius: 6px;
+  --kpi-border-width: 1px;
+  --kpi-shadow: none;
+
+  /* Campos de formulário herdam o raio global da identidade. */
+  --field-radius: var(--brand-radius);
+}
