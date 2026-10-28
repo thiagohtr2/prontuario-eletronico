@@ -41,8 +41,9 @@ function inspectFocus() {
     if (r.top <= 0 + 1 && r.bottom < window.innerHeight / 2) coverTop = Math.max(coverTop, r.bottom)
     if (r.bottom >= window.innerHeight - 40 && r.top > window.innerHeight / 2) coverBottom = Math.min(coverBottom, r.top)
   }
-  const inFixed = el.closest('.app-dock, header.sticky, .sticky, [role=dialog], [role=menu]')
-  const hidden = !inFixed && (rect.top < coverTop - 1 || rect.bottom > coverBottom + 1)
+  const inFixed = style.position === 'fixed' || el.closest('.app-dock, header.sticky, .sticky, [role=dialog], [role=menu]')
+  // WCAG 2.4.11: o elemento focado não pode ficar inteiramente escondido.
+  const hidden = !inFixed && (rect.bottom <= coverTop + 1 || rect.top >= coverBottom - 1)
   const label = (el.getAttribute('aria-label') || el.textContent || el.getAttribute('placeholder') || el.tagName).trim().slice(0, 40)
   return { label, indicator, hidden, top: Math.round(rect.top), coverTop: Math.round(coverTop), coverBottom: Math.round(coverBottom) }
 }

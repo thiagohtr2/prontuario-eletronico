@@ -319,7 +319,19 @@ async function main() {
     server.kill()
   }
 
-  fs.writeFileSync(path.join(OUT, 'results.json'), JSON.stringify({ results, consoleErrors }, null, 2))
+  // QA_MERGE=1 atualiza só as combinações medidas agora num results.json existente.
+  const file = path.join(OUT, 'results.json')
+  if (process.env.QA_MERGE && fs.existsSync(file)) {
+    const previous = JSON.parse(fs.readFileSync(file, 'utf8'))
+    const key = (r) => `${r.page}|${r.viewport}`
+    const fresh = new Set(results.map(key))
+    const merged = previous.results.filter((r) => !fresh.has(key(r))).concat(results)
+    const ran = new Set(results.map((r) => `${r.page} @ ${r.viewport}`))
+    const errors = previous.consoleErrors.filter((e) => !ran.has(e.split(':')[0])).concat(consoleErrors)
+    fs.writeFileSync(file, JSON.stringify({ results: merged, consoleErrors: errors }, null, 2))
+  } else {
+    fs.writeFileSync(file, JSON.stringify({ results, consoleErrors }, null, 2))
+  }
   const failing = results.filter((r) => r.issues.length > 0)
   console.log(`\n${results.length} combinações medidas, ${failing.length} com problemas, ${consoleErrors.length} erros de console.`)
   for (const r of failing) {

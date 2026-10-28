@@ -82,6 +82,10 @@ if (truncatedSet.size === 0) {
   for (const [text, where] of truncatedSet) lines.push(`- ${text} — em ${[...new Set(where)].join(', ')}`)
 }
 lines.push('')
+lines.push('Truncamentos aceitos de propósito: nome e especialidade no botão da conta, no header do desktop.')
+lines.push('Os dois aparecem completos no topo do menu da conta, aberto pelo mesmo botão. Nomes de pacientes,')
+lines.push('clínicas, horários, datas e status nunca são truncados: quebram linha.')
+lines.push('')
 
 lines.push('## O que é medido')
 lines.push('')
@@ -100,6 +104,11 @@ lines.push('')
 
 lines.push('## Teclado')
 lines.push('')
+lines.push('`scripts/qa/keyboard.cjs` percorre landing, acesso, painel, pacientes, prontuário e nova evolução com')
+lines.push('Tab a 390 e 1440 px. Confere indicador de foco visível em cada elemento, que nenhum foco fique')
+lines.push('inteiramente escondido sob o header fixo ou o dock (WCAG 2.4.11), Escape e retorno de foco no menu')
+lines.push('da conta, e a prisão de foco e o retorno ao fechar o diálogo.')
+lines.push('')
 lines.push(keyboard ? '```\n' + keyboard + '\n```' : 'Não executado nesta rodada.')
 lines.push('')
 
@@ -113,6 +122,10 @@ lines.push(
 )
 lines.push('')
 
+lines.push('## Revisão visual')
+lines.push('')
+lines.push('Ver [`revisao-visual.md`](revisao-visual.md) e as capturas em [`telas/`](telas/).')
+lines.push('')
 lines.push('## Não testado nesta rodada')
 lines.push('')
 lines.push('- Aparelhos reais (iPhone/Safari e Android/Chrome) e os motores WebKit e Gecko: só o Chromium foi usado.')

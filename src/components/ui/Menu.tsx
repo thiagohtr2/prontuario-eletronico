@@ -130,7 +130,7 @@ export function Menu({
             'absolute right-0 z-menu w-[min(288px,calc(100vw-32px))] overflow-y-auto rounded-menu bg-surface p-2 shadow-menu',
             placement === 'bottom' ? 'top-full mt-2' : 'bottom-full mb-2',
           )}
-          style={{ maxHeight: 'min(420px, calc(100dvh - 120px))' }}
+          style={{ maxHeight: 'min(420px, calc(100dvh - 96px - var(--dock-reserve, 0px)))' }}
         >
           {header && <div className="px-3 pb-3 pt-2">{header}</div>}
           <div className="flex flex-col gap-2">

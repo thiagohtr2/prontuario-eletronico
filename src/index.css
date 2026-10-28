@@ -110,6 +110,8 @@ html.has-dock {
 @media (max-width: 767.98px) {
   html.has-dock {
     --toast-bottom: calc(var(--dock-clearance) + 8px);
+    /* Menus abertos não descem até a área do dock. */
+    --dock-reserve: var(--dock-clearance);
   }
 }
 

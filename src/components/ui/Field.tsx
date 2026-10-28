@@ -8,6 +8,8 @@ const controlBase =
   'w-full rounded-field border border-line-control bg-surface text-md text-ink placeholder:text-placeholder ' +
   'transition-colors hover:border-line-hover focus:border-line-focus focus:outline-none ' +
   'focus-visible:outline-none focus:shadow-[0_0_0_3px_var(--brand-focus-ring)] ' +
+  // Data e hora nativos focam um campo interno: focus-within cobre esse caso.
+  'focus-within:border-line-focus focus-within:shadow-[0_0_0_3px_var(--brand-focus-ring)] ' +
   'disabled:cursor-not-allowed disabled:border-line disabled:bg-disabled disabled:text-disabled-fg'
 
 const controlError = 'border-danger hover:border-danger focus:border-danger'
