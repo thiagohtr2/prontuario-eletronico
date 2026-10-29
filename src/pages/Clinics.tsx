@@ -113,10 +113,12 @@ export function ClinicsPage() {
                 </div>
 
                 <dl className="mt-4 flex-1 flex flex-col gap-3 text-sm">
-                  {clinic.endereco && (
+                  {(clinic.endereco || clinic.cidade) && (
                     <div className="flex items-start gap-2 text-muted">
                       <MapPin size={16} className="mt-0.5 shrink-0 text-icon" aria-hidden />
-                      <span className="leading-6 text-ink">{clinic.endereco}</span>
+                      <span className="leading-6 text-ink">
+                        {[clinic.endereco, clinic.cidade].filter(Boolean).join(' — ')}
+                      </span>
                     </div>
                   )}
                   {clinic.telefone && (
@@ -128,7 +130,7 @@ export function ClinicsPage() {
                   {clinic.observacoes && (
                     <p className="whitespace-pre-wrap pt-1 text-sm leading-6 text-muted">{clinic.observacoes}</p>
                   )}
-                  {!clinic.endereco && !clinic.telefone && !clinic.observacoes && (
+                  {!clinic.endereco && !clinic.cidade && !clinic.telefone && !clinic.observacoes && (
                     <p className="text-sm text-muted">Sem informações adicionais.</p>
                   )}
                 </dl>

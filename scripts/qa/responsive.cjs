@@ -59,6 +59,9 @@ const ALL_PAGES = [
   { id: 'inicio-menu-aberto', path: '/inicio', auth: true, action: 'openUserMenu' },
   { id: 'pacientes-modal-aberto', path: '/pacientes', auth: true, action: 'openPatientModal' },
   { id: 'prontuario-excluir-aberto', path: '/pacientes/p1', auth: true, action: 'openDeleteDialog' },
+  { id: 'prontuario-receita-aberta', path: '/pacientes/p1', auth: true, action: 'openPrescription' },
+  { id: 'configuracoes-modelo-aberto', path: '/configuracoes', auth: true, action: 'openSample' },
+  { id: 'clinicas-form-aberto', path: '/clinicas', auth: true, action: 'openClinicForm' },
   { id: 'inicio-vazio', path: '/inicio', auth: true, empty: true },
   { id: 'pacientes-vazio', path: '/pacientes', auth: true, empty: true },
   { id: 'inicio-carregando', path: '/inicio', auth: true, latencyMs: 4000, noWait: true },
@@ -94,6 +97,18 @@ const actions = {
   },
   async openPatientModal(page) {
     await page.getByRole('button', { name: 'Novo paciente' }).click()
+    await page.getByRole('dialog').waitFor()
+  },
+  async openPrescription(page) {
+    await page.getByRole('button', { name: 'Receita' }).first().click()
+    await page.getByRole('dialog').getByRole('button', { name: 'Baixar PDF' }).and(page.locator(':enabled')).waitFor({ timeout: 30000 })
+  },
+  async openSample(page) {
+    await page.getByRole('button', { name: 'Ver modelo da receita' }).click()
+    await page.getByRole('dialog').getByRole('button', { name: 'Baixar PDF' }).and(page.locator(':enabled')).waitFor({ timeout: 30000 })
+  },
+  async openClinicForm(page) {
+    await page.getByRole('button', { name: 'Nova clínica' }).click()
     await page.getByRole('dialog').waitFor()
   },
   async openDeleteDialog(page) {

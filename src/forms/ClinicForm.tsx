@@ -6,10 +6,10 @@ import { Input, Textarea, FormError } from '../components/ui/Field'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import { createClinic, errorMessage, updateClinic } from '../lib/api'
-import { formatPhone } from '../lib/format'
+import { formatCNPJ, formatPhone } from '../lib/format'
 import type { Clinic } from '../lib/types'
 
-const emptyForm = { nome: '', endereco: '', telefone: '', observacoes: '' }
+const emptyForm = { nome: '', endereco: '', cidade: '', telefone: '', cnpj: '', observacoes: '' }
 
 export function ClinicForm({
   open,
@@ -36,7 +36,9 @@ export function ClinicForm({
         ? {
             nome: clinic.nome ?? '',
             endereco: clinic.endereco ?? '',
+            cidade: clinic.cidade ?? '',
             telefone: clinic.telefone ?? '',
+            cnpj: clinic.cnpj ?? '',
             observacoes: clinic.observacoes ?? '',
           }
         : emptyForm,
@@ -59,7 +61,9 @@ export function ClinicForm({
     const payload = {
       nome: form.nome.trim(),
       endereco: form.endereco.trim() || null,
+      cidade: form.cidade.trim() || null,
       telefone: form.telefone.trim() || null,
+      cnpj: form.cnpj.trim() || null,
       observacoes: form.observacoes.trim() || null,
     }
     try {
@@ -107,7 +111,16 @@ export function ClinicForm({
           label="Endereço"
           value={form.endereco}
           onChange={(event) => update('endereco', event.target.value)}
-          placeholder="Rua Altino Seberto de Barros, 120 — Salvador/BA"
+          placeholder="Rua Altino Seberto de Barros, 120, sala 804"
+          hint="Sai no rodapé das receitas emitidas nesta clínica."
+        />
+        <Input
+          label="Cidade"
+          value={form.cidade}
+          onChange={(event) => update('cidade', event.target.value)}
+          placeholder="Salvador"
+          autoComplete="address-level2"
+          hint="Usada na data da receita: Salvador, 29 de outubro de 2026."
         />
         <Input
           label="Telefone"
@@ -115,6 +128,14 @@ export function ClinicForm({
           value={formatPhone(form.telefone)}
           onChange={(event) => update('telefone', event.target.value.replace(/\D/g, ''))}
           placeholder="(71) 3333-0000"
+        />
+        <Input
+          label="CNPJ"
+          inputMode="numeric"
+          value={formatCNPJ(form.cnpj)}
+          onChange={(event) => update('cnpj', event.target.value.replace(/\D/g, '').slice(0, 14))}
+          placeholder="00.000.000/0000-00"
+          hint="Opcional."
         />
         <Textarea
           label="Observações"

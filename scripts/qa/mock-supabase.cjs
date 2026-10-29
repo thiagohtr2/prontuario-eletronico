@@ -50,15 +50,25 @@ function buildData({ empty = false } = {}) {
     especialidade: 'Ginecologia, Obstetrícia e Medicina Reprodutiva',
     crm: '123456-BA',
     telefone: '71999990000',
+    titulo_profissional: 'Ginecologia, Obstetrícia e Reprodução Humana',
+    rqe: '45678',
+    email_contato: 'contato@draanacarolina.com.br',
+    instagram: '@dra.anacarolina',
+    site: 'www.draanacarolina.com.br',
+    endereco_profissional: null,
+    rodape_receituario: 'Em caso de dúvidas, fale comigo pelo WhatsApp.',
+    cor_receituario: 'vinho',
+    papel_receituario: 'A4',
+    logo_url: null,
     created_at: iso(200),
     updated_at: iso(2),
   }
   if (empty) return { doctor, clinics: [], patients: [], encounters: [] }
 
   const clinics = [
-    { id: 'c1', doctor_id: USER_ID, nome: 'Clínica Itaigara', endereco: 'Rua Altino Seberto de Barros, 120, sala 804 — Itaigara, Salvador/BA', telefone: '7133330000', observacoes: 'Atendimento às terças e quintas, das 8h às 12h. Recepção no 8º andar.', ativa: true, created_at: iso(100), updated_at: iso(100) },
-    { id: 'c2', doctor_id: USER_ID, nome: 'Centro Médico Integrado da Mulher e da Família — Unidade Pituba', endereco: 'Avenida Paulo VI, 1500 — Pituba, Salvador/BA', telefone: '7132220000', observacoes: null, ativa: true, created_at: iso(90), updated_at: iso(90) },
-    { id: 'c3', doctor_id: USER_ID, nome: 'Hospital Aliança', endereco: null, telefone: null, observacoes: null, ativa: true, created_at: iso(80), updated_at: iso(80) },
+    { id: 'c1', doctor_id: USER_ID, nome: 'Clínica Itaigara', endereco: 'Rua Altino Seberto de Barros, 120, sala 804 — Itaigara, Salvador/BA', telefone: '7133330000', observacoes: 'Atendimento às terças e quintas, das 8h às 12h. Recepção no 8º andar.', cidade: 'Salvador', cnpj: '12345678000190', ativa: true, created_at: iso(100), updated_at: iso(100) },
+    { id: 'c2', doctor_id: USER_ID, nome: 'Centro Médico Integrado da Mulher e da Família — Unidade Pituba', endereco: 'Avenida Paulo VI, 1500 — Pituba, Salvador/BA', telefone: '7132220000', observacoes: null, cidade: 'Salvador', cnpj: null, ativa: true, created_at: iso(90), updated_at: iso(90) },
+    { id: 'c3', doctor_id: USER_ID, nome: 'Hospital Aliança', endereco: null, telefone: null, observacoes: null, cidade: null, cnpj: null, ativa: true, created_at: iso(80), updated_at: iso(80) },
   ]
 
   const patients = [
@@ -76,7 +86,10 @@ function buildData({ empty = false } = {}) {
     'Paciente relata dor pélvica intermitente há três semanas, de moderada intensidade, com piora no período menstrual e melhora parcial com analgésico comum. Nega febre, sangramento fora do ciclo ou alterações urinárias.'
 
   const encounters = [
-    { id: 'e1', patient_id: 'p1', clinic_id: 'c2', data_hora: iso(0, 14, 30), tipo_atendimento: 'Retorno', queixa_principal: longText, historia_clinica: 'G2P1A0. Última menstruação há 32 dias. Hipertensão arterial em uso de losartana 50 mg/dia.', exame_fisico: 'PA 120/80 mmHg, FC 76 bpm. Abdome flácido, indolor à palpação profunda.', evolucao: 'Melhora parcial do quadro em relação à última consulta. Mantém acompanhamento.', diagnostico: 'Dismenorreia secundária a investigar (N94.5).', conduta: 'Solicitada ultrassonografia transvaginal. Retorno em 30 dias com exames.', prescricao: 'Ibuprofeno 600 mg, 1 comprimido de 8/8h por 5 dias, se dor.', exames_solicitados: 'Ultrassonografia transvaginal; hemograma completo; beta-HCG.', observacoes: null },
+    { id: 'e1', patient_id: 'p1', clinic_id: 'c2', data_hora: iso(0, 14, 30), tipo_atendimento: 'Retorno', queixa_principal: longText, historia_clinica: 'G2P1A0. Última menstruação há 32 dias. Hipertensão arterial em uso de losartana 50 mg/dia.', exame_fisico: 'PA 120/80 mmHg, FC 76 bpm. Abdome flácido, indolor à palpação profunda.', evolucao: 'Melhora parcial do quadro em relação à última consulta. Mantém acompanhamento.', diagnostico: 'Dismenorreia secundária a investigar (N94.5).', conduta: 'Solicitada ultrassonografia transvaginal. Retorno em 30 dias com exames.', prescricao: 'Evitar relações sexuais durante o tratamento. Retornar em 30 dias com os exames.', prescricao_itens: [
+      { id: 'i1', medicamento: 'Ibuprofeno 600 mg, comprimido revestido', via: 'Uso oral', quantidade: '1 caixa', posologia: 'Tomar 1 comprimido de 8 em 8 horas, após as refeições, por 5 dias, se houver dor.' },
+      { id: 'i2', medicamento: 'Metronidazol gel vaginal 100 mg/g', via: 'Uso vaginal', quantidade: '1 bisnaga', posologia: 'Aplicar 1 aplicador cheio ao deitar, por 7 noites seguidas.' },
+    ], exames_solicitados: 'Ultrassonografia transvaginal; hemograma completo; beta-HCG.', observacoes: null },
     { id: 'e2', patient_id: 'p2', clinic_id: 'c1', data_hora: iso(0, 9, 0), tipo_atendimento: 'Primeira consulta', queixa_principal: 'Consulta de rotina.', historia_clinica: null, exame_fisico: null, evolucao: null, diagnostico: null, conduta: null, prescricao: null, exames_solicitados: null, observacoes: null },
     { id: 'e3', patient_id: 'p1', clinic_id: 'c1', data_hora: iso(30, 10, 15), tipo_atendimento: 'Consulta de rotina', queixa_principal: 'Dor pélvica.', historia_clinica: 'Sem antecedentes relevantes.', exame_fisico: null, evolucao: 'Primeira avaliação.', diagnostico: null, conduta: 'Analgesia e retorno.', prescricao: null, exames_solicitados: null, observacoes: null },
     { id: 'e4', patient_id: 'p3', clinic_id: null, data_hora: iso(45, 16, 45), tipo_atendimento: 'Teleconsulta', queixa_principal: 'Resultado de exames.', historia_clinica: null, exame_fisico: null, evolucao: 'Exames dentro da normalidade.', diagnostico: null, conduta: null, prescricao: null, exames_solicitados: null, observacoes: 'Paciente orientada por vídeo.' },

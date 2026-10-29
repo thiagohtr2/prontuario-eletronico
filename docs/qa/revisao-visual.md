@@ -35,3 +35,23 @@ estão em [`telas/`](telas/).
   (ver README, "Exceções de acessibilidade").
 - **Famílias de componente:** a forma segue a família aprovada e a cor segue a paleta global; por
   isso o header Dark Luxury é claro. Halos e gradientes da família Aurora ficam para o acabamento.
+
+## Receituário em PDF
+
+Os PDFs foram gerados pelo próprio app no Chromium (`npm run qa:receita`), baixados e convertidos em
+imagem para revisão: modelo nas configurações (A5, rosé, logomarca em SVG), receita de um atendimento
+salvo (A4) e receita gerada no editor antes de salvar. Capturas: `receita-a4.png` e
+`receita-a5-logomarca.png`.
+
+| Problema | Onde | Correção |
+| --- | --- | --- |
+| Nome da médica invadia "Receituário" no cabeçalho | A5 | Bloco de identidade com largura flexível e quebra de linha |
+| Contatos sobrepostos ao endereço da clínica no rodapé | A4 e A5 | Colunas com largura definida; endereço e telefone/CNPJ em linhas separadas |
+| Rodapé sumia em receitas com 2 páginas | Receitas longas | O número da página saiu do bloco do rodapé (bug do react-pdf 4.9 com texto dinâmico) |
+| Número da página não aparecia | Receitas longas | `lineHeight` saiu do estilo da página, que impedia o desenho de textos dinâmicos |
+| Grupo de medicamentos pulava inteiro para a página seguinte | Receitas longas | Cabeçalhos de via e itens no mesmo nível: a quebra acontece item a item |
+| Numeração fora de ordem quando as vias se alternam | Itens intercalados | Numeração feita depois de agrupar por via |
+| Numerais antigos da Cormorant ("1" parecia "I") | Todos | Números em Inter, dentro de um círculo na cor escolhida |
+
+As seis cores do receituário passam de 5,5:1 sobre o branco e sobre o fundo suave do painel da
+paciente.

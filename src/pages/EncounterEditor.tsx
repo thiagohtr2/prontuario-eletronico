@@ -1,13 +1,15 @@
 import { useEffect, useMemo, useState } from 'react'
 import type { FormEvent } from 'react'
 import { Link, useNavigate, useParams, useSearchParams } from 'react-router-dom'
-import { ArrowLeft, Plus, Save } from 'lucide-react'
+import { ArrowLeft, FileText, Plus, Save } from 'lucide-react'
 import { PageBody, PageHeader } from '../components/PageHeader'
 import { Card } from '../components/ui/Card'
 import { Button } from '../components/ui/Button'
 import { Input, Select, Textarea, FormError } from '../components/ui/Field'
 import { LoadingState } from '../components/ui/States'
 import { ClinicForm } from '../forms/ClinicForm'
+import { PrescriptionItemsEditor } from '../components/PrescriptionItemsEditor'
+import { PrescriptionDialog } from '../components/PrescriptionDialog'
 import { useAuth } from '../context/AuthContext'
 import { useToast } from '../context/ToastContext'
 import {
@@ -20,7 +22,9 @@ import {
 } from '../lib/api'
 import { formatDateTime, toDatetimeLocal } from '../lib/format'
 import { TIPOS_ATENDIMENTO } from '../lib/types'
-import type { Clinic, Patient } from '../lib/types'
+import type { Clinic, Patient, PrescriptionItem } from '../lib/types'
+import { itensPreenchidos, perfilParaReceita, temReceita } from '../lib/prescription/model'
+import type { PrescriptionInput } from '../lib/prescription/model'
 
 type FormState = {
   patient_id: string
@@ -34,6 +38,7 @@ type FormState = {
   diagnostico: string
   conduta: string
   prescricao: string
+  prescricao_itens: PrescriptionItem[]
   exames_solicitados: string
   observacoes: string
 }
@@ -50,6 +55,7 @@ const emptyForm: FormState = {
   diagnostico: '',
   conduta: '',
   prescricao: '',
+  prescricao_itens: [],
   exames_solicitados: '',
   observacoes: '',
 }
@@ -58,7 +64,7 @@ export function EncounterEditorPage() {
   const { id } = useParams<{ id: string }>()
   const [searchParams] = useSearchParams()
   const navigate = useNavigate()
-  const { session } = useAuth()
+  const { session, doctor } = useAuth()
   const toast = useToast()
   const isEditing = Boolean(id)
 
@@ -69,6 +75,7 @@ export function EncounterEditorPage() {
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [clinicModalOpen, setClinicModalOpen] = useState(false)
+  const [prescriptionOpen, setPrescriptionOpen] = useState(false)
 
   const preselectedPatient = searchParams.get('paciente') ?? ''
 
@@ -100,6 +107,7 @@ export function EncounterEditorPage() {
               diagnostico: found.diagnostico ?? '',
               conduta: found.conduta ?? '',
               prescricao: found.prescricao ?? '',
+              prescricao_itens: found.prescricao_itens ?? [],
               exames_solicitados: found.exames_solicitados ?? '',
               observacoes: found.observacoes ?? '',
             })
@@ -130,7 +138,22 @@ export function EncounterEditorPage() {
     [patients, form.patient_id],
   )
 
-  function update(field: keyof FormState, value: string) {
+  /** Receita com o que está na tela agora, mesmo antes de salvar. */
+  function prescriptionInput(): PrescriptionInput {
+    const clinic = clinics.find((item) => item.id === form.clinic_id) ?? null
+    return {
+      doctor: perfilParaReceita(doctor, session?.user.email ?? ''),
+      clinic,
+      patient: { nome: selectedPatient?.nome ?? '', data_nascimento: selectedPatient?.data_nascimento ?? null },
+      dataHora: form.data_hora ? new Date(form.data_hora).toISOString() : new Date().toISOString(),
+      itens: itensPreenchidos(form.prescricao_itens),
+      orientacoes: form.prescricao,
+    }
+  }
+
+  const canGeneratePrescription = Boolean(selectedPatient) && temReceita(form.prescricao_itens, form.prescricao)
+
+  function update(field: Exclude<keyof FormState, 'prescricao_itens'>, value: string) {
     setForm((current) => ({ ...current, [field]: value }))
   }
 
@@ -159,6 +182,7 @@ export function EncounterEditorPage() {
       diagnostico: form.diagnostico.trim() || null,
       conduta: form.conduta.trim() || null,
       prescricao: form.prescricao.trim() || null,
+      prescricao_itens: itensPreenchidos(form.prescricao_itens),
       exames_solicitados: form.exames_solicitados.trim() || null,
       observacoes: form.observacoes.trim() || null,
     }
@@ -303,7 +327,7 @@ export function EncounterEditorPage() {
             </Card>
 
             <Card className="flex flex-col gap-4">
-              <h2 className="text-md font-semibold text-ink">Diagnóstico e condutas</h2>
+              <h2 className="text-md font-semibold text-ink">Diagnóstico e conduta</h2>
               <Textarea
                 label="Diagnóstico"
                 rows={2}
@@ -318,13 +342,49 @@ export function EncounterEditorPage() {
                 onChange={(event) => update('conduta', event.target.value)}
                 placeholder="Orientações e conduta definida na consulta..."
               />
+            </Card>
+
+            <Card className="flex flex-col gap-5">
+              <div>
+                <h2 className="text-md font-semibold text-ink">Receita</h2>
+                <p className="mt-1 text-sm text-muted">
+                  Sai em PDF na sua folha personalizada, com seus dados e os da clínica deste atendimento.
+                </p>
+              </div>
+              <PrescriptionItemsEditor
+                items={form.prescricao_itens}
+                onChange={(prescricao_itens) => setForm((current) => ({ ...current, prescricao_itens }))}
+              />
               <Textarea
-                label="Prescrição"
-                rows={4}
+                label="Orientações da receita"
+                rows={3}
                 value={form.prescricao}
                 onChange={(event) => update('prescricao', event.target.value)}
-                placeholder="Medicamentos, doses e duração do tratamento..."
+                placeholder="Cuidados, retorno, observações para o paciente..."
+                hint="Aparece no fim da receita, depois dos medicamentos."
               />
+              <div className="flex flex-col gap-3 border-t border-line pt-5 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-sm text-muted" id="receita-ajuda">
+                  {!selectedPatient
+                    ? 'Selecione o paciente para gerar a receita.'
+                    : canGeneratePrescription
+                      ? 'Pode gerar antes de salvar: o PDF usa o que está na tela.'
+                      : 'Adicione um medicamento ou uma orientação para gerar a receita.'}
+                </p>
+                <Button
+                  variant="secondary"
+                  icon={<FileText size={18} />}
+                  disabled={!canGeneratePrescription}
+                  aria-describedby="receita-ajuda"
+                  onClick={() => setPrescriptionOpen(true)}
+                >
+                  Gerar receita em PDF
+                </Button>
+              </div>
+            </Card>
+
+            <Card className="flex flex-col gap-4">
+              <h2 className="text-md font-semibold text-ink">Exames e observações</h2>
               <Textarea
                 label="Solicitação de exames"
                 rows={3}
@@ -365,6 +425,8 @@ export function EncounterEditorPage() {
           </form>
         )}
       </PageBody>
+
+      <PrescriptionDialog open={prescriptionOpen} onClose={() => setPrescriptionOpen(false)} getInput={prescriptionInput} />
 
       <ClinicForm
         open={clinicModalOpen}

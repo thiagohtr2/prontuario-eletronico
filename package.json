@@ -9,9 +9,13 @@
     "preview": "vite preview",
     "lint": "tsc --noEmit",
     "qa:build": "vite build --mode qa --outDir dist-qa",
-    "qa:responsive": "node scripts/qa/responsive.cjs"
+    "qa:responsive": "node scripts/qa/responsive.cjs",
+    "qa:receita": "node scripts/qa/prescription.cjs"
   },
   "dependencies": {
+    "@fontsource/cormorant-garamond": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@react-pdf/renderer": "^4.9.0",
     "@supabase/supabase-js": "^2.49.4",
     "lucide-react": "^0.487.0",
     "react": "^18.3.1",

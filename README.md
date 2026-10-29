@@ -11,13 +11,41 @@ cronológica, reunindo todas as consultas independentemente da clínica.
 - Cadastro de pacientes, com busca rápida por nome ou CPF.
 - Cadastro das clínicas onde a médica atende.
 - Registro de atendimentos com data, horário, clínica, tipo de atendimento, queixa principal,
-  história clínica, exame físico, evolução, diagnóstico, conduta, prescrição, solicitação de
-  exames e observações.
+  história clínica, exame físico, evolução, diagnóstico, conduta, receita (medicamentos e
+  orientações), solicitação de exames e observações.
+- Receita em PDF com o receituário personalizado da médica (ver abaixo).
 - Prontuário do paciente em uma única tela, com o histórico em formato de timeline.
 - Edição e exclusão de pacientes, clínicas e atendimentos.
 
-Em construção: receituário impresso com logomarca, dados da médica e da clínica (a landing já
-o apresenta como "Em breve").
+## Receituário em PDF
+
+Na **Nova evolução** (ou ao editar um atendimento), a seção **Receita** recebe os
+medicamentos um a um: medicamento e concentração, via, quantidade e modo de usar. Embaixo vão
+as orientações. **Gerar receita em PDF** monta o arquivo com o que está na tela, mesmo antes de
+salvar. Depois de salvo, o botão **Receita** no histórico do paciente gera o mesmo PDF.
+
+O PDF traz:
+
+- **Cabeçalho:** logomarca (ou monograma com as iniciais), nome, linha de apresentação, CRM e
+  RQE, cidade e data.
+- **Paciente:** nome e idade.
+- **Medicamentos:** numerados e agrupados por via (Uso oral, Uso vaginal...), com a quantidade
+  alinhada à direita e o modo de usar embaixo.
+- **Orientações** e área de **assinatura e carimbo**.
+- **Rodapé em todas as páginas:** dados da clínica do atendimento (nome, endereço, cidade,
+  telefone, CNPJ) ou o endereço do consultório, contatos da médica e a mensagem personalizada.
+- Mais de uma página quando precisa, sem partir um medicamento ao meio, com "Página 1 de 2".
+
+Em **Configurações → Receituário personalizado** a médica escolhe logomarca, linha de
+apresentação, RQE, e-mail, Instagram, site, endereço do consultório, mensagem do rodapé, a cor
+dos detalhes (6 opções, todas com contraste de pelo menos 5,5:1 no papel) e o papel (A4 ou A5).
+**Ver modelo da receita** mostra o resultado antes de salvar. A logomarca é convertida em PNG,
+aparada e reduzida no navegador e guardada no próprio perfil.
+
+O PDF é gerado no navegador (`@react-pdf/renderer`, com Cormorant Garamond e Inter embutidas) e
+não sai do aparelho. A biblioteca só é baixada na primeira receita. A assinatura é feita à mão
+depois de imprimir: o app não aplica assinatura digital ICP-Brasil nem gera receitas de controle
+especial (notificações amarela e azul, receita branca em duas vias).
 
 ## Rotas
 
@@ -55,7 +83,11 @@ telas mostram as instruções de configuração.
 ## Configuração do Supabase
 
 O banco do piloto já está criado no projeto **aurelia**
-(`fybdlgbyxzfuzmhhrexp`), com as duas migrações aplicadas.
+(`fybdlgbyxzfuzmhhrexp`), com as migrações 0001 e 0002 aplicadas.
+
+> **Pendente no piloto:** aplicar `supabase/migrations/0003_receituario.sql` (SQL Editor →
+> colar o arquivo → Run). Ela só acrescenta colunas opcionais. Sem ela, salvar o perfil, a
+> clínica ou um atendimento mostra o aviso "O banco ainda não tem os campos do receituário".
 
 Para recriar o banco do zero em outro projeto:
 
@@ -66,6 +98,8 @@ Para recriar o banco do zero em outro projeto:
      e políticas de Row Level Security.
    - `0002_endurece_funcoes_e_indices.sql` — fixa o `search_path` das funções, remove o
      acesso público às funções de gatilho e indexa a chave estrangeira de clínica.
+   - `0003_receituario.sql` — campos do receituário no perfil (`doctors`), cidade e CNPJ da
+     clínica e a lista de medicamentos do atendimento (`encounters.prescricao_itens`).
 3. Em **Project Settings → API**, copie a **Project URL** e a **anon/publishable key**.
 4. Preencha o `.env`:
 
@@ -191,6 +225,7 @@ Nenhum dado real é lido ou gravado.
 npm run qa:build                 # build apontando para o Supabase simulado (.env.qa)
 npm run qa:responsive            # mede todas as telas em 21 tamanhos de tela
 node scripts/qa/keyboard.cjs     # navegação por Tab, Escape e prisão de foco
+npm run qa:receita               # gera e baixa receitas reais pelo app (perfil, prontuário, editor)
 ```
 
 Requer Playwright com Chromium (`npm i -D playwright && npx playwright install chromium`).

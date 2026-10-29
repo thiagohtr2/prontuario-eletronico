@@ -1,9 +1,23 @@
+export type CorReceituario = 'vinho' | 'rose' | 'ameixa' | 'grafite' | 'salvia' | 'petroleo'
+export type PapelReceituario = 'A4' | 'A5'
+
 export type Doctor = {
   id: string
   nome: string
   especialidade: string
   crm: string
   telefone: string | null
+  // Receituário personalizado (migração 0003)
+  titulo_profissional: string | null
+  rqe: string | null
+  email_contato: string | null
+  instagram: string | null
+  site: string | null
+  endereco_profissional: string | null
+  rodape_receituario: string | null
+  cor_receituario: CorReceituario
+  papel_receituario: PapelReceituario
+  logo_url: string | null
   created_at: string
   updated_at: string
 }
@@ -15,6 +29,8 @@ export type Clinic = {
   endereco: string | null
   telefone: string | null
   observacoes: string | null
+  cidade: string | null
+  cnpj: string | null
   ativa: boolean
   created_at: string
   updated_at: string
@@ -36,6 +52,15 @@ export type Patient = {
   updated_at: string
 }
 
+/** Um medicamento da receita. */
+export type PrescriptionItem = {
+  id: string
+  medicamento: string
+  via: string
+  quantidade: string
+  posologia: string
+}
+
 export type Encounter = {
   id: string
   doctor_id: string
@@ -49,7 +74,9 @@ export type Encounter = {
   evolucao: string | null
   diagnostico: string | null
   conduta: string | null
+  /** Orientações da receita (texto livre). Em atendimentos antigos, a prescrição inteira. */
   prescricao: string | null
+  prescricao_itens: PrescriptionItem[]
   exames_solicitados: string | null
   observacoes: string | null
   created_at: string
@@ -85,6 +112,20 @@ export type Database = {
     CompositeTypes: Record<string, never>
   }
 }
+
+export const VIAS_ADMINISTRACAO = [
+  'Uso oral',
+  'Uso sublingual',
+  'Uso tópico',
+  'Uso vaginal',
+  'Uso injetável',
+  'Uso inalatório',
+  'Uso nasal',
+  'Uso oftálmico',
+  'Uso otológico',
+  'Uso retal',
+  'Uso transdérmico',
+] as const
 
 export const TIPOS_ATENDIMENTO = [
   'Primeira consulta',

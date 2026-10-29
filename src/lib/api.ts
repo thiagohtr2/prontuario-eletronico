@@ -4,6 +4,10 @@ import type { Clinic, Encounter, EncounterWithRefs, Patient, PatientListItem } f
 /** Mensagem de erro legível para o médico, sem jargão técnico. */
 export function errorMessage(error: unknown, fallback = 'Não foi possível concluir. Tente novamente.'): string {
   if (error instanceof Error && error.message) {
+    // Coluna nova ainda não criada no banco: a migração do receituário não foi aplicada.
+    if (/schema cache|column .* does not exist/i.test(error.message)) {
+      return 'O banco ainda não tem os campos do receituário. Aplique a migração supabase/migrations/0003_receituario.sql e tente de novo.'
+    }
     if (/Failed to fetch|NetworkError/i.test(error.message)) {
       // Não é só falta de internet: um endereço errado do Supabase falha do
       // mesmo jeito. Mostrar o endereço usado deixa isso visível na hora.
@@ -23,6 +27,12 @@ function unwrap<T>({ data, error }: { data: T | null; error: { message: string }
 
 export async function listClinics(): Promise<Clinic[]> {
   return unwrap(await supabase.from('clinics').select('*').order('nome', { ascending: true })) ?? []
+}
+
+export async function getClinic(id: string): Promise<Clinic | null> {
+  const { data, error } = await supabase.from('clinics').select('*').eq('id', id).maybeSingle()
+  if (error) throw new Error(error.message)
+  return data
 }
 
 export async function createClinic(input: Partial<Clinic>, doctorId: string): Promise<Clinic> {

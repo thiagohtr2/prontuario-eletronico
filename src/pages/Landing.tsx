@@ -10,9 +10,8 @@ import {
   ShieldCheck,
 } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
-import { Logo, LogoMark } from '../components/Logo'
+import { Logo } from '../components/Logo'
 import { buttonVariants } from '../components/ui/Button'
-import { Badge } from '../components/ui/Badge'
 import { cn } from '../lib/cn'
 import { HOME_PATH } from '../lib/navigation'
 
@@ -245,16 +244,13 @@ export function LandingPage() {
                 <p className="mt-2 text-sm leading-6 text-muted">{text}</p>
               </li>
             ))}
-            <li className="min-w-0 rounded-card border border-line bg-surface-hover p-6">
-              <div className="flex flex-wrap items-center justify-between gap-3">
-                <span className="flex h-12 w-12 items-center justify-center rounded-pill bg-surface text-primary">
-                  <FileSignature size={22} aria-hidden />
-                </span>
-                <Badge tone="accent">Em breve</Badge>
-              </div>
+            <li className="min-w-0 rounded-card border border-line bg-surface p-6">
+              <span className="flex h-12 w-12 items-center justify-center rounded-pill bg-primary-soft text-primary">
+                <FileSignature size={22} aria-hidden />
+              </span>
               <h3 className="mt-5 text-lg font-semibold text-ink">Receituário com a sua identidade</h3>
               <p className="mt-2 text-sm leading-6 text-muted">
-                Prescrições impressas na sua folha, com logomarca, seus dados e os dados da clínica.
+                A receita sai em PDF na sua folha, com logomarca, seus dados e os dados da clínica.
               </p>
             </li>
           </ul>
@@ -285,52 +281,73 @@ export function LandingPage() {
         <section aria-labelledby="receituario" className="mx-auto max-w-[1240px] px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
             <div className="min-w-0">
-              <Badge tone="accent">Em breve</Badge>
-              <h2 id="receituario" className="display-title mt-4 text-[36px] leading-[1.08] sm:text-[48px]">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-primary">Receituário</p>
+              <h2 id="receituario" className="display-title mt-3 text-[36px] leading-[1.08] sm:text-[48px]">
                 A receita sai do jeito que você assina.
               </h2>
               <p className="mt-4 max-w-xl text-base leading-7 text-muted">
-                Ao fim da consulta, a prescrição vai para uma folha com a sua logomarca, seu nome, CRM e os dados da
-                clínica onde o atendimento aconteceu. Organizada, legível e pronta para imprimir.
+                Ao fim da consulta, a prescrição vira um PDF com a sua logomarca, seu nome, CRM e os dados da clínica
+                onde o atendimento aconteceu. Você escolhe a cor e o papel, A4 ou A5. Organizada, legível e pronta
+                para imprimir.
               </p>
             </div>
 
             <figure className="mx-auto w-full max-w-[460px]">
-              <div className="rounded-[6px] border border-line bg-surface p-6 sm:p-8" aria-hidden>
-                <div className="flex flex-wrap items-start justify-between gap-4 border-b border-line pb-5">
-                  <div className="flex min-w-0 items-center gap-3">
-                    <LogoMark size={44} />
-                    <div className="min-w-0">
-                      <p className="font-display text-2xl font-semibold leading-tight text-ink">Dra. Ana Souza</p>
-                      <p className="text-xs text-muted">Ginecologia e Obstetrícia · CRM 12345-BA</p>
-                    </div>
+              {/* Miniatura do PDF real: mesma estrutura, cores e tipografia. */}
+              <div className="relative overflow-hidden rounded-[6px] border border-line bg-surface px-6 pb-5 pt-7 sm:px-8" aria-hidden>
+                <span className="absolute inset-x-0 top-0 h-1 bg-primary" />
+                <div className="flex items-start gap-3 border-b border-primary pb-4">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-pill border border-primary font-display text-lg font-semibold text-primary">
+                    AS
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className="font-display text-[22px] font-semibold leading-tight text-ink">Dra. Ana Souza</p>
+                    <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.14em] text-primary">
+                      Ginecologia e Obstetrícia
+                    </p>
+                    <p className="mt-0.5 text-[11px] text-muted">CRM 12345-BA · RQE 6789</p>
+                  </div>
+                  <div className="hidden shrink-0 text-right min-[400px]:block">
+                    <p className="font-display text-base font-semibold italic text-primary">Receituário</p>
+                    <p className="text-[10px] text-muted">Salvador, 12 de maio</p>
                   </div>
                 </div>
-                <p className="mt-5 text-xs font-semibold uppercase tracking-[0.12em] text-primary">Uso oral</p>
-                <ol className="mt-3 space-y-3 text-sm text-ink">
-                  <li className="flex gap-3">
-                    <span className="font-semibold">1.</span>
-                    <span className="min-w-0 flex-1">
-                      Medicamento A, 500 mg <span className="text-muted">— 1 comprimido a cada 8 horas, por 7 dias.</span>
-                    </span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="font-semibold">2.</span>
-                    <span className="min-w-0 flex-1">
-                      Medicamento B, 20 mg <span className="text-muted">— 1 comprimido pela manhã, em jejum.</span>
-                    </span>
-                  </li>
-                </ol>
-                <div className="mt-10 flex flex-col items-center">
-                  <span className="h-px w-48 max-w-full bg-ink" />
-                  <span className="mt-2 text-xs text-muted">Assinatura</span>
+                <div className="mt-4 rounded-[6px] bg-primary-soft px-4 py-2.5">
+                  <p className="text-[8px] font-semibold uppercase tracking-[0.14em] text-muted">Paciente</p>
+                  <p className="font-display text-base font-semibold text-ink">Paciente de exemplo</p>
                 </div>
-                <p className="mt-6 border-t border-line pt-4 text-center text-xs leading-5 text-muted">
-                  Clínica Exemplo · Rua das Flores, 120 · Salvador/BA · (71) 3333-0000
-                </p>
+                <p className="mt-4 text-[9px] font-bold uppercase tracking-[0.14em] text-primary">Uso oral</p>
+                <ol className="mt-2 flex flex-col gap-3 text-[12px] text-ink">
+                  {[
+                    ['Medicamento A, 500 mg', '1 caixa', '1 comprimido a cada 8 horas, por 7 dias.'],
+                    ['Medicamento B, 20 mg', '30 comprimidos', '1 comprimido pela manhã, em jejum.'],
+                  ].map(([nome, quantidade, uso], index) => (
+                    <li key={nome} className="flex gap-2.5">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-pill bg-primary-soft text-[10px] font-bold text-primary">
+                        {index + 1}
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <span className="flex items-end gap-1.5">
+                          <span className="font-semibold">{nome}</span>
+                          <span className="mb-1 min-w-4 flex-1 border-b border-dotted border-focus" />
+                          <span className="shrink-0">{quantidade}</span>
+                        </span>
+                        <span className="block text-muted">{uso}</span>
+                      </span>
+                    </li>
+                  ))}
+                </ol>
+                <div className="ml-auto mt-8 flex w-40 max-w-full flex-col items-center">
+                  <span className="h-px w-full bg-ink" />
+                  <span className="mt-1.5 text-[10px] font-semibold text-ink">Dra. Ana Souza</span>
+                </div>
+                <div className="mt-5 border-t border-primary pt-2 text-[9px] leading-4 text-muted">
+                  <p className="font-semibold text-ink">Clínica Exemplo</p>
+                  <p>Rua das Flores, 120 · Salvador · (71) 3333-0000</p>
+                </div>
               </div>
               <figcaption className="mt-3 text-center text-xs text-muted">
-                Exemplo ilustrativo com dados fictícios.
+                Miniatura do PDF, com dados fictícios.
               </figcaption>
             </figure>
           </div>
