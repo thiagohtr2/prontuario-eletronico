@@ -1,0 +1,710 @@
+# Master Prompt — Nexo Capital
+
+> Especificação gerada pelo Atelier UI (Design System Studio) em 02/11/2026, 18:41:13.
+> Todas as decisões abaixo foram visualizadas e aprovadas pelo usuário. Implemente exatamente o que está descrito; quando algo não estiver especificado, escolha a opção mais simples e consistente com o restante, sem adicionar decoração.
+
+## A. Informações do projeto
+
+- Nome: Nexo Capital
+- Tipo de aplicação: Dashboard
+- Objetivo: Plataforma financeira com dashboard financeiro, tabelas de dados e gráficos.
+- Descrição: Plataforma financeira "Nexo Capital": login profissional, dashboard financeiro com tabelas de dados e gráficos, navegação com sidebar e header, design corporativo e responsividade em telas pequenas.
+- Funcionalidades previstas: Login profissional; Dashboard financeiro; Tabelas de dados; Gráficos
+- Tecnologia desejada: HTML + CSS + JavaScript
+
+## B. Arquitetura geral
+
+- Fluxo de entrada: **Apenas login** — O endereço abre direto na tela de entrar. Sem página de apresentação.
+- Landing: nenhuma · Login: Acesso corporativo · Cadastro: nenhum
+- Layout desktop: Sidebar integral clássica · Layout mobile: Drawer pela esquerda
+
+### Login: Acesso corporativo — Login corporativo com SSO e aviso de segurança
+
+`id: acesso-corporativo` · origem: módulo “login”
+
+Login corporativo com header institucional, botão “Entrar com SSO da empresa” em destaque, alternativa por e-mail e aviso de segurança.
+
+**Estrutura**
+- Header fino com logotipo da organização à esquerda e link “Suporte de TI” à direita.
+- Cartão central: botão “Entrar com SSO da empresa”, divisor “ou”, e-mail corporativo e senha.
+- Aviso de segurança no rodapé: “Acesso monitorado. Uso restrito a colaboradores autorizados.”
+- Textos da demonstração: título “Acesso corporativo”, subtítulo “Entre com a conta da sua organização.”.
+
+**Medidas recomendadas (adaptáveis)**
+- larguraFormulario: ≈360–400 px
+- alturaInputs: ≈44 px (desktop) / 48 px (celular)
+
+**Comportamento e estados**
+- Labels visíveis associados aos campos (label for/id). E-mail com type="email", inputMode="email" e autoComplete="username" (ou "email"); senha com autoComplete="current-password".
+- Botão de mostrar/ocultar senha dentro do campo, com aria-label alternando “Mostrar senha”/“Ocultar senha” e aria-pressed.
+- Validação ao enviar e ao sair do campo: mensagem abaixo do campo (aria-invalid + aria-describedby) e resumo no topo do formulário com role="alert".
+- Erro de credenciais genérico (“E-mail ou senha incorretos”), sem revelar qual dos dois está errado.
+- Link “Esqueci minha senha” perto do campo de senha, levando ao fluxo de recuperação por e-mail com mensagem neutra (“Se o e-mail existir, enviaremos um link”).
+- Botão principal com estado de carregamento (“Entrando…”) e desabilitado durante o envio para evitar duplo clique.
+
+**Responsividade deste item**
+- No celular o header fino se mantém (56 px) e o cartão ocupa a largura total.
+- Inputs com font-size ≥ 16 px e altura ≥ 48 px no celular (evita o zoom automático do iOS e facilita o toque).
+- Com o teclado virtual aberto, o campo focado e o botão “Entrar” continuam visíveis (use 100dvh, sem height: 100vh fixo, e scroll-padding).
+- Funciona a partir de 320 px de largura sem rolagem horizontal.
+- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).
+- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.
+
+**Observações**
+- SSO real exige integração com o provedor de identidade da organização (SAML 2.0 ou OpenID Connect).
+- Esta tela é uma demonstração de interface. A autenticação real deve ser implementada pela IA com backend seguro: senhas com hash (Argon2id ou bcrypt), limitação de tentativas, sessão em cookie httpOnly + Secure + SameSite, proteção CSRF e HTTPS obrigatório.
+- Cores, fontes, cantos e superfícies vêm da identidade global do projeto (tokens).
+- A tela é uma demonstração de interface. Implemente a autenticação real com backend seguro (hash de senha, rate limit, tokens httpOnly, proteção CSRF).
+
+### Layout desktop: Sidebar integral clássica — Sidebar integral
+
+`id: sidebar-integral-classica` · origem: módulo “desktop”
+
+Shell de aplicação com sidebar integral à esquerda (do topo à base) e coluna principal com header fixo e conteúdo rolável.
+
+**Estrutura**
+- Grid de duas colunas: grid-template-columns: 252px minmax(0, 1fr); a coluna principal tem grid-template-rows: 64px minmax(0, 1fr) (header + conteúdo).
+- Sidebar integral de ≈252 px na borda esquerda: vai do topo à base da janela (height: 100dvh), encostada na borda, sem margem externa, sem cantos arredondados e sem sombra flutuante.
+- Topo da sidebar com a mesma altura do header (≈64 px), contendo logo e nome do produto, alinhado ao header para formar uma linha horizontal contínua.
+- Itens de navegação com 40–44 px de altura, ícone de 20 px + rótulo, agrupados por seções com título discreto; o item ativo tem fundo de seleção, cor de texto ativa e indicador lateral.
+- Rodapé da sidebar com perfil do usuário e atalho de configurações, separado por borda fina.
+- Header de ≈64 px: título da página ou breadcrumb à esquerda; busca, notificações e avatar à direita; borda inferior fina de 1 px. O header fica somente sobre a coluna principal — não passa por cima da sidebar.
+- Área de conteúdo com padding de 24–32 px, largura fluida e grids internos com minmax(0, 1fr); nenhum cartão encolhe abaixo de ≈280 px — reduza colunas antes.
+
+**Propriedades**
+- gridColumns: 252px 1fr
+- gridRows: 64px 1fr
+- gridAreas: "sidebar header" "sidebar content"
+- gap: 0px
+- padding: 0px
+- regioes: sidebar (sidebar), header (header), content (content)
+- oneScreen: não
+
+**Medidas recomendadas (adaptáveis)**
+- sidebar: ≈252 px
+- header: ≈64 px
+
+**Comportamento e estados**
+- A sidebar é fixa (position: sticky; top: 0; height: 100dvh) e tem rolagem interna própria (overflow-y: auto; overscroll-behavior: contain) quando os itens não cabem; a página rola apenas na coluna de conteúdo.
+- O header é sticky (position: sticky; top: 0) acima do conteúdo e não rola com ele; z-index superior ao conteúdo e inferior a modais.
+- Grupos de navegação podem recolher (accordion) e lembram o estado; hover, focus-visible e item ativo são visualmente distintos.
+
+**Responsividade deste item**
+- 1280 px ou mais: sidebar esquerda com ≈252 px e rótulos completos.
+- 1024–1279 px: a sidebar reduz para ≈220 px; o conteúdo reduz colunas antes de comprimir cartões ou tabelas.
+- 768–1023 px: a sidebar recolhe para um rail integral de ≈72 px (só ícones, com tooltip e aria-label); um botão expande a sidebar completa em sobreposição, com scrim, Esc e clique fora para fechar.
+- Abaixo de 768 px vale a arquitetura mobile escolhida separadamente no Studio: não converta a navegação desktop em drawer, rail ou bottom navigation por conta própria.
+
+**Observações**
+- Sidebar integral: nunca flutuante, sem margem externa e sem cantos arredondados.
+- One Page, não One Screen: a página pode rolar verticalmente; não force o conteúdo a caber em 100dvh nem esconda seções para evitar rolagem.
+- As medidas são recomendações para 1280 × 800; adapte à tela e ao conteúdo preservando a estrutura escolhida.
+
+### Layout mobile: Drawer pela esquerda — Drawers e menus laterais
+
+`id: drawer-esquerda` · origem: módulo “mobile”
+
+Topbar com hambúrguer à esquerda que abre drawer lateral esquerdo sobreposto ao conteúdo, com scrim.
+
+**Estrutura**
+- Topbar de ≈56 px com botão de menu à esquerda e título. A barra superior soma env(safe-area-inset-top) à própria altura, para não colidir com o entalhe da câmera.
+- Drawer de ≈280 px (máx. 85% da largura) que desliza pela esquerda, ocupando a altura total (inclusive safe areas), com scrim escuro sobre o conteúdo.
+- Conteúdo do drawer: cabeçalho com avatar, nome e botão Fechar; lista de destinos com ícone + rótulo (itens de 48 px); grupo secundário (configurações, ajuda) e “Sair” no rodapé.
+
+**Propriedades**
+- topo: topbar-hamburger
+- inferior: none
+- lateral: drawer-left
+- sobreposicao: none
+- stories: não
+- oneScreen: não
+
+**Medidas recomendadas (adaptáveis)**
+- topbar: ≈56 px
+- drawer: ≈280 px (máx. 85%)
+- itens: 48 px
+
+**Comportamento e estados**
+- Ao abrir: foco vai para o botão Fechar ou o primeiro item (sem rolar a página), o foco fica preso dentro do menu e o conteúdo atrás recebe inert/aria-hidden; Esc, toque no scrim e o botão X fecham; ao fechar, o foco volta ao gatilho.
+- Enquanto o menu está aberto, o body não rola (overflow: hidden) e o menu tem rolagem interna própria (overscroll-behavior: contain).
+- Animação de 200–250 ms (ease-out) ao abrir e 150–200 ms ao fechar; com prefers-reduced-motion, apenas fade.
+- Tocar em um destino navega e fecha o drawer.
+
+**Responsividade deste item**
+- 320–359 px: drawer com 85% da largura.
+- Horizontal: drawer com ≈320 px e rolagem interna.
+- A partir de 768 px passa a valer a arquitetura desktop escolhida no Studio; não estique este layout para tablet ou computador.
+- Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco ao gatilho.
+
+**Observações**
+- O drawer é sobreposto: o conteúdo não se move.
+
+### Relação entre desktop e celular
+- No computador, use “Sidebar integral clássica”. No celular, use “Drawer pela esquerda”. São decisões independentes: não derive uma da outra.
+- Entre 600 e 1023 px (tablet), use a estrutura desktop compactada quando couber (sidebar recolhida em rail ou menus colapsados); caso contrário, use a estrutura mobile.
+- As regiões (header, sidebar, conteúdo, painéis) mantêm a mesma hierarquia e os mesmos destinos de navegação nas duas versões.
+
+## C. Navegação
+
+### Header: Painel Analítico — Abas e filtros em uma linha
+
+`id: painel-analitico` · origem: módulo “navegacao”
+
+Header de dashboard com abas encaixadas, seletor de período (menu suspenso), exportação e perfil.
+
+**Estrutura**
+- Barra principal com 56 px de altura, largura total da janela (full width), padding horizontal de 24–32 px.
+- Superfície: fundo navBg com borda inferior de 1 px (token border).
+- Logo: símbolo quadrado de 28 px na cor primária + nome da marca em peso 700 (marca fictícia “Seriema” na prévia — substitua pela marca real).
+- Navegação principal com 4 itens (Visão geral, Aquisição, Retenção, Receita): abas: o item ativo tem o fundo da página e bordas laterais/superior, “encaixado” na área de conteúdo; espaço entre itens de 20–24 px.
+- Ações: seletor de período “Últimos 30 dias ▾”; botão “Exportar”; avatar circular de 32 px com menu de perfil.
+- Disposição conforme a composição escolhida (ver “composicao”): A “Abas e filtros em uma linha” = logo e navegação juntos à esquerda; busca e ações empurradas para a direita; B “Filtros em cima, abas embaixo” = duas faixas: logo, busca e ações na primeira; navegação alinhada à esquerda na segunda.
+
+**Propriedades**
+- flutuante: não
+- fixo: sim
+- composicao: Abas e filtros em uma linha: Logo + abas encaixadas à esquerda; seletor de período, “Exportar” e avatar à direita.
+
+**Medidas recomendadas (adaptáveis)**
+- altura (desktop): 56 px
+- altura (celular): 56 px
+- padding horizontal: 24–32 px (16 px no celular)
+- espaço entre itens: 20–24 px
+- logo: ≈ 28 px de altura
+- área de toque mínima: 44 × 44 px no celular
+
+**Comportamento e estados**
+- Item ativo: abas: o item ativo tem o fundo da página e bordas laterais/superior, “encaixado” na área de conteúdo. Hover com transição de 120 ms; foco visível com anel de 2 px na cor focusRing.
+- Fixo no topo: position: sticky; top: 0; z-index: 40. Após 8 px de rolagem ganha sombra suave.
+- Perfil: o avatar abre um menu com nome e e-mail, “Meu perfil”, “Configurações”, “Ajuda” e “Sair”, alinhado à borda direita.
+
+**Responsividade deste item**
+- Desktop largo (≥ 1280 px): composição completa, como na prévia.
+- De 1024 a 1279 px: o espaço entre itens cai para 16 px.
+- De 768 a 1023 px: a navegação recolhe para o botão ☰; continuam visíveis o logo e a ação principal.
+- Abaixo de 768 px: barra única de 56 px com logo, avatar, botão de menu ☰ (44 × 44 px). Vão para o painel do menu: os 4 itens de navegação.
+- Painel do menu: desliza logo abaixo do header em largura total, altura máxima calc(100dvh − 56 px) com rolagem interna; trava a rolagem do corpo e fecha com ✕, Esc, toque fora ou ao escolher um item.
+- Popovers (perfil, notificações, menus) são reposicionados para caber na viewport: largura máxima calc(100vw − 16 px), alinhados à borda mais próxima; nenhum overflow horizontal de 320 a 1920 px.
+- Continua fixo no celular; recomendado esconder ao rolar para baixo e reaparecer ao rolar para cima para ganhar área útil.
+- Headers: compacte a altura no celular e use a navegação móvel escolhida no layout mobile; o logo e a ação principal continuam visíveis.
+- Dropdowns e popovers: reposicione automaticamente para não sair da viewport; no celular podem virar bottom sheet.
+
+**Observações**
+- Todas as cores vêm dos tokens da identidade global (navBg, navText, navActive, primary, border…); nada de cores fixas.
+- Use <header> com <nav aria-label="Principal"> e lista de links; o item da página atual recebe aria-current="page".
+
+### Sidebar: Sóbria Corporativa — Unidade no topo
+
+`id: sobria-corporativa` · origem: módulo “navegacao”
+
+Sidebar corporativa sóbria em bgAlt, grupos em caixa alta, barra no ativo e perfil com cargo.
+
+**Estrutura**
+- Formato integral: ocupa toda a altura, encostada na borda esquerda, com 264 px de largura.
+- Superfície: fundo levemente diferente da página (bgAlt), sem sombra.
+- Itens: “Gestão”: Painel, Contratos, Fornecedores, Compras | “Pessoas”: Colaboradores, Folha | “Administração”: Auditoria, Permissões.
+- Ícones: ícones de linha de 18 px (estilo de ícone do tema) antes do rótulo; itens de 36 px de altura com padding horizontal de 12 px.
+- Títulos de grupo: caixa alta de 11 px, peso 650, espaçamento 0,08em, em textMuted.
+- Composição A: seletor de espaço de trabalho (avatar quadrado + nome + ▾) no topo; bloco de perfil no rodapé (avatar, nome, cargo e menu ⋯ que abre para cima). Composição B: logo (símbolo + nome) no topo; cartão de perfil destacado no rodapé com status e menu.
+
+**Propriedades**
+- formato: integral
+- flutuante: não
+- largura: ≈264 px
+- composicao: Unidade no topo: Seletor de unidade da empresa no topo; perfil com nome e cargo no rodapé.
+
+**Medidas recomendadas (adaptáveis)**
+- largura: 264 px
+- altura dos itens: 36 px (44 px no celular)
+- padding interno: 12 px
+- ícones: 18–20 px
+- raio dos itens: radiusMd do tema
+- drawer no celular: min(85vw, 280 px)
+
+**Comportamento e estados**
+- Item ativo: item ativo com barra vertical de 3 px na cor primária encostada à esquerda e texto em primary. Clique marca o item como ativo (aria-current="page"); hover com fundo hover; foco visível com anel focusRing de 2 px.
+- Seletor de espaço de trabalho: abre um menu com os espaços (o atual marcado com ✓) e “Criar espaço”; Esc ou clique fora fecham.
+- Menu do perfil abre para cima, dentro da altura da janela: Meu perfil, Preferências, Sair.
+- Fixa: position: sticky; top: 0; height: 100dvh; a lista rola internamente (overflow-y: auto) quando não couber, mantendo topo e rodapé visíveis.
+
+**Responsividade deste item**
+- Desktop (≥ 1024 px): integral: ocupa toda a altura, encostada na borda esquerda, com 264 px de largura.
+- De 768 a 1023 px: inicia recolhida em trilho de 72 px só com ícones; expande por cima do conteúdo (overlay com sombra) ao tocar no botão de menu.
+- Abaixo de 768 px: sai do fluxo e vira um drawer à esquerda com largura min(85vw, 280 px), aberto por um botão ☰ (44 × 44 px) no header; scrim escuro atrás; fecha com ✕, Esc, toque no scrim ou ao escolher um item; trava a rolagem do corpo.
+- No drawer os rótulos aparecem sempre (mesmo em modelos de trilho); itens com no mínimo 44 px de altura.
+- Menus e tooltips da sidebar ficam dentro da viewport: reposicionados para cima quando faltaria espaço abaixo; nenhum overflow horizontal.
+- O rodapé (perfil, medidor ou cartão) fica fixo na base do drawer; a lista rola acima dele.
+- Se o app for usado principalmente no celular, ofereça também uma bottom navigation com os 4–5 destinos principais.
+- Sidebars: no celular, siga exatamente a arquitetura mobile aprovada (não transforme em drawer por conta própria).
+- Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco ao gatilho.
+
+**Observações**
+- Cores dos tokens da identidade global (navBg, navText, navActive, navActiveText, primary, border); nada de cores fixas.
+- Use <nav aria-label="Menu lateral"> com listas; grupos com título usam aria-labelledby; o item atual recebe aria-current="page".
+
+- Item ativo sempre destacado (cor de navegação ativa) e anunciado a leitores de tela (`aria-current="page"`).
+- Dropdowns e submenus abrem por clique/toque e por teclado (Enter/Espaço), fecham com Esc e clique fora.
+- Drawers, bottom sheets e menus de tela cheia prendem o foco enquanto abertos e devolvem o foco ao botão que os abriu.
+
+## D. Identidade visual
+
+Paleta global: **Azul Institucional**. Todos os componentes (botões, inputs, headers, sidebars, cards, tabelas, modais, menus, login, landing e templates) herdam estes tokens por padrão. Exceções só onde estiverem explicitamente listadas.
+
+| Grupo | Token | Nome | Valor |
+| --- | --- | --- | --- |
+| Marca | Cor primária | `primary` | #1d4ed8 |
+| Marca | Primária — hover | `primaryHover` | #1a46c2 |
+| Marca | Primária — active | `primaryActive` | #173ead |
+| Marca | Texto sobre primária | `onPrimary` | #ffffff |
+| Marca | Primária suave | `primarySoft` | #e4eafa |
+| Marca | Cor secundária | `secondary` | #1e3a8a |
+| Marca | Texto sobre secundária | `onSecondary` | #ffffff |
+| Marca | Cor de destaque | `accent` | #0ea5e9 |
+| Marca | Texto sobre destaque | `onAccent` | #111114 |
+| Fundos e superfícies | Fundo principal | `bg` | #f8fafc |
+| Fundos e superfícies | Fundo secundário | `bgAlt` | #eff1f3 |
+| Fundos e superfícies | Superfície | `surface` | #ffffff |
+| Fundos e superfícies | Superfície alternativa | `surfaceAlt` | #f5f5f5 |
+| Texto | Texto principal | `text` | #0f172a |
+| Texto | Texto secundário | `textMuted` | #686d7a |
+| Texto | Texto desabilitado | `textDisabled` | #9fa4ac |
+| Texto | Placeholder | `placeholder` | #848993 |
+| Bordas e foco | Borda | `border` | #e6e6e6 |
+| Bordas e foco | Borda forte | `borderStrong` | #c7c7c7 |
+| Bordas e foco | Borda de foco (focus-visible) | `focusRing` | #1d4ed8 |
+| Estados | Hover | `hover` | #f4f4f4 |
+| Estados | Active | `active` | #ebebeb |
+| Estados | Pressed | `pressed` | #e0e0e0 |
+| Estados | Selected — fundo | `selected` | #e4eafa |
+| Estados | Selected — texto | `selectedText` | #1d4ed8 |
+| Estados | Disabled — fundo | `disabled` | #f0f0f0 |
+| Estados | Disabled — texto | `disabledText` | #93979f |
+| Semânticos | Success | `success` | #117e39 |
+| Semânticos | Success — fundo | `successBg` | #e3f4e9 |
+| Semânticos | Warning | `warning` | #a85c04 |
+| Semânticos | Warning — fundo | `warningBg` | #faefe1 |
+| Semânticos | Error | `error` | #dc2626 |
+| Semânticos | Error — fundo | `errorBg` | #fbe5e5 |
+| Semânticos | Info | `info` | #2563eb |
+| Semânticos | Info — fundo | `infoBg` | #e5ecfd |
+| Links, ícones e navegação | Link | `link` | #1d4ed8 |
+| Links, ícones e navegação | Link — hover | `linkHover` | #1942b8 |
+| Links, ícones e navegação | Ícones | `icon` | #49505f |
+| Links, ícones e navegação | Navegação — fundo | `navBg` | #0f1f4d |
+| Links, ícones e navegação | Navegação — texto | `navText` | #caced8 |
+| Links, ícones e navegação | Navegação — item ativo | `navActive` | #313e66 |
+| Links, ícones e navegação | Navegação — texto ativo | `navActiveText` | #ffffff |
+| Gradiente | Gradiente — início | `gradientFrom` | #1d4ed8 |
+| Gradiente | Gradiente — fim | `gradientTo` | #26aeeb |
+
+### Tipografia: Inter + Inter
+
+`id: identity.typography` · origem: módulo “cores”
+
+Títulos em Inter (peso 650) e textos em Inter (peso 400), tamanho base 15 px.
+
+**Estrutura**
+- Escala sugerida: 13 / 15 / 18 / 23 / 30 / 39 px.
+- Altura de linha de 1.5 para textos e 1.2–1.3 para títulos.
+- Nunca use textos menores que 12 px; filtros e botões com pelo menos 14 px.
+
+**Propriedades**
+- fonteTitulos: Inter
+- fonteTexto: Inter
+- tamanhoBase: 15
+- pesoTitulos: 650
+- pesoTexto: 400
+
+**Responsividade deste item**
+- Títulos grandes reduzem proporcionalmente no celular (use clamp()).
+- Inputs com 16 px no celular para evitar zoom automático.
+
+### Geometria e superfícies: Médios (8 px) · Contornada (bordas finas)
+
+`id: identity.geometry` · origem: módulo “cores”
+
+Cantos médios (8 px), bordas de 1 px, sombra sem sombra, superfícies contornada (bordas finas), densidade confortável.
+
+**Estrutura**
+- Escala de espaçamento em múltiplos de 4 px: 4, 8, 12, 16, 20, 24, 32, 40.
+- Sem sombras em superfícies de conteúdo. Apenas elementos realmente flutuantes (modais, popovers, menus) podem ter elevação.
+- Ícones no estilo contorno (outline), tamanho consistente (16–20 px em interfaces).
+
+**Propriedades**
+- raioPequeno: 6px
+- raioMedio: 8px
+- raioGrande: 12px
+- borda: 1px
+- sombra: none
+- superficie: outlined
+- densidade: comfortable
+- unidadeDeEspaco: 8px
+- ícones: outline
+
+**Responsividade deste item**
+- A geometria se mantém em todas as larguras; no celular aumente apenas as áreas de toque.
+
+### Estados visuais
+- hover: fundo `hover` ou primária `primaryHover`; active/pressed: `active`/`pressed`/`primaryActive`.
+- focus-visible: anel de 2–3 px na cor `focusRing`, sempre visível ao navegar por teclado.
+- selected: fundo `selected` com texto `selectedText`; disabled: fundo `disabled`, texto `disabledText`, sem hover.
+- Mensagens: success/warning/error/info com os fundos semânticos correspondentes.
+
+## E. Componentes
+
+3 componente(s) aprovados. Cada instância tem configuração própria; alterar uma não altera as outras.
+
+### Componente: Tabelas de dados — Compact Pro
+
+`id: tabelas` · origem: módulo “componentes”
+
+Tabelas na família visual Compact Pro. Tabela de dados com cabeçalho, linhas com status em badge, valores alinhados à direita e ações por linha. Estilo: Alta densidade: controles de 30 px, texto base de 13 px, raio de 4 px, bordas de 1 px sutis, sem sombras e números tabulares.
+
+**Estrutura**
+- Título + ações da tabela → <table> semântica (<thead>, <th scope="col">) → linhas.
+- Números alinhados à direita com tabular-nums; status como badge; ações no fim.
+- Estados de carregando (skeleton), vazio e erro.
+- Altura de controles 30 px (44 px de área de toque no celular); padding reduzido em 25%.
+- Texto base 13 px, rótulos 12 px; números com font-variant-numeric: tabular-nums.
+- Raio de 4 px em controles e 6 px em contêineres; bordas de 1 px sutis.
+- Item ativo marcado por sublinhado de 2 px; ícones de 14–16 px sem fundo.
+- Composição: Informação densa em linhas e colunas alinhadas; barras de ferramentas compactas.
+- Acabamento: Neutro e funcional; cor apenas para estado e ação.
+
+**Propriedades**
+- Família visual: 13. Compact Pro
+- Título: Pedidos recentes
+- Colunas (uma por linha): Cliente | Status | Valor | Data
+- Linhas de exemplo: 4
+- Densidade: compacta
+- Linhas zebradas: não
+- Estilo do cabeçalho: Destacado
+- Seleção com checkbox: sim
+- Ações por linha: sim
+- Raio dos controles: 4 px
+- Raio dos contêineres: 6 px
+- Borda: 1 px sólida (border)
+- Sombra: sem sombra em superfícies de conteúdo
+- Superfície: superfície = token surface
+- Ação principal: primária sólida (primary) com texto onPrimary
+- Fonte de títulos: Inter 640
+- Fonte de texto: Inter
+- Caixa de rótulos e botões: normal (sentence case)
+- Tamanho base: 13 px
+- Altura de controles: 30 px (mínimo 44 px de área de toque no celular)
+- Ícones: lucide, traço 1.75 px, tratamento plain
+- Indicador de ativo: underline
+
+**Cores**
+- Ação principal (fundo): #1d4ed8
+- Ação principal (texto): #ffffff
+- Superfície: #ffffff
+- Texto: #0f172a
+- Texto secundário: #686d7a
+- Borda: #e6e6e6
+- Destaque: #0c91cd
+- Foco: #1d4ed8
+
+**Medidas recomendadas (adaptáveis)**
+- alturaDeControle: 30 px
+- raio: 4 px / 6 px
+- paddingInterno: 11 px
+
+**Comportamento e estados**
+- Hover na linha; seleção com checkbox no cabeçalho (todos/indeterminado); ordenação por clique no cabeçalho com aria-sort.
+- Hover: fundo Primária — hover (primaryHover) na ação principal e Hover (hover) em itens neutros.
+- Focus-visible: anel de 3 px em Borda de foco (focus-visible) (focusRing) a 35%. Nunca remova o foco visível.
+- Active: Primária — active (primaryActive).
+- Disabled: fundo Disabled — fundo (disabled), texto Disabled — texto (disabledText), sem sombra, cursor not-allowed, aria-disabled.
+- Hover com fundo de hover; atalhos de teclado visíveis.
+- Foco com anel de 2 px.
+- Movimento: Rápido (100 ms).
+
+**Responsividade deste item**
+- No celular: rolagem horizontal local dentro do contêiner (overflow-x: auto) com a primeira coluna fixa, ou representação em cartões (cada linha vira um cartão rótulo: valor).
+- No celular, aumente as áreas de toque para 44 px sem aumentar a fonte além de 16 px nos campos; tabelas viram cartões.
+- Tabelas: rolagem horizontal local dentro do próprio contêiner ou representação alternativa em cartões no celular; cabeçalho legível.
+
+**Observações**
+- As cores vêm da paleta global aprovada; a família apenas transforma (gradientes, superfícies derivadas, opacidades).
+- Nome dado pelo usuário: “Tabelas de dados”.
+- Use os tokens da paleta global por padrão; só as exceções listadas fogem dela.
+
+### Componente: Gráficos — Compact Pro
+
+`id: graficos` · origem: módulo “componentes”
+
+Gráficos na família visual Compact Pro. Gráfico com título, eixos, grade discreta, séries nas cores da paleta e legenda. Estilo: Alta densidade: controles de 30 px, texto base de 13 px, raio de 4 px, bordas de 1 px sutis, sem sombras e números tabulares.
+
+**Estrutura**
+- Cabeçalho (título + filtro de período) → área do gráfico → legenda.
+- Série 1 na primária, série 2 no destaque; grade em borda a 50%.
+- Tabela alternativa ou aria-label descritivo para acessibilidade.
+- Altura de controles 30 px (44 px de área de toque no celular); padding reduzido em 25%.
+- Texto base 13 px, rótulos 12 px; números com font-variant-numeric: tabular-nums.
+- Raio de 4 px em controles e 6 px em contêineres; bordas de 1 px sutis.
+- Item ativo marcado por sublinhado de 2 px; ícones de 14–16 px sem fundo.
+- Composição: Informação densa em linhas e colunas alinhadas; barras de ferramentas compactas.
+- Acabamento: Neutro e funcional; cor apenas para estado e ação.
+
+**Propriedades**
+- Família visual: 13. Compact Pro
+- Título: Vendas por mês
+- Tipo: Barras
+- Séries: 2
+- Legenda: sim
+- Linhas de grade: sim
+- Rótulos de valores: não
+- Raio dos controles: 4 px
+- Raio dos contêineres: 6 px
+- Borda: 1 px sólida (border)
+- Sombra: sem sombra em superfícies de conteúdo
+- Superfície: superfície = token surface
+- Ação principal: primária sólida (primary) com texto onPrimary
+- Fonte de títulos: Inter 640
+- Fonte de texto: Inter
+- Caixa de rótulos e botões: normal (sentence case)
+- Tamanho base: 13 px
+- Altura de controles: 30 px (mínimo 44 px de área de toque no celular)
+- Densidade: compacta
+- Ícones: lucide, traço 1.75 px, tratamento plain
+- Indicador de ativo: underline
+
+**Cores**
+- Ação principal (fundo): #1d4ed8
+- Ação principal (texto): #ffffff
+- Superfície: #ffffff
+- Texto: #0f172a
+- Texto secundário: #686d7a
+- Borda: #e6e6e6
+- Destaque: #0c91cd
+- Foco: #1d4ed8
+
+**Medidas recomendadas (adaptáveis)**
+- alturaDeControle: 30 px
+- raio: 4 px / 6 px
+- paddingInterno: 11 px
+
+**Comportamento e estados**
+- Tooltip no hover/toque com valores; legenda clicável liga/desliga séries.
+- Hover: fundo Primária — hover (primaryHover) na ação principal e Hover (hover) em itens neutros.
+- Focus-visible: anel de 3 px em Borda de foco (focus-visible) (focusRing) a 35%. Nunca remova o foco visível.
+- Active: Primária — active (primaryActive).
+- Disabled: fundo Disabled — fundo (disabled), texto Disabled — texto (disabledText), sem sombra, cursor not-allowed, aria-disabled.
+- Hover com fundo de hover; atalhos de teclado visíveis.
+- Foco com anel de 2 px.
+- Movimento: Rápido (100 ms).
+
+**Responsividade deste item**
+- No celular: menos rótulos no eixo X (a cada 2–3), legenda abaixo do gráfico, altura mínima de 200 px, valores nunca cortados.
+- No celular, aumente as áreas de toque para 44 px sem aumentar a fonte além de 16 px nos campos; tabelas viram cartões.
+- Gráficos: adapte eixos, quantidade de rótulos, legendas (abaixo do gráfico no celular) e dimensões; nunca corte valores.
+
+**Observações**
+- As cores vêm da paleta global aprovada; a família apenas transforma (gradientes, superfícies derivadas, opacidades).
+- Nome dado pelo usuário: “Gráficos”.
+- Use os tokens da paleta global por padrão; só as exceções listadas fogem dela.
+
+### Componente: Dashboard financeiro — Compact Pro
+
+`id: dashboard` · origem: módulo “componentes”
+
+Dashboard na família visual Compact Pro. Página de painel com cabeçalho, linha de KPIs, gráfico principal e lista/tabela de atividades. Estilo: Alta densidade: controles de 30 px, texto base de 13 px, raio de 4 px, bordas de 1 px sutis, sem sombras e números tabulares.
+
+**Estrutura**
+- Cabeçalho da página (título, período, ações) → KPIs → gráfico (2/3) + atividades (1/3).
+- Usa a arquitetura desktop/mobile aprovada para a navegação.
+- Altura de controles 30 px (44 px de área de toque no celular); padding reduzido em 25%.
+- Texto base 13 px, rótulos 12 px; números com font-variant-numeric: tabular-nums.
+- Raio de 4 px em controles e 6 px em contêineres; bordas de 1 px sutis.
+- Item ativo marcado por sublinhado de 2 px; ícones de 14–16 px sem fundo.
+- Composição: Informação densa em linhas e colunas alinhadas; barras de ferramentas compactas.
+- Acabamento: Neutro e funcional; cor apenas para estado e ação.
+
+**Propriedades**
+- Família visual: 13. Compact Pro
+- Título: Visão geral
+- Quantidade de KPIs: 3
+- Gráfico principal: Barras
+- Mostrar menu lateral: sim
+- Mostrar lista de atividades: sim
+- Raio dos controles: 4 px
+- Raio dos contêineres: 6 px
+- Borda: 1 px sólida (border)
+- Sombra: sem sombra em superfícies de conteúdo
+- Superfície: superfície = token surface
+- Ação principal: primária sólida (primary) com texto onPrimary
+- Fonte de títulos: Inter 640
+- Fonte de texto: Inter
+- Caixa de rótulos e botões: normal (sentence case)
+- Tamanho base: 13 px
+- Altura de controles: 30 px (mínimo 44 px de área de toque no celular)
+- Densidade: compacta
+- Ícones: lucide, traço 1.75 px, tratamento plain
+- Indicador de ativo: underline
+
+**Cores**
+- Ação principal (fundo): #1d4ed8
+- Ação principal (texto): #ffffff
+- Superfície: #ffffff
+- Texto: #0f172a
+- Texto secundário: #686d7a
+- Borda: #e6e6e6
+- Destaque: #0c91cd
+- Foco: #1d4ed8
+
+**Medidas recomendadas (adaptáveis)**
+- alturaDeControle: 30 px
+- raio: 4 px / 6 px
+- paddingInterno: 11 px
+
+**Comportamento e estados**
+- Filtro de período atualiza todos os blocos; estados de carregando por bloco.
+- Hover: fundo Primária — hover (primaryHover) na ação principal e Hover (hover) em itens neutros.
+- Focus-visible: anel de 3 px em Borda de foco (focus-visible) (focusRing) a 35%. Nunca remova o foco visível.
+- Active: Primária — active (primaryActive).
+- Disabled: fundo Disabled — fundo (disabled), texto Disabled — texto (disabledText), sem sombra, cursor not-allowed, aria-disabled.
+- Hover com fundo de hover; atalhos de teclado visíveis.
+- Foco com anel de 2 px.
+- Movimento: Rápido (100 ms).
+
+**Responsividade deste item**
+- KPIs 4 → 2 → 1 colunas; gráfico e lista empilham; nada de overflow horizontal.
+- No celular, aumente as áreas de toque para 44 px sem aumentar a fonte além de 16 px nos campos; tabelas viram cartões.
+
+**Observações**
+- As cores vêm da paleta global aprovada; a família apenas transforma (gradientes, superfícies derivadas, opacidades).
+- Nome dado pelo usuário: “Dashboard financeiro”.
+- Use os tokens da paleta global por padrão; só as exceções listadas fogem dela.
+
+## Referências visuais aprovadas
+
+### Inspiração visual: ATLAS CAPITAL — Original
+
+`id: atlas-capital` · origem: módulo “inspiracao”
+
+Site institucional de gestora de investimentos que transmite solidez com dados: serifa clássica nos títulos, números tabulares, gráfico de área e rosca no hero, indicadores com sparklines e tabela de rentabilidade; cantos discretos (4–10 px). Usar como referência de identidade e composição — conceito “ATLAS CAPITAL” (finanças), paleta “Original”.
+
+**Estrutura**
+- Composição dominante: Corporativo orientado a dados: painel de gráficos, indicadores e tabelas.
+- Seções, nesta ordem: 1. Faixa de cotações; 2. Header corporativo; 3. Hero com painel de desempenho (gráfico de área + alocação); 4. Indicadores com minigráficos; 5. Soluções em 4 colunas; 6. Tabela de rentabilidade dos fundos; 7. Research (relatórios); 8. Contato com especialista (formulário); 9. Footer com aviso legal.
+- Tipografia: títulos em Georgia (Georgia, 'Times New Roman', serif); textos em Inter ('Inter Variable', Inter, system-ui, sans-serif).
+- Cores: fundo #f8f7f3, superfície #ffffff, texto #0e1b2c, texto secundário #5b6676, destaque #12355b com texto #ffffff, apoio #c9a24d.
+- Faixa de cotações de 34 px no topo (fundo na cor do texto): rótulo, valor e variação com ▲/▼ em verde/vermelho.
+- Header branco: símbolo de globo com meridianos (destaque + apoio), “ATLAS” serifado espaçado e “CAPITAL” em versalete; navegação; “Acessar conta” com cadeado e botão “Abrir conta” (raio 4 px).
+- Hero em grade 5/6: sobretítulo com traço na cor de apoio, título serifado de ~64 px, texto, CTAs retangulares e selo de regulação; à direita cartão de painel com nome da carteira, seletor de período (1M/6M/1A/5A), retorno grande em verde, gráfico de área com linha de referência tracejada (CDI), legenda e rosca de alocação com legenda em 2 colunas.
+- Indicadores: 4 cartões com rótulo, número grande, sparkline e variação.
+- Soluções: título serifado + texto em 2 colunas; 4 colunas sob fio grosso de 2 px, cada uma com ícone, título serifado, texto e link.
+- Tabela de fundos: cabeçalho em versalete sobre fio de 2 px, retornos alinhados à direita em verde, barras de risco 1–5 e link “Investir”; aviso legal abaixo.
+- Research: 3 cartões (o primeiro maior) com faixa de minigráfico de barras, editoria, título serifado e data/tempo de leitura.
+- Contato: bloco da cor de destaque com frase serifada e formulário em cartão claro (nome, e-mail, faixa de patrimônio, botão).
+- Footer escuro com 4 colunas de links e aviso legal em corpo pequeno.
+
+**Propriedades**
+- conceito: ATLAS CAPITAL
+- segmento: Finanças
+- composicao: Corporativo orientado a dados: painel de gráficos, indicadores e tabelas
+- paleta: Original
+- ajustesDeCor: nenhum
+- fonteTitulos: Georgia
+- fonteTexto: Inter
+- secoes: 9
+- contrasteTextoFundo: 16.2:1
+
+**Cores**
+- fundo: #f8f7f3
+- superficie: #ffffff
+- texto: #0e1b2c
+- textoSecundario: #5b6676
+- destaque: #12355b
+- textoSobreDestaque: #ffffff
+- apoio: #c9a24d
+
+**Medidas recomendadas (adaptáveis)**
+- conteúdo máximo: 1280 px
+- título do hero: 64 px / 40 px
+- raio de botões: 4 px
+- raio de cartões: 8–10 px
+- altura do gráfico: ≈210 px / 150 px
+
+**Comportamento e estados**
+- Gráfico: tooltip ao passar o mouse com data, valor da carteira e do CDI; troca de período anima a linha (300 ms).
+- Cotações podem rolar lentamente em loop; pausam no hover.
+- Linhas da tabela: hover com fundo sutil; colunas numéricas sempre com números tabulares.
+- Sem animações chamativas: a sensação deve ser de precisão e calma.
+
+**Responsividade deste item**
+- Faixa de cotações no celular: uma linha com rolagem horizontal própria (sem quebrar a página).
+- Header: símbolo + nome e hambúrguer; “Abrir conta” dentro do menu e como CTA no hero.
+- Hero: texto e CTAs empilhados; painel abaixo com gráfico mais baixo (≈150 px) e legenda da rosca em 1 coluna.
+- Indicadores em 2×2.
+- Soluções em lista vertical (ícone à esquerda).
+- Tabela de fundos vira lista de cartões (nome, % do CDI, retorno de 12 meses em destaque) — nunca tabela espremida.
+- Research e contato empilhados.
+- Footer em 2 colunas, aviso legal em largura total.
+
+**Observações**
+- Use dados reais e disclaimers exigidos pelo regulador; os números desta página são fictícios.
+- Referência de identidade e composição: não copiar marcas, logotipos, textos ou imagens de terceiros — criar conteúdo original para o projeto.
+- Adapte a identidade (paleta, tipografia, composição e ritmo) ao conteúdo real do projeto; os textos e a marca do conceito são apenas ilustrativos.
+
+## F. Responsividade
+
+Valide pelo menos nas larguras: 320, 344, 360, 375, 390, 412, 430, 480, 600, 768, 820, 1024, 1280, 1440, 1920 px, além de larguras intermediárias.
+
+Breakpoints de referência:
+- xs: Celulares pequenos (320–359 px)
+- sm: Celulares (360–599 px)
+- md: Tablets e celulares na horizontal (600–1023 px)
+- lg: Notebooks (1024–1439 px)
+- xl: Monitores grandes (1440 px ou mais)
+
+**Regras gerais**
+- Nenhum overflow horizontal involuntário em nenhuma largura de 320 px a 1920 px (inclusive larguras intermediárias).
+- Nenhum texto cortado: use quebra de linha, `min-width: 0` em itens flex/grid e `overflow-wrap: anywhere` em conteúdos longos (e-mails, URLs, códigos).
+- Nenhuma sobreposição indevida entre elementos, inclusive com o teclado virtual aberto.
+- Alvos de toque com no mínimo 44 × 44 px no celular e espaçamento de pelo menos 8 px entre alvos adjacentes.
+- Campos de formulário com fonte de pelo menos 16 px no celular (evita zoom automático no iOS).
+- Imagens e mídias responsivas (`max-width: 100%`, `aspect-ratio` definido) sem distorção.
+- Grids adaptáveis: reduza colunas progressivamente; nunca comprima cartões abaixo de uma largura legível.
+- Suporte a zoom de até 200% e a fonte ampliada do sistema sem perda de conteúdo ou funcionalidade.
+- Respeite as safe areas (`env(safe-area-inset-*)`) em barras fixas, docks e menus inferiores.
+- Funcione na orientação horizontal do celular: barras fixas não podem ocupar mais de 25% da altura.
+- Use `100dvh` (com fallback) em vez de `100vh` para alturas de tela cheia.
+- Menus acessíveis por mouse, toque e teclado (Tab, Enter, Espaço, Esc), com foco visível.
+- Respeite `prefers-reduced-motion` reduzindo animações.
+
+**Regras por componente**
+- Headers: compacte a altura no celular e use a navegação móvel escolhida no layout mobile; o logo e a ação principal continuam visíveis.
+- Sidebars: no celular, siga exatamente a arquitetura mobile aprovada (não transforme em drawer por conta própria).
+- Dropdowns e popovers: reposicione automaticamente para não sair da viewport; no celular podem virar bottom sheet.
+- Tabelas: rolagem horizontal local dentro do próprio contêiner ou representação alternativa em cartões no celular; cabeçalho legível.
+- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).
+- Calendários: no celular, ofereça modo de lista/agenda quando a grade mensal ficar apertada.
+- Modais: altura máxima de 90dvh com rolagem interna; botões de ação sempre acessíveis; no celular podem ocupar a tela ou virar bottom sheet.
+- Gráficos: adapte eixos, quantidade de rótulos, legendas (abaixo do gráfico no celular) e dimensões; nunca corte valores.
+- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.
+- Cards: altura definida pelo conteúdo (sem alturas fixas que cortem texto); grade reduz colunas progressivamente.
+- Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco ao gatilho.
+
+## G. Regras de implementação
+
+- Não modifique escolhas aprovadas nesta especificação sem solicitação explícita do usuário.
+- Preserve a identidade global: todos os componentes usam os tokens definidos; exceções só onde estiverem listadas.
+- Não adicione decoração por conta própria (sombras, gradientes, vidro, animações, cantos arredondados) além do especificado.
+- Respeite a geometria escolhida: se a sidebar é integral, ela vai do topo à base; se é flutuante, tem afastamento das bordas. Não converta uma na outra.
+- Evite overflow e colisões; valide em todas as larguras de referência.
+- Mantenha consistência de espaçamentos (escala de 4 px), tipografia e estados de interação (hover, focus-visible, active, disabled, selected).
+- Implemente estados de carregamento, vazio e erro para listas, tabelas e formulários.
+- Use componentes reutilizáveis e tokens centralizados (variáveis CSS ou tema); nada de cores fixas espalhadas pelo código.
+- Garanta acessibilidade: HTML semântico, labels, contraste WCAG AA, navegação por teclado e leitores de tela.
+- Teste o resultado (visual e funcional) em celular, tablet e desktop antes de concluir.
+
+## Decisões de prioridade
+
+- Duas fontes de cor: paleta global e inspiração aprovada: Use os tokens da paleta global “Azul Institucional”. Da inspiração “ATLAS CAPITAL”, aproveite composição, tipografia e atmosfera, não as cores.
+
+## Pendências
+
+Decisões que o usuário ainda não tomou. Não invente: pergunte ou use a opção mais neutra.
+- Escolha um fluxo de cadastro (ou confirme que não haverá cadastro).

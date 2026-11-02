@@ -1,0 +1,20 @@
+const { open, W } = require('./lib.cjs');
+(async () => {
+  const { ctx, page } = await open();
+  page.setDefaultTimeout(6000);
+  await page.goto('http://127.0.0.1:4300/#/modulos/inspiracao', { waitUntil: 'networkidle' });
+  await page.getByRole('button', { name: /^Abrir o site ATLAS CAPITAL/ }).click();
+  await page.waitForTimeout(800);
+  const d = page.getByRole('dialog').first();
+  await d.getByRole('button', { name: 'Remover aprovação' }).click();
+  await page.waitForTimeout(800);
+  console.log('status:', (await page.getByRole('status').allInnerTexts()).join(' / '));
+  console.log('buttons now:', (await d.getByRole('button').allInnerTexts()).slice(-3).join(' | '));
+  await page.screenshot({ path: W + '/capturas/27-inspiracao-atlas-aprovacao-removida.png' });
+  await page.goto('http://127.0.0.1:4300/#/prompt', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(500);
+  const s = await page.locator('#conteudo').ariaSnapshot();
+  const ls = s.split('\n'); const i = ls.findIndex(l => l.includes('itens no Master Prompt'));
+  console.log(ls.slice(i - 1, i + 8).join('\n'));
+  await ctx.close();
+})();

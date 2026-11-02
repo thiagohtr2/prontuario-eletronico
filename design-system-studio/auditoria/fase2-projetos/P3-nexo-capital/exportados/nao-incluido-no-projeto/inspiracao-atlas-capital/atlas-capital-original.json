@@ -1,0 +1,105 @@
+{
+  "gerador": "Atelier UI — Inspiration Gallery",
+  "tipo": "inspiracao",
+  "versao": 1,
+  "geradoEm": "2026-11-02T18:40:54.964Z",
+  "conceito": {
+    "id": "atlas-capital",
+    "marca": "ATLAS CAPITAL",
+    "segmento": "Finanças",
+    "descricao": "Gestora de patrimônio com estética corporativa: cotações no topo, painel com gráficos no hero, indicadores e tabela de rentabilidade.",
+    "composicao": "Corporativo orientado a dados: painel de gráficos, indicadores e tabelas",
+    "secoes": [
+      "Faixa de cotações",
+      "Header corporativo",
+      "Hero com painel de desempenho (gráfico de área + alocação)",
+      "Indicadores com minigráficos",
+      "Soluções em 4 colunas",
+      "Tabela de rentabilidade dos fundos",
+      "Research (relatórios)",
+      "Contato com especialista (formulário)",
+      "Footer com aviso legal"
+    ],
+    "tipografia": {
+      "titulos": {
+        "id": "georgia",
+        "nome": "Georgia",
+        "stack": "Georgia, 'Times New Roman', serif"
+      },
+      "textos": {
+        "id": "inter",
+        "nome": "Inter",
+        "stack": "'Inter Variable', Inter, system-ui, sans-serif"
+      }
+    },
+    "spec": {
+      "summary": "Site institucional de gestora de investimentos que transmite solidez com dados: serifa clássica nos títulos, números tabulares, gráfico de área e rosca no hero, indicadores com sparklines e tabela de rentabilidade; cantos discretos (4–10 px).",
+      "structure": [
+        "Faixa de cotações de 34 px no topo (fundo na cor do texto): rótulo, valor e variação com ▲/▼ em verde/vermelho.",
+        "Header branco: símbolo de globo com meridianos (destaque + apoio), “ATLAS” serifado espaçado e “CAPITAL” em versalete; navegação; “Acessar conta” com cadeado e botão “Abrir conta” (raio 4 px).",
+        "Hero em grade 5/6: sobretítulo com traço na cor de apoio, título serifado de ~64 px, texto, CTAs retangulares e selo de regulação; à direita cartão de painel com nome da carteira, seletor de período (1M/6M/1A/5A), retorno grande em verde, gráfico de área com linha de referência tracejada (CDI), legenda e rosca de alocação com legenda em 2 colunas.",
+        "Indicadores: 4 cartões com rótulo, número grande, sparkline e variação.",
+        "Soluções: título serifado + texto em 2 colunas; 4 colunas sob fio grosso de 2 px, cada uma com ícone, título serifado, texto e link.",
+        "Tabela de fundos: cabeçalho em versalete sobre fio de 2 px, retornos alinhados à direita em verde, barras de risco 1–5 e link “Investir”; aviso legal abaixo.",
+        "Research: 3 cartões (o primeiro maior) com faixa de minigráfico de barras, editoria, título serifado e data/tempo de leitura.",
+        "Contato: bloco da cor de destaque com frase serifada e formulário em cartão claro (nome, e-mail, faixa de patrimônio, botão).",
+        "Footer escuro com 4 colunas de links e aviso legal em corpo pequeno."
+      ],
+      "behavior": [
+        "Gráfico: tooltip ao passar o mouse com data, valor da carteira e do CDI; troca de período anima a linha (300 ms).",
+        "Cotações podem rolar lentamente em loop; pausam no hover.",
+        "Linhas da tabela: hover com fundo sutil; colunas numéricas sempre com números tabulares.",
+        "Sem animações chamativas: a sensação deve ser de precisão e calma."
+      ],
+      "responsive": [
+        "Faixa de cotações no celular: uma linha com rolagem horizontal própria (sem quebrar a página).",
+        "Header: símbolo + nome e hambúrguer; “Abrir conta” dentro do menu e como CTA no hero.",
+        "Hero: texto e CTAs empilhados; painel abaixo com gráfico mais baixo (≈150 px) e legenda da rosca em 1 coluna.",
+        "Indicadores em 2×2.",
+        "Soluções em lista vertical (ícone à esquerda).",
+        "Tabela de fundos vira lista de cartões (nome, % do CDI, retorno de 12 meses em destaque) — nunca tabela espremida.",
+        "Research e contato empilhados.",
+        "Footer em 2 colunas, aviso legal em largura total."
+      ],
+      "measurements": {
+        "conteúdo máximo": "1280 px",
+        "título do hero": "64 px / 40 px",
+        "raio de botões": "4 px",
+        "raio de cartões": "8–10 px",
+        "altura do gráfico": "≈210 px / 150 px"
+      },
+      "notes": [
+        "Use dados reais e disclaimers exigidos pelo regulador; os números desta página são fictícios.",
+        "Referência de identidade e composição: não copiar marcas, logotipos, textos ou imagens de terceiros — criar conteúdo original para o projeto."
+      ]
+    }
+  },
+  "paleta": {
+    "id": "original",
+    "nome": "Original",
+    "proposta": {
+      "id": "original",
+      "name": "Original",
+      "bg": "#f8f7f3",
+      "surface": "#ffffff",
+      "text": "#0e1b2c",
+      "muted": "#5b6676",
+      "accent": "#12355b",
+      "onAccent": "#ffffff",
+      "secondary": "#c9a24d"
+    },
+    "final": {
+      "id": "original",
+      "name": "Original",
+      "bg": "#f8f7f3",
+      "surface": "#ffffff",
+      "text": "#0e1b2c",
+      "muted": "#5b6676",
+      "accent": "#12355b",
+      "onAccent": "#ffffff",
+      "secondary": "#c9a24d"
+    }
+  },
+  "ajustes": {},
+  "observacao": "Referência de identidade e composição. A marca, os textos e as ilustrações são fictícios e não devem ser copiados literalmente."
+}

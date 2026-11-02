@@ -1,7 +1,7 @@
 {
   "$schema": "atelier-ui/spec@1",
   "generator": "Atelier UI — Design System Studio",
-  "generatedAt": "2026-11-02T18:34:00.050Z",
+  "generatedAt": "2026-11-02T18:42:14.243Z",
   "project": {
     "id": "prj_1a0e1830",
     "name": "Nexo Capital",
@@ -1530,7 +1530,7 @@
     "version": 1,
     "id": "prj_1a0e1830",
     "createdAt": "2026-11-02T18:18:48.710Z",
-    "updatedAt": "2026-11-02T18:33:16.479Z",
+    "updatedAt": "2026-11-02T18:42:04.220Z",
     "meta": {
       "name": "Nexo Capital",
       "objective": "Plataforma financeira com dashboard financeiro, tabelas de dados e gráficos.",
@@ -1554,9 +1554,13 @@
       "showHints": true
     },
     "guided": {
-      "step": "entrada",
+      "step": "preview",
       "completed": [
-        "revisao"
+        "revisao",
+        "objetivo",
+        "entrada",
+        "desktop",
+        "mobile"
       ],
       "skeletonApproved": true
     },
@@ -1634,7 +1638,9 @@
     "prompt": {
       "excluded": [],
       "notes": {},
-      "conflictResolutions": {}
+      "conflictResolutions": {
+        "cores-inspiracao": "global"
+      }
     },
     "validation": {
       "config": {

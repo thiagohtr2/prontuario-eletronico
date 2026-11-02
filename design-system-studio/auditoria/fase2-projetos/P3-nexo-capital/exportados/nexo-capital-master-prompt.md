@@ -1,6 +1,6 @@
 # Master Prompt — Nexo Capital
 
-> Especificação gerada pelo Atelier UI (Design System Studio) em 02/11/2026, 18:33:59.
+> Especificação gerada pelo Atelier UI (Design System Studio) em 02/11/2026, 18:42:13.
 > Todas as decisões abaixo foram visualizadas e aprovadas pelo usuário. Implemente exatamente o que está descrito; quando algo não estiver especificado, escolha a opção mais simples e consistente com o restante, sem adicionar decoração.
 
 ## A. Informações do projeto
