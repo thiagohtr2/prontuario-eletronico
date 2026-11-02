@@ -1,0 +1,1258 @@
+{
+  "method": {
+    "runs": 3,
+    "routes": [
+      "livre",
+      "modulos/objetivo",
+      "modulos/landing",
+      "modulos/login",
+      "modulos/cadastro",
+      "modulos/desktop",
+      "modulos/mobile",
+      "modulos/preview",
+      "modulos/cores",
+      "modulos/navegacao",
+      "modulos/componentes",
+      "modulos/inspiracao",
+      "modulos/templates",
+      "prompt",
+      "exportar",
+      "validacao",
+      "projeto",
+      "guiado/objetivo"
+    ],
+    "loops": 3,
+    "gc": "HeapProfiler.collectGarbage ×2 antes de cada leitura"
+  },
+  "routeSummary": {
+    "livre": {
+      "primeiraVisitaMs": 60,
+      "visitaEmCacheMs": 21,
+      "nosDom": 572
+    },
+    "modulos/objetivo": {
+      "primeiraVisitaMs": 60,
+      "visitaEmCacheMs": 29,
+      "nosDom": 453
+    },
+    "modulos/landing": {
+      "primeiraVisitaMs": 570,
+      "visitaEmCacheMs": 370,
+      "nosDom": 2616
+    },
+    "modulos/login": {
+      "primeiraVisitaMs": 173,
+      "visitaEmCacheMs": 139,
+      "nosDom": 2063
+    },
+    "modulos/cadastro": {
+      "primeiraVisitaMs": 59,
+      "visitaEmCacheMs": 53,
+      "nosDom": 863
+    },
+    "modulos/desktop": {
+      "primeiraVisitaMs": 279,
+      "visitaEmCacheMs": 332,
+      "nosDom": 5640
+    },
+    "modulos/mobile": {
+      "primeiraVisitaMs": 444,
+      "visitaEmCacheMs": 294,
+      "nosDom": 5555
+    },
+    "modulos/preview": {
+      "primeiraVisitaMs": 105,
+      "visitaEmCacheMs": 47,
+      "nosDom": 434
+    },
+    "modulos/cores": {
+      "primeiraVisitaMs": 171,
+      "visitaEmCacheMs": 119,
+      "nosDom": 2717
+    },
+    "modulos/navegacao": {
+      "primeiraVisitaMs": 351,
+      "visitaEmCacheMs": 281,
+      "nosDom": 4066
+    },
+    "modulos/componentes": {
+      "primeiraVisitaMs": 129,
+      "visitaEmCacheMs": 88,
+      "nosDom": 1186
+    },
+    "modulos/inspiracao": {
+      "primeiraVisitaMs": 1119,
+      "visitaEmCacheMs": 772,
+      "nosDom": 9146
+    },
+    "modulos/templates": {
+      "primeiraVisitaMs": 220,
+      "visitaEmCacheMs": 184,
+      "nosDom": 2444
+    },
+    "prompt": {
+      "primeiraVisitaMs": 112,
+      "visitaEmCacheMs": 37,
+      "nosDom": 419
+    },
+    "exportar": {
+      "primeiraVisitaMs": 56,
+      "visitaEmCacheMs": 25,
+      "nosDom": 457
+    },
+    "validacao": {
+      "primeiraVisitaMs": 52,
+      "visitaEmCacheMs": 22,
+      "nosDom": 508
+    },
+    "projeto": {
+      "primeiraVisitaMs": 49,
+      "visitaEmCacheMs": 22,
+      "nosDom": 445
+    },
+    "guiado/objetivo": {
+      "primeiraVisitaMs": 46,
+      "visitaEmCacheMs": 23,
+      "nosDom": 569
+    }
+  },
+  "memSummary": [
+    {
+      "etapa": "início (home)",
+      "heapMB": 4.3,
+      "nodes": 556,
+      "listeners": 198,
+      "documents": 1
+    },
+    {
+      "etapa": "após volta 1 por 18 rotas",
+      "heapMB": 10.4,
+      "nodes": 611,
+      "listeners": 222,
+      "documents": 1
+    },
+    {
+      "etapa": "após volta 2 por 18 rotas",
+      "heapMB": 11.5,
+      "nodes": 611,
+      "listeners": 222,
+      "documents": 1
+    },
+    {
+      "etapa": "após volta 3 por 18 rotas",
+      "heapMB": 11.9,
+      "nodes": 611,
+      "listeners": 222,
+      "documents": 1
+    }
+  ],
+  "runs": [
+    {
+      "run": 1,
+      "loadavg": [
+        8.21,
+        11.06,
+        6.44
+      ],
+      "mem": [
+        {
+          "label": "início (home)",
+          "heapMB": 4.3,
+          "nodes": 556,
+          "listeners": 198,
+          "documents": 1,
+          "layoutObjects": 527
+        },
+        {
+          "label": "após volta 1 por 18 rotas",
+          "heapMB": 10.4,
+          "nodes": 611,
+          "listeners": 222,
+          "documents": 1,
+          "layoutObjects": 527
+        },
+        {
+          "label": "após volta 2 por 18 rotas",
+          "heapMB": 11.5,
+          "nodes": 611,
+          "listeners": 222,
+          "documents": 1,
+          "layoutObjects": 527
+        },
+        {
+          "label": "após volta 3 por 18 rotas",
+          "heapMB": 11.9,
+          "nodes": 611,
+          "listeners": 222,
+          "documents": 1,
+          "layoutObjects": 527
+        }
+      ],
+      "switches": [
+        {
+          "loop": 1,
+          "route": "livre",
+          "ms": 60,
+          "nodes": 572
+        },
+        {
+          "loop": 1,
+          "route": "modulos/objetivo",
+          "ms": 67.5,
+          "nodes": 453
+        },
+        {
+          "loop": 1,
+          "route": "modulos/landing",
+          "ms": 394.70000000006985,
+          "nodes": 2616
+        },
+        {
+          "loop": 1,
+          "route": "modulos/login",
+          "ms": 144,
+          "nodes": 2063
+        },
+        {
+          "loop": 1,
+          "route": "modulos/cadastro",
+          "ms": 46.20000000006985,
+          "nodes": 863
+        },
+        {
+          "loop": 1,
+          "route": "modulos/desktop",
+          "ms": 236.80000000004657,
+          "nodes": 5640
+        },
+        {
+          "loop": 1,
+          "route": "modulos/mobile",
+          "ms": 598,
+          "nodes": 5555
+        },
+        {
+          "loop": 1,
+          "route": "modulos/preview",
+          "ms": 99.19999999995343,
+          "nodes": 434
+        },
+        {
+          "loop": 1,
+          "route": "modulos/cores",
+          "ms": 173.90000000002328,
+          "nodes": 2717
+        },
+        {
+          "loop": 1,
+          "route": "modulos/navegacao",
+          "ms": 350.5,
+          "nodes": 4066
+        },
+        {
+          "loop": 1,
+          "route": "modulos/componentes",
+          "ms": 111,
+          "nodes": 1186
+        },
+        {
+          "loop": 1,
+          "route": "modulos/inspiracao",
+          "ms": 952.4000000000233,
+          "nodes": 9146
+        },
+        {
+          "loop": 1,
+          "route": "modulos/templates",
+          "ms": 219.80000000004657,
+          "nodes": 2444
+        },
+        {
+          "loop": 1,
+          "route": "prompt",
+          "ms": 112.29999999993015,
+          "nodes": 419
+        },
+        {
+          "loop": 1,
+          "route": "exportar",
+          "ms": 55.90000000002328,
+          "nodes": 457
+        },
+        {
+          "loop": 1,
+          "route": "validacao",
+          "ms": 45.800000000046566,
+          "nodes": 508
+        },
+        {
+          "loop": 1,
+          "route": "projeto",
+          "ms": 48.89999999990687,
+          "nodes": 445
+        },
+        {
+          "loop": 1,
+          "route": "guiado/objetivo",
+          "ms": 46.10000000009313,
+          "nodes": 569
+        },
+        {
+          "loop": 2,
+          "route": "livre",
+          "ms": 22.300000000046566,
+          "nodes": 625
+        },
+        {
+          "loop": 2,
+          "route": "modulos/objetivo",
+          "ms": 17.400000000023283,
+          "nodes": 502
+        },
+        {
+          "loop": 2,
+          "route": "modulos/landing",
+          "ms": 275.20000000006985,
+          "nodes": 2654
+        },
+        {
+          "loop": 2,
+          "route": "modulos/login",
+          "ms": 155.69999999995343,
+          "nodes": 2100
+        },
+        {
+          "loop": 2,
+          "route": "modulos/cadastro",
+          "ms": 56.800000000046566,
+          "nodes": 899
+        },
+        {
+          "loop": 2,
+          "route": "modulos/desktop",
+          "ms": 341.70000000006985,
+          "nodes": 5672
+        },
+        {
+          "loop": 2,
+          "route": "modulos/mobile",
+          "ms": 269.4000000000233,
+          "nodes": 5586
+        },
+        {
+          "loop": 2,
+          "route": "modulos/preview",
+          "ms": 41.5,
+          "nodes": 458
+        },
+        {
+          "loop": 2,
+          "route": "modulos/cores",
+          "ms": 202.89999999990687,
+          "nodes": 2736
+        },
+        {
+          "loop": 2,
+          "route": "modulos/navegacao",
+          "ms": 295.69999999995343,
+          "nodes": 4084
+        },
+        {
+          "loop": 2,
+          "route": "modulos/componentes",
+          "ms": 80,
+          "nodes": 1201
+        },
+        {
+          "loop": 2,
+          "route": "modulos/inspiracao",
+          "ms": 901.5999999999767,
+          "nodes": 9158
+        },
+        {
+          "loop": 2,
+          "route": "modulos/templates",
+          "ms": 110,
+          "nodes": 2453
+        },
+        {
+          "loop": 2,
+          "route": "prompt",
+          "ms": 64.5,
+          "nodes": 425
+        },
+        {
+          "loop": 2,
+          "route": "exportar",
+          "ms": 22.5,
+          "nodes": 462
+        },
+        {
+          "loop": 2,
+          "route": "validacao",
+          "ms": 28.900000000023283,
+          "nodes": 511
+        },
+        {
+          "loop": 2,
+          "route": "projeto",
+          "ms": 17.900000000023283,
+          "nodes": 447
+        },
+        {
+          "loop": 2,
+          "route": "guiado/objetivo",
+          "ms": 23.29999999993015,
+          "nodes": 569
+        },
+        {
+          "loop": 3,
+          "route": "livre",
+          "ms": 42.39999999990687,
+          "nodes": 625
+        },
+        {
+          "loop": 3,
+          "route": "modulos/objetivo",
+          "ms": 58,
+          "nodes": 502
+        },
+        {
+          "loop": 3,
+          "route": "modulos/landing",
+          "ms": 375.39999999990687,
+          "nodes": 2654
+        },
+        {
+          "loop": 3,
+          "route": "modulos/login",
+          "ms": 113.69999999995343,
+          "nodes": 2100
+        },
+        {
+          "loop": 3,
+          "route": "modulos/cadastro",
+          "ms": 49.89999999990687,
+          "nodes": 899
+        },
+        {
+          "loop": 3,
+          "route": "modulos/desktop",
+          "ms": 222.5,
+          "nodes": 5672
+        },
+        {
+          "loop": 3,
+          "route": "modulos/mobile",
+          "ms": 300.9000000000233,
+          "nodes": 5586
+        },
+        {
+          "loop": 3,
+          "route": "modulos/preview",
+          "ms": 51.59999999997672,
+          "nodes": 458
+        },
+        {
+          "loop": 3,
+          "route": "modulos/cores",
+          "ms": 112,
+          "nodes": 2736
+        },
+        {
+          "loop": 3,
+          "route": "modulos/navegacao",
+          "ms": 250.79999999993015,
+          "nodes": 4084
+        },
+        {
+          "loop": 3,
+          "route": "modulos/componentes",
+          "ms": 97,
+          "nodes": 1201
+        },
+        {
+          "loop": 3,
+          "route": "modulos/inspiracao",
+          "ms": 778.2000000000698,
+          "nodes": 9158
+        },
+        {
+          "loop": 3,
+          "route": "modulos/templates",
+          "ms": 116.29999999993015,
+          "nodes": 2453
+        },
+        {
+          "loop": 3,
+          "route": "prompt",
+          "ms": 29.199999999953434,
+          "nodes": 425
+        },
+        {
+          "loop": 3,
+          "route": "exportar",
+          "ms": 35.10000000009313,
+          "nodes": 462
+        },
+        {
+          "loop": 3,
+          "route": "validacao",
+          "ms": 32.40000000002328,
+          "nodes": 511
+        },
+        {
+          "loop": 3,
+          "route": "projeto",
+          "ms": 23,
+          "nodes": 447
+        },
+        {
+          "loop": 3,
+          "route": "guiado/objetivo",
+          "ms": 37.5,
+          "nodes": 569
+        }
+      ],
+      "errors": []
+    },
+    {
+      "run": 2,
+      "loadavg": [
+        10.83,
+        11.31,
+        6.69
+      ],
+      "mem": [
+        {
+          "label": "início (home)",
+          "heapMB": 4.3,
+          "nodes": 556,
+          "listeners": 198,
+          "documents": 1,
+          "layoutObjects": 527
+        },
+        {
+          "label": "após volta 1 por 18 rotas",
+          "heapMB": 10.4,
+          "nodes": 611,
+          "listeners": 222,
+          "documents": 1,
+          "layoutObjects": 527
+        },
+        {
+          "label": "após volta 2 por 18 rotas",
+          "heapMB": 11.5,
+          "nodes": 611,
+          "listeners": 222,
+          "documents": 1,
+          "layoutObjects": 527
+        },
+        {
+          "label": "após volta 3 por 18 rotas",
+          "heapMB": 11.9,
+          "nodes": 611,
+          "listeners": 222,
+          "documents": 1,
+          "layoutObjects": 527
+        }
+      ],
+      "switches": [
+        {
+          "loop": 1,
+          "route": "livre",
+          "ms": 62.09999999997672,
+          "nodes": 572
+        },
+        {
+          "loop": 1,
+          "route": "modulos/objetivo",
+          "ms": 56.800000000046566,
+          "nodes": 453
+        },
+        {
+          "loop": 1,
+          "route": "modulos/landing",
+          "ms": 569.5999999999767,
+          "nodes": 2616
+        },
+        {
+          "loop": 1,
+          "route": "modulos/login",
+          "ms": 173.30000000004657,
+          "nodes": 2063
+        },
+        {
+          "loop": 1,
+          "route": "modulos/cadastro",
+          "ms": 58.90000000002328,
+          "nodes": 863
+        },
+        {
+          "loop": 1,
+          "route": "modulos/desktop",
+          "ms": 316.70000000006985,
+          "nodes": 5640
+        },
+        {
+          "loop": 1,
+          "route": "modulos/mobile",
+          "ms": 443.80000000004657,
+          "nodes": 5555
+        },
+        {
+          "loop": 1,
+          "route": "modulos/preview",
+          "ms": 104.79999999993015,
+          "nodes": 434
+        },
+        {
+          "loop": 1,
+          "route": "modulos/cores",
+          "ms": 170.5,
+          "nodes": 2717
+        },
+        {
+          "loop": 1,
+          "route": "modulos/navegacao",
+          "ms": 520.5999999999767,
+          "nodes": 4066
+        },
+        {
+          "loop": 1,
+          "route": "modulos/componentes",
+          "ms": 129.30000000004657,
+          "nodes": 1186
+        },
+        {
+          "loop": 1,
+          "route": "modulos/inspiracao",
+          "ms": 1271,
+          "nodes": 9146
+        },
+        {
+          "loop": 1,
+          "route": "modulos/templates",
+          "ms": 597.3999999999069,
+          "nodes": 2444
+        },
+        {
+          "loop": 1,
+          "route": "prompt",
+          "ms": 119.40000000002328,
+          "nodes": 419
+        },
+        {
+          "loop": 1,
+          "route": "exportar",
+          "ms": 57.40000000002328,
+          "nodes": 457
+        },
+        {
+          "loop": 1,
+          "route": "validacao",
+          "ms": 67.20000000006985,
+          "nodes": 508
+        },
+        {
+          "loop": 1,
+          "route": "projeto",
+          "ms": 98.5,
+          "nodes": 445
+        },
+        {
+          "loop": 1,
+          "route": "guiado/objetivo",
+          "ms": 52,
+          "nodes": 569
+        },
+        {
+          "loop": 2,
+          "route": "livre",
+          "ms": 74.09999999997672,
+          "nodes": 625
+        },
+        {
+          "loop": 2,
+          "route": "modulos/objetivo",
+          "ms": 45.300000000046566,
+          "nodes": 502
+        },
+        {
+          "loop": 2,
+          "route": "modulos/landing",
+          "ms": 370.5,
+          "nodes": 2654
+        },
+        {
+          "loop": 2,
+          "route": "modulos/login",
+          "ms": 121.40000000002328,
+          "nodes": 2100
+        },
+        {
+          "loop": 2,
+          "route": "modulos/cadastro",
+          "ms": 48.20000000006985,
+          "nodes": 899
+        },
+        {
+          "loop": 2,
+          "route": "modulos/desktop",
+          "ms": 399.9000000000233,
+          "nodes": 5672
+        },
+        {
+          "loop": 2,
+          "route": "modulos/mobile",
+          "ms": 231.5,
+          "nodes": 5586
+        },
+        {
+          "loop": 2,
+          "route": "modulos/preview",
+          "ms": 64.90000000002328,
+          "nodes": 458
+        },
+        {
+          "loop": 2,
+          "route": "modulos/cores",
+          "ms": 182.29999999993015,
+          "nodes": 2736
+        },
+        {
+          "loop": 2,
+          "route": "modulos/navegacao",
+          "ms": 266,
+          "nodes": 4084
+        },
+        {
+          "loop": 2,
+          "route": "modulos/componentes",
+          "ms": 73.09999999997672,
+          "nodes": 1201
+        },
+        {
+          "loop": 2,
+          "route": "modulos/inspiracao",
+          "ms": 703.1999999999534,
+          "nodes": 9158
+        },
+        {
+          "loop": 2,
+          "route": "modulos/templates",
+          "ms": 57.60000000009313,
+          "nodes": 797
+        },
+        {
+          "loop": 2,
+          "route": "prompt",
+          "ms": 62.800000000046566,
+          "nodes": 425
+        },
+        {
+          "loop": 2,
+          "route": "exportar",
+          "ms": 20.099999999976717,
+          "nodes": 462
+        },
+        {
+          "loop": 2,
+          "route": "validacao",
+          "ms": 25.699999999953434,
+          "nodes": 511
+        },
+        {
+          "loop": 2,
+          "route": "projeto",
+          "ms": 21.399999999906868,
+          "nodes": 447
+        },
+        {
+          "loop": 2,
+          "route": "guiado/objetivo",
+          "ms": 24.800000000046566,
+          "nodes": 569
+        },
+        {
+          "loop": 3,
+          "route": "livre",
+          "ms": 17.099999999976717,
+          "nodes": 625
+        },
+        {
+          "loop": 3,
+          "route": "modulos/objetivo",
+          "ms": 30.699999999953434,
+          "nodes": 502
+        },
+        {
+          "loop": 3,
+          "route": "modulos/landing",
+          "ms": 248,
+          "nodes": 2654
+        },
+        {
+          "loop": 3,
+          "route": "modulos/login",
+          "ms": 224.29999999993015,
+          "nodes": 2100
+        },
+        {
+          "loop": 3,
+          "route": "modulos/cadastro",
+          "ms": 98,
+          "nodes": 899
+        },
+        {
+          "loop": 3,
+          "route": "modulos/desktop",
+          "ms": 347.20000000006985,
+          "nodes": 5672
+        },
+        {
+          "loop": 3,
+          "route": "modulos/mobile",
+          "ms": 795.4000000000233,
+          "nodes": 5586
+        },
+        {
+          "loop": 3,
+          "route": "modulos/preview",
+          "ms": 97.40000000002328,
+          "nodes": 458
+        },
+        {
+          "loop": 3,
+          "route": "modulos/cores",
+          "ms": 105.40000000002328,
+          "nodes": 2736
+        },
+        {
+          "loop": 3,
+          "route": "modulos/navegacao",
+          "ms": 570.5999999999767,
+          "nodes": 4084
+        },
+        {
+          "loop": 3,
+          "route": "modulos/componentes",
+          "ms": 99.90000000002328,
+          "nodes": 1201
+        },
+        {
+          "loop": 3,
+          "route": "modulos/inspiracao",
+          "ms": 910.0999999999767,
+          "nodes": 9158
+        },
+        {
+          "loop": 3,
+          "route": "modulos/templates",
+          "ms": 339.69999999995343,
+          "nodes": 2453
+        },
+        {
+          "loop": 3,
+          "route": "prompt",
+          "ms": 35,
+          "nodes": 425
+        },
+        {
+          "loop": 3,
+          "route": "exportar",
+          "ms": 27.20000000006985,
+          "nodes": 462
+        },
+        {
+          "loop": 3,
+          "route": "validacao",
+          "ms": 18.79999999993015,
+          "nodes": 511
+        },
+        {
+          "loop": 3,
+          "route": "projeto",
+          "ms": 24.300000000046566,
+          "nodes": 447
+        },
+        {
+          "loop": 3,
+          "route": "guiado/objetivo",
+          "ms": 19.099999999976717,
+          "nodes": 569
+        }
+      ],
+      "errors": []
+    },
+    {
+      "run": 3,
+      "loadavg": [
+        10.22,
+        11.19,
+        6.8
+      ],
+      "mem": [
+        {
+          "label": "início (home)",
+          "heapMB": 4.3,
+          "nodes": 556,
+          "listeners": 198,
+          "documents": 1,
+          "layoutObjects": 527
+        },
+        {
+          "label": "após volta 1 por 18 rotas",
+          "heapMB": 10.4,
+          "nodes": 611,
+          "listeners": 222,
+          "documents": 1,
+          "layoutObjects": 527
+        },
+        {
+          "label": "após volta 2 por 18 rotas",
+          "heapMB": 11.5,
+          "nodes": 611,
+          "listeners": 222,
+          "documents": 1,
+          "layoutObjects": 527
+        },
+        {
+          "label": "após volta 3 por 18 rotas",
+          "heapMB": 11.9,
+          "nodes": 611,
+          "listeners": 222,
+          "documents": 1,
+          "layoutObjects": 527
+        }
+      ],
+      "switches": [
+        {
+          "loop": 1,
+          "route": "livre",
+          "ms": 58,
+          "nodes": 572
+        },
+        {
+          "loop": 1,
+          "route": "modulos/objetivo",
+          "ms": 60,
+          "nodes": 453
+        },
+        {
+          "loop": 1,
+          "route": "modulos/landing",
+          "ms": 810.3000000000466,
+          "nodes": 2616
+        },
+        {
+          "loop": 1,
+          "route": "modulos/login",
+          "ms": 254.5,
+          "nodes": 2063
+        },
+        {
+          "loop": 1,
+          "route": "modulos/cadastro",
+          "ms": 83.09999999997672,
+          "nodes": 863
+        },
+        {
+          "loop": 1,
+          "route": "modulos/desktop",
+          "ms": 278.9000000000233,
+          "nodes": 5640
+        },
+        {
+          "loop": 1,
+          "route": "modulos/mobile",
+          "ms": 400.9000000000233,
+          "nodes": 5555
+        },
+        {
+          "loop": 1,
+          "route": "modulos/preview",
+          "ms": 120.19999999995343,
+          "nodes": 434
+        },
+        {
+          "loop": 1,
+          "route": "modulos/cores",
+          "ms": 118.59999999997672,
+          "nodes": 2717
+        },
+        {
+          "loop": 1,
+          "route": "modulos/navegacao",
+          "ms": 332.5999999999767,
+          "nodes": 4066
+        },
+        {
+          "loop": 1,
+          "route": "modulos/componentes",
+          "ms": 135.69999999995343,
+          "nodes": 1186
+        },
+        {
+          "loop": 1,
+          "route": "modulos/inspiracao",
+          "ms": 1118.5,
+          "nodes": 9146
+        },
+        {
+          "loop": 1,
+          "route": "modulos/templates",
+          "ms": 195.30000000004657,
+          "nodes": 2444
+        },
+        {
+          "loop": 1,
+          "route": "prompt",
+          "ms": 73.70000000006985,
+          "nodes": 419
+        },
+        {
+          "loop": 1,
+          "route": "exportar",
+          "ms": 37,
+          "nodes": 457
+        },
+        {
+          "loop": 1,
+          "route": "validacao",
+          "ms": 52,
+          "nodes": 508
+        },
+        {
+          "loop": 1,
+          "route": "projeto",
+          "ms": 43.79999999993015,
+          "nodes": 445
+        },
+        {
+          "loop": 1,
+          "route": "guiado/objetivo",
+          "ms": 29.300000000046566,
+          "nodes": 569
+        },
+        {
+          "loop": 2,
+          "route": "livre",
+          "ms": 19.100000000093132,
+          "nodes": 625
+        },
+        {
+          "loop": 2,
+          "route": "modulos/objetivo",
+          "ms": 26.79999999993015,
+          "nodes": 502
+        },
+        {
+          "loop": 2,
+          "route": "modulos/landing",
+          "ms": 370.19999999995343,
+          "nodes": 2654
+        },
+        {
+          "loop": 2,
+          "route": "modulos/login",
+          "ms": 118.39999999990687,
+          "nodes": 2100
+        },
+        {
+          "loop": 2,
+          "route": "modulos/cadastro",
+          "ms": 57.5,
+          "nodes": 899
+        },
+        {
+          "loop": 2,
+          "route": "modulos/desktop",
+          "ms": 323.19999999995343,
+          "nodes": 5672
+        },
+        {
+          "loop": 2,
+          "route": "modulos/mobile",
+          "ms": 287,
+          "nodes": 5586
+        },
+        {
+          "loop": 2,
+          "route": "modulos/preview",
+          "ms": 37,
+          "nodes": 458
+        },
+        {
+          "loop": 2,
+          "route": "modulos/cores",
+          "ms": 125.79999999993015,
+          "nodes": 2736
+        },
+        {
+          "loop": 2,
+          "route": "modulos/navegacao",
+          "ms": 213.20000000006985,
+          "nodes": 4084
+        },
+        {
+          "loop": 2,
+          "route": "modulos/componentes",
+          "ms": 92,
+          "nodes": 1201
+        },
+        {
+          "loop": 2,
+          "route": "modulos/inspiracao",
+          "ms": 734.1000000000931,
+          "nodes": 9158
+        },
+        {
+          "loop": 2,
+          "route": "modulos/templates",
+          "ms": 270.5,
+          "nodes": 797
+        },
+        {
+          "loop": 2,
+          "route": "prompt",
+          "ms": 25.79999999993015,
+          "nodes": 425
+        },
+        {
+          "loop": 2,
+          "route": "exportar",
+          "ms": 37.40000000002328,
+          "nodes": 462
+        },
+        {
+          "loop": 2,
+          "route": "validacao",
+          "ms": 15.599999999976717,
+          "nodes": 511
+        },
+        {
+          "loop": 2,
+          "route": "projeto",
+          "ms": 22.900000000023283,
+          "nodes": 447
+        },
+        {
+          "loop": 2,
+          "route": "guiado/objetivo",
+          "ms": 21.5,
+          "nodes": 569
+        },
+        {
+          "loop": 3,
+          "route": "livre",
+          "ms": 17.800000000046566,
+          "nodes": 625
+        },
+        {
+          "loop": 3,
+          "route": "modulos/objetivo",
+          "ms": 16.29999999993015,
+          "nodes": 502
+        },
+        {
+          "loop": 3,
+          "route": "modulos/landing",
+          "ms": 385.5,
+          "nodes": 2654
+        },
+        {
+          "loop": 3,
+          "route": "modulos/login",
+          "ms": 163.30000000004657,
+          "nodes": 2100
+        },
+        {
+          "loop": 3,
+          "route": "modulos/cadastro",
+          "ms": 37.699999999953434,
+          "nodes": 899
+        },
+        {
+          "loop": 3,
+          "route": "modulos/desktop",
+          "ms": 317.9000000000233,
+          "nodes": 5672
+        },
+        {
+          "loop": 3,
+          "route": "modulos/mobile",
+          "ms": 349.5,
+          "nodes": 5586
+        },
+        {
+          "loop": 3,
+          "route": "modulos/preview",
+          "ms": 36.5,
+          "nodes": 458
+        },
+        {
+          "loop": 3,
+          "route": "modulos/cores",
+          "ms": 85.59999999997672,
+          "nodes": 2736
+        },
+        {
+          "loop": 3,
+          "route": "modulos/navegacao",
+          "ms": 515.7999999999302,
+          "nodes": 4084
+        },
+        {
+          "loop": 3,
+          "route": "modulos/componentes",
+          "ms": 84.80000000004657,
+          "nodes": 1201
+        },
+        {
+          "loop": 3,
+          "route": "modulos/inspiracao",
+          "ms": 766.4000000000233,
+          "nodes": 9158
+        },
+        {
+          "loop": 3,
+          "route": "modulos/templates",
+          "ms": 251.69999999995343,
+          "nodes": 2453
+        },
+        {
+          "loop": 3,
+          "route": "prompt",
+          "ms": 39.300000000046566,
+          "nodes": 425
+        },
+        {
+          "loop": 3,
+          "route": "exportar",
+          "ms": 19.70000000006985,
+          "nodes": 462
+        },
+        {
+          "loop": 3,
+          "route": "validacao",
+          "ms": 16,
+          "nodes": 511
+        },
+        {
+          "loop": 3,
+          "route": "projeto",
+          "ms": 14.29999999993015,
+          "nodes": 447
+        },
+        {
+          "loop": 3,
+          "route": "guiado/objetivo",
+          "ms": 22.899999999906868,
+          "nodes": 569
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

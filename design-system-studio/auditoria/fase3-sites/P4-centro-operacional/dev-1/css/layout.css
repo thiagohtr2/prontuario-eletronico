@@ -56,8 +56,10 @@
   min-height: 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  /* indicadores (conteúdo) · status (encolhe com rolagem interna) · tabela (resto) */
-  grid-template-rows: auto minmax(0, auto) minmax(12rem, 1fr);
+  /* indicadores (conteúdo, nunca encolhe) · status (encolhe até um mínimo legível,
+     com rolagem interna) · tabela (resto). Se nem os mínimos couberem (fonte muito
+     ampliada), a própria área de conteúdo rola internamente — nada se sobrepõe. */
+  grid-template-rows: auto minmax(9rem, auto) minmax(12rem, 1fr);
   gap: var(--space-3);
   padding: var(--space-3) var(--space-4);
   overflow: auto;
@@ -151,6 +153,10 @@
 }
 
 @media (min-width: 48em) {
+  .section--kpis {
+    min-height: auto;
+  }
+
   /* Grade de KPIs: 4 → 2 → 1 colunas conforme a largura disponível */
   @container (max-width: 43.999rem) {
     .kpis {

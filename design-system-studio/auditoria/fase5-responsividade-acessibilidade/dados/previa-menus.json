@@ -1,0 +1,65 @@
+{
+  "headerSheet": {
+    "botao": {
+      "label": "Abrir menu",
+      "exp": "false",
+      "controls": null,
+      "w": 44,
+      "h": 44
+    },
+    "aberto": {
+      "active": "BUTTON.nvs-hi nvs-menu-btn Fechar menu",
+      "dialogs": [
+        {
+          "label": "Menu de navegação",
+          "cls": "nvs-pop nvs-sheet",
+          "hidden": null,
+          "contains": false
+        }
+      ]
+    },
+    "tabs": [
+      "BUTTON Produto [no diálogo]",
+      "BUTTON Recursos [no diálogo]",
+      "BUTTON Preços [no diálogo]",
+      "BUTTON Sobre [no diálogo]",
+      "BUTTON Entrar [no diálogo]",
+      "BUTTON Começar grátis [no diálogo]"
+    ],
+    "depoisEsc": {
+      "active": "BUTTON Abrir menu",
+      "open": 0
+    }
+  },
+  "phoneDrawer": {
+    "botao": {
+      "label": "Abrir menu",
+      "w": 39,
+      "h": 39
+    },
+    "aberto": {
+      "open": "true",
+      "active": "BUTTON Fechar menu"
+    },
+    "fechaTocandoFora": true,
+    "depoisEsc": {
+      "open": "false",
+      "active": "BUTTON Abrir menu"
+    },
+    "alvos": 2,
+    "alvosMenores44": 2,
+    "alvosMenores24": 0,
+    "exemplos": [
+      {
+        "l": "Abrir menu",
+        "w": 39,
+        "h": 39
+      },
+      {
+        "l": "Buscar",
+        "w": 39,
+        "h": 39
+      }
+    ]
+  }
+}

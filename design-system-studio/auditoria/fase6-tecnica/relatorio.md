@@ -131,9 +131,9 @@ encontrado. Pontos fracos:
 
 ### 3.2 Persistência no localStorage
 
-Configuração em `store.ts:271-292`: chave `atelier-ui:studio:v1`, `version: 1`, **sem `migrate`**, `merge` próprio que valida o
+Configuração em `store.ts:272-292`: chave `atelier-ui:studio:v1`, `version: 1`, **sem `migrate`**, `merge` próprio que valida o
 projeto com Zod e **não valida o histórico**. Cada alteração grava o estado inteiro (projeto + até 30 versões, `MAX_SNAPSHOTS`
-em `:27`) de forma síncrona.
+em `:29`) de forma síncrona.
 
 Tamanhos reais (projetos da fase 2, `dados/analise-motor.json → persistencia`):
 
@@ -146,7 +146,7 @@ Tamanhos reais (projetos da fase 2, `dados/analise-motor.json → persistencia`)
 | P5 Conecta | 3 699 | 117 225 |
 
 Para o uso típico a cota está longe (≈2 % de 5 M caracteres). **O risco real é o relatório de validação**: ele é guardado
-dentro do `project` (`setValidationReport`, `store.ts:236`) e, portanto, copiado em cada uma das 30 versões e reescrito a cada
+dentro do `project` (`setValidationReport`, `store.ts:249`) e, portanto, copiado em cada uma das 30 versões e reescrito a cada
 clique. O executor gera até ≈61 ocorrências por página × largura (limites em `runner.py:86-151`); com 10 larguras e 5 rotas,
 centenas a milhares de ocorrências são plausíveis:
 
@@ -164,23 +164,129 @@ O comportamento ao estourar a cota e sem localStorage está medido na seção 6.
   `console.error`) e o próximo clique sobrescreve o que estava salvo. A primeira mudança de esquema apagará os projetos de
   todos os usuários.
 - **Falha de validação = perda silenciosa**: se o projeto salvo não passa no Zod (ex.: um valor de enum removido numa versão
-  futura), `merge` devolve um projeto novo (`store.ts:285-287`) sem avisar; o primeiro clique grava por cima.
-- **Versões não validadas**: `restoreSnapshot` (`store.ts:248-253`) aplica `structuredClone(snap.project)` sem passar pelo
+  futura), `merge` devolve um projeto novo (`store.ts:280-285`) sem avisar; o primeiro clique grava por cima.
+- **Versões não validadas**: `restoreSnapshot` (`store.ts:252-257`) aplica `structuredClone(snap.project)` sem passar pelo
   Zod. Sonda: restaurar uma versão incompleta quebra o motor com
   `Cannot read properties of undefined (reading 'paletteId')` (`dados/sondas.json`). `ProjectPage.tsx:101` ainda lê
   `h.project.meta.name` ao listar versões.
 - **Backup não restaura as versões**: a exportação diz “Projeto atual e N versão(ões) salva(s)” (`ExportPage.tsx:114-115`), mas
-  `parseProjectFile` extrai só `raw.project` (`schema.ts:139-141`) e `importProject` grava só o projeto (`store.ts:255-260`).
+  `parseProjectFile` extrai só `raw.project` (`schema.ts:140`) e `importProject` grava só o projeto (`store.ts:259-265`).
   Sonda: backup com 2 versões → nenhuma versão restaurada.
 - **Validação Zod é de tipo, não de domínio**: ids de catálogo são `z.string()` — um projeto com `desktopId: "nao-existe"` é
   aceito, some do prompt e **não gera pendência** (o prompt diz “Layout desktop: não definido” e a lista de pendências não o
   menciona, porque `detectPending` testa só `!desktopId`). Chaves de `overrides` são livres (`mode`, `gradientEnabled` são
-  aceitas e sobrescrevem campos não-cor do tema). `validation.report` é `z.any()` (`schema.ts:126`). Não há limite de
+  aceitas e sobrescrevem campos não-cor do tema). `validation.report` é `z.any()` (`schema.ts:116`). Não há limite de
   tamanho para textos.
 - **O que o estado tem e a exportação perde**:
-  - a observação do usuário no item “Paleta e tokens” vai para `exceptions` do item (`items.ts:96`), mas o Master Prompt
+  - a observação do usuário no item “Paleta e tokens” vai para `exceptions` do item (`items.ts:102`), mas o Master Prompt
     **não renderiza o item da paleta** (`text.ts:106` filtra `kind !== 'palette'`). Sonda: nota na paleta → ausente do prompt;
     nota na tipografia → presente;
   - itens retirados do prompt continuam gerando contradições (sonda: header excluído ainda produz
     `header-flutuante-vs-integral`), e a instrução de prioridade cita um header que não está no prompt;
   - a composição B de headers/sidebars é exportada com as medidas da composição A (2.2).
+
+## 4. Motor de prompts — como funciona e por que perde fidelidade
+
+### 4.1 Pipeline
+
+1. `collectPromptItems(project)` (`src/prompt/items.ts:205-339`) percorre as escolhas e transforma cada uma num `PromptItem`
+   a partir do `spec` textual do catálogo (`describeCatalogItem`, `src/core/describe.ts:24`) ou de funções `describe…`
+   (componentes, inspiração, templates). `toItem()` acrescenta regras responsivas por tipo (`rulesFor`, `items.ts:100`) e a
+   observação do usuário em `exceptions` (`:102`).
+2. `buildProjectSpec()` (`src/prompt/spec.ts:70-138`) agrupa os itens por seção, adiciona tokens, regras globais
+   (`COMPONENT_RESPONSIVE_RULES` inteiro, `:131`), contradições (`detectConflicts`) e pendências, e embute o estado completo
+   (`source`).
+3. `renderMasterPrompt()` (`src/prompt/text.ts:41-156`) concatena seções A–G em Markdown; cada item vira um bloco com até 9
+   subtítulos (`renderItem`, `:16-33`); no fim vêm “Decisões de prioridade” e “Pendências”.
+
+Cada item descreve **a si mesmo, com seus próprios números, “como na prévia”**. Não existe uma etapa que reúna os fatos de
+todos os itens e decida qual valor vale. O preâmbulo manda a IA “implementar exatamente o que está descrito” (`text.ts:48`) e a
+regra G1 proíbe “modificar escolhas aprovadas” — então duas descrições divergentes viram duas ordens contraditórias.
+
+### 4.2 Por que o detector marca “Contradições (0)” enquanto o texto se contradiz
+
+**Causa raiz:** `detectConflicts()` (`src/prompt/conflicts.ts:32-164`) é uma lista fixa de 8 regras sobre booleanos e
+existência de regiões (header sem região, header flutuante × integral, sidebar sem região, sidebar flutuante × integral, login
+ou landing fora do fluxo, One Screen, cor da inspiração, cor do template). Ele **não compara nenhum valor numérico, nenhum
+posicionamento, nenhum comportamento no celular e nada de tipografia/geometria**. E nem poderia: os valores só existem como
+texto livre dentro das `spec` de cada catálogo, sem um modelo de fatos comum. Cobertura de testes de `conflicts.ts`: 53 % das
+linhas (sidebar, One Screen, cores de inspiração/template nunca exercitados).
+
+Medição nos 5 projetos da fase 2 (fatos extraídos dos dados estruturados — `dados/analise-motor.json`):
+
+| Projeto | Contradições detectadas pelo Studio | Contradições que o texto contém e o detector não vê |
+| --- | --- | --- |
+| P1 Atlas Workspace | 0 | 15 — header 64 × 56 px; header “só sobre a coluna principal” × “largura total da janela”; sidebar 252 × 248 px; sidebar “vira drawer abaixo de 768 px” × mobile Bottom Navigation (e × a regra “não transforme em drawer” anexada ao **mesmo** item); header “☰ + painel de menu” × bottom navigation; 5 componentes com raio 0 px (Swiss Minimal) × identidade “médio 8 px” e base 14 × 15 px |
+| P2 Verde Vivo | 1 (cores da inspiração) | 13 — header com ☰ × dock inferior; 3 componentes Soft Pill: raio 999/22 px × 8 px, Inter × Fraunces nos títulos, 14 × 15 px, sombra “soft” × identidade “sem sombra” + regra “não adicione decoração” |
+| P3 Nexo Capital | 0 | 9 — header 64 × 56 px; header full width × coluna; sidebar 252 × 264 px; 3 componentes Compact Pro: raio 4/6 × 8 px, 13 × 15 px |
+| P4 Centro Operacional | 0 | 4 — 2 componentes Compact Pro: raio e tamanho base divergentes |
+| P5 Conecta | 0 | 17 — header 64 × 60 px; 4 componentes Modern Material: raio 20/12 × 8 px, fonte do sistema × Inter, sombra tonal × “sem sombra” |
+
+Os quatro casos relatados pelos agentes de primeiro acesso (header 56 × 64, sidebar 252 × 260/248/264, drawer × bottom
+navigation, raio/fonte da família × identidade) são todos instâncias dessa mesma causa. Trecho real (P1, `master-prompt.md`):
+linha 114 “Header de ≈64 px … O header fica somente sobre a coluna principal”; linha 199 “Barra principal com 56 px de altura,
+largura total da janela (full width)”; a sidebar diz na mesma lista “Abaixo de 768 px: sai do fluxo e vira um drawer” e
+“Sidebars: no celular, siga exatamente a arquitetura mobile aprovada (não transforme em drawer por conta própria)”.
+
+### 4.3 Por que textos de exemplo entram no prompt como especificação
+
+**Causa raiz:** o modelo de projeto não tem campos de conteúdo (marca, itens de menu, grupos da sidebar, CTAs) —
+`ProjectMeta` (`src/core/project.ts:33-43`) só guarda nome, objetivo, descrição, público, finalidade, tipo, funcionalidades e
+tecnologia. Os geradores de spec interpolam o conteúdo da **receita de demonstração** do catálogo:
+`navigation/catalog.ts:149` (marca), `:153` (itens do menu, com mega menu/dropdown), `:167` (breadcrumbs), `:197` (itens do menu
+de perfil), `:1555-1565` (grupos e itens da sidebar, com contadores “Projetos (12)”, “Mensagens (3)”);
+`templates/describe.ts:26,43` (`marcaDeExemplo`) e `inspiration/describe.ts:21-25` (nome do conceito vira o nome do item).
+Somente a marca do header leva a ressalva “substitua pela marca real”; os itens de menu não. Medido: 13 textos de
+demonstração no prompt de P1, 9 em P2, 14 em P3, 1 em P4, 6 em P5 (ex.: P3 recebe o menu “Visão geral, Aquisição, Retenção,
+Receita” e a sidebar “Painel, Contratos, Fornecedores, Compras, Colaboradores” de um modelo genérico).
+
+### 4.4 Por que trocar a cor primária não atualiza hover, foco e link
+
+**Causa raiz:** as alterações manuais são aplicadas **depois** da derivação. `projectTokens()` faz
+`applyOverrides(deriveTokens(palette.base), overrides)` (`src/core/theme.ts:10-12`; `applyOverrides` em
+`src/core/tokens.ts:191-197`): `deriveTokens` calcula hover, active, foco, link, seleção e navegação a partir da primária
+**da paleta**, e só depois a primária nova substitui o token `primary`. Medido com a paleta `neutro-essencial` e primária
+`#e11d48` (`dados/analise-motor.json → tokensDerivados`): **11 tokens ficam com o valor da primária antiga** —
+`primaryHover` (#161618, esperado #cb1a41), `primaryActive`, `primarySoft`, `focusRing` (#18181b, esperado #e11d48),
+`selected`, `selectedText`, `link` (#18181b, esperado #e11d48), `linkHover`, `navActive`, `navActiveText`, `gradientFrom`.
+Esses valores errados seguem para a tabela de tokens do Master Prompt, para o CSS de referência (`css.ts:12`), para as cores
+dos componentes (`components/describe.ts:73-74` resolve o “look” a partir desses tokens) e para a ficha HTML.
+
+### 4.5 Tamanho e duplicação do prompt
+
+| Projeto | Master Prompt | Linhas | Tokens (≈ caracteres/3,6) | Linhas repetidas (≥ 25 caracteres) | Caracteres desperdiçados | JSON da especificação |
+| --- | --- | --- | --- | --- | --- | --- |
+| P1 | 47 461 | 825 | ≈13 200 | 42 linhas distintas, 165 repetições | 10 662 | 110 190 |
+| P2 | 44 728 | 760 | ≈12 400 | 38 / 92 | 5 618 | 103 185 |
+| P3 | 36 588 | 636 | ≈10 200 | 40 / 90 | 5 483 | 83 580 |
+| P4 | 23 060 | 427 | ≈6 400 | 35 / 43 | 2 520 | 51 037 |
+| P5 | 38 975 | 698 | ≈10 800 | 39 / 125 | 7 682 | 91 243 |
+
+Causas: (a) as regras por tipo de componente são anexadas a cada item (`items.ts:100`) **e** o dicionário inteiro
+`COMPONENT_RESPONSIVE_RULES` (11 regras) é repetido no fim (`text.ts:135`), inclusive regras de tabela em projetos sem tabela
+(P2, P5); (b) instâncias da mesma família repetem as mesmas 5–8 linhas de estilo (P1: “Raio 0 em tudo…” 5×); (c) cada item
+traz até 9 subtítulos fixos. O JSON carrega cada item duas vezes (na seção e em `items[]`) e o estado completo em `source`
+(inclui o relatório de validação, se houver).
+
+### 4.6 Correções de arquitetura propostas
+
+1. **Modelo de fatos + resolução por precedência.** Cada catálogo passa a expor, além do texto, fatos estruturados
+   (`{ chave: 'header.altura.desktop', valor: 56, unidade: 'px', origem: 'navigation.header' }`, `'sidebar.largura'`,
+   `'header.posicao' = 'coluna' | 'janela'`, `'mobile.navegacao' = 'bottom-nav' | 'drawer'…`, `'componente.raio'`,
+   `'componente.fonte'`). Um resolvedor agrupa por chave e aplica uma tabela de precedência explícita, por exemplo:
+   decisão do usuário > esqueleto (layout desktop/mobile: posição, dimensões, navegação móvel) > modelo de navegação (estilo
+   interno) > identidade global (cores, tipografia, raio, sombra) > família visual do componente (só o que a identidade não
+   define, salvo exceção marcada). O texto do prompt é renderizado **a partir do valor resolvido** (um único número) e os
+   valores perdedores vão para um apêndice “substituído por precedência”. Conflitos cuja política é “perguntar” aparecem na
+   aba Contradições. O detector deixa de ser uma lista de `if` e passa a ser “mesma chave, valores diferentes”.
+2. **Campos de conteúdo no projeto** (`project.content`: nome da marca, itens de navegação principal, grupos da sidebar,
+   CTA principal), preenchidos opcionalmente no objetivo/navegação. Os geradores de spec usam esses campos; quando vazios,
+   escrevem “itens: use as funcionalidades da seção A; os rótulos da prévia são ilustrativos” em vez de listar o conteúdo de
+   demonstração.
+3. **Derivação de tokens em duas camadas**: `overrides` de base (`primary`, `secondary`, `accent`, `bg`, `surface`, `text`,
+   `nav`, semânticas) aplicados ao `PaletteBase` **antes** de `deriveTokens`; overrides de tokens derivados aplicados depois e
+   marcados como “travados” na interface (com ação “voltar a derivar”).
+4. **Spec por composição**: gerar a spec de header/sidebar com `headerLookFor(model, variant)` / `sidebarLookFor`.
+5. **Deduplicação no render**: regras por componente só uma vez, filtradas pelos tipos presentes; `Set` de linhas por seção;
+   família visual descrita uma vez e referenciada pelas instâncias; JSON sem `items[]` duplicado (ou só com chaves).
+   Estimativa: −20 a −35 % de tamanho sem perder informação.

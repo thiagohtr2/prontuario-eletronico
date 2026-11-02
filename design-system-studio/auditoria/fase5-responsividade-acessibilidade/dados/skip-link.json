@@ -1,0 +1,59 @@
+[
+  {
+    "route": "/modulos/cores",
+    "before": {
+      "hash": "#/modulos/cores",
+      "h1": "Color System"
+    },
+    "after": {
+      "hash": "#/",
+      "h1": "Do site que você imagina ao site que a IA realmente constrói.",
+      "active": "conteudo"
+    }
+  },
+  {
+    "route": "/modulos/cores",
+    "click": {
+      "hash": "#/",
+      "h1": "Do site que você imagina ao site que a IA realmente constrói."
+    }
+  },
+  {
+    "route": "/guiado/desktop",
+    "before": {
+      "hash": "#/guiado/desktop",
+      "h1": "Arquitetura do computador"
+    },
+    "after": {
+      "hash": "#/",
+      "h1": "Do site que você imagina ao site que a IA realmente constrói.",
+      "active": "conteudo"
+    }
+  },
+  {
+    "route": "/guiado/desktop",
+    "click": {
+      "hash": "#/",
+      "h1": "Do site que você imagina ao site que a IA realmente constrói."
+    }
+  },
+  {
+    "route": "/prompt",
+    "before": {
+      "hash": "#/prompt",
+      "h1": "Central de Prompts"
+    },
+    "after": {
+      "hash": "#/",
+      "h1": "Do site que você imagina ao site que a IA realmente constrói.",
+      "active": "conteudo"
+    }
+  },
+  {
+    "route": "/prompt",
+    "click": {
+      "hash": "#/",
+      "h1": "Do site que você imagina ao site que a IA realmente constrói."
+    }
+  }
+]

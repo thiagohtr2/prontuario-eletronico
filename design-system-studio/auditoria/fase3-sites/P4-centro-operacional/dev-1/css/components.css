@@ -361,33 +361,33 @@ svg.brand__mark {
 }
 
 .scroll-y.fade-top {
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 1.5rem);
-  mask-image: linear-gradient(to bottom, transparent 0, #000 1.5rem);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, var(--mask-solid) 1.5rem);
+  mask-image: linear-gradient(to bottom, transparent 0, var(--mask-solid) 1.5rem);
 }
 
 .scroll-y.fade-bottom {
-  -webkit-mask-image: linear-gradient(to top, transparent 0, #000 1.5rem);
-  mask-image: linear-gradient(to top, transparent 0, #000 1.5rem);
+  -webkit-mask-image: linear-gradient(to top, transparent 0, var(--mask-solid) 1.5rem);
+  mask-image: linear-gradient(to top, transparent 0, var(--mask-solid) 1.5rem);
 }
 
 .scroll-y.fade-top.fade-bottom {
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 1.5rem, #000 calc(100% - 1.5rem), transparent 100%);
-  mask-image: linear-gradient(to bottom, transparent 0, #000 1.5rem, #000 calc(100% - 1.5rem), transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0, var(--mask-solid) 1.5rem, var(--mask-solid) calc(100% - 1.5rem), transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0, var(--mask-solid) 1.5rem, var(--mask-solid) calc(100% - 1.5rem), transparent 100%);
 }
 
 .scroll-x.fade-left {
-  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 1.5rem);
-  mask-image: linear-gradient(to right, transparent 0, #000 1.5rem);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, var(--mask-solid) 1.5rem);
+  mask-image: linear-gradient(to right, transparent 0, var(--mask-solid) 1.5rem);
 }
 
 .scroll-x.fade-right {
-  -webkit-mask-image: linear-gradient(to left, transparent 0, #000 1.5rem);
-  mask-image: linear-gradient(to left, transparent 0, #000 1.5rem);
+  -webkit-mask-image: linear-gradient(to left, transparent 0, var(--mask-solid) 1.5rem);
+  mask-image: linear-gradient(to left, transparent 0, var(--mask-solid) 1.5rem);
 }
 
 .scroll-x.fade-left.fade-right {
-  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 1.5rem, #000 calc(100% - 1.5rem), transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0, #000 1.5rem, #000 calc(100% - 1.5rem), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, var(--mask-solid) 1.5rem, var(--mask-solid) calc(100% - 1.5rem), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, var(--mask-solid) 1.5rem, var(--mask-solid) calc(100% - 1.5rem), transparent 100%);
 }
 
 /* ---------- Skeleton e estados (carregando / vazio / erro) ---------- */
@@ -637,7 +637,7 @@ svg.brand__mark {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
   min-width: 0;
-  min-height: 0;
+  min-height: auto; /* altura pelo conteúdo; quem rola é a grade de blocos */
   border: 1px solid var(--border);
   border-radius: var(--cp-radius-container);
   background: var(--surface);
@@ -761,6 +761,10 @@ svg.brand__mark {
 }
 
 .table-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 6px;
   font-size: var(--fs-12);
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;
@@ -1076,10 +1080,16 @@ svg.brand__mark {
 }
 
 .alerts-frame {
-  position: relative;
   min-height: 0;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
+}
+
+.alerts-scrollwrap {
+  position: relative;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
 }
 
 .alerts-body {
@@ -1434,7 +1444,7 @@ svg.brand__mark {
   transform: translateX(-100%);
 }
 
-@container (max-width: 36rem) {
+@container (max-width: 52rem) {
   .chart__x .x-minor {
     display: none;
   }
@@ -1587,8 +1597,13 @@ svg.brand__mark {
     font-size: var(--fs-13);
   }
 
+  .table-summary .sep--first {
+    display: none;
+  }
+
   .table-summary strong {
-    display: block;
+    order: -1;
+    flex-basis: 100%;
     font-family: var(--font-heading);
     font-size: clamp(var(--fs-23), 1rem + 5vw, var(--fs-30));
     font-weight: var(--fw-cp-heading);
@@ -1614,7 +1629,6 @@ svg.brand__mark {
 
   .field-select {
     display: block;
-    grid-column: 1 / -1;
   }
 
   .field-select select {
@@ -1635,13 +1649,15 @@ svg.brand__mark {
   .check-all-m {
     display: inline-flex;
     align-items: center;
+    align-self: end;
     gap: var(--space-2);
     min-height: var(--touch);
     font-size: var(--fs-14);
   }
 
+  /* No celular a contagem já aparece no rótulo do botão de ação em lote */
   .selection-count {
-    align-self: center;
+    display: none;
   }
 
   .table-actions .btn {

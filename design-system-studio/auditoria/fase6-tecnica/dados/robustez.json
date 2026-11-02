@@ -1,0 +1,91 @@
+{
+  "chunkLazyFalha": {
+    "shellVisivelAposFalha": false,
+    "textoNaTela": "Pular para o conteúdo\nAtelier UI\nDesign System Studio\nGuiado\nLivre\nBuscar funcionalidades\nCtrl K\nEsqueleto 0/5\nMaster Prompt\nInício\nCONSTRUTOR GUIADO\n1\nObjetivo do projeto\n2\nLanding, login e cadastro\n3\nArquitetura do computador\n4\nArquitetura do celul",
+    "shellVisivelAoNavegarDepois": true,
+    "erros": [],
+    "console": [
+      "error: Failed to load resource: net::ERR_FAILED",
+      "error: TypeError: Failed to fetch dynamically imported module: http://127.0.0.1:4300/assets/TemplatesPage-B3gY76Be.js",
+      "error: React Router caught the following error during render TypeError: Failed to fetch dynamically imported module: http://127.0.0.1:4300/assets/TemplatesPage-B3gY76Be.js {componentStack: \n    at T0 (http://127.0.0.1:4300/assets/index-C6B…:4300/assets/index-C6Bu2Cqn.js:69:2007)\n    at M_}"
+    ]
+  },
+  "localStorageJsonCorrompido": {
+    "appAbre": true,
+    "avisoAoUsuario": false,
+    "conteudoOriginalPreservadoAposEdicao": false,
+    "erros": [],
+    "console": []
+  },
+  "projetoSalvoInvalido": {
+    "nomeMostrado": false,
+    "avisoAoUsuario": false,
+    "nomeAposPrimeiraEdicao": "",
+    "historicoMantido": 1,
+    "erros": [],
+    "console": []
+  },
+  "versaoDiferenteSemMigrate": {
+    "nomeMostrado": false,
+    "console": [
+      "error: State loaded from storage couldn't be migrated since no migrate function was provided"
+    ],
+    "erros": []
+  },
+  "localStorageIndisponivel": {
+    "appAbre": true,
+    "selecaoFunciona": true,
+    "avisoAoUsuario": false,
+    "console": [
+      "warning: [zustand persist middleware] Unable to update item 'atelier-ui:studio:v1', the given storage is currently unavailable."
+    ],
+    "erros": []
+  },
+  "cotaLocalStorage": {
+    "capacidadeLivreChars": 5242368,
+    "usadoChars": 0,
+    "selecaoNaTela": "palette-option-glacial",
+    "persistiuSelecao": true,
+    "errosNovos": [],
+    "avisoAoUsuario": false
+  },
+  "importacao": {
+    "corrompido.json": {
+      "erroMostrado": "Não foi possível importar: O arquivo não contém um JSON válido.",
+      "nomeSalvo": null,
+      "tamanhoSalvoChars": 0
+    },
+    "tipos-errados.json": {
+      "erroMostrado": "Não foi possível importar: identity.typography.baseSize: Expected number, received string",
+      "nomeSalvo": null,
+      "tamanhoSalvoChars": 0
+    },
+    "ids-inexistentes.json": {
+      "erroMostrado": null,
+      "nomeSalvo": "Ids Fantasma",
+      "tamanhoSalvoChars": 3737
+    },
+    "xss.json": {
+      "erroMostrado": null,
+      "nomeSalvo": "<img src=x onerror=\"window.__xss=1\">XSS",
+      "tamanhoSalvoChars": 6304
+    },
+    "texto-gigante.json": {
+      "erroMostrado": null,
+      "nomeSalvo": "Atlas Workspace",
+      "tamanhoSalvoChars": 3008774
+    },
+    "xssExecutou": null,
+    "fichaHtmlComTagNaoEscapada": false,
+    "cssCabecalho": "/* |  * Atlas Workspace — CSS de referência gerado pelo Atelier UI. |  * Tokens da identidade global. Use estas variáveis em todos os componentes.",
+    "erros": []
+  },
+  "restaurarVersaoCorrompida": {
+    "cliqueRestaurar": true,
+    "shellVivo": false,
+    "textoNaTela": "Unexpected Application Error!\nCannot read properties of undefined (reading 'showLegends')\nTypeError: Cannot read properties of undefined (reading 'showLegends')\n    at G (http://127.0.0.1:4300/assets/",
+    "aposRecarregar": "Pular para o conteúdo\nAtelier UI\nDesign System Studio\nGuiado\nLivre\nBuscar funcionalidades\nCtrl K\nEsqueleto 0/5\nMaster Prompt\nInício\nCONSTRUTOR GUIADO\n1\nObjetivo",
+    "projetoAposRecarregar": "Antiga",
+    "erros": []
+  }
+}

@@ -503,8 +503,9 @@
     if (st === 'ready') {
       var total = sum(state.orders, 'valor');
       var late = state.orders.filter(function (o) { return o.status === 'atrasado'; }).length;
-      els.ordersSummary.innerHTML = fmt.plural(state.orders.length, 'pedido', 'pedidos') + ' · <strong>' + fmt.brl(total) + '</strong>' +
-        (late ? ' · ' + fmt.plural(late, 'atrasado', 'atrasados') : '');
+      els.ordersSummary.innerHTML = '<span>' + fmt.plural(state.orders.length, 'pedido', 'pedidos') + '</span>' +
+        '<span class="sep sep--first" aria-hidden="true">·</span><strong><span class="sr-only">valor total </span>' + fmt.brl(total) + '</strong>' +
+        (late ? '<span class="sep" aria-hidden="true">·</span><span>' + fmt.plural(late, 'atrasado', 'atrasados') + '</span>' : '');
     } else {
       els.ordersSummary.textContent = st === 'loading' ? 'Carregando…' : 'Dados indisponíveis';
     }

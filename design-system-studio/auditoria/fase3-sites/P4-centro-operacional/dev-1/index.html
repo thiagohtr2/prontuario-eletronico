@@ -78,15 +78,15 @@
           <div class="status-grid scroll-y" id="status-grid">
             <article class="status-card" data-group="filas" aria-labelledby="h-filas">
               <div class="status-card__head"><span data-icon="layers"></span><h3 id="h-filas">Filas</h3><span class="status-card__meta" data-meta></span></div>
-              <div class="status-card__body scroll-y"><ul class="status-list" aria-labelledby="h-filas" data-list></ul></div>
+              <div class="status-card__body"><ul class="status-list" aria-labelledby="h-filas" data-list></ul></div>
             </article>
             <article class="status-card" data-group="sla" aria-labelledby="h-sla">
               <div class="status-card__head"><span data-icon="timer"></span><h3 id="h-sla">SLA</h3><span class="status-card__meta" data-meta></span></div>
-              <div class="status-card__body scroll-y"><ul class="status-list" aria-labelledby="h-sla" data-list></ul></div>
+              <div class="status-card__body"><ul class="status-list" aria-labelledby="h-sla" data-list></ul></div>
             </article>
             <article class="status-card" data-group="equipes" aria-labelledby="h-equipes">
               <div class="status-card__head"><span data-icon="users"></span><h3 id="h-equipes">Equipes</h3><span class="status-card__meta" data-meta></span></div>
-              <div class="status-card__body scroll-y"><ul class="status-list" aria-labelledby="h-equipes" data-list></ul></div>
+              <div class="status-card__body"><ul class="status-list" aria-labelledby="h-equipes" data-list></ul></div>
             </article>
           </div>
         </section>
@@ -159,10 +159,12 @@
         </div>
         <div class="alerts-frame">
           <div id="alerts-notice"></div>
-          <button type="button" class="new-pill" id="new-pill" hidden><span data-icon="arrow-up"></span><span id="new-pill-label"></span></button>
-          <div class="alerts-body scroll-y" id="alerts-body">
-            <ol class="alert-list" id="alert-list" aria-label="Alertas em ordem cronológica, mais recentes primeiro" aria-live="off" aria-relevant="additions"></ol>
-            <div id="alerts-state"></div>
+          <div class="alerts-scrollwrap">
+            <button type="button" class="new-pill" id="new-pill" hidden><span data-icon="arrow-up"></span><span id="new-pill-label"></span></button>
+            <div class="alerts-body scroll-y" id="alerts-body">
+              <ol class="alert-list" id="alert-list" aria-label="Alertas em ordem cronológica, mais recentes primeiro" aria-live="off" aria-relevant="additions"></ol>
+              <div id="alerts-state"></div>
+            </div>
           </div>
         </div>
       </aside>
