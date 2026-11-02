@@ -1,4 +1,4 @@
-import { mix, withAlpha } from '@/core/color'
+import { mix, readableOn, withAlpha } from '@/core/color'
 import type { SitePalette } from '../types'
 import { Burger, ff, hair, Icon, SiteRoot, Wrap, type SiteProps } from './kit'
 
@@ -113,10 +113,12 @@ export default function KineticLab({ palette: p, device }: SiteProps) {
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, fontSize: 13, fontWeight: 700, letterSpacing: '0.16em', color: p.accent }}>
               <span style={{ width: 28, height: 3, background: p.accent }} /> TREINO HÍBRIDO · TEMPORADA 27
             </div>
-            <h1 style={{ ...slant, fontSize: m ? 62 : 150, lineHeight: 0.84, marginTop: 18 }}>
+            <h1 style={{ ...slant, fontSize: m ? 54 : 118, lineHeight: 0.86, marginTop: 18 }}>
               Mova-se
               <br />
-              <span style={{ color: 'transparent', WebkitTextStroke: `${m ? 1.5 : 2.5}px ${p.bg}` }}>com</span> <span style={{ color: p.accent }}>intenção.</span>
+              <span style={{ color: 'transparent', WebkitTextStroke: `${m ? 1.5 : 2.5}px ${p.bg}` }}>com</span>
+              <br />
+              <span style={{ color: p.accent, whiteSpace: 'nowrap' }}>intenção.</span>
             </h1>
             <p style={{ fontSize: m ? 16 : 19, marginTop: 24, maxWidth: 480, opacity: 0.8 }}>Corrida, força e mobilidade no mesmo plano — ajustado toda semana pelos seus dados e por um coach de verdade.</p>
             <div style={{ display: 'flex', gap: 14, marginTop: 30, flexDirection: m ? 'column' : 'row' }}>
@@ -199,8 +201,8 @@ export default function KineticLab({ palette: p, device }: SiteProps) {
             <div style={{ marginTop: m ? 18 : 28, fontSize: 12.5, fontWeight: 700, letterSpacing: '0.1em', opacity: 0.7 }}>CARGA SEMANAL</div>
             <div style={{ display: 'flex', alignItems: 'flex-end', gap: m ? 6 : 10, height: m ? 90 : 120, marginTop: 10 }}>
               {[40, 55, 48, 70, 62, 85, 30].map((v, i) => (
-                <div key={i} style={{ flex: 1, display: 'grid', gap: 6, justifyItems: 'center', alignContent: 'end', height: '100%' }}>
-                  <span style={{ width: '100%', height: `${v}%`, background: i === 5 ? p.accent : withAlpha(p.bg, 0.25), transform: 'skewX(-8deg)' }} />
+                <div key={i} style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 6, alignItems: 'center', justifyContent: 'flex-end', height: '100%' }}>
+                  <span style={{ display: 'block', width: '100%', height: (v / 100) * (m ? 68 : 94), background: i === 5 ? p.accent : withAlpha(p.bg, 0.25), transform: 'skewX(-8deg)' }} />
                   <span style={{ fontSize: 11, opacity: 0.6 }}>{['S', 'T', 'Q', 'Q', 'S', 'S', 'D'][i]}</span>
                 </div>
               ))}
@@ -278,14 +280,14 @@ export default function KineticLab({ palette: p, device }: SiteProps) {
       </section>
 
       {/* CTA diagonal */}
-      <section style={{ background: p.secondary, color: '#ffffff', clipPath: m ? 'polygon(0 4%, 100% 0, 100% 100%, 0 100%)' : 'polygon(0 14%, 100% 0, 100% 100%, 0 100%)' }}>
+      <section style={{ background: p.secondary, color: readableOn(p.secondary, '#ffffff', '#111111'), clipPath: m ? 'polygon(0 4%, 100% 0, 100% 100%, 0 100%)' : 'polygon(0 14%, 100% 0, 100% 100%, 0 100%)' }}>
         <Wrap m={m} max={1320} style={{ padding: m ? '64px 20px 48px' : '140px 48px 96px', display: 'flex', flexDirection: m ? 'column' : 'row', justifyContent: 'space-between', alignItems: m ? 'flex-start' : 'flex-end', gap: 24 }}>
           <h2 style={{ ...slant, fontSize: m ? 48 : 112, lineHeight: 0.86 }}>
             Primeira
             <br />
             semana grátis.
           </h2>
-          <span style={{ background: '#ffffff', color: p.secondary, padding: '18px 32px', ...slant, fontSize: 18, letterSpacing: '0.02em' }}>Agendar aula →</span>
+          <span style={{ background: readableOn(p.secondary, '#ffffff', '#111111'), color: p.secondary, padding: '18px 32px', ...slant, fontSize: 18, letterSpacing: '0.02em' }}>Agendar aula →</span>
         </Wrap>
       </section>
 

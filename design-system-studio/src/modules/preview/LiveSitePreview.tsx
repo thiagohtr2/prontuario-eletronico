@@ -56,12 +56,17 @@ function AppFrame({ layout, theme, name, w, h }: { layout: DesktopLayout; theme:
   const headerModel = header ? headerById(header.id) : undefined
   const sidebarModel = sidebar ? sidebarById(sidebar.id) : undefined
 
+  const hasHeader = layout.regions.some((r) => r.kind === 'header')
+  // Se há um header acima da sidebar, a marca fica no header (não repetimos o logo).
+  const touchesTop = (id: string) => (layout.grid.areas[0] ?? '').split(/\s+/).includes(id)
+
   const renderRegion = (region: LayoutRegion): ReactNode => {
+    const hideBrand = hasHeader && !touchesTop(region.id)
     switch (region.kind) {
       case 'header':
         return headerModel && header ? <HeaderPreview model={headerModel} variant={header.variant} theme={theme} interactive /> : <DefaultHeader theme={theme} name={name} />
       case 'sidebar':
-        return sidebarModel && sidebar ? <SidebarPreview model={sidebarModel} variant={sidebar.variant} theme={theme} interactive /> : <DefaultSidebar theme={theme} name={name} floating={region.floating} />
+        return sidebarModel && sidebar ? <SidebarPreview model={sidebarModel} variant={sidebar.variant} theme={theme} interactive hideBrand={hideBrand} /> : <DefaultSidebar theme={theme} name={name} floating={region.floating} hideBrand={hideBrand} />
       case 'rail':
         return <Rail theme={theme} />
       case 'submenu':
@@ -80,7 +85,7 @@ function AppFrame({ layout, theme, name, w, h }: { layout: DesktopLayout; theme:
     }
   }
 
-  return <DesktopSchematic layout={layout} width={w} height={h} showLegends={false} theme={theme} renderRegion={renderRegion} />
+  return <DesktopSchematic layout={layout} width={w} height={h} showLegends={false} theme={theme} renderRegion={renderRegion} frame={false} detail="full" />
 }
 
 /** Live Site Preview: todas as escolhas estruturais e visuais juntas, em uma prévia coerente. */
@@ -98,7 +103,6 @@ export function LiveSitePreview() {
   const typography = useProject((p) => p.identity.typography)
   const header = useProject((p) => p.navigation.header)
   const sidebar = useProject((p) => p.navigation.sidebar)
-  const showLegends = useProject((p) => p.prefs.showLegends)
   const [device, setDevice] = useState<Device>('desktop')
   const [page, setPage] = useState<PageKind>('app')
   const [ref, available] = useWidth<HTMLDivElement>()
@@ -123,7 +127,7 @@ export function LiveSitePreview() {
     if (device === 'mobile') {
       stage = mobile ? (
         <div className="lp-phone">
-          <PhonePreview layout={mobile} theme={theme} showLegends={showLegends} width={360} interactive />
+          <PhonePreview layout={mobile} theme={theme} showLegends={false} width={360} interactive />
         </div>
       ) : (
         <EmptyState title="Nenhum layout mobile escolhido">

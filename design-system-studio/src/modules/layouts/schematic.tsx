@@ -1500,7 +1500,8 @@ function RegionView(p: RegionViewProps) {
   // Etiqueta no topo que ficaria sob uma região sobreposta (ex.: header flutuante): desce para logo abaixo dela.
   let chipTop = chip.inset
   if (placement && !region.overlay && (placement.place === 'top' || hasCustom)) {
-    const box = { x: rect.x + chip.inset, y: rect.y + chip.inset, w: placement.textW, h: chip.h }
+    const m = Math.max(8, chip.inset * 3)
+    const box = { x: rect.x + chip.inset - m, y: rect.y + chip.inset - m, w: placement.textW * 1.2 + m * 2, h: chip.h + m * 2 }
     for (const o of p.overlays) if (intersects(box, o)) chipTop = Math.max(chipTop, o.y + o.h - rect.y + chip.inset)
   }
   const inner: CSSProperties = { position: 'absolute', inset: 0, overflow: 'hidden', borderRadius: 'inherit' }

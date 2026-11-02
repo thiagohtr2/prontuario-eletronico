@@ -821,15 +821,10 @@ export function SidebarPreview({
   ) : null
 
   const top: ReactNode = (() => {
-    const extra = (
-      <>
-        {topCollapse}
-        {closeBtn}
-      </>
-    )
+    const extra = <>{topCollapse}</>
     switch (arr.top) {
       case 'logo':
-        return hideBrand ? (topCollapse || closeBtn ? <div className="nvs-stop nvs-stop--tools">{extra}</div> : null) : <Brand ctx={ctx} extra={extra} />
+        return hideBrand ? (topCollapse ? <div className="nvs-stop nvs-stop--tools">{extra}</div> : null) : <Brand ctx={ctx} extra={extra} />
       case 'mark':
         return hideBrand && !rail ? null : <Brand ctx={{ ...ctx, rail: true }} extra={extra} />
       case 'logo-search':
@@ -1006,6 +1001,12 @@ export function SidebarPreview({
   } else {
     panelContent = (
       <>
+        {closeBtn && (
+          <div className="nvs-sdrawerbar">
+            <span>Menu</span>
+            {closeBtn}
+          </div>
+        )}
         {top}
         {ctaNode}
         {body}

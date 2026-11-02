@@ -221,7 +221,8 @@ function SiteViewer({
     setDrafts({})
   }
   useEffect(() => {
-    scrollRef.current?.scrollTo({ top: 0 })
+    // Rola só o quadro da prévia (nunca a página) ao trocar de conceito.
+    if (scrollRef.current) scrollRef.current.scrollTop = 0
   }, [siteId])
 
   const base = paletteOf(site, paletteId)

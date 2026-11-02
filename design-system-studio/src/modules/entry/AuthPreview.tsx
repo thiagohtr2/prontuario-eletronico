@@ -20,7 +20,7 @@ import {
   Users,
   type LucideIcon,
 } from 'lucide-react'
-import { ensureContrast, isDark, mix, readableOn, withAlpha } from '@/core/color'
+import { ensureContrast, hexToRgb, isDark, mix, readableOn, withAlpha } from '@/core/color'
 import { useProject } from '@/core/store'
 import { surfaceStyle } from '@/core/tokens'
 import type { ResolvedTheme } from '@/core/types'
@@ -111,7 +111,9 @@ function authTokens(theme: ResolvedTheme, forceDark: boolean): AT {
   const bg = mix(isDark(t.text) ? t.text : '#16161a', '#000000', 0.55)
   const surface = mix(bg, '#ffffff', 0.06)
   const text = '#f4f4f6'
-  const primary = ensureContrast(t.primary, bg, 3.2)
+  const { r, g, b } = hexToRgb(t.primary)
+  const neutral = Math.max(r, g, b) - Math.min(r, g, b) < 36
+  const primary = ensureContrast(neutral ? t.accent : t.primary, bg, 4.5)
   return {
     ...base,
     dark: true,
@@ -633,11 +635,11 @@ function ProviderButtons() {
 function Wrapper({ children, gap = 18 }: { children: ReactNode; gap?: number }) {
   const { live, submit, isSignup } = useA()
   return live ? (
-    <form noValidate onSubmit={submit} aria-label={isSignup ? 'Criar conta' : 'Entrar'} style={{ display: 'grid', gap, minWidth: 0 }}>
+    <form noValidate onSubmit={submit} aria-label={isSignup ? 'Criar conta' : 'Entrar'} style={{ display: 'grid', gap, minWidth: 0, alignContent: 'start' }}>
       {children}
     </form>
   ) : (
-    <div style={{ display: 'grid', gap, minWidth: 0 }}>{children}</div>
+    <div style={{ display: 'grid', gap, minWidth: 0, alignContent: 'start' }}>{children}</div>
   )
 }
 
@@ -1166,7 +1168,11 @@ function AuthScreen({
     return (
       <Wrapper>
         {flow === 'mesma-tela' && <AuthTabs />}
-        <Title text={headline} sub={sub} center={['classico-central', 'cartao-elevado', 'gradiente-discreto', 'acesso-acolhedor', 'janela-compacta', 'acesso-escuro'].includes(layout)} size={layout === 'editorial-claro' && !m ? 24 : undefined} />
+        <Title
+          text={layout === 'editorial-claro' ? 'Entrar' : headline}
+          sub={sub}
+          center={['classico-central', 'cartao-elevado', 'gradiente-discreto', 'acesso-acolhedor', 'janela-compacta', 'acesso-escuro'].includes(layout)}
+        />
         {flow === 'social-sso' && (
           <>
             <ProviderButtons />
@@ -1426,6 +1432,7 @@ function AuthScreen({
   const art = (kind: Parameters<typeof Motif>[0]['kind'], style: CSSProperties, on?: { a: string; b: string; c: string; d: string }) => (
     <Motif kind={kind} a={on?.a ?? T.primary} b={on?.b ?? T.accent} c={on?.c ?? T.surface} d={on?.d ?? T.text} style={style} />
   )
+  const stripBg = T.navBg.toLowerCase() === T.surface.toLowerCase() ? T.primarySoft : T.navBg
   const formCol = (children: ReactNode, width = 380) => <div style={{ width: '100%', maxWidth: m ? undefined : width }}>{children}</div>
 
   if (formOnly) {
@@ -1621,11 +1628,11 @@ function AuthScreen({
       case 'marca-lateral':
         return (
           <div style={{ minHeight: 'inherit', display: 'grid', gridTemplateColumns: m ? '1fr' : '280px 1fr', gridTemplateRows: m ? '64px 1fr' : undefined, background: T.surface }}>
-            <aside style={{ background: T.navBg, color: T.navText, padding: m ? '0 20px' : '36px 28px', display: 'flex', flexDirection: m ? 'row' : 'column', alignItems: m ? 'center' : 'stretch', justifyContent: 'space-between', borderRight: m ? 'none' : `1px solid ${T.border}`, borderBottom: m ? `1px solid ${T.border}` : 'none' }}>
-              <Brand color={isDark(T.navBg) ? '#ffffff' : T.text} size={m ? 28 : 34} />
+            <aside style={{ background: stripBg, color: isDark(stripBg) ? '#ffffff' : T.text, padding: m ? '0 20px' : '36px 28px', display: 'flex', flexDirection: m ? 'row' : 'column', alignItems: m ? 'center' : 'stretch', justifyContent: 'space-between', borderRight: m ? 'none' : `1px solid ${T.border}`, borderBottom: m ? `1px solid ${T.border}` : 'none' }}>
+              <Brand color={isDark(stripBg) ? '#ffffff' : T.text} size={m ? 28 : 34} />
               {!m && (
                 <>
-                  <p style={{ margin: 0, fontFamily: T.heading, fontSize: 24, lineHeight: 1.25, fontWeight: T.hw, color: isDark(T.navBg) ? '#ffffff' : T.text }}>O painel da sua operação.</p>
+                  <p style={{ margin: 0, fontFamily: T.heading, fontSize: 24, lineHeight: 1.25, fontWeight: T.hw, color: isDark(stripBg) ? '#ffffff' : T.text }}>O painel da sua operação.</p>
                   <span style={{ fontSize: 12.5, display: 'flex', alignItems: 'center', gap: 6 }}>
                     <span style={{ width: 8, height: 8, borderRadius: 9, background: T.success }} /> Todos os sistemas operando · v4.2
                   </span>
@@ -1785,7 +1792,7 @@ function AuthScreen({
               {!m && <span style={{ fontSize: 14, color: T.muted }}>Precisa de ajuda? Fale com o suporte</span>}
             </div>
             <div style={{ width: '100%', maxWidth: 900, borderRadius: T.rl, padding: m ? 20 : '32px 36px', ...T.card, display: 'grid', gridTemplateColumns: m ? '1fr' : '220px minmax(0, 1fr)', gap: m ? 18 : 36, alignItems: 'start' }}>
-              <Title text={login.headline} sub={login.subline} size={m ? 24 : 24} />
+              {!m && <Title text={login.headline} sub={login.subline} size={24} />}
               {form}
             </div>
             <Legal />

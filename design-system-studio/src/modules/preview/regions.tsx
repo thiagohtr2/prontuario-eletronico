@@ -69,14 +69,16 @@ export function DefaultHeader({ theme, name }: { theme: ResolvedTheme; name: str
   )
 }
 
-export function DefaultSidebar({ theme, name, floating }: { theme: ResolvedTheme; name: string; floating?: boolean }) {
+export function DefaultSidebar({ theme, name, floating, hideBrand }: { theme: ResolvedTheme; name: string; floating?: boolean; hideBrand?: boolean }) {
   const t = theme.tokens
   const m = theme.metrics
   return (
     <div style={{ ...fill, display: 'flex', flexDirection: 'column', gap: 4, padding: '18px 12px', background: t.navBg, color: t.navText, borderRight: floating ? 'none' : `1px solid ${t.border}`, fontFamily: m.bodyFont }}>
-      <div style={{ padding: '0 8px 16px', color: t.navActiveText === '#ffffff' ? '#ffffff' : t.text }}>
-        <Brand theme={theme} name={name} />
-      </div>
+      {!hideBrand && (
+        <div style={{ padding: '0 8px 16px', color: t.navActiveText === '#ffffff' ? '#ffffff' : t.text }}>
+          <Brand theme={theme} name={name} />
+        </div>
+      )}
       {NAV.map(({ icon: Icon, label }, i) => (
         <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 10, height: 38, padding: '0 10px', borderRadius: m.radiusMd, background: i === 0 ? t.navActive : 'transparent', color: i === 0 ? t.navActiveText : t.navText, fontSize: 14, fontWeight: i === 0 ? 600 : 500 }}>
           <Icon size={17} />

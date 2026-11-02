@@ -46,17 +46,28 @@ function usePreviewDevice(): [Device, (d: Device) => void] {
   return [device ?? (narrow ? 'mobile' : 'desktop'), (d) => setDevice(d === 'tablet' ? 'desktop' : d)]
 }
 
-function SelectionSummary({ label, value, detail, action }: { label: string; value?: string; detail?: string; action?: ReactNode }) {
+function SelectionSummary({ label, value, detail, onPreview }: { label: string; value?: string; detail?: string; onPreview?: () => void }) {
+  // Altura constante (com ou sem seleção) para que escolher um modelo nunca desloque a galeria.
   return (
     <div className="ent-summary" aria-live="polite">
       <div className="ent-summary__text">
         <span className="ent-summary__label">{label}</span>
-        <span className="ent-summary__value">
-          {value ?? <span className="u-subtle" style={{ fontWeight: 500 }}>Nenhum modelo escolhido ainda — clique em um cartão para selecionar.</span>}
-          {value && detail && <span className="u-subtle" style={{ fontWeight: 500 }}> · {detail}</span>}
+        <span className="ent-summary__value" title={value ? `${value}${detail ? ` · ${detail}` : ''}` : undefined}>
+          {value ? (
+            <>
+              {value}
+              {detail && <span className="u-subtle" style={{ fontWeight: 500 }}> · {detail}</span>}
+            </>
+          ) : (
+            <span className="u-subtle" style={{ fontWeight: 500 }}>
+              Nenhum modelo escolhido ainda — clique em um cartão.
+            </span>
+          )}
         </span>
       </div>
-      {value && action}
+      <Button size="sm" icon={<Eye />} onClick={onPreview} disabled={!value}>
+        Ver prévia
+      </Button>
     </div>
   )
 }
@@ -216,13 +227,7 @@ export function LandingGallery({ guided = false }: { guided?: boolean }) {
         label="Landing selecionada"
         value={selected?.name}
         detail={selected ? `${selected.segment} · ${architectureName(selected.architecture)}` : undefined}
-        action={
-          selected && (
-            <Button size="sm" icon={<Eye />} onClick={() => setOpenId(selected.id)}>
-              Ver prévia
-            </Button>
-          )
-        }
+        onPreview={selected ? () => setOpenId(selected.id) : undefined}
       />
       <div className="ent-toolbar">
         {!guided && (
@@ -414,13 +419,7 @@ export function LoginGallery({ guided = false }: { guided?: boolean }) {
         label="Login selecionado"
         value={selected?.name}
         detail={selected?.composition}
-        action={
-          selected && (
-            <Button size="sm" icon={<Eye />} onClick={() => setOpenId(selected.id)}>
-              Ver prévia
-            </Button>
-          )
-        }
+        onPreview={selected ? () => setOpenId(selected.id) : undefined}
       />
       <div className="ent-toolbar">
         {!guided && (
@@ -455,7 +454,7 @@ export function LoginGallery({ guided = false }: { guided?: boolean }) {
                 selected={selectedId === l.id}
                 onSelect={() => selectLoginModel(l)}
                 media={
-                  <ScaledThumb virtualWidth={1280} ratio="16 / 10">
+                  <ScaledThumb virtualWidth={1120} ratio="7 / 5">
                     <AuthPreview login={l} signup={signup} view="login" device="desktop" theme={theme} interactive={false} />
                   </ScaledThumb>
                 }
@@ -528,13 +527,7 @@ export function SignupGallery({ guided = false }: { guided?: boolean }) {
         label="Cadastro selecionado"
         value={selected?.name}
         detail={selected ? `${selected.fields.length} campo(s)` : undefined}
-        action={
-          selected && (
-            <Button size="sm" icon={<Eye />} onClick={() => setOpenId(selected.id)}>
-              Ver prévia
-            </Button>
-          )
-        }
+        onPreview={selected ? () => setOpenId(selected.id) : undefined}
       />
       <div className="ent-grid" style={{ ['--min' as string]: '290px' }}>
         {signups.map((s) => (
@@ -544,7 +537,7 @@ export function SignupGallery({ guided = false }: { guided?: boolean }) {
             selected={selectedId === s.id}
             onSelect={() => selectSignupModel(s)}
             media={
-              <ScaledThumb virtualWidth={430} height={236}>
+              <ScaledThumb virtualWidth={430} height={236} fade>
                 <AuthPreview login={login} signup={s} view="signup" device="desktop" theme={theme} interactive={false} formOnly />
               </ScaledThumb>
             }

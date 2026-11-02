@@ -170,12 +170,12 @@ export default function PulseHealth({ palette: p, device }: SiteProps) {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: m ? 'repeat(2, minmax(0, 1fr))' : 'repeat(4, minmax(0, 1fr))', gap: m ? 10 : 16, marginTop: m ? 24 : 44 }}>
             {SPECIALTIES.map(([t, icon], i) => (
-              <div key={t} style={{ background: p.surface, border: `1px solid ${line}`, borderRadius: 16, padding: m ? 14 : 20, display: 'flex', alignItems: 'center', gap: 14 }}>
-                <span style={{ width: m ? 38 : 46, height: m ? 38 : 46, flex: 'none', borderRadius: 12, background: i % 3 === 1 ? withAlpha(p.secondary, 0.8) : soft, display: 'grid', placeItems: 'center' }}>
+              <div key={t} style={{ background: p.surface, border: `1px solid ${line}`, borderRadius: 16, padding: m ? 12 : 20, display: 'flex', alignItems: 'center', gap: m ? 10 : 14 }}>
+                <span style={{ width: m ? 34 : 46, height: m ? 34 : 46, flex: 'none', borderRadius: 12, background: i % 3 === 1 ? withAlpha(p.secondary, 0.8) : soft, display: 'grid', placeItems: 'center' }}>
                   <Icon name={icon} size={m ? 19 : 22} color={i % 3 === 1 ? mix(p.secondary, p.text, 0.65) : p.accent} />
                 </span>
                 <div style={{ minWidth: 0 }}>
-                  <div style={{ fontWeight: 650, fontSize: m ? 14 : 15.5 }}>{t}</div>
+                  <div style={{ fontWeight: 650, fontSize: m ? 13 : 15.5, overflowWrap: 'normal' }}>{t}</div>
                   {!m && <div style={{ fontSize: 13, color: p.muted }}>{12 + i * 3} profissionais</div>}
                 </div>
               </div>

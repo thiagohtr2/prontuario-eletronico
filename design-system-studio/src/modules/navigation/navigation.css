@@ -325,6 +325,9 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+.nvs-announce[data-compact='true'] .nvs-announce__link {
+  display: none;
+}
 .nvs-announce__close {
   position: absolute;
   right: 0;
@@ -1152,6 +1155,21 @@
   }
 }
 
+@container nvh (max-width: 760px) {
+  .nvs-hs-cmd {
+    width: 40px;
+    padding: 0;
+    justify-content: center;
+  }
+  .nvs-hs-cmd__ph,
+  .nvs-hs-cmd kbd {
+    display: none;
+  }
+  .nvs-hn > li:nth-child(n + 3) {
+    display: none;
+  }
+}
+
 /* ==========================================================================
    Painéis flutuantes (menus, popovers, mega menu, painel do celular)
    ========================================================================== */
@@ -1525,9 +1543,12 @@
   backdrop-filter: blur(14px) saturate(1.3);
 }
 .nvs-s[data-floating='true'] .nvs-spanel {
-  border-radius: var(--nv-r-float);
+  border-radius: var(--nv-r-lg);
   border: 1px solid var(--nv-border);
   box-shadow: var(--nv-shadow);
+}
+.nvs-s[data-floating='true'][data-rail='true'] .nvs-spanel {
+  border-radius: min(var(--nv-r-float), 32px);
 }
 .nvs-s[data-align='center'] .nvs-spanel {
   height: auto;
@@ -1542,6 +1563,19 @@
   box-shadow: 12px 0 32px rgba(16, 16, 24, 0.16);
 }
 
+.nvs-sdrawerbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex: none;
+  padding: 6px 6px 0 16px;
+  color: var(--nv-muted);
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 .nvs-stop {
   display: grid;
   gap: 10px;
@@ -2558,7 +2592,7 @@ li[data-state='todo'] .nvs-step__text strong {
   min-height: 0;
   background: var(--nv-bg);
   border: 1px solid var(--nv-border);
-  border-radius: var(--nv-r-float);
+  border-radius: var(--nv-r-lg);
   box-shadow: var(--nv-shadow);
 }
 .nvs-scardbox--grow {
@@ -2629,6 +2663,12 @@ li[data-state='todo'] .nvs-step__text strong {
 }
 .nvs-stage--side {
   display: flex;
+}
+.nvs-stage--side > .nvs-s {
+  max-width: calc(100% - 24px);
+}
+.nvs-s[data-dupla='true'] .nvs-spanel {
+  max-width: 100%;
 }
 .nvs-stage--phone {
   height: 100%;
@@ -3328,8 +3368,8 @@ li[data-state='todo'] .nvs-step__text strong {
 }
 .nvs-card__badge {
   position: absolute;
-  top: var(--sp-2);
-  right: var(--sp-2);
+  top: -13px;
+  right: var(--sp-4);
   z-index: 20;
   display: inline-flex;
   align-items: center;
@@ -3459,7 +3499,12 @@ li[data-state='todo'] .nvs-step__text strong {
 .nvs-card__comp {
   flex: 1 1 240px;
   min-width: 0;
+  min-height: calc(1.45em * 2);
   margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
   color: var(--s-text-2);
   font-size: var(--fs-sm);
   line-height: 1.45;

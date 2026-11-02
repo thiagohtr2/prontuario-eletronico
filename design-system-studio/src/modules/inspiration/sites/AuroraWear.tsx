@@ -1,5 +1,4 @@
 import { mix, withAlpha } from '@/core/color'
-import type { SitePalette } from '../types'
 import { Burger, ff, hair, SiteRoot, useSvgId, Wrap, type SiteProps } from './kit'
 
 type Outfit = 'coat' | 'dress' | 'suit' | 'knit'
@@ -88,7 +87,17 @@ function Garment({ kind, color }: { kind: 'coat' | 'sweater' | 'trousers' | 'bag
   const shade = mix(color, '#000000', 0.22)
   return (
     <svg viewBox="0 0 200 240" width="100%" height="100%" aria-hidden="true" style={{ display: 'block' }}>
-      {kind === 'coat' && <path d="M70 30 L130 30 L170 70 L160 210 L120 214 L100 70 L80 214 L40 210 L30 70 Z" fill={color} stroke={shade} strokeWidth={2} />}
+      {kind === 'coat' && (
+        <>
+          <path d="M66 26 L134 26 L178 62 L170 160 L152 158 L150 226 L50 226 L48 158 L30 160 L22 62 Z" fill={color} />
+          <path d="M66 26 L100 96 L134 26" fill={shade} />
+          <path d="M100 96 L100 226" stroke={shade} strokeWidth={2} />
+          {[128, 160, 192].map((y) => (
+            <circle key={y} cx={108} cy={y} r={3.5} fill={shade} />
+          ))}
+          <path d="M60 170 L84 170 M116 170 L140 170" stroke={shade} strokeWidth={3} strokeLinecap="round" />
+        </>
+      )}
       {kind === 'sweater' && (
         <>
           <path d="M70 40 Q100 56 130 40 L176 70 L162 104 L146 96 L146 200 L54 200 L54 96 L38 104 L24 70 Z" fill={color} />
@@ -131,11 +140,11 @@ export default function AuroraWear({ palette: p, device }: SiteProps) {
       <header style={{ borderBottom: `1px solid ${line}` }}>
         <Wrap m={m} max={1440} style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', height: m ? 64 : 88 }}>
           <nav style={{ display: 'flex', gap: 28, ...caps, fontSize: 12 }}>{m ? <Burger color={p.text} weight={1.4} /> : ['Mulher', 'Homem', 'Coleção', 'Lookbook'].map((t) => <span key={t}>{t}</span>)}</nav>
-          <span style={{ fontFamily: serif, fontWeight: 300, fontSize: m ? 26 : 38, letterSpacing: '0.5em', paddingLeft: '0.5em' }}>AURORA</span>
+          <span style={{ fontFamily: serif, fontWeight: 300, fontSize: m ? 22 : 38, letterSpacing: m ? '0.32em' : '0.5em', paddingLeft: m ? '0.32em' : '0.5em' }}>AURORA</span>
           <nav style={{ display: 'flex', gap: 24, justifyContent: 'flex-end', ...caps, fontSize: 12 }}>
             {!m && <span>Buscar</span>}
             {!m && <span>Conta</span>}
-            <span>Sacola (1)</span>
+            <span>{m ? '(1)' : 'Sacola (1)'}</span>
           </nav>
         </Wrap>
       </header>

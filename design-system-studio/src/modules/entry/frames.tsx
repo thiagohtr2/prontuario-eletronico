@@ -29,9 +29,12 @@ export function ScaledThumb({
   virtualWidth,
   height,
   ratio,
+  fade,
   children,
 }: {
   virtualWidth: number
+  /** Esmaece a borda inferior quando o conteúdo é cortado. */
+  fade?: boolean
   height?: number
   /** Proporção CSS, ex.: "16 / 10". Usada quando não há altura fixa. */
   ratio?: string
@@ -40,7 +43,7 @@ export function ScaledThumb({
   const [ref, width] = useElementWidth<HTMLDivElement>()
   const scale = (width || 320) / virtualWidth
   return (
-    <div ref={ref} className="ent-thumb" aria-hidden="true" style={{ height, aspectRatio: height ? undefined : ratio }}>
+    <div ref={ref} className={fade ? 'ent-thumb ent-thumb--fade' : 'ent-thumb'} aria-hidden="true" style={{ height, aspectRatio: height ? undefined : ratio }}>
       <div className="ent-thumb__inner" style={{ width: virtualWidth, transform: `scale(${scale})` }}>
         {children}
       </div>
