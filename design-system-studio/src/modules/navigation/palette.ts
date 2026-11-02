@@ -100,8 +100,10 @@ export function headerColors(theme: ResolvedTheme, surface: HeaderLook['surface'
     }
     case 'glass':
       return { ...onSurface(t.surface, theme, withAlpha(t.surface, t.mode === 'dark' ? 0.55 : 0.62)), border: withAlpha('#ffffff', 0.45) }
-    case 'brand':
-      return onColor(t.primary, theme)
+    case 'brand': {
+      const c = onColor(t.primary, theme)
+      return { ...c, accent: c.text, onAccent: t.primary }
+    }
     case 'inverse':
       return onColor(inverseBase(theme), theme)
     case 'gradient':
@@ -124,8 +126,10 @@ export function sidebarColors(theme: ResolvedTheme, surface: SidebarLook['surfac
       return { ...onSurface(t.bgAlt, theme), activeBg: t.surface, activeText: t.text, field: t.surface }
     case 'inverse':
       return onColor(inverseBase(theme), theme)
-    case 'brand':
-      return onColor(t.primary, theme)
+    case 'brand': {
+      const c = onColor(t.primary, theme)
+      return { ...c, accent: c.text, onAccent: t.primary }
+    }
     case 'glass':
       return { ...onSurface(t.surface, theme, withAlpha(t.surface, t.mode === 'dark' ? 0.5 : 0.6)), border: withAlpha('#ffffff', 0.5) }
     case 'gradient':

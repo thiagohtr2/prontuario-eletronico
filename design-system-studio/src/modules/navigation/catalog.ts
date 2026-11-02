@@ -53,12 +53,12 @@ const H_NAVSTYLE: Record<HeaderLook['navStyle'], string> = {
 const H_LOGO: Record<HeaderLook['logo'], string> = {
   mark: 'símbolo quadrado de 28 px na cor primária + nome da marca em peso 700',
   word: 'logotipo só em texto (wordmark) na fonte de títulos, peso 750, 19–21 px',
-  serif: 'logotipo serifado na fonte de títulos, 22–26 px, com espaçamento levemente aberto',
+  serif: 'logotipo serifado de 22–26 px com espaçamento levemente aberto (fonte de títulos se for serifada; senão uma serifada de display usada só no logo)',
   monogram: 'monograma circular de 32 px com a inicial da marca + nome',
   mono: 'logotipo em fonte monoespaçada com o prefixo “>_” na cor primária',
-  badge: 'nome da marca seguido de um selo pequeno (ex.: “Docs”) em primarySoft',
+  badge: 'nome da marca seguido de um selo pequeno (ex.: “Docs”) em primarySoft com texto primary',
   outline: 'símbolo vazado (contorno de 2 px em losango) + nome da marca',
-  big: 'logotipo grande (masthead) de 30–40 px na fonte de títulos, centralizado',
+  big: 'logotipo grande (masthead) de 30–40 px, serifado como em capas de jornal (fonte de títulos se for serifada), centralizado',
 }
 
 const H_LAYOUT: Record<HeaderLayout, string> = {
@@ -936,6 +936,7 @@ export const headers: HeaderModel[] = [
     look: {
       brand: 'Jabuti',
       logo: 'badge',
+      logoBadge: 'Docs',
       height: 60,
       surface: 'bordered',
       shape: 'full',
@@ -1120,6 +1121,7 @@ export const headers: HeaderModel[] = [
     look: {
       brand: 'Guará',
       logo: 'badge',
+      logoBadge: 'Ajuda',
       height: 64,
       surface: 'tinted',
       shape: 'full',

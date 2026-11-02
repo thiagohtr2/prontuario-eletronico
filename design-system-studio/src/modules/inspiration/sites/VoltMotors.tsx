@@ -146,7 +146,7 @@ export default function VoltMotors({ palette: p, device }: SiteProps) {
             position: 'absolute',
             left: 0,
             right: 0,
-            top: m ? 250 : 250,
+            top: m ? 270 : 330,
             textAlign: 'center',
             fontFamily: display,
             fontWeight: 700,

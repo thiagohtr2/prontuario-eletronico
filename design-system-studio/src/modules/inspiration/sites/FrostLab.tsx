@@ -54,10 +54,10 @@ function Fridge({ p, finish }: { p: SitePalette; finish?: string }) {
 }
 
 const CALLOUTS: { label: string; detail: string; x: number; y: number; side: 'l' | 'r' }[] = [
-  { label: 'Dispensador filtrado', detail: 'Água gelada e gelo em cubos', x: 27, y: 27, side: 'l' },
-  { label: 'Zona Flex', detail: 'De −2 °C a 5 °C, para carnes ou bebidas', x: 50, y: 66, side: 'l' },
-  { label: 'Inverter silencioso', detail: '38 dB — mais baixo que uma conversa', x: 70, y: 40, side: 'r' },
-  { label: 'Porta dentro da porta', detail: 'Pegue o que usa sem perder frio', x: 70, y: 18, side: 'r' },
+  { label: 'Dispensador filtrado', detail: 'Água gelada e gelo em cubos', x: 39, y: 24, side: 'l' },
+  { label: 'Zona Flex', detail: 'De −2 °C a 5 °C, para carnes ou bebidas', x: 47, y: 68, side: 'l' },
+  { label: 'Inverter silencioso', detail: '38 dB — mais baixo que uma conversa', x: 68, y: 46, side: 'r' },
+  { label: 'Porta dentro da porta', detail: 'Pegue o que usa sem perder frio', x: 62, y: 16, side: 'r' },
 ]
 
 const SPECS: [string, string, string, IconName][] = [
@@ -198,8 +198,8 @@ export default function FrostLab({ palette: p, device }: SiteProps) {
                 <span style={{ width: m ? 22 : 26, height: m ? 22 : 26, borderRadius: '50%', background: p.accent, color: p.onAccent, fontSize: m ? 11 : 12.5, fontWeight: 700, display: 'grid', placeItems: 'center', boxShadow: `0 0 0 6px ${withAlpha(p.accent, 0.2)}` }}>{i + 1}</span>
                 {!m && (
                   <>
-                    <span style={{ width: 40, height: 1, background: withAlpha(p.text, 0.4) }} />
-                    <span style={{ background: p.surface, borderRadius: 12, padding: '10px 14px', boxShadow: `0 8px 24px ${withAlpha('#000000', 0.08)}`, maxWidth: 200 }}>
+                    <span style={{ width: 28, height: 1, background: withAlpha(p.text, 0.4) }} />
+                    <span style={{ background: p.surface, borderRadius: 12, padding: '10px 14px', boxShadow: `0 8px 24px ${withAlpha('#000000', 0.08)}`, width: 184 }}>
                       <strong style={{ display: 'block', fontSize: 14 }}>{c.label}</strong>
                       <span style={{ fontSize: 12.5, color: p.muted, lineHeight: 1.35, display: 'block' }}>{c.detail}</span>
                     </span>

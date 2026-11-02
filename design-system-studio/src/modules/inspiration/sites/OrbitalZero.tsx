@@ -72,7 +72,7 @@ export default function OrbitalZero({ palette: p, device }: SiteProps) {
   return (
     <SiteRoot p={p} font={ff('inter')} name="ORBITAL ZERO">
       {/* Hero com campo de estrelas, contagem regressiva e planeta */}
-      <section style={{ position: 'relative', overflow: 'hidden', backgroundImage: stars(p), backgroundSize: '320px 220px', minHeight: m ? 720 : 860 }}>
+      <section style={{ position: 'relative', overflow: 'hidden', backgroundImage: stars(p), backgroundSize: '320px 220px', minHeight: m ? 780 : 960 }}>
         <header style={{ position: 'relative', zIndex: 3 }}>
           <Wrap m={m} max={1300} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: m ? 64 : 84 }}>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: 10, fontFamily: display, fontWeight: 700, letterSpacing: '0.14em', fontSize: m ? 15 : 17 }}>
@@ -134,8 +134,8 @@ export default function OrbitalZero({ palette: p, device }: SiteProps) {
         </div>
 
         {/* Planeta com anel */}
-        <div style={{ position: 'absolute', left: '50%', bottom: m ? -360 : -820, width: m ? 560 : 1500, height: m ? 560 : 1500, transform: 'translateX(-50%)', borderRadius: '50%', background: planet, boxShadow: `0 0 120px ${withAlpha(p.secondary, 0.55)}, inset -40px -60px 120px rgba(0,0,0,.4)`, zIndex: 1 }} />
-        <div style={{ position: 'absolute', left: '50%', bottom: m ? 110 : 120, width: m ? 760 : 1900, height: m ? 90 : 190, transform: 'translateX(-50%) rotate(-4deg)', borderRadius: '50%', border: `2px solid ${withAlpha(p.text, 0.25)}`, zIndex: 2 }} />
+        <div style={{ position: 'absolute', left: '50%', bottom: m ? -430 : -1290, width: m ? 560 : 1500, height: m ? 560 : 1500, transform: 'translateX(-50%)', borderRadius: '50%', background: planet, boxShadow: `0 0 120px ${withAlpha(p.secondary, 0.55)}, inset -40px -60px 120px rgba(0,0,0,.4)`, zIndex: 1 }} />
+        <div style={{ position: 'absolute', left: '50%', bottom: m ? 60 : 110, width: m ? 760 : 1900, height: m ? 80 : 170, transform: 'translateX(-50%) rotate(-4deg)', borderRadius: '50%', border: `2px solid ${withAlpha(p.text, 0.25)}`, zIndex: 2 }} />
       </section>
 
       {/* Telemetria */}

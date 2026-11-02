@@ -174,6 +174,8 @@ export interface HeaderLook {
   breadcrumbs?: string[]
   /** Links utilitários de uma faixa superior fina (contato, idioma, área do cliente...). */
   utility?: string[]
+  /** Texto do selo ao lado do nome (logo 'badge'), ex.: “Docs”. */
+  logoBadge?: string
   /** Largura máxima da barra flutuante em px (pílula estreita centralizada). */
   maxWidth?: number
   /** Anúncio em faixa acima do header (padrão) ou como selo dentro dele. */
