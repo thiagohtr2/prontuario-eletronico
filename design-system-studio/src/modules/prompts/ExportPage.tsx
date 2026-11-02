@@ -10,7 +10,7 @@ import { buildProjectCss } from '@/prompt/css'
 import { KIND_LABEL } from '@/prompt/items'
 import { buildProjectSpec } from '@/prompt/spec'
 import { renderMasterPrompt } from '@/prompt/text'
-import { Button, Callout, PageHeader, Section, toast } from '@/ui'
+import { Actions, Button, Callout, CopyButton, PageHeader, Section, toast } from '@/ui'
 import './prompts.css'
 
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
@@ -82,6 +82,7 @@ export default function ExportPage() {
       title: 'Master Prompt (.md)',
       description: 'Texto completo com todas as decisões aprovadas, pronto para colar na IA.',
       action: () => downloadFile(`${base}-master-prompt.md`, renderMasterPrompt(buildProjectSpec(project)), 'text/markdown'),
+      copy: () => renderMasterPrompt(buildProjectSpec(project)),
       testId: 'export-master',
     },
     {
@@ -89,6 +90,7 @@ export default function ExportPage() {
       title: 'Especificação JSON',
       description: 'A fonte da verdade: estrutura, tokens, componentes, regras e o estado do projeto (reimportável).',
       action: () => downloadJson(`${base}-especificacao.json`, buildProjectSpec(project)),
+      copy: () => JSON.stringify(buildProjectSpec(project), null, 2),
       testId: 'export-spec',
     },
     {
@@ -96,6 +98,7 @@ export default function ExportPage() {
       title: 'CSS de referência',
       description: 'Variáveis CSS dos tokens, tipografia, raios, sombras e espaçamentos, com regras base.',
       action: () => downloadFile(`${base}-tokens.css`, buildProjectCss(project), 'text/css'),
+      copy: () => buildProjectCss(project),
       testId: 'export-css',
     },
     {
@@ -112,7 +115,7 @@ export default function ExportPage() {
       action: () => downloadJson(`${base}-backup.json`, { kind: 'atelier-ui/backup', exportedAt: new Date().toISOString(), project, history }),
       testId: 'export-backup',
     },
-  ]
+  ] as { icon: typeof FileText; title: string; description: string; action: () => void; copy?: () => string; testId: string }[]
 
   return (
     <div className="ui-page">
@@ -123,7 +126,7 @@ export default function ExportPage() {
       />
       <Section title="Exportar">
         <div className="ex-grid">
-          {exports.map(({ icon: Icon, title, description, action, testId }) => (
+          {exports.map(({ icon: Icon, title, description, action, copy, testId }) => (
             <article key={title} className="ex-card">
               <span className="ex-card__icon">
                 <Icon aria-hidden="true" />
@@ -132,11 +135,12 @@ export default function ExportPage() {
                 <h3>{title}</h3>
                 <p>{description}</p>
               </div>
-              <div>
+              <Actions>
                 <Button onClick={action} data-testid={testId}>
                   Baixar
                 </Button>
-              </div>
+                {copy && <CopyButton text={copy} variant="ghost" />}
+              </Actions>
             </article>
           ))}
         </div>

@@ -3,7 +3,7 @@ import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router-do
 import { Check, ChevronDown, Cloud, Compass, FileCode2, FolderDown, Menu, Search, Wand2, X } from 'lucide-react'
 import { ALL_STEPS, SKELETON_STEPS, type StepId } from '@/core/project'
 import { useProject, useStudio } from '@/core/store'
-import { Button, IconButton, Modal, Segmented, Toaster, cx } from '@/ui'
+import { Button, IconButton, Modal, Segmented, Toaster, cx, toast } from '@/ui'
 import { ALL_ENTRIES, FREE_HOME_ENTRY, HOME_ENTRY, MODULE_GROUPS, STEP_META, type NavEntry } from './nav'
 import './shell.css'
 
@@ -309,6 +309,13 @@ export function Shell() {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior })
     setMenuOpen(false)
   }, [location.pathname])
+
+  // Falhas de download na página publicada (ex.: formato não permitido) viram um aviso visível.
+  useEffect(() => {
+    const onError = (e: Event) => toast.error(String((e as CustomEvent<string>).detail))
+    window.addEventListener('atelier:download-error', onError)
+    return () => window.removeEventListener('atelier:download-error', onError)
+  }, [])
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
