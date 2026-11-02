@@ -4,7 +4,35 @@ Objeto: build de produção congelado (commit `e4c79f3`, servido em `http://127.
 `design-system-studio/`. Nada no produto foi alterado. Toda análise que precisou executar código TypeScript rodou numa
 **cópia isolada** em `ferramentas/cov/` (cópia de `src/`, `tests/` e `node_modules`, com `@vitest/coverage-v8` instalado só ali).
 
-> Documento em construção incremental — as seções 5 a 9 são completadas ao fim das medições.
+
+## 0. Resumo
+
+**Notas:** Qualidade técnica e estabilidade **6/10** · Confiabilidade das exportações **4/10** (rubricas na seção 9).
+
+O Studio tem uma base técnica limpa — TypeScript estrito sem erros, 235 testes unitários verdes, uma única store com ações
+imutáveis, nenhuma vulnerabilidade de XSS encontrada, CLS 0 e memória estável — e é estável no caminho feliz. Os problemas
+graves estão em dois lugares:
+
+1. **O motor de prompts não tem um modelo de fatos.** Cada item do catálogo descreve a si mesmo, em texto livre, com seus
+   próprios números “como na prévia”; não existe etapa que reúna e resolva valores. Por isso o detector (8 regras fixas sobre
+   booleanos) marca **0 contradições em 4 de 5 projetos** enquanto o texto tem **4 a 17** (header 64 × 56 px, sidebar 252 ×
+   248/264 px, sidebar que “vira drawer” × bottom navigation, raio/fonte/sombra da família × identidade global). Pela mesma
+   falta de modelo, **marcas e menus de demonstração** entram como especificação (1–14 por projeto), a **composição B** sai com
+   as medidas da A, e a **observação do usuário na paleta é descartada**. Em paralelo, **trocar a primária deixa 11 tokens
+   derivados com a cor antiga** (hover, foco, link, seleção…), porque os overrides são aplicados depois da derivação.
+2. **Os modos de falha não são tratados.** Não há error boundary de rota: um chunk que falha (deploy novo, rede) ou um erro de
+   renderização **substitui o Studio inteiro** pela tela de erro do React Router. A persistência falha **em silêncio** (cota
+   estourada: as alterações deixam de ser salvas sem aviso; localStorage indisponível: idem), estados salvos inválidos ou de
+   outra versão são **descartados e sobrescritos** no primeiro clique, não há `migrate`, o backup “completo” não restaura as
+   versões e o relatório de validação, guardado dentro do projeto e copiado em 30 versões, estoura a cota com ≈650+ ocorrências.
+
+Desempenho: a seleção de miniaturas é rápida (INP mediano 24–88 ms), mas o code splitting é anulado pelo grafo de imports
+(home 874 KB de JS, rotas 1,1–1,7 MB) e a galeria de inspiração é pesada (9 111 nós, Lighthouse mobile TBT 7,1 s, abrir um
+conceito até 800 ms). A manutenção sofre com kits de prévia duplicados (5 `Btn`, 4 `Avatar`, 4 modelos de cor) e componentes
+de mais de mil linhas. Os 235 testes não pegam nenhum dos defeitos acima.
+
+As 25 entradas priorizadas estão na seção 7 (3 P0, 7 P1). As três correções estruturais que mais aumentam a fidelidade são
+TE-01 (fatos + precedência), TE-02 (derivação de tokens em duas camadas) e TE-03 (campos de conteúdo no projeto).
 
 ## 1. Método, ambiente e interferência
 
@@ -17,8 +45,13 @@ Objeto: build de produção congelado (commit `e4c79f3`, servido em `http://127.
 | Verificações só de leitura no repositório | `npx tsc -b --noEmit` (0 erros, 28,7 s) e `npx vitest run` (8 arquivos, **235 testes, todos passam**, 27 s) — saídas em `dados/tsc.txt` e `dados/vitest.txt` |
 
 Scripts (todos em `scripts/`): `analise-motor.test.ts`, `sondas.test.ts`, `variante-b.test.ts` (rodam na cópia isolada com
-Vitest), `perf-lib.cjs`, `perf-carga.cjs`, `perf-galerias.cjs`, `perf-memoria.cjs`, `robustez.cjs`, `lighthouse.sh`.
-Dados em `dados/` (JSON brutos + resumos).
+Vitest), `perf-lib.cjs`, `perf-carga.cjs`, `perf-galerias.cjs`, `perf-memoria.cjs`, `robustez.cjs`, `cota.cjs`, `xss-import.cjs`,
+`lighthouse.sh`, `resumo-lighthouse.py`, `gera-secao5.py`. Dados em `dados/` (JSON brutos + resumos; JSON do Lighthouse
+compactados em `.json.gz`; capturas em `dados/capturas/`). As ferramentas temporárias (cópia isolada com Vitest/cobertura e
+Lighthouse) foram apagadas de `ferramentas/` ao final para não duplicar o código-fonte no repositório; para refazer:
+copiar `src/ tests/ package*.json tsconfig*.json vite.config.ts index.html node_modules/` para `ferramentas/cov/`,
+`npm install --no-save @vitest/coverage-v8@2.1.9`, incluir `tests/audit/**` no `include` do Vitest da cópia e rodar
+`npx vitest run tests/audit`; Lighthouse: `npm install lighthouse@13` em `ferramentas/lh/`.
 
 ## 2. Arquitetura
 
@@ -293,7 +326,178 @@ traz até 9 subtítulos fixos. O JSON carrega cada item duas vezes (na seção e
 
 ## 5. Desempenho do build congelado
 
-<!-- SECAO5 -->
+### 5.1 Tamanho do build (`dados/build-assets.csv`, gzip -9 calculado localmente)
+
+| Tipo | Arquivos | Bruto | gzip |
+| --- | --- | --- | --- |
+| js | 50 | 2312 KB | 667 KB |
+| css | 14 | 167 KB | 38 KB |
+| woff2 | 18 | 422 KB | 423 KB |
+
+Maiores arquivos:
+
+| Arquivo | Conteúdo | Bruto | gzip |
+| --- | --- | --- | --- |
+| `catalog-UkV6Iy_N.js` | catálogos de entrada, inspiração, cores, templates e navegação (um único chunk compartilhado) | 425 KB | 131 KB |
+| `InspirationPage-C6hq26Qz.js` | galeria de inspiração com os 20 sites | 335 KB | 84 KB |
+| `index-C6Bu2Cqn.js` | núcleo: React, roteador, Zod, store, shell, ícones | 327 KB | 101 KB |
+| `text-V1Ac2YwC.js` | motor de prompts + famílias/categorias de componentes | 217 KB | 65 KB |
+| `TemplatesPage-B3gY76Be.js` | templates (renderizadores) | 163 KB | 39 KB |
+| `LandingPreview-VxUGRd_B.js` | prévias de landing/login | 156 KB | 36 KB |
+| `ComponentLibrary-Dx1ccL5w.js` | biblioteca de componentes | 145 KB | 39 KB |
+| `catalog-CknkcLD7.js` | catálogo de layouts desktop/mobile | 113 KB | 31 KB |
+| `NavigationShowcase-J02zvCFp.js` | Navigation Showcase | 103 KB | 29 KB |
+| `MobileStudio-zvxuMjYu.js` | galerias de layout (celular + esquemas) | 101 KB | 28 KB |
+
+Fontes: 4 famílias variáveis (Inter, Fraunces, Space Grotesk, JetBrains Mono) com todos os subsets (latin, latin-ext, cyrillic, greek, vietnamese) = 18 arquivos/422 KB; graças ao `unicode-range` o navegador baixa só o necessário (47 KB na home, até 144 KB na inspiração). O build autônomo `dist-standalone/index.html` (gerado antes do commit auditado; só informativo) tem 3,1 MB (1,1 MB gzip) com 19 fontes em base64.
+
+### 5.2 JavaScript necessário por rota (mapa de pré-carregamento do Vite, `dados/chunks-por-rota.txt`)
+
+| Rota (chunk) | Arquivos | JS bruto | JS gzip |
+| --- | --- | --- | --- |
+| Home | 8 | 874 KB | 267 KB |
+| FreeHome | 8 | 869 KB | 265 KB |
+| GuidedStep | 38 | 1689 KB | 497 KB |
+| ProjectGoalPage | 6 | 338 KB | 106 KB |
+| LandingPage | 18 | 1274 KB | 379 KB |
+| LoginPage | 17 | 1268 KB | 377 KB |
+| SignupPage | 17 | 1268 KB | 377 KB |
+| DesktopPage | 16 | 1198 KB | 363 KB |
+| MobilePage | 16 | 1198 KB | 363 KB |
+| PreviewPage | 24 | 1478 KB | 434 KB |
+| ColorPage | 17 | 1118 KB | 342 KB |
+| NavigationPage | 18 | 1202 KB | 365 KB |
+| ComponentsPage | 16 | 1242 KB | 374 KB |
+| TemplatesPage | 19 | 1329 KB | 397 KB |
+| PromptCenter | 15 | 1103 KB | 338 KB |
+| ExportPage | 16 | 1179 KB | 362 KB |
+| ValidationPage | 7 | 472 KB | 145 KB |
+| ProjectPage | 11 | 874 KB | 268 KB |
+
+A própria página de cores tem 0,8 KB, mas a rota exige 1,12 MB porque o `PromptButton` puxa o motor e todos os catálogos (TE-14).
+
+### 5.3a Carga a frio por rota — desktop 1440×900, 5 execuções (mediana; `dados/perf-carga-desktop.json`)
+
+| Rota | FCP | LCP (mín–máx) | Conteúdo pronto¹ | TBT | Long tasks | CLS | JS baixado | Fontes | Nós DOM | Heap |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `(home)` | 440 ms | 704 ms (480–940) | 610 ms | 0 ms | 3 | 0.00 | 874 KB / 6 arq. | 47 KB | 451 | 5.0 MB |
+| `livre` | 520 ms | 896 ms (364–1464) | 698 ms | 0 ms | 4 | 0.00 | 869 KB / 6 arq. | 47 KB | 570 | 5.1 MB |
+| `guiado/objetivo` | 628 ms | 980 ms (676–1520) | 871 ms | 52 ms | 4 | 0.00 | 1689 KB / 28 arq. | 47 KB | 544 | 6.0 MB |
+| `modulos/desktop` | 580 ms | 1464 ms (888–1840) | 1269 ms | 597 ms | 6 | 0.00 | 1198 KB / 14 arq. | 47 KB | 5625 | 9.2 MB |
+| `modulos/mobile` | 468 ms | 1452 ms (1288–1684) | 1374 ms | 213 ms | 5 | 0.00 | 1198 KB / 14 arq. | 47 KB | 5539 | 8.5 MB |
+| `modulos/componentes` | 404 ms | 828 ms (552–1132) | 611 ms | 100 ms | 4 | 0.00 | 1242 KB / 14 arq. | 108 KB | 1154 | 6.2 MB |
+| `modulos/navegacao` | 476 ms | 1316 ms (1072–1896) | 1203 ms | 536 ms | 5 | 0.00 | 1202 KB / 16 arq. | 122 KB | 4039 | 10.1 MB |
+| `modulos/inspiracao` | 568 ms | 2856 ms (568–3240) | 2085 ms | 1951 ms | 7 | 0.00 | 1432 KB / 14 arq. | 144 KB | 9111 | 11.2 MB |
+| `modulos/templates` | 516 ms | 760 ms (556–1120) | 674 ms | 108 ms | 4 | 0.00 | 1329 KB / 17 arq. | 105 KB | 2409 | 7.3 MB |
+| `modulos/landing` | 480 ms | 1300 ms (724–1404) | 1153 ms | 189 ms | 3 | 0.00 | 1274 KB / 16 arq. | 105 KB | 2609 | 7.2 MB |
+| `modulos/cores` | 332 ms | 592 ms (580–1500) | 482 ms | 20 ms | 3 | 0.00 | 1118 KB / 15 arq. | 47 KB | 2690 | 6.4 MB |
+| `prompt` | 300 ms | 540 ms (408–1320) | 471 ms | 0 ms | 3 | 0.00 | 1103 KB / 13 arq. | 87 KB | 377 | 5.8 MB |
+
+Load average durante a série: mediana 15.6 (4 CPUs). ¹ “Conteúdo pronto” = primeiro quadro com o `h1` do módulo dentro de `#conteudo` e sem o fallback “Carregando…”.
+
+### 5.3b Carga a frio por rota — viewport 390×844 sem limitação de CPU/rede, 3 execuções (mediana; `dados/perf-carga-mobile.json`)
+
+| Rota | FCP | LCP (mín–máx) | Conteúdo pronto¹ | TBT | Long tasks | CLS | JS baixado | Fontes | Nós DOM | Heap |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `(home)` | 212 ms | 396 ms (316–648) | 366 ms | 11 ms | 2 | 0.00 | 874 KB / 6 arq. | 47 KB | 451 | 5.0 MB |
+| `livre` | 400 ms | 508 ms (352–744) | 486 ms | 0 ms | 2 | 0.00 | 869 KB / 6 arq. | 47 KB | 570 | 5.1 MB |
+| `guiado/objetivo` | 388 ms | 816 ms (364–1532) | 779 ms | 42 ms | 4 | 0.00 | 1689 KB / 28 arq. | 47 KB | 544 | 6.0 MB |
+| `modulos/desktop` | 316 ms | 1376 ms (508–1776) | 1331 ms | 567 ms | 4 | 0.00 | 1198 KB / 14 arq. | 47 KB | 5625 | 10.5 MB |
+| `modulos/mobile` | 260 ms | 1168 ms (780–1336) | 1122 ms | 351 ms | 4 | 0.00 | 1198 KB / 14 arq. | 47 KB | 5492 | 10.3 MB |
+| `modulos/componentes` | 504 ms | 808 ms (368–1336) | 702 ms | 4 ms | 3 | 0.00 | 1242 KB / 14 arq. | 108 KB | 1154 | 6.3 MB |
+| `modulos/navegacao` | 328 ms | 1124 ms (760–1616) | 1044 ms | 492 ms | 4 | 0.00 | 1202 KB / 16 arq. | 122 KB | 3154 | 8.3 MB |
+| `modulos/inspiracao` | 392 ms | 2060 ms (1156–2620) | 1988 ms | 1422 ms | 6 | 0.00 | 1432 KB / 14 arq. | 144 KB | 9111 | 11.2 MB |
+| `modulos/templates` | 304 ms | 528 ms (340–860) | 509 ms | 0 ms | 2 | 0.00 | 1329 KB / 17 arq. | 69 KB | 973 | 6.2 MB |
+| `modulos/landing` | 280 ms | 840 ms (724–1676) | 817 ms | 247 ms | 3 | 0.00 | 1274 KB / 16 arq. | 105 KB | 2598 | 7.1 MB |
+| `modulos/cores` | 380 ms | 900 ms (800–2432) | 611 ms | 246 ms | 4 | 0.00 | 1118 KB / 15 arq. | 47 KB | 2647 | 6.3 MB |
+| `prompt` | 492 ms | 856 ms (508–1028) | 772 ms | 25 ms | 4 | 0.00 | 1103 KB / 13 arq. | 87 KB | 377 | 5.8 MB |
+
+Load average durante a série: mediana 17.4 (4 CPUs). ¹ “Conteúdo pronto” = primeiro quadro com o `h1` do módulo dentro de `#conteudo` e sem o fallback “Carregando…”.
+
+### 5.4 Lighthouse 13 — desempenho (3 execuções por linha, mediana; throttling simulado padrão; `dados/lighthouse/`)
+
+| URL · perfil | Nota (3 execuções) | FCP | LCP | TBT | Speed Index | CLS | Bytes | JS não usado | Trabalho na thread principal |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| home-desktop | 95 (77, 95, 97) | 0.3 s | 1.4 s | 105 ms | 0.5 s | 0.00 | 960 KB | 152 KB | 0.6 s |
+| home-mobile | 69 (53, 71, 69) | 0.9 s | 6.5 s | 364 ms | 0.9 s | 0.00 | 960 KB | 152 KB | 1.6 s |
+| modulos-inspiracao-desktop | 52 (50, 52, 54) | 0.3 s | 2.4 s | 1384 ms | 2.3 s | 0.00 | 1624 KB | 190 KB | 3.4 s |
+| modulos-inspiracao-mobile | 39 (40, 39, 38) | 0.9 s | 12.3 s | 7095 ms | 6.5 s | 0.00 | 1624 KB | 190 KB | 13.7 s |
+| modulos-mobile-desktop | 78 (83, 78, 78) | 0.3 s | 1.7 s | 340 ms | 1.2 s | 0.00 | 1308 KB | 244 KB | 1.6 s |
+| modulos-mobile-mobile | 49 (54, 49, 43) | 0.9 s | 8.6 s | 1434 ms | 2.6 s | 0.00 | 1308 KB | 243 KB | 3.9 s |
+
+Atenção: o servidor do build não comprime (HTTP/1.0); com gzip/brotli na hospedagem real os bytes de JS caem ≈70 % (home: 874 → 267 KB), o que reduz sobretudo o LCP do perfil mobile, dominado pela rede lenta simulada (≈1,6 Mbit/s). TBT e trabalho na thread principal não dependem da compressão: são o custo real de renderizar as galerias (CPU simulada 4× mais lenta). O Lighthouse avisou em parte das execuções que a CPU estava mais lenta que o esperado (interferência dos outros agentes); as notas de desktop variaram até 20 pontos entre execuções.
+
+### 5.5 Troca de rota dentro do app (`dados/perf-memoria.json`, 3 rodadas; mediana)
+
+| Rota | 1ª visita (inclui baixar o chunk) | Visitas seguintes | Nós DOM |
+| --- | --- | --- | --- |
+| `livre` | 60 ms | 21 ms | 572 |
+| `modulos/objetivo` | 60 ms | 29 ms | 453 |
+| `modulos/landing` | 570 ms | 370 ms | 2616 |
+| `modulos/login` | 173 ms | 139 ms | 2063 |
+| `modulos/cadastro` | 59 ms | 53 ms | 863 |
+| `modulos/desktop` | 279 ms | 332 ms | 5640 |
+| `modulos/mobile` | 444 ms | 294 ms | 5555 |
+| `modulos/preview` | 105 ms | 47 ms | 434 |
+| `modulos/cores` | 171 ms | 119 ms | 2717 |
+| `modulos/navegacao` | 351 ms | 281 ms | 4066 |
+| `modulos/componentes` | 129 ms | 88 ms | 1186 |
+| `modulos/inspiracao` | 1119 ms | 772 ms | 9146 |
+| `modulos/templates` | 220 ms | 184 ms | 2444 |
+| `prompt` | 112 ms | 37 ms | 419 |
+| `exportar` | 56 ms | 25 ms | 457 |
+| `validacao` | 52 ms | 22 ms | 508 |
+| `projeto` | 49 ms | 22 ms | 445 |
+| `guiado/objetivo` | 46 ms | 23 ms | 569 |
+
+Memória (heap JS após coleta de lixo forçada, mediana de 3 rodadas):
+
+| Momento | Heap | Nós | Listeners |
+| --- | --- | --- | --- |
+| início (home) | 4.3 MB | 556 | 198 |
+| após volta 1 por 18 rotas | 10.4 MB | 611 | 222 |
+| após volta 2 por 18 rotas | 11.5 MB | 611 | 222 |
+| após volta 3 por 18 rotas | 11.9 MB | 611 | 222 |
+
+### 5.6 Latência ao clicar miniaturas (Event Timing API — duração do clique até o próximo quadro, base do INP; `dados/perf-galerias*.json`)
+
+| Galeria | Itens | INP mediano² | Pior clique | Long tasks por 10 cliques | Mutações de DOM por clique | Componentes React renderizados por clique³ | Nós DOM |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Layouts desktop (42) | 42 | 36 ms | 104 ms | 0 | 52 | 91.5 | 5628 |
+| Layouts mobile (44) | 44 | 52 ms | 216 ms | 0 | 30 | 91 | 5521 |
+| Componentes: categorias (66 × 16 famílias) | 66 | 88 ms | 232 ms | 5 | 66 | 586 | 1778 |
+| Componentes: famílias | 16 | 24 ms | 96 ms | 0 | 6 | 356 | 1157 |
+| Paletas (60) | 60 | 32 ms | 72 ms | 0 | 39 | 396 | 2690 |
+| Navegação: headers/sidebars | 36 | 40 ms | 88 ms | 0 | 10 | 98.5 | 4059 |
+| Templates: abrir editor (28) | 28 | 156 ms | 456 ms | 11 | 6 | 1641 | 5986 |
+| Inspiração: abrir visualizador (20) | 20 | 172 ms | 800 ms | 11 | 4 | 765 | 9111 |
+
+² mediana, entre 3 rodadas, da mediana de 10 cliques distribuídos pela galeria; limite “bom” do INP = 200 ms. ³ medido numa rodada separada com um gancho mínimo do React DevTools (`perf-lib.cjs → REACT_HOOK`): conta componentes cujas props ou estado mudaram em cada commit.
+
+### 5.7 Leitura dos resultados
+
+- **Carregamento inicial pesado para o que mostra.** A tela inicial baixa 874 KB de JS (267 KB gzip) — 3× o núcleo — porque
+  `home/status.ts` importa os 7 catálogos para exibir nomes. Localmente (sem limitação de rede) isso ainda resulta em LCP de
+  0,4–0,9 s, mas o Lighthouse mobile (rede e CPU simuladas) dá **LCP 6,5 s** e nota 69 com o servidor sem compressão. Toda rota
+  de módulo pede 1,10–1,48 MB e o modo guiado 1,69 MB (TE-14).
+- **Inspiração é o gargalo**: abre com **9 111 nós** (20 sites completos renderizados como miniaturas), TBT local de 1,4–2,0 s,
+  LCP local de 2,1–2,9 s, troca de rota de 0,8–1,1 s mesmo com o chunk em cache, e no Lighthouse **TBT 7,1 s / LCP 12,3 s
+  (mobile)** e TBT 1,4 s (desktop), nota 39/52. Abrir o visualizador de um conceito leva 172 ms na mediana e **até 800 ms**
+  (11 long tasks somando 1,6 s a cada 10 aberturas; 765 componentes renderizados por abertura; heap sobe para 27,5 MB) (TE-15).
+- **Galerias de layout**: 5,5–5,6 mil nós e TBT de 0,2–0,6 s na abertura; Lighthouse mobile da galeria mobile: nota 49,
+  TBT 1,4 s. Depois de abertas, a seleção é rápida.
+- **Seleção de miniaturas está boa**: INP mediano de 24–88 ms em todas as galerias de seleção (layouts, paletas, navegação,
+  famílias, categorias), pior clique ≤ 232 ms — dentro do limite “bom” do INP (200 ms) na mediana e só pontualmente acima no
+  pior caso, mesmo com a máquina sobrecarregada. Abrir modais pesados é o que passa do limite: editor de template 156 ms
+  (pior 456 ms, 1 641 componentes renderizados por abertura) e visualizador da inspiração (acima).
+- **Re-renderizações excessivas localizadas**: clicar uma paleta re-renderiza ≈400 componentes (os 60 cartões, com seus
+  botões e ícones, porque `ColorSystem` assina o projeto inteiro — `ColorSystem.tsx:321`); trocar a categoria de componente
+  re-renderiza 586 e escolher uma família 356 (as 16 prévias da categoria). Já as galerias de layout usam `memo` e
+  re-renderizam ≈90 componentes por clique — é o padrão a seguir (TE-18).
+- **CLS = 0** em todas as rotas, nos dois viewports e no Lighthouse — o cuidado com “não deslocar a página” funciona.
+- **Memória estável**: 4,3 MB na home → 10,4 MB após a 1ª volta por 18 rotas (código e caches carregados) → 11,5 → 11,9 MB nas
+  voltas seguintes, com nós (611) e listeners (222) constantes: sem vazamento relevante; o crescimento residual de ≈0,4–1 MB
+  por volta é compatível com caches de compilação.
 
 ## 6. Tratamento de erros, segurança e testabilidade
 
@@ -391,10 +595,10 @@ ou de confiança, ou fidelidade relevante; P2 = qualidade/desempenho/manutençã
 | TE-12 | Importação valida tipos, não domínio: ids inexistentes aceitos sem pendência; chaves livres em `overrides`; textos sem limite (3 MB aceitos); `report: z.any()` | 3.3, 6.1 | esquema Zod com `z.string()` livre | `z.enum`/`refine` contra os catálogos (ou aviso “item não encontrado” + pendência); `z.enum(TOKEN_KEYS)` nas chaves; `.max()` em textos; esquema do relatório | P2 | baixo | — | Os arquivos `ids-inexistentes.json` e `texto-gigante.json` geram aviso claro; prompt lista a pendência |
 | TE-13 | Prompt longo e repetitivo | 4.5; 23–47 KB; 2,5–10,7 KB repetidos; regras de tabela sem tabela | regras por tipo anexadas ao item **e** no fim; família repetida por instância | Deduplicar no render, filtrar regras pelos tipos presentes, família descrita uma vez (4.6-5) | P2 | médio | TE-01 | −20 % de caracteres nos 5 projetos sem perder fatos (comparação por chaves); nenhuma linha ≥ 25 caracteres repetida fora dos subtítulos |
 | TE-14 | Code splitting anulado pelo grafo de imports | 2.3, 5; home 874 KB; rotas 1,10–1,69 MB | `PromptButton` importa o motor e os catálogos; `home/status.ts` importa 7 catálogos; `GuidedStep` importa 9 áreas | `PromptButton` com `import()` dinâmico do motor ao abrir o modal; `status.ts` usar um índice leve `{id → nome}` gerado dos catálogos; `GuidedStep` com `lazy` por etapa | P2 | médio | — | Home ≤ 350 KB de JS bruto; rota de cores ≤ 500 KB; medir com `scripts/perf-carga.cjs` |
-| TE-15 | Galeria de inspiração e galerias de layouts pesadas | 5; inspiração: <!--INS--> | 20 sites completos (desktop) renderizados como miniaturas ao abrir a página; layouts: 42–44 esquemas/celulares interativos | Miniaturas estáticas (SVG/PNG gerados no build) ou renderização sob demanda com `IntersectionObserver` + `content-visibility: auto`; prévia completa só no visualizador | P2 | médio | — | Inspiração: LCP (Lighthouse mobile) < 4 s e < 2 500 nós na abertura |
+| TE-15 | Galeria de inspiração e galerias de layouts pesadas | 5; inspiração: 9 111 nós na abertura, TBT local 1,4–2,0 s, Lighthouse mobile TBT 7,1 s/LCP 12,3 s, abrir o visualizador até 800 ms | 20 sites completos (desktop) renderizados como miniaturas ao abrir a página; layouts: 42–44 esquemas/celulares interativos | Miniaturas estáticas (SVG/PNG gerados no build) ou renderização sob demanda com `IntersectionObserver` + `content-visibility: auto`; prévia completa só no visualizador | P2 | médio | — | Inspiração: LCP (Lighthouse mobile) < 4 s e < 2 500 nós na abertura |
 | TE-16 | Prévias não isoladas do CSS global do Studio | 2.5; `styles/base.css` (h1–h4, a, button, body) | prévias no mesmo documento, sem reset escopado | Renderizar prévias de sites/componentes dentro de um contêiner com `all: revert`/reset próprio ou shadow DOM; garantir que o HTML exportado use o mesmo reset | P2 | médio | — | Comparação visual prévia × HTML exportado sem diferença de tipografia em 5 modelos |
 | TE-17 | Kits de prévia duplicados (Btn ×5, Avatar ×4, molduras ×5, hook de largura ×4, 4 modelos de cor) | 2.4 | cada módulo nasceu isolado | Pacote `src/preview-kit/` (primitivas + tema único derivado de `ResolvedTheme`) e migração gradual | P2 | alto | TE-02 | Nenhuma primitiva duplicada; todas as prévias recebem `ResolvedTheme` |
-| TE-18 | Assinaturas do projeto inteiro causam re-render amplo | 3.1, 5 (<!--REN-->) | 9 componentes com `useStudio((s) => s.project)` | Seletores finos (`useShallow` de fatias), `memo` nos cartões, mover cálculos derivados para seletores memorizados | P3 | baixo | — | Clique em paleta renderiza ≤ 60 componentes (medido com o gancho de `perf-lib.cjs`) |
+| TE-18 | Assinaturas do projeto inteiro causam re-render amplo | 3.1, 5.7 (clique em paleta ≈400 componentes; categoria 586) | 9 componentes com `useStudio((s) => s.project)` | Seletores finos (`useShallow` de fatias), `memo` nos cartões, mover cálculos derivados para seletores memorizados | P3 | baixo | — | Clique em paleta renderiza ≤ 60 componentes (medido com o gancho de `perf-lib.cjs`) |
 | TE-19 | Componentes gigantes | 2.6; `PhonePreview` 1 362 linhas/245 ramos; `AuthScreen` 1 215/396 | renderização condicional acumulada | Quebrar por região (topo, inferior, lateral, sobreposições) em componentes com testes de contrato | P3 | alto | TE-17 | Nenhuma função > 300 linhas nos renderizadores |
 | TE-20 | Dependências circulares prompt ↔ módulos e core → módulo | 2.3; `theme.ts:2` | `PromptButton` dentro de `prompt/` e `describe` dentro dos módulos | Mover `PromptButton` para `ui/` (com import dinâmico); `core` recebe as paletas por injeção | P3 | médio | TE-14 | Grafo sem ciclos entre áreas (script `dados/acoplamento.txt`) |
 | TE-21 | Textos do usuário sem escape no CSS e no Markdown | 6.2; `css.ts:35` | interpolação direta | Remover `*/` do nome no comentário; citar textos livres no Markdown e normalizar quebras | P3 | baixo | — | Sondas de `scripts/sondas.test.ts`/`analise-motor.test.ts` passam a dar `false` |

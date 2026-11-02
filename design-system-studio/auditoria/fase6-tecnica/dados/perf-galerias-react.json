@@ -1,0 +1,1603 @@
+{
+  "method": {
+    "runs": 1,
+    "clicksPerScenario": 10,
+    "reactHook": true
+  },
+  "summary": {
+    "Layouts desktop (42)": {
+      "runs": 1,
+      "items": 42,
+      "inpMedianaDasMedianas": 28,
+      "inpPior": 40,
+      "procMediana": 6,
+      "longTasksPorRodada": 0,
+      "longTaskMsPorRodada": 0,
+      "mutacoesPorClique": 51.5,
+      "componentesRenderizadosPorClique": 91.5,
+      "commitsPorClique": 1,
+      "nosDom": 5628,
+      "heapMB": 11.2,
+      "loadavg": 9.15
+    },
+    "Layouts mobile (44)": {
+      "runs": 1,
+      "items": 44,
+      "inpMedianaDasMedianas": 52,
+      "inpPior": 120,
+      "procMediana": 8.5,
+      "longTasksPorRodada": 0,
+      "longTaskMsPorRodada": 0,
+      "mutacoesPorClique": 30,
+      "componentesRenderizadosPorClique": 91,
+      "commitsPorClique": 1.5,
+      "nosDom": 5521,
+      "heapMB": 10,
+      "loadavg": 8.12
+    },
+    "Componentes: categorias (66 × 16 famílias)": {
+      "runs": 1,
+      "items": 66,
+      "inpMedianaDasMedianas": 72,
+      "inpPior": 152,
+      "procMediana": 15.5,
+      "longTasksPorRodada": 3,
+      "longTaskMsPorRodada": 263,
+      "mutacoesPorClique": 66,
+      "componentesRenderizadosPorClique": 586,
+      "commitsPorClique": 1,
+      "nosDom": 1778,
+      "heapMB": 11.1,
+      "loadavg": 7.03
+    },
+    "Componentes: famílias": {
+      "runs": 1,
+      "items": 16,
+      "inpMedianaDasMedianas": 24,
+      "inpPior": 40,
+      "procMediana": 6,
+      "longTasksPorRodada": 0,
+      "longTaskMsPorRodada": 0,
+      "mutacoesPorClique": 6,
+      "componentesRenderizadosPorClique": 356,
+      "commitsPorClique": 1,
+      "nosDom": 1157,
+      "heapMB": 9.8,
+      "loadavg": 6.54
+    },
+    "Paletas (60)": {
+      "runs": 1,
+      "items": 60,
+      "inpMedianaDasMedianas": 36,
+      "inpPior": 88,
+      "procMediana": 13,
+      "longTasksPorRodada": 1,
+      "longTaskMsPorRodada": 87,
+      "mutacoesPorClique": 39,
+      "componentesRenderizadosPorClique": 396,
+      "commitsPorClique": 1,
+      "nosDom": 2690,
+      "heapMB": 10.7,
+      "loadavg": 7.56
+    },
+    "Navegação: headers/sidebars": {
+      "runs": 1,
+      "items": 36,
+      "inpMedianaDasMedianas": 40,
+      "inpPior": 200,
+      "procMediana": 9,
+      "longTasksPorRodada": 2,
+      "longTaskMsPorRodada": 266,
+      "mutacoesPorClique": 10,
+      "componentesRenderizadosPorClique": 98.5,
+      "commitsPorClique": 2,
+      "nosDom": 4059,
+      "heapMB": 11,
+      "loadavg": 9.53
+    },
+    "Templates: abrir editor (28)": {
+      "runs": 1,
+      "items": 28,
+      "inpMedianaDasMedianas": 152,
+      "inpPior": 304,
+      "procMediana": 64.5,
+      "longTasksPorRodada": 14,
+      "longTaskMsPorRodada": 1281,
+      "mutacoesPorClique": 6,
+      "componentesRenderizadosPorClique": 1641,
+      "commitsPorClique": 3,
+      "nosDom": 5986,
+      "heapMB": 17.3,
+      "loadavg": 9.67
+    },
+    "Inspiração: abrir visualizador (20)": {
+      "runs": 1,
+      "items": 20,
+      "inpMedianaDasMedianas": 296,
+      "inpPior": 800,
+      "procMediana": 120,
+      "longTasksPorRodada": 18,
+      "longTaskMsPorRodada": 2620,
+      "mutacoesPorClique": 4,
+      "componentesRenderizadosPorClique": 765,
+      "commitsPorClique": 3,
+      "nosDom": 9111,
+      "heapMB": 20.9,
+      "loadavg": 12.46
+    }
+  },
+  "results": [
+    {
+      "run": 1,
+      "scenario": "Layouts desktop (42)",
+      "items": 42,
+      "loadavg": [
+        9.15,
+        12.9,
+        10.49
+      ],
+      "nodesBefore": 5625,
+      "nodesAfter": 5628,
+      "heapMB": 11.2,
+      "inpMedian": 28,
+      "inpMax": 40,
+      "procMedian": 6,
+      "longTasksTotal": 0,
+      "longTaskMsTotal": 0,
+      "mutationsMedian": 51.5,
+      "commitsMedian": 1,
+      "renderedMedian": 91.5,
+      "topRendered": [
+        [
+          "l",
+          2815
+        ],
+        [
+          "anon",
+          407
+        ],
+        [
+          "$l",
+          172
+        ],
+        [
+          "bl",
+          172
+        ],
+        [
+          "sk",
+          61
+        ],
+        [
+          "vl",
+          53
+        ],
+        [
+          "uk",
+          48
+        ],
+        [
+          "xl",
+          48
+        ],
+        [
+          "_e",
+          31
+        ],
+        [
+          "ca",
+          23
+        ],
+        [
+          "Check",
+          22
+        ],
+        [
+          "ml",
+          21
+        ]
+      ],
+      "perClick": [
+        {
+          "i": 0,
+          "wall": 540,
+          "inp": 32,
+          "maxProc": 4,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 7,
+          "commits": 1,
+          "rendered": 22
+        },
+        {
+          "i": 4,
+          "wall": 544,
+          "inp": 24,
+          "maxProc": 6,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 28,
+          "commits": 1,
+          "rendered": 89
+        },
+        {
+          "i": 8,
+          "wall": 534,
+          "inp": 32,
+          "maxProc": 8,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 48,
+          "commits": 1,
+          "rendered": 121
+        },
+        {
+          "i": 12,
+          "wall": 517,
+          "inp": 24,
+          "maxProc": 6,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 63,
+          "commits": 1,
+          "rendered": 145
+        },
+        {
+          "i": 16,
+          "wall": 667,
+          "inp": 32,
+          "maxProc": 10,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 232,
+          "commits": 1,
+          "rendered": 66
+        },
+        {
+          "i": 21,
+          "wall": 526,
+          "inp": 24,
+          "maxProc": 4,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 58,
+          "commits": 1,
+          "rendered": 58
+        },
+        {
+          "i": 25,
+          "wall": 522,
+          "inp": 40,
+          "maxProc": 8,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 53,
+          "commits": 1,
+          "rendered": 137
+        },
+        {
+          "i": 29,
+          "wall": 515,
+          "inp": 24,
+          "maxProc": 6,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 50,
+          "commits": 1,
+          "rendered": 101
+        },
+        {
+          "i": 33,
+          "wall": 518,
+          "inp": 24,
+          "maxProc": 5,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 34,
+          "commits": 1,
+          "rendered": 88
+        },
+        {
+          "i": 37,
+          "wall": 526,
+          "inp": 32,
+          "maxProc": 7,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 54,
+          "commits": 1,
+          "rendered": 94
+        }
+      ],
+      "errors": []
+    },
+    {
+      "run": 1,
+      "scenario": "Layouts mobile (44)",
+      "items": 44,
+      "loadavg": [
+        8.12,
+        12.56,
+        10.4
+      ],
+      "nodesBefore": 5539,
+      "nodesAfter": 5521,
+      "heapMB": 10,
+      "inpMedian": 52,
+      "inpMax": 120,
+      "procMedian": 8.5,
+      "longTasksTotal": 0,
+      "longTaskMsTotal": 0,
+      "mutationsMedian": 30,
+      "commitsMedian": 1.5,
+      "renderedMedian": 91,
+      "topRendered": [
+        [
+          "x",
+          1788
+        ],
+        [
+          "N",
+          598
+        ],
+        [
+          "anon",
+          382
+        ],
+        [
+          "M",
+          372
+        ],
+        [
+          "ve",
+          311
+        ],
+        [
+          "sk",
+          63
+        ],
+        [
+          "us",
+          56
+        ],
+        [
+          "uk",
+          36
+        ],
+        [
+          "ea",
+          26
+        ],
+        [
+          "Check",
+          22
+        ],
+        [
+          "Wl",
+          17
+        ],
+        [
+          "ti",
+          13
+        ]
+      ],
+      "perClick": [
+        {
+          "i": 0,
+          "wall": 542,
+          "inp": 72,
+          "maxProc": 8,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 7,
+          "commits": 1,
+          "rendered": 24
+        },
+        {
+          "i": 4,
+          "wall": 595,
+          "inp": 120,
+          "maxProc": 21,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 37,
+          "commits": 2,
+          "rendered": 98
+        },
+        {
+          "i": 8,
+          "wall": 516,
+          "inp": 64,
+          "maxProc": 11,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 28,
+          "commits": 1,
+          "rendered": 84
+        },
+        {
+          "i": 13,
+          "wall": 521,
+          "inp": 56,
+          "maxProc": 8,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 27,
+          "commits": 2,
+          "rendered": 90
+        },
+        {
+          "i": 17,
+          "wall": 531,
+          "inp": 48,
+          "maxProc": 15,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 36,
+          "commits": 1,
+          "rendered": 141
+        },
+        {
+          "i": 22,
+          "wall": 494,
+          "inp": 48,
+          "maxProc": 6,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 44,
+          "commits": 2,
+          "rendered": 102
+        },
+        {
+          "i": 26,
+          "wall": 520,
+          "inp": 64,
+          "maxProc": 9,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 31,
+          "commits": 1,
+          "rendered": 89
+        },
+        {
+          "i": 30,
+          "wall": 516,
+          "inp": 48,
+          "maxProc": 9,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 29,
+          "commits": 2,
+          "rendered": 89
+        },
+        {
+          "i": 35,
+          "wall": 509,
+          "inp": 40,
+          "maxProc": 6,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 27,
+          "commits": 1,
+          "rendered": 110
+        },
+        {
+          "i": 39,
+          "wall": 519,
+          "inp": 48,
+          "maxProc": 8,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 31,
+          "commits": 2,
+          "rendered": 92
+        }
+      ],
+      "errors": []
+    },
+    {
+      "run": 1,
+      "scenario": "Componentes: categorias (66 × 16 famílias)",
+      "items": 66,
+      "loadavg": [
+        7.03,
+        12.18,
+        10.3
+      ],
+      "nodesBefore": 1154,
+      "nodesAfter": 1778,
+      "heapMB": 11.1,
+      "inpMedian": 72,
+      "inpMax": 152,
+      "procMedian": 15.5,
+      "longTasksTotal": 3,
+      "longTaskMsTotal": 263,
+      "mutationsMedian": 66,
+      "commitsMedian": 1,
+      "renderedMedian": 586,
+      "topRendered": [
+        [
+          "anon",
+          1221
+        ],
+        [
+          "va",
+          726
+        ],
+        [
+          "m",
+          384
+        ],
+        [
+          "w",
+          368
+        ],
+        [
+          "j",
+          352
+        ],
+        [
+          "z",
+          352
+        ],
+        [
+          "FileText",
+          208
+        ],
+        [
+          "sk",
+          176
+        ],
+        [
+          "Sa",
+          176
+        ],
+        [
+          "yt",
+          176
+        ],
+        [
+          "fa",
+          176
+        ],
+        [
+          "Plus",
+          176
+        ]
+      ],
+      "perClick": [
+        {
+          "i": 0,
+          "wall": 632,
+          "inp": 152,
+          "maxProc": 16,
+          "longTasks": 1,
+          "longTaskMs": 134,
+          "mutations": 66,
+          "commits": 1,
+          "rendered": 354
+        },
+        {
+          "i": 6,
+          "wall": 533,
+          "inp": 64,
+          "maxProc": 19,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 66,
+          "commits": 1,
+          "rendered": 594
+        },
+        {
+          "i": 13,
+          "wall": 549,
+          "inp": 72,
+          "maxProc": 15,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 66,
+          "commits": 1,
+          "rendered": 562
+        },
+        {
+          "i": 19,
+          "wall": 553,
+          "inp": 72,
+          "maxProc": 15,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 66,
+          "commits": 1,
+          "rendered": 578
+        },
+        {
+          "i": 26,
+          "wall": 524,
+          "inp": 56,
+          "maxProc": 11,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 66,
+          "commits": 1,
+          "rendered": 386
+        },
+        {
+          "i": 33,
+          "wall": 566,
+          "inp": 96,
+          "maxProc": 19,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 82,
+          "commits": 1,
+          "rendered": 706
+        },
+        {
+          "i": 39,
+          "wall": 567,
+          "inp": 112,
+          "maxProc": 35,
+          "longTasks": 1,
+          "longTaskMs": 69,
+          "mutations": 82,
+          "commits": 1,
+          "rendered": 610
+        },
+        {
+          "i": 46,
+          "wall": 526,
+          "inp": 64,
+          "maxProc": 15,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 66,
+          "commits": 1,
+          "rendered": 418
+        },
+        {
+          "i": 52,
+          "wall": 505,
+          "inp": 64,
+          "maxProc": 12,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 66,
+          "commits": 1,
+          "rendered": 658
+        },
+        {
+          "i": 59,
+          "wall": 545,
+          "inp": 96,
+          "maxProc": 22,
+          "longTasks": 1,
+          "longTaskMs": 60,
+          "mutations": 82,
+          "commits": 1,
+          "rendered": 706
+        }
+      ],
+      "errors": []
+    },
+    {
+      "run": 1,
+      "scenario": "Componentes: famílias",
+      "items": 16,
+      "loadavg": [
+        6.54,
+        11.99,
+        10.25
+      ],
+      "nodesBefore": 1154,
+      "nodesAfter": 1157,
+      "heapMB": 9.8,
+      "inpMedian": 24,
+      "inpMax": 40,
+      "procMedian": 6,
+      "longTasksTotal": 0,
+      "longTaskMsTotal": 0,
+      "mutationsMedian": 6,
+      "commitsMedian": 1,
+      "renderedMedian": 356,
+      "topRendered": [
+        [
+          "anon",
+          1039
+        ],
+        [
+          "va",
+          726
+        ],
+        [
+          "I",
+          352
+        ],
+        [
+          "sk",
+          176
+        ],
+        [
+          "Sa",
+          176
+        ],
+        [
+          "yt",
+          176
+        ],
+        [
+          "fa",
+          176
+        ],
+        [
+          "ys",
+          176
+        ],
+        [
+          "w",
+          176
+        ],
+        [
+          "ArrowRight",
+          176
+        ],
+        [
+          "Plus",
+          176
+        ],
+        [
+          "F",
+          176
+        ]
+      ],
+      "perClick": [
+        {
+          "i": 0,
+          "wall": 511,
+          "inp": 32,
+          "maxProc": 13,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 3,
+          "commits": 1,
+          "rendered": 356
+        },
+        {
+          "i": 1,
+          "wall": 488,
+          "inp": 24,
+          "maxProc": 6,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 6,
+          "commits": 1,
+          "rendered": 356
+        },
+        {
+          "i": 3,
+          "wall": 504,
+          "inp": 16,
+          "maxProc": 4,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 6,
+          "commits": 1,
+          "rendered": 356
+        },
+        {
+          "i": 4,
+          "wall": 493,
+          "inp": 24,
+          "maxProc": 6,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 6,
+          "commits": 1,
+          "rendered": 356
+        },
+        {
+          "i": 6,
+          "wall": 499,
+          "inp": 24,
+          "maxProc": 4,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 6,
+          "commits": 1,
+          "rendered": 356
+        },
+        {
+          "i": 8,
+          "wall": 502,
+          "inp": 24,
+          "maxProc": 5,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 6,
+          "commits": 1,
+          "rendered": 356
+        },
+        {
+          "i": 9,
+          "wall": 501,
+          "inp": 16,
+          "maxProc": 6,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 6,
+          "commits": 1,
+          "rendered": 356
+        },
+        {
+          "i": 11,
+          "wall": 507,
+          "inp": 24,
+          "maxProc": 6,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 6,
+          "commits": 1,
+          "rendered": 356
+        },
+        {
+          "i": 12,
+          "wall": 495,
+          "inp": 40,
+          "maxProc": 4,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 6,
+          "commits": 1,
+          "rendered": 356
+        },
+        {
+          "i": 14,
+          "wall": 524,
+          "inp": 24,
+          "maxProc": 7,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 6,
+          "commits": 1,
+          "rendered": 356
+        }
+      ],
+      "errors": []
+    },
+    {
+      "run": 1,
+      "scenario": "Paletas (60)",
+      "items": 60,
+      "loadavg": [
+        7.56,
+        12.02,
+        10.28
+      ],
+      "nodesBefore": 2690,
+      "nodesAfter": 2690,
+      "heapMB": 10.7,
+      "inpMedian": 36,
+      "inpMax": 88,
+      "procMedian": 13,
+      "longTasksTotal": 1,
+      "longTaskMsTotal": 87,
+      "mutationsMedian": 39,
+      "commitsMedian": 1,
+      "renderedMedian": 396,
+      "topRendered": [
+        [
+          "anon",
+          1579
+        ],
+        [
+          "F",
+          671
+        ],
+        [
+          "FileText",
+          671
+        ],
+        [
+          "sk",
+          660
+        ],
+        [
+          "P",
+          660
+        ],
+        [
+          "Wl",
+          17
+        ],
+        [
+          "Search",
+          12
+        ],
+        [
+          "House",
+          12
+        ],
+        [
+          "Download",
+          12
+        ],
+        [
+          "ue",
+          12
+        ],
+        [
+          "lk",
+          11
+        ],
+        [
+          "ee",
+          11
+        ]
+      ],
+      "perClick": [
+        {
+          "i": 0,
+          "wall": 651,
+          "inp": 88,
+          "maxProc": 46,
+          "longTasks": 1,
+          "longTaskMs": 87,
+          "mutations": 0,
+          "commits": 2,
+          "rendered": 397
+        },
+        {
+          "i": 6,
+          "wall": 533,
+          "inp": 40,
+          "maxProc": 12,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 39,
+          "commits": 1,
+          "rendered": 396
+        },
+        {
+          "i": 12,
+          "wall": 518,
+          "inp": 40,
+          "maxProc": 17,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 38,
+          "commits": 1,
+          "rendered": 396
+        },
+        {
+          "i": 18,
+          "wall": 550,
+          "inp": 48,
+          "maxProc": 15,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 38,
+          "commits": 1,
+          "rendered": 396
+        },
+        {
+          "i": 24,
+          "wall": 526,
+          "inp": 32,
+          "maxProc": 7,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 57,
+          "commits": 1,
+          "rendered": 396
+        },
+        {
+          "i": 30,
+          "wall": 532,
+          "inp": 40,
+          "maxProc": 23,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 59,
+          "commits": 1,
+          "rendered": 396
+        },
+        {
+          "i": 36,
+          "wall": 512,
+          "inp": 32,
+          "maxProc": 6,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 37,
+          "commits": 1,
+          "rendered": 396
+        },
+        {
+          "i": 42,
+          "wall": 515,
+          "inp": 24,
+          "maxProc": 9,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 39,
+          "commits": 1,
+          "rendered": 396
+        },
+        {
+          "i": 48,
+          "wall": 523,
+          "inp": 24,
+          "maxProc": 14,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 57,
+          "commits": 1,
+          "rendered": 396
+        },
+        {
+          "i": 54,
+          "wall": 519,
+          "inp": 16,
+          "maxProc": 5,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 59,
+          "commits": 1,
+          "rendered": 396
+        }
+      ],
+      "errors": []
+    },
+    {
+      "run": 1,
+      "scenario": "Navegação: headers/sidebars",
+      "items": 36,
+      "loadavg": [
+        9.53,
+        12.29,
+        10.38
+      ],
+      "nodesBefore": 4039,
+      "nodesAfter": 4059,
+      "heapMB": 11,
+      "inpMedian": 40,
+      "inpMax": 200,
+      "procMedian": 9,
+      "longTasksTotal": 2,
+      "longTaskMsTotal": 266,
+      "mutationsMedian": 10,
+      "commitsMedian": 2,
+      "renderedMedian": 98.5,
+      "topRendered": [
+        [
+          "anon",
+          829
+        ],
+        [
+          "Os",
+          205
+        ],
+        [
+          "D",
+          139
+        ],
+        [
+          "we",
+          127
+        ],
+        [
+          "ua",
+          127
+        ],
+        [
+          "Ns",
+          105
+        ],
+        [
+          "_t",
+          95
+        ],
+        [
+          "wt",
+          95
+        ],
+        [
+          "ns",
+          91
+        ],
+        [
+          "Pt",
+          91
+        ],
+        [
+          "ie",
+          89
+        ],
+        [
+          "ChevronDown",
+          80
+        ]
+      ],
+      "perClick": [
+        {
+          "i": 0,
+          "wall": 581,
+          "inp": 200,
+          "maxProc": 18,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 6,
+          "commits": 1,
+          "rendered": 50
+        },
+        {
+          "i": 3,
+          "wall": 609,
+          "inp": 80,
+          "maxProc": 7,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 9,
+          "commits": 1,
+          "rendered": 77
+        },
+        {
+          "i": 7,
+          "wall": 807,
+          "inp": 200,
+          "maxProc": 132,
+          "longTasks": 2,
+          "longTaskMs": 266,
+          "mutations": 9,
+          "commits": 1,
+          "rendered": 113
+        },
+        {
+          "i": 10,
+          "wall": 566,
+          "inp": 48,
+          "maxProc": 13,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 10,
+          "commits": 1,
+          "rendered": 115
+        },
+        {
+          "i": 14,
+          "wall": 557,
+          "inp": 40,
+          "maxProc": 9,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 10,
+          "commits": 2,
+          "rendered": 102
+        },
+        {
+          "i": 18,
+          "wall": 550,
+          "inp": 32,
+          "maxProc": 6,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 10,
+          "commits": 2,
+          "rendered": 104
+        },
+        {
+          "i": 21,
+          "wall": 533,
+          "inp": 32,
+          "maxProc": 7,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 10,
+          "commits": 2,
+          "rendered": 95
+        },
+        {
+          "i": 25,
+          "wall": 545,
+          "inp": 32,
+          "maxProc": 5,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 10,
+          "commits": 2,
+          "rendered": 95
+        },
+        {
+          "i": 28,
+          "wall": 531,
+          "inp": 40,
+          "maxProc": 10,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 10,
+          "commits": 2,
+          "rendered": 94
+        },
+        {
+          "i": 32,
+          "wall": 537,
+          "inp": 40,
+          "maxProc": 9,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 10,
+          "commits": 2,
+          "rendered": 109
+        }
+      ],
+      "errors": []
+    },
+    {
+      "run": 1,
+      "scenario": "Templates: abrir editor (28)",
+      "items": 28,
+      "loadavg": [
+        9.67,
+        12.14,
+        10.37
+      ],
+      "nodesBefore": 2409,
+      "nodesAfter": 5986,
+      "heapMB": 17.3,
+      "inpMedian": 152,
+      "inpMax": 304,
+      "procMedian": 64.5,
+      "longTasksTotal": 14,
+      "longTaskMsTotal": 1281,
+      "mutationsMedian": 6,
+      "commitsMedian": 3,
+      "renderedMedian": 1641,
+      "topRendered": [
+        [
+          "anon",
+          3660
+        ],
+        [
+          "C",
+          2627
+        ],
+        [
+          "y",
+          1894
+        ],
+        [
+          "m",
+          1825
+        ],
+        [
+          "W",
+          1700
+        ],
+        [
+          "$",
+          1669
+        ],
+        [
+          "z",
+          1224
+        ],
+        [
+          "D",
+          1144
+        ],
+        [
+          "F",
+          1035
+        ],
+        [
+          "_",
+          790
+        ],
+        [
+          "an",
+          672
+        ],
+        [
+          "sk",
+          588
+        ]
+      ],
+      "perClick": [
+        {
+          "i": 0,
+          "wall": 886,
+          "inp": 304,
+          "maxProc": 108,
+          "longTasks": 2,
+          "longTaskMs": 202,
+          "mutations": 6,
+          "commits": 3,
+          "rendered": 1062
+        },
+        {
+          "i": 2,
+          "wall": 662,
+          "inp": 120,
+          "maxProc": 61,
+          "longTasks": 2,
+          "longTaskMs": 139,
+          "mutations": 6,
+          "commits": 3,
+          "rendered": 1004
+        },
+        {
+          "i": 5,
+          "wall": 694,
+          "inp": 120,
+          "maxProc": 54,
+          "longTasks": 2,
+          "longTaskMs": 167,
+          "mutations": 12,
+          "commits": 4,
+          "rendered": 1496
+        },
+        {
+          "i": 8,
+          "wall": 650,
+          "inp": 128,
+          "maxProc": 69,
+          "longTasks": 2,
+          "longTaskMs": 146,
+          "mutations": 6,
+          "commits": 3,
+          "rendered": 1102
+        },
+        {
+          "i": 11,
+          "wall": 732,
+          "inp": 160,
+          "maxProc": 72,
+          "longTasks": 1,
+          "longTaskMs": 96,
+          "mutations": 12,
+          "commits": 4,
+          "rendered": 1786
+        },
+        {
+          "i": 14,
+          "wall": 666,
+          "inp": 184,
+          "maxProc": 45,
+          "longTasks": 1,
+          "longTaskMs": 122,
+          "mutations": 6,
+          "commits": 3,
+          "rendered": 1463
+        },
+        {
+          "i": 16,
+          "wall": 740,
+          "inp": 200,
+          "maxProc": 77,
+          "longTasks": 1,
+          "longTaskMs": 132,
+          "mutations": 12,
+          "commits": 4,
+          "rendered": 2185
+        },
+        {
+          "i": 19,
+          "wall": 620,
+          "inp": 144,
+          "maxProc": 38,
+          "longTasks": 0,
+          "longTaskMs": 0,
+          "mutations": 6,
+          "commits": 3,
+          "rendered": 1881
+        },
+        {
+          "i": 22,
+          "wall": 631,
+          "inp": 232,
+          "maxProc": 68,
+          "longTasks": 2,
+          "longTaskMs": 215,
+          "mutations": 7,
+          "commits": 4,
+          "rendered": 1900
+        },
+        {
+          "i": 25,
+          "wall": 577,
+          "inp": 104,
+          "maxProc": 47,
+          "longTasks": 1,
+          "longTaskMs": 62,
+          "mutations": 6,
+          "commits": 3,
+          "rendered": 1873
+        }
+      ],
+      "errors": []
+    },
+    {
+      "run": 1,
+      "scenario": "Inspiração: abrir visualizador (20)",
+      "items": 20,
+      "loadavg": [
+        12.46,
+        12.62,
+        10.57
+      ],
+      "nodesBefore": 9111,
+      "nodesAfter": 9111,
+      "heapMB": 20.9,
+      "inpMedian": 296,
+      "inpMax": 800,
+      "procMedian": 120,
+      "longTasksTotal": 18,
+      "longTaskMsTotal": 2620,
+      "mutationsMedian": 4,
+      "commitsMedian": 3,
+      "renderedMedian": 765,
+      "topRendered": [
+        [
+          "j",
+          4931
+        ],
+        [
+          "f",
+          3510
+        ],
+        [
+          "H",
+          744
+        ],
+        [
+          "Q",
+          481
+        ],
+        [
+          "Ct",
+          465
+        ],
+        [
+          "$",
+          465
+        ],
+        [
+          "M",
+          456
+        ],
+        [
+          "Pi",
+          420
+        ],
+        [
+          "sk",
+          420
+        ],
+        [
+          "anon",
+          376
+        ],
+        [
+          "K",
+          264
+        ],
+        [
+          "ie",
+          200
+        ]
+      ],
+      "perClick": [
+        {
+          "i": 0,
+          "wall": 963,
+          "inp": 296,
+          "maxProc": 122,
+          "longTasks": 3,
+          "longTaskMs": 375,
+          "mutations": 4,
+          "commits": 3,
+          "rendered": 767
+        },
+        {
+          "i": 2,
+          "wall": 960,
+          "inp": 800,
+          "maxProc": 343,
+          "longTasks": 2,
+          "longTaskMs": 414,
+          "mutations": 4,
+          "commits": 3,
+          "rendered": 789
+        },
+        {
+          "i": 4,
+          "wall": 852,
+          "inp": 232,
+          "maxProc": 83,
+          "longTasks": 1,
+          "longTaskMs": 98,
+          "mutations": 4,
+          "commits": 3,
+          "rendered": 743
+        },
+        {
+          "i": 6,
+          "wall": 733,
+          "inp": 232,
+          "maxProc": 119,
+          "longTasks": 2,
+          "longTaskMs": 191,
+          "mutations": 4,
+          "commits": 3,
+          "rendered": 755
+        },
+        {
+          "i": 8,
+          "wall": 1046,
+          "inp": 472,
+          "maxProc": 217,
+          "longTasks": 2,
+          "longTaskMs": 397,
+          "mutations": 4,
+          "commits": 3,
+          "rendered": 753
+        },
+        {
+          "i": 10,
+          "wall": 1255,
+          "inp": 296,
+          "maxProc": 121,
+          "longTasks": 2,
+          "longTaskMs": 206,
+          "mutations": 4,
+          "commits": 3,
+          "rendered": 775
+        },
+        {
+          "i": 12,
+          "wall": 1041,
+          "inp": 280,
+          "maxProc": 95,
+          "longTasks": 1,
+          "longTaskMs": 107,
+          "mutations": 4,
+          "commits": 3,
+          "rendered": 787
+        },
+        {
+          "i": 14,
+          "wall": 764,
+          "inp": 440,
+          "maxProc": 58,
+          "longTasks": 1,
+          "longTaskMs": 65,
+          "mutations": 4,
+          "commits": 3,
+          "rendered": 755
+        },
+        {
+          "i": 16,
+          "wall": 1673,
+          "inp": 688,
+          "maxProc": 261,
+          "longTasks": 2,
+          "longTaskMs": 612,
+          "mutations": 4,
+          "commits": 3,
+          "rendered": 763
+        },
+        {
+          "i": 18,
+          "wall": 898,
+          "inp": 128,
+          "maxProc": 56,
+          "longTasks": 2,
+          "longTaskMs": 155,
+          "mutations": 4,
+          "commits": 3,
+          "rendered": 859
+        }
+      ],
+      "errors": []
+    }
+  ]
+}

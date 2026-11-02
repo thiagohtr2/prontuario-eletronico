@@ -834,6 +834,17 @@ test.describe('REG-16 · Conteúdo não fica encoberto pela barra fixa inferior'
     }
   })
 
+  test('guiado 1440×900 (etapa 4): a base do celular grande fixo não fica sob o rodapé', async ({ page }) => {
+    test.fail(true, `REG-16: a altura do celular grande ignora o rodapé do guiado; 23 px da base (barra inferior da prévia) ficam cobertos ${VER}`)
+    await freshStart(page)
+    await go(page, '/guiado/mobile')
+    await page.evaluate(() => window.scrollTo(0, 2000))
+    await page.waitForTimeout(300)
+    const phone = (await page.getByTestId('phone-preview').first().boundingBox())!
+    const footer = (await page.locator('.gd-footer').boundingBox())!
+    expect(phone.y + phone.height, 'base do celular grande × topo do rodapé').toBeLessThanOrEqual(footer.y)
+  })
+
   for (const [label, use] of [['desktop 1440×900', {}], ['celular 360×800', MOBILE]] as const) {
     test.describe(label, () => {
       test.use(use)

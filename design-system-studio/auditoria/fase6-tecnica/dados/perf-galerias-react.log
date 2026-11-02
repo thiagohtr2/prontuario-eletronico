@@ -1,0 +1,20 @@
+run 1 Layouts desktop (42): n=42 INPmed=28 max=40 LT=0 mut=51.5 rendered=91.5 nodes=5628 load=9.15
+run 1 Layouts mobile (44): n=44 INPmed=52 max=120 LT=0 mut=30 rendered=91 nodes=5521 load=8.12
+run 1 Componentes: categorias (66 × 16 famílias): n=66 INPmed=72 max=152 LT=3 mut=66 rendered=586 nodes=1778 load=7.03
+run 1 Componentes: famílias: n=16 INPmed=24 max=40 LT=0 mut=6 rendered=356 nodes=1157 load=6.54
+run 1 Paletas (60): n=60 INPmed=36 max=88 LT=1 mut=39 rendered=396 nodes=2690 load=7.56
+run 1 Navegação: headers/sidebars: n=36 INPmed=40 max=200 LT=2 mut=10 rendered=98.5 nodes=4059 load=9.53
+run 1 Templates: abrir editor (28): n=28 INPmed=152 max=304 LT=14 mut=6 rendered=1641 nodes=5986 load=9.67
+run 1 Inspiração: abrir visualizador (20): n=20 INPmed=296 max=800 LT=18 mut=4 rendered=765 nodes=9111 load=12.46
+┌────────────────────────────────────────────┬──────┬───────┬───────────────────────┬─────────┬─────────────┬────────────────────┬─────────────────────┬───────────────────┬──────────────────────────────────┬──────────────────┬────────┬────────┬─────────┐
+│ (index)                                    │ runs │ items │ inpMedianaDasMedianas │ inpPior │ procMediana │ longTasksPorRodada │ longTaskMsPorRodada │ mutacoesPorClique │ componentesRenderizadosPorClique │ commitsPorClique │ nosDom │ heapMB │ loadavg │
+├────────────────────────────────────────────┼──────┼───────┼───────────────────────┼─────────┼─────────────┼────────────────────┼─────────────────────┼───────────────────┼──────────────────────────────────┼──────────────────┼────────┼────────┼─────────┤
+│ Layouts desktop (42)                       │ 1    │ 42    │ 28                    │ 40      │ 6           │ 0                  │ 0                   │ 51.5              │ 91.5                             │ 1                │ 5628   │ 11.2   │ 9.15    │
+│ Layouts mobile (44)                        │ 1    │ 44    │ 52                    │ 120     │ 8.5         │ 0                  │ 0                   │ 30                │ 91                               │ 1.5              │ 5521   │ 10     │ 8.12    │
+│ Componentes: categorias (66 × 16 famílias) │ 1    │ 66    │ 72                    │ 152     │ 15.5        │ 3                  │ 263                 │ 66                │ 586                              │ 1                │ 1778   │ 11.1   │ 7.03    │
+│ Componentes: famílias                      │ 1    │ 16    │ 24                    │ 40      │ 6           │ 0                  │ 0                   │ 6                 │ 356                              │ 1                │ 1157   │ 9.8    │ 6.54    │
+│ Paletas (60)                               │ 1    │ 60    │ 36                    │ 88      │ 13          │ 1                  │ 87                  │ 39                │ 396                              │ 1                │ 2690   │ 10.7   │ 7.56    │
+│ Navegação: headers/sidebars                │ 1    │ 36    │ 40                    │ 200     │ 9           │ 2                  │ 266                 │ 10                │ 98.5                             │ 2                │ 4059   │ 11     │ 9.53    │
+│ Templates: abrir editor (28)               │ 1    │ 28    │ 152                   │ 304     │ 64.5        │ 14                 │ 1281                │ 6                 │ 1641                             │ 3                │ 5986   │ 17.3   │ 9.67    │
+│ Inspiração: abrir visualizador (20)        │ 1    │ 20    │ 296                   │ 800     │ 120         │ 18                 │ 2620                │ 4                 │ 765                              │ 3                │ 9111   │ 20.9   │ 12.46   │
+└────────────────────────────────────────────┴──────┴───────┴───────────────────────┴─────────┴─────────────┴────────────────────┴─────────────────────┴───────────────────┴──────────────────────────────────┴──────────────────┴────────┴────────┴─────────┘
