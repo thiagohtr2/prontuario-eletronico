@@ -1,0 +1,18 @@
+{
+  "headersComAlturaDiferenteNaVarianteB": 2,
+  "sidebarsComLookDiferenteNaVarianteB": 7,
+  "exemplos": [
+    {
+      "header": "gazeta-aurora",
+      "alturaA": 88,
+      "alturaB": 60,
+      "medidaNoPromptVarianteB": "88 px"
+    },
+    {
+      "header": "blocos-bento",
+      "alturaA": 76,
+      "alturaB": 56,
+      "medidaNoPromptVarianteB": "76 px"
+    }
+  ]
+}

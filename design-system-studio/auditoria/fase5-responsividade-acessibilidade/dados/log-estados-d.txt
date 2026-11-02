@@ -1,0 +1,1 @@
+844 busca-ctrlk fit=true h=358/390 body=281 foot=null out=0 hOv=0 focus0=true esc=0 esc→close=true back=false axe=color-contrast:6,nested-interactive:28

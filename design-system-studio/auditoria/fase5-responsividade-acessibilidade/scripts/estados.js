@@ -34,7 +34,7 @@ function dims(s) {
   const results = []
   for (const s of widths) {
     const { w, h, mobile } = dims(s)
-    const { ctx, page } = await L.newPage(browser, w, h)
+    const { ctx, page } = await L.newPage(browser, w, h, { mobile })
     for (const sc of SCENARIOS) {
       if (only && !only.includes(sc.id)) continue
       if (sc.mobileOnly && w >= 1024) continue

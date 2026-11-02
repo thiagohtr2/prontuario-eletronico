@@ -1,0 +1,3010 @@
+[
+  {
+    "id": "busca-ctrlk",
+    "w": 1280,
+    "h": 900,
+    "mobile": false,
+    "size": "1280",
+    "opened": true,
+    "geom": {
+      "vw": 1280,
+      "vh": 900,
+      "top": 36,
+      "bottom": 864,
+      "left": 360,
+      "right": 920,
+      "height": 828,
+      "width": 560,
+      "fitsViewport": true,
+      "headH": 77,
+      "footH": null,
+      "bodyH": 751,
+      "bodyScrollH": 1902,
+      "bodyScrollable": true,
+      "bodyShare": 0.83,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "input \"Buscar funcionalidades\" 512x40"
+      ],
+      "smallTargetsN": 2,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 0,
+    "shot": "capturas/estados/busca-ctrlk--1280.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "input.ui-input Buscar funcionalidades"
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 10,
+        "ex": [
+          "button[data-active=\"true\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Escolha entre modo guiado e livre.</span>",
+          "li[role=\"option\"]:nth-child(2) > .search-item[data-active=\"false\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Acesso direto a qualquer módulo.</span>",
+          "li[role=\"option\"]:nth-child(3) > .search-item[data-active=\"false\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Nome, tipo, público e funcionalidades.</span>"
+        ]
+      },
+      {
+        "id": "nested-interactive",
+        "impact": "serious",
+        "count": 28,
+        "ex": [
+          "li[role=\"option\"]:nth-child(1) :: <li role=\"option\" aria-selected=\"true\">",
+          "li[role=\"option\"]:nth-child(2) :: <li role=\"option\" aria-selected=\"false\">",
+          "li[role=\"option\"]:nth-child(3) :: <li role=\"option\" aria-selected=\"false\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Buscar funcionalidades\":\n  - heading \"Buscar funcionalidades\" [level=2]\n  - button \"Fechar\":\n    - img\n  - searchbox \"Buscar funcionalidades\"\n  - listbox \"Resultados\":\n    - option \"Início Escolha entre modo guiado e livre.\" [selected]:\n      - button \"Início Escolha entre modo guiado e livre.\"\n    - option \"Todos os módulos Acesso direto a qualquer módulo.\":\n      - button \"Todos os módulos Acesso direto a qualquer módulo.\"\n    - option \"Objetivo do projeto Nome, tipo, público e funcionalidades.\":\n      - button \"Objetivo do projeto Nome, tipo, público e funcionalidades.\"\n    - option \"Landing pages 24 conceitos de página de apresentação.\":\n      - button \"Landing pages 24 conceitos de página de apresentação.\"\n    - option \"Login 24 composições de tela de entrar.\":\n      - button \"Login 24 composições de tela de entrar.\"\n    - option \"Cadastro 8 fluxos de criação de conta.\":\n      - button \"Cadastro 8 fluxos de criação de conta.\"\n    - option \"Layout desktop 42 arquiteturas para o computador.\":\n      - button \"Layout desktop 42 arquiteturas para o computador.\"\n    - option \"Layout mobile 44 arquiteturas para o celular.\":\n      - button \"Layout mobile 44 arquiteturas para o celular.\"\n    - option \"Live Site Preview Todas as escolhas em uma prévia única.\":\n      - button \"Live Site Preview Todas as escolhas em uma prévia única.\"\n    - option \"Color System 60 paletas, tokens, tipografia e geometria.\":\n      - button \"Color System 60 paletas, tokens, tipografia e geometria.\"\n    - option \"Navigation Showcase 36 headers e 36 sidebars.\":\n      - button \"Navigation Showcase 36 headers e 36 sidebars.\"\n    - option \"Componentes 66 categorias em 16 famílias visuais.\":\n      - button \"Componentes 66 categorias em 16 famílias visuais.\"\n    - option \"Inspiration Gallery 20 sites fictícios completos.\":\n      - button \"Inspiration Gallery 20 sites fictícios completos.\"\n    - option \"Template Studio Modelos reutilizáveis de páginas.\":\n      - button \"Template Studio Modelos reutilizáveis de páginas.\"\n    - option \"Central de Prompts Master Prompt e prompts individuais.\":\n      - button \"Central de Prompts Master Prompt e prompts individuais.\"\n    - option \"Exportar e importar JSON, CSS, HTML, backup e importação.\":\n      - button \"Exportar e importar JSON, CSS, HTML, backup e importação.\"\n    - option \"Validação responsiva Teste sites reais e gere prompts de correção.\":\n      - button \"Validação responsiva Teste sites reais e gere prompts de correção.\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": false,
+      "el": "body Pular para o conteúdo\nAtelier "
+    },
+    "scrollAfterClose": 0
+  },
+  {
+    "id": "busca-botao",
+    "w": 1280,
+    "h": 900,
+    "mobile": false,
+    "size": "1280",
+    "scrollBefore": 0,
+    "opened": true,
+    "geom": {
+      "vw": 1280,
+      "vh": 900,
+      "top": 36,
+      "bottom": 864,
+      "left": 360,
+      "right": 920,
+      "height": 828,
+      "width": 560,
+      "fitsViewport": true,
+      "headH": 77,
+      "footH": null,
+      "bodyH": 751,
+      "bodyScrollH": 1902,
+      "bodyScrollable": true,
+      "bodyShare": 0.83,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "input \"Buscar funcionalidades\" 512x40"
+      ],
+      "smallTargetsN": 2,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 0,
+    "shot": "capturas/estados/busca-botao--1280.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "input.ui-input Buscar funcionalidades"
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 10,
+        "ex": [
+          "button[data-active=\"true\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Escolha entre modo guiado e livre.</span>",
+          "li[role=\"option\"]:nth-child(2) > .search-item[data-active=\"false\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Acesso direto a qualquer módulo.</span>",
+          "li[role=\"option\"]:nth-child(3) > .search-item[data-active=\"false\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Nome, tipo, público e funcionalidades.</span>"
+        ]
+      },
+      {
+        "id": "nested-interactive",
+        "impact": "serious",
+        "count": 28,
+        "ex": [
+          "li[role=\"option\"]:nth-child(1) :: <li role=\"option\" aria-selected=\"true\">",
+          "li[role=\"option\"]:nth-child(2) :: <li role=\"option\" aria-selected=\"false\">",
+          "li[role=\"option\"]:nth-child(3) :: <li role=\"option\" aria-selected=\"false\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Buscar funcionalidades\":\n  - heading \"Buscar funcionalidades\" [level=2]\n  - button \"Fechar\":\n    - img\n  - searchbox \"Buscar funcionalidades\"\n  - listbox \"Resultados\":\n    - option \"Início Escolha entre modo guiado e livre.\" [selected]:\n      - button \"Início Escolha entre modo guiado e livre.\"\n    - option \"Todos os módulos Acesso direto a qualquer módulo.\":\n      - button \"Todos os módulos Acesso direto a qualquer módulo.\"\n    - option \"Objetivo do projeto Nome, tipo, público e funcionalidades.\":\n      - button \"Objetivo do projeto Nome, tipo, público e funcionalidades.\"\n    - option \"Landing pages 24 conceitos de página de apresentação.\":\n      - button \"Landing pages 24 conceitos de página de apresentação.\"\n    - option \"Login 24 composições de tela de entrar.\":\n      - button \"Login 24 composições de tela de entrar.\"\n    - option \"Cadastro 8 fluxos de criação de conta.\":\n      - button \"Cadastro 8 fluxos de criação de conta.\"\n    - option \"Layout desktop 42 arquiteturas para o computador.\":\n      - button \"Layout desktop 42 arquiteturas para o computador.\"\n    - option \"Layout mobile 44 arquiteturas para o celular.\":\n      - button \"Layout mobile 44 arquiteturas para o celular.\"\n    - option \"Live Site Preview Todas as escolhas em uma prévia única.\":\n      - button \"Live Site Preview Todas as escolhas em uma prévia única.\"\n    - option \"Color System 60 paletas, tokens, tipografia e geometria.\":\n      - button \"Color System 60 paletas, tokens, tipografia e geometria.\"\n    - option \"Navigation Showcase 36 headers e 36 sidebars.\":\n      - button \"Navigation Showcase 36 headers e 36 sidebars.\"\n    - option \"Componentes 66 categorias em 16 famílias visuais.\":\n      - button \"Componentes 66 categorias em 16 famílias visuais.\"\n    - option \"Inspiration Gallery 20 sites fictícios completos.\":\n      - button \"Inspiration Gallery 20 sites fictícios completos.\"\n    - option \"Template Studio Modelos reutilizáveis de páginas.\":\n      - button \"Template Studio Modelos reutilizáveis de páginas.\"\n    - option \"Central de Prompts Master Prompt e prompts individuais.\":\n      - button \"Central de Prompts Master Prompt e prompts individuais.\"\n    - option \"Exportar e importar JSON, CSS, HTML, backup e importação.\":\n      - button \"Exportar e importar JSON, CSS, HTML, backup e importação.\"\n    - option \"Validação responsiva Teste sites reais e gere prompts de correção.\":\n      - button \"Validação responsiva Teste sites reais e gere prompts de correção.\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Buscar funcionalidades (Ctrl+K"
+    },
+    "scrollAfterClose": 0
+  },
+  {
+    "id": "previa-landing",
+    "w": 1280,
+    "h": 900,
+    "mobile": false,
+    "size": "1280",
+    "scrollBefore": 1539,
+    "opened": true,
+    "geom": {
+      "vw": 1280,
+      "vh": 900,
+      "top": 36,
+      "bottom": 864,
+      "left": 90,
+      "right": 1190,
+      "height": 828,
+      "width": 1100,
+      "fitsViewport": true,
+      "headH": 86,
+      "footH": 73,
+      "bodyH": 669,
+      "bodyScrollH": 842,
+      "bodyScrollable": true,
+      "bodyShare": 0.74,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"Computador\" 127x32",
+        "button \"Celular\" 92x32",
+        "button \"Cores do modelo\" 134x32",
+        "button \"Minha identidade\" 136x32",
+        "input \"\" 1x1",
+        "button \"Começar grátis\" 110x31",
+        "button \"Começar grátis\" 157x43",
+        "button \"Ver demonstração\" 174x43",
+        "button \"Começar grátis\" 157x43",
+        "button \"Prompt deste elemento\" 202x40",
+        "button \"Selecionar este modelo\" 222x40"
+      ],
+      "smallTargetsN": 12,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 1539,
+    "shot": "capturas/estados/previa-landing--1280.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 1,
+        "ex": [
+          ".ui-help :: <span class=\"ui-help\" style=\"display: block;\">Por padrão a landing usa a paleta global do projeto. Ative só se quiser es"
+        ]
+      },
+      {
+        "id": "landmark-banner-is-top-level",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          ".ent-fit__inner > .ent-lp[data-architecture=\"hero-centralizado\"][data-device=\"desktop\"] > header :: <header style=\"position: relative; top: 0px; left: 0px; right: 0px; z-index: 5; background: transparent; border-bottom: "
+        ]
+      },
+      {
+        "id": "landmark-contentinfo-is-top-level",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          "footer :: <footer style=\"background: rgb(251, 250, 255); color: rgb(22, 19, 43); border-top: 1px solid rgb(227, 227, 230);\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Aurora Flow\":\n  - heading \"Aurora Flow\" [level=2]\n  - paragraph: SaaS e produtividade · Hero centralizado\n  - button \"Fechar\":\n    - img\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\" [pressed]:\n      - img\n      - text: Computador\n    - button \"Celular\":\n      - img\n      - text: Celular\n  - group \"Cores da prévia\":\n    - button \"Cores do modelo\" [pressed]\n    - button \"Minha identidade\"\n  - switch \"Manter as cores originais deste modelo no projeto Por padrão a landing usa a paleta global do projeto. Ative só se quiser esta exceção.\"\n  - text: Manter as cores originais deste modelo no projeto Por padrão a landing usa a paleta global do projeto. Ative só se quiser esta exceção.\n  - region \"Prévia da landing Aurora Flow\":\n    - text: Aurora Flow\n    - navigation: Produto Soluções Preços Recursos\n    - text: Entrar\n    - button \"Começar grátis\"\n    - text: \"Novo: automações com um clique\"\n    - heading \"Organize o trabalho da equipe em um só fluxo\" [level=1]\n    - paragraph: Tarefas, documentos e prazos no mesmo lugar. Menos reuniões, mais entregas.\n    - button \"Começar grátis\":\n      - text: Começar grátis\n      - img\n    - button \"Ver demonstração\":\n      - img\n      - text: Ver demonstração\n    - paragraph: 14 dias de teste grátis · sem cartão de crédito\n    - complementary: Início Meus projetos Quadro Calendário Relatórios Equipe\n    - strong: Sprint 14\n    - text: A fazer · 3 Em andamento · 2 Concluído · 1\n    - paragraph: Equipes que já trabalham no fluxo\n    - text: Nimbo Kora Vetta Lumen Brisa Orla Recursos\n    - heading \"Por que escolher Aurora Flow\" [level=2]\n    - img\n    - heading \"Quadros visuais\" [level=3]",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Ver prévia"
+    },
+    "scrollAfterClose": 1539
+  },
+  {
+    "id": "previa-login",
+    "w": 1280,
+    "h": 900,
+    "mobile": false,
+    "size": "1280",
+    "scrollBefore": 631,
+    "opened": true,
+    "geom": {
+      "vw": 1280,
+      "vh": 900,
+      "top": 36,
+      "bottom": 864,
+      "left": 90,
+      "right": 1190,
+      "height": 828,
+      "width": 1100,
+      "fitsViewport": true,
+      "headH": 86,
+      "footH": 73,
+      "bodyH": 669,
+      "bodyScrollH": 722,
+      "bodyScrollable": true,
+      "bodyShare": 0.74,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"Computador\" 127x32",
+        "button \"Celular\" 92x32",
+        "button \"Entrar\" 63x32",
+        "button \"Criar conta\" 96x32",
+        "input \"\" 1x1",
+        "input \"\" 282x36",
+        "button \"Esqueci minha senha\" 117x17",
+        "input \"\" 282x36",
+        "button \"Mostrar senha\" 33x33",
+        "input \"\" 1x1",
+        "button \"Entrar\" 282x36",
+        "button \"Criar conta\" 62x17",
+        "button \"Prompt deste elemento\" 202x40",
+        "button \"Selecionar este modelo\" 222x40"
+      ],
+      "smallTargetsN": 15,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 631,
+    "shot": "capturas/estados/previa-login--1280.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [
+      "input "
+    ],
+    "axe": [],
+    "aria": "- dialog \"Clássico central\":\n  - heading \"Clássico central\" [level=2]\n  - paragraph: Cartão central com a marca acima\n  - button \"Fechar\":\n    - img\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\" [pressed]:\n      - img\n      - text: Computador\n    - button \"Celular\":\n      - img\n      - text: Celular\n  - group \"Tela exibida\":\n    - button \"Entrar\" [pressed]\n    - button \"Criar conta\"\n  - switch \"Mostrar estados de erro\"\n  - text: Mostrar estados de erro\n  - region \"Prévia de Clássico central\":\n    - text: Nexo Capital\n    - form \"Entrar\":\n      - heading \"Entrar na sua conta\" [level=2]\n      - paragraph: Use seu e-mail e senha para continuar.\n      - text: E-mail\n      - textbox \"E-mail\":\n        - /placeholder: nome@empresa.com\n      - text: Senha\n      - button \"Esqueci minha senha\"\n      - textbox \"Senha\":\n        - /placeholder: Sua senha\n      - button \"Mostrar senha\":\n        - img\n      - checkbox \"Lembrar de mim neste dispositivo\"\n      - text: Lembrar de mim neste dispositivo\n      - button \"Entrar\"\n      - paragraph:\n        - text: Não tem conta?\n        - button \"Criar conta\"\n    - text: Termos Privacidade Ajuda\n  - paragraph: Escolha um fluxo na página Cadastro para ver a tela “Criar conta” correspondente.\n  - paragraph: \"Demonstração de interface: experimente digitar, mostrar a senha, enviar vazio e “Esqueci minha senha”. Nenhum dado é enviado.\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Ver prévia"
+    },
+    "scrollAfterClose": 631
+  },
+  {
+    "id": "previa-cadastro",
+    "w": 1280,
+    "h": 900,
+    "mobile": false,
+    "size": "1280",
+    "scrollBefore": 31,
+    "opened": true,
+    "geom": {
+      "vw": 1280,
+      "vh": 900,
+      "top": 36,
+      "bottom": 864,
+      "left": 90,
+      "right": 1190,
+      "height": 828,
+      "width": 1100,
+      "fitsViewport": true,
+      "headH": 86,
+      "footH": 73,
+      "bodyH": 669,
+      "bodyScrollH": 722,
+      "bodyScrollable": true,
+      "bodyShare": 0.74,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"Computador\" 127x32",
+        "button \"Celular\" 92x32",
+        "button \"Entrar\" 63x32",
+        "button \"Criar conta\" 96x32",
+        "input \"\" 1x1",
+        "button \"Entrar\" 149x36",
+        "button \"Criar conta\" 149x36",
+        "input \"\" 299x36",
+        "input \"\" 299x36",
+        "input \"\" 299x36",
+        "button \"Mostrar senha\" 33x33",
+        "button \"Criar conta\" 299x36",
+        "button \"Prompt deste elemento\" 202x40",
+        "button \"Selecionar este modelo\" 222x40"
+      ],
+      "smallTargetsN": 15,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 31,
+    "shot": "capturas/estados/previa-cadastro--1280.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [
+      "input "
+    ],
+    "axe": [],
+    "aria": "- dialog \"Cadastro na mesma tela do login\":\n  - heading \"Cadastro na mesma tela do login\" [level=2]\n  - paragraph: \"Campos: Nome, E-mail, Senha\"\n  - button \"Fechar\":\n    - img\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\" [pressed]:\n      - img\n      - text: Computador\n    - button \"Celular\":\n      - img\n      - text: Celular\n  - group \"Tela exibida\":\n    - button \"Entrar\"\n    - button \"Criar conta\" [pressed]\n  - switch \"Mostrar estados de erro\"\n  - text: Mostrar estados de erro\n  - region \"Prévia de Cadastro na mesma tela do login\":\n    - text: Nexo Capital Suporte de TI\n    - form \"Criar conta\":\n      - tablist \"Entrar ou criar conta\":\n        - tab \"Entrar\"\n        - tab \"Criar conta\" [selected]\n      - heading \"Criar conta\" [level=2]\n      - paragraph: Leva menos de um minuto.\n      - text: Nome\n      - textbox \"Nome\":\n        - /placeholder: Como podemos te chamar?\n      - text: E-mail\n      - textbox \"E-mail\":\n        - /placeholder: nome@empresa.com\n      - text: Senha\n      - textbox \"Senha\":\n        - /placeholder: Mínimo de 8 caracteres\n      - button \"Mostrar senha\":\n        - img\n      - list \"Requisitos da senha\":\n        - listitem: Pelo menos 8 caracteres (pendente)\n        - listitem: Uma letra maiúscula (pendente)\n        - listitem: Um número (pendente)",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Ver prévia"
+    },
+    "scrollAfterClose": 31
+  },
+  {
+    "id": "prompt-individual",
+    "w": 1280,
+    "h": 900,
+    "mobile": false,
+    "size": "1280",
+    "scrollBefore": 543,
+    "opened": true,
+    "geom": {
+      "vw": 1280,
+      "vh": 900,
+      "top": 59,
+      "bottom": 841,
+      "left": 230,
+      "right": 1050,
+      "height": 782,
+      "width": 820,
+      "fitsViewport": true,
+      "headH": 109,
+      "footH": 73,
+      "bodyH": 600,
+      "bodyScrollH": 600,
+      "bodyScrollable": false,
+      "bodyShare": 0.67,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"Baixar .md\" 133x40",
+        "button \"Copiar prompt\" 159x40"
+      ],
+      "smallTargetsN": 3,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 543,
+    "shot": "capturas/estados/prompt-individual--1280.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "scrollable-region-focusable",
+        "impact": "serious",
+        "count": 1,
+        "ex": [
+          "pre :: <pre class=\"ui-code\" data-testid=\"prompt-text\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Prompt individual — Sidebar integral clássica\":\n  - heading \"Prompt individual — Sidebar integral clássica\" [level=2]\n  - paragraph: \"Autossuficiente: inclui a identidade herdada e as regras de responsividade. Cole em Claude Code, Cursor ou outra IA.\"\n  - button \"Fechar\":\n    - img\n  - text: \"# Prompt — Layout desktop: Sidebar integral clássica > Gerado pelo Atelier UI para o projeto “Nexo Capital” (Dashboard). Este prompt é autossuficiente: implemente somente este elemento, exatamente como descrito. ## Layout desktop: Sidebar integral clássica — Sidebar integral `id: sidebar-integral-classica` · origem: módulo “desktop” Shell de aplicação com sidebar integral à esquerda (do topo à base) e coluna principal com header fixo e conteúdo rolável. **Estrutura** - Grid de duas colunas: grid-template-columns: 252px minmax(0, 1fr); a coluna principal tem grid-template-rows: 64px minmax(0, 1fr) (header + conteúdo). - Sidebar integral de ≈252 px na borda esquerda: vai do topo à base da janela (height: 100dvh), encostada na borda, sem margem externa, sem cantos arredondados e sem sombra flutuante. - Topo da sidebar com a mesma altura do header (≈64 px), contendo logo e nome do produto, alinhado ao header para formar uma linha horizontal contínua. - Itens de navegação com 40–44 px de altura, ícone de 20 px + rótulo, agrupados por seções com título discreto; o item ativo tem fundo de seleção, cor de texto ativa e indicador lateral. - Rodapé da sidebar com perfil do usuário e atalho de configurações, separado por borda fina. - Header de ≈64 px: título da página ou breadcrumb à esquerda; busca, notificações e avatar à direita; borda inferior fina de 1 px. O header fica somente sobre a coluna principal — não passa por cima da sidebar. - Área de conteúdo com padding de 24–32 px, largura fluida e grids internos com minmax(0, 1fr); nenhum cartão encolhe abaixo de ≈280 px — reduza colunas antes. **Propriedades** - gridColumns: 252px 1fr - gridRows: 64px 1fr - gridAreas: \\\"sidebar header\\\" \\\"sidebar content\\\" - gap: 0px - padding: 0px - regioes: sidebar (sidebar), header (header), content (content) - oneScreen: não **Medidas recomendadas (adaptáveis)** - sidebar: ≈252 px - header: ≈64 px **Comportamento e estados** - A sidebar é fixa (position: sticky; top: 0; height: 100dvh) e tem rolagem interna própria (overflow-y: auto; overscroll-behavior: contain) quando os itens não cabem; a página rola apenas na coluna de conteúdo. - O header é sticky (position: sticky; top: 0) acima do conteúdo e não rola com ele; z-index superior ao conteúdo e inferior a modais. - Grupos de navegação podem recolher (accordion) e lembram o estado; hover, focus-visible e item ativo são visualmente distintos. **Responsividade deste item** - 1280 px ou mais: sidebar esquerda com ≈252 px e rótulos completos. - 1024–1279 px: a sidebar reduz para ≈220 px; o conteúdo reduz colunas antes de comprimir cartões ou tabelas. - 768–1023 px: a sidebar recolhe para um rail integral de ≈72 px (só ícones, com tooltip e aria-label); um botão expande a sidebar completa em sobreposição, com scrim, Esc e clique fora para fechar. - Abaixo de 768 px vale a arquitetura mobile escolhida separadamente no Studio: não converta a navegação desktop em drawer, rail ou bottom navigation por conta própria. **Observações** - Sidebar integral: nunca flutuante, sem margem externa e sem cantos arredondados. - One Page, não One Screen: a página pode rolar verticalmente; não force o conteúdo a caber em 100dvh nem esconda seções para evitar rolagem. - As medidas são recomendações para 1280 × 800; adapte à tela e ao conteúdo preservando a estrutura escolhida. ## Identidade herdada - Paleta “Azul Institucional” (clara): primária #1d4ed8 (texto #ffffff), secundária #1e3a8a, destaque #0ea5e9. - Fundo #f8fafc, superfície #ffffff, texto #0f172a, texto secundário #686d7a, borda #e6e6e6. - Estados: hover #f4f4f4, active #ebebeb, selected #e4eafa/#1d4ed8, disabled #f0f0f0/#93979f, foco #1d4ed8. - Semânticos: success #117e39, warning #a85c04, error #dc2626, info #2563eb. - Tipografia: títulos Inter 650, textos Inter 400, base 15 px. - Geometria: cantos “medium”, borda 1 px, sombra “none”, superfícies “outlined”, densidade “comfortable”. ## Responsividade obrigatória Valide em 320, 344, 360, 375, 390, 412, 430, 480, 600, 768, 820, 1024, 1280, 1440, 1920 px. - Nenhum overflow horizontal involuntário em nenhuma largura de 320 px a 1920 px (inclusive larguras intermediárias). - Nenhum texto cortado: use quebra de linha, `min-width: 0` em itens flex/grid e `overflow-wrap: anywhere` em conteúdos longos (e-mails, URLs, códigos). - Nenhuma sobreposição indevida entre elementos, inclusive com o teclado virtual aberto. - Alvos de toque com no mínimo 44 × 44 px no celular e espaçamento de pelo menos 8 px entre alvos adjacentes. - Campos de formulário com fonte de pelo menos 16 px no celular (evita zoom automático no iOS). - Imagens e mídias responsivas (`max-width: 100%`, `aspect-ratio` definido) sem distorção. - Grids adaptáveis: reduza colunas progressivamente; nunca comprima cartões abaixo de uma largura legível. - Suporte a zoom de até 200% e a fonte ampliada do sistema sem perda de conteúdo ou funcionalidade. - Respeite as safe areas (`env(safe-area-inset-*)`) em barras fixas, docks e menus inferiores. - Funcione na orientação horizontal do celular: barras fixas não podem ocupar mais de 25% da altura. - Use `100dvh` (com fallback) em vez de `100vh` para alturas de tela cheia. - Menus acessíveis por mouse, toque e teclado (Tab, Enter, Espaço, Esc), com foco visível. - Respeite `prefers-reduced-motion` reduzindo animações. ## Regras de implementação - Não modifique escolhas aprovadas nesta especificação sem solicitação explícita do usuário. - Preserve a identidade global: todos os componentes usam os tokens definidos; exceções só onde estiverem listadas. - Não adicione decoração por conta própria (sombras, gradientes, vidro, animações, cantos arredondados) além do especificado. - Respeite a geometria escolhida: se a sidebar é integral, ela vai do topo à base; se é flutuante, tem afastamento das bordas. Não converta uma na outra. - Evite overflow e colisões; valide em todas as larguras de referência. - Mantenha consistência de espaçamentos (escala de 4 px), tipografia e estados de interação (hover, focus-visible, active, disabled, selected). - Implemente estados de carregamento, vazio e erro para listas, tabelas e formulários. - Use componentes reutilizáveis e tokens centralizados (variáveis CSS ou tema); nada de cores fixas espalhadas pelo código. - Garanta acessibilidade: HTML semântico, labels, contraste WCAG AA, navegação por teclado e leitores de tela. - Teste o resultado (visual e funcional) em celular, tablet e desktop antes de concluir.\"\n  - button \"Baixar .md\":\n    - img\n    - text: Baixar .md\n  - button \"Copiar prompt\":\n    - img\n    - text: Copiar prompt",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Prompt deste elemento"
+    },
+    "scrollAfterClose": 543
+  },
+  {
+    "id": "editor-componente",
+    "w": 1280,
+    "h": 900,
+    "mobile": false,
+    "size": "1280",
+    "scrollBefore": 4098,
+    "opened": true,
+    "geom": {
+      "vw": 1280,
+      "vh": 900,
+      "top": 36,
+      "bottom": 864,
+      "left": 20,
+      "right": 1260,
+      "height": 828,
+      "width": 1240,
+      "fitsViewport": true,
+      "headH": 86,
+      "footH": 73,
+      "bodyH": 669,
+      "bodyScrollH": 2185,
+      "bodyScrollable": true,
+      "bodyShare": 0.74,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"Normal\" 71x32",
+        "button \"Hover\" 63x32",
+        "button \"Focus\" 63x32",
+        "button \"Active\" 65x32",
+        "button \"Disabled\" 81x32",
+        "input \"\" 517x40",
+        "a \"Alterar em Cores e identidade\" 236x32",
+        "select \"Família visual\" 519x40",
+        "input \"\" 517x40",
+        "input \"\" 417x28",
+        "input \"Linhas de exemplo (valor)\" 84x40",
+        "input \"\" 1x1",
+        "button \"Simples\" 76x32",
+        "button \"Destacado\" 94x32"
+      ],
+      "smallTargetsN": 33,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 4098,
+    "shot": "capturas/estados/editor-componente--1280.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "count": 5,
+        "ex": [
+          ".cmp-trow[role=\"row\"]:nth-child(1) :: <div role=\"row\" class=\"cmp-trow\" style=\"--cols-wide: 22px mi...\">",
+          ".cmp-trow[role=\"row\"]:nth-child(2) :: <div role=\"row\" class=\"cmp-trow\" style=\"--cols-wide: 22px mi...\">",
+          ".cmp-trow[role=\"row\"]:nth-child(3) :: <div role=\"row\" class=\"cmp-trow\" style=\"--cols-wide: 22px mi...\">"
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 4,
+        "ex": [
+          ".cmp-trow[role=\"row\"]:nth-child(3) > span:nth-child(3) > span :: <span style=\"display: inline-flex...\">",
+          ".cmp-trow[role=\"row\"]:nth-child(3) > .cmp-xwide-only:nth-child(5) :: <span class=\"cmp-xwide-only\" style=\"min-width: 0px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; colo",
+          ".cmp-trow[role=\"row\"]:nth-child(5) > span:nth-child(3) > span :: <span style=\"display: inline-flex...\">"
+        ]
+      }
+    ],
+    "aria": "- 'dialog \"Personalizar: Tabelas de dados\"':\n  - 'heading \"Personalizar: Tabelas de dados\" [level=2]'\n  - paragraph: Tabelas · família Compact Pro. Tudo é salvo na hora e vai para o Master Prompt.\n  - button \"Fechar\":\n    - img\n  - group \"Estado da prévia\":\n    - button \"Normal\" [pressed]\n    - button \"Hover\"\n    - button \"Focus\"\n    - button \"Active\"\n    - button \"Disabled\"\n  - text: Pedidos recentes Exportar\n  - table:\n    - row \"Cliente Status Valor Data\"\n    - row \"AS Ana Souza Pago R$ 89,00 12/03\"\n    - row \"BL Bruno Lima Pendente R$ 226,00 11/03\"\n    - row \"CD Carla Dias Pago R$ 363,00 10/03\"\n    - row \"DR Diego Rocha Cancelado R$ 500,00 09/03\"\n  - paragraph: Clique em qualquer parte da prévia (texto, ícone, botão) para editá-la.\n  - text: Nome no projeto\n  - textbox \"Nome no projeto\":\n    - /placeholder: Tabelas\n    - text: Tabelas de dados\n  - text: \"Ex.: “Botão principal do checkout”. Ajuda a IA a saber onde usar.\"\n  - region \"Token global somente leitura\":\n    - text: \"1\"\n    - heading \"Token global somente leitura\" [level=3]\n    - paragraph: A paleta aprovada vale para o projeto inteiro. Este componente a herda por padrão.\n    - text: Cor primária Cor de destaque Superfície Texto principal Borda Aa Inter\n    - link \"Alterar em Cores e identidade\":\n      - /url: \"#/modulos/cores\"\n  - region \"Estilo do componente (variação / família)\":\n    - text: \"2\"\n    - heading \"Estilo do componente (variação / família)\" [level=3]\n    - paragraph: A família define formato, bordas, sombras, fonte e densidade. Trocar aqui muda só este componente.\n    - combobox \"Família visual\":\n      - option \"1. Soft Pill\"\n      - option \"2. Swiss Minimal\"\n      - option \"3. Dark Luxury\"\n      - option \"4. Glassmorphism\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Personalizar"
+    },
+    "scrollAfterClose": 4098
+  },
+  {
+    "id": "editor-template",
+    "w": 1280,
+    "h": 900,
+    "mobile": false,
+    "size": "1280",
+    "scrollBefore": 77,
+    "opened": true,
+    "geom": {
+      "vw": 1280,
+      "vh": 900,
+      "top": 45,
+      "bottom": 855,
+      "left": 20,
+      "right": 1260,
+      "height": 809,
+      "width": 1240,
+      "fitsViewport": true,
+      "headH": 86,
+      "footH": 73,
+      "bodyH": 650,
+      "bodyScrollH": 650,
+      "bodyScrollable": false,
+      "bodyShare": 0.72,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"Computador\" 127x32",
+        "button \"Celular\" 92x32",
+        "input \"Cor principal: abrir seletor d\" 40x40",
+        "input \"Cor principal em hexadecimal\" 96x40",
+        "input \"Fundo: abrir seletor de cor\" 40x40",
+        "input \"Fundo em hexadecimal\" 96x40",
+        "input \"Texto: abrir seletor de cor\" 40x40",
+        "input \"Texto em hexadecimal\" 96x40",
+        "select \"Inter (padrão)\nFonte do sistem\" 258x40",
+        "select \"Inter (padrão)\nFonte do sistem\" 258x40",
+        "button \"Todas\" 56x36",
+        "button \"Nenhuma\" 79x36",
+        "input \"\" 18x18",
+        "input \"\" 18x18"
+      ],
+      "smallTargetsN": 25,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 77,
+    "shot": "capturas/estados/editor-template--1280.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 8,
+        "ex": [
+          ".tpl-editor__hint :: <span class=\"tpl-editor__hint\">",
+          ".tpl-color:nth-child(2) > .tpl-color__text > .tpl-color__help :: <span class=\"tpl-color__help\">Botões, links e destaques.</span>",
+          ".tpl-color:nth-child(3) > .tpl-color__text > .tpl-color__help :: <span class=\"tpl-color__help\">Cor de fundo das páginas.</span>"
+        ]
+      },
+      {
+        "id": "landmark-no-duplicate-banner",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          "div[data-tpl-section=\"cabecalho\"] > header :: <header style=\"background: rgb(255, 255, 255); color: rgb(15, 23, 42); padding-top: 0px; padding-bottom: 0px; font-famil"
+        ]
+      },
+      {
+        "id": "scrollable-region-focusable",
+        "impact": "serious",
+        "count": 1,
+        "ex": [
+          ".tpl-frame :: <div class=\"tpl-frame\" data-device=\"desktop\" data-testid=\"template-preview\" style=\"--tpl-inv: 1.5496368038740922;\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"SaaS de gestão\":\n  - heading \"SaaS de gestão\" [level=2]\n  - paragraph: Produtos digitais · marca fictícia “Fluxo” · 10 partes\n  - button \"Fechar\":\n    - img\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\" [pressed]:\n      - img\n      - text: Computador\n    - button \"Celular\":\n      - img\n      - text: Celular\n  - text: Clique em uma parte da prévia para marcá-la\n  - banner:\n    - text: Fluxo\n    - navigation: Produto Recursos Preços Clientes\n    - text: Entrar Começar grátis\n  - text: \"Novo: automações com IA\"\n  - heading \"Projetos em dia, sem planilhas espalhadas\" [level=1]\n  - paragraph: O Fluxo reúne tarefas, prazos e conversas do time em um só lugar — e avisa antes que algo atrase.\n  - text: Começar grátis Ver demonstração 14 dias grátis · sem cartão de crédito\n  - paragraph: Mais de 4.000 equipes organizam o trabalho com o Fluxo\n  - text: Nortec Vela Quanta Brisa Lab Oriente Pixelar Recursos\n  - heading \"Tudo que o time precisa, nada que atrapalhe\" [level=2]\n  - heading \"Quadros e listas\" [level=3]\n  - paragraph: Visualize o trabalho do jeito que preferir e mude de visão com um clique.\n  - heading \"Prazos inteligentes\" [level=3]\n  - paragraph: Alertas automáticos quando uma entrega corre risco de atrasar.\n  - heading \"Automações\" [level=3]\n  - paragraph: Regras simples que movem tarefas, avisam pessoas e economizam horas.\n  - heading \"Relatórios\" [level=3]\n  - paragraph: Painéis prontos de progresso, carga de trabalho e entregas.\n  - heading \"Permissões\" [level=3]\n  - paragraph: Controle quem vê e edita cada projeto, com registro de alterações.\n  - heading \"Integrações\" [level=3]\n  - paragraph: Conecte calendário, e-mail e mais de 80 ferramentas.\n  - heading \"Planeje a semana em minutos\" [level=2]\n  - paragraph: Arraste tarefas para o calendário, distribua a carga do time e veja conflitos antes que virem problema.\n  - list:\n    - listitem:",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Abrir o template SaaS de gestã"
+    },
+    "scrollAfterClose": 77
+  },
+  {
+    "id": "visualizador-inspiracao",
+    "w": 1280,
+    "h": 900,
+    "mobile": false,
+    "size": "1280",
+    "scrollBefore": 2,
+    "opened": true,
+    "geom": {
+      "vw": 1280,
+      "vh": 900,
+      "top": 36,
+      "bottom": 864,
+      "left": 16,
+      "right": 1264,
+      "height": 828,
+      "width": 1248,
+      "fitsViewport": true,
+      "headH": 86,
+      "footH": 73,
+      "bodyH": 669,
+      "bodyScrollH": 909,
+      "bodyScrollable": true,
+      "bodyShare": 0.74,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"Computador\" 127x32",
+        "button \"Celular\" 92x32",
+        "button \"Conceito anterior: KINETIC LAB\" 36x36",
+        "button \"Próximo conceito: VOLT / MOTOR\" 36x36",
+        "input \"Escolher cor de fundo\" 36x36",
+        "input \"\" 132x40",
+        "button \"Restaurar fundo da paleta\" 36x36",
+        "input \"Escolher cor de texto\" 36x36",
+        "input \"\" 132x40",
+        "button \"Restaurar texto da paleta\" 36x36",
+        "input \"Escolher cor de destaque\" 36x36",
+        "input \"\" 132x40",
+        "button \"Restaurar destaque da paleta\" 36x36",
+        "button \"CSS de referência\" 168x36"
+      ],
+      "smallTargetsN": 19,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 2,
+    "shot": "capturas/estados/visualizador-inspiracao--1280.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 6,
+        "ex": [
+          ".ins-viewer__count :: <span class=\"ins-viewer__count\" aria-live=\"polite\">1 / 20</span>",
+          ".ins-browser__url :: <span class=\"ins-browser__url\">verdantatelier.exemplo</span>",
+          ".ins-panel__sec:nth-child(1) > .ins-panel__hint :: <p class=\"ins-panel__hint\">A identidade pensada para este conceito.</p>"
+        ]
+      },
+      {
+        "id": "landmark-no-duplicate-banner",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          ".ins-browser__view > div > div > .ia-site[data-site=\"Verdant Atelier\"] > header :: <header style=\"border-bottom: 1px solid rgba(29, 42, 30, 0.14);\">"
+        ]
+      },
+      {
+        "id": "landmark-unique",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          ".ins-browser__view > div > div > .ia-site[data-site=\"Verdant Atelier\"] > header > div > nav:nth-child(1) :: <nav style=\"display: flex; gap: 28px; font-size: 14.5px; align-items: center;\"><span>Plantas</span><span>Vasos</span><sp"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Verdant Atelier\":\n  - heading \"Verdant Atelier\" [level=2]\n  - paragraph: Plantas e botânica — Editorial botânico assimétrico, com molduras em arco e muito respiro\n  - button \"Fechar\":\n    - img\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\" [pressed]:\n      - img\n      - text: Computador\n    - button \"Celular\":\n      - img\n      - text: Celular\n  - 'button \"Conceito anterior: KINETIC LAB\"':\n    - img\n  - text: 1 / 20\n  - 'button \"Próximo conceito: VOLT / MOTORS\"':\n    - img\n  - text: Frete grátis para mudas acima de R$ 250 · Vasos de cerâmica feitos à mão no nosso ateliê\n  - banner:\n    - navigation: Plantas Vasos Oficinas\n    - text: Verdant ATELIER\n    - navigation: Diário (2)\n  - text: COLEÇÃO PRIMAVERA · Nº 07\n  - heading \"A arte de cultivar devagar.\" [level=1]:\n    - text: A arte de cultivar\n    - emphasis: devagar.\n  - paragraph: Plantas escolhidas uma a uma, vasos torneados em pequenas fornadas e um guia de cuidado que acompanha cada muda pela vida inteira.\n  - text: Explorar coleção Agendar visita ao ateliê → 120+ espécies no viveiro 48 h para entrega local ∞ guia de cuidado\n  - figure \"Fig. 01 — Monstera deliciosa, 1,2 m\"\n  - text: VIVEIRO\n  - heading \"Coleção da estação\" [level=2]\n  - text: Ver as 120 espécies →\n  - article:\n    - text: Luz indireta\n    - heading \"Ficus lyrata\" [level=3]\n    - text: R$ 189 Figueira-lira\n  - article:\n    - text: Pouca água\n    - heading \"Dracaena trifasciata\" [level=3]\n    - text: R$ 96 Espada-de-são-jorge",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Abrir o site Verdant Atelier ("
+    },
+    "scrollAfterClose": 2
+  },
+  {
+    "id": "detalhe-navegacao",
+    "w": 1280,
+    "h": 900,
+    "mobile": false,
+    "size": "1280",
+    "scrollBefore": 712,
+    "opened": true,
+    "geom": {
+      "vw": 1280,
+      "vh": 900,
+      "top": 36,
+      "bottom": 864,
+      "left": 50,
+      "right": 1230,
+      "height": 828,
+      "width": 1180,
+      "fitsViewport": true,
+      "headH": 86,
+      "footH": 73,
+      "bodyH": 669,
+      "bodyScrollH": 1349,
+      "bodyScrollable": true,
+      "bodyShare": 0.74,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"A · Logo · menu central · açõe\" 224x32",
+        "button \"B · Tudo em uma linha à esquer\" 242x32",
+        "button \"Computador\" 127x32",
+        "button \"Celular\" 92x32",
+        "button \"Produto\" 74x36",
+        "button \"Recursos\" 83x36",
+        "button \"Preços\" 67x36",
+        "button \"Sobre\" 60x36",
+        "button \"Entrar\" 60x36",
+        "button \"Começar grátis\" 128x36",
+        "button \"Exportar especificação\" 221x40",
+        "button \"Selecionar composição A\" 236x40"
+      ],
+      "smallTargetsN": 13,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 712,
+    "shot": "capturas/estados/detalhe-navegacao--1280.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 2,
+        "ex": [
+          ".nvs-detail__note :: <p class=\"nvs-detail__note\"><strong>Composição A — Logo · menu central · ações:</strong> Logo à esquerda, os quatro link",
+          ".nvs-detail__note > strong :: <strong>Composição A — Logo · menu central · ações:</strong>"
+        ]
+      },
+      {
+        "id": "heading-order",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          "h4 :: <h4 style=\"font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif; color: rgb(15, 23, 42);\">Role a página"
+        ]
+      },
+      {
+        "id": "landmark-no-duplicate-banner",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          ".nvs-stage__head--sticky > div[data-surface=\"bordered\"][data-navstyle=\"plain\"][data-layout=\"split\"] > .nvs-hbar[aria-label=\"Header Linha Essencial\"] :: <header class=\"nvs-hbar\" aria-label=\"Header Linha Essencial\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Linha Essencial\":\n  - heading \"Linha Essencial\" [level=2]\n  - paragraph: \"O header mais simples possível: logo, quatro links e um botão. Nada disputa atenção com o conteúdo.\"\n  - button \"Fechar\":\n    - img\n  - group \"Composição\":\n    - button \"A · Logo · menu central · ações\" [pressed]\n    - button \"B · Tudo em uma linha à esquerda\"\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\" [pressed]:\n      - img\n      - text: Computador\n    - button \"Celular\":\n      - img\n      - text: Celular\n  - banner \"Header Linha Essencial\":\n    - button \"Ipê — página inicial\": Ipê\n    - navigation \"Principal\":\n      - list:\n        - listitem:\n          - button \"Produto\"\n        - listitem:\n          - button \"Recursos\"\n        - listitem:\n          - button \"Preços\"\n        - listitem:\n          - button \"Sobre\"\n    - button \"Entrar\"\n    - button \"Começar grátis\"\n  - text: Novo · versão 2.0\n  - strong: Organize o trabalho da equipe em um só lugar\n  - text: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas. Começar agora Ver demonstração\n  - heading \"Role a página para ver o header em ação\" [level=4]\n  - strong: Planeje\n  - strong: Acompanhe\n  - strong: Entregue\n  - paragraph:\n    - strong: \"Composição A — Logo · menu central · ações:\"\n    - text: Logo à esquerda, os quatro links centralizados na barra e “Entrar” + “Começar grátis” à direita. Equilíbrio simétrico clássico. Role a página de exemplo para ver o comportamento ao rolar.\n  - heading \"Resumo\" [level=3]",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Ver em tamanho grande"
+    },
+    "scrollAfterClose": 712
+  },
+  {
+    "id": "confirmar-limpar",
+    "w": 1280,
+    "h": 900,
+    "mobile": false,
+    "size": "1280",
+    "scrollBefore": 532,
+    "opened": true,
+    "geom": {
+      "vw": 1280,
+      "vh": 900,
+      "top": 327,
+      "bottom": 573,
+      "left": 400,
+      "right": 880,
+      "height": 247,
+      "width": 480,
+      "fitsViewport": true,
+      "headH": 109,
+      "footH": 73,
+      "bodyH": 65,
+      "bodyScrollH": 65,
+      "bodyScrollable": false,
+      "bodyShare": 0.07,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"Cancelar\" 96x40",
+        "button \"Sim, limpar\" 112x40"
+      ],
+      "smallTargetsN": 3,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 532,
+    "shot": "capturas/estados/confirmar-limpar--1280.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [],
+    "aria": "- dialog \"Limpar o projeto?\":\n  - heading \"Limpar o projeto?\" [level=2]\n  - paragraph: Todas as escolhas serão apagadas. Você poderá recuperar o estado atual em “Versões salvas”.\n  - button \"Fechar\":\n    - img\n  - text: Esta ação substitui o projeto atual\n  - button \"Cancelar\"\n  - button \"Sim, limpar\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Limpar projeto"
+    },
+    "scrollAfterClose": 532
+  },
+  {
+    "id": "drawer-celular-previa",
+    "w": 1280,
+    "h": 900,
+    "mobile": false,
+    "size": "1280",
+    "scrollBefore": 0,
+    "opened": true,
+    "geom": {
+      "vw": 1280,
+      "vh": 900,
+      "top": 615,
+      "bottom": 1397,
+      "left": 805,
+      "right": 1207,
+      "height": 782,
+      "width": 402,
+      "fitsViewport": false,
+      "headH": null,
+      "footH": null,
+      "bodyH": null,
+      "bodyScrollH": null,
+      "bodyScrollable": null,
+      "bodyShare": null,
+      "controlsOutside": [
+        "button \"Clientes\"",
+        "button \"Relatórios\"",
+        "button \"Agenda\"",
+        "button \"Configurações\"",
+        "button \"Ajuda\"",
+        "button \"Sair\""
+      ],
+      "hOverflow": 0,
+      "smallTargets": [],
+      "smallTargetsN": 0,
+      "pageScrollLocked": "hidden auto"
+    },
+    "scrollAfterOpen": 0,
+    "shot": "capturas/estados/drawer-celular-previa--1280.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "button.lay-ph-icon-btn Fechar menu"
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [],
+    "aria": "- 'group \"Prévia do celular: Drawer pela esquerda\"':\n  - dialog \"Menu de navegação\":\n    - text: MA Marina Alves marina@orla.app\n    - button \"Fechar menu\"\n    - button \"Início\"\n    - button \"Pedidos\"\n    - button \"Clientes\"\n    - button \"Relatórios\"\n    - button \"Agenda\"\n    - button \"Configurações\"\n    - button \"Ajuda\"\n    - button \"Sair\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Abrir menu"
+    },
+    "scrollAfterClose": 479
+  },
+  {
+    "id": "menu-header-previa",
+    "w": 1280,
+    "h": 900,
+    "mobile": false,
+    "size": "1280",
+    "scrollBefore": 12266,
+    "opened": true,
+    "geom": {
+      "vw": 1280,
+      "vh": 900,
+      "top": 482,
+      "bottom": 642,
+      "left": 301,
+      "right": 1247,
+      "height": 160,
+      "width": 946,
+      "fitsViewport": true,
+      "headH": null,
+      "footH": null,
+      "bodyH": null,
+      "bodyScrollH": null,
+      "bodyScrollable": null,
+      "bodyShare": null,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [],
+      "smallTargetsN": 0,
+      "pageScrollLocked": "hidden auto"
+    },
+    "scrollAfterOpen": 12266,
+    "shot": "capturas/estados/menu-header-previa--1280.png",
+    "focusInitial": {
+      "inside": false,
+      "el": "button.nvs-hb Fechar menu"
+    },
+    "focusEscapes": 42,
+    "focusEscapeExamples": [
+      "button Só o Essencial\nIntegral\nRola c",
+      "button Composição A",
+      "button Composição B",
+      "button Ver em tamanho grande",
+      "button Prompt deste elemento",
+      "button Vértice — página inicial"
+    ],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "aria-required-parent",
+        "impact": "critical",
+        "count": 4,
+        "ex": [
+          ".nvs-sheet__item[role=\"menuitem\"][aria-current=\"page\"] :: <button type=\"button\" role=\"menuitem\" class=\"nvs-sheet__item\" aria-current=\"page\"><span class=\"nvs-sheet__num\">01</span>",
+          ".nvs-sheet__group:nth-child(2) > .nvs-sheet__item[role=\"menuitem\"] :: <button type=\"button\" role=\"menuitem\" class=\"nvs-sheet__item\"><span class=\"nvs-sheet__num\">02</span><span>Sobre</span></",
+          ".nvs-sheet__group:nth-child(3) > .nvs-sheet__item[role=\"menuitem\"] :: <button type=\"button\" role=\"menuitem\" class=\"nvs-sheet__item\"><span class=\"nvs-sheet__num\">03</span><span>Diário</span><"
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 1,
+        "ex": [
+          ".nvs-sheet__item[role=\"menuitem\"][aria-current=\"page\"] > .nvs-sheet__num :: <span class=\"nvs-sheet__num\">01</span>"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Menu de navegação\":\n  - menuitem \"01 Trabalhos\"\n  - menuitem \"02 Sobre\"\n  - menuitem \"03 Diário\"\n  - menuitem \"04 Contato\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Abrir menu"
+    },
+    "scrollAfterClose": 13838
+  },
+  {
+    "id": "busca-ctrlk",
+    "w": 320,
+    "h": 800,
+    "mobile": true,
+    "size": "320",
+    "opened": true,
+    "geom": {
+      "vw": 320,
+      "vh": 870,
+      "top": 118,
+      "bottom": 870,
+      "left": 0,
+      "right": 348,
+      "height": 752,
+      "width": 348,
+      "fitsViewport": false,
+      "headH": 81,
+      "footH": null,
+      "bodyH": 671,
+      "bodyScrollH": 2069,
+      "bodyScrollable": true,
+      "bodyShare": 0.77,
+      "controlsOutside": [
+        "button \"Fechar\""
+      ],
+      "hOverflow": 0,
+      "smallTargets": [],
+      "smallTargetsN": 0,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 0,
+    "shot": "capturas/estados/busca-ctrlk--320.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "input.ui-input Buscar funcionalidades"
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 9,
+        "ex": [
+          "button[data-active=\"true\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Escolha entre modo guiado e livre.</span>",
+          "li[role=\"option\"]:nth-child(2) > .search-item[data-active=\"false\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Acesso direto a qualquer módulo.</span>",
+          "li[role=\"option\"]:nth-child(3) > .search-item[data-active=\"false\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Nome, tipo, público e funcionalidades.</span>"
+        ]
+      },
+      {
+        "id": "nested-interactive",
+        "impact": "serious",
+        "count": 28,
+        "ex": [
+          "li[role=\"option\"]:nth-child(1) :: <li role=\"option\" aria-selected=\"true\">",
+          "li[role=\"option\"]:nth-child(2) :: <li role=\"option\" aria-selected=\"false\">",
+          "li[role=\"option\"]:nth-child(3) :: <li role=\"option\" aria-selected=\"false\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Buscar funcionalidades\":\n  - heading \"Buscar funcionalidades\" [level=2]\n  - button \"Fechar\":\n    - img\n  - searchbox \"Buscar funcionalidades\"\n  - listbox \"Resultados\":\n    - option \"Início Escolha entre modo guiado e livre.\" [selected]:\n      - button \"Início Escolha entre modo guiado e livre.\"\n    - option \"Todos os módulos Acesso direto a qualquer módulo.\":\n      - button \"Todos os módulos Acesso direto a qualquer módulo.\"\n    - option \"Objetivo do projeto Nome, tipo, público e funcionalidades.\":\n      - button \"Objetivo do projeto Nome, tipo, público e funcionalidades.\"\n    - option \"Landing pages 24 conceitos de página de apresentação.\":\n      - button \"Landing pages 24 conceitos de página de apresentação.\"\n    - option \"Login 24 composições de tela de entrar.\":\n      - button \"Login 24 composições de tela de entrar.\"\n    - option \"Cadastro 8 fluxos de criação de conta.\":\n      - button \"Cadastro 8 fluxos de criação de conta.\"\n    - option \"Layout desktop 42 arquiteturas para o computador.\":\n      - button \"Layout desktop 42 arquiteturas para o computador.\"\n    - option \"Layout mobile 44 arquiteturas para o celular.\":\n      - button \"Layout mobile 44 arquiteturas para o celular.\"\n    - option \"Live Site Preview Todas as escolhas em uma prévia única.\":\n      - button \"Live Site Preview Todas as escolhas em uma prévia única.\"\n    - option \"Color System 60 paletas, tokens, tipografia e geometria.\":\n      - button \"Color System 60 paletas, tokens, tipografia e geometria.\"\n    - option \"Navigation Showcase 36 headers e 36 sidebars.\":\n      - button \"Navigation Showcase 36 headers e 36 sidebars.\"\n    - option \"Componentes 66 categorias em 16 famílias visuais.\":\n      - button \"Componentes 66 categorias em 16 famílias visuais.\"\n    - option \"Inspiration Gallery 20 sites fictícios completos.\":\n      - button \"Inspiration Gallery 20 sites fictícios completos.\"\n    - option \"Template Studio Modelos reutilizáveis de páginas.\":\n      - button \"Template Studio Modelos reutilizáveis de páginas.\"\n    - option \"Central de Prompts Master Prompt e prompts individuais.\":\n      - button \"Central de Prompts Master Prompt e prompts individuais.\"\n    - option \"Exportar e importar JSON, CSS, HTML, backup e importação.\":\n      - button \"Exportar e importar JSON, CSS, HTML, backup e importação.\"\n    - option \"Validação responsiva Teste sites reais e gere prompts de correção.\":\n      - button \"Validação responsiva Teste sites reais e gere prompts de correção.\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": false,
+      "el": "body Pular para o conteúdo\nAtelier "
+    },
+    "scrollAfterClose": 0
+  },
+  {
+    "id": "busca-botao",
+    "w": 320,
+    "h": 800,
+    "mobile": true,
+    "size": "320",
+    "scrollBefore": 0,
+    "opened": true,
+    "geom": {
+      "vw": 320,
+      "vh": 870,
+      "top": 118,
+      "bottom": 870,
+      "left": 0,
+      "right": 348,
+      "height": 752,
+      "width": 348,
+      "fitsViewport": false,
+      "headH": 81,
+      "footH": null,
+      "bodyH": 671,
+      "bodyScrollH": 2069,
+      "bodyScrollable": true,
+      "bodyShare": 0.77,
+      "controlsOutside": [
+        "button \"Fechar\""
+      ],
+      "hOverflow": 0,
+      "smallTargets": [],
+      "smallTargetsN": 0,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 0,
+    "shot": "capturas/estados/busca-botao--320.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "input.ui-input Buscar funcionalidades"
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 9,
+        "ex": [
+          "button[data-active=\"true\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Escolha entre modo guiado e livre.</span>",
+          "li[role=\"option\"]:nth-child(2) > .search-item[data-active=\"false\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Acesso direto a qualquer módulo.</span>",
+          "li[role=\"option\"]:nth-child(3) > .search-item[data-active=\"false\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Nome, tipo, público e funcionalidades.</span>"
+        ]
+      },
+      {
+        "id": "nested-interactive",
+        "impact": "serious",
+        "count": 28,
+        "ex": [
+          "li[role=\"option\"]:nth-child(1) :: <li role=\"option\" aria-selected=\"true\">",
+          "li[role=\"option\"]:nth-child(2) :: <li role=\"option\" aria-selected=\"false\">",
+          "li[role=\"option\"]:nth-child(3) :: <li role=\"option\" aria-selected=\"false\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Buscar funcionalidades\":\n  - heading \"Buscar funcionalidades\" [level=2]\n  - button \"Fechar\":\n    - img\n  - searchbox \"Buscar funcionalidades\"\n  - listbox \"Resultados\":\n    - option \"Início Escolha entre modo guiado e livre.\" [selected]:\n      - button \"Início Escolha entre modo guiado e livre.\"\n    - option \"Todos os módulos Acesso direto a qualquer módulo.\":\n      - button \"Todos os módulos Acesso direto a qualquer módulo.\"\n    - option \"Objetivo do projeto Nome, tipo, público e funcionalidades.\":\n      - button \"Objetivo do projeto Nome, tipo, público e funcionalidades.\"\n    - option \"Landing pages 24 conceitos de página de apresentação.\":\n      - button \"Landing pages 24 conceitos de página de apresentação.\"\n    - option \"Login 24 composições de tela de entrar.\":\n      - button \"Login 24 composições de tela de entrar.\"\n    - option \"Cadastro 8 fluxos de criação de conta.\":\n      - button \"Cadastro 8 fluxos de criação de conta.\"\n    - option \"Layout desktop 42 arquiteturas para o computador.\":\n      - button \"Layout desktop 42 arquiteturas para o computador.\"\n    - option \"Layout mobile 44 arquiteturas para o celular.\":\n      - button \"Layout mobile 44 arquiteturas para o celular.\"\n    - option \"Live Site Preview Todas as escolhas em uma prévia única.\":\n      - button \"Live Site Preview Todas as escolhas em uma prévia única.\"\n    - option \"Color System 60 paletas, tokens, tipografia e geometria.\":\n      - button \"Color System 60 paletas, tokens, tipografia e geometria.\"\n    - option \"Navigation Showcase 36 headers e 36 sidebars.\":\n      - button \"Navigation Showcase 36 headers e 36 sidebars.\"\n    - option \"Componentes 66 categorias em 16 famílias visuais.\":\n      - button \"Componentes 66 categorias em 16 famílias visuais.\"\n    - option \"Inspiration Gallery 20 sites fictícios completos.\":\n      - button \"Inspiration Gallery 20 sites fictícios completos.\"\n    - option \"Template Studio Modelos reutilizáveis de páginas.\":\n      - button \"Template Studio Modelos reutilizáveis de páginas.\"\n    - option \"Central de Prompts Master Prompt e prompts individuais.\":\n      - button \"Central de Prompts Master Prompt e prompts individuais.\"\n    - option \"Exportar e importar JSON, CSS, HTML, backup e importação.\":\n      - button \"Exportar e importar JSON, CSS, HTML, backup e importação.\"\n    - option \"Validação responsiva Teste sites reais e gere prompts de correção.\":\n      - button \"Validação responsiva Teste sites reais e gere prompts de correção.\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Buscar funcionalidades (Ctrl+K"
+    },
+    "scrollAfterClose": 0
+  },
+  {
+    "id": "menu-studio",
+    "w": 320,
+    "h": 800,
+    "mobile": true,
+    "size": "320",
+    "scrollBefore": 0,
+    "opened": true,
+    "geom": {
+      "vw": 320,
+      "vh": 800,
+      "top": 0,
+      "bottom": 800,
+      "left": 0,
+      "right": 275,
+      "height": 800,
+      "width": 275,
+      "fitsViewport": true,
+      "headH": null,
+      "footH": null,
+      "bodyH": null,
+      "bodyScrollH": null,
+      "bodyScrollable": null,
+      "bodyShare": null,
+      "controlsOutside": [
+        "a \"Objetivo do projeto\"",
+        "a \"Landing pages\"",
+        "a \"Login\"",
+        "a \"Cadastro\"",
+        "a \"Layout desktop\"",
+        "a \"Layout mobile\"",
+        "a \"Live Site Preview\"",
+        "button \"IDENTIDADE\"",
+        "a \"Color System\"",
+        "a \"Navigation Showcase\""
+      ],
+      "hOverflow": 0,
+      "smallTargets": [],
+      "smallTargetsN": 0,
+      "pageScrollLocked": "hidden auto"
+    },
+    "scrollAfterOpen": 0,
+    "shot": "capturas/estados/menu-studio--320.png",
+    "focusInitial": {
+      "inside": false,
+      "el": "button.ui-icon-btn Abrir menu"
+    },
+    "focusEscapes": 4,
+    "focusEscapeExamples": [
+      "a Atelier UI — início",
+      "button Buscar funcionalidades (Ctrl+K",
+      "button Abrir Master Prompt",
+      "button Paletas"
+    ],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 4,
+        "ex": [
+          "button[aria-controls=\"grp-identidade\"] :: <button type=\"button\" class=\"shell-group__toggle\" aria-expanded=\"true\" aria-controls=\"grp-identidade\">",
+          "button[aria-controls=\"grp-inspiracao\"] :: <button type=\"button\" class=\"shell-group__toggle\" aria-expanded=\"true\" aria-controls=\"grp-inspiracao\">",
+          "button[aria-controls=\"grp-entrega\"] :: <button type=\"button\" class=\"shell-group__toggle\" aria-expanded=\"true\" aria-controls=\"grp-entrega\">"
+        ]
+      }
+    ],
+    "aria": "- complementary \"Navegação do Studio\":\n  - text: Menu\n  - button \"Fechar menu\":\n    - img\n  - group \"Modo de utilização\":\n    - button \"Guiado\" [pressed]:\n      - img\n      - text: Guiado\n    - button \"Livre\":\n      - img\n      - text: Livre\n  - list:\n    - listitem:\n      - link \"Início\":\n        - /url: \"#/\"\n  - button \"Construtor guiado\" [expanded]\n  - list:\n    - listitem:\n      - link \"Objetivo do projeto (concluída)\":\n        - /url: \"#/guiado/objetivo\"\n    - listitem:\n      - link \"Landing, login e cadastro (concluída)\":\n        - /url: \"#/guiado/entrada\"\n    - listitem:\n      - link \"Arquitetura do computador (concluída)\":\n        - /url: \"#/guiado/desktop\"\n    - listitem:\n      - link \"Arquitetura do celular (concluída)\":\n        - /url: \"#/guiado/mobile\"\n    - listitem:\n      - link \"Revisão do esqueleto (concluída)\":\n        - /url: \"#/guiado/revisao\"\n    - listitem:\n      - link \"Prévia integrada\":\n        - /url: \"#/guiado/preview\"\n    - listitem:\n      - link \"Identidade visual\":\n        - /url: \"#/guiado/identidade\"\n    - listitem:\n      - link \"Headers e sidebars\":",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": false,
+      "el": "button ENTREGA"
+    },
+    "scrollAfterClose": 626
+  },
+  {
+    "id": "previa-landing",
+    "w": 320,
+    "h": 800,
+    "mobile": true,
+    "size": "320",
+    "scrollBefore": 2536,
+    "opened": true,
+    "geom": {
+      "vw": 320,
+      "vh": 800,
+      "top": 48,
+      "bottom": 800,
+      "left": 0,
+      "right": 320,
+      "height": 752,
+      "width": 320,
+      "fitsViewport": true,
+      "headH": 109,
+      "footH": 129,
+      "bodyH": 514,
+      "bodyScrollH": 1215,
+      "bodyScrollable": true,
+      "bodyShare": 0.64,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "input \"\" 1x1",
+        "button \"Abrir menu\" 26x26",
+        "button \"Começar grátis\" 221x33",
+        "button \"Ver demonstração\" 221x33",
+        "button \"Começar grátis\" 221x33"
+      ],
+      "smallTargetsN": 5,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 2536,
+    "shot": "capturas/estados/previa-landing--320.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 1,
+        "ex": [
+          ".ui-help :: <span class=\"ui-help\" style=\"display: block;\">Por padrão a landing usa a paleta global do projeto. Ative só se quiser es"
+        ]
+      },
+      {
+        "id": "landmark-banner-is-top-level",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          "div[data-device=\"mobile\"] > header :: <header style=\"position: relative; top: 0px; left: 0px; right: 0px; z-index: 5; background: transparent; border-bottom: "
+        ]
+      },
+      {
+        "id": "landmark-contentinfo-is-top-level",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          "footer :: <footer style=\"background: rgb(251, 250, 255); color: rgb(22, 19, 43); border-top: 1px solid rgb(227, 227, 230);\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Aurora Flow\":\n  - heading \"Aurora Flow\" [level=2]\n  - paragraph: SaaS e produtividade · Hero centralizado\n  - button \"Fechar\":\n    - img\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\":\n      - img\n      - text: Computador\n    - button \"Celular\" [pressed]:\n      - img\n      - text: Celular\n  - group \"Cores da prévia\":\n    - button \"Cores do modelo\" [pressed]\n    - button \"Minha identidade\"\n  - switch \"Manter as cores originais deste modelo no projeto Por padrão a landing usa a paleta global do projeto. Ative só se quiser esta exceção.\"\n  - text: Manter as cores originais deste modelo no projeto Por padrão a landing usa a paleta global do projeto. Ative só se quiser esta exceção.\n  - region \"Prévia da landing Aurora Flow\":\n    - text: Aurora Flow\n    - button \"Abrir menu\":\n      - img\n    - text: \"Novo: automações com um clique\"\n    - heading \"Organize o trabalho da equipe em um só fluxo\" [level=1]\n    - paragraph: Tarefas, documentos e prazos no mesmo lugar. Menos reuniões, mais entregas.\n    - button \"Começar grátis\":\n      - text: Começar grátis\n      - img\n    - button \"Ver demonstração\":\n      - img\n      - text: Ver demonstração\n    - paragraph: 14 dias de teste grátis · sem cartão de crédito\n    - strong: Sprint 14\n    - text: A fazer · 3 Em andamento · 2\n    - paragraph: Equipes que já trabalham no fluxo\n    - text: Nimbo Kora Vetta Lumen Brisa Orla Recursos\n    - heading \"Por que escolher Aurora Flow\" [level=2]\n    - img\n    - heading \"Quadros visuais\" [level=3]\n    - paragraph: Arraste tarefas entre etapas e veja o andamento de tudo.\n    - img",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Ver prévia"
+    },
+    "scrollAfterClose": 2536
+  },
+  {
+    "id": "previa-login",
+    "w": 320,
+    "h": 800,
+    "mobile": true,
+    "size": "320",
+    "scrollBefore": 1011,
+    "opened": true,
+    "geom": {
+      "vw": 320,
+      "vh": 800,
+      "top": 48,
+      "bottom": 800,
+      "left": 0,
+      "right": 320,
+      "height": 752,
+      "width": 320,
+      "fitsViewport": true,
+      "headH": 109,
+      "footH": 129,
+      "bodyH": 514,
+      "bodyScrollH": 952,
+      "bodyScrollable": true,
+      "bodyShare": 0.64,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "input \"\" 1x1",
+        "input \"\" 221x30",
+        "button \"Esqueci minha senha\" 97x14",
+        "input \"\" 221x30",
+        "button \"Mostrar senha\" 25x25",
+        "input \"\" 1x1",
+        "button \"Entrar\" 221x30",
+        "button \"Criar conta\" 51x14"
+      ],
+      "smallTargetsN": 8,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 1011,
+    "shot": "capturas/estados/previa-login--320.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [
+      "input "
+    ],
+    "axe": [
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 1,
+        "ex": [
+          "form > div:nth-child(3) > div:nth-child(1) > button[type=\"button\"] :: <button type=\"button\" style=\"background: none; border: 0px; padding: 0px; color: rgb(29, 78, 216); font-size: 15px; font"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Clássico central\":\n  - heading \"Clássico central\" [level=2]\n  - paragraph: Cartão central com a marca acima\n  - button \"Fechar\":\n    - img\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\":\n      - img\n      - text: Computador\n    - button \"Celular\" [pressed]:\n      - img\n      - text: Celular\n  - group \"Tela exibida\":\n    - button \"Entrar\" [pressed]\n    - button \"Criar conta\"\n  - switch \"Mostrar estados de erro\"\n  - text: Mostrar estados de erro\n  - region \"Prévia de Clássico central\":\n    - text: Nexo Capital\n    - form \"Entrar\":\n      - heading \"Entrar na sua conta\" [level=2]\n      - paragraph: Use seu e-mail e senha para continuar.\n      - text: E-mail\n      - textbox \"E-mail\":\n        - /placeholder: nome@empresa.com\n      - text: Senha\n      - button \"Esqueci minha senha\"\n      - textbox \"Senha\":\n        - /placeholder: Sua senha\n      - button \"Mostrar senha\":\n        - img\n      - checkbox \"Lembrar de mim neste dispositivo\"\n      - text: Lembrar de mim neste dispositivo\n      - button \"Entrar\"\n      - paragraph:\n        - text: Não tem conta?\n        - button \"Criar conta\"\n    - text: Termos Privacidade Ajuda\n  - paragraph: Escolha um fluxo na página Cadastro para ver a tela “Criar conta” correspondente.\n  - paragraph: \"Demonstração de interface: experimente digitar, mostrar a senha, enviar vazio e “Esqueci minha senha”. Nenhum dado é enviado.\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Ver prévia"
+    },
+    "scrollAfterClose": 1011
+  },
+  {
+    "id": "previa-cadastro",
+    "w": 320,
+    "h": 800,
+    "mobile": true,
+    "size": "320",
+    "scrollBefore": 708,
+    "opened": true,
+    "geom": {
+      "vw": 320,
+      "vh": 800,
+      "top": 48,
+      "bottom": 800,
+      "left": 0,
+      "right": 320,
+      "height": 752,
+      "width": 320,
+      "fitsViewport": true,
+      "headH": 111,
+      "footH": 129,
+      "bodyH": 512,
+      "bodyScrollH": 952,
+      "bodyScrollable": true,
+      "bodyShare": 0.64,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "input \"\" 1x1",
+        "button \"Entrar\" 110x28",
+        "button \"Criar conta\" 110x28",
+        "input \"\" 221x30",
+        "input \"\" 221x30",
+        "input \"\" 221x30",
+        "button \"Mostrar senha\" 25x25",
+        "button \"Criar conta\" 221x30"
+      ],
+      "smallTargetsN": 8,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 708,
+    "shot": "capturas/estados/previa-cadastro--320.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [
+      "input "
+    ],
+    "axe": [],
+    "aria": "- dialog \"Cadastro na mesma tela do login\":\n  - heading \"Cadastro na mesma tela do login\" [level=2]\n  - paragraph: \"Campos: Nome, E-mail, Senha\"\n  - button \"Fechar\":\n    - img\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\":\n      - img\n      - text: Computador\n    - button \"Celular\" [pressed]:\n      - img\n      - text: Celular\n  - group \"Tela exibida\":\n    - button \"Entrar\"\n    - button \"Criar conta\" [pressed]\n  - switch \"Mostrar estados de erro\"\n  - text: Mostrar estados de erro\n  - region \"Prévia de Cadastro na mesma tela do login\":\n    - text: Nexo Capital Suporte de TI\n    - form \"Criar conta\":\n      - tablist \"Entrar ou criar conta\":\n        - tab \"Entrar\"\n        - tab \"Criar conta\" [selected]\n      - heading \"Criar conta\" [level=2]\n      - paragraph: Leva menos de um minuto.\n      - text: Nome\n      - textbox \"Nome\":\n        - /placeholder: Como podemos te chamar?\n      - text: E-mail\n      - textbox \"E-mail\":\n        - /placeholder: nome@empresa.com\n      - text: Senha\n      - textbox \"Senha\":\n        - /placeholder: Mínimo de 8 caracteres\n      - button \"Mostrar senha\":\n        - img\n      - list \"Requisitos da senha\":\n        - listitem: Pelo menos 8 caracteres (pendente)\n        - listitem: Uma letra maiúscula (pendente)\n        - listitem: Um número (pendente)",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Ver prévia"
+    },
+    "scrollAfterClose": 708
+  },
+  {
+    "id": "prompt-individual",
+    "w": 320,
+    "h": 800,
+    "mobile": true,
+    "size": "320",
+    "scrollBefore": 663,
+    "opened": true,
+    "geom": {
+      "vw": 320,
+      "vh": 800,
+      "top": 48,
+      "bottom": 800,
+      "left": 0,
+      "right": 320,
+      "height": 752,
+      "width": 320,
+      "fitsViewport": true,
+      "headH": 204,
+      "footH": 129,
+      "bodyH": 419,
+      "bodyScrollH": 600,
+      "bodyScrollable": true,
+      "bodyShare": 0.52,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [],
+      "smallTargetsN": 0,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 663,
+    "shot": "capturas/estados/prompt-individual--320.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "scrollable-region-focusable",
+        "impact": "serious",
+        "count": 2,
+        "ex": [
+          ".ui-modal__body :: <div class=\"ui-modal__body\">",
+          "pre :: <pre class=\"ui-code\" data-testid=\"prompt-text\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Prompt individual — Sidebar integral clássica\":\n  - heading \"Prompt individual — Sidebar integral clássica\" [level=2]\n  - paragraph: \"Autossuficiente: inclui a identidade herdada e as regras de responsividade. Cole em Claude Code, Cursor ou outra IA.\"\n  - button \"Fechar\":\n    - img\n  - text: \"# Prompt — Layout desktop: Sidebar integral clássica > Gerado pelo Atelier UI para o projeto “Nexo Capital” (Dashboard). Este prompt é autossuficiente: implemente somente este elemento, exatamente como descrito. ## Layout desktop: Sidebar integral clássica — Sidebar integral `id: sidebar-integral-classica` · origem: módulo “desktop” Shell de aplicação com sidebar integral à esquerda (do topo à base) e coluna principal com header fixo e conteúdo rolável. **Estrutura** - Grid de duas colunas: grid-template-columns: 252px minmax(0, 1fr); a coluna principal tem grid-template-rows: 64px minmax(0, 1fr) (header + conteúdo). - Sidebar integral de ≈252 px na borda esquerda: vai do topo à base da janela (height: 100dvh), encostada na borda, sem margem externa, sem cantos arredondados e sem sombra flutuante. - Topo da sidebar com a mesma altura do header (≈64 px), contendo logo e nome do produto, alinhado ao header para formar uma linha horizontal contínua. - Itens de navegação com 40–44 px de altura, ícone de 20 px + rótulo, agrupados por seções com título discreto; o item ativo tem fundo de seleção, cor de texto ativa e indicador lateral. - Rodapé da sidebar com perfil do usuário e atalho de configurações, separado por borda fina. - Header de ≈64 px: título da página ou breadcrumb à esquerda; busca, notificações e avatar à direita; borda inferior fina de 1 px. O header fica somente sobre a coluna principal — não passa por cima da sidebar. - Área de conteúdo com padding de 24–32 px, largura fluida e grids internos com minmax(0, 1fr); nenhum cartão encolhe abaixo de ≈280 px — reduza colunas antes. **Propriedades** - gridColumns: 252px 1fr - gridRows: 64px 1fr - gridAreas: \\\"sidebar header\\\" \\\"sidebar content\\\" - gap: 0px - padding: 0px - regioes: sidebar (sidebar), header (header), content (content) - oneScreen: não **Medidas recomendadas (adaptáveis)** - sidebar: ≈252 px - header: ≈64 px **Comportamento e estados** - A sidebar é fixa (position: sticky; top: 0; height: 100dvh) e tem rolagem interna própria (overflow-y: auto; overscroll-behavior: contain) quando os itens não cabem; a página rola apenas na coluna de conteúdo. - O header é sticky (position: sticky; top: 0) acima do conteúdo e não rola com ele; z-index superior ao conteúdo e inferior a modais. - Grupos de navegação podem recolher (accordion) e lembram o estado; hover, focus-visible e item ativo são visualmente distintos. **Responsividade deste item** - 1280 px ou mais: sidebar esquerda com ≈252 px e rótulos completos. - 1024–1279 px: a sidebar reduz para ≈220 px; o conteúdo reduz colunas antes de comprimir cartões ou tabelas. - 768–1023 px: a sidebar recolhe para um rail integral de ≈72 px (só ícones, com tooltip e aria-label); um botão expande a sidebar completa em sobreposição, com scrim, Esc e clique fora para fechar. - Abaixo de 768 px vale a arquitetura mobile escolhida separadamente no Studio: não converta a navegação desktop em drawer, rail ou bottom navigation por conta própria. **Observações** - Sidebar integral: nunca flutuante, sem margem externa e sem cantos arredondados. - One Page, não One Screen: a página pode rolar verticalmente; não force o conteúdo a caber em 100dvh nem esconda seções para evitar rolagem. - As medidas são recomendações para 1280 × 800; adapte à tela e ao conteúdo preservando a estrutura escolhida. ## Identidade herdada - Paleta “Azul Institucional” (clara): primária #1d4ed8 (texto #ffffff), secundária #1e3a8a, destaque #0ea5e9. - Fundo #f8fafc, superfície #ffffff, texto #0f172a, texto secundário #686d7a, borda #e6e6e6. - Estados: hover #f4f4f4, active #ebebeb, selected #e4eafa/#1d4ed8, disabled #f0f0f0/#93979f, foco #1d4ed8. - Semânticos: success #117e39, warning #a85c04, error #dc2626, info #2563eb. - Tipografia: títulos Inter 650, textos Inter 400, base 15 px. - Geometria: cantos “medium”, borda 1 px, sombra “none”, superfícies “outlined”, densidade “comfortable”. ## Responsividade obrigatória Valide em 320, 344, 360, 375, 390, 412, 430, 480, 600, 768, 820, 1024, 1280, 1440, 1920 px. - Nenhum overflow horizontal involuntário em nenhuma largura de 320 px a 1920 px (inclusive larguras intermediárias). - Nenhum texto cortado: use quebra de linha, `min-width: 0` em itens flex/grid e `overflow-wrap: anywhere` em conteúdos longos (e-mails, URLs, códigos). - Nenhuma sobreposição indevida entre elementos, inclusive com o teclado virtual aberto. - Alvos de toque com no mínimo 44 × 44 px no celular e espaçamento de pelo menos 8 px entre alvos adjacentes. - Campos de formulário com fonte de pelo menos 16 px no celular (evita zoom automático no iOS). - Imagens e mídias responsivas (`max-width: 100%`, `aspect-ratio` definido) sem distorção. - Grids adaptáveis: reduza colunas progressivamente; nunca comprima cartões abaixo de uma largura legível. - Suporte a zoom de até 200% e a fonte ampliada do sistema sem perda de conteúdo ou funcionalidade. - Respeite as safe areas (`env(safe-area-inset-*)`) em barras fixas, docks e menus inferiores. - Funcione na orientação horizontal do celular: barras fixas não podem ocupar mais de 25% da altura. - Use `100dvh` (com fallback) em vez de `100vh` para alturas de tela cheia. - Menus acessíveis por mouse, toque e teclado (Tab, Enter, Espaço, Esc), com foco visível. - Respeite `prefers-reduced-motion` reduzindo animações. ## Regras de implementação - Não modifique escolhas aprovadas nesta especificação sem solicitação explícita do usuário. - Preserve a identidade global: todos os componentes usam os tokens definidos; exceções só onde estiverem listadas. - Não adicione decoração por conta própria (sombras, gradientes, vidro, animações, cantos arredondados) além do especificado. - Respeite a geometria escolhida: se a sidebar é integral, ela vai do topo à base; se é flutuante, tem afastamento das bordas. Não converta uma na outra. - Evite overflow e colisões; valide em todas as larguras de referência. - Mantenha consistência de espaçamentos (escala de 4 px), tipografia e estados de interação (hover, focus-visible, active, disabled, selected). - Implemente estados de carregamento, vazio e erro para listas, tabelas e formulários. - Use componentes reutilizáveis e tokens centralizados (variáveis CSS ou tema); nada de cores fixas espalhadas pelo código. - Garanta acessibilidade: HTML semântico, labels, contraste WCAG AA, navegação por teclado e leitores de tela. - Teste o resultado (visual e funcional) em celular, tablet e desktop antes de concluir.\"\n  - button \"Baixar .md\":\n    - img\n    - text: Baixar .md\n  - button \"Copiar prompt\":\n    - img\n    - text: Copiar prompt",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Prompt deste elemento"
+    },
+    "scrollAfterClose": 663
+  },
+  {
+    "id": "editor-componente",
+    "w": 320,
+    "h": 800,
+    "mobile": true,
+    "size": "320",
+    "scrollBefore": 8862,
+    "opened": true,
+    "geom": {
+      "vw": 320,
+      "vh": 800,
+      "top": 48,
+      "bottom": 800,
+      "left": 0,
+      "right": 320,
+      "height": 752,
+      "width": 320,
+      "fitsViewport": true,
+      "headH": 156,
+      "footH": 129,
+      "bodyH": 467,
+      "bodyScrollH": 2980,
+      "bodyScrollable": true,
+      "bodyShare": 0.58,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "a \"Alterar em Cores e identidade\" 236x32",
+        "input \"\" 186x28",
+        "input \"\" 1x1",
+        "input \"\" 1x1",
+        "input \"\" 1x1",
+        "input \"Cor primária: seletor de cor\" 40x40",
+        "input \"Texto sobre primária: seletor \" 40x40",
+        "input \"Cor de destaque: seletor de co\" 40x40",
+        "input \"Superfície: seletor de cor\" 40x40"
+      ],
+      "smallTargetsN": 9,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 8862,
+    "shot": "capturas/estados/editor-componente--320.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "count": 5,
+        "ex": [
+          ".cmp-trow[role=\"row\"]:nth-child(1) :: <div role=\"row\" class=\"cmp-trow\" style=\"--cols-wide: 22px mi...\">",
+          ".cmp-trow[role=\"row\"]:nth-child(2) :: <div role=\"row\" class=\"cmp-trow\" style=\"--cols-wide: 22px mi...\">",
+          ".cmp-trow[role=\"row\"]:nth-child(3) :: <div role=\"row\" class=\"cmp-trow\" style=\"--cols-wide: 22px mi...\">"
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 3,
+        "ex": [
+          ".cmp-trow[role=\"row\"]:nth-child(3) > span:nth-child(3) > span :: <span style=\"display: inline-flex...\">",
+          ".cmp-trow[role=\"row\"]:nth-child(5) > span:nth-child(3) > span :: <span style=\"display: inline-flex...\">",
+          ".cmp-ed__controls > .cmp-ctl > .ui-help :: <span class=\"ui-help\">Ex.: “Botão principal do checkout”. Ajuda a IA a saber onde usar.</span>"
+        ]
+      }
+    ],
+    "aria": "- 'dialog \"Personalizar: Tabelas de dados\"':\n  - 'heading \"Personalizar: Tabelas de dados\" [level=2]'\n  - paragraph: Tabelas · família Compact Pro. Tudo é salvo na hora e vai para o Master Prompt.\n  - button \"Fechar\":\n    - img\n  - group \"Estado da prévia\":\n    - button \"Normal\" [pressed]\n    - button \"Hover\"\n    - button \"Focus\"\n    - button \"Active\"\n    - button \"Disabled\"\n  - text: Pedidos recentes\n  - table:\n    - row \"Cliente Status Valor\"\n    - row \"AS Ana Souza Pago R$ 89,00\"\n    - row \"BL Bruno Lima Pendente R$ 226,00\"\n    - row \"CD Carla Dias Pago R$ 363,00\"\n    - row \"DR Diego Rocha Cancelado R$ 500,00\"\n  - paragraph: Clique em qualquer parte da prévia (texto, ícone, botão) para editá-la.\n  - text: Nome no projeto\n  - textbox \"Nome no projeto\":\n    - /placeholder: Tabelas\n    - text: Tabelas de dados\n  - text: \"Ex.: “Botão principal do checkout”. Ajuda a IA a saber onde usar.\"\n  - region \"Token global somente leitura\":\n    - text: \"1\"\n    - heading \"Token global somente leitura\" [level=3]\n    - paragraph: A paleta aprovada vale para o projeto inteiro. Este componente a herda por padrão.\n    - text: Cor primária Cor de destaque Superfície Texto principal Borda Aa Inter\n    - link \"Alterar em Cores e identidade\":\n      - /url: \"#/modulos/cores\"\n  - region \"Estilo do componente (variação / família)\":\n    - text: \"2\"\n    - heading \"Estilo do componente (variação / família)\" [level=3]\n    - paragraph: A família define formato, bordas, sombras, fonte e densidade. Trocar aqui muda só este componente.\n    - combobox \"Família visual\":\n      - option \"1. Soft Pill\"\n      - option \"2. Swiss Minimal\"\n      - option \"3. Dark Luxury\"\n      - option \"4. Glassmorphism\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Personalizar"
+    },
+    "scrollAfterClose": 8862
+  },
+  {
+    "id": "editor-template",
+    "w": 320,
+    "h": 800,
+    "mobile": true,
+    "size": "320",
+    "scrollBefore": 1028,
+    "opened": true,
+    "geom": {
+      "vw": 320,
+      "vh": 800,
+      "top": 48,
+      "bottom": 800,
+      "left": 0,
+      "right": 320,
+      "height": 752,
+      "width": 320,
+      "fitsViewport": true,
+      "headH": 109,
+      "footH": 162,
+      "bodyH": 481,
+      "bodyScrollH": 2354,
+      "bodyScrollable": true,
+      "bodyShare": 0.6,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "input \"Cor principal: abrir seletor d\" 40x40",
+        "input \"Fundo: abrir seletor de cor\" 40x40",
+        "input \"Texto: abrir seletor de cor\" 40x40",
+        "button \"Todas\" 56x36",
+        "button \"Nenhuma\" 79x36",
+        "input \"\" 18x18",
+        "input \"\" 18x18",
+        "input \"\" 18x18",
+        "input \"\" 18x18",
+        "input \"\" 18x18",
+        "input \"\" 18x18",
+        "input \"\" 18x18",
+        "input \"\" 18x18",
+        "input \"\" 18x18",
+        "input \"\" 18x18"
+      ],
+      "smallTargetsN": 15,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 1028,
+    "shot": "capturas/estados/editor-template--320.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 1,
+        "ex": [
+          ".tpl-color:nth-child(2) > .tpl-color__text > .tpl-color__help :: <span class=\"tpl-color__help\">Botões, links e destaques.</span>"
+        ]
+      },
+      {
+        "id": "landmark-no-duplicate-banner",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          "div[data-tpl-section=\"cabecalho\"] > header :: <header style=\"background: rgb(255, 255, 255); color: rgb(15, 23, 42); padding-top: 0px; padding-bottom: 0px; font-famil"
+        ]
+      },
+      {
+        "id": "scrollable-region-focusable",
+        "impact": "serious",
+        "count": 1,
+        "ex": [
+          ".tpl-frame :: <div class=\"tpl-frame\" data-device=\"desktop\" data-testid=\"template-preview\" style=\"--tpl-inv: 4.475524475524475;\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"SaaS de gestão\":\n  - heading \"SaaS de gestão\" [level=2]\n  - paragraph: Produtos digitais · marca fictícia “Fluxo” · 10 partes\n  - button \"Fechar\":\n    - img\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\" [pressed]:\n      - img\n      - text: Computador\n    - button \"Celular\":\n      - img\n      - text: Celular\n  - banner:\n    - text: Fluxo\n    - navigation: Produto Recursos Preços Clientes\n    - text: Entrar Começar grátis\n  - text: \"Novo: automações com IA\"\n  - heading \"Projetos em dia, sem planilhas espalhadas\" [level=1]\n  - paragraph: O Fluxo reúne tarefas, prazos e conversas do time em um só lugar — e avisa antes que algo atrase.\n  - text: Começar grátis Ver demonstração 14 dias grátis · sem cartão de crédito\n  - paragraph: Mais de 4.000 equipes organizam o trabalho com o Fluxo\n  - text: Nortec Vela Quanta Brisa Lab Oriente Pixelar Recursos\n  - heading \"Tudo que o time precisa, nada que atrapalhe\" [level=2]\n  - heading \"Quadros e listas\" [level=3]\n  - paragraph: Visualize o trabalho do jeito que preferir e mude de visão com um clique.\n  - heading \"Prazos inteligentes\" [level=3]\n  - paragraph: Alertas automáticos quando uma entrega corre risco de atrasar.\n  - heading \"Automações\" [level=3]\n  - paragraph: Regras simples que movem tarefas, avisam pessoas e economizam horas.\n  - heading \"Relatórios\" [level=3]\n  - paragraph: Painéis prontos de progresso, carga de trabalho e entregas.\n  - heading \"Permissões\" [level=3]\n  - paragraph: Controle quem vê e edita cada projeto, com registro de alterações.\n  - heading \"Integrações\" [level=3]\n  - paragraph: Conecte calendário, e-mail e mais de 80 ferramentas.\n  - heading \"Planeje a semana em minutos\" [level=2]\n  - paragraph: Arraste tarefas para o calendário, distribua a carga do time e veja conflitos antes que virem problema.\n  - list:\n    - listitem:\n      - img",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Abrir o template SaaS de gestã"
+    },
+    "scrollAfterClose": 1028
+  },
+  {
+    "id": "visualizador-inspiracao",
+    "w": 320,
+    "h": 800,
+    "mobile": true,
+    "size": "320",
+    "scrollBefore": 766,
+    "opened": true,
+    "geom": {
+      "vw": 320,
+      "vh": 800,
+      "top": 48,
+      "bottom": 800,
+      "left": 0,
+      "right": 320,
+      "height": 752,
+      "width": 320,
+      "fitsViewport": true,
+      "headH": 131,
+      "footH": 181,
+      "bodyH": 440,
+      "bodyScrollH": 1610,
+      "bodyScrollable": true,
+      "bodyShare": 0.55,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "input \"Escolher cor de fundo\" 36x36",
+        "input \"Escolher cor de texto\" 36x36",
+        "input \"Escolher cor de destaque\" 36x36"
+      ],
+      "smallTargetsN": 3,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 766,
+    "shot": "capturas/estados/visualizador-inspiracao--320.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 3,
+        "ex": [
+          ".ins-panel__sec:nth-child(1) > .ins-panel__hint :: <p class=\"ins-panel__hint\">A identidade pensada para este conceito.</p>",
+          ".ins-panel__sec:nth-child(2) > .ins-panel__hint :: <p class=\"ins-panel__hint\">Contraste texto/fundo: <strong>12.9:1</strong> — boa leitura.</p>",
+          ".ins-panel__hint > strong :: <strong>12.9:1</strong>"
+        ]
+      },
+      {
+        "id": "landmark-no-duplicate-banner",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          ".ins-browser__view > div > div > .ia-site[data-site=\"Verdant Atelier\"] > header :: <header style=\"border-bottom: 1px solid rgba(29, 42, 30, 0.14);\">"
+        ]
+      },
+      {
+        "id": "landmark-unique",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          ".ins-browser__view > div > div > .ia-site[data-site=\"Verdant Atelier\"] > header > div > nav:nth-child(1) :: <nav style=\"display: flex; gap: 28px; font-size: 14.5px; align-items: center;\"><span>Plantas</span><span>Vasos</span><sp"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Verdant Atelier\":\n  - heading \"Verdant Atelier\" [level=2]\n  - paragraph: Plantas e botânica — Editorial botânico assimétrico, com molduras em arco e muito respiro\n  - button \"Fechar\":\n    - img\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\" [pressed]:\n      - img\n      - text: Computador\n    - button \"Celular\":\n      - img\n      - text: Celular\n  - 'button \"Conceito anterior: KINETIC LAB\"':\n    - img\n  - 'button \"Próximo conceito: VOLT / MOTORS\"':\n    - img\n  - text: Frete grátis para mudas acima de R$ 250 · Vasos de cerâmica feitos à mão no nosso ateliê\n  - banner:\n    - navigation: Plantas Vasos Oficinas\n    - text: Verdant ATELIER\n    - navigation: Diário (2)\n  - text: COLEÇÃO PRIMAVERA · Nº 07\n  - heading \"A arte de cultivar devagar.\" [level=1]:\n    - text: A arte de cultivar\n    - emphasis: devagar.\n  - paragraph: Plantas escolhidas uma a uma, vasos torneados em pequenas fornadas e um guia de cuidado que acompanha cada muda pela vida inteira.\n  - text: Explorar coleção Agendar visita ao ateliê → 120+ espécies no viveiro 48 h para entrega local ∞ guia de cuidado\n  - figure \"Fig. 01 — Monstera deliciosa, 1,2 m\"\n  - text: VIVEIRO\n  - heading \"Coleção da estação\" [level=2]\n  - text: Ver as 120 espécies →\n  - article:\n    - text: Luz indireta\n    - heading \"Ficus lyrata\" [level=3]\n    - text: R$ 189 Figueira-lira\n  - article:\n    - text: Pouca água\n    - heading \"Dracaena trifasciata\" [level=3]\n    - text: R$ 96 Espada-de-são-jorge\n  - article:",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Abrir o site Verdant Atelier ("
+    },
+    "scrollAfterClose": 766
+  },
+  {
+    "id": "detalhe-navegacao",
+    "w": 320,
+    "h": 800,
+    "mobile": true,
+    "size": "320",
+    "scrollBefore": 1492,
+    "opened": true,
+    "geom": {
+      "vw": 320,
+      "vh": 800,
+      "top": 48,
+      "bottom": 800,
+      "left": 0,
+      "right": 320,
+      "height": 752,
+      "width": 320,
+      "fitsViewport": true,
+      "headH": 154,
+      "footH": 129,
+      "bodyH": 469,
+      "bodyScrollH": 2600,
+      "bodyScrollable": true,
+      "bodyShare": 0.59,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Produto\" 74x36",
+        "button \"Recursos\" 83x36",
+        "button \"Começar grátis\" 128x36"
+      ],
+      "smallTargetsN": 3,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 1492,
+    "shot": "capturas/estados/detalhe-navegacao--320.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 1,
+        "ex": [
+          "li:nth-child(2) > .nvs-hl > .nvs-hl__label :: <span class=\"nvs-hl__label\">Recursos</span>"
+        ]
+      },
+      {
+        "id": "heading-order",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          "h4 :: <h4 style=\"font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif; color: rgb(15, 23, 42);\">Role a página"
+        ]
+      },
+      {
+        "id": "landmark-no-duplicate-banner",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          "div[data-compact=\"false\"] > .nvs-hbar[aria-label=\"Header Linha Essencial\"] :: <header class=\"nvs-hbar\" aria-label=\"Header Linha Essencial\">"
+        ]
+      },
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 1,
+        "ex": [
+          ".nvs-hb--primary :: <button type=\"button\" class=\"nvs-hb nvs-hb--primary\">Começar grátis</button>"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Linha Essencial\":\n  - heading \"Linha Essencial\" [level=2]\n  - paragraph: \"O header mais simples possível: logo, quatro links e um botão. Nada disputa atenção com o conteúdo.\"\n  - button \"Fechar\":\n    - img\n  - group \"Composição\":\n    - button \"A · Logo · menu central · ações\" [pressed]\n    - button \"B · Tudo em uma linha à esquerda\"\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\" [pressed]:\n      - img\n      - text: Computador\n    - button \"Celular\":\n      - img\n      - text: Celular\n  - banner \"Header Linha Essencial\":\n    - button \"Ipê — página inicial\": Ipê\n    - navigation \"Principal\":\n      - list:\n        - listitem:\n          - button \"Produto\"\n        - listitem:\n          - button \"Recursos\"\n    - button \"Começar grátis\"\n  - text: Novo · versão 2.0\n  - strong: Organize o trabalho da equipe em um só lugar\n  - text: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas. Começar agora Ver demonstração\n  - heading \"Role a página para ver o header em ação\" [level=4]\n  - strong: Planeje\n  - strong: Acompanhe\n  - strong: Entregue\n  - paragraph:\n    - strong: \"Composição A — Logo · menu central · ações:\"\n    - text: Logo à esquerda, os quatro links centralizados na barra e “Entrar” + “Começar grátis” à direita. Equilíbrio simétrico clássico. Role a página de exemplo para ver o comportamento ao rolar.\n  - heading \"Resumo\" [level=3]\n  - list:\n    - listitem: Header minimalista de 64 px, fundo da superfície com borda inferior fina, logo com símbolo, quatro links de texto e um CTA.\n  - heading \"No celular\" [level=3]\n  - list:\n    - listitem: \"Desktop largo (≥ 1280 px): composição completa, como na prévia.\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Ver em tamanho grande"
+    },
+    "scrollAfterClose": 1492
+  },
+  {
+    "id": "confirmar-limpar",
+    "w": 320,
+    "h": 800,
+    "mobile": true,
+    "size": "320",
+    "scrollBefore": 1072,
+    "opened": true,
+    "geom": {
+      "vw": 320,
+      "vh": 800,
+      "top": 504,
+      "bottom": 800,
+      "left": 0,
+      "right": 320,
+      "height": 296,
+      "width": 320,
+      "fitsViewport": true,
+      "headH": 154,
+      "footH": 77,
+      "bodyH": 65,
+      "bodyScrollH": 65,
+      "bodyScrollable": false,
+      "bodyShare": 0.08,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [],
+      "smallTargetsN": 0,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 1072,
+    "shot": "capturas/estados/confirmar-limpar--320.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [],
+    "aria": "- dialog \"Limpar o projeto?\":\n  - heading \"Limpar o projeto?\" [level=2]\n  - paragraph: Todas as escolhas serão apagadas. Você poderá recuperar o estado atual em “Versões salvas”.\n  - button \"Fechar\":\n    - img\n  - text: Esta ação substitui o projeto atual\n  - button \"Cancelar\"\n  - button \"Sim, limpar\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Limpar projeto"
+    },
+    "scrollAfterClose": 1072
+  },
+  {
+    "id": "drawer-celular-previa",
+    "w": 320,
+    "h": 800,
+    "mobile": true,
+    "size": "320",
+    "scrollBefore": 854,
+    "opened": true,
+    "geom": {
+      "vw": 320,
+      "vh": 800,
+      "top": 349,
+      "bottom": 895,
+      "left": 20,
+      "right": 300,
+      "height": 546,
+      "width": 280,
+      "fitsViewport": false,
+      "headH": null,
+      "footH": null,
+      "bodyH": null,
+      "bodyScrollH": null,
+      "bodyScrollable": null,
+      "bodyShare": null,
+      "controlsOutside": [
+        "button \"Sair\""
+      ],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar menu\" 33x33",
+        "button \"Buscar\" 33x33",
+        "button \"Fechar menu\" 33x33",
+        "button \"Início\" 192x35",
+        "button \"Pedidos\" 192x35",
+        "button \"Clientes\" 192x35",
+        "button \"Relatórios\" 192x35",
+        "button \"Agenda\" 192x35",
+        "button \"Configurações\" 192x35",
+        "button \"Ajuda\" 192x35",
+        "button \"Sair\" 192x35"
+      ],
+      "smallTargetsN": 11,
+      "pageScrollLocked": "hidden auto"
+    },
+    "scrollAfterOpen": 854,
+    "shot": "capturas/estados/drawer-celular-previa--320.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "button.lay-ph-icon-btn Fechar menu"
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [],
+    "aria": "- 'group \"Prévia do celular: Drawer pela esquerda\"':\n  - dialog \"Menu de navegação\":\n    - text: MA Marina Alves marina@orla.app\n    - button \"Fechar menu\"\n    - button \"Início\"\n    - button \"Pedidos\"\n    - button \"Clientes\"\n    - button \"Relatórios\"\n    - button \"Agenda\"\n    - button \"Configurações\"\n    - button \"Ajuda\"\n    - button \"Sair\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Abrir menu"
+    },
+    "scrollAfterClose": 859
+  },
+  {
+    "id": "menu-header-previa",
+    "w": 320,
+    "h": 800,
+    "mobile": true,
+    "size": "320",
+    "scrollBefore": 873,
+    "opened": true,
+    "geom": {
+      "vw": 320,
+      "vh": 800,
+      "top": 429,
+      "bottom": 672,
+      "left": 17,
+      "right": 303,
+      "height": 243,
+      "width": 286,
+      "fitsViewport": true,
+      "headH": null,
+      "footH": null,
+      "bodyH": null,
+      "bodyScrollH": null,
+      "bodyScrollable": null,
+      "bodyShare": null,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [],
+      "smallTargetsN": 0,
+      "pageScrollLocked": "hidden auto"
+    },
+    "scrollAfterOpen": 873,
+    "shot": "capturas/estados/menu-header-previa--320.png",
+    "focusInitial": {
+      "inside": false,
+      "el": "button.nvs-hi Fechar menu"
+    },
+    "focusEscapes": 40,
+    "focusEscapeExamples": [
+      "button Linha Essencial\nIntegral\nFixo ",
+      "button Composição A",
+      "button Composição B",
+      "button Ver em tamanho grande",
+      "button Prompt deste elemento",
+      "button Cajá — página inicial"
+    ],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "aria-required-parent",
+        "impact": "critical",
+        "count": 4,
+        "ex": [
+          ".nvs-sheet__item[aria-current=\"page\"][role=\"menuitem\"] :: <button type=\"button\" role=\"menuitem\" class=\"nvs-sheet__item\" aria-current=\"page\"><span>Produto</span></button>",
+          ".nvs-sheet__group:nth-child(2) > .nvs-sheet__item[role=\"menuitem\"] :: <button type=\"button\" role=\"menuitem\" class=\"nvs-sheet__item\"><span>Recursos</span></button>",
+          ".nvs-sheet__group:nth-child(3) > .nvs-sheet__item[role=\"menuitem\"] :: <button type=\"button\" role=\"menuitem\" class=\"nvs-sheet__item\"><span>Preços</span></button>"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Menu de navegação\":\n  - menuitem \"Produto\"\n  - menuitem \"Recursos\"\n  - menuitem \"Preços\"\n  - menuitem \"Sobre\"\n  - button \"Entrar\"\n  - button \"Começar grátis\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Abrir menu"
+    },
+    "scrollAfterClose": 3821
+  },
+  {
+    "id": "busca-ctrlk",
+    "w": 768,
+    "h": 1024,
+    "mobile": false,
+    "size": "768",
+    "opened": true,
+    "geom": {
+      "vw": 768,
+      "vh": 1024,
+      "top": 41,
+      "bottom": 983,
+      "left": 104,
+      "right": 664,
+      "height": 942,
+      "width": 560,
+      "fitsViewport": true,
+      "headH": 77,
+      "footH": null,
+      "bodyH": 865,
+      "bodyScrollH": 1902,
+      "bodyScrollable": true,
+      "bodyShare": 0.84,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "input \"Buscar funcionalidades\" 512x40"
+      ],
+      "smallTargetsN": 2,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 0,
+    "shot": "capturas/estados/busca-ctrlk--768.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "input.ui-input Buscar funcionalidades"
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 12,
+        "ex": [
+          "button[data-active=\"true\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Escolha entre modo guiado e livre.</span>",
+          "li[role=\"option\"]:nth-child(2) > .search-item[data-active=\"false\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Acesso direto a qualquer módulo.</span>",
+          "li[role=\"option\"]:nth-child(3) > .search-item[data-active=\"false\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Nome, tipo, público e funcionalidades.</span>"
+        ]
+      },
+      {
+        "id": "nested-interactive",
+        "impact": "serious",
+        "count": 28,
+        "ex": [
+          "li[role=\"option\"]:nth-child(1) :: <li role=\"option\" aria-selected=\"true\">",
+          "li[role=\"option\"]:nth-child(2) :: <li role=\"option\" aria-selected=\"false\">",
+          "li[role=\"option\"]:nth-child(3) :: <li role=\"option\" aria-selected=\"false\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Buscar funcionalidades\":\n  - heading \"Buscar funcionalidades\" [level=2]\n  - button \"Fechar\":\n    - img\n  - searchbox \"Buscar funcionalidades\"\n  - listbox \"Resultados\":\n    - option \"Início Escolha entre modo guiado e livre.\" [selected]:\n      - button \"Início Escolha entre modo guiado e livre.\"\n    - option \"Todos os módulos Acesso direto a qualquer módulo.\":\n      - button \"Todos os módulos Acesso direto a qualquer módulo.\"\n    - option \"Objetivo do projeto Nome, tipo, público e funcionalidades.\":\n      - button \"Objetivo do projeto Nome, tipo, público e funcionalidades.\"\n    - option \"Landing pages 24 conceitos de página de apresentação.\":\n      - button \"Landing pages 24 conceitos de página de apresentação.\"\n    - option \"Login 24 composições de tela de entrar.\":\n      - button \"Login 24 composições de tela de entrar.\"\n    - option \"Cadastro 8 fluxos de criação de conta.\":\n      - button \"Cadastro 8 fluxos de criação de conta.\"\n    - option \"Layout desktop 42 arquiteturas para o computador.\":\n      - button \"Layout desktop 42 arquiteturas para o computador.\"\n    - option \"Layout mobile 44 arquiteturas para o celular.\":\n      - button \"Layout mobile 44 arquiteturas para o celular.\"\n    - option \"Live Site Preview Todas as escolhas em uma prévia única.\":\n      - button \"Live Site Preview Todas as escolhas em uma prévia única.\"\n    - option \"Color System 60 paletas, tokens, tipografia e geometria.\":\n      - button \"Color System 60 paletas, tokens, tipografia e geometria.\"\n    - option \"Navigation Showcase 36 headers e 36 sidebars.\":\n      - button \"Navigation Showcase 36 headers e 36 sidebars.\"\n    - option \"Componentes 66 categorias em 16 famílias visuais.\":\n      - button \"Componentes 66 categorias em 16 famílias visuais.\"\n    - option \"Inspiration Gallery 20 sites fictícios completos.\":\n      - button \"Inspiration Gallery 20 sites fictícios completos.\"\n    - option \"Template Studio Modelos reutilizáveis de páginas.\":\n      - button \"Template Studio Modelos reutilizáveis de páginas.\"\n    - option \"Central de Prompts Master Prompt e prompts individuais.\":\n      - button \"Central de Prompts Master Prompt e prompts individuais.\"\n    - option \"Exportar e importar JSON, CSS, HTML, backup e importação.\":\n      - button \"Exportar e importar JSON, CSS, HTML, backup e importação.\"\n    - option \"Validação responsiva Teste sites reais e gere prompts de correção.\":\n      - button \"Validação responsiva Teste sites reais e gere prompts de correção.\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": false,
+      "el": "body Pular para o conteúdo\nAtelier "
+    },
+    "scrollAfterClose": 0
+  },
+  {
+    "id": "busca-botao",
+    "w": 768,
+    "h": 1024,
+    "mobile": false,
+    "size": "768",
+    "scrollBefore": 0,
+    "opened": true,
+    "geom": {
+      "vw": 768,
+      "vh": 1024,
+      "top": 41,
+      "bottom": 983,
+      "left": 104,
+      "right": 664,
+      "height": 942,
+      "width": 560,
+      "fitsViewport": true,
+      "headH": 77,
+      "footH": null,
+      "bodyH": 865,
+      "bodyScrollH": 1902,
+      "bodyScrollable": true,
+      "bodyShare": 0.84,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "input \"Buscar funcionalidades\" 512x40"
+      ],
+      "smallTargetsN": 2,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 0,
+    "shot": "capturas/estados/busca-botao--768.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "input.ui-input Buscar funcionalidades"
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 12,
+        "ex": [
+          "button[data-active=\"true\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Escolha entre modo guiado e livre.</span>",
+          "li[role=\"option\"]:nth-child(2) > .search-item[data-active=\"false\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Acesso direto a qualquer módulo.</span>",
+          "li[role=\"option\"]:nth-child(3) > .search-item[data-active=\"false\"] > span > .search-item__desc :: <span class=\"search-item__desc\">Nome, tipo, público e funcionalidades.</span>"
+        ]
+      },
+      {
+        "id": "nested-interactive",
+        "impact": "serious",
+        "count": 28,
+        "ex": [
+          "li[role=\"option\"]:nth-child(1) :: <li role=\"option\" aria-selected=\"true\">",
+          "li[role=\"option\"]:nth-child(2) :: <li role=\"option\" aria-selected=\"false\">",
+          "li[role=\"option\"]:nth-child(3) :: <li role=\"option\" aria-selected=\"false\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Buscar funcionalidades\":\n  - heading \"Buscar funcionalidades\" [level=2]\n  - button \"Fechar\":\n    - img\n  - searchbox \"Buscar funcionalidades\"\n  - listbox \"Resultados\":\n    - option \"Início Escolha entre modo guiado e livre.\" [selected]:\n      - button \"Início Escolha entre modo guiado e livre.\"\n    - option \"Todos os módulos Acesso direto a qualquer módulo.\":\n      - button \"Todos os módulos Acesso direto a qualquer módulo.\"\n    - option \"Objetivo do projeto Nome, tipo, público e funcionalidades.\":\n      - button \"Objetivo do projeto Nome, tipo, público e funcionalidades.\"\n    - option \"Landing pages 24 conceitos de página de apresentação.\":\n      - button \"Landing pages 24 conceitos de página de apresentação.\"\n    - option \"Login 24 composições de tela de entrar.\":\n      - button \"Login 24 composições de tela de entrar.\"\n    - option \"Cadastro 8 fluxos de criação de conta.\":\n      - button \"Cadastro 8 fluxos de criação de conta.\"\n    - option \"Layout desktop 42 arquiteturas para o computador.\":\n      - button \"Layout desktop 42 arquiteturas para o computador.\"\n    - option \"Layout mobile 44 arquiteturas para o celular.\":\n      - button \"Layout mobile 44 arquiteturas para o celular.\"\n    - option \"Live Site Preview Todas as escolhas em uma prévia única.\":\n      - button \"Live Site Preview Todas as escolhas em uma prévia única.\"\n    - option \"Color System 60 paletas, tokens, tipografia e geometria.\":\n      - button \"Color System 60 paletas, tokens, tipografia e geometria.\"\n    - option \"Navigation Showcase 36 headers e 36 sidebars.\":\n      - button \"Navigation Showcase 36 headers e 36 sidebars.\"\n    - option \"Componentes 66 categorias em 16 famílias visuais.\":\n      - button \"Componentes 66 categorias em 16 famílias visuais.\"\n    - option \"Inspiration Gallery 20 sites fictícios completos.\":\n      - button \"Inspiration Gallery 20 sites fictícios completos.\"\n    - option \"Template Studio Modelos reutilizáveis de páginas.\":\n      - button \"Template Studio Modelos reutilizáveis de páginas.\"\n    - option \"Central de Prompts Master Prompt e prompts individuais.\":\n      - button \"Central de Prompts Master Prompt e prompts individuais.\"\n    - option \"Exportar e importar JSON, CSS, HTML, backup e importação.\":\n      - button \"Exportar e importar JSON, CSS, HTML, backup e importação.\"\n    - option \"Validação responsiva Teste sites reais e gere prompts de correção.\":\n      - button \"Validação responsiva Teste sites reais e gere prompts de correção.\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Buscar funcionalidades (Ctrl+K"
+    },
+    "scrollAfterClose": 0
+  },
+  {
+    "id": "menu-studio",
+    "w": 768,
+    "h": 1024,
+    "mobile": false,
+    "size": "768",
+    "scrollBefore": 0,
+    "opened": true,
+    "geom": {
+      "vw": 768,
+      "vh": 1024,
+      "top": 0,
+      "bottom": 1024,
+      "left": 0,
+      "right": 320,
+      "height": 1024,
+      "width": 320,
+      "fitsViewport": true,
+      "headH": null,
+      "footH": null,
+      "bodyH": null,
+      "bodyScrollH": null,
+      "bodyScrollable": null,
+      "bodyShare": null,
+      "controlsOutside": [
+        "a \"Live Site Preview\"",
+        "button \"IDENTIDADE\"",
+        "a \"Color System\"",
+        "a \"Navigation Showcase\"",
+        "a \"Componentes\"",
+        "button \"INSPIRAÇÃO\"",
+        "a \"Inspiration Gallery\"",
+        "a \"Template Studio\"",
+        "button \"ENTREGA\"",
+        "a \"Central de Prompts\""
+      ],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar menu\" 40x40",
+        "button \"Guiado\" 92x32",
+        "button \"Livre\" 78x32"
+      ],
+      "smallTargetsN": 3,
+      "pageScrollLocked": "hidden auto"
+    },
+    "scrollAfterOpen": 0,
+    "shot": "capturas/estados/menu-studio--768.png",
+    "focusInitial": {
+      "inside": false,
+      "el": "button.ui-icon-btn Abrir menu"
+    },
+    "focusEscapes": 4,
+    "focusEscapeExamples": [
+      "a Atelier UI — início",
+      "button Buscar funcionalidades (Ctrl+K",
+      "button Exportar e importar",
+      "button Abrir Master Prompt"
+    ],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 5,
+        "ex": [
+          "button[aria-controls=\"grp-identidade\"] :: <button type=\"button\" class=\"shell-group__toggle\" aria-expanded=\"true\" aria-controls=\"grp-identidade\">",
+          "button[aria-controls=\"grp-inspiracao\"] :: <button type=\"button\" class=\"shell-group__toggle\" aria-expanded=\"true\" aria-controls=\"grp-inspiracao\">",
+          "button[aria-controls=\"grp-entrega\"] :: <button type=\"button\" class=\"shell-group__toggle\" aria-expanded=\"true\" aria-controls=\"grp-entrega\">"
+        ]
+      }
+    ],
+    "aria": "- complementary \"Navegação do Studio\":\n  - text: Menu\n  - button \"Fechar menu\":\n    - img\n  - group \"Modo de utilização\":\n    - button \"Guiado\" [pressed]:\n      - img\n      - text: Guiado\n    - button \"Livre\":\n      - img\n      - text: Livre\n  - list:\n    - listitem:\n      - link \"Início\":\n        - /url: \"#/\"\n  - button \"Construtor guiado\" [expanded]\n  - list:\n    - listitem:\n      - link \"Objetivo do projeto (concluída)\":\n        - /url: \"#/guiado/objetivo\"\n    - listitem:\n      - link \"Landing, login e cadastro (concluída)\":\n        - /url: \"#/guiado/entrada\"\n    - listitem:\n      - link \"Arquitetura do computador (concluída)\":\n        - /url: \"#/guiado/desktop\"\n    - listitem:\n      - link \"Arquitetura do celular (concluída)\":\n        - /url: \"#/guiado/mobile\"\n    - listitem:\n      - link \"Revisão do esqueleto (concluída)\":\n        - /url: \"#/guiado/revisao\"\n    - listitem:\n      - link \"Prévia integrada\":\n        - /url: \"#/guiado/preview\"\n    - listitem:\n      - link \"Identidade visual\":\n        - /url: \"#/guiado/identidade\"\n    - listitem:\n      - link \"Headers e sidebars\":",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": false,
+      "el": "a Template Studio"
+    },
+    "scrollAfterClose": 0
+  },
+  {
+    "id": "previa-landing",
+    "w": 768,
+    "h": 1024,
+    "mobile": false,
+    "size": "768",
+    "scrollBefore": 1521,
+    "opened": true,
+    "geom": {
+      "vw": 768,
+      "vh": 1024,
+      "top": 41,
+      "bottom": 983,
+      "left": 16,
+      "right": 752,
+      "height": 942,
+      "width": 736,
+      "fitsViewport": true,
+      "headH": 86,
+      "footH": 73,
+      "bodyH": 783,
+      "bodyScrollH": 919,
+      "bodyScrollable": true,
+      "bodyShare": 0.76,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"Computador\" 127x32",
+        "button \"Celular\" 92x32",
+        "button \"Cores do modelo\" 134x32",
+        "button \"Minha identidade\" 136x32",
+        "input \"\" 1x1",
+        "button \"Começar grátis\" 72x20",
+        "button \"Começar grátis\" 102x28",
+        "button \"Ver demonstração\" 113x28",
+        "button \"Começar grátis\" 102x28",
+        "button \"Prompt deste elemento\" 202x40",
+        "button \"Selecionar este modelo\" 222x40"
+      ],
+      "smallTargetsN": 12,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 1521,
+    "shot": "capturas/estados/previa-landing--768.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 2,
+        "ex": [
+          ".ui-help :: <span class=\"ui-help\" style=\"display: block;\">Por padrão a landing usa a paleta global do projeto. Ative só se quiser es",
+          ".ent-fit__inner > .ent-lp[data-architecture=\"hero-centralizado\"][data-device=\"desktop\"] > section:nth-child(2) > div > div:nth-child(6) > div:nth-child(2) > aside > span:nth-child(3) :: <span style=\"display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 8px; font-size: 13.5px; ba"
+        ]
+      },
+      {
+        "id": "landmark-banner-is-top-level",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          ".ent-fit__inner > .ent-lp[data-architecture=\"hero-centralizado\"][data-device=\"desktop\"] > header :: <header style=\"position: relative; top: 0px; left: 0px; right: 0px; z-index: 5; background: transparent; border-bottom: "
+        ]
+      },
+      {
+        "id": "landmark-contentinfo-is-top-level",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          "footer :: <footer style=\"background: rgb(251, 250, 255); color: rgb(22, 19, 43); border-top: 1px solid rgb(227, 227, 230);\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Aurora Flow\":\n  - heading \"Aurora Flow\" [level=2]\n  - paragraph: SaaS e produtividade · Hero centralizado\n  - button \"Fechar\":\n    - img\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\" [pressed]:\n      - img\n      - text: Computador\n    - button \"Celular\":\n      - img\n      - text: Celular\n  - group \"Cores da prévia\":\n    - button \"Cores do modelo\" [pressed]\n    - button \"Minha identidade\"\n  - switch \"Manter as cores originais deste modelo no projeto Por padrão a landing usa a paleta global do projeto. Ative só se quiser esta exceção.\"\n  - text: Manter as cores originais deste modelo no projeto Por padrão a landing usa a paleta global do projeto. Ative só se quiser esta exceção.\n  - region \"Prévia da landing Aurora Flow\":\n    - text: Aurora Flow\n    - navigation: Produto Soluções Preços Recursos\n    - text: Entrar\n    - button \"Começar grátis\"\n    - text: \"Novo: automações com um clique\"\n    - heading \"Organize o trabalho da equipe em um só fluxo\" [level=1]\n    - paragraph: Tarefas, documentos e prazos no mesmo lugar. Menos reuniões, mais entregas.\n    - button \"Começar grátis\":\n      - text: Começar grátis\n      - img\n    - button \"Ver demonstração\":\n      - img\n      - text: Ver demonstração\n    - paragraph: 14 dias de teste grátis · sem cartão de crédito\n    - complementary: Início Meus projetos Quadro Calendário Relatórios Equipe\n    - strong: Sprint 14\n    - text: A fazer · 3 Em andamento · 2 Concluído · 1\n    - paragraph: Equipes que já trabalham no fluxo\n    - text: Nimbo Kora Vetta Lumen Brisa Orla Recursos\n    - heading \"Por que escolher Aurora Flow\" [level=2]\n    - img\n    - heading \"Quadros visuais\" [level=3]",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Ver prévia"
+    },
+    "scrollAfterClose": 1521
+  },
+  {
+    "id": "previa-login",
+    "w": 768,
+    "h": 1024,
+    "mobile": false,
+    "size": "768",
+    "scrollBefore": 640,
+    "opened": true,
+    "geom": {
+      "vw": 768,
+      "vh": 1024,
+      "top": 41,
+      "bottom": 983,
+      "left": 16,
+      "right": 752,
+      "height": 942,
+      "width": 736,
+      "fitsViewport": true,
+      "headH": 86,
+      "footH": 73,
+      "bodyH": 783,
+      "bodyScrollH": 820,
+      "bodyScrollable": true,
+      "bodyShare": 0.76,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"Computador\" 127x32",
+        "button \"Celular\" 92x32",
+        "button \"Entrar\" 63x32",
+        "button \"Criar conta\" 96x32",
+        "input \"\" 1x1",
+        "input \"\" 184x24",
+        "button \"Esqueci minha senha\" 77x11",
+        "input \"\" 184x24",
+        "button \"Mostrar senha\" 21x21",
+        "input \"\" 1x1",
+        "button \"Entrar\" 184x24",
+        "button \"Criar conta\" 40x11",
+        "button \"Prompt deste elemento\" 202x40",
+        "button \"Selecionar este modelo\" 222x40"
+      ],
+      "smallTargetsN": 15,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 640,
+    "shot": "capturas/estados/previa-login--768.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [
+      "input "
+    ],
+    "axe": [
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 3,
+        "ex": [
+          "form > div:nth-child(3) > div:nth-child(1) > button[type=\"button\"] :: <button type=\"button\" style=\"background: none; border: 0px; padding: 0px; color: rgb(29, 78, 216); font-size: 14px; font",
+          "#\\:rt\\:-password :: <input id=\":rt:-password\" name=\"password\" type=\"password\" autocomplete=\"current-password\" placeholder=\"Sua senha\" value=",
+          "button[aria-label=\"Mostrar senha\"] :: <button type=\"button\" aria-label=\"Mostrar senha\" aria-pressed=\"false\" aria-controls=\":rt:-password\" style=\"position: abs"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Clássico central\":\n  - heading \"Clássico central\" [level=2]\n  - paragraph: Cartão central com a marca acima\n  - button \"Fechar\":\n    - img\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\" [pressed]:\n      - img\n      - text: Computador\n    - button \"Celular\":\n      - img\n      - text: Celular\n  - group \"Tela exibida\":\n    - button \"Entrar\" [pressed]\n    - button \"Criar conta\"\n  - switch \"Mostrar estados de erro\"\n  - text: Mostrar estados de erro\n  - region \"Prévia de Clássico central\":\n    - text: Nexo Capital\n    - form \"Entrar\":\n      - heading \"Entrar na sua conta\" [level=2]\n      - paragraph: Use seu e-mail e senha para continuar.\n      - text: E-mail\n      - textbox \"E-mail\":\n        - /placeholder: nome@empresa.com\n      - text: Senha\n      - button \"Esqueci minha senha\"\n      - textbox \"Senha\":\n        - /placeholder: Sua senha\n      - button \"Mostrar senha\":\n        - img\n      - checkbox \"Lembrar de mim neste dispositivo\"\n      - text: Lembrar de mim neste dispositivo\n      - button \"Entrar\"\n      - paragraph:\n        - text: Não tem conta?\n        - button \"Criar conta\"\n    - text: Termos Privacidade Ajuda\n  - paragraph: Escolha um fluxo na página Cadastro para ver a tela “Criar conta” correspondente.\n  - paragraph: \"Demonstração de interface: experimente digitar, mostrar a senha, enviar vazio e “Esqueci minha senha”. Nenhum dado é enviado.\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Ver prévia"
+    },
+    "scrollAfterClose": 640
+  },
+  {
+    "id": "previa-cadastro",
+    "w": 768,
+    "h": 1024,
+    "mobile": false,
+    "size": "768",
+    "scrollBefore": 0,
+    "opened": true,
+    "geom": {
+      "vw": 768,
+      "vh": 1024,
+      "top": 41,
+      "bottom": 983,
+      "left": 16,
+      "right": 752,
+      "height": 942,
+      "width": 736,
+      "fitsViewport": true,
+      "headH": 86,
+      "footH": 73,
+      "bodyH": 783,
+      "bodyScrollH": 820,
+      "bodyScrollable": true,
+      "bodyShare": 0.76,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"Computador\" 127x32",
+        "button \"Celular\" 92x32",
+        "button \"Entrar\" 63x32",
+        "button \"Criar conta\" 96x32",
+        "input \"\" 1x1",
+        "button \"Entrar\" 98x24",
+        "button \"Criar conta\" 98x24",
+        "input \"\" 195x24",
+        "input \"\" 195x24",
+        "input \"\" 195x24",
+        "button \"Mostrar senha\" 21x21",
+        "button \"Criar conta\" 195x24",
+        "button \"Prompt deste elemento\" 202x40",
+        "button \"Selecionar este modelo\" 222x40"
+      ],
+      "smallTargetsN": 15,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 0,
+    "shot": "capturas/estados/previa-cadastro--768.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [
+      "input "
+    ],
+    "axe": [
+      {
+        "id": "target-size",
+        "impact": "serious",
+        "count": 2,
+        "ex": [
+          "#\\:r18\\:-password :: <input id=\":r18:-password\" name=\"password\" type=\"password\" autocomplete=\"new-password\" placeholder=\"Mínimo de 8 caracter",
+          "button[aria-label=\"Mostrar senha\"] :: <button type=\"button\" aria-label=\"Mostrar senha\" aria-pressed=\"false\" aria-controls=\":r18:-password\" style=\"position: ab"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Cadastro na mesma tela do login\":\n  - heading \"Cadastro na mesma tela do login\" [level=2]\n  - paragraph: \"Campos: Nome, E-mail, Senha\"\n  - button \"Fechar\":\n    - img\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\" [pressed]:\n      - img\n      - text: Computador\n    - button \"Celular\":\n      - img\n      - text: Celular\n  - group \"Tela exibida\":\n    - button \"Entrar\"\n    - button \"Criar conta\" [pressed]\n  - switch \"Mostrar estados de erro\"\n  - text: Mostrar estados de erro\n  - region \"Prévia de Cadastro na mesma tela do login\":\n    - text: Nexo Capital Suporte de TI\n    - form \"Criar conta\":\n      - tablist \"Entrar ou criar conta\":\n        - tab \"Entrar\"\n        - tab \"Criar conta\" [selected]\n      - heading \"Criar conta\" [level=2]\n      - paragraph: Leva menos de um minuto.\n      - text: Nome\n      - textbox \"Nome\":\n        - /placeholder: Como podemos te chamar?\n      - text: E-mail\n      - textbox \"E-mail\":\n        - /placeholder: nome@empresa.com\n      - text: Senha\n      - textbox \"Senha\":\n        - /placeholder: Mínimo de 8 caracteres\n      - button \"Mostrar senha\":\n        - img\n      - list \"Requisitos da senha\":\n        - listitem: Pelo menos 8 caracteres (pendente)\n        - listitem: Uma letra maiúscula (pendente)\n        - listitem: Um número (pendente)",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Ver prévia"
+    },
+    "scrollAfterClose": 0
+  },
+  {
+    "id": "prompt-individual",
+    "w": 768,
+    "h": 1024,
+    "mobile": false,
+    "size": "768",
+    "scrollBefore": 714,
+    "opened": true,
+    "geom": {
+      "vw": 768,
+      "vh": 1024,
+      "top": 121,
+      "bottom": 903,
+      "left": 16,
+      "right": 752,
+      "height": 782,
+      "width": 736,
+      "fitsViewport": true,
+      "headH": 109,
+      "footH": 73,
+      "bodyH": 600,
+      "bodyScrollH": 600,
+      "bodyScrollable": false,
+      "bodyShare": 0.59,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"Baixar .md\" 133x40",
+        "button \"Copiar prompt\" 159x40"
+      ],
+      "smallTargetsN": 3,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 714,
+    "shot": "capturas/estados/prompt-individual--768.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "scrollable-region-focusable",
+        "impact": "serious",
+        "count": 1,
+        "ex": [
+          "pre :: <pre class=\"ui-code\" data-testid=\"prompt-text\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Prompt individual — Sidebar integral clássica\":\n  - heading \"Prompt individual — Sidebar integral clássica\" [level=2]\n  - paragraph: \"Autossuficiente: inclui a identidade herdada e as regras de responsividade. Cole em Claude Code, Cursor ou outra IA.\"\n  - button \"Fechar\":\n    - img\n  - text: \"# Prompt — Layout desktop: Sidebar integral clássica > Gerado pelo Atelier UI para o projeto “Nexo Capital” (Dashboard). Este prompt é autossuficiente: implemente somente este elemento, exatamente como descrito. ## Layout desktop: Sidebar integral clássica — Sidebar integral `id: sidebar-integral-classica` · origem: módulo “desktop” Shell de aplicação com sidebar integral à esquerda (do topo à base) e coluna principal com header fixo e conteúdo rolável. **Estrutura** - Grid de duas colunas: grid-template-columns: 252px minmax(0, 1fr); a coluna principal tem grid-template-rows: 64px minmax(0, 1fr) (header + conteúdo). - Sidebar integral de ≈252 px na borda esquerda: vai do topo à base da janela (height: 100dvh), encostada na borda, sem margem externa, sem cantos arredondados e sem sombra flutuante. - Topo da sidebar com a mesma altura do header (≈64 px), contendo logo e nome do produto, alinhado ao header para formar uma linha horizontal contínua. - Itens de navegação com 40–44 px de altura, ícone de 20 px + rótulo, agrupados por seções com título discreto; o item ativo tem fundo de seleção, cor de texto ativa e indicador lateral. - Rodapé da sidebar com perfil do usuário e atalho de configurações, separado por borda fina. - Header de ≈64 px: título da página ou breadcrumb à esquerda; busca, notificações e avatar à direita; borda inferior fina de 1 px. O header fica somente sobre a coluna principal — não passa por cima da sidebar. - Área de conteúdo com padding de 24–32 px, largura fluida e grids internos com minmax(0, 1fr); nenhum cartão encolhe abaixo de ≈280 px — reduza colunas antes. **Propriedades** - gridColumns: 252px 1fr - gridRows: 64px 1fr - gridAreas: \\\"sidebar header\\\" \\\"sidebar content\\\" - gap: 0px - padding: 0px - regioes: sidebar (sidebar), header (header), content (content) - oneScreen: não **Medidas recomendadas (adaptáveis)** - sidebar: ≈252 px - header: ≈64 px **Comportamento e estados** - A sidebar é fixa (position: sticky; top: 0; height: 100dvh) e tem rolagem interna própria (overflow-y: auto; overscroll-behavior: contain) quando os itens não cabem; a página rola apenas na coluna de conteúdo. - O header é sticky (position: sticky; top: 0) acima do conteúdo e não rola com ele; z-index superior ao conteúdo e inferior a modais. - Grupos de navegação podem recolher (accordion) e lembram o estado; hover, focus-visible e item ativo são visualmente distintos. **Responsividade deste item** - 1280 px ou mais: sidebar esquerda com ≈252 px e rótulos completos. - 1024–1279 px: a sidebar reduz para ≈220 px; o conteúdo reduz colunas antes de comprimir cartões ou tabelas. - 768–1023 px: a sidebar recolhe para um rail integral de ≈72 px (só ícones, com tooltip e aria-label); um botão expande a sidebar completa em sobreposição, com scrim, Esc e clique fora para fechar. - Abaixo de 768 px vale a arquitetura mobile escolhida separadamente no Studio: não converta a navegação desktop em drawer, rail ou bottom navigation por conta própria. **Observações** - Sidebar integral: nunca flutuante, sem margem externa e sem cantos arredondados. - One Page, não One Screen: a página pode rolar verticalmente; não force o conteúdo a caber em 100dvh nem esconda seções para evitar rolagem. - As medidas são recomendações para 1280 × 800; adapte à tela e ao conteúdo preservando a estrutura escolhida. ## Identidade herdada - Paleta “Azul Institucional” (clara): primária #1d4ed8 (texto #ffffff), secundária #1e3a8a, destaque #0ea5e9. - Fundo #f8fafc, superfície #ffffff, texto #0f172a, texto secundário #686d7a, borda #e6e6e6. - Estados: hover #f4f4f4, active #ebebeb, selected #e4eafa/#1d4ed8, disabled #f0f0f0/#93979f, foco #1d4ed8. - Semânticos: success #117e39, warning #a85c04, error #dc2626, info #2563eb. - Tipografia: títulos Inter 650, textos Inter 400, base 15 px. - Geometria: cantos “medium”, borda 1 px, sombra “none”, superfícies “outlined”, densidade “comfortable”. ## Responsividade obrigatória Valide em 320, 344, 360, 375, 390, 412, 430, 480, 600, 768, 820, 1024, 1280, 1440, 1920 px. - Nenhum overflow horizontal involuntário em nenhuma largura de 320 px a 1920 px (inclusive larguras intermediárias). - Nenhum texto cortado: use quebra de linha, `min-width: 0` em itens flex/grid e `overflow-wrap: anywhere` em conteúdos longos (e-mails, URLs, códigos). - Nenhuma sobreposição indevida entre elementos, inclusive com o teclado virtual aberto. - Alvos de toque com no mínimo 44 × 44 px no celular e espaçamento de pelo menos 8 px entre alvos adjacentes. - Campos de formulário com fonte de pelo menos 16 px no celular (evita zoom automático no iOS). - Imagens e mídias responsivas (`max-width: 100%`, `aspect-ratio` definido) sem distorção. - Grids adaptáveis: reduza colunas progressivamente; nunca comprima cartões abaixo de uma largura legível. - Suporte a zoom de até 200% e a fonte ampliada do sistema sem perda de conteúdo ou funcionalidade. - Respeite as safe areas (`env(safe-area-inset-*)`) em barras fixas, docks e menus inferiores. - Funcione na orientação horizontal do celular: barras fixas não podem ocupar mais de 25% da altura. - Use `100dvh` (com fallback) em vez de `100vh` para alturas de tela cheia. - Menus acessíveis por mouse, toque e teclado (Tab, Enter, Espaço, Esc), com foco visível. - Respeite `prefers-reduced-motion` reduzindo animações. ## Regras de implementação - Não modifique escolhas aprovadas nesta especificação sem solicitação explícita do usuário. - Preserve a identidade global: todos os componentes usam os tokens definidos; exceções só onde estiverem listadas. - Não adicione decoração por conta própria (sombras, gradientes, vidro, animações, cantos arredondados) além do especificado. - Respeite a geometria escolhida: se a sidebar é integral, ela vai do topo à base; se é flutuante, tem afastamento das bordas. Não converta uma na outra. - Evite overflow e colisões; valide em todas as larguras de referência. - Mantenha consistência de espaçamentos (escala de 4 px), tipografia e estados de interação (hover, focus-visible, active, disabled, selected). - Implemente estados de carregamento, vazio e erro para listas, tabelas e formulários. - Use componentes reutilizáveis e tokens centralizados (variáveis CSS ou tema); nada de cores fixas espalhadas pelo código. - Garanta acessibilidade: HTML semântico, labels, contraste WCAG AA, navegação por teclado e leitores de tela. - Teste o resultado (visual e funcional) em celular, tablet e desktop antes de concluir.\"\n  - button \"Baixar .md\":\n    - img\n    - text: Baixar .md\n  - button \"Copiar prompt\":\n    - img\n    - text: Copiar prompt",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Prompt deste elemento"
+    },
+    "scrollAfterClose": 714
+  },
+  {
+    "id": "editor-componente",
+    "w": 768,
+    "h": 1024,
+    "mobile": false,
+    "size": "768",
+    "scrollBefore": 4064,
+    "opened": true,
+    "geom": {
+      "vw": 768,
+      "vh": 1024,
+      "top": 41,
+      "bottom": 983,
+      "left": 16,
+      "right": 752,
+      "height": 942,
+      "width": 736,
+      "fitsViewport": true,
+      "headH": 86,
+      "footH": 73,
+      "bodyH": 783,
+      "bodyScrollH": 2630,
+      "bodyScrollable": true,
+      "bodyShare": 0.76,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"Normal\" 71x32",
+        "button \"Hover\" 63x32",
+        "button \"Focus\" 63x32",
+        "button \"Active\" 65x32",
+        "button \"Disabled\" 81x32",
+        "input \"\" 686x40",
+        "a \"Alterar em Cores e identidade\" 236x32",
+        "select \"Família visual\" 688x40",
+        "input \"\" 686x40",
+        "input \"\" 586x28",
+        "input \"Linhas de exemplo (valor)\" 84x40",
+        "input \"\" 1x1",
+        "button \"Simples\" 76x32",
+        "button \"Destacado\" 94x32"
+      ],
+      "smallTargetsN": 33,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 4064,
+    "shot": "capturas/estados/editor-componente--768.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "aria-required-children",
+        "impact": "critical",
+        "count": 5,
+        "ex": [
+          ".cmp-trow[role=\"row\"]:nth-child(1) :: <div role=\"row\" class=\"cmp-trow\" style=\"--cols-wide: 22px mi...\">",
+          ".cmp-trow[role=\"row\"]:nth-child(2) :: <div role=\"row\" class=\"cmp-trow\" style=\"--cols-wide: 22px mi...\">",
+          ".cmp-trow[role=\"row\"]:nth-child(3) :: <div role=\"row\" class=\"cmp-trow\" style=\"--cols-wide: 22px mi...\">"
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 4,
+        "ex": [
+          ".cmp-trow[role=\"row\"]:nth-child(3) > span:nth-child(3) > span :: <span style=\"display: inline-flex...\">",
+          ".cmp-trow[role=\"row\"]:nth-child(3) > .cmp-xwide-only:nth-child(5) :: <span class=\"cmp-xwide-only\" style=\"min-width: 0px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; colo",
+          ".cmp-trow[role=\"row\"]:nth-child(5) > span:nth-child(3) > span :: <span style=\"display: inline-flex...\">"
+        ]
+      }
+    ],
+    "aria": "- 'dialog \"Personalizar: Tabelas de dados\"':\n  - 'heading \"Personalizar: Tabelas de dados\" [level=2]'\n  - paragraph: Tabelas · família Compact Pro. Tudo é salvo na hora e vai para o Master Prompt.\n  - button \"Fechar\":\n    - img\n  - group \"Estado da prévia\":\n    - button \"Normal\" [pressed]\n    - button \"Hover\"\n    - button \"Focus\"\n    - button \"Active\"\n    - button \"Disabled\"\n  - text: Pedidos recentes Exportar\n  - table:\n    - row \"Cliente Status Valor Data\"\n    - row \"AS Ana Souza Pago R$ 89,00 12/03\"\n    - row \"BL Bruno Lima Pendente R$ 226,00 11/03\"\n    - row \"CD Carla Dias Pago R$ 363,00 10/03\"\n    - row \"DR Diego Rocha Cancelado R$ 500,00 09/03\"\n  - paragraph: Clique em qualquer parte da prévia (texto, ícone, botão) para editá-la.\n  - text: Nome no projeto\n  - textbox \"Nome no projeto\":\n    - /placeholder: Tabelas\n    - text: Tabelas de dados\n  - text: \"Ex.: “Botão principal do checkout”. Ajuda a IA a saber onde usar.\"\n  - region \"Token global somente leitura\":\n    - text: \"1\"\n    - heading \"Token global somente leitura\" [level=3]\n    - paragraph: A paleta aprovada vale para o projeto inteiro. Este componente a herda por padrão.\n    - text: Cor primária Cor de destaque Superfície Texto principal Borda Aa Inter\n    - link \"Alterar em Cores e identidade\":\n      - /url: \"#/modulos/cores\"\n  - region \"Estilo do componente (variação / família)\":\n    - text: \"2\"\n    - heading \"Estilo do componente (variação / família)\" [level=3]\n    - paragraph: A família define formato, bordas, sombras, fonte e densidade. Trocar aqui muda só este componente.\n    - combobox \"Família visual\":\n      - option \"1. Soft Pill\"\n      - option \"2. Swiss Minimal\"\n      - option \"3. Dark Luxury\"\n      - option \"4. Glassmorphism\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Personalizar"
+    },
+    "scrollAfterClose": 4064
+  },
+  {
+    "id": "editor-template",
+    "w": 768,
+    "h": 1024,
+    "mobile": false,
+    "size": "768",
+    "scrollBefore": 39,
+    "opened": true,
+    "geom": {
+      "vw": 768,
+      "vh": 1024,
+      "top": 41,
+      "bottom": 983,
+      "left": 16,
+      "right": 752,
+      "height": 942,
+      "width": 736,
+      "fitsViewport": true,
+      "headH": 86,
+      "footH": 73,
+      "bodyH": 783,
+      "bodyScrollH": 2180,
+      "bodyScrollable": true,
+      "bodyShare": 0.76,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"Computador\" 127x32",
+        "button \"Celular\" 92x32",
+        "input \"Cor principal: abrir seletor d\" 40x40",
+        "input \"Cor principal em hexadecimal\" 96x40",
+        "input \"Fundo: abrir seletor de cor\" 40x40",
+        "input \"Fundo em hexadecimal\" 96x40",
+        "input \"Texto: abrir seletor de cor\" 40x40",
+        "input \"Texto em hexadecimal\" 96x40",
+        "select \"Inter (padrão)\nFonte do sistem\" 612x40",
+        "select \"Inter (padrão)\nFonte do sistem\" 612x40",
+        "button \"Todas\" 56x36",
+        "button \"Nenhuma\" 79x36",
+        "input \"\" 18x18",
+        "input \"\" 18x18"
+      ],
+      "smallTargetsN": 25,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 39,
+    "shot": "capturas/estados/editor-template--768.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 4,
+        "ex": [
+          ".tpl-editor__hint :: <span class=\"tpl-editor__hint\">",
+          ".tpl-color:nth-child(2) > .tpl-color__text > .tpl-color__help :: <span class=\"tpl-color__help\">Botões, links e destaques.</span>",
+          ".tpl-color:nth-child(3) > .tpl-color__text > .tpl-color__help :: <span class=\"tpl-color__help\">Cor de fundo das páginas.</span>"
+        ]
+      },
+      {
+        "id": "landmark-no-duplicate-banner",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          "div[data-tpl-section=\"cabecalho\"] > header :: <header style=\"background: rgb(255, 255, 255); color: rgb(15, 23, 42); padding-top: 0px; padding-bottom: 0px; font-famil"
+        ]
+      },
+      {
+        "id": "scrollable-region-focusable",
+        "impact": "serious",
+        "count": 1,
+        "ex": [
+          ".tpl-frame :: <div class=\"tpl-frame\" data-device=\"desktop\" data-testid=\"template-preview\" style=\"--tpl-inv: 1.8658892128279885;\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"SaaS de gestão\":\n  - heading \"SaaS de gestão\" [level=2]\n  - paragraph: Produtos digitais · marca fictícia “Fluxo” · 10 partes\n  - button \"Fechar\":\n    - img\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\" [pressed]:\n      - img\n      - text: Computador\n    - button \"Celular\":\n      - img\n      - text: Celular\n  - text: Clique em uma parte da prévia para marcá-la\n  - banner:\n    - text: Fluxo\n    - navigation: Produto Recursos Preços Clientes\n    - text: Entrar Começar grátis\n  - text: \"Novo: automações com IA\"\n  - heading \"Projetos em dia, sem planilhas espalhadas\" [level=1]\n  - paragraph: O Fluxo reúne tarefas, prazos e conversas do time em um só lugar — e avisa antes que algo atrase.\n  - text: Começar grátis Ver demonstração 14 dias grátis · sem cartão de crédito\n  - paragraph: Mais de 4.000 equipes organizam o trabalho com o Fluxo\n  - text: Nortec Vela Quanta Brisa Lab Oriente Pixelar Recursos\n  - heading \"Tudo que o time precisa, nada que atrapalhe\" [level=2]\n  - heading \"Quadros e listas\" [level=3]\n  - paragraph: Visualize o trabalho do jeito que preferir e mude de visão com um clique.\n  - heading \"Prazos inteligentes\" [level=3]\n  - paragraph: Alertas automáticos quando uma entrega corre risco de atrasar.\n  - heading \"Automações\" [level=3]\n  - paragraph: Regras simples que movem tarefas, avisam pessoas e economizam horas.\n  - heading \"Relatórios\" [level=3]\n  - paragraph: Painéis prontos de progresso, carga de trabalho e entregas.\n  - heading \"Permissões\" [level=3]\n  - paragraph: Controle quem vê e edita cada projeto, com registro de alterações.\n  - heading \"Integrações\" [level=3]\n  - paragraph: Conecte calendário, e-mail e mais de 80 ferramentas.\n  - heading \"Planeje a semana em minutos\" [level=2]\n  - paragraph: Arraste tarefas para o calendário, distribua a carga do time e veja conflitos antes que virem problema.\n  - list:\n    - listitem:",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Abrir o template SaaS de gestã"
+    },
+    "scrollAfterClose": 39
+  },
+  {
+    "id": "visualizador-inspiracao",
+    "w": 768,
+    "h": 1024,
+    "mobile": false,
+    "size": "768",
+    "scrollBefore": 0,
+    "opened": true,
+    "geom": {
+      "vw": 768,
+      "vh": 1024,
+      "top": 41,
+      "bottom": 983,
+      "left": 16,
+      "right": 752,
+      "height": 942,
+      "width": 736,
+      "fitsViewport": true,
+      "headH": 86,
+      "footH": 121,
+      "bodyH": 735,
+      "bodyScrollH": 1491,
+      "bodyScrollable": true,
+      "bodyShare": 0.72,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"Computador\" 127x32",
+        "button \"Celular\" 92x32",
+        "button \"Conceito anterior: KINETIC LAB\" 36x36",
+        "button \"Próximo conceito: VOLT / MOTOR\" 36x36",
+        "input \"Escolher cor de fundo\" 36x36",
+        "input \"\" 520x40",
+        "button \"Restaurar fundo da paleta\" 36x36",
+        "input \"Escolher cor de texto\" 36x36",
+        "input \"\" 520x40",
+        "button \"Restaurar texto da paleta\" 36x36",
+        "input \"Escolher cor de destaque\" 36x36",
+        "input \"\" 520x40",
+        "button \"Restaurar destaque da paleta\" 36x36",
+        "button \"CSS de referência\" 168x36"
+      ],
+      "smallTargetsN": 19,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 0,
+    "shot": "capturas/estados/visualizador-inspiracao--768.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 4,
+        "ex": [
+          ".ins-panel__sec:nth-child(1) > .ins-panel__hint :: <p class=\"ins-panel__hint\">A identidade pensada para este conceito.</p>",
+          ".ins-panel__sec:nth-child(2) > .ins-panel__hint :: <p class=\"ins-panel__hint\">Contraste texto/fundo: <strong>12.9:1</strong> — boa leitura.</p>",
+          ".ins-panel__hint > strong :: <strong>12.9:1</strong>"
+        ]
+      },
+      {
+        "id": "landmark-no-duplicate-banner",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          ".ins-browser__view > div > div > .ia-site[data-site=\"Verdant Atelier\"] > header :: <header style=\"border-bottom: 1px solid rgba(29, 42, 30, 0.14);\">"
+        ]
+      },
+      {
+        "id": "landmark-unique",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          ".ins-browser__view > div > div > .ia-site[data-site=\"Verdant Atelier\"] > header > div > nav:nth-child(1) :: <nav style=\"display: flex; gap: 28px; font-size: 14.5px; align-items: center;\"><span>Plantas</span><span>Vasos</span><sp"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Verdant Atelier\":\n  - heading \"Verdant Atelier\" [level=2]\n  - paragraph: Plantas e botânica — Editorial botânico assimétrico, com molduras em arco e muito respiro\n  - button \"Fechar\":\n    - img\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\" [pressed]:\n      - img\n      - text: Computador\n    - button \"Celular\":\n      - img\n      - text: Celular\n  - 'button \"Conceito anterior: KINETIC LAB\"':\n    - img\n  - text: 1 / 20\n  - 'button \"Próximo conceito: VOLT / MOTORS\"':\n    - img\n  - text: Frete grátis para mudas acima de R$ 250 · Vasos de cerâmica feitos à mão no nosso ateliê\n  - banner:\n    - navigation: Plantas Vasos Oficinas\n    - text: Verdant ATELIER\n    - navigation: Diário (2)\n  - text: COLEÇÃO PRIMAVERA · Nº 07\n  - heading \"A arte de cultivar devagar.\" [level=1]:\n    - text: A arte de cultivar\n    - emphasis: devagar.\n  - paragraph: Plantas escolhidas uma a uma, vasos torneados em pequenas fornadas e um guia de cuidado que acompanha cada muda pela vida inteira.\n  - text: Explorar coleção Agendar visita ao ateliê → 120+ espécies no viveiro 48 h para entrega local ∞ guia de cuidado\n  - figure \"Fig. 01 — Monstera deliciosa, 1,2 m\"\n  - text: VIVEIRO\n  - heading \"Coleção da estação\" [level=2]\n  - text: Ver as 120 espécies →\n  - article:\n    - text: Luz indireta\n    - heading \"Ficus lyrata\" [level=3]\n    - text: R$ 189 Figueira-lira\n  - article:\n    - text: Pouca água\n    - heading \"Dracaena trifasciata\" [level=3]\n    - text: R$ 96 Espada-de-são-jorge",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Abrir o site Verdant Atelier ("
+    },
+    "scrollAfterClose": 0
+  },
+  {
+    "id": "detalhe-navegacao",
+    "w": 768,
+    "h": 1024,
+    "mobile": false,
+    "size": "768",
+    "scrollBefore": 755,
+    "opened": true,
+    "geom": {
+      "vw": 768,
+      "vh": 1024,
+      "top": 41,
+      "bottom": 983,
+      "left": 16,
+      "right": 752,
+      "height": 942,
+      "width": 736,
+      "fitsViewport": true,
+      "headH": 109,
+      "footH": 73,
+      "bodyH": 760,
+      "bodyScrollH": 2004,
+      "bodyScrollable": true,
+      "bodyShare": 0.74,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"A · Logo · menu central · açõe\" 224x32",
+        "button \"B · Tudo em uma linha à esquer\" 242x32",
+        "button \"Computador\" 127x32",
+        "button \"Celular\" 92x32",
+        "button \"Produto\" 74x36",
+        "button \"Recursos\" 83x36",
+        "button \"Começar grátis\" 128x36",
+        "button \"Exportar especificação\" 221x40",
+        "button \"Selecionar composição A\" 236x40"
+      ],
+      "smallTargetsN": 10,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 755,
+    "shot": "capturas/estados/detalhe-navegacao--768.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 2,
+        "ex": [
+          ".nvs-detail__note :: <p class=\"nvs-detail__note\"><strong>Composição A — Logo · menu central · ações:</strong> Logo à esquerda, os quatro link",
+          ".nvs-detail__note > strong :: <strong>Composição A — Logo · menu central · ações:</strong>"
+        ]
+      },
+      {
+        "id": "heading-order",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          "h4 :: <h4 style=\"font-family: &quot;Inter Variable&quot;, Inter, system-ui, sans-serif; color: rgb(15, 23, 42);\">Role a página"
+        ]
+      },
+      {
+        "id": "landmark-no-duplicate-banner",
+        "impact": "moderate",
+        "count": 1,
+        "ex": [
+          ".nvs-stage__head--sticky > div[data-surface=\"bordered\"][data-navstyle=\"plain\"][data-layout=\"split\"] > .nvs-hbar[aria-label=\"Header Linha Essencial\"] :: <header class=\"nvs-hbar\" aria-label=\"Header Linha Essencial\">"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Linha Essencial\":\n  - heading \"Linha Essencial\" [level=2]\n  - paragraph: \"O header mais simples possível: logo, quatro links e um botão. Nada disputa atenção com o conteúdo.\"\n  - button \"Fechar\":\n    - img\n  - group \"Composição\":\n    - button \"A · Logo · menu central · ações\" [pressed]\n    - button \"B · Tudo em uma linha à esquerda\"\n  - group \"Dispositivo da prévia\":\n    - button \"Computador\" [pressed]:\n      - img\n      - text: Computador\n    - button \"Celular\":\n      - img\n      - text: Celular\n  - banner \"Header Linha Essencial\":\n    - button \"Ipê — página inicial\": Ipê\n    - navigation \"Principal\":\n      - list:\n        - listitem:\n          - button \"Produto\"\n        - listitem:\n          - button \"Recursos\"\n    - button \"Começar grátis\"\n  - text: Novo · versão 2.0\n  - strong: Organize o trabalho da equipe em um só lugar\n  - text: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas. Começar agora Ver demonstração\n  - heading \"Role a página para ver o header em ação\" [level=4]\n  - strong: Planeje\n  - strong: Acompanhe\n  - strong: Entregue\n  - paragraph:\n    - strong: \"Composição A — Logo · menu central · ações:\"\n    - text: Logo à esquerda, os quatro links centralizados na barra e “Entrar” + “Começar grátis” à direita. Equilíbrio simétrico clássico. Role a página de exemplo para ver o comportamento ao rolar.\n  - heading \"Resumo\" [level=3]\n  - list:\n    - listitem: Header minimalista de 64 px, fundo da superfície com borda inferior fina, logo com símbolo, quatro links de texto e um CTA.\n  - heading \"No celular\" [level=3]\n  - list:\n    - listitem: \"Desktop largo (≥ 1280 px): composição completa, como na prévia.\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Ver em tamanho grande"
+    },
+    "scrollAfterClose": 755
+  },
+  {
+    "id": "confirmar-limpar",
+    "w": 768,
+    "h": 1024,
+    "mobile": false,
+    "size": "768",
+    "scrollBefore": 429,
+    "opened": true,
+    "geom": {
+      "vw": 768,
+      "vh": 1024,
+      "top": 389,
+      "bottom": 635,
+      "left": 144,
+      "right": 624,
+      "height": 247,
+      "width": 480,
+      "fitsViewport": true,
+      "headH": 109,
+      "footH": 73,
+      "bodyH": 65,
+      "bodyScrollH": 65,
+      "bodyScrollable": false,
+      "bodyShare": 0.06,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar\" 40x40",
+        "button \"Cancelar\" 96x40",
+        "button \"Sim, limpar\" 112x40"
+      ],
+      "smallTargetsN": 3,
+      "pageScrollLocked": "hidden"
+    },
+    "scrollAfterOpen": 429,
+    "shot": "capturas/estados/confirmar-limpar--768.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "div.ui-modal "
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [],
+    "aria": "- dialog \"Limpar o projeto?\":\n  - heading \"Limpar o projeto?\" [level=2]\n  - paragraph: Todas as escolhas serão apagadas. Você poderá recuperar o estado atual em “Versões salvas”.\n  - button \"Fechar\":\n    - img\n  - text: Esta ação substitui o projeto atual\n  - button \"Cancelar\"\n  - button \"Sim, limpar\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Limpar projeto"
+    },
+    "scrollAfterClose": 429
+  },
+  {
+    "id": "drawer-celular-previa",
+    "w": 768,
+    "h": 1024,
+    "mobile": false,
+    "size": "768",
+    "scrollBefore": 0,
+    "opened": true,
+    "geom": {
+      "vw": 768,
+      "vh": 1024,
+      "top": 930,
+      "bottom": 1628,
+      "left": 217,
+      "right": 575,
+      "height": 698,
+      "width": 358,
+      "fitsViewport": false,
+      "headH": null,
+      "footH": null,
+      "bodyH": null,
+      "bodyScrollH": null,
+      "bodyScrollable": null,
+      "bodyShare": null,
+      "controlsOutside": [
+        "button \"Início\"",
+        "button \"Pedidos\"",
+        "button \"Clientes\"",
+        "button \"Relatórios\"",
+        "button \"Agenda\"",
+        "button \"Configurações\"",
+        "button \"Ajuda\"",
+        "button \"Sair\""
+      ],
+      "hOverflow": 0,
+      "smallTargets": [
+        "button \"Fechar menu\" 42x42",
+        "button \"Buscar\" 42x42",
+        "button \"Fechar menu\" 42x42"
+      ],
+      "smallTargetsN": 3,
+      "pageScrollLocked": "hidden auto"
+    },
+    "scrollAfterOpen": 0,
+    "shot": "capturas/estados/drawer-celular-previa--768.png",
+    "focusInitial": {
+      "inside": true,
+      "el": "button.lay-ph-icon-btn Fechar menu"
+    },
+    "focusEscapes": 0,
+    "focusEscapeExamples": [],
+    "focusNoRing": [],
+    "axe": [],
+    "aria": "- 'group \"Prévia do celular: Drawer pela esquerda\"':\n  - dialog \"Menu de navegação\":\n    - text: MA Marina Alves marina@orla.app\n    - button \"Fechar menu\"\n    - button \"Início\"\n    - button \"Pedidos\"\n    - button \"Clientes\"\n    - button \"Relatórios\"\n    - button \"Agenda\"\n    - button \"Configurações\"\n    - button \"Ajuda\"\n    - button \"Sair\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Abrir menu"
+    },
+    "scrollAfterClose": 569
+  },
+  {
+    "id": "menu-header-previa",
+    "w": 768,
+    "h": 1024,
+    "mobile": false,
+    "size": "768",
+    "scrollBefore": 12940,
+    "opened": true,
+    "geom": {
+      "vw": 768,
+      "vh": 1024,
+      "top": 544,
+      "bottom": 704,
+      "left": 33,
+      "right": 735,
+      "height": 160,
+      "width": 702,
+      "fitsViewport": true,
+      "headH": null,
+      "footH": null,
+      "bodyH": null,
+      "bodyScrollH": null,
+      "bodyScrollable": null,
+      "bodyShare": null,
+      "controlsOutside": [],
+      "hOverflow": 0,
+      "smallTargets": [],
+      "smallTargetsN": 0,
+      "pageScrollLocked": "hidden auto"
+    },
+    "scrollAfterOpen": 12940,
+    "shot": "capturas/estados/menu-header-previa--768.png",
+    "focusInitial": {
+      "inside": false,
+      "el": "button.nvs-hb Fechar menu"
+    },
+    "focusEscapes": 42,
+    "focusEscapeExamples": [
+      "button Só o Essencial\nIntegral\nRola c",
+      "button Composição A",
+      "button Composição B",
+      "button Ver em tamanho grande",
+      "button Prompt deste elemento",
+      "button Vértice — página inicial"
+    ],
+    "focusNoRing": [],
+    "axe": [
+      {
+        "id": "aria-required-parent",
+        "impact": "critical",
+        "count": 4,
+        "ex": [
+          ".nvs-sheet__item[role=\"menuitem\"][aria-current=\"page\"] :: <button type=\"button\" role=\"menuitem\" class=\"nvs-sheet__item\" aria-current=\"page\"><span class=\"nvs-sheet__num\">01</span>",
+          ".nvs-sheet__group:nth-child(2) > .nvs-sheet__item[role=\"menuitem\"] :: <button type=\"button\" role=\"menuitem\" class=\"nvs-sheet__item\"><span class=\"nvs-sheet__num\">02</span><span>Sobre</span></",
+          ".nvs-sheet__group:nth-child(3) > .nvs-sheet__item[role=\"menuitem\"] :: <button type=\"button\" role=\"menuitem\" class=\"nvs-sheet__item\"><span class=\"nvs-sheet__num\">03</span><span>Diário</span><"
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "count": 1,
+        "ex": [
+          ".nvs-sheet__item[role=\"menuitem\"][aria-current=\"page\"] > .nvs-sheet__num :: <span class=\"nvs-sheet__num\">01</span>"
+        ]
+      }
+    ],
+    "aria": "- dialog \"Menu de navegação\":\n  - menuitem \"01 Trabalhos\"\n  - menuitem \"02 Sobre\"\n  - menuitem \"03 Diário\"\n  - menuitem \"04 Contato\"",
+    "closedByEsc": true,
+    "focusAfterClose": {
+      "returned": true,
+      "el": "button Abrir menu"
+    },
+    "scrollAfterClose": 14934
+  }
+]

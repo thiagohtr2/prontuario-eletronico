@@ -25,3 +25,17 @@
 320 confirmar-limpar fit=true h=296/800 body=65 foot=77 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=
 320 drawer-celular-previa fit=false h=546/800 body=null foot=null out=1 hOv=0 focus0=true esc=0 esc→close=true back=true axe=
 320 menu-header-previa fit=true h=243/800 body=null foot=null out=0 hOv=0 focus0=false esc=40 esc→close=true back=true axe=aria-required-parent:4
+768 busca-ctrlk fit=true h=942/1024 body=865 foot=null out=0 hOv=0 focus0=true esc=0 esc→close=true back=false axe=color-contrast:12,nested-interactive:28
+768 busca-botao fit=true h=942/1024 body=865 foot=null out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=color-contrast:12,nested-interactive:28
+768 menu-studio fit=true h=1024/1024 body=null foot=null out=10 hOv=0 focus0=false esc=4 esc→close=true back=false axe=color-contrast:5
+768 previa-landing fit=true h=942/1024 body=783 foot=73 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=color-contrast:2,landmark-banner-is-top-level:1,landmark-contentinfo-is-top-level:1
+768 previa-login fit=true h=942/1024 body=783 foot=73 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=target-size:3
+768 previa-cadastro fit=true h=942/1024 body=783 foot=73 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=target-size:2
+768 prompt-individual fit=true h=782/1024 body=600 foot=73 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=scrollable-region-focusable:1
+768 editor-componente fit=true h=942/1024 body=783 foot=73 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=aria-required-children:5,color-contrast:4
+768 editor-template fit=true h=942/1024 body=783 foot=73 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=color-contrast:4,landmark-no-duplicate-banner:1,scrollable-region-focusable:1
+768 visualizador-inspiracao fit=true h=942/1024 body=735 foot=121 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=color-contrast:4,landmark-no-duplicate-banner:1,landmark-unique:1
+768 detalhe-navegacao fit=true h=942/1024 body=760 foot=73 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=color-contrast:2,heading-order:1,landmark-no-duplicate-banner:1
+768 confirmar-limpar fit=true h=247/1024 body=65 foot=73 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=
+768 drawer-celular-previa fit=false h=698/1024 body=null foot=null out=8 hOv=0 focus0=true esc=0 esc→close=true back=true axe=
+768 menu-header-previa fit=true h=160/1024 body=null foot=null out=0 hOv=0 focus0=false esc=42 esc→close=true back=true axe=aria-required-parent:4,color-contrast:1
