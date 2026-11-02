@@ -1,0 +1,808 @@
+{
+  "catalogos": {
+    "paletas": 60,
+    "landings": 24,
+    "logins": 24,
+    "cadastros": 8,
+    "layoutsDesktop": 42,
+    "layoutsMobile": 44,
+    "headers": 36,
+    "sidebars": 36,
+    "categoriasComponentes": 66,
+    "familiasVisuais": 16,
+    "combinacoesComponente": 1056,
+    "sitesInspiracao": 20,
+    "templates": 28
+  },
+  "projetos": {
+    "P1-atlas-workspace": {
+      "componentes": 5,
+      "masterPromptChars": 47461,
+      "masterPromptLinhas": 825,
+      "tokensEstimados": 13184,
+      "especificacaoJsonChars": 110190,
+      "geracaoMs": 36.8,
+      "duplicacao": {
+        "distinctDuplicated": 42,
+        "extraOccurrences": 165,
+        "wastedChars": 10662,
+        "top": [
+          {
+            "n": 13,
+            "line": "**Responsividade deste item**"
+          },
+          {
+            "n": 11,
+            "line": "**Medidas recomendadas (adaptáveis)**"
+          },
+          {
+            "n": 11,
+            "line": "**Comportamento e estados**"
+          },
+          {
+            "n": 5,
+            "line": "Raio 0 em tudo. Bordas de 1 px na cor do texto (tinta) para controles; divisórias de 1 px."
+          },
+          {
+            "n": 5,
+            "line": "Campos sublinhados (apenas linha inferior); rótulos em caixa alta com espaçamento de 0,08 em."
+          },
+          {
+            "n": 5,
+            "line": "Títulos pesados (750) com espaçamento negativo; sobretítulos numerados (01 —)."
+          },
+          {
+            "n": 5,
+            "line": "Item ativo marcado por sublinhado de 2 px. Cor de destaque usada só em pequenos marcadores quadrados."
+          },
+          {
+            "n": 5,
+            "line": "Composição: Grid rígido alinhado à esquerda, muito espaço em branco, numeração e réguas de 1 px separando blocos."
+          },
+          {
+            "n": 5,
+            "line": "Acabamento: Sem sombras, sem gradientes, sem arredondamento. Contraste puro de tipografia."
+          },
+          {
+            "n": 5,
+            "line": "Família visual: 2. Swiss Minimal"
+          },
+          {
+            "n": 5,
+            "line": "Raio dos contêineres: 0 px"
+          },
+          {
+            "n": 5,
+            "line": "Borda: 1 px sólida (cor do texto)"
+          }
+        ]
+      },
+      "contradicoesDetectadas": [],
+      "contradicoesNaoDetectadas": [
+        {
+          "tipo": "altura-header",
+          "detalhe": "layout desktop “Sidebar integral clássica” ≈64 px × header “Trilha de Contexto” 56 px"
+        },
+        {
+          "tipo": "largura-header",
+          "detalhe": "layout: header só sobre a coluna principal (“sidebar header”) × header: “largura total da janela (full width)”"
+        },
+        {
+          "tipo": "largura-sidebar",
+          "detalhe": "layout desktop ≈252 px × sidebar “Clássica Integral” 248 px"
+        },
+        {
+          "tipo": "sidebar-vira-drawer",
+          "detalhe": "mobile “Bottom Navigation clássica” (bottom=bottom-nav, side=none, overlay=none) × spec da sidebar “abaixo de 768 px vira drawer” + regra global “não transforme em drawer”"
+        },
+        {
+          "tipo": "header-menu-mobile",
+          "detalhe": "mobile “Bottom Navigation clássica” usa navegação inferior (bottom-nav) × spec do header “abaixo de 768 px: botão ☰ e painel de menu com os itens de navegação”"
+        },
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "cards/Swiss Minimal: raio 0/0 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "cards/Swiss Minimal: 14 px × identidade 15 px"
+        },
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "tabelas/Swiss Minimal: raio 0/0 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "tabelas/Swiss Minimal: 14 px × identidade 15 px"
+        },
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "formularios/Swiss Minimal: raio 0/0 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "formularios/Swiss Minimal: 14 px × identidade 15 px"
+        },
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "kpis-stat-cards/Swiss Minimal: raio 0/0 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "kpis-stat-cards/Swiss Minimal: 14 px × identidade 15 px"
+        },
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "dashboard/Swiss Minimal: raio 0/0 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "dashboard/Swiss Minimal: 14 px × identidade 15 px"
+        }
+      ],
+      "textosDeDemonstracao": [
+        "marca fictícia do header: “Tucano”",
+        "item de menu de demonstração (sidebar): “Início”",
+        "item de menu de demonstração (sidebar): “Painel”",
+        "item de menu de demonstração (sidebar): “Projetos”",
+        "item de menu de demonstração (sidebar): “Tarefas”",
+        "item de menu de demonstração (sidebar): “Calendário”",
+        "item de menu de demonstração (sidebar): “Pessoas”",
+        "item de menu de demonstração (sidebar): “Mensagens”",
+        "item de menu de demonstração (sidebar): “Relatórios”",
+        "item de menu de demonstração (sidebar): “Configurações”",
+        "item de menu de demonstração (sidebar): “Ajuda”",
+        "marca fictícia de template: “Fluxo”",
+        "marca fictícia de template: “Atlas”"
+      ],
+      "regrasPorComponenteNoFinal": 11,
+      "incluiRegraTabelaSemTabela": false
+    },
+    "P2-verde-vivo": {
+      "componentes": 3,
+      "masterPromptChars": 44728,
+      "masterPromptLinhas": 760,
+      "tokensEstimados": 12424,
+      "especificacaoJsonChars": 103185,
+      "geracaoMs": 3.6,
+      "duplicacao": {
+        "distinctDuplicated": 38,
+        "extraOccurrences": 92,
+        "wastedChars": 5618,
+        "top": [
+          {
+            "n": 11,
+            "line": "**Responsividade deste item**"
+          },
+          {
+            "n": 9,
+            "line": "**Medidas recomendadas (adaptáveis)**"
+          },
+          {
+            "n": 9,
+            "line": "**Comportamento e estados**"
+          },
+          {
+            "n": 3,
+            "line": "Headers: compacte a altura no celular e use a navegação móvel escolhida no layout mobile; o logo e a ação principal continuam visíveis."
+          },
+          {
+            "n": 3,
+            "line": "Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco "
+          },
+          {
+            "n": 3,
+            "line": "Botões, campos, chips e abas com raio total (999 px); contêineres com raio de 22 px."
+          },
+          {
+            "n": 3,
+            "line": "Campos tonais: fundo na superfície alternativa, sem borda; o foco acende um anel na cor de foco."
+          },
+          {
+            "n": 3,
+            "line": "Ícones dentro de círculos suaves (primária suave) com traço de 2 px."
+          },
+          {
+            "n": 3,
+            "line": "Item ativo marcado por pílula preenchida em primária suave."
+          },
+          {
+            "n": 3,
+            "line": "Composição: Blocos arredondados flutuando sobre fundo levemente tingido; agrupamentos por proximidade, sem linhas divisórias."
+          },
+          {
+            "n": 3,
+            "line": "Acabamento: Sombras difusas e baixas; preenchimentos tonais; zero bordas."
+          },
+          {
+            "n": 3,
+            "line": "Família visual: 1. Soft Pill"
+          }
+        ]
+      },
+      "contradicoesDetectadas": [
+        "cores-inspiracao"
+      ],
+      "contradicoesNaoDetectadas": [
+        {
+          "tipo": "header-menu-mobile",
+          "detalhe": "mobile “Header fixo com busca e menu inferior flutuante” usa navegação inferior (dock) × spec do header “abaixo de 768 px: botão ☰ e painel de menu com os itens de navegação”"
+        },
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "cards/Soft Pill: raio 999/22 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "fonte-familia×global",
+          "detalhe": "cards/Soft Pill: Inter/Inter × identidade Fraunces/Inter"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "cards/Soft Pill: 14 px × identidade 15 px"
+        },
+        {
+          "tipo": "sombra-familia×global",
+          "detalhe": "cards/Soft Pill: sombra “soft” × identidade “sem sombra” + regra “não adicione decoração”"
+        },
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "campos-busca/Soft Pill: raio 999/22 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "fonte-familia×global",
+          "detalhe": "campos-busca/Soft Pill: Inter/Inter × identidade Fraunces/Inter"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "campos-busca/Soft Pill: 14 px × identidade 15 px"
+        },
+        {
+          "tipo": "sombra-familia×global",
+          "detalhe": "campos-busca/Soft Pill: sombra “soft” × identidade “sem sombra” + regra “não adicione decoração”"
+        },
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "drawers/Soft Pill: raio 999/22 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "fonte-familia×global",
+          "detalhe": "drawers/Soft Pill: Inter/Inter × identidade Fraunces/Inter"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "drawers/Soft Pill: 14 px × identidade 15 px"
+        },
+        {
+          "tipo": "sombra-familia×global",
+          "detalhe": "drawers/Soft Pill: sombra “soft” × identidade “sem sombra” + regra “não adicione decoração”"
+        }
+      ],
+      "textosDeDemonstracao": [
+        "marca fictícia do header: “Empório Murici”",
+        "item de menu de demonstração (header): “Departamentos”",
+        "item de menu de demonstração (header): “Ofertas”",
+        "item de menu de demonstração (header): “Mercado”",
+        "item de menu de demonstração (header): “Casa”",
+        "item de menu de demonstração (header): “Eletrônicos”",
+        "marca fictícia de inspiração: “Verdant Atelier”",
+        "marca fictícia de template: “Fluxo”",
+        "marca fictícia de template: “Linho & Cia”"
+      ],
+      "regrasPorComponenteNoFinal": 11,
+      "incluiRegraTabelaSemTabela": true
+    },
+    "P3-nexo-capital": {
+      "componentes": 3,
+      "masterPromptChars": 36588,
+      "masterPromptLinhas": 636,
+      "tokensEstimados": 10163,
+      "especificacaoJsonChars": 83580,
+      "geracaoMs": 2.4,
+      "duplicacao": {
+        "distinctDuplicated": 40,
+        "extraOccurrences": 90,
+        "wastedChars": 5483,
+        "top": [
+          {
+            "n": 10,
+            "line": "**Responsividade deste item**"
+          },
+          {
+            "n": 8,
+            "line": "**Medidas recomendadas (adaptáveis)**"
+          },
+          {
+            "n": 8,
+            "line": "**Comportamento e estados**"
+          },
+          {
+            "n": 3,
+            "line": "Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco "
+          },
+          {
+            "n": 3,
+            "line": "Altura de controles 30 px (44 px de área de toque no celular); padding reduzido em 25%."
+          },
+          {
+            "n": 3,
+            "line": "Texto base 13 px, rótulos 12 px; números com font-variant-numeric: tabular-nums."
+          },
+          {
+            "n": 3,
+            "line": "Raio de 4 px em controles e 6 px em contêineres; bordas de 1 px sutis."
+          },
+          {
+            "n": 3,
+            "line": "Item ativo marcado por sublinhado de 2 px; ícones de 14–16 px sem fundo."
+          },
+          {
+            "n": 3,
+            "line": "Composição: Informação densa em linhas e colunas alinhadas; barras de ferramentas compactas."
+          },
+          {
+            "n": 3,
+            "line": "Acabamento: Neutro e funcional; cor apenas para estado e ação."
+          },
+          {
+            "n": 3,
+            "line": "Família visual: 13. Compact Pro"
+          },
+          {
+            "n": 3,
+            "line": "Raio dos contêineres: 6 px"
+          }
+        ]
+      },
+      "contradicoesDetectadas": [],
+      "contradicoesNaoDetectadas": [
+        {
+          "tipo": "altura-header",
+          "detalhe": "layout desktop “Sidebar integral clássica” ≈64 px × header “Painel Analítico” 56 px"
+        },
+        {
+          "tipo": "largura-header",
+          "detalhe": "layout: header só sobre a coluna principal (“sidebar header”) × header: “largura total da janela (full width)”"
+        },
+        {
+          "tipo": "largura-sidebar",
+          "detalhe": "layout desktop ≈252 px × sidebar “Sóbria Corporativa” 264 px"
+        },
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "tabelas/Compact Pro: raio 4/6 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "tabelas/Compact Pro: 13 px × identidade 15 px"
+        },
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "graficos/Compact Pro: raio 4/6 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "graficos/Compact Pro: 13 px × identidade 15 px"
+        },
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "dashboard/Compact Pro: raio 4/6 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "dashboard/Compact Pro: 13 px × identidade 15 px"
+        }
+      ],
+      "textosDeDemonstracao": [
+        "marca fictícia do header: “Seriema”",
+        "item de menu de demonstração (header): “Visão geral”",
+        "item de menu de demonstração (header): “Aquisição”",
+        "item de menu de demonstração (header): “Retenção”",
+        "item de menu de demonstração (header): “Receita”",
+        "item de menu de demonstração (sidebar): “Painel”",
+        "item de menu de demonstração (sidebar): “Contratos”",
+        "item de menu de demonstração (sidebar): “Fornecedores”",
+        "item de menu de demonstração (sidebar): “Compras”",
+        "item de menu de demonstração (sidebar): “Colaboradores”",
+        "item de menu de demonstração (sidebar): “Folha”",
+        "item de menu de demonstração (sidebar): “Auditoria”",
+        "item de menu de demonstração (sidebar): “Permissões”",
+        "marca fictícia de template: “Fluxo”"
+      ],
+      "regrasPorComponenteNoFinal": 11,
+      "incluiRegraTabelaSemTabela": false
+    },
+    "P4-centro-operacional": {
+      "componentes": 2,
+      "masterPromptChars": 23060,
+      "masterPromptLinhas": 427,
+      "tokensEstimados": 6406,
+      "especificacaoJsonChars": 51037,
+      "geracaoMs": 1.1,
+      "duplicacao": {
+        "distinctDuplicated": 35,
+        "extraOccurrences": 43,
+        "wastedChars": 2520,
+        "top": [
+          {
+            "n": 6,
+            "line": "**Responsividade deste item**"
+          },
+          {
+            "n": 4,
+            "line": "**Medidas recomendadas (adaptáveis)**"
+          },
+          {
+            "n": 4,
+            "line": "**Comportamento e estados**"
+          },
+          {
+            "n": 2,
+            "line": "Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco "
+          },
+          {
+            "n": 2,
+            "line": "Altura de controles 30 px (44 px de área de toque no celular); padding reduzido em 25%."
+          },
+          {
+            "n": 2,
+            "line": "Texto base 13 px, rótulos 12 px; números com font-variant-numeric: tabular-nums."
+          },
+          {
+            "n": 2,
+            "line": "Raio de 4 px em controles e 6 px em contêineres; bordas de 1 px sutis."
+          },
+          {
+            "n": 2,
+            "line": "Item ativo marcado por sublinhado de 2 px; ícones de 14–16 px sem fundo."
+          },
+          {
+            "n": 2,
+            "line": "Composição: Informação densa em linhas e colunas alinhadas; barras de ferramentas compactas."
+          },
+          {
+            "n": 2,
+            "line": "Acabamento: Neutro e funcional; cor apenas para estado e ação."
+          },
+          {
+            "n": 2,
+            "line": "Família visual: 13. Compact Pro"
+          },
+          {
+            "n": 2,
+            "line": "Raio dos contêineres: 6 px"
+          }
+        ]
+      },
+      "contradicoesDetectadas": [],
+      "contradicoesNaoDetectadas": [
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "kpis-stat-cards/Compact Pro: raio 4/6 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "kpis-stat-cards/Compact Pro: 13 px × identidade 15 px"
+        },
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "tabelas/Compact Pro: raio 4/6 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "tabelas/Compact Pro: 13 px × identidade 15 px"
+        }
+      ],
+      "textosDeDemonstracao": [
+        "marca fictícia de template: “Fluxo”"
+      ],
+      "regrasPorComponenteNoFinal": 11,
+      "incluiRegraTabelaSemTabela": false
+    },
+    "P5-conecta": {
+      "componentes": 4,
+      "masterPromptChars": 38975,
+      "masterPromptLinhas": 698,
+      "tokensEstimados": 10826,
+      "especificacaoJsonChars": 91243,
+      "geracaoMs": 2,
+      "duplicacao": {
+        "distinctDuplicated": 39,
+        "extraOccurrences": 125,
+        "wastedChars": 7682,
+        "top": [
+          {
+            "n": 11,
+            "line": "**Responsividade deste item**"
+          },
+          {
+            "n": 9,
+            "line": "**Medidas recomendadas (adaptáveis)**"
+          },
+          {
+            "n": 9,
+            "line": "**Comportamento e estados**"
+          },
+          {
+            "n": 4,
+            "line": "Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco "
+          },
+          {
+            "n": 4,
+            "line": "Superfícies \"container\" = superfície misturada à primária (5–12%)."
+          },
+          {
+            "n": 4,
+            "line": "Botões com raio de 20 px; variante tonal (primária suave) como secundária; FAB com raio 16 px."
+          },
+          {
+            "n": 4,
+            "line": "Campos preenchidos (fundo tonal, cantos superiores de 4 px, linha inferior de 1–2 px)."
+          },
+          {
+            "n": 4,
+            "line": "Item ativo em pílula tonal; títulos com peso 500; ícones preenchidos em círculos tonais."
+          },
+          {
+            "n": 4,
+            "line": "Composição: Hierarquia por cor tonal e elevação; ações flutuantes (FAB) para a tarefa principal."
+          },
+          {
+            "n": 4,
+            "line": "Acabamento: Elevação tonal, camadas de estado, cantos arredondados."
+          },
+          {
+            "n": 4,
+            "line": "Família visual: 16. Modern Material"
+          },
+          {
+            "n": 4,
+            "line": "Raio dos controles: 20 px"
+          }
+        ]
+      },
+      "contradicoesDetectadas": [],
+      "contradicoesNaoDetectadas": [
+        {
+          "tipo": "altura-header",
+          "detalhe": "layout desktop “Topbar integral fixa” ≈64 px × header “Praça da Comunidade” 60 px"
+        },
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "cards/Modern Material: raio 20/12 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "fonte-familia×global",
+          "detalhe": "cards/Modern Material: Fonte do sistema/Fonte do sistema × identidade Inter/Inter"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "cards/Modern Material: 14 px × identidade 15 px"
+        },
+        {
+          "tipo": "sombra-familia×global",
+          "detalhe": "cards/Modern Material: sombra “tonal” × identidade “sem sombra” + regra “não adicione decoração”"
+        },
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "perfil-usuario/Modern Material: raio 20/12 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "fonte-familia×global",
+          "detalhe": "perfil-usuario/Modern Material: Fonte do sistema/Fonte do sistema × identidade Inter/Inter"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "perfil-usuario/Modern Material: 14 px × identidade 15 px"
+        },
+        {
+          "tipo": "sombra-familia×global",
+          "detalhe": "perfil-usuario/Modern Material: sombra “tonal” × identidade “sem sombra” + regra “não adicione decoração”"
+        },
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "drawers/Modern Material: raio 20/12 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "fonte-familia×global",
+          "detalhe": "drawers/Modern Material: Fonte do sistema/Fonte do sistema × identidade Inter/Inter"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "drawers/Modern Material: 14 px × identidade 15 px"
+        },
+        {
+          "tipo": "sombra-familia×global",
+          "detalhe": "drawers/Modern Material: sombra “tonal” × identidade “sem sombra” + regra “não adicione decoração”"
+        },
+        {
+          "tipo": "raio-familia×global",
+          "detalhe": "layouts-mobile/Modern Material: raio 20/12 px × identidade “medium” (6/8/12 px)"
+        },
+        {
+          "tipo": "fonte-familia×global",
+          "detalhe": "layouts-mobile/Modern Material: Fonte do sistema/Fonte do sistema × identidade Inter/Inter"
+        },
+        {
+          "tipo": "tamanho-base-familia×global",
+          "detalhe": "layouts-mobile/Modern Material: 14 px × identidade 15 px"
+        },
+        {
+          "tipo": "sombra-familia×global",
+          "detalhe": "layouts-mobile/Modern Material: sombra “tonal” × identidade “sem sombra” + regra “não adicione decoração”"
+        }
+      ],
+      "textosDeDemonstracao": [
+        "marca fictícia do header: “Quero-quero”",
+        "item de menu de demonstração (header): “Feed”",
+        "item de menu de demonstração (header): “Grupos”",
+        "item de menu de demonstração (header): “Eventos”",
+        "item de menu de demonstração (header): “Mensagens”",
+        "marca fictícia de template: “Fluxo”"
+      ],
+      "regrasPorComponenteNoFinal": 11,
+      "incluiRegraTabelaSemTabela": true
+    }
+  },
+  "tokensDerivados": [
+    {
+      "paleta": "neutro-essencial",
+      "primariaOriginal": "#18181b",
+      "novaPrimaria": "#e11d48",
+      "tokensDesatualizados": [
+        {
+          "token": "primaryHover",
+          "atual": "#161618",
+          "esperado": "#cb1a41"
+        },
+        {
+          "token": "primaryActive",
+          "atual": "#131316",
+          "esperado": "#b4173a"
+        },
+        {
+          "token": "primarySoft",
+          "atual": "#e3e3e4",
+          "esperado": "#fbe4e9"
+        },
+        {
+          "token": "focusRing",
+          "atual": "#18181b",
+          "esperado": "#e11d48"
+        },
+        {
+          "token": "selected",
+          "atual": "#e3e3e4",
+          "esperado": "#fbe4e9"
+        },
+        {
+          "token": "selectedText",
+          "atual": "#18181b",
+          "esperado": "#c61a3f"
+        },
+        {
+          "token": "link",
+          "atual": "#18181b",
+          "esperado": "#e11d48"
+        },
+        {
+          "token": "linkHover",
+          "atual": "#141417",
+          "esperado": "#bf193d"
+        },
+        {
+          "token": "navActive",
+          "atual": "#e3e3e4",
+          "esperado": "#fbe4e9"
+        },
+        {
+          "token": "navActiveText",
+          "atual": "#18181b",
+          "esperado": "#c61a3f"
+        },
+        {
+          "token": "gradientFrom",
+          "atual": "#18181b",
+          "esperado": "#e11d48"
+        }
+      ]
+    },
+    {
+      "paleta": "neutro-essencial",
+      "primariaOriginal": "#18181b",
+      "novaPrimaria": "#e11d48",
+      "tokensDesatualizados": [
+        {
+          "token": "primaryHover",
+          "atual": "#161618",
+          "esperado": "#cb1a41"
+        },
+        {
+          "token": "primaryActive",
+          "atual": "#131316",
+          "esperado": "#b4173a"
+        },
+        {
+          "token": "primarySoft",
+          "atual": "#e3e3e4",
+          "esperado": "#fbe4e9"
+        },
+        {
+          "token": "focusRing",
+          "atual": "#18181b",
+          "esperado": "#e11d48"
+        },
+        {
+          "token": "selected",
+          "atual": "#e3e3e4",
+          "esperado": "#fbe4e9"
+        },
+        {
+          "token": "selectedText",
+          "atual": "#18181b",
+          "esperado": "#c61a3f"
+        },
+        {
+          "token": "link",
+          "atual": "#18181b",
+          "esperado": "#e11d48"
+        },
+        {
+          "token": "linkHover",
+          "atual": "#141417",
+          "esperado": "#bf193d"
+        },
+        {
+          "token": "navActive",
+          "atual": "#e3e3e4",
+          "esperado": "#fbe4e9"
+        },
+        {
+          "token": "navActiveText",
+          "atual": "#18181b",
+          "esperado": "#c61a3f"
+        },
+        {
+          "token": "gradientFrom",
+          "atual": "#18181b",
+          "esperado": "#e11d48"
+        }
+      ]
+    }
+  ],
+  "persistencia": {
+    "P1-atlas-workspace": {
+      "projetoChars": 2358,
+      "projetoMais30VersoesChars": 75654
+    },
+    "P2-verde-vivo": {
+      "projetoChars": 2755,
+      "projetoMais30VersoesChars": 87961
+    },
+    "P3-nexo-capital": {
+      "projetoChars": 2383,
+      "projetoMais30VersoesChars": 76429
+    },
+    "P4-centro-operacional": {
+      "projetoChars": 2269,
+      "projetoMais30VersoesChars": 72895
+    },
+    "P5-conecta": {
+      "projetoChars": 3699,
+      "projetoMais30VersoesChars": 117225
+    },
+    "relatorioValidacaoComHistorico": {
+      "100 ocorrências": 875044,
+      "1000 ocorrências": 8045344,
+      "3000 ocorrências": 23979344,
+      "6000 ocorrências": 47880344
+    }
+  },
+  "seguranca": {
+    "fichaHtmlContemScriptNaoEscapado": false,
+    "fichaHtmlContemOnerrorNaoEscapado": false,
+    "cssComentarioQuebrado": true,
+    "cssPrimeirasLinhas": "/*\n * Nome */ body{display:none} /* </pre><script>alert(1)</script><img src=x onerror=alert(2)> — CSS de referência gerado pelo Atelier UI.\n * Tokens da identidade global. Use estas variáveis em todos os componentes.",
+    "markdownNotaComTituloInjetado": false,
+    "markdownNotaQuebraLinhaCriaItemFalso": false
+  }
+}

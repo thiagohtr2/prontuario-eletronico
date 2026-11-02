@@ -1,0 +1,239 @@
+
+ RUN  v2.1.9 /home/user/prontuario-eletronico/design-system-studio/auditoria/fase6-tecnica/ferramentas/cov
+      Coverage enabled with v8
+
+ ✓ tests/unit/layouts.test.tsx (65 tests) 10890ms
+   ✓ DesktopSchematic > desenha todas as regiões com legendas 324ms
+   ✓ DesktopSchematic > renderiza os 42 layouts sem erro em miniatura e em tamanho grande 4580ms
+   ✓ PhonePreview > abre o menu de todos os layouts que têm menu 1992ms
+   ✓ PhonePreview > miniatura não interativa não contém botões e tem a altura de 2 × largura 325ms
+   ✓ PhonePreview > renderiza os 44 layouts sem erro 2807ms
+ ✓ tests/unit/templates.test.tsx (45 tests) 18757ms
+   ✓ renderização > saas-gestao renderiza no desktop e no celular 751ms
+   ✓ renderização > fintech-conta renderiza no desktop e no celular 547ms
+   ✓ renderização > app-download renderiza no desktop e no celular 398ms
+   ✓ renderização > ecommerce-moda renderiza no desktop e no celular 330ms
+   ✓ renderização > produto-unico renderiza no desktop e no celular 483ms
+   ✓ renderização > fotografia renderiza no desktop e no celular 321ms
+   ✓ renderização > hotel-pousada renderiza no desktop e no celular 335ms
+   ✓ renderização > agencia-viagens renderiza no desktop e no celular 328ms
+   ✓ renderização > academia-fitness renderiza no desktop e no celular 324ms
+   ✓ renderização > curso-online renderiza no desktop e no celular 427ms
+   ✓ renderização > conferencia renderiza no desktop e no celular 643ms
+   ✓ renderização > festival renderiza no desktop e no celular 380ms
+   ✓ renderização > ong-causa renderiza no desktop e no celular 554ms
+   ✓ página do Template Studio > mostra a galeria, abre o editor e adiciona o template ao projeto 5117ms
+   ✓ página do Template Studio > filtra por categoria e por busca 4731ms
+ ✓ tests/unit/components.test.tsx (17 tests) 6575ms
+   ✓ renderizadores > renderizam todas as categorias em 2 famílias sem erro 3521ms
+   ✓ biblioteca (UI) > troca de categoria, mostra as 16 famílias e adiciona ao projeto abrindo o editor 1987ms
+   ✓ biblioteca (UI) > modo guiado começa pelas categorias essenciais 643ms
+ ✓ tests/unit/entry.test.tsx (19 tests) 6100ms
+   ✓ LandingPreview > renderiza a landing com header, hero e rodapé no computador 339ms
+   ✓ LandingPreview > renderiza todas as 24 landings nos dois dispositivos sem erro 3297ms
+   ✓ AuthPreview > renderiza as 24 composições e os 8 fluxos sem erro 1439ms
+ ✓ tests/unit/navigation.test.tsx (24 tests) 27838ms
+   ✓ HeaderPreview > renderiza todos os headers na composição 0 (desktop e celular) 3219ms
+   ✓ HeaderPreview > renderiza todos os headers na composição 1 (desktop e celular) 1667ms
+   ✓ HeaderPreview > abre menu suspenso, marca item ativo e fecha com Esc 324ms
+   ✓ HeaderPreview > perfil, notificações e menu do celular 499ms
+   ✓ SidebarPreview > renderiza todas as sidebars na composição 0 (desktop e drawer) 4777ms
+   ✓ SidebarPreview > renderiza todas as sidebars na composição 1 (desktop e drawer) 5544ms
+   ✓ SidebarPreview > submenu em acordeão, flyout e busca que filtra 548ms
+   ✓ NavigationShowcase > renderiza os cartões, seleciona e persiste a composição 1365ms
+   ✓ NavigationShowcase > abrir um menu da prévia não seleciona o cartão 1020ms
+   ✓ NavigationShowcase > filtra e alterna para sidebars e combinação; modo guiado tem menos filtros 8365ms
+ ✓ tests/unit/core.test.ts (17 tests) 481ms
+   ✓ paletas e tokens > deriva pelo menos 32 tokens semânticos válidos para cada paleta 312ms
+ ✓ tests/unit/prompt.test.ts (17 tests) 55ms
+ ✓ tests/unit/inspiration.test.tsx (31 tests) 9634ms
+   ✓ exportações > HTML demonstrativo é um documento completo com a marca 306ms
+   ✓ renderização dos sites > verdant-atelier renderiza no desktop e no celular 588ms
+   ✓ renderização dos sites > volt-motors renderiza no desktop e no celular 542ms
+   ✓ renderização dos sites > frost-lab renderiza no desktop e no celular 650ms
+   ✓ renderização dos sites > formica renderiza no desktop e no celular 662ms
+   ✓ renderização dos sites > orbital-zero renderiza no desktop e no celular 392ms
+   ✓ galeria > mostra os 20 conceitos, abre o visualizador e aprova o conceito no projeto 4022ms
+
+ Test Files  8 passed (8)
+      Tests  235 passed (235)
+   Start at  19:04:03
+   Duration  46.42s (transform 9.11s, setup 1.47s, collect 17.55s, tests 80.33s, environment 6.78s, prepare 1.41s)
+
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   87.49 |    89.01 |   76.48 |   87.49 |                   
+ src               |       0 |        0 |       0 |       0 |                   
+  App.tsx          |       0 |        0 |       0 |       0 | 1-64              
+  main.tsx         |       0 |        0 |       0 |       0 | 1-16              
+ src/core          |   89.89 |    89.15 |   71.26 |   89.89 |                   
+  color.ts         |     100 |      100 |     100 |     100 |                   
+  describe.ts      |     100 |       50 |     100 |     100 | 29,32             
+  download.ts      |   32.43 |    66.66 |      25 |   32.43 | ...-73,76,103-115 
+  glossary.ts      |     100 |      100 |     100 |     100 |                   
+  project.ts       |   98.82 |    66.66 |     100 |   98.82 | 196               
+  schema.ts        |     100 |    90.47 |     100 |     100 | 126,150           
+  store.ts         |   85.79 |    87.17 |   59.57 |   85.79 | ...45,248,280-282 
+  theme.ts         |   94.11 |       80 |     100 |   94.11 | 30                
+  tokens.ts        |   96.87 |    92.18 |     100 |   96.87 | 302,304,306-311   
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ src/modules/color |   17.59 |    78.57 |      25 |   17.59 |                   
+  ColorPage.tsx    |       0 |        0 |       0 |       0 | 1-15              
+  ColorSystem.tsx  |       0 |        0 |       0 |       0 | 1-354             
+  ...tyPreview.tsx |       0 |        0 |       0 |       0 | 1-172             
+  catalog.ts       |     100 |      100 |     100 |     100 |                   
+ ...les/components |   92.52 |    71.12 |   76.54 |   92.52 |                   
+  ...entEditor.tsx |   64.47 |    55.55 |    7.89 |   64.47 | ...61-463,469-497 
+  ...ntLibrary.tsx |   91.02 |       80 |      48 |   91.02 | ...60-276,286-288 
+  ...ntPreview.tsx |   86.84 |    77.77 |   66.66 |   86.84 | 33-34,39-40,71    
+  ...nentsPage.tsx |       0 |        0 |       0 |       0 | 1-15              
+  catalog.ts       |     100 |    83.33 |      75 |     100 | 32                
+  categories.ts    |     100 |      100 |     100 |     100 |                   
+  describe.ts      |     100 |    84.52 |     100 |     100 | ...19,125-132,142 
+  families.ts      |     100 |      100 |     100 |     100 |                   
+  icons.tsx        |     100 |    81.81 |     100 |     100 | 237,244           
+  index.ts         |       0 |        0 |       0 |       0 | 1                 
+  kit.tsx          |      96 |     83.5 |   97.36 |      96 | ...13-516,657-660 
+  look.ts          |     100 |    87.28 |     100 |     100 | ...85,489,491,499 
+  render-base.tsx  |   95.07 |    55.51 |     100 |   95.07 | ...89-593,701-704 
+  ...-nav-data.tsx |   87.11 |    63.17 |   95.65 |   87.11 | ...1334,1337-1344 
+  render-pages.tsx |   92.84 |    53.96 |   95.23 |   92.84 | ...46-752,779-781 
+  render-types.ts  |       0 |        0 |       0 |       0 |                   
+  renderers.ts     |     100 |      100 |     100 |     100 |                   
+  types.ts         |     100 |      100 |     100 |     100 |                   
+ src/modules/entry |   86.29 |    91.75 |   78.68 |   86.29 |                   
+  AuthPreview.tsx  |   91.99 |    81.48 |   69.64 |   91.99 | ...1439-1446,1904 
+  ...lowPicker.tsx |       0 |        0 |       0 |       0 | 1-181             
+  LandingPage.tsx  |       0 |        0 |       0 |       0 | 1-29              
+  ...ngPreview.tsx |   99.02 |    98.02 |      96 |   99.02 | ...1313,2270-2280 
+  LoginPage.tsx    |       0 |        0 |       0 |       0 | 1-21              
+  SignupPage.tsx   |       0 |        0 |       0 |       0 | 1-21              
+  ...g-landings.ts |     100 |      100 |     100 |     100 |                   
+  ...log-logins.ts |     100 |      100 |     100 |     100 |                   
+  ...og-signups.ts |     100 |      100 |     100 |     100 |                   
+  catalog.ts       |     100 |      100 |     100 |     100 |                   
+  frames.tsx       |       0 |        0 |       0 |       0 | 1-126             
+  galleries.tsx    |       0 |        0 |       0 |       0 | 1-597             
+  index.ts         |       0 |        0 |       0 |       0 | 1                 
+  motifs.tsx       |   96.56 |    95.23 |     100 |   96.56 | 94-102,330        
+  types.ts         |     100 |    66.66 |     100 |     100 | 32                
+ ...modules/guided |       0 |        0 |       0 |       0 |                   
+  EntryStep.tsx    |       0 |        0 |       0 |       0 | 1-71              
+  GuidedStep.tsx   |       0 |        0 |       0 |       0 | 1-219             
+  ...tonReview.tsx |       0 |        0 |       0 |       0 | 1-151             
+ src/modules/home  |       0 |        0 |       0 |       0 |                   
+  FreeHome.tsx     |       0 |        0 |       0 |       0 | 1-50              
+  Home.tsx         |       0 |        0 |       0 |       0 | 1-160             
+  status.ts        |       0 |        0 |       0 |       0 | 1-49              
+ ...es/inspiration |   95.59 |    75.83 |      60 |   95.59 |                   
+  ...onGallery.tsx |   87.62 |    76.11 |   34.78 |   87.62 | ...23-426,434-436 
+  ...ationPage.tsx |       0 |        0 |       0 |       0 | 1-15              
+  SiteFrames.tsx   |   72.16 |    58.33 |   83.33 |   72.16 | 21-24,98-124      
+  catalog.ts       |     100 |       75 |     100 |     100 | 20                
+  describe.ts      |     100 |    68.75 |     100 |     100 | 15-17,51-53,56    
+  exportHtml.tsx   |     100 |       50 |     100 |     100 | 13                
+  exporters.ts     |     100 |    42.85 |     100 |     100 | 12-38,95          
+  index.ts         |       0 |        0 |       0 |       0 | 1                 
+  palette.ts       |     100 |    94.73 |     100 |     100 | 38,41             
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...piration/sites |     100 |    99.08 |   98.85 |     100 |                   
+  ArcStudio.tsx    |     100 |      100 |     100 |     100 |                   
+  AtlasCapital.tsx |     100 |      100 |     100 |     100 |                   
+  AuroraWear.tsx   |     100 |      100 |     100 |     100 |                   
+  CremaClub.tsx    |     100 |      100 |     100 |     100 |                   
+  FloraSocial.tsx  |     100 |      100 |     100 |     100 |                   
+  Formica.tsx      |     100 |      100 |     100 |     100 |                   
+  FrostLab.tsx     |     100 |      100 |     100 |     100 |                   
+  KineticLab.tsx   |     100 |      100 |     100 |     100 |                   
+  LumenAudio.tsx   |     100 |    91.26 |     100 |     100 | ...0,74-77,92,112 
+  MoriObjects.tsx  |     100 |      100 |     100 |     100 |                   
+  NomadTrails.tsx  |     100 |    98.26 |     100 |     100 | 64,75             
+  OrbitalZero.tsx  |     100 |     97.7 |     100 |     100 | 6-7,34-35         
+  PixelPlay.tsx    |     100 |    97.97 |     100 |     100 | 26,75,282         
+  PulseHealth.tsx  |     100 |      100 |     100 |     100 |                   
+  RaizMarket.tsx   |     100 |      100 |     100 |     100 |                   
+  SignalAi.tsx     |     100 |     97.7 |     100 |     100 | 17,91             
+  TerraForm.tsx    |     100 |      100 |     100 |     100 |                   
+  TideResort.tsx   |     100 |      100 |     100 |     100 |                   
+  ...ntAtelier.tsx |     100 |      100 |     100 |     100 |                   
+  VoltMotors.tsx   |     100 |     96.7 |     100 |     100 | 11-15,53,66,102   
+  base.ts          |     100 |      100 |     100 |     100 |                   
+  kit.tsx          |     100 |      100 |   88.88 |     100 |                   
+  registry.ts      |     100 |      100 |     100 |     100 |                   
+ ...odules/layouts |   90.15 |    92.43 |   82.35 |   90.15 |                   
+  ...opGallery.tsx |       0 |        0 |       0 |       0 | 1-261             
+  DesktopPage.tsx  |       0 |        0 |       0 |       0 | 1-15              
+  MobilePage.tsx   |       0 |        0 |       0 |       0 | 1-15              
+  MobileStudio.tsx |       0 |        0 |       0 |       0 | 1-212             
+  ...og.desktop.ts |     100 |      100 |     100 |     100 |                   
+  ...log.mobile.ts |     100 |      100 |     100 |     100 |                   
+  catalog.ts       |     100 |      100 |     100 |     100 |                   
+  galleries.tsx    |       0 |        0 |       0 |       0 | 1                 
+  geometry.ts      |   98.46 |    79.71 |   93.75 |   98.46 | 207-208           
+  guide.ts         |       0 |      100 |     100 |       0 | 7-70              
+  index.ts         |       0 |        0 |       0 |       0 | 1                 
+  phone.tsx        |   98.32 |    92.12 |    67.5 |   98.32 | ...1582,1606-1610 
+  renderers.tsx    |     100 |      100 |     100 |     100 |                   
+  schematic.tsx    |   99.85 |    95.19 |     100 |   99.85 | 646,1388          
+  shared.tsx       |       0 |        0 |       0 |       0 | 1-133             
+  types.ts         |     100 |      100 |     100 |     100 |                   
+ ...les/navigation |   93.14 |    85.07 |    57.8 |   93.14 |                   
+  ...erPreview.tsx |   94.84 |    89.36 |    46.8 |   94.84 | ...6,894-909,1210 
+  ...ationPage.tsx |       0 |        0 |       0 |       0 | 1-15              
+  ...nShowcase.tsx |   65.36 |    73.68 |   47.61 |   65.36 | ...72,511,597-606 
+  ...arPreview.tsx |   95.06 |    88.75 |      50 |   95.06 | ...-943,1054-1056 
+  catalog.ts       |   99.96 |    91.86 |     100 |   99.96 | 1603              
+  icons.tsx        |     100 |       25 |     100 |     100 | 167-168           
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  menu.tsx         |    85.5 |    78.26 |   82.35 |    85.5 | ...89,241,273-278 
+  palette.ts       |     100 |    78.26 |     100 |     100 | ...02,134,146,171 
+  stages.tsx       |   78.98 |    71.31 |      55 |   78.98 | ...20-629,643-648 
+  types.ts         |     100 |      100 |     100 |     100 |                   
+ ...odules/preview |       0 |        0 |       0 |       0 |                   
+  ...tePreview.tsx |       0 |        0 |       0 |       0 | 1-238             
+  PreviewPage.tsx  |       0 |        0 |       0 |       0 | 1-15              
+  regions.tsx      |       0 |        0 |       0 |       0 | 1-308             
+ ...odules/project |       0 |        0 |       0 |       0 |                   
+  ...tGoalForm.tsx |       0 |        0 |       0 |       0 | 1-174             
+  ...tGoalPage.tsx |       0 |        0 |       0 |       0 | 1-15              
+  ProjectPage.tsx  |       0 |        0 |       0 |       0 | 1-179             
+ ...odules/prompts |       0 |        0 |       0 |       0 |                   
+  ExportPage.tsx   |       0 |        0 |       0 |       0 | 1-195             
+  PromptCenter.tsx |       0 |        0 |       0 |       0 | 1-15              
+  ...Workspace.tsx |       0 |        0 |       0 |       0 | 1-221             
+ ...ules/templates |   98.94 |     89.3 |   87.97 |   98.94 |                   
+  ...ateEditor.tsx |   90.97 |     87.5 |   33.33 |   90.97 | ...37-338,343-345 
+  ...ateRender.tsx |     100 |    96.29 |     100 |     100 | 107               
+  ...latesPage.tsx |   96.55 |    86.66 |   69.23 |   96.55 | 107-109,134-136   
+  catalog.ts       |     100 |    95.45 |     100 |     100 | 22                
+  describe.ts      |     100 |    72.41 |     100 |     100 | 15-22,51,65-73    
+  exportHtml.tsx   |     100 |      100 |     100 |     100 |                   
+  exports.ts       |     100 |    82.35 |     100 |     100 | 27,40,150         
+  frames.tsx       |   83.72 |     37.5 |   83.33 |   83.72 | 21-23,33-43       
+  sections.ts      |     100 |    95.65 |     100 |     100 | ...,36,46,430,443 
+  theme.ts         |     100 |    94.33 |     100 |     100 | 64,152            
+  types.ts         |       0 |        0 |       0 |       0 |                   
+ ...mplates/render |   99.08 |    93.12 |   97.72 |   99.08 |                   
+  apps.tsx         |     100 |    91.06 |     100 |     100 | ...58,371,399,421 
+  kit.tsx          |   96.92 |    94.51 |      92 |   96.92 | ...1140,1293-1306 
+  sections.tsx     |     100 |    93.08 |     100 |     100 | ...2376,2391,2430 
+ ...les/validation |       0 |        0 |       0 |       0 |                   
+  ...ationPage.tsx |       0 |        0 |       0 |       0 | 1-258             
+ src/prompt        |   84.53 |    68.72 |   87.09 |   84.53 |                   
+  PromptButton.tsx |   41.86 |       50 |      25 |   41.86 | 36-65             
+  conflicts.ts     |   53.19 |    76.59 |     100 |   53.19 | ...16-128,146-158 
+  css.ts           |     100 |       75 |     100 |     100 | 13,35             
+  items.ts         |   88.25 |     63.1 |      90 |   88.25 | ...23-424,431-459 
+  responsive.ts    |     100 |    66.66 |     100 |     100 | 62                
+  spec.ts          |     100 |    93.75 |     100 |     100 | 108               
+  text.ts          |   92.45 |    66.12 |     100 |   92.45 | ...47-148,151-153 
+  validation.ts    |     100 |    66.66 |     100 |     100 | 29-31,65-73,90    
+ src/shell         |       0 |        0 |       0 |       0 |                   
+  ModuleStub.tsx   |       0 |        0 |       0 |       0 | 1-11              
+  Shell.tsx        |       0 |        0 |       0 |       0 | 1-385             
+  nav.ts           |       0 |        0 |       0 |       0 | 1-105             
+ src/ui            |   70.05 |    73.52 |    61.7 |   70.05 |                   
+  index.tsx        |   70.05 |    73.52 |    61.7 |   70.05 | ...97-727,735-745 
+-------------------|---------|----------|---------|---------|-------------------

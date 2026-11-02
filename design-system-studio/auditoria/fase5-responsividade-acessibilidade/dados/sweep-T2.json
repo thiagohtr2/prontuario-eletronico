@@ -1,0 +1,1194 @@
+[
+  {
+    "id": "m-desktop",
+    "route": "/modulos/desktop",
+    "size": "375",
+    "w": 375,
+    "h": 800,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "375",
+    "finalHash": "#/modulos/desktop",
+    "m": {
+      "vw": 375,
+      "vh": 800,
+      "url": "#/modulos/desktop",
+      "docScrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "docOverflowX": 0,
+      "docHeight": 18021,
+      "overflow": [
+        {
+          "el": "div",
+          "left": 334,
+          "right": 389,
+          "width": 55,
+          "preview": true
+        }
+      ],
+      "overflowCount": 1,
+      "truncated": [
+        {
+          "el": "p.lay-detail__tags \"Sistemas e SaaS, Painéis administrativos, Áreas lo\"",
+          "text": "Combina com: Sistemas e SaaS · Painéis administrativos · Áreas logadas",
+          "scrollW": 429,
+          "clientW": 317,
+          "scrollH": 20,
+          "clientH": 20,
+          "ellipsis": true,
+          "lineClamp": false,
+          "dir": "x",
+          "preview": false
+        }
+      ],
+      "truncatedCount": 1,
+      "truncatedPreviewCount": 0,
+      "smallText": [
+        {
+          "el": "span.lay-chip \"HEADER\"",
+          "fontSize": 10,
+          "effective": 10.1
+        },
+        {
+          "el": "span.lay-chip \"SIDEBAR\"",
+          "fontSize": 10,
+          "effective": 10
+        },
+        {
+          "el": "span.lay-chip \"RAIL\"",
+          "fontSize": 10,
+          "effective": 10
+        },
+        {
+          "el": "span.lay-chip \"CONTEÚDO\"",
+          "fontSize": 10,
+          "effective": 10
+        },
+        {
+          "el": "span.lay-chip \"PAINEL\"",
+          "fontSize": 10,
+          "effective": 9.9
+        }
+      ],
+      "smallTextCount": 5,
+      "smallTextPreviewCount": 141,
+      "smallTextPreviewMin": 7.4,
+      "offscreenFocusable": 37,
+      "targetsTotal": 65,
+      "targetsLt44": 5,
+      "targetsLt24": 4,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [
+        [
+          "button.ui-term 84x20",
+          1
+        ],
+        [
+          "button.ui-term 73x20",
+          1
+        ],
+        [
+          "button.ui-term 91x20",
+          1
+        ],
+        [
+          "button.ui-term 48x21",
+          1
+        ],
+        [
+          "summary. 317x42",
+          1
+        ]
+      ],
+      "targetsLt24Examples": [
+        {
+          "el": "button.ui-term \"barra superior\"",
+          "w": 84,
+          "h": 20
+        },
+        {
+          "el": "button.ui-term \"menu lateral\"",
+          "w": 73,
+          "h": 20
+        },
+        {
+          "el": "button.ui-term \"trilho de ícones\"",
+          "w": 91,
+          "h": 20
+        },
+        {
+          "el": "button.ui-term \"sidebar\"",
+          "w": 48,
+          "h": 21
+        }
+      ],
+      "closeTargetsCount": 4,
+      "overlappingTargets": [
+        {
+          "a": "div.lay-tech \"Como funciona e como se adapta\"",
+          "b": "button.ui-chip \"Sidebar integral clássica\"",
+          "gap": -1
+        },
+        {
+          "a": "div.lay-tech \"Como funciona e como se adapta\"",
+          "b": "button.ui-chip \"Dashboard de três colunas\"",
+          "gap": -1
+        },
+        {
+          "a": "div.lay-tech \"Como funciona e como se adapta\"",
+          "b": "button.ui-chip \"Analytics com lateral direita\"",
+          "gap": -1
+        }
+      ],
+      "closeTargets": [
+        {
+          "a": "button.ui-term \"barra superior\"",
+          "b": "button.ui-term \"trilho de ícones\"",
+          "gap": 6
+        }
+      ],
+      "fields": 0,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 375
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 800,
+          "h": 800,
+          "w": 320
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": {
+        "n": 42,
+        "min": 343,
+        "max": 343
+      },
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [
+      {
+        "el": "h3",
+        "by": "span.lay-suggest__title \"Sugeridos para seu tipo de projeto (Dash\"",
+        "coverer": "aside.lay-desk-detail \"Detalhes do layout\"",
+        "pos": "static",
+        "y": 1154
+      },
+      {
+        "el": "h3",
+        "by": "p.lay-family-note \"42 modelos em 8 famílias. Uma sidebar in\"",
+        "coverer": "p.lay-family-note \"42 modelos em 8 famílias. Uma sidebar in\"",
+        "pos": "static",
+        "y": 1486
+      },
+      {
+        "el": "h3",
+        "by": "span.ui-option__meta \"Sugerido · Sidebar 252 · Header 64 px\"",
+        "coverer": "span.ui-option__meta \"Sugerido · Sidebar 252 · Header 64 px\"",
+        "pos": "static",
+        "y": 1844
+      }
+    ],
+    "shot": "capturas/sw/m-desktop--375.png",
+    "shotFull": "capturas/sw/m-desktop--375--full.png",
+    "ms": 3372
+  },
+  {
+    "id": "m-mobile",
+    "route": "/modulos/mobile",
+    "size": "375",
+    "w": 375,
+    "h": 800,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "375",
+    "finalHash": "#/modulos/mobile",
+    "m": {
+      "vw": 375,
+      "vh": 800,
+      "url": "#/modulos/mobile",
+      "docScrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "docOverflowX": 0,
+      "docHeight": 2317,
+      "overflow": [
+        {
+          "el": "div.lay-mob-media",
+          "left": 313,
+          "right": 447,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 461,
+          "right": 595,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 609,
+          "right": 743,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 757,
+          "right": 891,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 905,
+          "right": 1039,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1053,
+          "right": 1187,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1201,
+          "right": 1335,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1349,
+          "right": 1483,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1497,
+          "right": 1631,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1645,
+          "right": 1779,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1793,
+          "right": 1927,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1941,
+          "right": 2075,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2089,
+          "right": 2223,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2237,
+          "right": 2371,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2385,
+          "right": 2519,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2533,
+          "right": 2667,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2681,
+          "right": 2815,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2829,
+          "right": 2963,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2977,
+          "right": 3111,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3125,
+          "right": 3259,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3273,
+          "right": 3407,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3421,
+          "right": 3555,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3569,
+          "right": 3703,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3717,
+          "right": 3851,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3865,
+          "right": 3999,
+          "width": 134,
+          "preview": true
+        }
+      ],
+      "overflowCount": 43,
+      "truncated": [
+        {
+          "el": "span.ui-option__title \"Bottom Navigation com drawer de opções\"",
+          "text": "Bottom Navigation com drawer de opções",
+          "scrollW": 110,
+          "clientW": 110,
+          "scrollH": 70,
+          "clientH": 53,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.lay-detail__tags \"Apps com muitas seções, Sistemas, Dashboards\"",
+          "text": "Combina com: Apps com muitas seções · Sistemas · Dashboards",
+          "scrollW": 385,
+          "clientW": 343,
+          "scrollH": 20,
+          "clientH": 20,
+          "ellipsis": true,
+          "lineClamp": false,
+          "dir": "x",
+          "preview": false
+        }
+      ],
+      "truncatedCount": 2,
+      "truncatedPreviewCount": 0,
+      "smallText": [
+        {
+          "el": "span.lay-chip \"HEADER\"",
+          "fontSize": 10,
+          "effective": 10.1
+        },
+        {
+          "el": "span.lay-chip \"MENU INFERIOR\"",
+          "fontSize": 10,
+          "effective": 10
+        },
+        {
+          "el": "span.lay-chip \"DRAWER\"",
+          "fontSize": 10,
+          "effective": 10
+        },
+        {
+          "el": "span.lay-chip \"CONTEÚDO\"",
+          "fontSize": 10,
+          "effective": 10
+        }
+      ],
+      "smallTextCount": 4,
+      "smallTextPreviewCount": 26,
+      "smallTextPreviewMin": 8.9,
+      "offscreenFocusable": 37,
+      "targetsTotal": 63,
+      "targetsLt44": 4,
+      "targetsLt24": 3,
+      "targetsLt44Prev": 2,
+      "targetsPrevTotal": 2,
+      "targetsLt44Groups": [
+        [
+          "button.ui-term 84x20",
+          1
+        ],
+        [
+          "button.ui-term 87x20",
+          1
+        ],
+        [
+          "button.ui-term 104x20",
+          1
+        ],
+        [
+          "summary. 343x36",
+          1
+        ]
+      ],
+      "targetsLt24Examples": [
+        {
+          "el": "button.ui-term \"barra superior\"",
+          "w": 84,
+          "h": 20
+        },
+        {
+          "el": "button.ui-term \"menu embaixo\"",
+          "w": 87,
+          "h": 20
+        },
+        {
+          "el": "button.ui-term \"menu que desliza\"",
+          "w": 104,
+          "h": 20
+        }
+      ],
+      "closeTargetsCount": 2,
+      "overlappingTargets": [],
+      "closeTargets": [
+        {
+          "a": "button.ui-term \"barra superior\"",
+          "b": "button.ui-term \"menu embaixo\"",
+          "gap": 6
+        },
+        {
+          "a": "button.ui-term \"menu embaixo\"",
+          "b": "button.ui-term \"menu que desliza\"",
+          "gap": 6
+        }
+      ],
+      "fields": 0,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 375
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 800,
+          "h": 800,
+          "w": 320
+        }
+      ],
+      "narrowCards": [
+        {
+          "el": "div.lay-mob-card \"Bottom Navigation clássica Sugerido\"",
+          "w": 136
+        },
+        {
+          "el": "div.ui-option \"Bottom Navigation clássica Sugerido\"",
+          "w": 136
+        },
+        {
+          "el": "div.lay-mob-card \"Bottom Navigation com cinco destinos\"",
+          "w": 136
+        },
+        {
+          "el": "div.ui-option \"Bottom Navigation com cinco destinos\"",
+          "w": 136
+        },
+        {
+          "el": "div.lay-mob-card \"Dock flutuante\"",
+          "w": 136
+        },
+        {
+          "el": "div.ui-option \"Dock flutuante\"",
+          "w": 136
+        },
+        {
+          "el": "div.lay-mob-card \"Bottom com ação central\"",
+          "w": 136
+        },
+        {
+          "el": "div.ui-option \"Bottom com ação central\"",
+          "w": 136
+        },
+        {
+          "el": "div.lay-mob-card \"Bottom minimalista\"",
+          "w": 136
+        },
+        {
+          "el": "div.ui-option \"Bottom minimalista\"",
+          "w": 136
+        }
+      ],
+      "cardWidths": {
+        "n": 44,
+        "min": 136,
+        "max": 136
+      },
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/m-mobile--375.png",
+    "shotFull": "capturas/sw/m-mobile--375--full.png",
+    "ms": 2078
+  },
+  {
+    "id": "m-cores",
+    "route": "/modulos/cores",
+    "size": "375",
+    "w": 375,
+    "h": 800,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "375",
+    "finalHash": "#/modulos/cores",
+    "m": {
+      "vw": 375,
+      "vh": 800,
+      "url": "#/modulos/cores",
+      "docScrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "docOverflowX": 0,
+      "docHeight": 19449,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [
+        {
+          "el": "span \"Campo\"",
+          "fontSize": 12,
+          "effective": 12
+        },
+        {
+          "el": "span \"Com foco\"",
+          "fontSize": 12,
+          "effective": 12
+        },
+        {
+          "el": "span \"12 novos\"",
+          "fontSize": 11.5,
+          "effective": 11.4
+        }
+      ],
+      "smallTextCount": 3,
+      "smallTextPreviewCount": 0,
+      "smallTextPreviewMin": null,
+      "offscreenFocusable": 37,
+      "targetsTotal": 142,
+      "targetsLt44": 0,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 63,
+      "overlappingTargets": [
+        {
+          "a": "button.ui-option__hit \"Neutro Essencial Minimalistas · clara Preto, branc\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Papel Branco Minimalistas · clara Fundo de papel l\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Grafite Suave Minimalistas · clara Cinzas grafite \"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Monocromo Noturno Minimalistas · escura Modo escur\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Areia Clara Minimalistas · clara Neutros terrosos \"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Névoa Minimalistas · clara Cinzas azulados e um ín\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Oceano Profundo Frias · clara Azul petróleo com na\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Glacial Frias · clara Cianos gelados e índigo, mui\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Azul Ardósia Frias · clara Azul acinzentado sóbrio\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Lavanda Fria Frias · clara Lilás azulado com verde\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        }
+      ],
+      "closeTargets": [
+        {
+          "a": "button.ui-tab \"Paletas\"",
+          "b": "button.ui-tab \"Tokens e cores\"",
+          "gap": 4
+        },
+        {
+          "a": "button.ui-tab \"Tokens e cores\"",
+          "b": "button.ui-tab \"Tipografia\"",
+          "gap": 4
+        },
+        {
+          "a": "button.ui-tab \"Tipografia\"",
+          "b": "button.ui-tab \"Formas e superfícies\"",
+          "gap": 4
+        }
+      ],
+      "fields": 1,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 375
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 800,
+          "h": 800,
+          "w": 320
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": {
+        "n": 60,
+        "min": 343,
+        "max": 343
+      },
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/m-cores--375.png",
+    "shotFull": "capturas/sw/m-cores--375--full.png",
+    "ms": 2080
+  },
+  {
+    "id": "m-navegacao",
+    "route": "/modulos/navegacao",
+    "size": "375",
+    "w": 375,
+    "h": 800,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "375",
+    "finalHash": "#/modulos/navegacao",
+    "m": {
+      "vw": 375,
+      "vh": 800,
+      "url": "#/modulos/navegacao",
+      "docScrollWidth": 375,
+      "bodyScrollWidth": 375,
+      "docOverflowX": 0,
+      "docHeight": 28150,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [
+        {
+          "el": "p.nvs-card__comp \"Logo · menu central · ações. Logo à esquerda, os q\"",
+          "text": "Logo · menu central · ações. Logo à esquerda, os quatro links centralizados na b",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Logo no centro, menu dividido. Dois links à esquer\"",
+          "text": "Logo no centro, menu dividido. Dois links à esquerda, logo exatamente no meio da",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Pílula em toda a largura. Barra flutuante afastada\"",
+          "text": "Pílula em toda a largura. Barra flutuante afastada 12 px do topo e das laterais:",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Três ilhas distribuídas. Ilha do logo à esquerda, \"",
+          "text": "Três ilhas distribuídas. Ilha do logo à esquerda, ilha da navegação (grupo segme",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 98,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Abas à esquerda, busca à direita. Logo + abas subl\"",
+          "text": "Abas à esquerda, busca à direita. Logo + abas sublinhadas à esquerda; à direita,",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Utilitários em cima. Faixa fina de 32 px no topo c\"",
+          "text": "Utilitários em cima. Faixa fina de 32 px no topo com ouvidoria, carreiras e tele",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 98,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Busca larga + faixa de departamentos. Linha 1: log\"",
+          "text": "Busca larga + faixa de departamentos. Linha 1: logo, busca larga ao centro, ende",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 98,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Masthead clássico. Faixa superior com data e busca\"",
+          "text": "Masthead clássico. Faixa superior com data e busca à esquerda, nome do jornal gr",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Trilha na barra principal. Logo seguido da trilha \"",
+          "text": "Trilha na barra principal. Logo seguido da trilha “Projetos / Site institucional",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Sobre o hero, menu central. Header transparente so\"",
+          "text": "Sobre o hero, menu central. Header transparente sobre a imagem do hero: logo à e",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Nome central, menu dividido. Duas categorias à esq\"",
+          "text": "Nome central, menu dividido. Duas categorias à esquerda, o nome da maison em ser",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Largura total, uma linha. Logo e menus (com mega m\"",
+          "text": "Largura total, uma linha. Logo e menus (com mega menus) à esquerda, de borda a b",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Menu + chip de perfil. Logo + links em pílula à es\"",
+          "text": "Menu + chip de perfil. Logo + links em pílula à esquerda; à direita, sino e chip",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Vidro em toda a largura. Barra de vidro flutuante \"",
+          "text": "Vidro em toda a largura. Barra de vidro flutuante a 12 px das bordas, em toda a ",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Barra única na cor da marca. Fundo primário em tod\"",
+          "text": "Barra única na cor da marca. Fundo primário em toda a barra: logo à esquerda, li",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Busca central. Logo com selo “Ajuda” e “Navegar ▾”\"",
+          "text": "Busca central. Logo com selo “Ajuda” e “Navegar ▾” à esquerda, busca larga no ce",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Alto que encolhe. No topo da página tem 80 px; apó\"",
+          "text": "Alto que encolhe. No topo da página tem 80 px; após rolar, encolhe para 60 px e ",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Público e ações em cima. Linha 1 com logo, alterna\"",
+          "text": "Público e ações em cima. Linha 1 com logo, alternador “Para você | Para empresas",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Ícones no centro. Logo à esquerda, abas com ícone \"",
+          "text": "Ícones no centro. Logo à esquerda, abas com ícone + rótulo no centro (contador e",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Categorias ao lado do logo. Logo serifado + catego\"",
+          "text": "Categorias ao lado do logo. Logo serifado + categorias sublinhadas à esquerda; b",
+          "scrollW": 309,
+          "clientW": 309,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        }
+      ],
+      "truncatedCount": 20,
+      "truncatedPreviewCount": 8,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 27,
+      "smallTextPreviewMin": 11.4,
+      "offscreenFocusable": 37,
+      "targetsTotal": 201,
+      "targetsLt44": 2,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 5,
+      "targetsPrevTotal": 111,
+      "targetsLt44Groups": [
+        [
+          "button.ui-term 52x24",
+          1
+        ],
+        [
+          "button.ui-term 55x24",
+          1
+        ]
+      ],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 110,
+      "overlappingTargets": [],
+      "closeTargets": [
+        {
+          "a": "button.ui-tab \"Headers (36)\"",
+          "b": "button.ui-tab \"Sidebars (36)\"",
+          "gap": 4
+        },
+        {
+          "a": "button.ui-tab \"Sidebars (36)\"",
+          "b": "button.ui-tab \"Combinação\"",
+          "gap": 4
+        },
+        {
+          "a": "button.nvs-card__select \"Linha Essencial Integral Fixo ao rolar O header ma\"",
+          "b": "button \"Logo · menu central · ações\"",
+          "gap": 4
+        },
+        {
+          "a": "button.nvs-card__select \"Linha Essencial Integral Fixo ao rolar O header ma\"",
+          "b": "button \"Tudo em uma linha à esquerda\"",
+          "gap": 4
+        },
+        {
+          "a": "button \"Logo · menu central · ações\"",
+          "b": "button \"Tudo em uma linha à esquerda\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Vitrine Central Integral Fixo ao rolar O logo fica\"",
+          "b": "button \"Logo no centro, menu dividido\"",
+          "gap": 4
+        },
+        {
+          "a": "button.nvs-card__select \"Vitrine Central Integral Fixo ao rolar O logo fica\"",
+          "b": "button \"Logo em cima, menu embaixo\"",
+          "gap": 4
+        },
+        {
+          "a": "button \"Logo no centro, menu dividido\"",
+          "b": "button \"Logo em cima, menu embaixo\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Ilha Flutuante Flutuante Fixo ao rolar Uma barra a\"",
+          "b": "button \"Pílula em toda a largura\"",
+          "gap": 4
+        },
+        {
+          "a": "button.nvs-card__select \"Ilha Flutuante Flutuante Fixo ao rolar Uma barra a\"",
+          "b": "button \"Pílula estreita central\"",
+          "gap": 4
+        },
+        {
+          "a": "button \"Pílula em toda a largura\"",
+          "b": "button \"Pílula estreita central\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Arquipélago Flutuante Fixo ao rolar Em vez de uma \"",
+          "b": "button \"Três ilhas distribuídas\"",
+          "gap": 4
+        },
+        {
+          "a": "button.nvs-card__select \"Arquipélago Flutuante Fixo ao rolar Em vez de uma \"",
+          "b": "button \"Ilhas agrupadas à direita\"",
+          "gap": 4
+        },
+        {
+          "a": "button \"Três ilhas distribuídas\"",
+          "b": "button \"Ilhas agrupadas à direita\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Painel de Trabalho Integral Fixo ao rolar Header d\"",
+          "b": "button \"Abas à esquerda, busca à direita\"",
+          "gap": 4
+        },
+        {
+          "a": "button.nvs-card__select \"Painel de Trabalho Integral Fixo ao rolar Header d\"",
+          "b": "button \"Busca no centro\"",
+          "gap": 4
+        },
+        {
+          "a": "button \"Abas à esquerda, busca à direita\"",
+          "b": "button \"Busca no centro\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Console do Desenvolvedor Integral Fixo ao rolar Vi\"",
+          "b": "button \"Comandos à direita\"",
+          "gap": 4
+        },
+        {
+          "a": "button.nvs-card__select \"Console do Desenvolvedor Integral Fixo ao rolar Vi\"",
+          "b": "button \"Comando no centro\"",
+          "gap": 4
+        },
+        {
+          "a": "button \"Comandos à direita\"",
+          "b": "button \"Comando no centro\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Institucional em Duas Linhas Integral Fixo ao rola\"",
+          "b": "button \"Utilitários em cima\"",
+          "gap": 4
+        },
+        {
+          "a": "button.nvs-card__select \"Institucional em Duas Linhas Integral Fixo ao rola\"",
+          "b": "button \"Menus na segunda linha\"",
+          "gap": 4
+        },
+        {
+          "a": "button \"Utilitários em cima\"",
+          "b": "button \"Menus na segunda linha\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Mega Empório Integral Fixo ao rolar Header de loja\"",
+          "b": "button \"Busca larga + faixa de departamentos\"",
+          "gap": 4
+        },
+        {
+          "a": "button.nvs-card__select \"Mega Empório Integral Fixo ao rolar Header de loja\"",
+          "b": "button \"Departamentos ao lado do logo\"",
+          "gap": 4
+        }
+      ],
+      "fields": 3,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 375
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 800,
+          "h": 800,
+          "w": 320
+        }
+      ],
+      "narrowCards": [
+        {
+          "el": "span.nvs-card__badge \"Selecionado\"",
+          "w": 110
+        }
+      ],
+      "cardWidths": null,
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/m-navegacao--375.png",
+    "shotFull": "capturas/sw/m-navegacao--375--full.png",
+    "ms": 3852
+  }
+]

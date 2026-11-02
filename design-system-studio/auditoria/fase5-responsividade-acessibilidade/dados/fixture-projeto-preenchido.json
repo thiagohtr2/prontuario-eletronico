@@ -1,0 +1,153 @@
+{
+  "kind": "atelier-ui/backup",
+  "exportedAt": "2026-11-02T18:42:15.590Z",
+  "project": {
+    "schema": "atelier-ui/project",
+    "version": 1,
+    "id": "prj_1a0e1830",
+    "createdAt": "2026-11-02T18:18:48.710Z",
+    "updatedAt": "2026-11-02T18:42:04.220Z",
+    "meta": {
+      "name": "Nexo Capital",
+      "objective": "Plataforma financeira com dashboard financeiro, tabelas de dados e gráficos.",
+      "description": "Plataforma financeira \"Nexo Capital\": login profissional, dashboard financeiro com tabelas de dados e gráficos, navegação com sidebar e header, design corporativo e responsividade em telas pequenas.",
+      "audience": "",
+      "purpose": "",
+      "projectType": "dashboard",
+      "projectTypeOther": "",
+      "features": [
+        "Login profissional",
+        "Dashboard financeiro",
+        "Tabelas de dados",
+        "Gráficos"
+      ],
+      "tech": "HTML + CSS + JavaScript"
+    },
+    "mode": "guided",
+    "depth": "essential",
+    "prefs": {
+      "showLegends": true,
+      "showHints": true
+    },
+    "guided": {
+      "step": "preview",
+      "completed": [
+        "revisao",
+        "objetivo",
+        "entrada",
+        "desktop",
+        "mobile"
+      ],
+      "skeletonApproved": true
+    },
+    "entry": {
+      "flow": "login-only",
+      "landingId": null,
+      "loginId": "acesso-corporativo",
+      "signupId": null,
+      "landingUsesOriginalColors": false
+    },
+    "layout": {
+      "desktopId": "sidebar-integral-classica",
+      "mobileId": "drawer-esquerda"
+    },
+    "identity": {
+      "paletteId": "azul-institucional",
+      "overrides": {},
+      "typography": {
+        "heading": "inter",
+        "body": "inter",
+        "baseSize": 15,
+        "headingWeight": 650,
+        "bodyWeight": 400
+      },
+      "geometry": {
+        "radius": "medium",
+        "borderWidth": 1,
+        "shadow": "none",
+        "surface": "outlined",
+        "density": "comfortable",
+        "iconStyle": "outline"
+      }
+    },
+    "navigation": {
+      "header": {
+        "id": "painel-analitico",
+        "variant": 0
+      },
+      "sidebar": {
+        "id": "sobria-corporativa",
+        "variant": 0
+      }
+    },
+    "components": [
+      {
+        "id": "cmp_270112bc",
+        "categoryId": "tabelas",
+        "familyId": "compact-pro",
+        "label": "Tabelas de dados",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:26:56.830Z"
+      },
+      {
+        "id": "cmp_009dbeaf",
+        "categoryId": "graficos",
+        "familyId": "compact-pro",
+        "label": "Gráficos",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:27:20.068Z"
+      },
+      {
+        "id": "cmp_e3949edd",
+        "categoryId": "dashboard",
+        "familyId": "compact-pro",
+        "label": "Dashboard financeiro",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:27:52.931Z"
+      }
+    ],
+    "inspiration": null,
+    "template": null,
+    "prompt": {
+      "excluded": [],
+      "notes": {},
+      "conflictResolutions": {
+        "cores-inspiracao": "global"
+      }
+    },
+    "validation": {
+      "config": {
+        "url": "",
+        "routes": [
+          "/"
+        ],
+        "widths": [
+          320,
+          360,
+          375,
+          390,
+          412,
+          430,
+          768,
+          1024,
+          1280,
+          1440
+        ],
+        "manualLogin": false,
+        "waitMs": 800,
+        "checks": {
+          "horizontalOverflow": true,
+          "offscreen": true,
+          "tapTargets": true,
+          "inputFontSize": true
+        },
+        "minTapTarget": 44
+      },
+      "report": null
+    }
+  },
+  "history": []
+}

@@ -1,0 +1,25 @@
+// REG-02: confirma a hipótese de artefato — locator.tap() rola sozinho quando o botão está sob a barra superior fixa.
+const { open, go, saved, sleep } = require('./lib.cjs')
+;(async () => {
+  const { browser, page } = await open('android', { deviceScaleFactor: 3 })
+  await go(page, '/guiado/objetivo')
+  await page.getByTestId('project-type-saas').tap()
+  await go(page, '/guiado/desktop')
+  await sleep(400)
+  const info = await page.evaluate(() => {
+    const b = [...document.querySelectorAll('button')].find((x) => x.textContent.includes('Escolher este modelo'))
+    const r = b.getBoundingClientRect()
+    window.scrollTo(0, scrollY + r.top - 5) // botão quase todo sob a barra superior (60 px)
+    const r2 = b.getBoundingClientRect()
+    const hit = document.elementFromPoint(r2.left + r2.width / 2, r2.top + r2.height / 2)
+    return { y: Math.round(r2.top), sy: scrollY, hit: hit.closest('header,.shell-topbar') ? 'barra superior' : hit.tagName }
+  })
+  await sleep(300)
+  const before = await page.evaluate(() => scrollY)
+  const btn = page.getByRole('button', { name: /Escolher este modelo/ }).first()
+  await btn.tap()
+  await sleep(800)
+  const after = await page.evaluate(() => scrollY)
+  console.log(`botão em y=${info.y}, ponto central coberto por: ${info.hit}; locator.tap(): scrollY ${before} → ${after} (delta ${after - before}); desktopId=${(await saved(page)).layout.desktopId}`)
+  await browser.close()
+})()

@@ -1,0 +1,248 @@
+
+ RUN  v2.1.9 /home/user/prontuario-eletronico/design-system-studio
+
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > tem 42 layouts com ids únicos em kebab-case
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > respeita a quantidade por família
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > contém os ids exigidos pelo núcleo e por todas as sugestões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > sidebar-integral-classica: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > sidebar-integral-rodape: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > sidebar-integral-header-global: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > sidebar-integral-sem-topbar: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > sidebar-integral-direita: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > sidebar-flutuante-compacta: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > sidebar-flutuante-larga: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > header-sidebar-flutuantes: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > ilhas-navegacao: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > icon-rail-esquerda: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > rail-sidebar-contextual: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > sidebar-dupla-hierarquia: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > rail-painel-detalhes: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > sidebar-direita-compacta: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > inspector-painel-direito: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > workspace-chat-lateral: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > topbar-integral-fixa: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > topbar-interna: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > topbar-duas-linhas: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > header-central-flutuante: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > minimalista-sem-lateral: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > landing-editorial-ampla: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > editorial-assimetrica: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > magazine-indice-lateral: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > portfolio-full-bleed: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > dashboard-tres-colunas: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > split-view-50-50: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > master-detail-35-65: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > crm-paineis-duplos: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > analytics-lateral-direita: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > workspace-produtividade: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > command-first: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > sistema-hospitalar-denso: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > painel-financeiro-rail: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > kanban-filtro-lateral: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > admin-sem-sidebar: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > one-screen-dashboard: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > one-screen-painel-operacional: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > one-screen-kiosk: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > one-screen-split-workspace: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > one-screen-minimalista: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > one-screen-controle-dispositivos: grid coerente com as regiões
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > cada item tem descrição, spec técnica e responsividade não vazia
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > marca oneScreen exatamente na família One Screen
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > sidebars integrais nunca flutuam; flutuantes têm afastamento
+ ✓ tests/unit/layouts.test.tsx > catálogo desktop > resolve a geometria escalando px e mantendo fr
+ ✓ tests/unit/layouts.test.tsx > catálogo mobile > tem 44 layouts com ids únicos em kebab-case
+ ✓ tests/unit/layouts.test.tsx > catálogo mobile > respeita a quantidade por grupo
+ ✓ tests/unit/layouts.test.tsx > catálogo mobile > contém os ids exigidos pelo núcleo e por todas as sugestões
+ ✓ tests/unit/layouts.test.tsx > catálogo mobile > cada item tem config completa, spec e responsividade não vazia
+ ✓ tests/unit/layouts.test.tsx > catálogo mobile > marca oneScreen exatamente no grupo One Screen
+ ✓ tests/unit/layouts.test.tsx > catálogo mobile > todo drawer/menu sobreposto tem gatilho, e grupos de drawers/tela cheia sempre têm menu
+ ✓ tests/unit/layouts.test.tsx > DesktopSchematic > desenha todas as regiões com legendas 332ms
+ ✓ tests/unit/layouts.test.tsx > DesktopSchematic > oculta as legendas quando desligadas e aceita tema
+ ✓ tests/unit/layouts.test.tsx > DesktopSchematic > posiciona regiões sobrepostas e usa renderRegion quando fornecido
+ ✓ tests/unit/layouts.test.tsx > DesktopSchematic > renderiza os 42 layouts sem erro em miniatura e em tamanho grande 2394ms
+ ✓ tests/unit/layouts.test.tsx > PhonePreview > monta a tela com legendas e respeita o desligamento
+ ✓ tests/unit/layouts.test.tsx > PhonePreview > abre o drawer pelo gatilho e fecha pelo X e pelo Esc
+ ✓ tests/unit/layouts.test.tsx > PhonePreview > abre o menu de todos os layouts que têm menu 1063ms
+ ✓ tests/unit/layouts.test.tsx > PhonePreview > marca o item tocado da navegação inferior como ativo
+ ✓ tests/unit/layouts.test.tsx > PhonePreview > miniatura não interativa não contém botões e tem a altura de 2 × largura
+ ✓ tests/unit/layouts.test.tsx > PhonePreview > renderiza os 44 layouts sem erro 986ms
+ ✓ tests/unit/templates.test.tsx > catálogo de templates > tem exatamente 28 templates com ids únicos em kebab-case
+ ✓ tests/unit/templates.test.tsx > catálogo de templates > usa de 6 a 10 categorias, todas com templates
+ ✓ tests/unit/templates.test.tsx > catálogo de templates > tem cores hexadecimais, fontes e cantos válidos
+ ✓ tests/unit/templates.test.tsx > catálogo de templates > tem pelo menos 4 seções por template, com ids únicos e tipos conhecidos
+ ✓ tests/unit/templates.test.tsx > catálogo de templates > tem composições diferentes entre si
+ ✓ tests/unit/templates.test.tsx > catálogo de templates > tem spec completa com responsividade concreta por seção
+ ✓ tests/unit/templates.test.tsx > personalizações > mantém as personalizações mínimas (valores iguais ao padrão são descartados)
+ ✓ tests/unit/templates.test.tsx > personalizações > deriva superfície e texto secundário quando o fundo muda
+ ✓ tests/unit/templates.test.tsx > describeTemplate > devolve null para id desconhecido
+ ✓ tests/unit/templates.test.tsx > describeTemplate > aplica as personalizações e lista as partes selecionadas na ordem do template
+ ✓ tests/unit/templates.test.tsx > describeTemplate > sem partes selecionadas, descreve o template inteiro
+ ✓ tests/unit/templates.test.tsx > renderização > saas-gestao renderiza no desktop e no celular 607ms
+ ✓ tests/unit/templates.test.tsx > renderização > startup-lancamento renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > fintech-conta renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > app-download renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > em-breve renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > ecommerce-moda renderiza no desktop e no celular 423ms
+ ✓ tests/unit/templates.test.tsx > renderização > produto-unico renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > imobiliaria renderiza no desktop e no celular 412ms
+ ✓ tests/unit/templates.test.tsx > renderização > portfolio-designer renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > agencia-criativa renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > fotografia renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > revista-digital renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > podcast renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > restaurante renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > cafeteria renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > hotel-pousada renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > agencia-viagens renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > clinica-saude renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > consultoria renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > advocacia renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > academia-fitness renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > curso-online renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > conferencia renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > festival renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > comunidade renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > ong-causa renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > dashboard-admin renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > documentacao renderiza no desktop e no celular
+ ✓ tests/unit/templates.test.tsx > renderização > marca partes clicáveis no modo editor
+ ✓ tests/unit/templates.test.tsx > exportações > HTML demonstrativo é um documento completo com o nome do template
+ ✓ tests/unit/templates.test.tsx > exportações > CSS traz variáveis com as personalizações e regras base
+ ✓ tests/unit/templates.test.tsx > exportações > especificação JSON traz template, personalizações mínimas e partes marcadas
+ ✓ tests/unit/templates.test.tsx > página do Template Studio > mostra a galeria, abre o editor e adiciona o template ao projeto 2295ms
+ ✓ tests/unit/templates.test.tsx > página do Template Studio > filtra por categoria e por busca 2355ms
+ ✓ tests/unit/components.test.tsx > catálogo de componentes > tem 66 categorias numeradas de 1 a 66, na ordem, com ids únicos
+ ✓ tests/unit/components.test.tsx > catálogo de componentes > distribui as categorias nos 6 grupos corretos
+ ✓ tests/unit/components.test.tsx > catálogo de componentes > mantém os nomes e os ids em português usados pelo motor de prompts
+ ✓ tests/unit/components.test.tsx > catálogo de componentes > tem 16 famílias visuais com ids únicos, na ordem da especificação
+ ✓ tests/unit/components.test.tsx > catálogo de componentes > famílias diferem de verdade (geometria, bordas, sombra, superfície, tipografia)
+ ✓ tests/unit/components.test.tsx > catálogo de componentes > toda categoria tem parâmetros contextuais válidos, spec completa e renderizador
+ ✓ tests/unit/components.test.tsx > catálogo de componentes > biblioteca de ícones tem ~150+ ícones e busca em português
+ ✓ tests/unit/components.test.tsx > look (paleta global × família) > usa a paleta global por padrão e respeita exceções individuais
+ ✓ tests/unit/components.test.tsx > describeComponent > descreve propriedades, família, estados e exceções individuais
+ ✓ tests/unit/components.test.tsx > describeComponent > funciona para todas as categorias e famílias sem exceções
+ ✓ tests/unit/components.test.tsx > describeComponent > alimenta o prompt individual de um modelo (component-model)
+ ✓ tests/unit/components.test.tsx > renderizadores > renderizam todas as categorias em 2 famílias sem erro 2003ms
+ ✓ tests/unit/components.test.tsx > renderizadores > aplica a configuração da instância e permite edição por clique
+ ✓ tests/unit/components.test.tsx > renderizadores > valores efetivos = padrões da categoria + instância
+ ✓ tests/unit/components.test.tsx > store: instâncias independentes > editar uma instância não altera outra
+ ✓ tests/unit/components.test.tsx > biblioteca (UI) > troca de categoria, mostra as 16 famílias e adiciona ao projeto abrindo o editor 958ms
+ ✓ tests/unit/components.test.tsx > biblioteca (UI) > modo guiado começa pelas categorias essenciais 513ms
+ ✓ tests/unit/navigation.test.tsx > catálogo de navegação > tem 36 headers e 36 sidebars com ids únicos em kebab-case
+ ✓ tests/unit/navigation.test.tsx > catálogo de navegação > cada modelo tem exatamente 2 composições, com nome e descrição
+ ✓ tests/unit/navigation.test.tsx > catálogo de navegação > as duas composições são arranjos realmente diferentes (não só cor)
+ ✓ tests/unit/navigation.test.tsx > catálogo de navegação > usa somente ids de filtro válidos
+ ✓ tests/unit/navigation.test.tsx > catálogo de navegação > todo filtro (exceto “todos”) tem pelo menos um modelo
+ ✓ tests/unit/navigation.test.tsx > catálogo de navegação > specs são completas e com responsividade não vazia
+ ✓ tests/unit/navigation.test.tsx > catálogo de navegação > flags de flutuante/fixo/formato são coerentes com a receita visual
+ ✓ tests/unit/navigation.test.tsx > catálogo de navegação > cobre as formas de sidebar pedidas
+ ✓ tests/unit/navigation.test.tsx > catálogo de navegação > headerById/sidebarById e receitas por composição
+ ✓ tests/unit/navigation.test.tsx > integração com o motor de prompts > gera item de prompt com a composição escolhida
+ ✓ tests/unit/navigation.test.tsx > integração com o motor de prompts > seleção entra no Master Prompt
+ ✓ tests/unit/navigation.test.tsx > HeaderPreview > renderiza todos os headers na composição 0 (desktop e celular) 2188ms
+ ✓ tests/unit/navigation.test.tsx > HeaderPreview > renderiza todos os headers na composição 1 (desktop e celular) 1197ms
+ ✓ tests/unit/navigation.test.tsx > HeaderPreview > abre menu suspenso, marca item ativo e fecha com Esc
+ ✓ tests/unit/navigation.test.tsx > HeaderPreview > perfil, notificações e menu do celular
+ ✓ tests/unit/navigation.test.tsx > HeaderPreview > não interativo fica inerte
+ ✓ tests/unit/navigation.test.tsx > SidebarPreview > renderiza todas as sidebars na composição 0 (desktop e drawer) 2154ms
+ ✓ tests/unit/navigation.test.tsx > SidebarPreview > renderiza todas as sidebars na composição 1 (desktop e drawer) 1503ms
+ ✓ tests/unit/navigation.test.tsx > SidebarPreview > recolhe e expande, com estado controlado
+ ✓ tests/unit/navigation.test.tsx > SidebarPreview > submenu em acordeão, flyout e busca que filtra
+ ✓ tests/unit/navigation.test.tsx > SidebarPreview > sidebar contextual troca a lista pelas abas
+ ✓ tests/unit/navigation.test.tsx > NavigationShowcase > renderiza os cartões, seleciona e persiste a composição 842ms
+ ✓ tests/unit/navigation.test.tsx > NavigationShowcase > abrir um menu da prévia não seleciona o cartão 611ms
+ ✓ tests/unit/navigation.test.tsx > NavigationShowcase > filtra e alterna para sidebars e combinação; modo guiado tem menos filtros 4011ms
+ ✓ tests/unit/prompt.test.ts > Master Prompt > inclui as seções A–G e o nome do projeto
+ ✓ tests/unit/prompt.test.ts > Master Prompt > inclui todas as decisões aprovadas
+ ✓ tests/unit/prompt.test.ts > Master Prompt > inclui as larguras de referência e as regras gerais de responsividade
+ ✓ tests/unit/prompt.test.ts > Master Prompt > retira itens excluídos do texto, mas mantém no JSON com included=false
+ ✓ tests/unit/prompt.test.ts > Master Prompt > registra observações do usuário como exceções
+ ✓ tests/unit/prompt.test.ts > Master Prompt > cada item registra identificador, tipo, origem e regras responsivas
+ ✓ tests/unit/prompt.test.ts > Especificação JSON > é JSON válido, representa o projeto e pode ser reimportada
+ ✓ tests/unit/prompt.test.ts > Especificação JSON > expõe tokens completos da identidade
+ ✓ tests/unit/prompt.test.ts > Prompts individuais > são autossuficientes: identidade herdada + responsividade + regras
+ ✓ tests/unit/prompt.test.ts > Prompts individuais > funcionam para itens ainda não selecionados
+ ✓ tests/unit/prompt.test.ts > Prompts individuais > incluem exceções individuais de componentes
+ ✓ tests/unit/prompt.test.ts > Contradições e pendências > lista pendências de um projeto vazio
+ ✓ tests/unit/prompt.test.ts > Contradições e pendências > detecta login escolhido em fluxo sem login e registra a decisão do usuário
+ ✓ tests/unit/prompt.test.ts > Contradições e pendências > detecta header flutuante sobre layout com header integral
+ ✓ tests/unit/prompt.test.ts > Exportações > CSS de referência contém as variáveis dos tokens
+ ✓ tests/unit/prompt.test.ts > Validação responsiva > gera configuração sem segredos e prompt de correção a partir do relatório
+ ✓ tests/unit/prompt.test.ts > Validação responsiva > rejeita relatórios malformados
+ ✓ tests/unit/entry.test.tsx > catálogos de entrada > tem 24 landings, 24 logins e 8 cadastros, na ordem pedida
+ ✓ tests/unit/entry.test.tsx > catálogos de entrada > usa ids únicos em kebab-case
+ ✓ tests/unit/entry.test.tsx > catálogos de entrada > usa cada uma das 12 arquiteturas exatamente duas vezes
+ ✓ tests/unit/entry.test.tsx > catálogos de entrada > toda spec tem summary, structure e responsive preenchidos
+ ✓ tests/unit/entry.test.tsx > catálogos de entrada > landings têm seções, cores de demonstração e fonte válidas
+ ✓ tests/unit/entry.test.tsx > catálogos de entrada > logins lembram que a autenticação real exige backend seguro
+ ✓ tests/unit/entry.test.tsx > catálogos de entrada > cadastros cobrem validação, senha, recuperação, acessibilidade e teclado virtual
+ ✓ tests/unit/entry.test.tsx > catálogos de entrada > funções ById encontram os itens e devolvem undefined para ids inexistentes
+ ✓ tests/unit/entry.test.tsx > catálogos de entrada > o motor de prompts gera itens a partir dos catálogos
+ ✓ tests/unit/entry.test.tsx > LandingPreview > renderiza a landing com header, hero e rodapé no computador 372ms
+ ✓ tests/unit/entry.test.tsx > LandingPreview > no celular usa menu hambúrguer que abre a navegação
+ ✓ tests/unit/entry.test.tsx > LandingPreview > renderiza todas as 24 landings nos dois dispositivos sem erro 2127ms
+ ✓ tests/unit/entry.test.tsx > LandingPreview > miniatura estática não contém botões nem campos
+ ✓ tests/unit/entry.test.tsx > AuthPreview > mostra campos com labels, autocomplete e mostrar/ocultar senha
+ ✓ tests/unit/entry.test.tsx > AuthPreview > valida ao enviar vazio e mostra os estados de erro forçados
+ ✓ tests/unit/entry.test.tsx > AuthPreview > leva para a recuperação de senha e troca entre Entrar e Criar conta
+ ✓ tests/unit/entry.test.tsx > AuthPreview > cadastro em etapas mostra o indicador e avança
+ ✓ tests/unit/entry.test.tsx > AuthPreview > renderiza as 24 composições e os 8 fluxos sem erro 1208ms
+ ✓ tests/unit/entry.test.tsx > AuthPreview > miniatura estática não contém campos reais
+ ✓ tests/unit/core.test.ts > cores > normaliza e valida hexadecimais
+ ✓ tests/unit/core.test.ts > cores > calcula contraste WCAG
+ ✓ tests/unit/core.test.ts > cores > ensureContrast atinge o mínimo pedido
+ ✓ tests/unit/core.test.ts > paletas e tokens > tem 60 paletas em 10 categorias com 6 cada
+ ✓ tests/unit/core.test.ts > paletas e tokens > deriva pelo menos 32 tokens semânticos válidos para cada paleta
+ ✓ tests/unit/core.test.ts > paletas e tokens > garante contraste AA para texto principal, secundário e texto sobre primária
+ ✓ tests/unit/core.test.ts > store do projeto > preserva escolhas ao alternar entre modos (mesma fonte de dados)
+ ✓ tests/unit/core.test.ts > store do projeto > não altera outros módulos ao selecionar em um módulo
+ ✓ tests/unit/core.test.ts > store do projeto > aplica e remove exceções de token
+ ✓ tests/unit/core.test.ts > store do projeto > edita uma instância de componente sem afetar outra
+ ✓ tests/unit/core.test.ts > store do projeto > duplica e remove componentes, limpando a exclusão do prompt
+ ✓ tests/unit/core.test.ts > store do projeto > salva versão antes de limpar e permite restaurar
+ ✓ tests/unit/core.test.ts > store do projeto > persiste no localStorage a cada alteração
+ ✓ tests/unit/core.test.ts > importação > aceita projeto, backup e especificação
+ ✓ tests/unit/core.test.ts > importação > completa arquivos parciais com valores padrão
+ ✓ tests/unit/core.test.ts > importação > rejeita arquivos inválidos com mensagens claras
+ ✓ tests/unit/core.test.ts > importação > importProject salva versão anterior
+ ✓ tests/unit/inspiration.test.tsx > catálogo de inspiração > tem 20 sites com ids únicos
+ ✓ tests/unit/inspiration.test.tsx > catálogo de inspiração > cada site tem exatamente as 8 paletas, com cores hex válidas e contraste legível
+ ✓ tests/unit/inspiration.test.tsx > catálogo de inspiração > cada site tem spec completa, seções, fontes válidas e renderizador
+ ✓ tests/unit/inspiration.test.tsx > paletas e descrição > applyOverrides troca fundo, texto e destaque e recalcula cores dependentes
+ ✓ tests/unit/inspiration.test.tsx > paletas e descrição > describeInspiration aplica os overrides e descreve paleta, fontes, composição e seções
+ ✓ tests/unit/inspiration.test.tsx > paletas e descrição > describeInspiration devolve null para conceito inexistente e usa a original para paleta inválida
+ ✓ tests/unit/inspiration.test.tsx > integração com o motor de prompts > o conceito aprovado entra no Master Prompt e o prompt individual traz cores e seções
+ ✓ tests/unit/inspiration.test.tsx > exportações > CSS de referência traz variáveis da paleta com ajustes e fontes
+ ✓ tests/unit/inspiration.test.tsx > exportações > JSON traz conceito, paleta final e ajustes, e é serializável
+ ✓ tests/unit/inspiration.test.tsx > exportações > HTML demonstrativo é um documento completo com a marca
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > verdant-atelier renderiza no desktop e no celular 479ms
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > volt-motors renderiza no desktop e no celular 426ms
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > frost-lab renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > formica renderiza no desktop e no celular 320ms
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > orbital-zero renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > terra-form renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > crema-club renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > pulse-health renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > atlas-capital renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > lumen-audio renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > flora-social renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > arc-studio renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > nomad-trails renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > mori-objects renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > signal-ai renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > tide-resort renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > pixel-play renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > aurora-wear renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > raiz-market renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > renderização dos sites > kinetic-lab renderiza no desktop e no celular
+ ✓ tests/unit/inspiration.test.tsx > galeria > mostra os 20 conceitos, abre o visualizador e aprova o conceito no projeto 2600ms
+
+ Test Files  8 passed (8)
+      Tests  235 passed (235)
+   Start at  19:02:56
+   Duration  26.38s (transform 8.88s, setup 933ms, collect 16.28s, tests 44.19s, environment 6.67s, prepare 962ms)
+
+
+real	0m27.291s
+user	0m57.707s
+sys	0m4.948s
