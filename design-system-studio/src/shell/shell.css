@@ -387,6 +387,15 @@
 .shell-crumbs + .ui-page {
   padding-top: var(--sp-4);
 }
+@media (max-width: 720px) {
+  /* No celular, o título da página e o eyebrow já mostram onde a pessoa está. */
+  .shell-crumbs {
+    display: none;
+  }
+  .shell-crumbs + .ui-page {
+    padding-top: var(--sp-5);
+  }
+}
 
 /* ---------- Busca de funcionalidades ---------- */
 .search-list {
@@ -434,6 +443,10 @@
   .shell-link,
   .shell-group__toggle {
     min-height: 44px;
+  }
+  .shell-search-btn {
+    min-width: 44px;
+    justify-content: center;
   }
   .shell-brand {
     min-height: 44px;

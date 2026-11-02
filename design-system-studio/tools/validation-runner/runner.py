@@ -122,8 +122,12 @@ DETECTOR_JS = r"""
     Array.from(document.querySelectorAll(selector))
       .filter(visible)
       .filter((el) => {
-        // Exceção WCAG: links dentro de um parágrafo de texto.
-        if (el.tagName === 'A' && getComputedStyle(el).display === 'inline' && el.parentElement && el.parentElement.textContent.trim().length > el.textContent.trim().length + 20) return false;
+        // Exceção WCAG 2.5.8: alvos inline dentro de uma frase (links, termos com explicação).
+        if (getComputedStyle(el).display === 'inline') {
+          let block = el.parentElement;
+          while (block && ['inline', 'contents'].includes(getComputedStyle(block).display)) block = block.parentElement;
+          if (block && block.textContent.trim().length > el.textContent.trim().length + 3) return false;
+        }
         const r = el.getBoundingClientRect();
         return r.width < opts.minTapTarget || r.height < opts.minTapTarget;
       })

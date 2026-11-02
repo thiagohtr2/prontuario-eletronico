@@ -130,9 +130,14 @@ export function LiveSitePreview() {
           <PhonePreview layout={mobile} theme={theme} showLegends={false} width={360} interactive />
         </div>
       ) : (
-        <EmptyState title="Nenhum layout mobile escolhido">
-          <Link to="/modulos/mobile">Escolher arquitetura do celular</Link>
-        </EmptyState>
+        <EmptyState
+          title="Nenhum layout mobile escolhido"
+          action={
+            <Link className="ui-btn ui-btn--secondary" to="/modulos/mobile">
+              Escolher arquitetura do celular
+            </Link>
+          }
+        />
       )
     } else {
       const size = DEVICE_SIZE[device]
@@ -141,9 +146,14 @@ export function LiveSitePreview() {
           <AppFrame layout={desktop} theme={theme} name={name} w={size.w} h={size.h} />
         </ScaledFrame>
       ) : (
-        <EmptyState title="Nenhum layout desktop escolhido">
-          <Link to="/modulos/desktop">Escolher arquitetura do computador</Link>
-        </EmptyState>
+        <EmptyState
+          title="Nenhum layout desktop escolhido"
+          action={
+            <Link className="ui-btn ui-btn--secondary" to="/modulos/desktop">
+              Escolher arquitetura do computador
+            </Link>
+          }
+        />
       )
     }
   } else if (current === 'landing' && landing) {

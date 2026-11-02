@@ -116,6 +116,12 @@
   border-radius: var(--r-md);
   color: var(--s-text-3);
 }
+@media (max-width: 720px) {
+  .lp-choices a {
+    width: 44px;
+    height: 44px;
+  }
+}
 .lp-choices a:hover {
   background: var(--s-hover);
   color: var(--s-accent);

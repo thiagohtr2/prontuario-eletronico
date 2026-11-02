@@ -78,6 +78,10 @@
   white-space: nowrap;
 }
 @media (max-width: 600px) {
+  .gd-step {
+    min-height: 44px;
+    align-content: center;
+  }
   .gd-step__text {
     display: none;
   }

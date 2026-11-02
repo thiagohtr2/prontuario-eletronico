@@ -122,12 +122,13 @@ export function PromptWorkspace() {
       {spec.pending.length > 0 && (
         <div style={{ marginBottom: 'var(--sp-5)' }}>
           <Callout tone="warning" title="Pendências:">
-            {spec.pending.map((p, i) => (
-              <span key={p.id}>
-                {i > 0 && ' · '}
-                <Link to={p.route}>{p.message}</Link>
-              </span>
-            ))}
+            <ul className="pc-pending">
+              {spec.pending.map((p) => (
+                <li key={p.id}>
+                  <Link to={p.route}>{p.message}</Link>
+                </li>
+              ))}
+            </ul>
           </Callout>
         </div>
       )}

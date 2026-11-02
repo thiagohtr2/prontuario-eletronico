@@ -343,7 +343,8 @@
 .nvs-brand {
   display: inline-flex;
   align-items: center;
-  min-width: 0;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: var(--nv-r-sm);
 }
 .nvs-logo {
@@ -1117,7 +1118,7 @@
   font-weight: 620;
 }
 .nvs-crumbs__back {
-  height: 40px;
+  height: 44px;
   padding: 0 4px;
   color: var(--nv-text);
   font-size: 14px;
@@ -3627,4 +3628,9 @@ li[data-state='todo'] .nvs-step__text strong {
 .nvs-combo-ui__notes {
   display: grid;
   gap: var(--sp-2);
+}
+
+/* Celular: campos com 16 px evitam o zoom automático do iOS. */
+.nvs-h[data-compact='true'] input {
+  font-size: 16px;
 }

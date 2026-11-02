@@ -322,7 +322,7 @@ export function Btn({
   const s = withState(L, btnStyle(L, kind, size, onlyIcon, full), st, kind)
   const isz = size === 'sm' ? 15 : size === 'lg' ? 19 : 17
   return (
-    <span role="button" tabIndex={-1} {...P(part)} style={{ ...s, ...style }} aria-disabled={st === 'disabled' || undefined}>
+    <span {...P(part)} style={{ ...s, ...style }} aria-disabled={st === 'disabled' || undefined}>
       {loading ? <Spinner size={isz} color="currentColor" /> : icon && <Ico name={icon} size={isz} part={iconPart} />}
       {children && <span style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>{children}</span>}
       {!loading && iconRight && <Ico name={iconRight} size={isz} part={iconPart} />}
