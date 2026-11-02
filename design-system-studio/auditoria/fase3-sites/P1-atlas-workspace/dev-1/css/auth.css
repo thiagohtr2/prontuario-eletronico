@@ -1,0 +1,104 @@
+/* =========================================================
+   Login, cadastro e recuperação — "Clássico central"
+   Usa a identidade global (cantos 8/12 px, bordas finas, sem sombra).
+   ========================================================= */
+.auth {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-alt);
+}
+.auth__main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-6);
+  padding: var(--sp-10) var(--sp-5) var(--sp-6);
+}
+.auth__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  text-decoration: none;
+  font-size: var(--fs-18);
+}
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  padding: var(--sp-8);
+  background: var(--surface);
+  border: var(--border-w) solid var(--border);
+  border-radius: var(--radius-lg);
+}
+.auth-card h1 { font-size: var(--fs-23); letter-spacing: -0.01em; }
+.auth-card__sub { margin-top: var(--sp-1); color: var(--text-muted); }
+.auth-card .form-summary:not(:empty) { margin-top: var(--sp-5); }
+.auth-form { margin-top: var(--sp-6); }
+.auth-form .field { scroll-margin: 96px; }
+.auth-form .btn--block { margin-top: var(--sp-5); }
+.auth-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 var(--sp-4);
+  margin-top: var(--sp-2);
+}
+.auth-row a { font-size: var(--fs-14); font-weight: 600; min-height: 44px; display: inline-flex; align-items: center; }
+.auth__alt { font-size: var(--fs-14); color: var(--text-muted); text-align: center; }
+.auth__alt a { font-weight: 600; }
+.auth__demo {
+  max-width: 400px;
+  font-size: var(--fs-13);
+  color: var(--text-muted);
+  text-align: center;
+}
+.auth__demo code { font-family: inherit; font-weight: 600; color: var(--text); overflow-wrap: anywhere; }
+.auth__footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 var(--sp-5);
+  padding: var(--sp-2) var(--sp-5) calc(var(--sp-3) + env(safe-area-inset-bottom));
+  font-size: var(--fs-13);
+}
+.auth__footer a,
+.auth__footer button {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: var(--fs-13);
+}
+.auth__back { display: inline-flex; align-items: center; gap: var(--sp-1); font-size: var(--fs-14); font-weight: 600; min-height: 44px; }
+
+/* indicador de força da senha (texto + barras; nunca só cor) */
+.strength { display: grid; gap: 6px; margin-top: var(--sp-1); }
+.strength__bars { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-1); }
+.strength__bars span { height: 4px; border-radius: 2px; background: var(--border); }
+.strength[data-level="1"] .strength__bars span:nth-child(1) { background: var(--error); }
+.strength[data-level="2"] .strength__bars span:nth-child(-n+2) { background: var(--warning); }
+.strength[data-level="3"] .strength__bars span { background: var(--success); }
+.strength__text { font-size: var(--fs-13); color: var(--text-muted); }
+.strength__text strong { color: var(--text); font-weight: 650; }
+.reqs { list-style: none; padding: 0; margin: 0; display: grid; gap: 2px; font-size: var(--fs-13); color: var(--text-muted); }
+.reqs li { display: flex; align-items: center; gap: 6px; }
+.reqs li .ico { color: var(--border-strong); }
+.reqs li.is-ok { color: var(--text); }
+.reqs li.is-ok .ico { color: var(--success); }
+
+.terms { align-items: flex-start; padding-top: 10px; line-height: 1.45; }
+.terms input { margin-top: 1px; }
+.form-done { margin-top: var(--sp-5); display: grid; gap: var(--sp-4); }
+
+@media (max-width: 599.98px) {
+  .auth__main { justify-content: flex-start; gap: var(--sp-4); padding: max(var(--sp-6), env(safe-area-inset-top)) 0 var(--sp-4); }
+  .auth-card { max-width: none; padding: 0 var(--sp-5); border: 0; border-radius: 0; background: transparent; }
+  .auth__brand { align-self: center; }
+  .auth-card h1 { font-size: clamp(20px, 6vw, 23px); }
+  .auth__demo { padding: 0 var(--sp-5); }
+}

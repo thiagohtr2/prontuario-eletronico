@@ -1,0 +1,200 @@
+/* ==========================================================================
+   Verde Vivo — tokens de design (paleta global "Floresta")
+   Única fonte de cores, tipografia, geometria e movimento do projeto.
+   Nenhum outro arquivo CSS declara cor literal: só usa estas variáveis.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("../assets/fonts/fraunces-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("../assets/fonts/fraunces-latin-wght-italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/inter-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+
+  /* ---- Marca ---- */
+  --color-primary: #2d6a4f;
+  --color-primary-hover: #295f47;
+  --color-primary-active: #24553f;
+  --color-on-primary: #ffffff;
+  --color-primary-soft: #e6edea;
+  --color-secondary: #40916c;
+  --color-on-secondary: #111114;
+  --color-accent: #b07d4f;
+  --color-on-accent: #111114;
+
+  /* ---- Fundos e superfícies ---- */
+  --color-bg: #f6faf6;
+  --color-bg-alt: #edf1ed;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f5f5f5;
+
+  /* ---- Texto ---- */
+  --color-text: #1b2e24;
+  --color-text-muted: #616d66;
+  --color-text-disabled: #a3aca6;
+  --color-placeholder: #89948d;
+
+  /* ---- Bordas e foco ---- */
+  --color-border: #e6e6e6;
+  --color-border-strong: #c7c7c7;
+  --color-focus-ring: #2d6a4f;
+
+  /* ---- Estados ---- */
+  --color-hover: #f4f4f4;
+  --color-active: #ebebeb;
+  --color-pressed: #e0e0e0;
+  --color-selected: #e6edea;
+  --color-selected-text: #2d6a4f;
+  --color-disabled: #f0f0f0;
+  --color-disabled-text: #98a19c;
+
+  /* ---- Semânticos ---- */
+  --color-success: #117e39;
+  --color-success-bg: #e3f4e9;
+  --color-warning: #a85c04;
+  --color-warning-bg: #faefe1;
+  --color-error: #dc2626;
+  --color-error-bg: #fbe5e5;
+  --color-info: #2563eb;
+  --color-info-bg: #e5ecfd;
+
+  /* ---- Links, ícones e navegação ---- */
+  --color-link: #2d6a4f;
+  --color-link-hover: #265a43;
+  --color-icon: #526159;
+  --color-nav-bg: #ffffff;
+  --color-nav-text: #4d5c54;
+  --color-nav-active: #e6edea;
+  --color-nav-active-text: #2d6a4f;
+
+  /* ---- Gradiente (usado apenas nas ilustrações) ---- */
+  --color-gradient-from: #2d6a4f;
+  --color-gradient-to: #b88a61;
+
+  /* ---- Aliases pedidos pelo template (--color-*) ---- */
+  --color-muted: var(--color-text-muted);
+
+  /* ---- Derivadas para ilustrações (somente misturas dos tokens acima) ---- */
+  --art-leaf-1: var(--color-primary);
+  --art-leaf-2: var(--color-secondary);
+  --art-leaf-3: color-mix(in srgb, var(--color-secondary) 55%, var(--color-surface));
+  --art-leaf-4: color-mix(in srgb, var(--color-primary) 62%, var(--color-text));
+  --art-leaf-5: color-mix(in srgb, var(--color-secondary) 30%, var(--color-surface));
+  --art-vein: color-mix(in srgb, var(--color-surface) 55%, transparent);
+  --art-clay: var(--color-gradient-to);
+  --art-clay-dark: var(--color-accent);
+  --art-clay-light: color-mix(in srgb, var(--color-gradient-to) 45%, var(--color-surface));
+  --art-white: var(--color-surface);
+  --art-stone: color-mix(in srgb, var(--color-text-muted) 40%, var(--color-surface));
+  --art-bloom: color-mix(in srgb, var(--color-accent) 40%, var(--color-surface));
+  --art-bloom-2: color-mix(in srgb, var(--color-gradient-to) 70%, var(--color-surface));
+  --art-bg-1: var(--color-primary-soft);
+  --art-bg-2: color-mix(in srgb, var(--color-gradient-to) 20%, var(--color-surface));
+  --art-bg-3: color-mix(in srgb, var(--color-secondary) 16%, var(--color-surface));
+  --art-bg-4: color-mix(in srgb, var(--color-accent) 14%, var(--color-bg));
+  --art-ground: color-mix(in srgb, var(--color-text) 12%, transparent);
+  --art-soil: color-mix(in srgb, var(--color-text) 78%, var(--color-accent));
+
+  /* ---- Tipografia ---- */
+  --font-heading: "Fraunces", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --fw-heading: 650;
+  --fw-body: 400;
+  --fw-medium: 500;
+  --fw-strong: 600;
+  --fw-bold: 700;
+  /* escala 13 / 15 / 18 / 23 / 30 / 39 px (base 15 px = 1rem, ver html) */
+  --fs-xs: 0.8667rem;
+  --fs-sm: 0.9333rem; /* 14 px: mínimo para filtros e botões */
+  --fs-md: 1rem;
+  --fs-lg: 1.2rem;
+  --fs-xl: 1.5333rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 2.6rem;
+  --fs-display: clamp(2.65rem, 1.2rem + 5.3vw, 5.2rem);
+  --lh-text: 1.5;
+  --lh-title: 1.2;
+
+  /* ---- Geometria ---- */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-container: 22px;
+  --radius-pill: 999px;
+  --border: 1px solid var(--color-border);
+  --border-strong: 1px solid var(--color-border-strong);
+
+  /* ---- Espaçamento (múltiplos de 4 px) ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-14: 56px;
+  --space-24: 96px;
+  --space-28: 112px;
+
+  /* ---- Layout ---- */
+  --content-max: 1280px;
+  --gutter: 20px;
+  --section-gap: 56px;
+  --header-row1: 64px;
+  --header-row2: 44px;
+  --control-h: 42px;
+
+  /* ---- Elevação (somente elementos flutuantes e componentes Soft Pill) ---- */
+  --shadow-soft: 0 6px 24px color-mix(in srgb, var(--color-text) 9%, transparent);
+  --shadow-float: 0 12px 36px color-mix(in srgb, var(--color-text) 16%, transparent);
+  --scrim: color-mix(in srgb, var(--color-text) 48%, transparent);
+
+  /* ---- Movimento ---- */
+  --ease: cubic-bezier(0.3, 0.7, 0.2, 1);
+  --dur: 160ms;
+  --dur-panel: 220ms;
+
+  /* ---- Camadas ---- */
+  --z-dock: 35;
+  --z-header: 40;
+  --z-popover: 50;
+  --z-overlay: 60;
+  --z-toast: 70;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: 32px;
+    --section-gap: 96px;
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --section-gap: 112px;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --control-h: 44px;
+  }
+}

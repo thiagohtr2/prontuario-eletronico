@@ -1,0 +1,285 @@
+/* ==========================================================================
+   Layout — "Painel operacional" (desktop) e "One Screen com painel em abas" (celular)
+
+   Modos (largura × altura):
+   · largura >= 1280 e altura >= 640 ... painel operacional: grade + coluna de alertas
+   · 768–1279 e altura >= 640 ......... alertas viram aba alternável com a grade
+   · altura < 640 (>= 768 de largura) . One Screen desligado: página rola, painéis empilhados
+   · largura < 768 e altura >= 560 .... One Screen móvel com abas
+   · largura < 768 e altura < 560 ..... One Screen desligado: tela rola, blocos empilhados
+   ========================================================================== */
+
+/* ---------- Base = modo empilhado (a página rola; nada é escondido) ---------- */
+.shell {
+  display: block;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--bg-alt);
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-4);
+  min-height: var(--header-h);
+  padding: 0 var(--sp-4);
+  background: var(--nav-bg);
+  border-bottom: var(--bw) solid var(--border);
+}
+.header-actions { display: flex; align-items: center; gap: var(--sp-2); margin-left: auto; }
+
+.tabs { display: none; }
+
+.content {
+  display: grid;
+  gap: var(--sp-3);
+  padding: var(--sp-4);
+  min-width: 0;
+  container-type: inline-size;
+  container-name: content;
+}
+.content:focus { outline: none; }
+
+.panel { min-width: 0; }
+.panel--kpis, .panel--ops { display: block; }
+
+.panel--alerts {
+  display: flex;
+  flex-direction: column;
+  padding: 0 var(--sp-4) var(--sp-4);
+  background: var(--bg-alt);
+  min-width: 0;
+}
+#alerts-scroll { max-height: calc(480 * var(--px)); }
+
+.statusbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-1) var(--sp-4);
+  min-height: var(--footer-h);
+  padding: var(--sp-1) var(--sp-4);
+  background: var(--nav-bg);
+  border-top: var(--bw) solid var(--border);
+}
+
+/* Contêiner com rolagem local + indicação visual de que há mais conteúdo */
+.scroll { position: relative; min-height: 0; display: flex; flex-direction: column; flex: 1 1 auto; }
+.scroll-body { flex: 1 1 auto; min-height: 0; min-width: 0; overflow: auto; overscroll-behavior: contain; }
+.scroll::before, .scroll::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  height: calc(20 * var(--px));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--t-fast);
+  z-index: 2;
+}
+.scroll::before { top: 0; background: linear-gradient(to bottom, var(--scroll-fade, var(--surface)), transparent); }
+.scroll::after { bottom: 0; background: linear-gradient(to top, var(--scroll-fade, var(--surface)), transparent); }
+.scroll[data-more-top]::before { opacity: 1; }
+.scroll[data-more-bottom]::after { opacity: 1; }
+.panel--kpis .scroll, .panel--ops .scroll { --scroll-fade: var(--bg-alt); }
+
+/* ---------- Grades internas (reduzem colunas progressivamente) ---------- */
+.kpi-grid { display: grid; gap: var(--sp-3); grid-template-columns: minmax(0, 1fr); align-content: start; }
+.ops-grid { display: grid; gap: var(--sp-3); grid-template-columns: minmax(0, 1fr); align-content: start; }
+
+@container content (min-width: 280px) { .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@container content (min-width: 720px) { .kpi-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@container content (min-width: 700px) { .ops-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+/* ==========================================================================
+   DESKTOP ≥ 768 px e altura >= 640 px: One Screen ligado
+   ========================================================================== */
+@media (min-width: 768px) and (min-height: 640px) {
+  body { overflow: hidden; }
+  .shell {
+    display: grid;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .app-header { grid-area: header; }
+  .statusbar { grid-area: footer; flex-wrap: nowrap; }
+  .content {
+    grid-area: content;
+    min-height: 0;
+    overflow: auto;
+    overscroll-behavior: contain;
+    grid-template-rows: auto auto minmax(calc(220 * var(--px)), 1fr);
+  }
+  .panel--data { min-height: 0; align-self: start; max-height: 100%; }
+  .panel--alerts { grid-area: panel; min-height: 0; padding: 0; }
+  #alerts-scroll { max-height: none; }
+}
+
+/* ---- Wide (>= 1280): grade + coluna de alertas ---- */
+@media (min-width: 1280px) and (min-height: 640px) {
+  .shell {
+    grid-template-columns: minmax(0, 1fr) var(--panel-w);
+    grid-template-rows: var(--header-h) minmax(0, 1fr) var(--footer-h);
+    grid-template-areas:
+      "header header"
+      "content panel"
+      "footer footer";
+  }
+  .panel--alerts { border-left: var(--bw) solid var(--border); background: var(--surface); }
+}
+
+/* ---- Monitores grandes (>= 1440): tabela ao lado das filas/SLA/equipes ---- */
+@media (min-width: 1440px) and (min-height: 640px) {
+  .content {
+    grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-areas:
+      "kpis kpis"
+      "data ops";
+  }
+  .panel--kpis { grid-area: kpis; }
+  .panel--data { grid-area: data; }
+  .panel--ops { grid-area: ops; min-height: 0; display: flex; flex-direction: column; }
+  .panel--ops .scroll { flex: 1 1 auto; }
+  .ops-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-rows: minmax(min-content, 1fr);
+    align-content: stretch;
+    height: 100%;
+  }
+}
+
+/* ---- Médio (768–1279): alertas viram aba alternável com a grade ---- */
+@media (min-width: 768px) and (max-width: 1279.98px) and (min-height: 640px) {
+  .shell {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: var(--header-h) minmax(0, 1fr) var(--footer-h);
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+  }
+  .tabs--medium { display: flex; align-self: stretch; margin-left: var(--sp-2); }
+  .panel--alerts { grid-area: content; padding: var(--sp-4); background: var(--bg-alt); }
+  .shell[data-tab-medium="painel"] .panel--alerts { display: none; }
+  .shell[data-tab-medium="alertas"] .content { display: none; }
+}
+
+/* ==========================================================================
+   CELULAR < 768 px: topbar + abas fixas no topo
+   ========================================================================== */
+@media (max-width: 767.98px) {
+  .shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "header"
+      "tabs"
+      "content"
+      "footer";
+  }
+
+  /* Topbar ≈ 56 px + safe area do topo (entalhe da câmera) */
+  .app-header {
+    grid-area: header;
+    gap: var(--sp-2);
+    min-height: calc(var(--topbar-h) + env(safe-area-inset-top, 0px));
+    padding: env(safe-area-inset-top, 0px) max(var(--sp-3), env(safe-area-inset-right, 0px)) 0 max(var(--sp-3), env(safe-area-inset-left, 0px));
+  }
+  .tabs--mobile {
+    display: flex;
+    flex-wrap: wrap; /* fonte ampliada / telas muito estreitas: as abas quebram em duas linhas em vez de estourar */
+    grid-area: tabs;
+    padding-inline: env(safe-area-inset-left, 0px) env(safe-area-inset-right, 0px);
+  }
+  .content {
+    grid-area: content;
+    padding: var(--sp-3) max(var(--sp-3), env(safe-area-inset-right, 0px)) var(--sp-3) max(var(--sp-3), env(safe-area-inset-left, 0px));
+  }
+  .panel--alerts {
+    grid-area: content;
+    padding: var(--sp-3) max(var(--sp-3), env(safe-area-inset-right, 0px)) var(--sp-3) max(var(--sp-3), env(safe-area-inset-left, 0px));
+    background: var(--bg-alt);
+    border-top: 0;
+  }
+  .statusbar {
+    grid-area: footer;
+    padding: var(--sp-1) max(var(--sp-3), env(safe-area-inset-right, 0px)) calc(var(--sp-1) + env(safe-area-inset-bottom, 0px)) max(var(--sp-3), env(safe-area-inset-left, 0px));
+    gap: 0 var(--sp-3);
+  }
+  #alerts-scroll { max-height: none; }
+
+  /* Um painel por aba */
+  .shell[data-tab-mobile="kpis"] :is(.panel--ops, .panel--data, .panel--alerts),
+  .shell[data-tab-mobile="ops"] :is(.panel--kpis, .panel--data, .panel--alerts),
+  .shell[data-tab-mobile="data"] :is(.panel--kpis, .panel--ops, .panel--alerts) { display: none; }
+  .shell[data-tab-mobile="alerts"] .content { display: none; }
+
+  /* Cada painel: destaque principal no topo + grade de blocos menores */
+  .kpi-grid > :first-child,
+  .ops-grid > :first-child { grid-column: 1 / -1; }
+  .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ops-grid { grid-template-columns: minmax(0, 1fr); }
+  .kpi-grid > :last-child:nth-child(even) { grid-column: 1 / -1; } /* 1 destaque + 3: o último ocupa a linha */
+}
+@container content (min-width: 480px) {
+  @media (max-width: 767.98px) { .ops-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+}
+@media (max-width: 279.98px) {
+  .kpi-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ---- Celular com One Screen (altura >= 560 px) ---- */
+@media (max-width: 767.98px) and (min-height: 560px) {
+  body { overflow: hidden; }
+  .shell {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+    grid-template-rows: calc(var(--topbar-h) + env(safe-area-inset-top, 0px)) auto minmax(0, 1fr) auto;
+  }
+  .content {
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr);
+  }
+  .panel { min-height: 0; }
+  .panel--kpis, .panel--ops, .panel--data { display: flex; flex-direction: column; }
+  .shell[data-tab-mobile="kpis"] .panel--kpis,
+  .shell[data-tab-mobile="ops"] .panel--ops,
+  .shell[data-tab-mobile="data"] .panel--data { display: flex; }
+  .panel--alerts { min-height: 0; }
+  /* linhas em fr que nunca ficam menores que o conteúdo (o excedente rola dentro do bloco) */
+  .kpi-grid, .ops-grid { grid-auto-rows: minmax(min-content, 1fr); align-content: stretch; }
+  .kpi-grid > :first-child { grid-row: span 1; }
+}
+
+/* ---- Celular horizontal: abas viram rail vertical à esquerda ---- */
+@media (max-width: 767.98px) and (orientation: landscape) {
+  .shell {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+      "header header"
+      "tabs content"
+      "footer footer";
+  }
+  .tabs--mobile {
+    flex-direction: column;
+    align-self: start;
+    position: sticky;
+    top: 0;
+    width: calc(128 * var(--px));
+    border-right: var(--bw) solid var(--border);
+    border-bottom: 0;
+  }
+  .app-header { min-height: var(--topbar-h); }
+}
+@media (max-width: 767.98px) and (orientation: landscape) and (min-height: 560px) {
+  .shell { grid-template-rows: var(--topbar-h) minmax(0, 1fr) auto; }
+  .tabs--mobile { align-self: stretch; position: static; }
+}
+@media (max-width: 767.98px) and (orientation: landscape) and (max-height: 559.98px) {
+  .shell { grid-template-rows: auto minmax(0, 1fr) auto; }
+}

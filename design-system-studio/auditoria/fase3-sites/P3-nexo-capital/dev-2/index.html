@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Nexo Capital · Acesso corporativo</title>
+  <meta name="description" content="Nexo Capital: plataforma financeira com dashboard, tabelas de dados e gráficos (demonstração de interface).">
+  <meta name="theme-color" content="#0f1f4d">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Crect width='28' height='28' rx='6' fill='%231d4ed8'/%3E%3Cpath d='M9 20V8l10 12V8' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/login.css">
+  <link rel="stylesheet" href="assets/css/shell.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+  <!-- Símbolo da marca (reutilizado por <use>) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="logo-mark" viewBox="0 0 28 28">
+      <rect width="28" height="28" rx="6" style="fill:var(--primary)"/>
+      <path d="M9 20V8l10 12V8" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="stroke:var(--on-primary)"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" id="skip-link" href="#/">Ir para o conteúdo</a>
+  <noscript><p style="padding:24px">Esta demonstração precisa de JavaScript habilitado.</p></noscript>
+
+  <!-- =====================================================================
+       LOGIN — "Acesso corporativo"
+       ===================================================================== -->
+  <div class="login" id="screen-login" hidden>
+    <header class="login__bar">
+      <a class="brand" href="#/login" aria-label="Nexo Capital — início">
+        <svg class="brand__mark" aria-hidden="true"><use href="#logo-mark"/></svg>
+        <span>Nexo Capital</span>
+      </a>
+      <a class="login__support" href="mailto:suporte.ti@nexocapital.example">Suporte de TI</a>
+    </header>
+
+    <main class="login__main" id="login-main" tabindex="-1">
+      <section class="login__card" aria-labelledby="login-title">
+        <!-- Entrar -->
+        <div id="login-view-signin">
+          <h1 class="login__title" id="login-title">Acesso corporativo</h1>
+          <p class="login__sub">Entre com a conta da sua organização.</p>
+
+          <div class="login__block">
+            <p id="login-status" class="notice notice--success" role="status"></p>
+
+            <button type="button" class="btn btn--primary btn--block btn--sso" id="btn-sso">
+              <span class="js-icon" data-icon="landmark" data-size="20"></span>
+              <span class="btn__label">Entrar com SSO da empresa</span>
+            </button>
+
+            <div class="divider" role="separator"><span>ou</span></div>
+
+            <form id="login-form" class="login__form" novalidate>
+              <div id="login-summary" class="summary" role="alert"></div>
+
+              <div class="field">
+                <label class="field__label" for="login-email">E-mail corporativo</label>
+                <input class="input" id="login-email" name="email" type="email" inputmode="email"
+                       autocomplete="username" autocapitalize="none" spellcheck="false"
+                       placeholder="nome@empresa.com.br" aria-describedby="login-email-err">
+                <p class="field__error" id="login-email-err" hidden></p>
+              </div>
+
+              <div class="field">
+                <div class="field__row">
+                  <label class="field__label" for="login-pass">Senha</label>
+                  <a class="link" href="#/recuperar">Esqueci minha senha</a>
+                </div>
+                <div class="input-wrap">
+                  <input class="input input--pw" id="login-pass" name="password" type="password"
+                         autocomplete="current-password" aria-describedby="login-pass-err">
+                  <button type="button" class="input-btn" id="btn-toggle-pass"
+                          aria-label="Mostrar senha" aria-pressed="false" aria-controls="login-pass">
+                    <span class="js-icon" data-icon="eye" data-size="20"></span>
+                  </button>
+                </div>
+                <p class="field__error" id="login-pass-err" hidden></p>
+              </div>
+
+              <button type="submit" class="btn btn--outline btn--block" id="btn-login">
+                <span class="btn__label">Entrar</span>
+              </button>
+            </form>
+
+            <details class="demo-creds">
+              <summary>Credenciais da demonstração</summary>
+              <p>E-mail <code>ana.souza@nexocapital.com.br</code> · senha <code>Nexo@2026</code>. Qualquer outra combinação mostra o erro genérico de credenciais. Nenhum dado sai do navegador.</p>
+            </details>
+          </div>
+        </div>
+
+        <!-- Recuperação de senha -->
+        <div id="login-view-forgot" hidden>
+          <h1 class="login__title" id="forgot-title">Recuperar senha</h1>
+          <p class="login__sub">Informe o e-mail corporativo para receber um link de redefinição.</p>
+          <form id="forgot-form" class="login__form login__block" novalidate>
+            <div id="forgot-summary" class="summary" role="alert"></div>
+            <div class="field">
+              <label class="field__label" for="forgot-email">E-mail corporativo</label>
+              <input class="input" id="forgot-email" name="email" type="email" inputmode="email"
+                     autocomplete="email" autocapitalize="none" spellcheck="false"
+                     placeholder="nome@empresa.com.br" aria-describedby="forgot-email-err">
+              <p class="field__error" id="forgot-email-err" hidden></p>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block" id="btn-forgot">
+              <span class="btn__label">Enviar link</span>
+            </button>
+            <p id="forgot-result" class="notice" role="status"></p>
+            <a class="link link--block" href="#/login">
+              <span class="js-icon" data-icon="arrow-left" data-size="16"></span>
+              Voltar para o login
+            </a>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="login__foot">
+      <span class="js-icon" data-icon="shield-check" data-size="16"></span>
+      <p>Acesso monitorado. Uso restrito a colaboradores autorizados.</p>
+    </footer>
+  </div>
+
+  <!-- =====================================================================
+       APLICATIVO — sidebar integral + header + conteúdo (drawer no celular)
+       ===================================================================== -->
+  <div class="app" id="screen-app" data-module="painel" hidden>
+    <div class="sidebar-slot">
+      <aside class="sidebar" id="sidebar" aria-label="Barra lateral">
+        <div class="sidebar__top">
+          <button type="button" class="ws-btn" id="ws-btn" aria-haspopup="menu" aria-expanded="false"
+                  aria-label="Nexo Capital, unidade Matriz São Paulo. Trocar de unidade">
+            <svg class="brand__mark" width="28" height="28" aria-hidden="true"><use href="#logo-mark"/></svg>
+            <span class="ws-text">
+              <span class="ws-name">Nexo Capital</span>
+              <span class="ws-unit" id="ws-unit">Matriz · São Paulo</span>
+            </span>
+            <span class="ws-chev js-icon" data-icon="chevron-down" data-size="16"></span>
+          </button>
+        </div>
+        <nav class="sidebar__nav" id="sidebar-nav" aria-label="Menu lateral"></nav>
+        <div class="sidebar__foot">
+          <div class="profile">
+            <span class="avatar" aria-hidden="true">AS</span>
+            <span class="profile__text">
+              <span class="profile__name">Ana Souza</span>
+              <span class="profile__role">Analista financeira</span>
+            </span>
+          </div>
+          <a class="icon-btn" id="sidebar-settings" href="#/configuracoes" aria-label="Configurações" data-tip="Configurações">
+            <span class="js-icon" data-icon="settings" data-size="18"></span>
+          </a>
+          <button type="button" class="icon-btn" id="sidebar-more" aria-haspopup="menu" aria-expanded="false" aria-label="Menu do perfil">
+            <span class="js-icon" data-icon="ellipsis" data-size="18"></span>
+          </button>
+        </div>
+      </aside>
+    </div>
+    <div class="sidebar-scrim" id="sidebar-scrim"></div>
+
+    <div class="app-main" id="app-main">
+      <header class="app-header on-dark" id="app-header">
+        <button type="button" class="icon-btn" id="btn-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar">
+          <span class="js-icon" data-icon="menu" data-size="20"></span>
+        </button>
+        <a class="brand brand--topbar" href="#/painel/visao-geral" aria-label="Nexo Capital — Painel">
+          <svg class="brand__mark" aria-hidden="true"><use href="#logo-mark"/></svg>
+        </a>
+        <p class="app-header__title" id="header-title"></p>
+        <nav class="crumbs" id="crumbs" aria-label="Localização"><ol></ol></nav>
+        <nav class="tabs" id="tabs" aria-label="Principal"><ul></ul></nav>
+
+        <div class="app-header__actions" id="header-actions">
+          <div class="view-actions" id="view-actions" hidden>
+            <button type="button" class="btn btn--period" id="btn-period" aria-haspopup="menu" aria-expanded="false">
+              <span id="period-label">Últimos 30 dias</span>
+              <span class="js-icon" data-icon="chevron-down" data-size="16"></span>
+            </button>
+            <button type="button" class="btn btn--primary" id="btn-export">
+              <span class="js-icon" data-icon="download" data-size="16"></span>
+              <span>Exportar</span>
+            </button>
+          </div>
+          <button type="button" class="icon-btn" id="btn-search" aria-haspopup="dialog" aria-expanded="false" aria-label="Buscar" data-tip="Buscar">
+            <span class="js-icon" data-icon="search" data-size="18"></span>
+          </button>
+          <button type="button" class="icon-btn" id="btn-notif" aria-haspopup="dialog" aria-expanded="false" aria-label="Notificações, 3 não lidas" data-tip="Notificações">
+            <span class="js-icon" data-icon="bell" data-size="18"></span>
+            <span class="notif-dot" id="notif-dot" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="avatar-btn" id="btn-avatar" aria-haspopup="menu" aria-expanded="false" aria-label="Menu do perfil de Ana Souza">AS</button>
+        </div>
+      </header>
+
+      <main class="main" id="main" tabindex="-1">
+        <div id="view"></div>
+      </main>
+    </div>
+
+    <!-- Drawer pela esquerda (celular) -->
+    <div class="drawer-root" id="drawer-root">
+      <div class="scrim" id="drawer-scrim"></div>
+      <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+        <div class="drawer__head">
+          <span class="avatar" aria-hidden="true">AS</span>
+          <span class="profile__text">
+            <span class="profile__name">Ana Souza</span>
+            <span class="profile__role">ana.souza@nexocapital.com.br</span>
+          </span>
+          <button type="button" class="icon-btn" id="drawer-close" aria-label="Fechar menu">
+            <span class="js-icon" data-icon="x" data-size="20"></span>
+          </button>
+        </div>
+        <nav class="drawer__nav" id="drawer-nav" aria-label="Menu lateral"></nav>
+        <div class="drawer__foot">
+          <button type="button" class="nav-item" id="drawer-logout">
+            <span class="js-icon" data-icon="log-out" data-size="20"></span>
+            <span class="nav-item__label">Sair</span>
+          </button>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div id="overlay-root"></div>
+  <div id="live" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/login.js"></script>
+  <script src="assets/js/chart.js"></script>
+  <script src="assets/js/table.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/shell.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

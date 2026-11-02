@@ -1,0 +1,166 @@
+/* Layout: One Screen desktop (grade 1fr | 304 px), One Screen móvel (abas), modo empilhado.
+   Ordem: tokens.css -> components.css -> layout.css (este arquivo sobrescreve os componentes).
+
+   Modos (PROMPT.md, seções B, F):
+   A  desktop one-screen      >= 1280 px de largura e >= 640 px de altura
+   B  desktop em abas         768–1279 px e >= 640 px (alertas viram aba com a grade)
+   D  celular one-screen      < 768 px e >= 560 px (abas no topo)
+   E  celular horizontal      igual a D, abas viram rail à esquerda
+   S  empilhado               < 640 px de altura (desktop) ou < 560 px (celular): body rola
+*/
+
+/* ---------- Base ---------- */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; min-width: 0; }
+
+.app {
+  display: grid;
+  min-width: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: var(--header-h) minmax(0, 1fr) var(--footer-h);
+  grid-template-areas: "header" "main" "footer";
+}
+
+.topbar { grid-area: header; }
+.tabs-mobile { grid-area: tabs; }
+.content { grid-area: content; }
+.panel { grid-area: panel; }
+.statusbar { grid-area: footer; }
+
+/* Visibilidade por largura */
+.tabs-desktop { display: none; }
+.tabs-mobile { display: none; }
+.brand-meta { display: none; }
+.summary, .alert-summary { display: none; }
+
+@media (min-width: 768px) and (max-width: 1279.98px) {
+  .tabs-desktop { display: flex; }
+}
+
+@media (max-width: 767.98px) {
+  .tabs-mobile { display: flex; }
+  .statusbar { display: none; }
+  .brand-meta { display: block; }
+  .summary, .alert-summary { display: flex; }
+}
+
+/* ---------- A: desktop one-screen (>= 1280 x 640) ---------- */
+@media (min-width: 1280px) and (min-height: 640px) {
+  html, body { height: 100%; overflow: hidden; }
+  .app {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr) var(--panel-w);
+    grid-template-rows: var(--header-h) minmax(0, 1fr) var(--footer-h);
+    grid-template-areas: "header header" "content panel" "footer footer";
+  }
+  .panel { border-left: 1px solid var(--border); }
+}
+
+/* ---------- B: desktop com alertas em aba (768–1279 x >= 640) ---------- */
+@media (min-width: 768px) and (max-width: 1279.98px) and (min-height: 640px) {
+  html, body { height: 100%; overflow: hidden; }
+  .app {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: var(--header-h) minmax(0, 1fr) var(--footer-h);
+    grid-template-areas: "header" "main" "footer";
+  }
+  .content, .panel { grid-area: main; min-height: 0; }
+  .panel { border-left: 0; }
+  .app[data-view="alertas"] .content { display: none; }
+  .app:not([data-view="alertas"]) .panel { display: none; }
+}
+
+/* ---------- D: celular one-screen (< 768 x >= 560) ---------- */
+@media (max-width: 767.98px) and (min-height: 560px) {
+  html, body { height: 100%; overflow: hidden; }
+  .app {
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: calc(var(--m-topbar-h) + env(safe-area-inset-top)) var(--tabs-h) minmax(0, 1fr);
+    grid-template-areas: "header" "tabs" "main";
+  }
+  .topbar {
+    height: calc(var(--m-topbar-h) + env(safe-area-inset-top));
+    padding-top: env(safe-area-inset-top);
+  }
+  .content, .panel { grid-area: main; min-height: 0; }
+  .panel { border-left: 0; border-top: 0; }
+  .app[data-view="alertas"] .content { display: none; }
+  .app:not([data-view="alertas"]) .panel { display: none; }
+  .app[data-view="indicadores"] .sec-dados { display: none; }
+  .app[data-view="dados"] .sec-indicadores { display: none; }
+}
+
+/* ---------- E: celular horizontal one-screen: abas em rail à esquerda ---------- */
+@media (max-width: 767.98px) and (min-height: 560px) and (orientation: landscape) {
+  .app {
+    grid-template-columns: var(--rail-w) minmax(0, 1fr);
+    grid-template-rows: calc(var(--m-topbar-h) + env(safe-area-inset-top)) minmax(0, 1fr);
+    grid-template-areas: "header header" "tabs main";
+  }
+  .tabs-mobile { flex-direction: column; height: auto; align-self: stretch; border-bottom: 0; border-right: 1px solid var(--border); }
+  .tabs-mobile .tab { flex: 0 0 auto; width: 100%; justify-content: flex-start; text-align: left; }
+  .tabs-mobile .tab[aria-selected="true"]::after { left: 0; right: auto; top: var(--sp-2); bottom: var(--sp-2); width: 2px; height: auto; }
+}
+
+/* ---------- S: empilhado (altura abaixo de ~640 px no desktop, ~560 px no celular) ---------- */
+@media (min-width: 768px) and (max-height: 639.98px), (max-width: 767.98px) and (max-height: 559.98px) {
+  html, body { height: auto; }
+  .app {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "header" "tabs" "content" "panel" "footer";
+  }
+  .topbar { position: sticky; top: 0; z-index: 5; background: var(--bg); }
+  .content { display: block; min-height: 0; }
+  .sec-indicadores, .sec-dados { display: block; overflow: visible; }
+  .kpi-scroll { flex: none; overflow: visible; }
+  .sec-dados .table-card { display: block; flex: none; }
+  .panel { display: block; min-height: 0; border-left: 0; border-top: 1px solid var(--border); }
+  .panel .scroll-wrap { display: block; }
+  .panel .alert-list { flex: none; max-height: 60vh; }
+  .table-scroll { flex: none; max-height: none; }
+  .scroll-wrap { display: block; flex: none; }
+}
+
+/* Celular empilhado: abas fixas abaixo da topbar; abas viram âncoras para as seções */
+@media (max-width: 767.98px) and (max-height: 559.98px) {
+  .app { padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); }
+  .topbar { height: calc(var(--m-topbar-h) + env(safe-area-inset-top)); padding-top: env(safe-area-inset-top); }
+  .tabs-mobile { position: sticky; top: calc(var(--m-topbar-h) + env(safe-area-inset-top)); z-index: 4; background: var(--nav-bg); }
+}
+
+/* Celular empilhado na horizontal: rail de abas à esquerda */
+@media (max-width: 767.98px) and (max-height: 559.98px) and (orientation: landscape) {
+  .app {
+    grid-template-columns: var(--rail-w) minmax(0, 1fr);
+    grid-template-areas: "header header" "tabs content" "tabs panel";
+  }
+  .tabs-mobile { position: sticky; top: calc(var(--m-topbar-h) + env(safe-area-inset-top)); flex-direction: column; height: auto; align-self: start; border-bottom: 0; border-right: 1px solid var(--border); }
+  .tabs-mobile .tab { width: 100%; justify-content: flex-start; text-align: left; }
+  .tabs-mobile .tab[aria-selected="true"]::after { left: 0; right: auto; top: var(--sp-2); bottom: var(--sp-2); width: 2px; height: auto; }
+  .panel { border-top: 0; border-left: 0; }
+}
+
+/* ---------- Movimento reduzido ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

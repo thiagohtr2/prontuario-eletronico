@@ -1,0 +1,18 @@
+{
+  "notaPaletaNoMasterPrompt": false,
+  "notaTipografiaNoMasterPrompt": true,
+  "conflitosComHeaderExcluido": [
+    "header-flutuante-vs-integral"
+  ],
+  "jsonOcorrenciasDoResumoDesktop": 2,
+  "jsonCharsTotal": 110190,
+  "jsonCharsSoItems": 47626,
+  "importaIdsInexistentes": true,
+  "promptComIdsInexistentesMencionaLayout": false,
+  "pendenciaDesktopReportada": false,
+  "historicoAntesImport": 1,
+  "historicoDepoisImportDeBackupCom2Versoes": 2,
+  "historicoDoBackupRestaurado": false,
+  "restaurarVersaoCorrompida": "Cannot read properties of undefined (reading 'paletteId')",
+  "overridesComChavesInvalidasAceitos": true
+}

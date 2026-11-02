@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Verde Vivo | Loja de plantas</title>
+  <meta name="description" content="Verde Vivo: loja de plantas com catálogo, busca e filtros. Demonstração com dados fictícios.">
+  <meta name="theme-color" content="#2d6a4f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,650;1,650&family=Inter:wght@400;500;600;650&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/catalog.css">
+</head>
+<body>
+
+<!-- Sprite de ícones (contorno, estilo Lucide) -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 7-7h2a7 7 0 0 1 7 7v1"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></symbol>
+  <symbol id="i-chev-down" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-chev-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-chev-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></symbol>
+  <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></symbol>
+  <symbol id="i-droplet" viewBox="0 0 24 24"><path d="M12 2.7s6 6.3 6 11a6 6 0 0 1-12 0c0-4.7 6-11 6-11z"/></symbol>
+  <symbol id="i-pot" viewBox="0 0 24 24"><path d="M4 10h16l-2 9a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M3 7h18v3H3z"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6"/></symbol>
+</svg>
+
+<!-- ============ LANDING: Folha Viva (id: folha-viva) ============ -->
+<div id="view-landing" data-view="landing">
+  <a class="skip-link" href="#landing-main">Pular para o conteúdo</a>
+
+  <header class="l-header">
+    <div class="l-header-inner container">
+      <a class="brand brand-serif" href="#/" aria-label="Folha Viva, início">
+        <span class="brand-mark" aria-hidden="true"><svg class="ico"><use href="#i-leaf"/></svg></span>
+        <span class="brand-name">Folha Viva</span>
+      </a>
+      <nav class="l-nav" aria-label="Principal">
+        <ul>
+          <li><a href="#/catalogo">Plantas</a></li>
+          <li><a href="#/catalogo?cat=vasos">Vasos</a></li>
+          <li><a href="#cuidados">Cuidados</a></li>
+          <li><a href="#atelie">Ateliê</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-primary l-cta" href="#/catalogo">Escolher minha planta</a>
+      <button class="icon-btn l-menu-btn" id="landing-menu-btn" type="button" aria-label="Abrir menu" aria-haspopup="dialog" aria-expanded="false">
+        <svg class="ico"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="landing-main">
+    <!-- Hero assimétrico: título deslocado, imagem alta, imagem sobreposta -->
+    <section class="hero container" aria-labelledby="hero-titulo">
+      <h1 id="hero-titulo" class="hero-title">Plantas que <em>transformam</em> a sua casa</h1>
+      <figure class="hero-img" data-parallax>
+        <div class="hero-arch" role="img" aria-label="Ilustração de uma planta de folhagem verde em vaso de cerâmica"></div>
+      </figure>
+      <p class="hero-lead">Escolha a planta pela luz, pelo espaço e pela rotina que você tem. Cada compra chega com um guia de cuidados simples.</p>
+      <a class="btn-arrow hero-cta" href="#/catalogo">Escolher minha planta <svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <figure class="hero-small" data-parallax>
+        <div role="img" aria-label="Ilustração de folhas verdes soltas, em destaque menor"></div>
+      </figure>
+    </section>
+
+    <!-- Cartões escalonados: 0 / 48 / 96 px -->
+    <section class="cards-stagger container" id="cuidados" aria-labelledby="cards-titulo">
+      <h2 id="cards-titulo">Três jeitos de começar</h2>
+      <div class="stagger-grid">
+        <article class="s-card">
+          <span class="s-ico" aria-hidden="true"><svg class="ico"><use href="#i-sun"/></svg></span>
+          <h3>Pela luz da casa</h3>
+          <p>Observe por onde entra o sol e escolha plantas que vivem bem naquele canto, sem precisar de janela grande.</p>
+          <a href="#/catalogo?luz=sombra">Ver plantas de sombra</a>
+        </article>
+        <article class="s-card">
+          <span class="s-ico" aria-hidden="true"><svg class="ico"><use href="#i-droplet"/></svg></span>
+          <h3>Pela sua rotina</h3>
+          <p>Quem viaja muito pode começar com suculentas. Quem gosta de cuidar, com folhagens que pedem rega semanal.</p>
+          <a href="#/catalogo?cat=suculentas">Ver suculentas</a>
+        </article>
+        <article class="s-card">
+          <span class="s-ico" aria-hidden="true"><svg class="ico"><use href="#i-book"/></svg></span>
+          <h3>Pelo guia de cuidados</h3>
+          <p>Cada planta vem com instruções de rega, luz e adubação, em linguagem simples, para a primeira semana em casa.</p>
+          <a href="#/catalogo?cat=cuidados">Ver cuidados</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Citação recuada em ~25% da largura, autor à direita -->
+    <figure class="quote container">
+      <blockquote>
+        <p>“Achei que não tinha jeito para plantas. Com o guia e a planta certa para a minha janela, a casa ganhou outra cara.”</p>
+      </blockquote>
+      <figcaption>Marina S., cliente em Curitiba</figcaption>
+    </figure>
+
+    <!-- Texto estreito + imagem larga que sangra até a borda direita -->
+    <section class="bleed" id="atelie" aria-labelledby="atelie-titulo">
+      <div class="bleed-text">
+        <h2 id="atelie-titulo">Um ateliê de cultivo</h2>
+        <p>Cultivamos em estufas pequenas, com lotes curtos e uma equipe que confere cada planta antes do envio. Tudo fictício nesta demonstração.</p>
+        <ul class="bleed-list">
+          <li>Mudas produzidas em viveiro próprio</li>
+          <li>Embalagem que protege folhas e raízes</li>
+          <li>Suporte por mensagem após a entrega</li>
+        </ul>
+      </div>
+      <figure class="bleed-img" data-parallax>
+        <div role="img" aria-label="Ilustração de uma estante com plantas em vasos de cerâmica e terracota"></div>
+      </figure>
+    </section>
+
+    <!-- Chamada final alinhada à esquerda -->
+    <section class="final-cta container" aria-labelledby="final-titulo">
+      <h2 id="final-titulo">Pronto para trazer o verde para casa?</h2>
+      <p>Escolha a primeira planta em menos de dois minutos. A gente ajuda com o resto.</p>
+      <a class="btn btn-primary" href="#/catalogo">Escolher minha planta</a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand-serif" href="#/"><span class="brand-mark" aria-hidden="true"><svg class="ico"><use href="#i-leaf"/></svg></span><span class="brand-name">Folha Viva</span></a>
+        <p>Plantas e cuidados para casas e varandas. Marca fictícia de demonstração.</p>
+      </div>
+      <nav class="footer-links" aria-label="Rodapé da landing">
+        <a href="#/catalogo">Plantas</a>
+        <a href="#/catalogo?cat=vasos">Vasos</a>
+        <a href="#cuidados">Cuidados</a>
+        <a href="#atelie">Ateliê</a>
+      </nav>
+    </div>
+    <div class="container footer-legal">
+      <p>© 2026 Folha Viva. Dados e marca fictícios.</p>
+    </div>
+  </footer>
+
+  <div class="dialog menu-dialog" id="landing-menu" role="dialog" aria-modal="true" aria-labelledby="landing-menu-titulo">
+    <div class="dialog-head">
+      <h2 id="landing-menu-titulo">Menu</h2>
+      <button class="icon-btn" type="button" data-close aria-label="Fechar menu"><svg class="ico"><use href="#i-x"/></svg></button>
+    </div>
+    <nav aria-label="Menu principal">
+      <ul class="menu-list">
+        <li><a href="#/catalogo">Plantas</a></li>
+        <li><a href="#/catalogo?cat=vasos">Vasos</a></li>
+        <li><a href="#cuidados" data-close-menu>Cuidados</a></li>
+        <li><a href="#atelie" data-close-menu>Ateliê</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-primary btn-block" href="#/catalogo">Escolher minha planta</a>
+  </div>
+</div>
+
+<!-- ============ CATÁLOGO: loja (desktop: topbar de duas linhas; celular: header + dock) ============ -->
+<div id="view-catalogo" data-view="catalogo" hidden>
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <div class="announce" id="announce">
+    <p><span>Frete grátis acima de R$ 199</span> · Parcele em até 10x · <a href="#vitrine">Ver plantas</a></p>
+    <button class="icon-btn" type="button" id="announce-close" aria-label="Dispensar aviso"><svg class="ico"><use href="#i-x"/></svg></button>
+  </div>
+
+  <!-- Desktop: duas linhas (64 px + 44 px). Linha 1: logo, busca, conta, sacola. Linha 2: categorias. -->
+  <header class="topbar" id="topbar">
+    <div class="topbar-row1">
+      <a class="brand" href="#/" aria-label="Verde Vivo, início">
+        <span class="brand-mark" aria-hidden="true"><svg class="ico"><use href="#i-leaf"/></svg></span>
+        <span class="brand-name">Verde Vivo</span>
+      </a>
+      <form class="search search-d" role="search" data-search="desktop">
+        <label class="sr-only" for="q-d">Buscar plantas</label>
+        <div class="search-field">
+          <svg class="ico search-ico" aria-hidden="true"><use href="#i-search"/></svg>
+          <input class="field" id="q-d" type="search" placeholder="Buscar plantas…" autocomplete="off"
+                 role="combobox" aria-expanded="false" aria-controls="s-d" aria-autocomplete="list" aria-haspopup="listbox">
+          <kbd class="kbd" aria-hidden="true">⌘K</kbd>
+        </div>
+        <div class="suggest" id="s-d" role="listbox" aria-label="Sugestões de busca" hidden></div>
+      </form>
+      <div class="top-actions">
+        <button class="icon-btn icon-btn-label" type="button" id="account-btn-d" aria-haspopup="true" aria-expanded="false" aria-controls="account-pop">
+          <svg class="ico"><use href="#i-user"/></svg><span>Conta</span>
+        </button>
+        <button class="icon-btn icon-btn-label cart-trigger" type="button" data-cart-open aria-label="Sacola, 0 itens">
+          <svg class="ico"><use href="#i-bag"/></svg><span>Sacola</span><span class="badge" data-cart-count>0</span>
+        </button>
+      </div>
+    </div>
+    <nav class="topbar-nav" aria-label="Categorias" id="topbar-nav">
+      <ul class="cat-row" id="cat-row"></ul>
+      <div class="more" id="more-wrap">
+        <button class="cat-trigger" type="button" id="more-btn" aria-expanded="false" aria-controls="more-list">Mais categorias <svg class="ico ico-sm" aria-hidden="true"><use href="#i-chev-down"/></svg></button>
+        <ul class="more-list" id="more-list" hidden></ul>
+      </div>
+    </nav>
+    <div class="mega" id="mega-panel" hidden></div>
+  </header>
+
+  <!-- Celular: header fixo (marca + busca) e faixa de categorias. -->
+  <header class="m-top" id="m-top">
+    <div class="m-brand-row">
+      <a class="brand" href="#/" aria-label="Verde Vivo, início">
+        <span class="brand-mark" aria-hidden="true"><svg class="ico"><use href="#i-leaf"/></svg></span>
+        <span class="brand-name">Verde Vivo</span>
+      </a>
+      <div class="m-actions">
+        <button class="icon-btn cart-trigger" type="button" data-cart-open aria-label="Abrir sacola, 0 itens">
+          <svg class="ico"><use href="#i-bag"/></svg><span class="badge" data-cart-count>0</span>
+        </button>
+        <button class="icon-btn" type="button" id="account-btn-m" aria-label="Conta" aria-haspopup="true" aria-expanded="false" aria-controls="account-pop">
+          <svg class="ico"><use href="#i-user"/></svg>
+        </button>
+      </div>
+    </div>
+    <form class="m-search search" role="search" data-search="mobile">
+      <label class="sr-only" for="q-m">Buscar plantas</label>
+      <div class="search-field">
+        <svg class="ico search-ico" aria-hidden="true"><use href="#i-search"/></svg>
+        <input class="field" id="q-m" type="search" placeholder="Buscar plantas…" autocomplete="off"
+               role="combobox" aria-expanded="false" aria-controls="s-m" aria-autocomplete="list" aria-haspopup="listbox">
+      </div>
+      <div class="suggest" id="s-m" role="listbox" aria-label="Sugestões de busca" hidden></div>
+    </form>
+    <div class="m-cats" id="m-cats" role="group" aria-label="Categorias"></div>
+  </header>
+
+  <main id="main" class="catalog-main">
+    <!-- Campanha: imagem de fundo com gradiente escuro, texto embaixo à esquerda -->
+    <section class="campaign" aria-labelledby="campanha-titulo">
+      <div class="campaign-bg" id="campaign-bg" aria-hidden="true"></div>
+      <div class="campaign-text container">
+        <p class="campaign-kicker">Coleção de outono</p>
+        <h2 id="campanha-titulo">Verde para o ano todo</h2>
+        <p>Folhagens resistentes e suculentas com guia de cuidados. Escolha pela luz da sua casa.</p>
+        <a class="btn btn-primary" href="#vitrine">Ver plantas</a>
+      </div>
+    </section>
+
+    <!-- Benefícios de compra -->
+    <section class="benefits container" aria-label="Benefícios de compra">
+      <ul class="benefit-list">
+        <li><span class="b-ico" aria-hidden="true"><svg class="ico"><use href="#i-truck"/></svg></span><h3>Entrega em todo o país</h3><p>Embalagem pensada para a viagem.</p></li>
+        <li><span class="b-ico" aria-hidden="true"><svg class="ico"><use href="#i-shield"/></svg></span><h3>Garantia de 30 dias</h3><p>Se a planta não se adaptar, trocamos.</p></li>
+        <li><span class="b-ico" aria-hidden="true"><svg class="ico"><use href="#i-book"/></svg></span><h3>Guia de cuidados</h3><p>Instruções em linguagem simples.</p></li>
+        <li><span class="b-ico" aria-hidden="true"><svg class="ico"><use href="#i-repeat"/></svg></span><h3>Troca em 7 dias</h3><p>Sem burocracia para trocar o vaso.</p></li>
+      </ul>
+    </section>
+
+    <!-- Categorias: 4 blocos com imagem e nome sobreposto; clique abre visualização ampliada -->
+    <section class="categorias container" id="categorias" aria-labelledby="cat-titulo">
+      <div class="section-head">
+        <h2 id="cat-titulo">Categorias</h2>
+      </div>
+      <div class="cat-tiles" id="cat-tiles"></div>
+    </section>
+
+    <!-- Vitrine: 4 colunas (desktop) com filtros e ordenação no topo -->
+    <section class="vitrine container" id="vitrine" aria-labelledby="vit-titulo">
+      <div class="section-head">
+        <h2 id="vit-titulo">Mais procuradas</h2>
+      </div>
+      <div class="toolbar">
+        <p class="results" id="results" aria-live="polite"></p>
+        <div class="toolbar-actions">
+          <button class="btn btn-soft" type="button" id="open-filters" aria-haspopup="dialog" aria-controls="filter-drawer">
+            <svg class="ico" aria-hidden="true"><use href="#i-sliders"/></svg>
+            <span class="only-d">Filtros</span><span class="only-m">Filtrar</span>
+            <span class="count" id="filter-count" hidden></span>
+          </button>
+          <label class="sort">
+            <span>Ordenar por</span>
+            <select class="field" id="sort"></select>
+          </label>
+        </div>
+      </div>
+      <div class="grid-state" id="grid-state" role="status" hidden></div>
+      <ul class="grid" id="grid" aria-busy="false"></ul>
+    </section>
+
+    <!-- Nossa origem: linhas com imagem e texto; no celular a imagem fica sempre em cima -->
+    <section class="origem container" aria-labelledby="ori-titulo">
+      <div class="section-head"><h2 id="ori-titulo">Nossa origem</h2></div>
+      <article class="origem-row">
+        <div class="origem-img" role="img" aria-label="Ilustração de mudas em bandejas de semeadura"></div>
+        <div class="origem-text">
+          <h3>Mudas cultivadas no ateliê</h3>
+          <p>Começamos cada muda em bandeja pequena e a acompanhamos até o vaso definitivo. Assim a planta chega mais firme.</p>
+          <ul><li>Cultivo em lotes curtos</li><li>Inspeção antes do envio</li><li>Substrato drenante testado</li></ul>
+        </div>
+      </article>
+      <article class="origem-row is-rev">
+        <div class="origem-img" role="img" aria-label="Ilustração de um regador de metal ao lado de um vaso de terracota"></div>
+        <div class="origem-text">
+          <h3>Cuidado depois da entrega</h3>
+          <p>Enviamos um guia impresso e respondemos dúvidas por mensagem nos primeiros 30 dias.</p>
+          <ul><li>Guia de cuidados incluso</li><li>Suporte em dias úteis</li></ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- Newsletter: texto à esquerda; campo e botão na mesma linha à direita -->
+    <section class="newsletter container" aria-labelledby="news-titulo">
+      <div class="news-text">
+        <h2 id="news-titulo">Receba novidades do ateliê</h2>
+        <p>Lançamentos e dicas de cuidado, uma vez por mês.</p>
+      </div>
+      <form class="news-form" id="news-form" novalidate>
+        <label for="news-email">E-mail</label>
+        <div class="news-row">
+          <input class="field" id="news-email" name="email" type="email" autocomplete="email" placeholder="seu@e-mail.com" aria-describedby="news-privacidade news-erro" required>
+          <button class="btn btn-primary" type="submit">Quero receber</button>
+        </div>
+        <p class="field-error" id="news-erro" role="alert" hidden></p>
+        <p class="news-ok" id="news-ok" role="status" hidden></p>
+        <p class="hint" id="news-privacidade">Não enviamos spam. Você pode sair quando quiser.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#/"><span class="brand-mark" aria-hidden="true"><svg class="ico"><use href="#i-leaf"/></svg></span><span class="brand-name">Verde Vivo</span></a>
+        <p>Plantas para casa, varanda e jardim. Marca e produtos fictícios desta demonstração.</p>
+      </div>
+      <nav class="footer-cols" aria-label="Rodapé">
+        <div>
+          <h3>Loja</h3>
+          <ul><li><a href="#/catalogo?cat=interior">Interior</a></li><li><a href="#/catalogo?cat=exterior">Exterior</a></li><li><a href="#/catalogo?cat=suculentas">Suculentas</a></li><li><a href="#/catalogo?cat=vasos">Vasos</a></li></ul>
+        </div>
+        <div>
+          <h3>Ajuda</h3>
+          <ul><li><a href="#" data-demo>Entregas</a></li><li><a href="#" data-demo>Trocas e garantia</a></li><li><a href="#" data-demo>Guia de cuidados</a></li><li><a href="#" data-demo>Fale conosco</a></li></ul>
+        </div>
+        <div>
+          <h3>Ateliê</h3>
+          <ul><li><a href="#atelie-sobre" data-demo>Sobre o ateliê</a></li><li><a href="#" data-demo>Blog</a></li><li><a href="#" data-demo>Trabalhe conosco</a></li></ul>
+        </div>
+      </nav>
+    </div>
+    <div class="container footer-legal">
+      <p>© 2026 Verde Vivo. Dados fictícios de demonstração.</p>
+      <p><a href="#" data-demo>Privacidade</a> · <a href="#" data-demo>Termos</a></p>
+    </div>
+  </footer>
+
+  <!-- Dock flutuante (celular): 4 destinos -->
+  <nav class="dock" aria-label="Navegação principal" id="dock">
+    <a class="dock-item" href="#/" data-dock="landing"><span class="dock-pill"><svg class="ico"><use href="#i-home"/></svg></span><span class="dock-label">Início</span></a>
+    <a class="dock-item" href="#/catalogo" data-dock="catalogo"><span class="dock-pill"><svg class="ico"><use href="#i-grid"/></svg></span><span class="dock-label">Catálogo</span></a>
+    <button class="dock-item" type="button" id="dock-search"><span class="dock-pill"><svg class="ico"><use href="#i-search"/></svg></span><span class="dock-label">Buscar</span></button>
+    <button class="dock-item cart-trigger" type="button" data-cart-open><span class="dock-pill"><svg class="ico"><use href="#i-bag"/></svg><span class="badge" data-cart-count>0</span></span><span class="dock-label">Sacola</span></button>
+  </nav>
+</div>
+
+<!-- ============ Camadas: sobreposição, painéis, diálogos ============ -->
+<div class="overlay" id="overlay" aria-hidden="true"></div>
+
+<div class="account-pop" id="account-pop" hidden>
+  <p class="pop-name">Visitante</p>
+  <p class="pop-note">Modo demonstração: não há login neste site.</p>
+  <ul>
+    <li><button type="button" aria-disabled="true" data-demo-item>Meu perfil</button></li>
+    <li><button type="button" aria-disabled="true" data-demo-item>Configurações</button></li>
+    <li><button type="button" aria-disabled="true" data-demo-item>Ajuda</button></li>
+    <li><button type="button" aria-disabled="true" data-demo-item>Sair</button></li>
+  </ul>
+</div>
+
+<aside class="drawer is-filter" id="filter-drawer" role="dialog" aria-modal="true" aria-labelledby="filter-title" tabindex="-1">
+  <span class="grabber" aria-hidden="true"></span>
+  <div class="drawer-head">
+    <h2 id="filter-title">Filtros</h2>
+    <button class="icon-btn" type="button" data-close aria-label="Fechar filtros"><svg class="ico"><use href="#i-x"/></svg></button>
+  </div>
+  <form class="drawer-body" id="filter-form" onsubmit="return false">
+    <fieldset class="fgroup">
+      <legend>Categoria</legend>
+      <div class="chips" id="f-cat"></div>
+    </fieldset>
+    <fieldset class="fgroup">
+      <legend>Luz</legend>
+      <div class="chips" id="f-luz"></div>
+    </fieldset>
+    <fieldset class="fgroup">
+      <legend>Porte</legend>
+      <div class="chips" id="f-porte"></div>
+    </fieldset>
+    <fieldset class="fgroup">
+      <legend>Cuidado</legend>
+      <div class="chips" id="f-cuidado"></div>
+    </fieldset>
+    <fieldset class="fgroup">
+      <legend>Preço</legend>
+      <div class="chips" id="f-preco"></div>
+    </fieldset>
+  </form>
+  <div class="drawer-foot">
+    <button class="btn btn-soft" type="button" id="f-clear">Limpar</button>
+    <button class="btn btn-primary" type="button" id="f-apply">Aplicar filtros</button>
+  </div>
+</aside>
+
+<aside class="drawer is-cart" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" tabindex="-1">
+  <div class="drawer-head">
+    <h2 id="cart-title">Sacola <span class="count" data-cart-count>0</span></h2>
+    <button class="icon-btn" type="button" data-close aria-label="Fechar sacola"><svg class="ico"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="drawer-body">
+    <p class="empty" id="cart-empty">Sua sacola está vazia. Escolha uma planta no catálogo.</p>
+    <ul class="cart-list" id="cart-list"></ul>
+  </div>
+  <div class="drawer-foot cart-foot">
+    <p class="cart-total"><span>Subtotal</span> <strong id="cart-total">R$ 0,00</strong></p>
+    <button class="btn btn-primary btn-block" type="button" id="checkout">Finalizar compra</button>
+    <p class="hint" id="checkout-msg" role="status"></p>
+  </div>
+</aside>
+
+<div class="dialog dialog-product" id="product-dialog" role="dialog" aria-modal="true" aria-labelledby="product-title" tabindex="-1">
+  <div class="dialog-head">
+    <p class="pd-cat" id="pd-cat"></p>
+    <button class="icon-btn" type="button" data-close aria-label="Fechar produto"><svg class="ico"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="pd-body">
+    <div class="pd-media" id="pd-media"></div>
+    <div class="pd-info">
+      <h2 id="product-title"></h2>
+      <p class="pd-price" id="pd-price"></p>
+      <p id="pd-desc"></p>
+      <dl class="pd-specs" id="pd-specs"></dl>
+      <button class="btn btn-primary btn-block" type="button" id="pd-add">Adicionar à sacola</button>
+    </div>
+  </div>
+</div>
+
+<div class="dialog lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title" tabindex="-1">
+  <div class="dialog-head">
+    <h2 id="lb-title"></h2>
+    <button class="icon-btn" type="button" data-close aria-label="Fechar ampliação"><svg class="ico"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="lb-stage">
+    <button class="icon-btn lb-nav" type="button" id="lb-prev" aria-label="Categoria anterior"><svg class="ico"><use href="#i-chev-left"/></svg></button>
+    <div class="lb-media" id="lb-media"></div>
+    <button class="icon-btn lb-nav" type="button" id="lb-next" aria-label="Próxima categoria"><svg class="ico"><use href="#i-chev-right"/></svg></button>
+  </div>
+  <div class="lb-foot">
+    <p id="lb-count"></p>
+    <button class="btn btn-primary" type="button" id="lb-go">Ver categoria</button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/data.js"></script>
+<script src="js/core.js"></script>
+<script src="js/catalog-list.js"></script>
+<script src="js/catalog-ui.js"></script>
+<script src="js/landing.js"></script>
+</body>
+</html>

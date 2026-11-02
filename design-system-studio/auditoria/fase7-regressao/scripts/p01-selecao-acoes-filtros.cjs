@@ -13,8 +13,11 @@ const GALLERIES = [
 ]
 
 async function selectedState(page, prefix, idx) {
+  if (prefix === 'sidebar-option-') await page.getByRole('tab', { name: /Sidebars/ }).click()
   const card = page.locator(`[data-testid^="${prefix}"]`).nth(idx)
   await card.scrollIntoViewIfNeeded()
+  await card.evaluate((el) => { const r = el.getBoundingClientRect(); window.scrollBy(0, r.top - 140) })
+  await sleep(200)
   const hit = card.locator('xpath=self::*[@aria-pressed] | .//*[@aria-pressed]').first()
   const before = await card.evaluate((el) => {
     const cs = getComputedStyle(el)
@@ -46,6 +49,7 @@ async function selectedState(page, prefix, idx) {
 }
 
 async function cardActions(page, prefix) {
+  if (prefix === 'sidebar-option-') await page.getByRole('tab', { name: /Sidebars/ }).click()
   return page.evaluate((prefix) => {
     const cards = [...document.querySelectorAll(`[data-testid^="${prefix}"]`)].slice(0, 6)
     return cards.map((c) => {

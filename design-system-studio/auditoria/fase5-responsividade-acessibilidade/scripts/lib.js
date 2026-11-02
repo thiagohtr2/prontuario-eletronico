@@ -441,3 +441,26 @@ const ROUTES = [
 ]
 
 module.exports = { BASE, OUT, CAP, DADOS, STORAGE_KEY, FIXTURE, launch, newPage, go, settle, measure, coveredScan, shot, save, ROUTES, contextOptions }
+
+// ---------------------------------------------------------------- axe-core
+const AXE_SOURCE = fs.readFileSync(path.join(OUT, 'ferramentas/node_modules/axe-core/axe.min.js'), 'utf8')
+async function runAxe(page, opts = {}) {
+  await page.evaluate(AXE_SOURCE)
+  return page.evaluate(async (opts) => {
+    const r = await window.axe.run(opts.context || document, {
+      runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa', 'wcag22aa', 'best-practice'] },
+      resultTypes: ['violations', 'incomplete'],
+    })
+    const slim = (v) => ({
+      id: v.id,
+      impact: v.impact,
+      tags: v.tags.filter((t) => /wcag|best/.test(t)),
+      help: v.help,
+      helpUrl: v.helpUrl,
+      count: v.nodes.length,
+      nodes: v.nodes.slice(0, 8).map((n) => ({ target: n.target.join(' '), html: n.html.slice(0, 220), summary: (n.failureSummary || '').slice(0, 300) })),
+    })
+    return { violations: r.violations.map(slim), incomplete: r.incomplete.map(slim).map((x) => ({ id: x.id, count: x.count, impact: x.impact })) }
+  }, opts)
+}
+module.exports.runAxe = runAxe

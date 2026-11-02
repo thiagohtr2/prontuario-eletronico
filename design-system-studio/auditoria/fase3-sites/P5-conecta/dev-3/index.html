@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Demonstração visual da plataforma social Conecta: entrada, feed, perfil e navegação mobile e desktop.">
+  <title>Conecta · Entrar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;650;700&amp;display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/conteudo.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ===== Entrada: login, cadastro (mesma tela) e recuperação ===== -->
+  <div id="tela-entrar" class="auth" hidden>
+    <div class="auth__wrap">
+      <aside class="auth__info" aria-label="Instruções">
+        <div class="marca">
+          <span class="monograma" aria-hidden="true">C</span>
+          <span class="marca__nome">Conecta</span>
+        </div>
+        <h2 class="auth__info-titulo">Como entrar</h2>
+        <ol class="auth__passos">
+          <li>Escolha o e-mail ou o telefone cadastrado.</li>
+          <li>Digite sua senha. Se esqueceu, use “Esqueci minha senha”.</li>
+          <li>Ainda não tem conta? Use a aba “Criar conta”.</li>
+        </ol>
+      </aside>
+
+      <section class="auth__card" aria-labelledby="titulo-auth">
+        <header class="auth__cabecalho">
+          <div class="marca marca--compacta">
+            <span class="monograma" aria-hidden="true">C</span>
+            <span class="marca__nome">Conecta</span>
+          </div>
+          <h1 id="titulo-auth" class="auth__titulo">Entrar</h1>
+          <p id="subtitulo-auth" class="auth__subtitulo">Escolha como prefere acessar.</p>
+        </header>
+
+        <div class="abas" id="abas-auth" role="tablist" aria-label="Escolha uma opção">
+          <button type="button" role="tab" id="aba-entrar" class="aba" aria-selected="true" aria-controls="painel-entrar">Entrar</button>
+          <button type="button" role="tab" id="aba-cadastro" class="aba" aria-selected="false" aria-controls="painel-cadastro" tabindex="-1">Criar conta</button>
+        </div>
+
+        <!-- Entrar -->
+        <div id="painel-entrar" role="tabpanel" aria-labelledby="aba-entrar">
+          <form id="form-entrar" class="form" novalidate>
+            <div id="resumo-entrar" class="resumo" role="alert" tabindex="-1" hidden></div>
+
+            <fieldset class="segmento">
+              <legend class="segmento__legenda">Entrar com</legend>
+              <div class="segmento__opcoes">
+                <input type="radio" id="metodo-email" name="metodo" value="email" checked>
+                <label for="metodo-email">E-mail</label>
+                <input type="radio" id="metodo-telefone" name="metodo" value="telefone">
+                <label for="metodo-telefone">Telefone</label>
+              </div>
+            </fieldset>
+
+            <div class="campo campo--login" id="campo-login-email">
+              <label for="login-email">E-mail</label>
+              <input class="entrada" id="login-email" name="email" type="email" inputmode="email" autocomplete="username" spellcheck="false" aria-describedby="erro-login-email">
+              <p class="campo__erro" id="erro-login-email" hidden></p>
+            </div>
+
+            <div class="campo campo--login" id="campo-login-telefone" hidden>
+              <label for="login-telefone">Telefone com DDD</label>
+              <input class="entrada" id="login-telefone" name="telefone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 91234-5678" aria-describedby="erro-login-telefone">
+              <p class="campo__erro" id="erro-login-telefone" hidden></p>
+            </div>
+
+            <div class="campo campo--login">
+              <div class="campo__cabecalho">
+                <label for="login-senha">Senha</label>
+                <a class="link" href="?aba=recuperar" id="link-esqueci">Esqueci minha senha</a>
+              </div>
+              <div class="entrada-senha">
+                <input class="entrada" id="login-senha" name="senha" type="password" autocomplete="current-password" aria-describedby="erro-login-senha">
+                <button type="button" class="olho" data-olho="login-senha" aria-label="Mostrar senha" aria-pressed="false" aria-controls="login-senha"></button>
+              </div>
+              <p class="campo__erro" id="erro-login-senha" hidden></p>
+            </div>
+
+            <div class="form__acoes" id="acoes-entrar">
+              <button type="submit" class="btn btn--primary btn--bloco btn--grande" id="btn-entrar">Entrar</button>
+            </div>
+
+            <p class="nota">Demonstração: demo@conecta.app · senha demo1234. Pelo telefone: (11) 91234-5678, mesma senha.</p>
+          </form>
+        </div>
+
+        <!-- Criar conta -->
+        <div id="painel-cadastro" role="tabpanel" aria-labelledby="aba-cadastro" hidden>
+          <form id="form-cadastro" class="form" novalidate>
+            <div id="resumo-cadastro" class="resumo" role="alert" tabindex="-1" hidden></div>
+
+            <div class="campo">
+              <label for="cad-nome">Nome</label>
+              <input class="entrada" id="cad-nome" name="nome" type="text" autocomplete="name" aria-describedby="erro-cad-nome">
+              <p class="campo__erro" id="erro-cad-nome" hidden></p>
+            </div>
+
+            <div class="campo">
+              <label for="cad-email">E-mail</label>
+              <input class="entrada" id="cad-email" name="email" type="email" inputmode="email" autocomplete="email" spellcheck="false" aria-describedby="erro-cad-email">
+              <p class="campo__erro" id="erro-cad-email" hidden></p>
+            </div>
+
+            <div class="campo">
+              <label for="cad-senha">Senha</label>
+              <div class="entrada-senha">
+                <input class="entrada" id="cad-senha" name="senha" type="password" autocomplete="new-password" aria-describedby="requisitos-senha erro-cad-senha">
+                <button type="button" class="olho" data-olho="cad-senha" aria-label="Mostrar senha" aria-pressed="false" aria-controls="cad-senha"></button>
+              </div>
+              <ul class="requisitos" id="requisitos-senha" aria-label="Requisitos da senha">
+                <li data-regra="tamanho"><span class="sr-only" data-estado>pendente:</span>Pelo menos 8 caracteres</li>
+                <li data-regra="letra"><span class="sr-only" data-estado>pendente:</span>Pelo menos uma letra</li>
+                <li data-regra="numero"><span class="sr-only" data-estado>pendente:</span>Pelo menos um número</li>
+              </ul>
+              <p class="campo__erro" id="erro-cad-senha" hidden></p>
+            </div>
+
+            <div class="campo" id="campo-codigo" hidden>
+              <label for="cad-codigo">Código de confirmação</label>
+              <input class="entrada" id="cad-codigo" name="codigo" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" aria-describedby="ajuda-codigo erro-cad-codigo">
+              <p class="ajuda" id="ajuda-codigo">Enviamos um código de 6 dígitos para o seu e-mail. Na demonstração, use 123456.</p>
+              <p class="campo__erro" id="erro-cad-codigo" hidden></p>
+            </div>
+
+            <div class="form__acoes">
+              <button type="submit" class="btn btn--primary btn--bloco btn--grande" id="btn-criar">Criar conta</button>
+            </div>
+
+            <p class="termos">Ao criar sua conta, você concorda com os <a href="#termos" data-modal="termos">Termos de uso</a> e com a <a href="#privacidade" data-modal="privacidade">Política de privacidade</a>.</p>
+          </form>
+        </div>
+
+        <!-- Recuperação de senha -->
+        <div id="painel-recuperar" hidden>
+          <form id="form-recuperar" class="form" novalidate>
+            <div id="resumo-recuperar" class="resumo" role="alert" tabindex="-1" hidden></div>
+
+            <div class="campo">
+              <label for="rec-email">E-mail da sua conta</label>
+              <input class="entrada" id="rec-email" name="email" type="email" inputmode="email" autocomplete="email" spellcheck="false" aria-describedby="erro-rec-email">
+              <p class="campo__erro" id="erro-rec-email" hidden></p>
+            </div>
+
+            <div class="form__acoes">
+              <button type="submit" class="btn btn--primary btn--bloco btn--grande" id="btn-recuperar">Enviar link</button>
+            </div>
+
+            <p class="aviso-neutro" id="aviso-recuperar" role="status" hidden></p>
+            <p class="voltar"><a href="?aba=entrar" id="link-voltar">Voltar para entrar</a></p>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- ===== Aplicação (depois de entrar) ===== -->
+  <div id="app" class="app" hidden>
+    <header class="cabecalho" id="cabecalho">
+
+      <!-- Desktop: topbar integral fixa (Praça da Comunidade, ícones no centro) -->
+      <div class="barra">
+        <a class="logo" href="#/feed" aria-label="Conecta, início">
+          <span class="monograma" aria-hidden="true">C</span>
+          <span class="marca__nome">Conecta</span>
+        </a>
+
+        <nav class="nav-principal" aria-label="Principal">
+          <ul class="nav-principal__lista">
+            <li><a class="nav-link" href="#/feed" data-rota="feed"><span data-icone="house"></span>Feed</a></li>
+            <li><a class="nav-link" href="#/grupos" data-rota="grupos"><span data-icone="users"></span>Grupos</a></li>
+            <li><a class="nav-link" href="#/eventos" data-rota="eventos"><span data-icone="calendar"></span>Eventos</a></li>
+            <li><a class="nav-link" href="#/mensagens" data-rota="mensagens"><span data-icone="message"></span>Mensagens<span class="contador" id="contador-mensagens">3</span></a></li>
+          </ul>
+        </nav>
+
+        <div class="acoes">
+          <form class="busca" role="search" id="busca-desktop" data-form="busca-topo">
+            <span data-icone="search" aria-hidden="true"></span>
+            <input type="search" id="busca-input" name="q" placeholder="Buscar…" aria-label="Buscar" autocomplete="off">
+          </form>
+
+          <button type="button" class="btn btn--primary btn--novo" id="btn-novo"><span data-icone="plus"></span>Novo</button>
+
+          <div class="acao-popover">
+            <button type="button" class="icon-btn" id="btn-notificacoes" aria-label="Notificações" aria-expanded="false" aria-controls="pop-notificacoes" aria-haspopup="dialog">
+              <span data-icone="bell"></span>
+              <span class="contador contador--sino" id="contador-sino" aria-hidden="true">3</span>
+            </button>
+            <div class="popover popover--notif" id="pop-notificacoes" role="dialog" aria-label="Notificações" hidden></div>
+          </div>
+
+          <div class="acao-popover">
+            <button type="button" class="avatar-btn" id="btn-perfil-menu" aria-label="Menu do perfil" aria-expanded="false" aria-controls="pop-perfil" aria-haspopup="dialog">
+              <span class="avatar avatar--sm" data-avatar="ana">AS</span>
+            </button>
+            <div class="popover popover--perfil" id="pop-perfil" role="dialog" aria-label="Menu do perfil" hidden></div>
+          </div>
+
+          <button type="button" class="icon-btn btn-menu-nav" id="btn-menu-nav" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-nav">
+            <span data-icone="menu"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Tablet (768 a 1023 px): navegação recolhida em painel abaixo do header -->
+      <div class="menu-nav" id="menu-nav" hidden>
+        <nav aria-label="Menu de navegação">
+          <ul>
+            <li><a href="#/feed" data-rota="feed"><span data-icone="house"></span>Feed</a></li>
+            <li><a href="#/grupos" data-rota="grupos"><span data-icone="users"></span>Grupos</a></li>
+            <li><a href="#/eventos" data-rota="eventos"><span data-icone="calendar"></span>Eventos</a></li>
+            <li><a href="#/mensagens" data-rota="mensagens"><span data-icone="message"></span>Mensagens</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Celular: topbar com hambúrguer + stories -->
+      <div class="topo-movel">
+        <button type="button" class="icon-btn" id="btn-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer" aria-haspopup="dialog">
+          <span data-icone="menu"></span>
+        </button>
+        <a class="logo logo--movel" href="#/feed" aria-label="Conecta, início">
+          <span class="monograma" aria-hidden="true">C</span>
+          <span class="marca__nome">Conecta</span>
+        </a>
+        <a class="icon-btn" href="#/busca" id="btn-busca-movel" aria-label="Buscar">
+          <span data-icone="search"></span>
+        </a>
+        <div class="acao-popover">
+          <button type="button" class="avatar-btn" id="btn-perfil-menu-movel" aria-label="Menu do perfil" aria-expanded="false" aria-controls="pop-perfil-movel" aria-haspopup="dialog">
+            <span class="avatar avatar--sm" data-avatar="ana">AS</span>
+          </button>
+          <div class="popover popover--perfil" id="pop-perfil-movel" role="dialog" aria-label="Menu do perfil" hidden></div>
+        </div>
+      </div>
+
+      <div class="stories" id="stories" aria-label="Stories"></div>
+    </header>
+
+    <main id="conteudo" class="conteudo" tabindex="-1"></main>
+
+    <!-- Dock flutuante (celular) -->
+    <nav class="dock" id="dock" aria-label="Navegação inferior">
+      <a class="dock__item" href="#/feed" data-rota="feed">
+        <span class="dock__pilula"><span data-icone="house"></span></span>
+        <span class="dock__rotulo">Início</span>
+      </a>
+      <a class="dock__item" href="#/explorar" data-rota="explorar">
+        <span class="dock__pilula"><span data-icone="compass"></span></span>
+        <span class="dock__rotulo">Explorar</span>
+      </a>
+      <a class="dock__item" href="#/salvos" data-rota="salvos">
+        <span class="dock__pilula"><span data-icone="bookmark"></span></span>
+        <span class="dock__rotulo">Salvos</span>
+      </a>
+      <a class="dock__item" href="#/perfil" data-rota="perfil">
+        <span class="dock__pilula"><span data-icone="user"></span></span>
+        <span class="dock__rotulo">Perfil</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Drawer lateral esquerdo (celular) -->
+  <div class="scrim" id="scrim"></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-titulo" aria-hidden="true" inert>
+    <div class="drawer__cabecalho">
+      <h2 id="drawer-titulo" class="drawer__titulo">Menu</h2>
+      <button type="button" class="icon-btn" id="btn-fechar-drawer" aria-label="Fechar menu">
+        <span data-icone="x"></span>
+      </button>
+    </div>
+    <nav class="drawer__corpo" aria-label="Opções">
+      <ul class="drawer__lista" id="drawer-lista"></ul>
+    </nav>
+    <div class="drawer__rodape">
+      <button type="button" class="btn btn--primary btn--bloco" id="btn-sair-drawer">Sair da conta</button>
+    </div>
+  </aside>
+
+  <!-- Modal genérico (nova publicação, editar perfil, termos) -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__painel" id="modal-painel" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+      <div class="modal__cabecalho">
+        <h2 id="modal-titulo"></h2>
+        <button type="button" class="icon-btn" id="btn-fechar-modal" aria-label="Fechar">
+          <span data-icone="x"></span>
+        </button>
+      </div>
+      <div class="modal__corpo" id="modal-corpo"></div>
+    </div>
+  </div>
+
+  <div class="sr-only" id="avisos" aria-live="polite"></div>
+
+  <script src="js/icones.js"></script>
+  <script src="js/dados.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

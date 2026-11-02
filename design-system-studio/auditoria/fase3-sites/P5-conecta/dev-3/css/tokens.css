@@ -1,0 +1,422 @@
+/* Conecta - tokens da identidade global "Comunidade" (PROMPT.md, secao D)
+   e base de estilos. Nenhuma cor fixa fora deste arquivo. */
+
+:root {
+  /* Marca */
+  --primary: #d6336c;
+  --primary-hover: #c12e61;
+  --primary-active: #ab2956;
+  --on-primary: #ffffff;
+  --primary-soft: #fae7ed;
+  --secondary: #7048e8;
+  --on-secondary: #ffffff;
+  --accent: #f59f00;
+  --on-accent: #111114;
+
+  /* Fundos e superficies */
+  --bg: #ffffff;
+  --bg-alt: #f6f6f6;
+  --surface: #ffffff;
+  --surface-alt: #f5f5f5;
+  --surface-tint: #fef8fa; /* superficie tingida pela primaria (componentes Modern Material) */
+
+  /* Texto */
+  --text: #1b1b1f;
+  --text-2: #646466; /* texto secundario do componente */
+  --text-muted: #727274;
+  --text-disabled: #a8a8aa;
+  --placeholder: #8d8d8f;
+
+  /* Bordas e foco */
+  --border: #e6e6e6;
+  --border-strong: #c7c7c7;
+  --focus: #d6336c;
+
+  /* Estados */
+  --hover: #f4f4f4;
+  --active: #ebebeb;
+  --pressed: #e0e0e0;
+  --selected: #fae7ed;
+  --selected-text: #bc2d5f;
+  --disabled: #f0f0f0;
+  --disabled-text: #98989a;
+
+  /* Semanticos */
+  --success: #117e39;
+  --success-bg: #e3f4e9;
+  --warning: #a85c04;
+  --warning-bg: #faefe1;
+  --error: #dc2626;
+  --error-bg: #fbe5e5;
+  --info: #2563eb;
+  --info-bg: #e5ecfd;
+
+  /* Links, icones e navegacao */
+  --link: #d6336c;
+  --link-hover: #b62b5c;
+  --icon: #545457;
+  --nav-bg: #ffffff;
+  --nav-text: #4d4d50;
+  --nav-active: #fae7ed;
+  --nav-active-text: #bc2d5f;
+
+  /* Gradiente e destaque do componente */
+  --grad-from: #f59f00;
+  --grad-to: #d6336c;
+  --destaque: #be7b00;
+
+  /* Geometria (8 px) */
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 12px;
+  --r-ctrl: 20px;
+
+  --font: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --kb: 0px; /* altura do teclado virtual, definida em auth.js */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: 72px;
+  scroll-padding-bottom: 140px;
+}
+
+body {
+  margin: 0;
+  min-width: 0;
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  overflow-wrap: anywhere;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px rgba(214, 51, 108, 0.35);
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -48px;
+  z-index: 100;
+  padding: 8px 16px;
+  border-radius: var(--r-md);
+  background: var(--primary);
+  color: var(--on-primary);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+.icone {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  display: block;
+}
+
+.icone--sm {
+  width: 16px;
+  height: 16px;
+}
+
+.muted {
+  color: var(--text-2);
+}
+
+.link {
+  color: var(--link);
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* Marca */
+.marca {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  text-decoration: none;
+  min-width: 0;
+}
+
+.marca__nome {
+  font-weight: 650;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+}
+
+.monograma {
+  width: 32px;
+  height: 32px;
+  flex: none;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  background: var(--primary);
+  color: var(--on-primary);
+  font-weight: 650;
+  font-size: 15px;
+}
+
+/* Botoes */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  max-width: 100%;
+  padding: 8px 20px;
+  border: 0;
+  border-radius: var(--r-ctrl);
+  background: transparent;
+  color: var(--text);
+  font: 500 14px/1.2 var(--font);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 120ms, color 120ms, box-shadow 120ms;
+}
+
+.btn--primary {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.btn--primary:hover {
+  background: var(--primary-hover);
+  color: var(--on-primary);
+}
+
+.btn--primary:active {
+  background: var(--primary-active);
+}
+
+.btn--tonal {
+  background: var(--primary-soft);
+  color: var(--selected-text);
+}
+
+.btn--tonal:hover {
+  color: var(--selected-text);
+  box-shadow: inset 0 0 0 100vmax color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.btn--tonal:active {
+  box-shadow: inset 0 0 0 100vmax color-mix(in srgb, currentColor 12%, transparent);
+}
+
+.btn--contorno {
+  box-shadow: inset 0 0 0 1px var(--border-strong);
+  color: var(--text);
+}
+
+.btn--contorno:hover {
+  box-shadow: inset 0 0 0 1px var(--border-strong), inset 0 0 0 100vmax color-mix(in srgb, currentColor 8%, transparent);
+}
+
+.btn--bloco {
+  width: 100%;
+}
+
+.btn--grande {
+  min-height: 48px;
+}
+
+.btn[aria-pressed="true"] {
+  background: var(--primary-soft);
+  color: var(--selected-text);
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  background: var(--disabled);
+  color: var(--disabled-text);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.btn[aria-busy="true"] {
+  cursor: progress;
+}
+
+.icon-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  padding: 0;
+  border: 0;
+  border-radius: var(--r-ctrl);
+  background: transparent;
+  color: var(--icon);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.icon-btn:hover {
+  background: var(--hover);
+}
+
+.icon-btn:active {
+  background: var(--active);
+}
+
+.icone-circulo {
+  display: inline-grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  color: var(--selected-text);
+}
+
+/* Avatares com iniciais (sem fotos) */
+.avatar {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--primary-soft);
+  color: var(--selected-text);
+  font-weight: 650;
+  font-size: 14px;
+}
+
+.avatar--sm {
+  width: 32px;
+  height: 32px;
+  font-size: 12px;
+}
+
+.avatar--md {
+  width: 56px;
+  height: 56px;
+  font-size: 16px;
+}
+
+.avatar--lg {
+  width: 96px;
+  height: 96px;
+  font-size: 28px;
+  border: 4px solid var(--bg);
+}
+
+/* Estados de lista: carregando, vazio e erro */
+.esqueleto {
+  display: block;
+  border-radius: var(--r-lg);
+  background: var(--bg-alt);
+}
+
+.estado {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 40px 16px;
+  text-align: center;
+  color: var(--text-2);
+}
+
+.estado h2 {
+  font-size: 18px;
+  color: var(--text);
+}
+
+.estado p {
+  max-width: 420px;
+}
+
+.estado .btn {
+  margin-top: 8px;
+}
+
+.estado--erro .icone-circulo {
+  background: var(--error-bg);
+  color: var(--error);
+}
+
+.aviso-neutro {
+  padding: 12px 14px;
+  border-radius: var(--r-md);
+  background: var(--info-bg);
+  color: var(--text);
+  font-size: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

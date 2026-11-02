@@ -1,0 +1,337 @@
+OK   320x568: sem overflow horizontal (0px)
+OK   320x568: One Screen sem rolagem da página (vOverflow 0px)
+OK   320x568: shell ocupa a viewport (568/568)
+OK   320x568: nenhum texto cortado 
+OK   320x568: alvos de toque >= 44 px 
+OK   320x568: blocos dentro da largura 
+OK   320x568: 4 indicadores renderizados
+OK   320x568: abas do celular visíveis somente abaixo de 768 px
+OK   320x568: sem erros no console 
+OK   320x480: sem overflow horizontal (0px)
+OK   320x480: modo empilhado (rolagem permitida)
+OK   320x480: nenhum texto cortado 
+OK   320x480: alvos de toque >= 44 px 
+OK   320x480: blocos dentro da largura 
+OK   320x480: 4 indicadores renderizados
+OK   320x480: abas do celular visíveis somente abaixo de 768 px
+OK   320x480: sem erros no console 
+OK   344x640: sem overflow horizontal (0px)
+OK   344x640: One Screen sem rolagem da página (vOverflow 0px)
+OK   344x640: shell ocupa a viewport (640/640)
+OK   344x640: nenhum texto cortado 
+OK   344x640: alvos de toque >= 44 px 
+OK   344x640: blocos dentro da largura 
+OK   344x640: 4 indicadores renderizados
+OK   344x640: abas do celular visíveis somente abaixo de 768 px
+OK   344x640: sem erros no console 
+OK   360x740: sem overflow horizontal (0px)
+OK   360x740: One Screen sem rolagem da página (vOverflow 0px)
+OK   360x740: shell ocupa a viewport (740/740)
+OK   360x740: nenhum texto cortado 
+OK   360x740: alvos de toque >= 44 px 
+OK   360x740: blocos dentro da largura 
+OK   360x740: 4 indicadores renderizados
+OK   360x740: abas do celular visíveis somente abaixo de 768 px
+OK   360x740: sem erros no console 
+OK   375x667: sem overflow horizontal (0px)
+OK   375x667: One Screen sem rolagem da página (vOverflow 0px)
+OK   375x667: shell ocupa a viewport (667/667)
+OK   375x667: nenhum texto cortado 
+OK   375x667: alvos de toque >= 44 px 
+OK   375x667: blocos dentro da largura 
+OK   375x667: 4 indicadores renderizados
+OK   375x667: abas do celular visíveis somente abaixo de 768 px
+OK   375x667: sem erros no console 
+OK   390x844: sem overflow horizontal (0px)
+OK   390x844: One Screen sem rolagem da página (vOverflow 0px)
+OK   390x844: shell ocupa a viewport (844/844)
+OK   390x844: nenhum texto cortado 
+OK   390x844: alvos de toque >= 44 px 
+OK   390x844: blocos dentro da largura 
+OK   390x844: 4 indicadores renderizados
+OK   390x844: abas do celular visíveis somente abaixo de 768 px
+OK   390x844: sem erros no console 
+OK   412x915: sem overflow horizontal (0px)
+OK   412x915: One Screen sem rolagem da página (vOverflow 0px)
+OK   412x915: shell ocupa a viewport (915/915)
+OK   412x915: nenhum texto cortado 
+OK   412x915: alvos de toque >= 44 px 
+OK   412x915: blocos dentro da largura 
+OK   412x915: 4 indicadores renderizados
+OK   412x915: abas do celular visíveis somente abaixo de 768 px
+OK   412x915: sem erros no console 
+OK   430x932: sem overflow horizontal (0px)
+OK   430x932: One Screen sem rolagem da página (vOverflow 0px)
+OK   430x932: shell ocupa a viewport (932/932)
+OK   430x932: nenhum texto cortado 
+OK   430x932: alvos de toque >= 44 px 
+OK   430x932: blocos dentro da largura 
+OK   430x932: 4 indicadores renderizados
+OK   430x932: abas do celular visíveis somente abaixo de 768 px
+OK   430x932: sem erros no console 
+OK   480x800: sem overflow horizontal (0px)
+OK   480x800: One Screen sem rolagem da página (vOverflow 0px)
+OK   480x800: shell ocupa a viewport (800/800)
+OK   480x800: nenhum texto cortado 
+OK   480x800: alvos de toque >= 44 px 
+OK   480x800: blocos dentro da largura 
+OK   480x800: 4 indicadores renderizados
+OK   480x800: abas do celular visíveis somente abaixo de 768 px
+OK   480x800: sem erros no console 
+OK   500x800: sem overflow horizontal (0px)
+OK   500x800: One Screen sem rolagem da página (vOverflow 0px)
+OK   500x800: shell ocupa a viewport (800/800)
+OK   500x800: nenhum texto cortado 
+OK   500x800: alvos de toque >= 44 px 
+OK   500x800: blocos dentro da largura 
+OK   500x800: 4 indicadores renderizados
+OK   500x800: abas do celular visíveis somente abaixo de 768 px
+OK   500x800: sem erros no console 
+OK   600x900: sem overflow horizontal (0px)
+OK   600x900: One Screen sem rolagem da página (vOverflow 0px)
+OK   600x900: shell ocupa a viewport (900/900)
+OK   600x900: nenhum texto cortado 
+OK   600x900: alvos de toque >= 44 px 
+OK   600x900: blocos dentro da largura 
+OK   600x900: 4 indicadores renderizados
+OK   600x900: abas do celular visíveis somente abaixo de 768 px
+OK   600x900: sem erros no console 
+OK   700x900: sem overflow horizontal (0px)
+OK   700x900: One Screen sem rolagem da página (vOverflow 0px)
+OK   700x900: shell ocupa a viewport (900/900)
+OK   700x900: nenhum texto cortado 
+OK   700x900: alvos de toque >= 44 px 
+OK   700x900: blocos dentro da largura 
+OK   700x900: 4 indicadores renderizados
+OK   700x900: abas do celular visíveis somente abaixo de 768 px
+OK   700x900: sem erros no console 
+OK   768x1024: sem overflow horizontal (0px)
+OK   768x1024: One Screen sem rolagem da página (vOverflow 0px)
+OK   768x1024: shell ocupa a viewport (1024/1024)
+OK   768x1024: nenhum texto cortado 
+OK   768x1024: alvos de toque >= 44 px 
+OK   768x1024: blocos dentro da largura 
+OK   768x1024: 4 indicadores renderizados
+OK   768x1024: área da tabela com altura útil (477px)
+OK   768x1024: abas do celular visíveis somente abaixo de 768 px
+OK   768x1024: sem erros no console 
+OK   768x639: sem overflow horizontal (0px)
+OK   768x639: modo empilhado (rolagem permitida)
+OK   768x639: nenhum texto cortado 
+OK   768x639: alvos de toque >= 44 px 
+OK   768x639: blocos dentro da largura 
+OK   768x639: 4 indicadores renderizados
+OK   768x639: abas do celular visíveis somente abaixo de 768 px
+OK   768x639: sem erros no console 
+OK   820x1180: sem overflow horizontal (0px)
+OK   820x1180: One Screen sem rolagem da página (vOverflow 0px)
+OK   820x1180: shell ocupa a viewport (1180/1180)
+OK   820x1180: nenhum texto cortado 
+OK   820x1180: alvos de toque >= 44 px 
+OK   820x1180: blocos dentro da largura 
+OK   820x1180: 4 indicadores renderizados
+OK   820x1180: área da tabela com altura útil (632px)
+OK   820x1180: abas do celular visíveis somente abaixo de 768 px
+OK   820x1180: sem erros no console 
+OK   900x700: sem overflow horizontal (0px)
+OK   900x700: One Screen sem rolagem da página (vOverflow 0px)
+OK   900x700: shell ocupa a viewport (700/700)
+OK   900x700: nenhum texto cortado 
+OK   900x700: alvos de toque >= 44 px 
+OK   900x700: blocos dentro da largura 
+OK   900x700: 4 indicadores renderizados
+OK   900x700: área da tabela com altura útil (150px)
+OK   900x700: abas do celular visíveis somente abaixo de 768 px
+OK   900x700: sem erros no console 
+OK   1024x768: sem overflow horizontal (0px)
+OK   1024x768: One Screen sem rolagem da página (vOverflow 0px)
+OK   1024x768: shell ocupa a viewport (768/768)
+OK   1024x768: nenhum texto cortado 
+OK   1024x768: alvos de toque >= 44 px 
+OK   1024x768: blocos dentro da largura 
+OK   1024x768: 4 indicadores renderizados
+OK   1024x768: área da tabela com altura útil (400px)
+OK   1024x768: abas do celular visíveis somente abaixo de 768 px
+OK   1024x768: sem erros no console 
+OK   1024x600: sem overflow horizontal (0px)
+OK   1024x600: modo empilhado (rolagem permitida)
+OK   1024x600: nenhum texto cortado 
+OK   1024x600: alvos de toque >= 44 px 
+OK   1024x600: blocos dentro da largura 
+OK   1024x600: 4 indicadores renderizados
+OK   1024x600: abas do celular visíveis somente abaixo de 768 px
+OK   1024x600: sem erros no console 
+OK   1100x800: sem overflow horizontal (0px)
+OK   1100x800: One Screen sem rolagem da página (vOverflow 0px)
+OK   1100x800: shell ocupa a viewport (800/800)
+OK   1100x800: nenhum texto cortado 
+OK   1100x800: alvos de toque >= 44 px 
+OK   1100x800: blocos dentro da largura 
+OK   1100x800: 4 indicadores renderizados
+OK   1100x800: área da tabela com altura útil (431px)
+OK   1100x800: abas do celular visíveis somente abaixo de 768 px
+OK   1100x800: sem erros no console 
+OK   1200x700: sem overflow horizontal (0px)
+OK   1200x700: One Screen sem rolagem da página (vOverflow 0px)
+OK   1200x700: shell ocupa a viewport (700/700)
+OK   1200x700: nenhum texto cortado 
+OK   1200x700: alvos de toque >= 44 px 
+OK   1200x700: blocos dentro da largura 
+OK   1200x700: 4 indicadores renderizados
+OK   1200x700: área da tabela com altura útil (330px)
+OK   1200x700: abas do celular visíveis somente abaixo de 768 px
+OK   1200x700: sem erros no console 
+OK   1279x640: sem overflow horizontal (0px)
+OK   1279x640: One Screen sem rolagem da página (vOverflow 0px)
+OK   1279x640: shell ocupa a viewport (640/640)
+OK   1279x640: nenhum texto cortado 
+OK   1279x640: alvos de toque >= 44 px 
+OK   1279x640: blocos dentro da largura 
+OK   1279x640: 4 indicadores renderizados
+OK   1279x640: área da tabela com altura útil (270px)
+OK   1279x640: abas do celular visíveis somente abaixo de 768 px
+OK   1279x640: sem erros no console 
+OK   1280x640: sem overflow horizontal (0px)
+OK   1280x640: One Screen sem rolagem da página (vOverflow 0px)
+OK   1280x640: shell ocupa a viewport (640/640)
+OK   1280x640: nenhum texto cortado 
+OK   1280x640: alvos de toque >= 44 px 
+OK   1280x640: blocos dentro da largura 
+OK   1280x640: 4 indicadores renderizados
+OK   1280x640: área da tabela com altura útil (270px)
+OK   1280x640: abas do celular visíveis somente abaixo de 768 px
+OK   1280x640: painel de alertas visível ao lado da grade
+OK   1280x640: sem erros no console 
+OK   1280x800: sem overflow horizontal (0px)
+OK   1280x800: One Screen sem rolagem da página (vOverflow 0px)
+OK   1280x800: shell ocupa a viewport (800/800)
+OK   1280x800: nenhum texto cortado 
+OK   1280x800: alvos de toque >= 44 px 
+OK   1280x800: blocos dentro da largura 
+OK   1280x800: 4 indicadores renderizados
+OK   1280x800: área da tabela com altura útil (430px)
+OK   1280x800: abas do celular visíveis somente abaixo de 768 px
+OK   1280x800: painel de alertas visível ao lado da grade
+OK   1280x800: sem erros no console 
+OK   1280x600: sem overflow horizontal (0px)
+OK   1280x600: modo empilhado (rolagem permitida)
+OK   1280x600: nenhum texto cortado 
+OK   1280x600: alvos de toque >= 44 px 
+OK   1280x600: blocos dentro da largura 
+OK   1280x600: 4 indicadores renderizados
+OK   1280x600: abas do celular visíveis somente abaixo de 768 px
+OK   1280x600: sem erros no console 
+OK   1366x768: sem overflow horizontal (0px)
+OK   1366x768: One Screen sem rolagem da página (vOverflow 0px)
+OK   1366x768: shell ocupa a viewport (768/768)
+OK   1366x768: nenhum texto cortado 
+OK   1366x768: alvos de toque >= 44 px 
+OK   1366x768: blocos dentro da largura 
+OK   1366x768: 4 indicadores renderizados
+OK   1366x768: área da tabela com altura útil (397px)
+OK   1366x768: abas do celular visíveis somente abaixo de 768 px
+OK   1366x768: painel de alertas visível ao lado da grade
+OK   1366x768: sem erros no console 
+OK   1440x900: sem overflow horizontal (0px)
+OK   1440x900: One Screen sem rolagem da página (vOverflow 0px)
+OK   1440x900: shell ocupa a viewport (900/900)
+OK   1440x900: nenhum texto cortado 
+OK   1440x900: alvos de toque >= 44 px 
+OK   1440x900: blocos dentro da largura 
+OK   1440x900: 4 indicadores renderizados
+OK   1440x900: área da tabela com altura útil (528px)
+OK   1440x900: abas do celular visíveis somente abaixo de 768 px
+OK   1440x900: painel de alertas visível ao lado da grade
+OK   1440x900: sem erros no console 
+OK   1536x864: sem overflow horizontal (0px)
+OK   1536x864: One Screen sem rolagem da página (vOverflow 0px)
+OK   1536x864: shell ocupa a viewport (864/864)
+OK   1536x864: nenhum texto cortado 
+OK   1536x864: alvos de toque >= 44 px 
+OK   1536x864: blocos dentro da largura 
+OK   1536x864: 4 indicadores renderizados
+OK   1536x864: área da tabela com altura útil (491px)
+OK   1536x864: abas do celular visíveis somente abaixo de 768 px
+OK   1536x864: painel de alertas visível ao lado da grade
+OK   1536x864: sem erros no console 
+OK   1920x1080: sem overflow horizontal (0px)
+OK   1920x1080: One Screen sem rolagem da página (vOverflow 0px)
+OK   1920x1080: shell ocupa a viewport (1080/1080)
+OK   1920x1080: nenhum texto cortado 
+OK   1920x1080: alvos de toque >= 44 px 
+OK   1920x1080: blocos dentro da largura 
+OK   1920x1080: 4 indicadores renderizados
+OK   1920x1080: área da tabela com altura útil (705px)
+OK   1920x1080: abas do celular visíveis somente abaixo de 768 px
+OK   1920x1080: painel de alertas visível ao lado da grade
+OK   1920x1080: sem erros no console 
+OK   667x375: sem overflow horizontal (0px)
+OK   667x375: modo empilhado (rolagem permitida)
+OK   667x375: nenhum texto cortado 
+OK   667x375: alvos de toque >= 44 px 
+OK   667x375: blocos dentro da largura 
+OK   667x375: 4 indicadores renderizados
+OK   667x375: abas do celular visíveis somente abaixo de 768 px
+OK   667x375: sem erros no console 
+OK   844x390: sem overflow horizontal (0px)
+OK   844x390: modo empilhado (rolagem permitida)
+OK   844x390: nenhum texto cortado 
+OK   844x390: alvos de toque >= 44 px 
+OK   844x390: blocos dentro da largura 
+OK   844x390: 4 indicadores renderizados
+OK   844x390: abas do celular visíveis somente abaixo de 768 px
+OK   844x390: sem erros no console 
+OK   375x559: sem overflow horizontal (0px)
+OK   375x559: modo empilhado (rolagem permitida)
+OK   375x559: nenhum texto cortado 
+OK   375x559: alvos de toque >= 44 px 
+OK   375x559: blocos dentro da largura 
+OK   375x559: 4 indicadores renderizados
+OK   375x559: abas do celular visíveis somente abaixo de 768 px
+OK   375x559: sem erros no console 
+OK   375x560: sem overflow horizontal (0px)
+OK   375x560: One Screen sem rolagem da página (vOverflow 0px)
+OK   375x560: shell ocupa a viewport (560/560)
+OK   375x560: nenhum texto cortado 
+OK   375x560: alvos de toque >= 44 px 
+OK   375x560: blocos dentro da largura 
+OK   375x560: 4 indicadores renderizados
+OK   375x560: abas do celular visíveis somente abaixo de 768 px
+OK   375x560: sem erros no console 
+OK   360x600: sem overflow horizontal (0px)
+OK   360x600: One Screen sem rolagem da página (vOverflow 0px)
+OK   360x600: shell ocupa a viewport (600/600)
+OK   360x600: nenhum texto cortado 
+OK   360x600: alvos de toque >= 44 px 
+OK   360x600: blocos dentro da largura 
+OK   360x600: 4 indicadores renderizados
+OK   360x600: abas do celular visíveis somente abaixo de 768 px
+OK   360x600: sem erros no console 
+OK   desktop: relatório do indicador abre o diálogo
+OK   desktop: Esc fecha o diálogo e devolve o foco ao gatilho
+OK   desktop: ordenação por valor (aria-sort=ascending)
+OK   desktop: 4 linhas após ordenar
+OK   desktop: contagem de seleção (1 pedido selecionado)
+OK   desktop: cabeçalho indeterminado com seleção parcial
+OK   desktop: estado vazio por filtro
+OK   desktop: "Limpar filtros" restaura as linhas
+OK   desktop: diálogo de detalhes do pedido (Pedido #1036)
+OK   desktop: novo alerta entra no topo (24 -> 25)
+OK   desktop: botão pausar com aria-pressed
+OK   desktop: pausa interrompe novos alertas (25)
+OK   celular: seta direita troca para Dados
+OK   celular: foco acompanha a aba
+OK   celular: apenas a seção Dados aparece
+OK   celular: seta direita leva a Alertas
+OK   celular: seta esquerda volta a Indicadores
+OK   celular: trocar de aba não altera a altura da tela
+OK   estado erro: mensagem nos indicadores
+OK   estado erro: "Tentar novamente" carrega os indicadores
+OK   estado erro: mensagem na tabela
+OK   estado vazio: indicadores
+OK   estado vazio: tabela
+OK   estado vazio: alertas
+OK   estado carregando: skeleton dos indicadores
+OK   empilhado 1280x600: todas as seções visíveis
+
+Todos os testes passaram

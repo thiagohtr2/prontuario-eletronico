@@ -8,3 +8,8 @@ dist
 *.tsbuildinfo
 design-system-studio/auditoria/**/perfil/
 design-system-studio/auditoria/**/node_modules/
+design-system-studio/auditoria/fase3-sites/**/_tmp/
+design-system-studio/auditoria/fase3-sites/**/_dl/
+design-system-studio/auditoria/fase3-sites/**/*.tgz
+design-system-studio/auditoria/fase3-sites/**/*.map
+design-system-studio/auditoria/fase3-sites/**/_shots/

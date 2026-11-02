@@ -1,0 +1,473 @@
+/* ==========================================================================
+   Layout — shell One Screen e seus modos
+   Breakpoints em em (1em = fonte inicial do navegador, 16 px por padrão), para
+   que fonte ampliada do sistema reorganize o layout em vez de cortar conteúdo.
+     48em = 768 px · 80em = 1280 px · 40em = 640 px de altura · 35em = 560 px
+   Modos (o JS espelha as mesmas consultas para aplicar ARIA/visibilidade):
+     full     ≥ 1280 × ≥ 640   grade + coluna de alertas visíveis
+     compact  768–1279 × ≥ 640 alertas viram aba alternável com a grade
+     stacked  ≥ 768 × < 640    One Screen desativado: painéis empilhados, body rola
+     mobile   < 768            topbar + abas (rail vertical na horizontal);
+                               < 560 de altura: volta a rolar, blocos empilhados
+   ========================================================================== */
+
+/* ---------- Desktop "Painel operacional" (padrão = full) ---------- */
+.app {
+  display: grid;
+  height: 100vh;
+  height: 100dvh;
+  grid-template-columns: minmax(0, 1fr) var(--panel-w);
+  grid-template-rows: minmax(var(--header-h), auto) minmax(0, 1fr) minmax(var(--footer-h), auto);
+  grid-template-areas:
+    "header header"
+    "content panel"
+    "footer footer";
+  gap: 0;
+  padding: 0;
+}
+
+/* One Screen: o shell ocupa exatamente a viewport e o body não rola */
+@media (min-width: 48em) and (min-height: 40em), (max-width: 47.999em) and (min-height: 35em) {
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+.app-header {
+  grid-area: header;
+}
+
+.mobile-tabs {
+  display: none;
+}
+
+.content {
+  grid-area: content;
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+}
+
+.main {
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  /* indicadores (conteúdo) · status (encolhe com rolagem interna) · tabela (resto) */
+  grid-template-rows: auto minmax(0, auto) minmax(12rem, 1fr);
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  overflow: auto;
+  overscroll-behavior: contain;
+  container-type: inline-size;
+}
+
+.panel {
+  grid-area: panel;
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  container-type: inline-size;
+}
+
+.statusbar {
+  grid-area: footer;
+}
+
+/* ---------- Seções da área de conteúdo (desktop) ---------- */
+.section {
+  min-width: 0;
+  min-height: 0;
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.section-title {
+  font-size: var(--fs-13);
+  font-weight: var(--fw-cp-heading);
+  color: var(--text);
+}
+
+/* Os cartões de KPI já se identificam; o título fica para leitores de tela
+   (economiza uma linha na altura útil da tela única) */
+.section--kpis > .section-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.kpis__hl,
+.kpis__blocks {
+  display: contents;
+}
+
+.section--status {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.section--status > .section-head {
+  margin-bottom: var(--space-2);
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-3);
+  min-height: 0;
+}
+
+.section--orders {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.section--orders > .table-card {
+  min-height: 0;
+  max-height: 100%;
+}
+
+@media (min-width: 48em) {
+  /* Grade de KPIs: 4 → 2 → 1 colunas conforme a largura disponível */
+  @container (max-width: 43.999rem) {
+    .kpis {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @container (max-width: 23.999rem) {
+    .kpis {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+  @container (max-width: 41.999rem) {
+    .status-grid {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+}
+
+/* ---------- Desktop compactado (768–1279): alertas viram aba ---------- */
+@media (min-width: 48em) and (max-width: 79.999em) {
+  .app {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "header"
+      "content"
+      "footer";
+  }
+
+  .panel {
+    grid-area: content;
+    border-left: 0;
+    background: var(--bg-alt);
+  }
+
+  .panel > .alerts {
+    width: 100%;
+    max-width: 56rem;
+    margin-inline: auto;
+    border-inline: 1px solid var(--border);
+  }
+
+  .view-tabs {
+    display: flex;
+  }
+}
+
+/* ---------- Altura útil < 640 px: One Screen desativado, painéis empilhados ---------- */
+@media (min-width: 48em) and (max-height: 39.999em) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .view-tabs {
+    display: none !important;
+  }
+
+  .content {
+    display: block;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+  }
+
+  .section--orders > .table-card {
+    max-height: none;
+  }
+
+  .panel {
+    display: block;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .panel > .alerts {
+    max-width: none;
+    border-inline: 0;
+  }
+
+  .main .scroll-y,
+  .panel .scroll-y,
+  .main.scroll-y {
+    overflow: visible;
+    max-height: none;
+  }
+
+  .table-scroll {
+    overflow-y: visible;
+  }
+}
+
+/* ---------- Celular: One Screen com painel em abas ---------- */
+@media (max-width: 47.999em) {
+  .app {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto minmax(0, 1fr);
+    grid-template-areas:
+      "header"
+      "tabs"
+      "main";
+  }
+
+  .content,
+  .panel {
+    grid-area: main;
+  }
+
+  .panel {
+    border-left: 0;
+    background: var(--bg-alt);
+  }
+
+  .statusbar,
+  .view-tabs {
+    display: none;
+  }
+
+  .mobile-tabs {
+    grid-area: tabs;
+    display: flex;
+  }
+
+  .main {
+    grid-template-rows: minmax(0, 1fr);
+    padding: var(--space-3) max(var(--space-4), env(safe-area-inset-right))
+      calc(var(--space-3) + env(safe-area-inset-bottom)) max(var(--space-4), env(safe-area-inset-left));
+  }
+
+  /* Cada painel: destaque principal no topo + grade de blocos menores no restante */
+  .section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  .section > .section-title,
+  .section-head > .section-title {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+
+  /* Indicadores */
+  .kpis {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: var(--space-3);
+    min-height: 0;
+  }
+
+  .kpis__hl {
+    display: block;
+  }
+
+  .kpis__blocks {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-2);
+    align-content: start;
+    min-height: 0;
+    padding: 3px;
+    margin: -3px;
+  }
+
+  .kpis__blocks > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+
+  @container (max-width: 16.999rem) {
+    .kpis__blocks {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+
+  /* Operação */
+  .section--status {
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: var(--space-3);
+  }
+
+  .section--status > .section-head {
+    display: block;
+    margin: 0;
+  }
+
+  .status-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-2);
+    align-content: start;
+  }
+
+  @container (min-width: 30rem) {
+    .status-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .status-grid > :last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+    }
+  }
+
+  /* Pedidos */
+  .section--orders {
+    display: grid;
+    grid-template-rows: minmax(0, 1fr);
+  }
+
+  .section--orders > .table-card {
+    max-height: none;
+  }
+}
+
+/* Celular na horizontal: abas viram rail vertical à esquerda */
+@media (max-width: 47.999em) and (orientation: landscape) {
+  .app {
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-areas:
+      "header header"
+      "tabs main";
+  }
+}
+
+/* Celular com altura útil < 560 px: volta a rolar, blocos empilhados */
+@media (max-width: 47.999em) and (max-height: 34.999em) {
+  .app {
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    grid-template-rows: auto auto auto;
+  }
+
+  .mobile-tabs {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
+
+  .main,
+  .section,
+  .kpis,
+  .section--status,
+  .section--orders {
+    display: block;
+  }
+
+  .kpis__hl {
+    margin-bottom: var(--space-3);
+  }
+
+  .section--status > .section-head {
+    margin-bottom: var(--space-3);
+  }
+
+  .main .scroll-y,
+  .panel .scroll-y,
+  .main.scroll-y {
+    overflow: visible;
+    max-height: none;
+  }
+}
+
+@media (max-width: 47.999em) and (orientation: landscape) and (max-height: 34.999em) {
+  .app {
+    grid-template-rows: auto auto;
+  }
+
+  .mobile-tabs {
+    align-self: start;
+    max-height: 100vh;
+    max-height: 100dvh;
+  }
+}
+
+/* ---------- Monitores grandes (requisito do cliente) ---------- */
+@media (min-width: 90em) {
+  :root {
+    --panel-w: 21rem; /* 336 px */
+  }
+
+  .main {
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-5);
+  }
+
+  .kpis,
+  .status-grid {
+    gap: var(--space-4);
+  }
+}
+
+/* Monitores Full HD+ e painéis de parede: escala proporcional (texto, controles,
+   espaçamentos e larguras em rem) para leitura à distância e para ocupar a área
+   útil — a estrutura (grade + coluna de alertas + barra de status) não muda. */
+@media (min-width: 120em) and (min-height: 62.5em) {
+  html {
+    font-size: 125%;
+  }
+}
+
+@media (min-width: 160em) and (min-height: 81.25em) {
+  html {
+    font-size: 150%;
+  }
+}
+
+@media (min-width: 240em) and (min-height: 125em) {
+  html {
+    font-size: 225%;
+  }
+}

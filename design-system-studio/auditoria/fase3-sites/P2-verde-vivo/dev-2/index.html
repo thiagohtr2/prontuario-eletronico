@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Verde Vivo — Plantas para viver melhor</title>
+  <meta name="description" content="Verde Vivo: floricultura online e ateliê de plantas. Folhagens, suculentas, floríferas, ervas, vasos e kits com entrega cuidadosa.">
+  <meta name="theme-color" content="#2d6a4f">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232d6a4f'/%3E%3Cg transform='translate(6 6) scale(.83)' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11 20a10 10 0 0010-10 25.9 25.9 0 00-1.04-7.281 1 1 0 00-1.755-.325C15.833 5.5 13 5.5 9.8 6.1A7 7 0 0011 20'/%3E%3Cpath d='M2 21a5 5 0 012.911-4.544C7.613 15.212 8.351 15.24 11 13'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/landing.css">
+  <link rel="stylesheet" href="css/catalog.css">
+</head>
+<body>
+<script src="js/icons.js"></script>
+
+<a class="skip-link" href="#main" data-skip>Ir para o conteúdo principal</a>
+
+<!-- ============ Faixa de anúncio ============ -->
+<div class="announce" id="announce" data-app-root>
+  <p class="announce__text">
+    <span class="announce__msg">Frete grátis acima de R$ 199 · Parcele em até 10x</span>
+    <a href="#/catalogo" class="announce__link">Ver plantas</a>
+  </p>
+  <button type="button" class="announce__close" id="announce-close" aria-label="Dispensar aviso">
+    <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-x"/></svg>
+  </button>
+</div>
+
+<!-- ============ Cabeçalho (2 linhas no computador; barra + busca + faixa no celular) ============ -->
+<header class="site-header" id="site-header" data-app-root>
+  <div class="hdr-main">
+    <div class="hdr-main__inner">
+      <a class="brand" href="#/" id="brand" aria-label="Verde Vivo, página inicial">
+        <span class="brand__mark"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-leaf"/></svg></span>
+        <span class="brand__name">Verde Vivo</span>
+      </a>
+
+      <!-- Busca de produtos (plantas) — combobox -->
+      <div class="search" id="search" data-search>
+        <div class="search__bar">
+          <button type="button" class="search__back icon-btn" aria-label="Fechar busca" data-search-close>
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-chevron-left"/></svg>
+          </button>
+          <div class="search__field">
+            <span class="search__icon icon-circle" data-search-icon aria-hidden="true">
+              <svg class="icon icon--sm" focusable="false"><use href="#i-search"/></svg>
+            </span>
+            <input class="search__input" id="search-input" type="text" role="combobox" aria-label="Buscar plantas"
+                   aria-expanded="false" aria-controls="search-list" aria-autocomplete="list" aria-haspopup="listbox"
+                   autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" inputmode="search"
+                   placeholder="Buscar plantas…">
+            <kbd class="search__kbd" data-search-kbd aria-hidden="true">Ctrl K</kbd>
+          </div>
+        </div>
+        <div class="search__panel" id="search-panel" hidden>
+          <div class="search__list" id="search-list" role="listbox" aria-label="Sugestões de busca"></div>
+          <p class="search__status visually-hidden" id="search-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="hdr-actions">
+        <div class="popwrap hdr-addr">
+          <button type="button" class="addr-btn" id="btn-addr" aria-haspopup="dialog">
+            <span class="icon-circle"><svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-map-pin"/></svg></span>
+            <span class="addr-btn__text"><small>Entregar em</small><strong id="addr-label">Informe o CEP</strong></span>
+          </button>
+          <div class="popover popover--addr" id="pop-addr" role="dialog" aria-label="Endereço de entrega" hidden>
+            <form id="addr-form" novalidate>
+              <div class="field">
+                <label for="addr-cep">CEP de entrega</label>
+                <input class="input input--soft" id="addr-cep" name="cep" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9" aria-describedby="addr-msg" data-autofocus>
+                <p class="field__hint" id="addr-hint">Calculamos prazo e frete para o seu endereço.</p>
+              </div>
+              <p class="msg" id="addr-msg" role="status" hidden></p>
+              <button type="submit" class="btn btn--primary btn--pill btn--block" id="addr-submit">Atualizar</button>
+            </form>
+          </div>
+        </div>
+
+        <a class="icon-btn" id="btn-fav" href="#/catalogo?fav=1" aria-label="Favoritos">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-heart"/></svg>
+          <span class="badge" id="fav-count" hidden>0</span>
+        </a>
+
+        <div class="popwrap">
+          <button type="button" class="icon-btn" id="btn-account" aria-label="Conta de Marina Tavares" aria-haspopup="true">
+            <span class="avatar" aria-hidden="true">MT</span>
+          </button>
+          <div class="popover popover--account" id="pop-account" aria-label="Menu da conta" hidden>
+            <div class="account__who">
+              <span class="avatar avatar--lg" aria-hidden="true">MT</span>
+              <div class="account__id">
+                <strong>Marina Tavares</strong>
+                <span class="break-any">marina.tavares@exemplo.com.br</span>
+              </div>
+            </div>
+            <ul class="menu-list">
+              <li><button type="button" class="menu-item" data-demo="Meu perfil"><span class="icon-circle">
+                <svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-user-round"/></svg></span>Meu perfil</button></li>
+              <li><button type="button" class="menu-item" data-demo="Configurações"><span class="icon-circle">
+                <svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-settings"/></svg></span>Configurações</button></li>
+              <li><button type="button" class="menu-item" data-demo="Ajuda"><span class="icon-circle">
+                <svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-circle-help"/></svg></span>Ajuda</button></li>
+              <li><button type="button" class="menu-item" data-demo="Sair"><span class="icon-circle">
+                <svg class="icon icon--sm" aria-hidden="true" focusable="false"><use href="#i-log-out"/></svg></span>Sair</button></li>
+            </ul>
+          </div>
+        </div>
+
+        <button type="button" class="icon-btn" id="btn-cart" aria-label="Sacola, vazia" aria-haspopup="dialog">
+          <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-shopping-bag"/></svg>
+          <span class="badge" id="cart-count" hidden>0</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Linha 2 (computador): categorias + mega menu -->
+  <div class="hdr-nav" id="hdr-nav">
+    <div class="hdr-nav__inner">
+      <nav class="hdr-nav__nav" aria-label="Principal" id="main-nav">
+        <div class="hdr-nav__scroll" id="nav-scroll">
+          <ul class="nav-list" id="nav-list"></ul>
+        </div>
+      </nav>
+      <a class="btn btn--primary btn--sm hdr-cta" href="#/catalogo" id="hdr-cta">Escolher minha planta</a>
+    </div>
+    <div class="mega" id="mega" role="region" aria-label="Departamentos" hidden></div>
+    <div class="more-menu" id="more-menu" hidden></div>
+  </div>
+
+  <!-- Faixa de categorias (celular) -->
+  <div class="hdr-strip" id="hdr-strip">
+    <nav aria-label="Categorias">
+      <ul class="pills" id="pills"></ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ Conteúdo ============ -->
+<main id="main" tabindex="-1" data-app-root>
+
+  <!-- ===== Landing: Folha Viva — Plantas ===== -->
+  <div id="view-home" data-view="home">
+
+    <!-- Hero assimétrico -->
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero__grid">
+        <p class="eyebrow hero__eyebrow">Floricultura online e ateliê</p>
+        <h1 class="hero__title" id="hero-title" tabindex="-1">Plantas que <em>transformam</em> a casa num lugar de respirar</h1>
+        <p class="hero__text">Selecionamos, envasamos e enviamos cada planta com o cuidado de quem cultiva. Escolha pelo espaço, pela luz e pelo tempo que você tem: a gente ajuda a acertar.</p>
+        <a class="link-arrow hero__cta" href="#/catalogo">Escolher minha planta <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+        <figure class="hero__tall reveal">
+          <div class="art-frame" data-art="hero" data-parallax="0.07"></div>
+          <figcaption>Fig. 01 — Costela-de-adão em vaso de barro</figcaption>
+        </figure>
+        <figure class="hero__small reveal">
+          <div class="art-frame" data-art="leaves" data-parallax="-0.05"></div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Cartões escalonados (Cuidados) -->
+    <section class="care container" id="cuidados" aria-labelledby="care-title" data-section="cuidados">
+      <div class="care__head">
+        <p class="eyebrow">Cuidados</p>
+        <h2 id="care-title">Cuidar é um gesto simples</h2>
+        <p>Três hábitos bastam para uma planta feliz. Em cada ficha do catálogo indicamos luz, rega e porte, para você escolher sem medo.</p>
+      </div>
+      <ul class="care__grid">
+        <li class="care-card reveal">
+          <div class="art-frame art-frame--card" data-art="care-luz"></div>
+          <h3>Luz certa</h3>
+          <p>Perto da janela ou longe dela? Cada espécie tem a sua preferência, e nós avisamos qual é.</p>
+          <a class="link-arrow" href="#/catalogo?luz=difusa">Ver plantas de luz difusa <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+        </li>
+        <li class="care-card reveal">
+          <div class="art-frame art-frame--card" data-art="care-agua"></div>
+          <h3>Rega no ritmo</h3>
+          <p>Menos é mais. Ensinamos o toque no substrato para regar só quando a planta pede.</p>
+          <a class="link-arrow" href="#/catalogo?cuid=facil">Ver plantas fáceis <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+        </li>
+        <li class="care-card reveal">
+          <div class="art-frame art-frame--card" data-art="care-vaso"></div>
+          <h3>Vaso e substrato</h3>
+          <p>Drenagem, tamanho e mistura certos fazem toda a diferença nos primeiros meses.</p>
+          <a class="link-arrow" href="#/catalogo?cat=vasos">Ver vasos <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Citação recuada -->
+    <section class="quote container" aria-label="Depoimento">
+      <figure class="quote__fig">
+        <blockquote>
+          <p>Uma planta não pede muito: pede atenção, uma janela e paciência. O resto ela faz sozinha.</p>
+        </blockquote>
+        <figcaption>Helena Prado, paisagista e cliente do ateliê</figcaption>
+      </figure>
+    </section>
+
+    <!-- Texto + imagem sangrando (Ateliê) -->
+    <section class="bleed" id="atelie" aria-labelledby="atelie-title" data-section="atelie">
+      <div class="bleed__text">
+        <p class="eyebrow">Ateliê Verde Vivo</p>
+        <h2 id="atelie-title">Feito à mão, planta por planta</h2>
+        <p>No nosso ateliê em Belo Horizonte, cada vaso é preparado com substrato próprio e cada planta passa por quinze dias de adaptação antes de seguir viagem. Aos sábados fazemos oficinas de plantio.</p>
+        <ul class="bleed__points">
+          <li>Quinze dias de adaptação antes do envio</li>
+          <li>Embalagem que protege folhas e raízes</li>
+          <li>Garantia de 30 dias para a sua planta</li>
+        </ul>
+        <a class="link-arrow" href="#/catalogo?cat=kits">Conhecer os kits do ateliê <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-arrow-right"/></svg></a>
+      </div>
+      <figure class="bleed__media reveal">
+        <div class="art-frame art-frame--bleed" data-art="atelier" data-parallax="0.04"></div>
+      </figure>
+    </section>
+
+    <!-- Chamada final alinhada à esquerda -->
+    <section class="final container" aria-labelledby="final-title">
+      <h2 id="final-title">Qual planta combina com o seu espaço?</h2>
+      <p>Conte para nós onde ela vai morar e quanta luz entra por ali. Em poucos cliques você encontra a companhia certa.</p>
+      <div class="final__actions">
+        <a class="btn btn--primary" href="#/catalogo">Escolher minha planta</a>
+        <a class="link-arrow" href="mailto:ola@verdevivo.example">Falar com o ateliê</a>
+      </div>
+    </section>
+  </div>
+
+  <!-- ===== Catálogo (renderizado por js/catalog.js) ===== -->
+  <div id="view-catalog" data-view="catalog" hidden></div>
+</main>
+
+<!-- ============ Rodapé ============ -->
+<footer class="site-footer" data-app-root>
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <a class="brand brand--inv" href="#/" aria-label="Verde Vivo, página inicial">
+        <span class="brand__mark"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-leaf"/></svg></span>
+        <span class="brand__name">Verde Vivo</span>
+      </a>
+      <p>Floricultura online e ateliê de plantas. Entregamos com carinho em todo o Brasil.</p>
+      <form class="news" id="news-form" novalidate>
+        <label for="news-email">Receba dicas de cuidado por e-mail</label>
+        <div class="news__row">
+          <input class="input input--inv" id="news-email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="voce@exemplo.com.br" aria-describedby="news-msg">
+          <button type="submit" class="btn btn--inv" id="news-submit">Assinar</button>
+        </div>
+        <p class="msg" id="news-msg" role="status" hidden></p>
+      </form>
+    </div>
+    <nav class="footer__col" aria-label="Loja">
+      <h2>Loja</h2>
+      <ul>
+        <li><a href="#/catalogo">Todas as plantas</a></li>
+        <li><a href="#/catalogo?cat=folhagens">Folhagens</a></li>
+        <li><a href="#/catalogo?cat=vasos">Vasos e cachepôs</a></li>
+        <li><a href="#/catalogo?cat=kits">Kits</a></li>
+      </ul>
+    </nav>
+    <nav class="footer__col" aria-label="Cuidados">
+      <h2>Cuidados</h2>
+      <ul>
+        <li><a href="#/cuidados">Guia de luz e rega</a></li>
+        <li><a href="#/catalogo?pet=1">Plantas pet friendly</a></li>
+        <li><a href="#/catalogo?cuid=facil">Para iniciantes</a></li>
+      </ul>
+    </nav>
+    <nav class="footer__col" aria-label="Ateliê">
+      <h2>Ateliê</h2>
+      <ul>
+        <li><a href="#/atelie">Sobre o ateliê</a></li>
+        <li><a href="mailto:ola@verdevivo.example">ola@verdevivo.example</a></li>
+        <li><span class="footer__muted">Belo Horizonte, MG</span></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container footer__legal">
+    <p>© 2026 Verde Vivo. Loja fictícia criada para demonstração visual: nenhum pedido é processado.</p>
+  </div>
+</footer>
+
+<!-- ============ Menu inferior flutuante (celular) ============ -->
+<nav class="dock" id="dock" aria-label="Principal" data-app-root>
+  <ul class="dock__list">
+    <li><a class="dock__item" href="#/" data-dock="home"><span class="dock__ico"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-house"/></svg></span><span class="dock__label">Início</span></a></li>
+    <li><a class="dock__item" href="#/catalogo" data-dock="plantas"><span class="dock__ico"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-leaf"/></svg></span><span class="dock__label">Plantas</span></a></li>
+    <li><a class="dock__item" href="#/cuidados" data-dock="cuidados"><span class="dock__ico"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-droplets"/></svg></span><span class="dock__label">Cuidados</span></a></li>
+    <li><a class="dock__item" href="#/atelie" data-dock="atelie"><span class="dock__ico"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-scissors"/></svg></span><span class="dock__label">Ateliê</span></a></li>
+  </ul>
+</nav>
+
+<!-- ============ Overlays (fora das regiões inertes) ============ -->
+<div id="overlays">
+  <!-- Painel de filtros do catálogo (drawer à direita; bottom sheet no celular) -->
+  <div class="overlay overlay--drawer" id="ov-filters" hidden>
+    <div class="overlay__scrim" data-close></div>
+    <div class="overlay__panel" data-panel role="dialog" aria-modal="true" aria-labelledby="flt-title">
+      <div class="sheet-handle" data-handle aria-hidden="true"></div>
+      <header class="overlay__head">
+        <h2 id="flt-title">Filtros</h2>
+        <button type="button" class="icon-btn" data-close aria-label="Fechar filtros"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-x"/></svg></button>
+      </header>
+      <div class="overlay__body" id="flt-body"></div>
+      <footer class="overlay__foot">
+        <button type="button" class="btn btn--tonal btn--pill" id="flt-clear">Limpar</button>
+        <button type="button" class="btn btn--primary btn--pill" id="flt-apply">Aplicar filtros</button>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Minicarrinho -->
+  <div class="overlay overlay--drawer" id="ov-cart" hidden>
+    <div class="overlay__scrim" data-close></div>
+    <div class="overlay__panel" data-panel role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <div class="sheet-handle" data-handle aria-hidden="true"></div>
+      <header class="overlay__head">
+        <h2 id="cart-title">Sua sacola</h2>
+        <button type="button" class="icon-btn" data-close aria-label="Fechar sacola"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-x"/></svg></button>
+      </header>
+      <div class="overlay__body" id="cart-body"></div>
+      <footer class="overlay__foot overlay__foot--col" id="cart-foot"></footer>
+    </div>
+  </div>
+
+  <!-- Detalhe do produto -->
+  <div class="overlay overlay--modal" id="ov-product" hidden>
+    <div class="overlay__scrim" data-close></div>
+    <div class="overlay__panel" data-panel role="dialog" aria-modal="true" aria-labelledby="pm-title">
+      <div class="sheet-handle" data-handle aria-hidden="true"></div>
+      <button type="button" class="icon-btn overlay__x" data-close aria-label="Fechar detalhes do produto"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-x"/></svg></button>
+      <div class="overlay__body" id="pm-body"></div>
+    </div>
+  </div>
+</div>
+
+<div class="toasts" id="toasts" aria-live="polite" aria-atomic="false"></div>
+
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/art.js"></script>
+<script src="js/search.js"></script>
+<script src="js/shell.js"></script>
+<script src="js/catalog.js"></script>
+<script src="js/landing.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

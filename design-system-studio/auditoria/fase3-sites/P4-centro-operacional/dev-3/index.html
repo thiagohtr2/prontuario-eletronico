@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Centro Operacional</title>
+  <meta name="description" content="Painel operacional One Screen com dados operacionais e indicadores (dados fictícios).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..650&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <div class="app" id="app" data-view="indicadores">
+
+    <!-- Cabeçalho (52 px no desktop; 56 px + safe-area no celular) -->
+    <header class="topbar">
+      <div class="brand">
+        <h1 class="brand-title">Centro Operacional</h1>
+        <p class="brand-meta"><span data-conn-label>Conectado</span> · atualizado às <span data-last-update>--:--:--</span></p>
+      </div>
+
+      <!-- Abas do desktop em largura intermediária (768–1279 px): Grade | Alertas -->
+      <div class="tabs tabs-desktop" role="tablist" aria-label="Visões do painel">
+        <button type="button" role="tab" class="tab" data-go="indicadores" data-views="indicadores dados" aria-selected="true" aria-current="page">Grade</button>
+        <button type="button" role="tab" class="tab" data-go="alertas" data-views="alertas" aria-selected="false" tabindex="-1">Alertas</button>
+      </div>
+
+      <div class="topbar-actions">
+        <button type="button" class="btn" data-action="pause" aria-pressed="false">
+          <span data-icon="pause" class="btn-icon-svg" aria-hidden="true"></span>
+          <span class="btn-label" data-pause-label>Pausar atualizações</span>
+        </button>
+        <button type="button" class="btn btn-primary" data-action="refresh">
+          <span data-icon="refresh" class="btn-icon-svg" aria-hidden="true"></span>
+          <span class="btn-label">Atualizar</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Abas do celular (44 px). Na horizontal viram rail vertical à esquerda. -->
+    <div class="tabs tabs-mobile" role="tablist" aria-label="Painéis">
+      <button type="button" role="tab" class="tab" id="tab-m-indicadores" data-go="indicadores" data-views="indicadores" aria-selected="true" aria-current="page" aria-controls="sec-indicadores">Indicadores</button>
+      <button type="button" role="tab" class="tab" id="tab-m-dados" data-go="dados" data-views="dados" aria-selected="false" tabindex="-1" aria-controls="sec-dados">Dados</button>
+      <button type="button" role="tab" class="tab" id="tab-m-alertas" data-go="alertas" data-views="alertas" aria-selected="false" tabindex="-1" aria-controls="painel-alertas">Alertas</button>
+    </div>
+
+    <!-- Conteúdo: grade de indicadores + tabela de dados operacionais -->
+    <main class="content" id="conteudo" tabindex="-1">
+      <section class="sec-indicadores" id="sec-indicadores" data-view="indicadores" aria-labelledby="h-indicadores">
+        <h2 id="h-indicadores" class="sr-only">Indicadores</h2>
+        <div class="scroll-wrap kpi-wrap">
+          <div class="kpi-scroll" data-scroll>
+            <div class="kpi-grid" data-kpi-grid aria-busy="true"></div>
+            <div class="state" data-kpi-state role="status" hidden></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-dados" id="sec-dados" data-view="dados" aria-labelledby="h-dados">
+        <div class="summary" data-summary></div>
+        <div class="card table-card">
+          <div class="table-head">
+            <div class="table-title-wrap">
+              <h2 id="h-dados" class="card-title">Pedidos recentes</h2>
+              <p class="selection-count" data-sel-count></p>
+            </div>
+            <div class="table-tools">
+              <div class="field">
+                <label for="busca">Buscar cliente</label>
+                <input id="busca" class="input" type="search" autocomplete="off" placeholder="Nome do cliente">
+              </div>
+              <div class="field">
+                <label for="filtro-status">Status</label>
+                <select id="filtro-status" class="input">
+                  <option value="">Todos</option>
+                  <option value="concluido">Concluído</option>
+                  <option value="andamento">Em andamento</option>
+                  <option value="pendente">Pendente</option>
+                  <option value="cancelado">Cancelado</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="scroll-wrap">
+            <div class="table-scroll" data-scroll>
+              <table class="table" aria-busy="false">
+                <caption class="sr-only">Pedidos recentes com seleção, status, valor e data</caption>
+                <thead>
+                  <tr>
+                    <th scope="col" class="col-check">
+                      <label class="hit"><input type="checkbox" id="sel-all" aria-label="Selecionar todos os pedidos visíveis"></label>
+                    </th>
+                    <th scope="col" data-sort="cliente" aria-sort="none"><button type="button" class="th-btn"><span>Cliente</span><span class="sort-ind" aria-hidden="true"></span></button></th>
+                    <th scope="col">Status</th>
+                    <th scope="col" class="num" data-sort="valor" aria-sort="none"><button type="button" class="th-btn"><span>Valor</span><span class="sort-ind" aria-hidden="true"></span></button></th>
+                    <th scope="col" data-sort="data" aria-sort="descending"><button type="button" class="th-btn"><span>Data</span><span class="sort-ind" aria-hidden="true">↓</span></button></th>
+                    <th scope="col" class="col-actions"><span class="sr-only">Ações</span></th>
+                  </tr>
+                </thead>
+                <tbody data-rows></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="state" data-table-state role="status" hidden></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Painel de alertas: coluna de 304 px no desktop; aba no celular -->
+    <aside class="panel sec-alertas" id="painel-alertas" data-view="alertas" aria-labelledby="h-alertas">
+      <div class="panel-head">
+        <h2 id="h-alertas" class="card-title">Alertas</h2>
+        <span class="count-badge" data-alert-count aria-label="Quantidade de alertas">0</span>
+      </div>
+      <p class="alert-summary" data-alert-summary></p>
+      <div class="scroll-wrap">
+        <ol class="alert-list" data-alert-list data-scroll aria-live="polite" aria-label="Alertas, do mais recente para o mais antigo"></ol>
+        <div class="state" data-alert-state role="status" hidden></div>
+      </div>
+    </aside>
+
+    <!-- Barra de status fixa (32 px no desktop; oculta no celular, com status no cabeçalho) -->
+    <footer class="statusbar" aria-label="Status do sistema">
+      <span class="conn" data-conn><span class="dot" aria-hidden="true"></span><span data-conn-label>Conectado</span></span>
+      <span data-paused-wrap hidden>Atualizações pausadas</span>
+      <span class="grow"></span>
+      <span>Hora <time data-clock>--:--:--</time></span>
+      <span>Última atualização <time data-last-update>--:--:--</time></span>
+    </footer>
+  </div>
+
+  <!-- Relatório detalhado (KPI) e detalhes do pedido -->
+  <dialog id="detalhe" class="dialog" aria-labelledby="detalhe-titulo">
+    <div class="dialog-inner">
+      <div class="dialog-head">
+        <h2 id="detalhe-titulo" class="dialog-title">Detalhes</h2>
+        <button type="button" class="btn btn-ghost btn-icon" data-close aria-label="Fechar">
+          <span data-icon="close" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="dialog-body">
+        <dl class="dl" data-dialog-body></dl>
+      </div>
+      <div class="dialog-foot">
+        <button type="button" class="btn btn-primary" data-close>Fechar</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

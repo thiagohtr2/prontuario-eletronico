@@ -1,0 +1,170 @@
+{
+  "method": {
+    "base": "http://127.0.0.1:4300/",
+    "runs": 1,
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "cache": "contexto novo por medição (frio)",
+    "server": "python http.server (HTTP/1.0, sem compressão)"
+  },
+  "summary": {
+    "(home)": {
+      "n": 1,
+      "ttfb": 6.9,
+      "dcl": 93.7,
+      "loadEvent": 93.7,
+      "fcp": 252,
+      "lcp": 400,
+      "ready": 327.6,
+      "cls": 0,
+      "tbt": 0,
+      "longTasks": 2,
+      "longestTask": 65,
+      "lcpMin": 400,
+      "lcpMax": 400,
+      "readyMin": 328,
+      "readyMax": 328,
+      "requests": 10,
+      "jsKB": 874,
+      "jsFiles": 6,
+      "cssKB": 37,
+      "fontKB": 47,
+      "fontFiles": 1,
+      "domNodes": 451,
+      "heapMB": 5,
+      "lcpEl": "H1.",
+      "errors": [],
+      "loadavgMedian": 18.65
+    },
+    "modulos/desktop": {
+      "n": 1,
+      "ttfb": 4,
+      "dcl": 123.2,
+      "loadEvent": 123.5,
+      "fcp": 384,
+      "lcp": 916,
+      "ready": 852,
+      "cls": 0,
+      "tbt": 294,
+      "longTasks": 4,
+      "longestTask": 230,
+      "lcpMin": 916,
+      "lcpMax": 916,
+      "readyMin": 852,
+      "readyMax": 852,
+      "requests": 18,
+      "jsKB": 1198,
+      "jsFiles": 14,
+      "cssKB": 58,
+      "fontKB": 47,
+      "fontFiles": 1,
+      "domNodes": 5625,
+      "heapMB": 9.27,
+      "lcpEl": "P.ui-page-desc",
+      "errors": [],
+      "loadavgMedian": 18.65
+    }
+  },
+  "raw": [
+    {
+      "run": 1,
+      "route": "",
+      "loadavg": [
+        18.65,
+        9.77,
+        4.63
+      ],
+      "wallMs": 2043,
+      "errors": [],
+      "ttfb": 6.900000000372529,
+      "dcl": 93.70000000018626,
+      "loadEvent": 93.70000000018626,
+      "fcp": 252,
+      "lcp": 400,
+      "lcpEl": "H1.",
+      "ready": 327.60000000009313,
+      "cls": 0,
+      "longTasks": 2,
+      "longTaskTotal": 123,
+      "longestTask": 65,
+      "tbt": 0,
+      "requests": 10,
+      "bytes": {
+        "js": [
+          6,
+          894692
+        ],
+        "css": [
+          2,
+          37390
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 451,
+      "heapMB": 5.002239227294922,
+      "cdpNodes": 600,
+      "layoutCount": 4,
+      "recalcStyleCount": 5,
+      "scriptDuration": 0.114285,
+      "taskDuration": 0.350803
+    },
+    {
+      "run": 1,
+      "route": "modulos/desktop",
+      "loadavg": [
+        18.65,
+        9.77,
+        4.63
+      ],
+      "wallMs": 2221,
+      "errors": [],
+      "ttfb": 4,
+      "dcl": 123.1999999997206,
+      "loadEvent": 123.5,
+      "fcp": 384,
+      "lcp": 916,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 852,
+      "cls": 0,
+      "longTasks": 4,
+      "longTaskTotal": 602,
+      "longestTask": 230,
+      "tbt": 294,
+      "requests": 18,
+      "bytes": {
+        "js": [
+          14,
+          1227237
+        ],
+        "css": [
+          2,
+          59202
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 5625,
+      "heapMB": 9.272621154785156,
+      "cdpNodes": 6140,
+      "layoutCount": 6,
+      "recalcStyleCount": 8,
+      "scriptDuration": 0.393923,
+      "taskDuration": 0.843276
+    }
+  ]
+}
