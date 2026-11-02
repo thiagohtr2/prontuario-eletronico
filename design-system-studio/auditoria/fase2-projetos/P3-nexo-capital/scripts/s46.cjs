@@ -8,7 +8,7 @@ const { open, W } = require('./lib.cjs');
   console.log('URL', page.url());
   const d = page.getByRole('dialog');
   const root = (await d.count()) ? d.first() : page.locator('#conteudo');
-  console.log((await root.ariaSnapshot()).split('\n').filter(l => l.length < 300).slice(0, 120).join('\n'));
+  console.log((await root.ariaSnapshot()).split('\n').filter(l => l.length < 300).slice(110, 200).join('\n'));
   await page.screenshot({ path: W + '/scripts/tmp-45.png' });
   await ctx.close();
 })();

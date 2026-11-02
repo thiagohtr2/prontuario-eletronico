@@ -1,0 +1,21 @@
+const { open, W } = require('./lib.cjs');
+(async () => {
+  const { ctx, page } = await open();
+  page.setDefaultTimeout(6000);
+  await page.goto('http://127.0.0.1:4300/#/modulos/inspiracao', { waitUntil: 'networkidle' });
+  await page.getByRole('button', { name: /^Abrir o site ATLAS CAPITAL/ }).click();
+  await page.waitForTimeout(800);
+  const d = page.getByRole('dialog');
+  await page.screenshot({ path: W + '/capturas/25-inspiracao-atlas-capital-computador.png' });
+  await d.getByRole('button', { name: 'Celular' }).click(); await page.waitForTimeout(700);
+  await page.screenshot({ path: W + '/capturas/25b-inspiracao-atlas-capital-celular.png' });
+  await d.getByRole('button', { name: 'Computador' }).click(); await page.waitForTimeout(300);
+  await d.getByRole('button', { name: 'Aprovar conceito' }).click();
+  await page.waitForTimeout(1000);
+  console.log('status:', (await page.getByRole('status').allInnerTexts()).join(' / '));
+  const dd = page.getByRole('dialog');
+  console.log('dialogs after approve', await dd.count());
+  if (await dd.count()) console.log((await dd.first().ariaSnapshot()).split('\n').filter(l => /button|heading|paragraph|strong/.test(l) && l.length < 300).slice(-15).join('\n'));
+  await page.screenshot({ path: W + '/capturas/25c-inspiracao-atlas-capital-aprovado.png' });
+  await ctx.close();
+})();

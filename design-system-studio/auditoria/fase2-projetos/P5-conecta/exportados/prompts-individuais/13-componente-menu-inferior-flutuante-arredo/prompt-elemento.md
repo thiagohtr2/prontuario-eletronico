@@ -1,0 +1,111 @@
+# Prompt — Componente: Menu inferior flutuante arredondado (dock)
+
+> Gerado pelo Atelier UI para o projeto “Conecta” (Plataforma social mobile-first). Este prompt é autossuficiente: implemente somente este elemento, exatamente como descrito.
+
+## Componente: Menu inferior flutuante arredondado (dock) — Modern Material
+
+`id: layouts-mobile` · origem: módulo “componentes”
+
+Layouts mobile na família visual Modern Material. Tela de celular com topbar, conteúdo em cartões e navegação móvel (barra inferior, dock, topbar ou abas). Estilo: Superfícies tonais tingidas pela primária, botões em pílula (raio 20 px), campos preenchidos com indicador inferior, elevação tonal e indicadores ativos em pílula tonal.
+
+**Estrutura**
+- Topbar (título, ações) → conteúdo rolável → navegação fixa com 3–5 itens (ícone + rótulo) e FAB opcional.
+- Superfícies "container" = superfície misturada à primária (5–12%).
+- Botões com raio de 20 px; variante tonal (primária suave) como secundária; FAB com raio 16 px.
+- Campos preenchidos (fundo tonal, cantos superiores de 4 px, linha inferior de 1–2 px).
+- Item ativo em pílula tonal; títulos com peso 500; ícones preenchidos em círculos tonais.
+- Composição: Hierarquia por cor tonal e elevação; ações flutuantes (FAB) para a tarefa principal.
+- Acabamento: Elevação tonal, camadas de estado, cantos arredondados.
+
+**Propriedades**
+- Família visual: 16. Modern Material
+- Título da tela: Início
+- Navegação: Dock flutuante
+- Itens da navegação (um por linha): Início | Explorar | Salvos | Perfil
+- Item ativo: 1
+- Botão flutuante (FAB): não
+- Raio dos controles: 20 px
+- Raio dos contêineres: 12 px
+- Borda: sem borda
+- Sombra: elevação tonal (Material)
+- Superfície: superfície tingida pela primária (4–10%)
+- Ação principal: primária sólida (primary) com texto onPrimary
+- Fonte de títulos: Fonte do sistema 500
+- Fonte de texto: Fonte do sistema
+- Caixa de rótulos e botões: normal (sentence case)
+- Tamanho base: 14 px
+- Altura de controles: 40 px (mínimo 44 px de área de toque no celular)
+- Densidade: confortável
+- Ícones: lucide, traço 2 px, tratamento circle
+- Indicador de ativo: tonal
+
+**Cores**
+- Ação principal (fundo): #d6336c
+- Ação principal (texto): #ffffff
+- Superfície: #fef8fa
+- Texto: #1b1b1f
+- Texto secundário: #646466
+- Borda: #e6e6e6
+- Destaque: #be7b00
+- Foco: #d6336c
+
+**Medidas recomendadas (adaptáveis)**
+- alturaDeControle: 40 px
+- raio: 20 px / 12 px
+- paddingInterno: 15 px
+
+**Comportamento e estados**
+- Item ativo com indicador da família; FAB para a ação principal; barras escondem ao rolar (opcional).
+- Hover: fundo Primária — hover (primaryHover) na ação principal e Hover (hover) em itens neutros.
+- Focus-visible: anel de 3 px em Borda de foco (focus-visible) (focusRing) a 35%. Nunca remova o foco visível.
+- Active: Primária — active (primaryActive).
+- Disabled: fundo Disabled — fundo (disabled), texto Disabled — texto (disabledText), sem sombra, cursor not-allowed, aria-disabled.
+- Hover aplica camada de estado (8% da cor do conteúdo); active 12%.
+- Foco com anel de 3 px.
+- Movimento: Ênfase (250 ms, easing emphasized).
+
+**Responsividade deste item**
+- Respeita safe areas (env(safe-area-inset-bottom)); alvos de 48 px; funciona de 320 a 430 px e na horizontal.
+- No celular, use navigation bar inferior com pílula ativa e FAB acima dela, respeitando a safe area.
+- Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco ao gatilho.
+
+**Observações**
+- As cores vêm da paleta global aprovada; a família apenas transforma (gradientes, superfícies derivadas, opacidades).
+- Nome dado pelo usuário: “Menu inferior flutuante arredondado (dock)”.
+- Use os tokens da paleta global por padrão; só as exceções listadas fogem dela.
+
+## Identidade herdada
+- Paleta “Comunidade” (clara): primária #d6336c (texto #ffffff), secundária #7048e8, destaque #f59f00.
+- Fundo #ffffff, superfície #ffffff, texto #1b1b1f, texto secundário #727274, borda #e6e6e6.
+- Estados: hover #f4f4f4, active #ebebeb, selected #fae7ed/#bc2d5f, disabled #f0f0f0/#98989a, foco #d6336c.
+- Semânticos: success #117e39, warning #a85c04, error #dc2626, info #2563eb.
+- Tipografia: títulos Inter 650, textos Inter 400, base 15 px.
+- Geometria: cantos “medium”, borda 1 px, sombra “none”, superfícies “outlined”, densidade “comfortable”.
+
+## Responsividade obrigatória
+Valide em 320, 344, 360, 375, 390, 412, 430, 480, 600, 768, 820, 1024, 1280, 1440, 1920 px.
+- Nenhum overflow horizontal involuntário em nenhuma largura de 320 px a 1920 px (inclusive larguras intermediárias).
+- Nenhum texto cortado: use quebra de linha, `min-width: 0` em itens flex/grid e `overflow-wrap: anywhere` em conteúdos longos (e-mails, URLs, códigos).
+- Nenhuma sobreposição indevida entre elementos, inclusive com o teclado virtual aberto.
+- Alvos de toque com no mínimo 44 × 44 px no celular e espaçamento de pelo menos 8 px entre alvos adjacentes.
+- Campos de formulário com fonte de pelo menos 16 px no celular (evita zoom automático no iOS).
+- Imagens e mídias responsivas (`max-width: 100%`, `aspect-ratio` definido) sem distorção.
+- Grids adaptáveis: reduza colunas progressivamente; nunca comprima cartões abaixo de uma largura legível.
+- Suporte a zoom de até 200% e a fonte ampliada do sistema sem perda de conteúdo ou funcionalidade.
+- Respeite as safe areas (`env(safe-area-inset-*)`) em barras fixas, docks e menus inferiores.
+- Funcione na orientação horizontal do celular: barras fixas não podem ocupar mais de 25% da altura.
+- Use `100dvh` (com fallback) em vez de `100vh` para alturas de tela cheia.
+- Menus acessíveis por mouse, toque e teclado (Tab, Enter, Espaço, Esc), com foco visível.
+- Respeite `prefers-reduced-motion` reduzindo animações.
+
+## Regras de implementação
+- Não modifique escolhas aprovadas nesta especificação sem solicitação explícita do usuário.
+- Preserve a identidade global: todos os componentes usam os tokens definidos; exceções só onde estiverem listadas.
+- Não adicione decoração por conta própria (sombras, gradientes, vidro, animações, cantos arredondados) além do especificado.
+- Respeite a geometria escolhida: se a sidebar é integral, ela vai do topo à base; se é flutuante, tem afastamento das bordas. Não converta uma na outra.
+- Evite overflow e colisões; valide em todas as larguras de referência.
+- Mantenha consistência de espaçamentos (escala de 4 px), tipografia e estados de interação (hover, focus-visible, active, disabled, selected).
+- Implemente estados de carregamento, vazio e erro para listas, tabelas e formulários.
+- Use componentes reutilizáveis e tokens centralizados (variáveis CSS ou tema); nada de cores fixas espalhadas pelo código.
+- Garanta acessibilidade: HTML semântico, labels, contraste WCAG AA, navegação por teclado e leitores de tela.
+- Teste o resultado (visual e funcional) em celular, tablet e desktop antes de concluir.
