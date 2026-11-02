@@ -5,8 +5,8 @@ const { open, dump, controls, C, BASE } = require('./lib.cjs');
   await page.locator('main').getByText('Sidebars (36)').click(); await page.waitForTimeout(1000);
   await page.locator('main button').filter({ hasText: /^Compactas\s*6$/ }).click(); await page.waitForTimeout(800);
   // the select button within the first card
-  const btn = page.locator('main button').filter({ has: page.locator('strong', { hasText: /^Selecionar$/ }) }).first();
-  console.log('btn count', await page.locator('main button').filter({ has: page.locator('strong', { hasText: /^Selecionar$/ }) }).count());
+  const btn = page.locator('main .nvs-card__pill').first(); console.log(await btn.evaluate(e=>{let p=e.parentElement; return p.tagName+' '+p.getAttribute('role')+' '+p.getAttribute('aria-pressed')+' '+(p.getAttribute('aria-label')||'');}));
+  
   await btn.scrollIntoViewIfNeeded(); await page.evaluate(() => scrollBy(0, -380)); await page.waitForTimeout(400);
   await page.screenshot({ path: C + '35-sidebar-trilho.png' });
   await btn.click(); await page.waitForTimeout(900);

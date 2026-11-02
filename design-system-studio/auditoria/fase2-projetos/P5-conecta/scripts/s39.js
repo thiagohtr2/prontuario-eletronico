@@ -1,0 +1,24 @@
+const { run, TMP } = require('./lib');
+const fs = require('fs');
+const path = require('path');
+run(async ({ page, shot, CAP }) => {
+  await page.goto('http://127.0.0.1:4300/#/guiado/identidade', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(600);
+  const prev = page.getByRole('complementary', { name: 'Prévia da identidade' });
+  const btn = prev.getByRole('button', { name: 'CSS dos tokens' });
+  await btn.scrollIntoViewIfNeeded();
+  console.log('btn bbox', await btn.boundingBox());
+  let dl = null;
+  page.on('download', (d) => { dl = d; });
+  await btn.click();
+  await page.waitForTimeout(1500);
+  await shot('s39-css-click');
+  console.log('download?', dl ? dl.suggestedFilename() : 'nenhum');
+  if (dl) await dl.saveAs(path.join(TMP, 'dl2', dl.suggestedFilename()));
+  const dlg = page.getByRole('dialog');
+  console.log('dialogs', await dlg.count());
+  if (await dlg.count()) console.log((await dlg.first().ariaSnapshot()).slice(0, 1500));
+  const st = page.getByRole('status');
+  for (const s of await st.all()) console.log('status:', (await s.innerText()).trim());
+  console.log('selecionada:', await page.getByRole('button', { pressed: true }).filter({ hasText: 'Sociais' }).allInnerTexts());
+});

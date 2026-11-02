@@ -1,0 +1,84 @@
+{
+  "schema": "atelier-ui/navigation-item",
+  "version": 1,
+  "exportedAt": "2026-11-02T18:38:03.864Z",
+  "kind": "header",
+  "id": "trilha-contexto",
+  "name": "Trilha de Contexto",
+  "description": "Mostra “onde você está” (Projetos / Site / Página) direto no header. Ótimo para sistemas com muitos níveis.",
+  "composition": {
+    "variant": "A",
+    "name": "Trilha na barra principal",
+    "description": "Logo seguido da trilha “Projetos / Site institucional / Página inicial”; cada nível é clicável e o último fica em negrito. Notificações e avatar à direita.",
+    "layout": "left"
+  },
+  "properties": {
+    "floating": false,
+    "sticky": true
+  },
+  "filters": [
+    "saas",
+    "minimalistas"
+  ],
+  "spec": {
+    "summary": "Header de aplicação de 56 px com breadcrumbs (na barra ou numa faixa própria), notificações e perfil.",
+    "structure": [
+      "Barra principal com 56 px de altura, largura total da janela (full width), padding horizontal de 24–32 px.",
+      "Superfície: fundo navBg com borda inferior de 1 px (token border).",
+      "Logo: símbolo quadrado de 28 px na cor primária + nome da marca em peso 700 (marca fictícia “Tucano” na prévia — substitua pela marca real).",
+      "Navegação principal com 3 itens (Projetos, Equipe, Ajustes): links de texto simples; o ativo usa a cor de texto principal e peso 600, os demais textMuted; espaço entre itens de 20–24 px.",
+      "Ações: sino de notificações com contador e popover; avatar circular de 32 px com menu de perfil.",
+      "Breadcrumbs “Projetos / Site institucional / Página inicial” dentro da barra, logo após o logo; separador “/” em textMuted e o último nível em peso 600 (aria-current=\"page\").",
+      "Disposição conforme a composição escolhida (ver “composicao”): A “Trilha na barra principal” = logo e navegação juntos à esquerda; busca e ações empurradas para a direita; B “Menu + trilha embaixo” = logo e navegação juntos à esquerda; busca e ações empurradas para a direita."
+    ],
+    "behavior": [
+      "Item ativo: links de texto simples; o ativo usa a cor de texto principal e peso 600, os demais textMuted. Hover com transição de 120 ms; foco visível com anel de 2 px na cor focusRing.",
+      "Fixo no topo: position: sticky; top: 0; z-index: 40. Após 8 px de rolagem ganha sombra suave.",
+      "Notificações: o sino abre um popover de 320 px com as últimas notificações, marcador de não lidas e link “Ver todas”.",
+      "Perfil: o avatar abre um menu com nome e e-mail, “Meu perfil”, “Configurações”, “Ajuda” e “Sair”, alinhado à borda direita."
+    ],
+    "responsive": [
+      "Desktop largo (≥ 1280 px): composição completa, como na prévia.",
+      "De 1024 a 1279 px: o espaço entre itens cai para 16 px.",
+      "De 768 a 1023 px: a navegação recolhe para o botão ☰; continuam visíveis o logo e a ação principal.",
+      "Abaixo de 768 px: barra única de 56 px com logo, avatar, botão de menu ☰ (44 × 44 px). Vão para o painel do menu: os 3 itens de navegação.",
+      "Painel do menu: desliza logo abaixo do header em largura total, altura máxima calc(100dvh − 56 px) com rolagem interna; trava a rolagem do corpo e fecha com ✕, Esc, toque fora ou ao escolher um item.",
+      "Popovers (perfil, notificações, menus) são reposicionados para caber na viewport: largura máxima calc(100vw − 16 px), alinhados à borda mais próxima; nenhum overflow horizontal de 320 a 1920 px.",
+      "No celular os breadcrumbs viram um único link “‹ Site institucional” para o nível anterior.",
+      "Continua fixo no celular; recomendado esconder ao rolar para baixo e reaparecer ao rolar para cima para ganhar área útil."
+    ],
+    "measurements": {
+      "altura (desktop)": "56 px",
+      "altura (celular)": "56 px",
+      "padding horizontal": "24–32 px (16 px no celular)",
+      "espaço entre itens": "20–24 px",
+      "logo": "≈ 28 px de altura",
+      "área de toque mínima": "44 × 44 px no celular"
+    },
+    "notes": [
+      "Todas as cores vêm dos tokens da identidade global (navBg, navText, navActive, primary, border…); nada de cores fixas.",
+      "Use <header> com <nav aria-label=\"Principal\"> e lista de links; o item da página atual recebe aria-current=\"page\"."
+    ]
+  },
+  "design": {
+    "brand": "Tucano",
+    "logo": "mark",
+    "height": 56,
+    "surface": "bordered",
+    "shape": "full",
+    "navStyle": "plain",
+    "nav": [],
+    "density": "normal",
+    "actions": [
+      "notif",
+      "profile"
+    ],
+    "breadcrumbs": [
+      "Projetos",
+      "Site institucional",
+      "Página inicial"
+    ],
+    "breadcrumbStyle": "inline",
+    "context": "app"
+  }
+}

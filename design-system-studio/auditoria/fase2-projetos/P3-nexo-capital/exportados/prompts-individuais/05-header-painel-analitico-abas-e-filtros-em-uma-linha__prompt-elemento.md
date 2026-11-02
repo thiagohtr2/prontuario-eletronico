@@ -1,0 +1,86 @@
+# Prompt — Header: Painel Analítico
+
+> Gerado pelo Atelier UI para o projeto “Nexo Capital” (Dashboard). Este prompt é autossuficiente: implemente somente este elemento, exatamente como descrito.
+
+## Header: Painel Analítico — Abas e filtros em uma linha
+
+`id: painel-analitico` · origem: módulo “navegacao”
+
+Header de dashboard com abas encaixadas, seletor de período (menu suspenso), exportação e perfil.
+
+**Estrutura**
+- Barra principal com 56 px de altura, largura total da janela (full width), padding horizontal de 24–32 px.
+- Superfície: fundo navBg com borda inferior de 1 px (token border).
+- Logo: símbolo quadrado de 28 px na cor primária + nome da marca em peso 700 (marca fictícia “Seriema” na prévia — substitua pela marca real).
+- Navegação principal com 4 itens (Visão geral, Aquisição, Retenção, Receita): abas: o item ativo tem o fundo da página e bordas laterais/superior, “encaixado” na área de conteúdo; espaço entre itens de 20–24 px.
+- Ações: seletor de período “Últimos 30 dias ▾”; botão “Exportar”; avatar circular de 32 px com menu de perfil.
+- Disposição conforme a composição escolhida (ver “composicao”): A “Abas e filtros em uma linha” = logo e navegação juntos à esquerda; busca e ações empurradas para a direita; B “Filtros em cima, abas embaixo” = duas faixas: logo, busca e ações na primeira; navegação alinhada à esquerda na segunda.
+
+**Propriedades**
+- flutuante: não
+- fixo: sim
+- composicao: Abas e filtros em uma linha: Logo + abas encaixadas à esquerda; seletor de período, “Exportar” e avatar à direita.
+
+**Medidas recomendadas (adaptáveis)**
+- altura (desktop): 56 px
+- altura (celular): 56 px
+- padding horizontal: 24–32 px (16 px no celular)
+- espaço entre itens: 20–24 px
+- logo: ≈ 28 px de altura
+- área de toque mínima: 44 × 44 px no celular
+
+**Comportamento e estados**
+- Item ativo: abas: o item ativo tem o fundo da página e bordas laterais/superior, “encaixado” na área de conteúdo. Hover com transição de 120 ms; foco visível com anel de 2 px na cor focusRing.
+- Fixo no topo: position: sticky; top: 0; z-index: 40. Após 8 px de rolagem ganha sombra suave.
+- Perfil: o avatar abre um menu com nome e e-mail, “Meu perfil”, “Configurações”, “Ajuda” e “Sair”, alinhado à borda direita.
+
+**Responsividade deste item**
+- Desktop largo (≥ 1280 px): composição completa, como na prévia.
+- De 1024 a 1279 px: o espaço entre itens cai para 16 px.
+- De 768 a 1023 px: a navegação recolhe para o botão ☰; continuam visíveis o logo e a ação principal.
+- Abaixo de 768 px: barra única de 56 px com logo, avatar, botão de menu ☰ (44 × 44 px). Vão para o painel do menu: os 4 itens de navegação.
+- Painel do menu: desliza logo abaixo do header em largura total, altura máxima calc(100dvh − 56 px) com rolagem interna; trava a rolagem do corpo e fecha com ✕, Esc, toque fora ou ao escolher um item.
+- Popovers (perfil, notificações, menus) são reposicionados para caber na viewport: largura máxima calc(100vw − 16 px), alinhados à borda mais próxima; nenhum overflow horizontal de 320 a 1920 px.
+- Continua fixo no celular; recomendado esconder ao rolar para baixo e reaparecer ao rolar para cima para ganhar área útil.
+- Headers: compacte a altura no celular e use a navegação móvel escolhida no layout mobile; o logo e a ação principal continuam visíveis.
+- Dropdowns e popovers: reposicione automaticamente para não sair da viewport; no celular podem virar bottom sheet.
+
+**Observações**
+- Todas as cores vêm dos tokens da identidade global (navBg, navText, navActive, primary, border…); nada de cores fixas.
+- Use <header> com <nav aria-label="Principal"> e lista de links; o item da página atual recebe aria-current="page".
+
+## Identidade herdada
+- Paleta “Azul Institucional” (clara): primária #1d4ed8 (texto #ffffff), secundária #1e3a8a, destaque #0ea5e9.
+- Fundo #f8fafc, superfície #ffffff, texto #0f172a, texto secundário #686d7a, borda #e6e6e6.
+- Estados: hover #f4f4f4, active #ebebeb, selected #e4eafa/#1d4ed8, disabled #f0f0f0/#93979f, foco #1d4ed8.
+- Semânticos: success #117e39, warning #a85c04, error #dc2626, info #2563eb.
+- Tipografia: títulos Inter 650, textos Inter 400, base 15 px.
+- Geometria: cantos “medium”, borda 1 px, sombra “none”, superfícies “outlined”, densidade “comfortable”.
+
+## Responsividade obrigatória
+Valide em 320, 344, 360, 375, 390, 412, 430, 480, 600, 768, 820, 1024, 1280, 1440, 1920 px.
+- Nenhum overflow horizontal involuntário em nenhuma largura de 320 px a 1920 px (inclusive larguras intermediárias).
+- Nenhum texto cortado: use quebra de linha, `min-width: 0` em itens flex/grid e `overflow-wrap: anywhere` em conteúdos longos (e-mails, URLs, códigos).
+- Nenhuma sobreposição indevida entre elementos, inclusive com o teclado virtual aberto.
+- Alvos de toque com no mínimo 44 × 44 px no celular e espaçamento de pelo menos 8 px entre alvos adjacentes.
+- Campos de formulário com fonte de pelo menos 16 px no celular (evita zoom automático no iOS).
+- Imagens e mídias responsivas (`max-width: 100%`, `aspect-ratio` definido) sem distorção.
+- Grids adaptáveis: reduza colunas progressivamente; nunca comprima cartões abaixo de uma largura legível.
+- Suporte a zoom de até 200% e a fonte ampliada do sistema sem perda de conteúdo ou funcionalidade.
+- Respeite as safe areas (`env(safe-area-inset-*)`) em barras fixas, docks e menus inferiores.
+- Funcione na orientação horizontal do celular: barras fixas não podem ocupar mais de 25% da altura.
+- Use `100dvh` (com fallback) em vez de `100vh` para alturas de tela cheia.
+- Menus acessíveis por mouse, toque e teclado (Tab, Enter, Espaço, Esc), com foco visível.
+- Respeite `prefers-reduced-motion` reduzindo animações.
+
+## Regras de implementação
+- Não modifique escolhas aprovadas nesta especificação sem solicitação explícita do usuário.
+- Preserve a identidade global: todos os componentes usam os tokens definidos; exceções só onde estiverem listadas.
+- Não adicione decoração por conta própria (sombras, gradientes, vidro, animações, cantos arredondados) além do especificado.
+- Respeite a geometria escolhida: se a sidebar é integral, ela vai do topo à base; se é flutuante, tem afastamento das bordas. Não converta uma na outra.
+- Evite overflow e colisões; valide em todas as larguras de referência.
+- Mantenha consistência de espaçamentos (escala de 4 px), tipografia e estados de interação (hover, focus-visible, active, disabled, selected).
+- Implemente estados de carregamento, vazio e erro para listas, tabelas e formulários.
+- Use componentes reutilizáveis e tokens centralizados (variáveis CSS ou tema); nada de cores fixas espalhadas pelo código.
+- Garanta acessibilidade: HTML semântico, labels, contraste WCAG AA, navegação por teclado e leitores de tela.
+- Teste o resultado (visual e funcional) em celular, tablet e desktop antes de concluir.

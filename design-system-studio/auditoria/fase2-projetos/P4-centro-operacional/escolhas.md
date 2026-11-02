@@ -1,0 +1,30 @@
+# P4 — Centro Operacional · Escolhas feitas no Design System Studio
+
+Studio: Atelier UI · Design System Studio (http://127.0.0.1:4300/), modo **Guiado**, navegador limpo (localStorage vazio), viewport 1440×900. Data: 02/11/2026.
+
+Legenda: **Estruturada** = opção clicável do Studio. **Texto livre** = digitado num campo de texto (entra no Master Prompt, mas não é uma opção do Studio).
+
+## Características do cliente
+
+| Característica | Opção escolhida no Studio (nome exato + módulo) | Observação (ou LACUNA) |
+| --- | --- | --- |
+| Interface de uma única tela principal | **Estruturada:** Tipo de projeto **"One Screen"** (Etapa 1 · Objetivo do projeto) + Fluxo de entrada **"Aplicação diretamente"** (Etapa 2 · Landing, login e cadastro, via botão "Usar esta sugestão") + Layout desktop **"Painel operacional"** da família **"One Screen"** (Etapa 3 · Arquitetura do computador) | Atendida. Sem landing, login nem cadastro. O Master Prompt registra "Experiência One Screen: a interface principal cabe em uma viewport". Capturas 02, 03, 04, 07, 08. |
+| Dados operacionais | **Estruturada:** Componente **"Tabelas" · família "13. Compact Pro"**, com o nome "Dados operacionais" no projeto (Etapa 9 · Componentes). **Texto livre:** funcionalidade "Dados operacionais" (Etapa 1 · Módulos e funcionalidades previstas) | Atendida em parte. O Studio não tem uma opção chamada "dados operacionais". A tabela traz o conteúdo de exemplo do Studio ("Pedidos recentes", colunas Cliente/Status/Valor/Data), e ele vai para o Master Prompt como se fosse escolha do usuário. O layout "Painel operacional" descreve uma "grade de status (filas, SLA, equipes)". Capturas 34, 35, 36. |
+| Indicadores | **Estruturada:** Componente **"KPIs e stat cards" · família "13. Compact Pro"**, com o nome "Indicadores" no projeto (Etapa 9 · Componentes). **Texto livre:** funcionalidade "Indicadores" (Etapa 1) | Atendida. Usei "Indicadores", que é a palavra do cliente, e não a sugestão do Studio "Indicadores em tempo real", porque ela acrescenta "tempo real", que o cliente não pediu. Os valores de exemplo ("Receita mensal R$ 48,2 mil") vão para o prompt como propriedades. Capturas 31, 33, 36. |
+| Conteúdo organizado em colunas | **Estruturada (indireta):** Layout desktop **"Painel operacional"**, com grid `minmax(0,1fr) 304px` (grade central + coluna de alertas) e grade de blocos em colunas (Etapa 3) | Atendida em parte. O Studio não tem uma opção "organizar em colunas". As colunas vêm da estrutura fixa do layout escolhido. A família "Múltiplas colunas e aplicações" não tem modelos One Screen. Também ficou no texto livre da Descrição. Capturas 08, 38, 57. |
+| Sem rolagem vertical principal quando couber | **Estruturada:** Tipo **"One Screen"** + layout desktop **"Painel operacional"** (família One Screen) + layout mobile **"One Screen com painel em abas"** (família "One Screen móvel") | Atendida. O "quando couber" aparece no texto fixo do Studio: "Altura útil menor que ≈640 px … o modo One Screen é desativado — o body volta a rolar" (no celular, ≈560 px). Não existe controle para ajustar esse limite. Capturas 09, 38. |
+| Adaptação para monitores grandes | **LACUNA** (não há opção estruturada). Paliativo em **texto livre:** observação no item "Layout desktop" (Etapa 10 · Master Prompt → aba "Itens" → "Adicionar observação ou exceção"): "Requisito do cliente: adaptação para monitores grandes." | O Studio só traz texto genérico e não configurável: "1280 × 800 ou maior: grade + alertas visíveis", o breakpoint "xl: Monitores grandes (1440 px ou mais)" e a largura de validação de 1920 px. Não há regra para 2560 px, 4K ou TV. O modelo "Kiosk ou TV" é outro layout, não uma adaptação do escolhido, e só se pode escolher um layout desktop. Na busca (Ctrl+K), "monitor", "telas grandes" e "TV" não encontram nada. Capturas 38, 44, 47, 48. |
+| Comportamento móvel definido explicitamente | **Estruturada:** Layout mobile **"One Screen com painel em abas"** (Etapa 4 · Arquitetura do celular, grupo "One Screen móvel") | Atendida. O Studio trata o celular como uma decisão separada ("o menu lateral do computador não vira automaticamente um drawer"). O cliente não indicou qual padrão móvel queria. Escolhi abas porque cada coluna ou bloco do desktop pode virar uma aba sem rolagem. Os outros candidatos eram "One Screen com Bottom Navigation", "One Screen com Sidebar Rail" e "One Screen Kiosk". Capturas 11 a 14, 19. |
+
+## Outros campos e etapas (não pedidos pelo cliente)
+
+| Item | Valor no Studio | Observação |
+| --- | --- | --- |
+| Nome do projeto | "Centro Operacional" (Etapa 1) | Conforme pedido. |
+| Tecnologia desejada | "HTML + CSS + JavaScript" (Etapa 1, campo "Tecnologia" + botão rápido de mesmo nome) | Conforme a restrição do cenário. O Studio não tem campo para "sem etapa de build", e o Master Prompt não fala em build. |
+| Objetivo / Descrição | Texto livre com as características do cliente | Público-alvo e Finalidade ficaram em branco porque o cliente não os informou. |
+| Identidade visual | Paleta **"Neutro Essencial"** (Minimalistas · clara), tipografia **Inter + Inter** (15 px; títulos "Forte"/650), cantos **"Médios (8 px)"**, superfície **"Contornada"**, **"Sem sombra"**, borda **1 px**, densidade **"Confortável"**, ícones **"Contorno"** | São os padrões do Studio, mantidos de propósito porque o cliente não falou de cores nem de estilo. Capturas 24, 25. |
+| Headers e sidebars (Etapa 8, opcional) | Nenhum selecionado (o Master Prompt diz "Nenhum modelo específico de header ou sidebar foi escolhido") | Não foi escolhido de propósito: o cliente não pediu e o layout já define o header (≈52 px). |
+| Família visual dos componentes | "13. Compact Pro" ("Denso e eficiente … mais informação em menos espaço") | É uma inferência minha, para favorecer o "caber em uma tela". O cliente não pediu um estilo. |
+| Templates / Inspiração | Nenhum | Nenhum template de sistema se encaixa: o "Dashboard administrativo" tem menu lateral. |
+| Contradições | 0 apontadas pelo Studio | Veja no relatório as incoerências que o Studio não apontou. |

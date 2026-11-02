@@ -1,0 +1,174 @@
+{
+  "kind": "atelier-ui/backup",
+  "exportedAt": "2026-11-02T18:36:51.187Z",
+  "project": {
+    "schema": "atelier-ui/project",
+    "version": 1,
+    "id": "prj_91c4b4dc",
+    "createdAt": "2026-11-02T18:19:32.748Z",
+    "updatedAt": "2026-11-02T18:34:04.767Z",
+    "meta": {
+      "name": "Conecta",
+      "objective": "Plataforma social mobile-first para conectar pessoas por meio de stories, conteúdos e perfis",
+      "description": "Plataforma social mobile-first com header superior com stories, menu inferior flutuante arredondado, drawer lateral acessado pelo header, cards de conteúdo e perfil do usuário. A navegação mobile é prioritária e a versão desktop deve ser coerente com ela.",
+      "audience": "",
+      "purpose": "",
+      "projectType": "outro",
+      "projectTypeOther": "Plataforma social mobile-first",
+      "features": [
+        "Header superior com stories",
+        "Menu inferior flutuante arredondado",
+        "Drawer lateral acessado pelo header",
+        "Cards de conteúdo (feed)",
+        "Perfil do usuário"
+      ],
+      "tech": "HTML + CSS + JavaScript"
+    },
+    "mode": "guided",
+    "depth": "essential",
+    "prefs": {
+      "showLegends": true,
+      "showHints": true
+    },
+    "guided": {
+      "step": "preview",
+      "completed": [
+        "objetivo",
+        "entrada",
+        "desktop",
+        "mobile",
+        "revisao"
+      ],
+      "skeletonApproved": true
+    },
+    "entry": {
+      "flow": "login-only",
+      "landingId": null,
+      "loginId": "acesso-responsivo",
+      "signupId": "mesma-tela",
+      "landingUsesOriginalColors": false
+    },
+    "layout": {
+      "desktopId": "topbar-integral-fixa",
+      "mobileId": "stories-dock-drawer"
+    },
+    "identity": {
+      "paletteId": "comunidade",
+      "overrides": {},
+      "typography": {
+        "heading": "inter",
+        "body": "inter",
+        "baseSize": 15,
+        "headingWeight": 650,
+        "bodyWeight": 400
+      },
+      "geometry": {
+        "radius": "medium",
+        "borderWidth": 1,
+        "shadow": "none",
+        "surface": "outlined",
+        "density": "comfortable",
+        "iconStyle": "outline"
+      }
+    },
+    "navigation": {
+      "header": {
+        "id": "praca-comunidade",
+        "variant": 0
+      },
+      "sidebar": null
+    },
+    "components": [
+      {
+        "id": "cmp_ee11d5dc",
+        "categoryId": "cards",
+        "familyId": "modern-material",
+        "label": "Card de conteúdo do feed",
+        "props": {
+          "titulo": "Publicação da comunidade",
+          "texto": "Foto ou texto compartilhado por um perfil que você segue.",
+          "botao": "Ver publicação"
+        },
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:28:13.963Z"
+      },
+      {
+        "id": "cmp_b9596b18",
+        "categoryId": "perfil-usuario",
+        "familyId": "modern-material",
+        "label": "Perfil do usuário",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:28:59.934Z"
+      },
+      {
+        "id": "cmp_aa9e166b",
+        "categoryId": "drawers",
+        "familyId": "modern-material",
+        "label": "Drawer lateral aberto pelo header",
+        "props": {
+          "titulo": "Menu",
+          "botao": "Sair da conta",
+          "lado": "esquerda"
+        },
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:29:32.756Z"
+      },
+      {
+        "id": "cmp_90b2202b",
+        "categoryId": "layouts-mobile",
+        "familyId": "modern-material",
+        "label": "Menu inferior flutuante arredondado (dock)",
+        "props": {
+          "itens": "Início\nExplorar\nSalvos\nPerfil",
+          "navegacao": "dock",
+          "fab": false
+        },
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:30:12.104Z"
+      }
+    ],
+    "inspiration": null,
+    "template": null,
+    "prompt": {
+      "excluded": [],
+      "notes": {
+        "navigation.header": "No celular (abaixo de 768 px) prevalece o layout mobile “Stories com dock e drawer lateral”: o botão de menu (☰) do header abre o drawer lateral esquerdo — não usar o painel de menu em largura total abaixo do header — e a faixa de stories fica logo abaixo do header.",
+        "layout.mobile": "Sem botão flutuante (FAB): as recomendações genéricas dos componentes Modern Material sobre “navigation bar inferior com FAB” não se aplicam; o menu inferior é o dock flutuante arredondado deste layout.",
+        "component:cmp_aa9e166b": "Este é o drawer de navegação do layout mobile: abre pelo botão de menu do header, desliza pela esquerda e tem ≈280 px (máx. 85% da largura), conforme o layout mobile."
+      },
+      "conflictResolutions": {}
+    },
+    "validation": {
+      "config": {
+        "url": "",
+        "routes": [
+          "/"
+        ],
+        "widths": [
+          320,
+          360,
+          375,
+          390,
+          412,
+          430,
+          768,
+          1024,
+          1280,
+          1440
+        ],
+        "manualLogin": false,
+        "waitMs": 800,
+        "checks": {
+          "horizontalOverflow": true,
+          "offscreen": true,
+          "tapTargets": true,
+          "inputFontSize": true
+        },
+        "minTapTarget": 44
+      },
+      "report": null
+    }
+  },
+  "history": []
+}

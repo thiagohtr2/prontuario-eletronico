@@ -1,0 +1,173 @@
+{
+  "kind": "atelier-ui/backup",
+  "exportedAt": "2026-11-02T18:38:32.333Z",
+  "project": {
+    "schema": "atelier-ui/project",
+    "version": 1,
+    "id": "prj_44dd7ec7",
+    "createdAt": "2026-11-02T18:19:27.877Z",
+    "updatedAt": "2026-11-02T18:38:27.959Z",
+    "meta": {
+      "name": "Verde Vivo",
+      "objective": "Loja de plantas online: apresentar a marca e vender plantas pelo catálogo",
+      "description": "Loja de plantas \"Verde Vivo\" com landing page, catálogo de produtos em cards, busca, filtros, header com navegação e navegação mobile. Design com inspiração botânica e identidade visual apropriada para uma loja de plantas.",
+      "audience": "",
+      "purpose": "",
+      "projectType": "loja",
+      "projectTypeOther": "",
+      "features": [
+        "Landing page",
+        "Catálogo de produtos",
+        "Header com navegação",
+        "Cards de produtos",
+        "Busca",
+        "Filtros",
+        "Navegação mobile"
+      ],
+      "tech": "HTML + CSS + JavaScript"
+    },
+    "mode": "guided",
+    "depth": "essential",
+    "prefs": {
+      "showLegends": true,
+      "showHints": true
+    },
+    "guided": {
+      "step": "entrega",
+      "completed": [
+        "revisao"
+      ],
+      "skeletonApproved": true
+    },
+    "entry": {
+      "flow": "landing-only",
+      "landingId": "folha-viva",
+      "loginId": null,
+      "signupId": null,
+      "landingUsesOriginalColors": false
+    },
+    "layout": {
+      "desktopId": "topbar-duas-linhas",
+      "mobileId": "header-busca-menu-flutuante"
+    },
+    "identity": {
+      "paletteId": "floresta",
+      "overrides": {},
+      "typography": {
+        "heading": "fraunces",
+        "body": "inter",
+        "baseSize": 15,
+        "headingWeight": 650,
+        "bodyWeight": 400
+      },
+      "geometry": {
+        "radius": "medium",
+        "borderWidth": 1,
+        "shadow": "none",
+        "surface": "outlined",
+        "density": "comfortable",
+        "iconStyle": "outline"
+      }
+    },
+    "navigation": {
+      "header": {
+        "id": "mega-emporio",
+        "variant": 0
+      },
+      "sidebar": null
+    },
+    "components": [
+      {
+        "id": "cmp_ca385fef",
+        "categoryId": "cards",
+        "familyId": "soft-pill",
+        "label": "Card de produto do catálogo",
+        "props": {
+          "titulo": "Nome da planta",
+          "texto": "Descrição curta da planta, porte e cuidados. Preço.",
+          "botao": "Ver produto",
+          "icone": "Leaf"
+        },
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:28:10.295Z"
+      },
+      {
+        "id": "cmp_7f871363",
+        "categoryId": "campos-busca",
+        "familyId": "soft-pill",
+        "label": "Busca de produtos (plantas)",
+        "props": {
+          "placeholder": "Buscar plantas…"
+        },
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:29:26.054Z"
+      },
+      {
+        "id": "cmp_4fc59571",
+        "categoryId": "drawers",
+        "familyId": "soft-pill",
+        "label": "Painel de filtros do catálogo",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:29:28.456Z"
+      }
+    ],
+    "inspiration": {
+      "siteId": "verdant-atelier",
+      "paletteId": "original",
+      "overrides": {}
+    },
+    "template": {
+      "id": "ecommerce-moda",
+      "overrides": {
+        "primary": "#2d6a4f",
+        "bg": "#f6faf6",
+        "text": "#1b2e24",
+        "radius": "medium"
+      },
+      "sections": [
+        "cabecalho",
+        "categorias",
+        "vitrine"
+      ]
+    },
+    "prompt": {
+      "excluded": [],
+      "notes": {},
+      "conflictResolutions": {
+        "cores-inspiracao": "global"
+      }
+    },
+    "validation": {
+      "config": {
+        "url": "",
+        "routes": [
+          "/"
+        ],
+        "widths": [
+          320,
+          360,
+          375,
+          390,
+          412,
+          430,
+          768,
+          1024,
+          1280,
+          1440
+        ],
+        "manualLogin": false,
+        "waitMs": 800,
+        "checks": {
+          "horizontalOverflow": true,
+          "offscreen": true,
+          "tapTargets": true,
+          "inputFontSize": true
+        },
+        "minTapTarget": 44
+      },
+      "report": null
+    }
+  },
+  "history": []
+}
