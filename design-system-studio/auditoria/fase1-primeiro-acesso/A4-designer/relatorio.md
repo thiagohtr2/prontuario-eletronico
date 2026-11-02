@@ -460,7 +460,7 @@ Capturas: `44-1920-*.png`
 - **Densidade:**
   - a 1440×900 as galerias começam abaixo da dobra;
   - alturas de página de 7.972 px (desktop), 9.647 px (mobile), 9.750 px (paletas) e 18.517 px (navegação).
-- **Estado confundível:** "Modelo selecionado" e o botão "Continuar" desabilitado usam o mesmo índigo a 50% de opacidade, com texto branco (contraste aproximado de 2,4:1).
+- **Estado confundível:** "Modelo selecionado" e o botão "Continuar" desabilitado usam o mesmo índigo a 50% de opacidade, com texto branco (contraste aproximado de 2,3:1).
 - **Microcopy contraditória:** "Esqueleto aprovado" antes de aprovar.
 - **Responsivo da ferramenta:** a 390 px não há rolagem horizontal (`47-390-*.png`).
 
