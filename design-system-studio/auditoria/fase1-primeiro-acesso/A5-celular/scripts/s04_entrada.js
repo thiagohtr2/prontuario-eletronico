@@ -1,0 +1,21 @@
+const L = require('./lib');
+(async () => {
+  const { ctx, page } = await L.open('perfil', 'android');
+  await page.goto('http://127.0.0.1:4300/#/guiado/objetivo', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(500);
+  console.log('nome persistido?', await page.getByPlaceholder('Ex.: Agenda Viva').inputValue());
+  L.log('A10 tocar "Continuar: Entrada"');
+  await page.getByRole('button', { name: /Continuar: Entrada/ }).tap();
+  await page.waitForTimeout(1200);
+  console.log('URL', page.url(), 'scrollY', await page.evaluate(() => scrollY));
+  await L.shot(page, '07-passo2-entrada-topo');
+  await L.shot(page, '07-passo2-entrada-inteira', true);
+  const t = await L.text(page, 9000); console.log('TEXT:\n' + t.slice(t.indexOf('Salvo automaticamente')));
+  console.log('OVERFLOW', JSON.stringify(await L.overflow(page)));
+  console.log('FIXED', JSON.stringify((await L.fixedBars(page)).filter(f => f.x >= 0)));
+  const m = await L.measure(page);
+  console.log('TARGETS total', m.length, 'small', m.filter(x => x.small).length);
+  for (const x of m.filter(x => x.y > 60)) console.log(JSON.stringify(x));
+  console.log('FONTS', JSON.stringify(await L.fonts(page)));
+  await ctx.close();
+})();

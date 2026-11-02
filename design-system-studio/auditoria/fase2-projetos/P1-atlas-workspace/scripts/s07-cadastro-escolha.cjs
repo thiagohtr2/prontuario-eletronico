@@ -1,0 +1,37 @@
+const { open, BASE } = require('./lib.cjs');
+(async () => {
+  const s = await open({ url: BASE + '#/guiado/entrada' });
+  const p = s.page;
+  await p.getByRole('tab', { name: 'Cadastro' }).click();
+  await p.getByRole('button', { name: /^Página própria de cadastro/ }).click();
+  await p.waitForTimeout(500);
+  console.log((await s.aria('main')).split('\n').slice(43, 52).join('\n'));
+  await p.getByRole('button', { name: 'Ver prévia' }).first().click();
+  await p.waitForTimeout(800);
+  const dlg = p.getByRole('dialog').first();
+  console.log(await dlg.ariaSnapshot());
+  await s.shot('07-cadastro-previa-desktop', { dir: 'capturas', locator: dlg });
+  await dlg.getByRole('button', { name: 'Celular' }).click();
+  await p.waitForTimeout(600);
+  await s.shot('07-cadastro-previa-celular', { dir: 'capturas', locator: dlg });
+  await p.keyboard.press('Escape');
+  await p.waitForTimeout(300);
+  // prévia do login, desktop e celular
+  await p.getByRole('tab', { name: 'Login' }).click();
+  await p.waitForTimeout(400);
+  await p.getByRole('button', { name: 'Ver prévia' }).first().click();
+  await p.waitForTimeout(800);
+  const d2 = p.getByRole('dialog').first();
+  await s.shot('08-login-classico-central-previa-desktop', { dir: 'capturas', locator: d2 });
+  await d2.getByRole('button', { name: 'Criar conta' }).first().click();
+  await p.waitForTimeout(500);
+  await s.shot('08-login-tela-criar-conta-desktop', { dir: 'capturas', locator: d2 });
+  await d2.getByRole('button', { name: 'Celular' }).click();
+  await p.waitForTimeout(600);
+  await s.shot('08-login-tela-criar-conta-celular', { dir: 'capturas', locator: d2 });
+  await d2.getByRole('button', { name: 'Entrar', exact: true }).first().click();
+  await p.waitForTimeout(500);
+  await s.shot('08-login-classico-central-previa-celular', { dir: 'capturas', locator: d2 });
+  console.log(await d2.ariaSnapshot());
+  await s.done();
+})();

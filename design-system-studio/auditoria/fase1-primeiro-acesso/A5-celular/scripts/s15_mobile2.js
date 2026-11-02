@@ -1,0 +1,26 @@
+const L = require('./lib');
+const sy = p => p.evaluate(() => Math.round(scrollY));
+(async () => {
+  const { ctx, page } = await L.open('perfil', 'android');
+  await page.goto('http://127.0.0.1:4300/#/guiado/mobile', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(800);
+  L.log('A32 arrastar o dedo para baixo até a fileira de miniaturas');
+  await L.swipe(page, 180, 650, 250);
+  const thumbs = await page.evaluate(() => { const b = [...document.querySelectorAll('button')].filter(x => /Bottom com ação central|Bottom Navigation clássica/.test(x.innerText)); return b.map(x => { const r = x.getBoundingClientRect(); const p = x.parentElement; return { t: x.innerText.replace(/\s+/g, ' ').slice(0, 40), x: Math.round(r.x), y: Math.round(r.y), w: Math.round(r.width), h: Math.round(r.height), role: x.getAttribute('role'), sel: x.getAttribute('aria-pressed') || x.getAttribute('aria-checked') || x.getAttribute('aria-selected') }; }); });
+  console.log('THUMBS', JSON.stringify(thumbs));
+  const rowY = thumbs.find(t => /clássica/.test(t.t)).y + 100;
+  console.log('scroll', await sy(page));
+  await L.shot(page, '28-mobile-fileira-miniaturas');
+  L.log('A33 deslizar a fileira de miniaturas para o lado (2x)');
+  await L.hswipe(page, rowY, 330, 40); 
+  await L.shot(page, '29-mobile-fileira-deslizada');
+  const before = await sy(page);
+  L.log('A34 tocar a miniatura "Bottom com ação central"');
+  await page.getByRole('button', { name: /Bottom com ação central/ }).first().tap(); await page.waitForTimeout(1200);
+  console.log('scroll antes', before, 'depois', await sy(page));
+  await L.shot(page, '30-mobile-apos-tocar-miniatura');
+  const t = await L.text(page, 30000); const i = t.indexOf('Exemplo'); console.log(t.slice(i - 50, i + 400));
+  const phone = await page.evaluate(() => { const e = [...document.querySelectorAll('*')].find(x => /Toque nos botões do celular/.test(x.innerText || '') && x.children.length < 3); const r = e?.getBoundingClientRect(); return r ? { y: Math.round(r.y + scrollY) } : null; });
+  console.log('hint y', JSON.stringify(phone));
+  await ctx.close();
+})();

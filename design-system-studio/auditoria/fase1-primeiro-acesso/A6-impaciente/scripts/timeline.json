@@ -1,0 +1,245 @@
+[
+ {
+  "n": 0,
+  "acao": "Abre a home (carregamento)",
+  "medido_ms": 858,
+  "blocos": 2,
+  "passo_s": 6.9,
+  "acum_s": 6.9,
+  "acum_realista_s": 6.9
+ },
+ {
+  "n": 1,
+  "acao": "Clica \"Master Prompt\" (header)",
+  "medido_ms": 401,
+  "blocos": 3,
+  "passo_s": 9.4,
+  "acum_s": 16.3,
+  "acum_realista_s": 17.3
+ },
+ {
+  "n": 2,
+  "acao": "Clica pendência \"Defina o tipo de projeto.\"",
+  "medido_ms": 614,
+  "blocos": 2,
+  "passo_s": 6.6,
+  "acum_s": 22.9,
+  "acum_realista_s": 24.9
+ },
+ {
+  "n": 3,
+  "acao": "Escolhe \"Aplicativo ou SaaS\"",
+  "medido_ms": 424,
+  "blocos": 1,
+  "passo_s": 3.4,
+  "acum_s": 26.3,
+  "acum_realista_s": 29.3
+ },
+ {
+  "n": 4,
+  "acao": "Clica \"Usar esta sugestão\"",
+  "medido_ms": 507,
+  "blocos": 0,
+  "passo_s": 0.5,
+  "acum_s": 26.8,
+  "acum_realista_s": 30.8
+ },
+ {
+  "n": 5,
+  "acao": "Clica \"Continuar: Entrada\"",
+  "medido_ms": 587,
+  "blocos": 2,
+  "passo_s": 6.6,
+  "acum_s": 33.4,
+  "acum_realista_s": 38.4
+ },
+ {
+  "n": 6,
+  "acao": "Clica \"Continuar: Desktop\" desabilitado (sem efeito)",
+  "medido_ms": 300,
+  "blocos": 1,
+  "passo_s": 3.3,
+  "acum_s": 36.7,
+  "acum_realista_s": 42.7
+ },
+ {
+  "n": 7,
+  "acao": "Clica aba \"Landing page\"",
+  "medido_ms": 789,
+  "blocos": 3,
+  "passo_s": 9.8,
+  "acum_s": 46.5,
+  "acum_realista_s": 55.5
+ },
+ {
+  "n": 8,
+  "acao": "Escolhe 1º modelo \"Aurora Flow\"",
+  "medido_ms": 484,
+  "blocos": 1,
+  "passo_s": 3.5,
+  "acum_s": 50,
+  "acum_realista_s": 60
+ },
+ {
+  "n": 9,
+  "acao": "Clica aba \"Login\"",
+  "medido_ms": 668,
+  "blocos": 2,
+  "passo_s": 6.7,
+  "acum_s": 56.6,
+  "acum_realista_s": 67.6
+ },
+ {
+  "n": 10,
+  "acao": "Escolhe 1º modelo \"Clássico central\"",
+  "medido_ms": 450,
+  "blocos": 0,
+  "passo_s": 0.5,
+  "acum_s": 57.1,
+  "acum_realista_s": 69.1
+ },
+ {
+  "n": 11,
+  "acao": "Clica aba \"Cadastro\"",
+  "medido_ms": 456,
+  "blocos": 2,
+  "passo_s": 6.5,
+  "acum_s": 63.5,
+  "acum_realista_s": 76.5
+ },
+ {
+  "n": 12,
+  "acao": "Escolhe 1º modelo \"Cadastro na mesma tela\"",
+  "medido_ms": 488,
+  "blocos": 0,
+  "passo_s": 0.5,
+  "acum_s": 64,
+  "acum_realista_s": 78
+ },
+ {
+  "n": 13,
+  "acao": "Clica \"Continuar: Desktop\"",
+  "medido_ms": 712,
+  "blocos": 3,
+  "passo_s": 9.7,
+  "acum_s": 73.7,
+  "acum_realista_s": 90.7
+ },
+ {
+  "n": 14,
+  "acao": "Escolhe \"Sidebar integral clássica\" (Sugerido)",
+  "medido_ms": 659,
+  "blocos": 0,
+  "passo_s": 0.7,
+  "acum_s": 74.4,
+  "acum_realista_s": 92.4
+ },
+ {
+  "n": 15,
+  "acao": "Clica \"Continuar: Mobile\"",
+  "medido_ms": 803,
+  "blocos": 3,
+  "passo_s": 9.8,
+  "acum_s": 84.2,
+  "acum_realista_s": 105.2
+ },
+ {
+  "n": 16,
+  "acao": "Escolhe \"Bottom Navigation clássica\" (Sugerido)",
+  "medido_ms": 641,
+  "blocos": 0,
+  "passo_s": 0.6,
+  "acum_s": 84.8,
+  "acum_realista_s": 106.8
+ },
+ {
+  "n": 17,
+  "acao": "Clica \"Continuar: Revisão\"",
+  "medido_ms": 608,
+  "blocos": 2,
+  "passo_s": 6.6,
+  "acum_s": 91.4,
+  "acum_realista_s": 114.4
+ },
+ {
+  "n": 18,
+  "acao": "Clica \"Aprovar esqueleto\" ignorando aviso do nome",
+  "medido_ms": 730,
+  "blocos": 2,
+  "passo_s": 6.7,
+  "acum_s": 98.2,
+  "acum_realista_s": 122.2
+ },
+ {
+  "n": 19,
+  "acao": "Clica \"Continuar: Cores\"",
+  "medido_ms": 681,
+  "blocos": 2,
+  "passo_s": 6.7,
+  "acum_s": 104.9,
+  "acum_realista_s": 129.9
+ },
+ {
+  "n": 20,
+  "acao": "Clica \"Continuar: Navegação\" (aceita paleta padrão)",
+  "medido_ms": 1071,
+  "blocos": 1,
+  "passo_s": 4.1,
+  "acum_s": 108.9,
+  "acum_realista_s": 134.9
+ },
+ {
+  "n": 21,
+  "acao": "Clica \"Continuar: Componentes\" (etapa opcional)",
+  "medido_ms": 864,
+  "blocos": 1,
+  "passo_s": 3.9,
+  "acum_s": 112.8,
+  "acum_realista_s": 139.8
+ },
+ {
+  "n": 22,
+  "acao": "Clica \"Continuar: Entrega\" (etapa opcional)",
+  "medido_ms": 730,
+  "blocos": 2,
+  "passo_s": 6.7,
+  "acum_s": 119.5,
+  "acum_realista_s": 147.5
+ },
+ {
+  "n": 23,
+  "acao": "Clica pendência \"Dê um nome ao projeto.\"",
+  "medido_ms": 687,
+  "blocos": 1,
+  "passo_s": 3.7,
+  "acum_s": 123.2,
+  "acum_realista_s": 154.2
+ },
+ {
+  "n": 24,
+  "acao": "Clica no campo e digita \"Vai Já Entregas\"",
+  "medido_ms": 633,
+  "blocos": 0,
+  "passo_s": 0.6,
+  "acum_s": 123.8,
+  "acum_realista_s": 159.8
+ },
+ {
+  "n": 25,
+  "acao": "Clica \"Master Prompt\" (header)",
+  "medido_ms": 665,
+  "blocos": 1,
+  "passo_s": 3.7,
+  "acum_s": 127.5,
+  "acum_realista_s": 164.5
+ },
+ {
+  "n": 26,
+  "acao": "Clica \"Copiar Master Prompt\"",
+  "medido_ms": 548,
+  "blocos": 0,
+  "passo_s": 0.5,
+  "acum_s": 128.1,
+  "acum_realista_s": 166.1
+ }
+]

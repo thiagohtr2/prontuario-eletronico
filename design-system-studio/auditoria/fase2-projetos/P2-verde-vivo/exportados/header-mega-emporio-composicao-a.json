@@ -1,0 +1,105 @@
+{
+  "schema": "atelier-ui/navigation-item",
+  "version": 1,
+  "exportedAt": "2026-11-02T18:25:58.218Z",
+  "kind": "header",
+  "id": "mega-emporio",
+  "name": "Mega Empório",
+  "description": "Header de loja grande: busca em destaque, carrinho e um mega menu com todos os departamentos.",
+  "composition": {
+    "variant": "A",
+    "name": "Busca larga + faixa de departamentos",
+    "description": "Linha 1: logo, busca larga ao centro, endereço de entrega, conta e carrinho. Linha 2: “Departamentos” (abre o mega menu) seguido de atalhos de categorias.",
+    "layout": "two-row"
+  },
+  "properties": {
+    "floating": false,
+    "sticky": true
+  },
+  "filters": [
+    "mega-menu",
+    "com-busca"
+  ],
+  "spec": {
+    "summary": "Header de e-commerce com faixa de anúncio, busca larga central, mega menu de departamentos, endereço de entrega, conta e carrinho.",
+    "structure": [
+      "Barra principal com 64 px de altura, largura total da janela (full width), padding horizontal de 24–32 px.",
+      "Superfície: fundo sólido na cor de navegação (token navBg), sem borda inferior.",
+      "Logo: símbolo quadrado de 28 px na cor primária + nome da marca em peso 700 (marca fictícia “Empório Murici” na prévia — substitua pela marca real).",
+      "Navegação principal com 5 itens (Departamentos ▾ mega menu, Ofertas, Mercado, Casa, Eletrônicos): links de texto simples; o ativo usa a cor de texto principal e peso 600, os demais textMuted; espaço entre itens de 20–24 px.",
+      "Busca larga (flex: 1, até 560 px, 42 px de altura) como elemento central do header, com botão de lupa integrado.",
+      "Ações: seletor de endereço de entrega; avatar circular de 32 px com menu de perfil; sacola/carrinho com contador.",
+      "Faixa de anúncio de 36 px acima do header, fundo primary e texto onPrimary: “Frete grátis acima de R$ 199 · Parcele em até 10x”, com link e botão ✕ para dispensar.",
+      "Disposição conforme a composição escolhida (ver “composicao”): A “Busca larga + faixa de departamentos” = duas faixas: logo, busca e ações na primeira; navegação alinhada à esquerda na segunda; B “Departamentos ao lado do logo” = busca larga no centro como protagonista; navegação recolhida em um botão de menu ao lado do logo."
+    ],
+    "behavior": [
+      "Mega menu: painel de até 760 px (nunca mais largo que a viewport − 16 px) ancorado abaixo do header, com 3 colunas de links agrupados sob títulos em caixa alta e um cartão de destaque com chamada; abre ao clicar, fecha com Esc ou clique fora; o foco vai para o primeiro link.",
+      "Item ativo: links de texto simples; o ativo usa a cor de texto principal e peso 600, os demais textMuted. Hover com transição de 120 ms; foco visível com anel de 2 px na cor focusRing.",
+      "Fixo no topo: position: sticky; top: 0; z-index: 40. Após 8 px de rolagem ganha sombra suave.",
+      "Busca larga: ao focar mostra um painel de sugestões e buscas recentes com a mesma largura do campo, logo abaixo dele.",
+      "Perfil: o avatar abre um menu com nome e e-mail, “Meu perfil”, “Configurações”, “Ajuda” e “Sair”, alinhado à borda direita.",
+      "Carrinho: contador em bolinha accent; o clique leva à sacola (ou abre um minicarrinho lateral)."
+    ],
+    "responsive": [
+      "Desktop largo (≥ 1280 px): composição completa, como na prévia.",
+      "De 1024 a 1279 px: itens além do 4º vão para um menu “Mais ▾”.",
+      "De 768 a 1023 px: a navegação recolhe para o botão ☰; continuam visíveis o logo, a busca e a ação principal.",
+      "Abaixo de 768 px: barra única de 56 px com logo, carrinho com contador, avatar, botão de menu ☰ (44 × 44 px). Vão para o painel do menu: os 5 itens de navegação.",
+      "Painel do menu: desliza logo abaixo do header em largura total, altura máxima calc(100dvh − 56 px) com rolagem interna; submenus e mega menus viram acordeões; trava a rolagem do corpo e fecha com ✕, Esc, toque fora ou ao escolher um item.",
+      "Popovers (perfil, notificações, menus) são reposicionados para caber na viewport: largura máxima calc(100vw − 16 px), alinhados à borda mais próxima; nenhum overflow horizontal de 320 a 1920 px.",
+      "A faixa de anúncio continua no celular com 32 px e uma única linha (reticências), mantendo o botão ✕ com área de toque de 44 px.",
+      "No celular a busca larga vira uma segunda linha de 48 px logo abaixo da barra, sempre visível (não vira ícone).",
+      "Continua fixo no celular; recomendado esconder ao rolar para baixo e reaparecer ao rolar para cima para ganhar área útil."
+    ],
+    "measurements": {
+      "altura (desktop)": "64 px",
+      "altura (celular)": "56 px",
+      "padding horizontal": "24–32 px (16 px no celular)",
+      "espaço entre itens": "20–24 px",
+      "logo": "≈ 28 px de altura",
+      "área de toque mínima": "44 × 44 px no celular",
+      "faixa de anúncio": "36 px (32 px no celular)",
+      "mega menu": "até 760 px de largura, 3 colunas + destaque"
+    },
+    "notes": [
+      "Todas as cores vêm dos tokens da identidade global (navBg, navText, navActive, primary, border…); nada de cores fixas.",
+      "Use <header> com <nav aria-label=\"Principal\"> e lista de links; o item da página atual recebe aria-current=\"page\"."
+    ]
+  },
+  "design": {
+    "brand": "Empório Murici",
+    "logo": "mark",
+    "height": 64,
+    "surface": "solid",
+    "shape": "full",
+    "navStyle": "plain",
+    "nav": [
+      {
+        "label": "Departamentos",
+        "menu": "mega"
+      },
+      {
+        "label": "Ofertas",
+        "badge": "-40%"
+      },
+      {
+        "label": "Mercado"
+      },
+      {
+        "label": "Casa"
+      },
+      {
+        "label": "Eletrônicos"
+      }
+    ],
+    "density": "normal",
+    "search": "wide",
+    "actions": [
+      "location",
+      "profile",
+      "cart"
+    ],
+    "announcement": "Frete grátis acima de R$ 199 · Parcele em até 10x",
+    "context": "store"
+  }
+}

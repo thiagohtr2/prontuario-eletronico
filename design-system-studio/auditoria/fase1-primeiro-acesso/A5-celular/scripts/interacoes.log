@@ -3,3 +3,46 @@
 2026-11-02T18:18:15.057Z A03 tocar "Começar no modo guiado"
 2026-11-02T18:18:47.772Z A04 rolar até ver os cards (wheel 300)
 2026-11-02T18:18:48.300Z A05 tocar card "Aplicativo ou SaaS"
+2026-11-02T18:19:32.691Z A04 rolar até ver os cards (wheel 300)
+2026-11-02T18:19:33.213Z A05 tocar card "Aplicativo ou SaaS"
+2026-11-02T18:19:34.354Z A06 rolar até "Sobre o projeto" e tocar "Nome do projeto"
+2026-11-02T18:19:35.306Z A07 digitar nome
+2026-11-02T18:19:35.818Z A08 tocar e digitar objetivo
+2026-11-02T18:19:36.548Z A09 tocar e digitar público
+2026-11-02T18:19:55.512Z A10 tocar "Continuar: Entrada"
+2026-11-02T18:20:17.095Z A11 rolar (wheel 550) até ver as opções
+2026-11-02T18:20:18.281Z A12 tocar "Landing page com chamada para login"
+2026-11-02T18:20:43.188Z A13 tocar "Continuar: Desktop" (desabilitado)
+2026-11-02T18:20:44.044Z A14 rolar para cima (wheel -700) procurando as abas
+2026-11-02T18:20:44.745Z A15 tocar aba "Landing page"
+2026-11-02T18:21:23.079Z A15 tocar aba "Landing page"
+2026-11-02T18:22:01.027Z A16 arrastar o dedo para rolar a lista de modelos (gesto touch 3x)
+2026-11-02T18:22:48.299Z A16 arrastar o dedo 4x pela lista de modelos
+2026-11-02T18:22:53.083Z A17 tocar "Ver prévia" do modelo VOLTA (página cinematográfica)
+2026-11-02T18:23:19.610Z A18 arrastar o dedo sobre a prévia do celular (2x)
+2026-11-02T18:23:22.559Z A19 tocar "Computador" na prévia
+2026-11-02T18:23:23.909Z A20 voltar para "Celular" e tocar "Selecionar este modelo"
+2026-11-02T18:23:48.527Z A21 tocar X para fechar a prévia
+2026-11-02T18:23:49.697Z A22 rolar para cima até as abas (swipe 3x)
+2026-11-02T18:23:54.256Z A23 arrastar a barra de abas para o lado (swipe horizontal)
+2026-11-02T18:23:55.586Z A24 tocar aba "Login"
+2026-11-02T18:24:13.377Z A25 arrastar o dedo para ver os modelos de login (2x)
+2026-11-02T18:24:16.368Z A26 tocar na miniatura "Clássico central"
+2026-11-02T18:24:37.583Z A27 tocar aba "Cadastro"
+2026-11-02T18:24:38.545Z A28 tocar "Continuar: Desktop"
+2026-11-02T18:25:03.278Z A29 arrastar o dedo até o exemplo (2x)
+2026-11-02T18:25:05.964Z A30 tocar "Escolher este modelo" (Sidebar integral clássica)
+2026-11-02T18:25:26.272Z A31 tocar "Continuar: Mobile"
+2026-11-02T18:25:47.735Z A32 arrastar o dedo para baixo até a fileira de miniaturas
+2026-11-02T18:25:49.297Z A33 deslizar a fileira de miniaturas para o lado (2x)
+2026-11-02T18:25:50.683Z A34 tocar a miniatura "Bottom com ação central"
+2026-11-02T18:26:31.717Z A35 arrastar o dedo até o celular grande (2x)
+2026-11-02T18:26:34.298Z A36 tocar botão dentro do celular grande: Buscar funcionalidades (Ctrl+K
+2026-11-02T18:27:01.965Z A37 tocar X para fechar a busca
+2026-11-02T18:27:03.022Z A38 tocar "Criar novo" dentro do celular grande
+2026-11-02T18:27:04.250Z A39 tocar "Continuar: Revisão"
+2026-11-02T18:27:19.058Z A37 tocar X para fechar a busca
+2026-11-02T18:27:20.108Z A38 tocar "Criar novo" dentro do celular grande
+2026-11-02T18:27:21.453Z A39 tocar "Continuar: Revisão"
+2026-11-02T18:27:34.146Z A40 tocar link "Resolver" (17 px de altura)
+2026-11-02T18:28:43.652Z A41 arrastar o dedo pela lista de cadastros (6x)

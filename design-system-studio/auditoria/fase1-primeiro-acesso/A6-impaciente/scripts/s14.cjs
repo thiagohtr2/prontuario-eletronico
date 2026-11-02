@@ -1,0 +1,20 @@
+const L=require('./lib.cjs');
+(async()=>{
+  const {ctx,page}=await L.open();
+  await page.goto('http://127.0.0.1:4300/#/guiado/desktop',{waitUntil:'networkidle'});
+  let t=Date.now();
+  await page.getByRole('button',{name:/Continuar: Mobile/}).click();
+  await page.waitForTimeout(400); await page.waitForLoadState('networkidle');
+  const tClick=Date.now()-t;
+  await L.snap(page,'14-mobile');
+  const top = await page.evaluate(()=>document.querySelector('header')?.innerText.replace(/\n/g,' | '));
+  const i=await L.info(page);
+  console.log(JSON.stringify({tClick,url:i.url,h:i.h,top}));
+  const tx=i.text; const k=tx.indexOf('Etapa 4');
+  console.log('---TEXT---\n'+tx.slice(k, k+2500));
+  console.log('---CTRLS---\n'+i.ctrls.filter(c=>!/^BUTTON "\d+\./.test(c)).slice(0,30).join('\n'));
+  const st = await page.evaluate(()=>{const b=[...document.querySelectorAll('main button')].find(b=>/^Continuar/.test(b.innerText.trim())); return {txt:b?.innerText,dis:b?.disabled}});
+  const rec = await page.evaluate(()=>(document.querySelector('main').innerText.match(/recomend\w*|sugerid\w*|padrão/gi)||[]));
+  console.log(st,'recommend words:',rec, 'LOGS',page._logs);
+  await ctx.close();
+})();

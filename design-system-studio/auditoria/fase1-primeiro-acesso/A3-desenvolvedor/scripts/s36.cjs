@@ -1,0 +1,22 @@
+const { open, shot, aria, W } = require('./lib.cjs');
+(async () => {
+  const { ctx, page, logs } = await open();
+  await page.goto('http://127.0.0.1:4300/#/', { waitUntil: 'networkidle' });
+  await page.getByRole('button', { name: 'Livre' }).click();
+  await page.waitForTimeout(700);
+  console.log('URL', page.url());
+  await shot(page, '36-livre');
+  const nav = await page.getByRole('complementary', { name: 'Navegação do Studio' }).ariaSnapshot();
+  console.log(nav.split('\n').filter(l=>!l.includes('/url')).join('\n').slice(0, 2500));
+  await page.goto('http://127.0.0.1:4300/#/modulos/desktop', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(700);
+  await shot(page, '36b-livre-desktop');
+  const a = await aria(page, 'main');
+  const L = a.split('\n').filter(l=>!l.includes('/url'));
+  const fam = L.findIndex(l => l.includes('Famílias de layout'));
+  console.log('--- desktop module head ---\n' + L.slice(0, fam > 0 ? fam : 60).join('\n').slice(0, 4000));
+  const det = L.findIndex(l => l.includes('complementary "Detalhes'));
+  console.log('--- detalhes ---\n' + L.slice(det, det + 40).join('\n'));
+  console.log('LOGS', logs.join('\n'));
+  await ctx.close();
+})();

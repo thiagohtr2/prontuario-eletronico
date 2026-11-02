@@ -1,0 +1,94 @@
+- 'dialog "Personalizar: Quadros Kanban"':
+  - 'heading "Personalizar: Quadros Kanban" [level=2]'
+  - paragraph: Quadros Kanban · família Compact Pro. Tudo é salvo na hora e vai para o Master Prompt.
+  - button "Fechar":
+    - img
+  - group "Estado da prévia":
+    - button "Normal" [pressed]
+    - button "Hover"
+    - button "Focus"
+    - button "Active"
+    - button "Disabled"
+  - text: A fazer 2 Design Revisar proposta 12 mar AS Bug Ajustar layout 13 mar BL Fazendo 3 Bug Publicar versão 13 mar BL Pesquisa Pesquisa com clientes 14 mar CD Feito 4 Pesquisa Corrigir login 14 mar CD Design Novo onboarding 15 mar DR
+  - paragraph: Clique em qualquer parte da prévia (texto, ícone, botão) para editá-la.
+  - text: Nome no projeto
+  - textbox "Nome no projeto":
+    - /placeholder: Quadros Kanban
+  - text: "Ex.: “Botão principal do checkout”. Ajuda a IA a saber onde usar."
+  - region "Token global somente leitura":
+    - text: "1"
+    - heading "Token global somente leitura" [level=3]
+    - paragraph: A paleta aprovada vale para o projeto inteiro. Este componente a herda por padrão.
+    - text: Cor primária Cor de destaque Superfície Texto principal Borda Aa Inter
+    - link "Alterar em Cores e identidade":
+      - /url: "#/modulos/cores"
+  - region "Estilo do componente (variação / família)":
+    - text: "2"
+    - heading "Estilo do componente (variação / família)" [level=3]
+    - paragraph: A família define formato, bordas, sombras, fonte e densidade. Trocar aqui muda só este componente.
+    - combobox "Família visual":
+      - option "1. Soft Pill"
+      - option "2. Swiss Minimal"
+      - option "3. Dark Luxury"
+      - option "4. Glassmorphism"
+      - option "5. Gradient Glow"
+      - option "6. Neo Brutalist"
+      - option "7. Soft Neumorphic"
+      - option "8. Apple Precision"
+      - option "9. Bento Soft"
+      - option "10. Aurora"
+      - option "11. Industrial"
+      - option "12. Playful"
+      - option "13. Compact Pro" [selected]
+      - option "14. Midnight Gold"
+      - option "15. Retro Paper"
+      - option "16. Modern Material"
+    - paragraph: "Denso e eficiente, para ferramentas profissionais: mais informação em menos espaço."
+  - region "Configuração da instância":
+    - text: "3"
+    - heading "Configuração da instância" [level=3]
+    - paragraph: Textos, ícones, tamanhos e opções deste componente. Não afeta outros componentes.
+    - group "Conteúdo":
+      - text: Conteúdo Colunas (uma por linha)
+      - textbox "Colunas (uma por linha)": A fazer Fazendo Feito
+      - text: Um item por linha. Cartões por coluna
+      - slider "Cartões por coluna": "2"
+      - spinbutton "Cartões por coluna (valor)": "2"
+    - group "Aparência":
+      - text: Aparência Contadores
+      - switch "Sim" [checked]
+      - text: Sim Etiquetas nos cartões
+      - switch "Sim" [checked]
+      - text: Sim Avatares nos cartões
+      - switch "Sim" [checked]
+      - text: Sim
+  - region "Exceção individual":
+    - text: "4"
+    - heading "Exceção individual" [level=3]
+    - paragraph: Use só quando este componente precisar fugir da paleta global. A exceção aparece destacada no Master Prompt.
+    - text: Cor primária
+    - 'textbox "Cor primária: seletor de cor"': "#4f46e5"
+    - 'textbox "Cor primária: código hexadecimal"':
+      - /placeholder: "Herda: #4f46e5"
+    - text: Texto sobre primária
+    - 'textbox "Texto sobre primária: seletor de cor"': "#ffffff"
+    - 'textbox "Texto sobre primária: código hexadecimal"':
+      - /placeholder: "Herda: #ffffff"
+    - text: Cor de destaque
+    - 'textbox "Cor de destaque: seletor de cor"': "#0ea5e9"
+    - 'textbox "Cor de destaque: código hexadecimal"':
+      - /placeholder: "Herda: #0ea5e9"
+    - text: Superfície
+    - 'textbox "Superfície: seletor de cor"': "#ffffff"
+    - 'textbox "Superfície: código hexadecimal"':
+      - /placeholder: "Herda: #ffffff"
+    - button "Mostrar mais cores (4)"
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Duplicar":
+    - img
+    - text: Duplicar
+  - button "Concluir":
+    - img
+    - text: Concluir

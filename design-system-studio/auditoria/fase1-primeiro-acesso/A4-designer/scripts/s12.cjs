@@ -1,0 +1,23 @@
+const { open, dump, controls, C, BASE } = require('./lib.cjs');
+(async () => {
+  const { ctx, page, logs, close } = await open();
+  await page.goto(BASE + '#/guiado/entrada', { waitUntil: 'networkidle' }); await page.getByText('Como as pessoas entram').first().waitFor();
+  await page.getByRole('tab', { name: 'Login', exact: true }).click(); await page.waitForTimeout(800);
+  await page.locator('main .ui-option').filter({ hasText: 'Produto em destaque' }).locator('button[aria-pressed]').click(); await page.waitForTimeout(600);
+  await page.getByRole('tab', { name: 'Cadastro', exact: true }).click(); await page.waitForTimeout(800);
+  await page.locator('main button[aria-pressed]').filter({ hasText: 'Página própria de cadastro' }).click().catch(async e => { await page.locator('main .ui-option, main article').filter({ hasText: 'Página própria de cadastro' }).locator('button').first().click(); });
+  await page.waitForTimeout(600);
+  await page.evaluate(() => scrollTo(0,0));
+  await page.screenshot({ path: C + '13-cadastro-escolhido.png' });
+  const st = await page.evaluate(() => [...document.querySelectorAll('main [role=tab]')].map(t=>t.innerText+':'+t.getAttribute('aria-selected')).join(', ') + ' | footer: ' + (document.querySelector('[data-testid=guided-next]')?.disabled));
+  console.log(st);
+  await page.getByRole('button', { name: /Continuar: Desktop/ }).click();
+  await page.waitForTimeout(1500);
+  console.log(page.url());
+  await page.screenshot({ path: C + '14-desktop-viewport.png' });
+  await page.screenshot({ path: C + '14-desktop-full.png', fullPage: true });
+  console.log('H', await page.evaluate(() => document.documentElement.scrollHeight));
+  await dump(page, 5000);
+  console.log('LOGS', logs.join('\n'));
+  await close();
+})();

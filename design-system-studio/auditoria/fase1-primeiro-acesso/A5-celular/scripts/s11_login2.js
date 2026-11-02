@@ -1,0 +1,21 @@
+const L = require('./lib');
+const sy = p => p.evaluate(() => Math.round(scrollY));
+(async () => {
+  const { ctx, page } = await L.open('perfil', 'android');
+  await page.goto('http://127.0.0.1:4300/#/guiado/entrada', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(600);
+  await page.getByRole('tab', { name: /^Login/ }).tap(); await page.waitForTimeout(500);
+  L.log('A25 arrastar o dedo para ver os modelos de login (2x)');
+  await L.swipe(page, 180, 650, 200); await L.swipe(page, 180, 650, 300);
+  await L.shot(page, '21-login-modelos');
+  const card = page.getByRole('button', { name: /Clássico central/ }).first();
+  console.log('card count', await page.getByRole('button', { name: /Clássico central/ }).count());
+  const before = await sy(page);
+  L.log('A26 tocar na miniatura "Clássico central"');
+  await card.tap(); await page.waitForTimeout(1200);
+  console.log('dialog?', await page.locator('[role=dialog]').count(), 'scroll antes', before, 'depois', await sy(page), 'tab ativa', await page.locator('[role=tab][aria-selected=true]').innerText());
+  await L.shot(page, '22-login-apos-tocar-miniatura');
+  console.log('footer', await page.locator('.gd-footer').innerText());
+  const t = await L.text(page, 20000); const i = t.indexOf('Login selecionado'); console.log('SEL:', t.slice(i, i + 120));
+  await ctx.close();
+})();

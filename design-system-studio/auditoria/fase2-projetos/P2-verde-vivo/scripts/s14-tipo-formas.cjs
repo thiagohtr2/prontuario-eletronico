@@ -1,0 +1,22 @@
+const { withPage, URL } = require('./lib.cjs');
+withPage(async (page, ctx, u) => {
+  await page.getByRole('tab', { name: 'Tipografia' }).click();
+  await page.waitForTimeout(400);
+  await page.getByRole('group', { name: 'Fonte dos títulos' }).getByRole('button', { name: /Fraunces/ }).click();
+  await page.waitForTimeout(600);
+  await u.shot('g7-tipografia-fraunces');
+  const m = await page.locator('main').ariaSnapshot();
+  console.log(m.split('\n').filter(l => /pressed/.test(l)).join('\n'));
+  await page.getByRole('tab', { name: 'Formas e superfícies' }).click();
+  await page.waitForTimeout(600);
+  await u.shot('g7-formas');
+  const m2 = await page.locator('main').ariaSnapshot();
+  const i = m2.indexOf('tablist');
+  console.log(m2.slice(i, m2.indexOf('complementary "Prévia da identidade"')));
+  await page.getByRole('tab', { name: 'Ajustar cores' }).click();
+  await page.waitForTimeout(600);
+  await u.shot('g7-ajustar-cores');
+  const m3 = await page.locator('main').ariaSnapshot();
+  const j = m3.indexOf('tablist');
+  console.log(m3.slice(j, m3.indexOf('complementary "Prévia da identidade"')).slice(0, 6000));
+}, { url: URL + '#/guiado/identidade' });

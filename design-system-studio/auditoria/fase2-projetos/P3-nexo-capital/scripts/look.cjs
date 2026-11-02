@@ -6,6 +6,6 @@ const { open, W } = require('./lib.cjs');
   await page.goto('http://127.0.0.1:4300/' + (hash || ''), { waitUntil: 'networkidle' });
   await page.waitForTimeout(600);
   await page.screenshot({ path: W + '/scripts/' + (out || 'tmp') + '.png', fullPage: full === 'full' });
-  console.log(await page.locator(sel || 'main').ariaSnapshot());
+  console.log(await page.locator(sel || '#conteudo').ariaSnapshot());
   await ctx.close();
 })();

@@ -1,0 +1,23 @@
+const L=require('./lib.cjs');
+(async()=>{
+  const {ctx,page}=await L.open();
+  await page.goto('http://127.0.0.1:4300/#/guiado/entrada',{waitUntil:'networkidle'});
+  await page.getByRole('tab',{name:'Login'}).click(); await page.waitForTimeout(300);
+  let t=Date.now();
+  await page.getByRole('button',{name:/^Seu sistema \| Entrar na sua conta/}).first().click().catch(async e=>{ await page.locator('main button').filter({hasText:'Cartão central com a marca acima'}).first().click(); });
+  await page.waitForTimeout(400);
+  const t1=Date.now()-t;
+  const hint1 = await page.evaluate(()=>{const b=[...document.querySelectorAll('main button')].find(b=>/Continuar/.test(b.innerText)); return b?.parentElement?.innerText+' disabled='+b.disabled});
+  const sel1 = await page.evaluate(()=>{const m=document.querySelector('main').innerText;const k=m.indexOf('Login selecionado');return m.slice(k,k+90)});
+  await L.snap(page,'10-login-escolhido');
+  t=Date.now();
+  await page.getByRole('tab',{name:'Cadastro'}).click(); await page.waitForTimeout(400);
+  const t2=Date.now()-t;
+  await L.snap(page,'10b-cadastro-tab');
+  const i=await L.info(page);
+  const tx=i.text; const k=tx.indexOf('Cadastro\n');
+  console.log({t1,hint1,sel1,t2});
+  console.log('---TEXT---\n'+tx.slice(k, k+1500));
+  console.log('---CTRLS---\n'+i.ctrls.filter(c=>!/^BUTTON "\d+\./.test(c)).slice(0,20).join('\n'));
+  await ctx.close();
+})();

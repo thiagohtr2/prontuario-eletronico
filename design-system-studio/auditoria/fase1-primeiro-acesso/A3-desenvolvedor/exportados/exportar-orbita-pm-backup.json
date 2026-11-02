@@ -1,0 +1,199 @@
+{
+  "kind": "atelier-ui/backup",
+  "exportedAt": "2026-11-02T18:25:53.163Z",
+  "project": {
+    "schema": "atelier-ui/project",
+    "version": 1,
+    "id": "prj_51311cdd",
+    "createdAt": "2026-11-02T18:17:31.968Z",
+    "updatedAt": "2026-11-02T18:24:39.703Z",
+    "meta": {
+      "name": "Orbita PM",
+      "objective": "Gestão de projetos B2B multiempresa (multi-tenant) com papéis e permissões",
+      "description": "SaaS onde cada organização (tenant) gerencia projetos em quadros kanban, convida equipes com papéis (Owner, Admin, Membro, Convidado), acompanha relatórios e gerencia assinatura/faturamento.",
+      "audience": "Empresas de 10 a 500 pessoas: PMOs, líderes de equipe e times de produto",
+      "purpose": "Mover tarefas no kanban e ver o status do projeto em segundos",
+      "projectType": "saas",
+      "projectTypeOther": "",
+      "features": [
+        "Quadro kanban (drag-and-drop)",
+        "Papéis e permissões (RBAC)",
+        "Relatórios e burndown",
+        "Faturamento e planos",
+        "Configurações da organização",
+        "Convites de equipe",
+        "Troca de organização (multi-tenant)"
+      ],
+      "tech": "React 18 + TypeScript + Vite + Tailwind CSS"
+    },
+    "mode": "guided",
+    "depth": "essential",
+    "prefs": {
+      "showLegends": true,
+      "showHints": true
+    },
+    "guided": {
+      "step": "entrega",
+      "completed": [
+        "objetivo",
+        "entrada",
+        "desktop",
+        "mobile",
+        "revisao",
+        "preview",
+        "identidade",
+        "navegacao",
+        "componentes"
+      ],
+      "skeletonApproved": true
+    },
+    "entry": {
+      "flow": "landing-login",
+      "landingId": "aurora-flow",
+      "loginId": "acesso-corporativo",
+      "signupId": "etapas",
+      "landingUsesOriginalColors": false
+    },
+    "layout": {
+      "desktopId": "sidebar-integral-header-global",
+      "mobileId": "topbar-bottom-nav"
+    },
+    "identity": {
+      "paletteId": "azul-institucional",
+      "overrides": {
+        "primary": "#4f46e5",
+        "primaryHover": "#4338ca",
+        "primaryActive": "#3730a3",
+        "primarySoft": "#eef2ff",
+        "focusRing": "#4f46e5",
+        "selected": "#eef2ff",
+        "selectedText": "#4338ca",
+        "link": "#4338ca",
+        "linkHover": "#3730a3",
+        "gradientFrom": "#4f46e5"
+      },
+      "typography": {
+        "heading": "inter",
+        "body": "inter",
+        "baseSize": 14,
+        "headingWeight": 600,
+        "bodyWeight": 400
+      },
+      "geometry": {
+        "radius": "medium",
+        "borderWidth": 1,
+        "shadow": "subtle",
+        "surface": "outlined",
+        "density": "compact",
+        "iconStyle": "outline"
+      }
+    },
+    "navigation": {
+      "header": {
+        "id": "trilha-contexto",
+        "variant": 1
+      },
+      "sidebar": {
+        "id": "seletor-espacos",
+        "variant": 0
+      }
+    },
+    "components": [
+      {
+        "id": "cmp_75723ee1",
+        "categoryId": "botoes",
+        "familyId": "compact-pro",
+        "label": "",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:22:58.980Z"
+      },
+      {
+        "id": "cmp_ce2afbd4",
+        "categoryId": "quadros-kanban",
+        "familyId": "compact-pro",
+        "label": "",
+        "props": {
+          "colunas": "Backlog\nA fazer\nEm andamento\nEm revisão\nConcluído",
+          "cartoes": 3
+        },
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:24:16.922Z"
+      },
+      {
+        "id": "cmp_8123d527",
+        "categoryId": "tabelas",
+        "familyId": "compact-pro",
+        "label": "",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:24:19.554Z"
+      },
+      {
+        "id": "cmp_3bc32b4e",
+        "categoryId": "text-inputs",
+        "familyId": "compact-pro",
+        "label": "",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:24:21.617Z"
+      },
+      {
+        "id": "cmp_e758fef3",
+        "categoryId": "modais",
+        "familyId": "compact-pro",
+        "label": "",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:24:23.608Z"
+      },
+      {
+        "id": "cmp_9d1c845b",
+        "categoryId": "badges-tags",
+        "familyId": "compact-pro",
+        "label": "",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:24:25.485Z"
+      }
+    ],
+    "inspiration": null,
+    "template": null,
+    "prompt": {
+      "excluded": [],
+      "notes": {},
+      "conflictResolutions": {}
+    },
+    "validation": {
+      "config": {
+        "url": "",
+        "routes": [
+          "/"
+        ],
+        "widths": [
+          320,
+          360,
+          375,
+          390,
+          412,
+          430,
+          768,
+          1024,
+          1280,
+          1440
+        ],
+        "manualLogin": false,
+        "waitMs": 800,
+        "checks": {
+          "horizontalOverflow": true,
+          "offscreen": true,
+          "tapTargets": true,
+          "inputFontSize": true
+        },
+        "minTapTarget": 44
+      },
+      "report": null
+    }
+  },
+  "history": []
+}

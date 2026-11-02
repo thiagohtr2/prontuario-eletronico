@@ -1,0 +1,20 @@
+const L = require('./lib');
+const sy = p => p.evaluate(() => Math.round(scrollY));
+(async () => {
+  const { ctx, page } = await L.open('perfil', 'android');
+  await page.goto('http://127.0.0.1:4300/#/guiado/desktop', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(600);
+  console.log('footer inicial', await page.locator('.gd-footer').innerText());
+  L.log('A29 arrastar o dedo até o exemplo (2x)');
+  await L.swipe(page, 180, 650, 150); await L.swipe(page, 180, 650, 250);
+  await L.shot(page, '25-desktop-exemplo');
+  const btn = page.getByRole('button', { name: /Escolher este modelo/ }).first();
+  await btn.scrollIntoViewIfNeeded();
+  const before = await sy(page);
+  L.log('A30 tocar "Escolher este modelo" (Sidebar integral clássica)');
+  await btn.tap(); await page.waitForTimeout(1500);
+  console.log('scroll antes', before, 'depois', await sy(page));
+  await L.shot(page, '26-desktop-apos-escolher');
+  console.log('footer', await page.locator('.gd-footer').innerText());
+  await ctx.close();
+})();

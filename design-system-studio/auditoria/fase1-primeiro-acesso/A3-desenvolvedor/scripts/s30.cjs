@@ -1,0 +1,26 @@
+const { open, shot, aria, W } = require('./lib.cjs');
+(async () => {
+  const { ctx, page, logs } = await open();
+  await page.goto('http://127.0.0.1:4300/#/guiado/componentes', { waitUntil: 'networkidle' });
+  const reg = page.getByRole('region', { name: /No projeto/ });
+  await reg.getByRole('listitem').filter({ hasText: 'Quadros Kanban' }).getByRole('button', { name: 'Personalizar' }).click();
+  await page.waitForTimeout(500);
+  const d = page.getByRole('dialog').first();
+  await d.getByRole('textbox', { name: 'Colunas (uma por linha)' }).fill('Backlog\nA fazer\nEm andamento\nEm revisão\nConcluído');
+  await d.getByRole('spinbutton', { name: 'Cartões por coluna (valor)' }).fill('3');
+  await d.getByRole('spinbutton', { name: 'Cartões por coluna (valor)' }).press('Tab');
+  await page.waitForTimeout(500);
+  await shot(page, '30-kanban-editado');
+  await d.getByRole('button', { name: 'Concluir' }).click();
+  await page.waitForTimeout(300);
+  await page.getByRole('button', { name: /Continuar: Entrega/ }).click();
+  await page.waitForTimeout(1000);
+  console.log('URL', page.url());
+  await shot(page, '30b-entrega');
+  const a = await aria(page, 'main');
+  const lines = a.split('\n').filter(l => !l.includes('/url'));
+  const s = lines.findIndex(l => l.includes('Etapa 10'));
+  console.log(lines.slice(s).join('\n').slice(0, 8000));
+  console.log('LOGS', logs.join('\n'));
+  await ctx.close();
+})();

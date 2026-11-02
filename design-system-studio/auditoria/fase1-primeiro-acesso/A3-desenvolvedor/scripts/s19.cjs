@@ -1,0 +1,20 @@
+const { open, shot, aria } = require('./lib.cjs');
+(async () => {
+  const { ctx, page, logs } = await open();
+  await page.goto('http://127.0.0.1:4300/#/guiado/identidade', { waitUntil: 'networkidle' });
+  await page.getByRole('tab', { name: 'Tipografia' }).click();
+  await page.getByRole('group', { name: 'Tamanho base' }).getByRole('button', { name: '14 px' }).click();
+  await page.getByRole('group', { name: 'Peso dos títulos' }).getByRole('button', { name: 'Semi-negrito' }).click();
+  await page.waitForTimeout(300);
+  await page.getByRole('tab', { name: 'Formas e superfícies' }).click();
+  await page.waitForTimeout(600);
+  await shot(page, '19-formas');
+  await shot(page, '19-formas-full', true);
+  const a = await aria(page, 'main');
+  const lines = a.split('\n').filter(l => !l.includes('/url'));
+  const s = lines.findIndex(l => l.includes('tablist'));
+  const e = lines.findIndex(l => l.includes('Prévia da identidade'));
+  console.log(lines.slice(s, e).join('\n').slice(0, 9000));
+  console.log('LOGS', logs.join('\n'));
+  await ctx.close();
+})();

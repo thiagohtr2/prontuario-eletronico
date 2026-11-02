@@ -1,0 +1,23 @@
+const L = require('./lib');
+const sy = p => p.evaluate(() => Math.round(scrollY));
+(async () => {
+  const { ctx, page } = await L.open('perfil', 'android');
+  await page.goto('http://127.0.0.1:4300/#/guiado/entrada', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(600);
+  L.log('A27 tocar aba "Cadastro"');
+  await page.getByRole('tab', { name: /^Cadastro/ }).tap(); await page.waitForTimeout(600);
+  const t0 = await L.text(page, 20000); const i0 = t0.indexOf('Cadastro\n'); console.log('CADASTRO:', t0.slice(i0, i0 + 500));
+  console.log('footer', await page.locator('.gd-footer').innerText());
+  await L.shot(page, '23-aba-cadastro');
+  L.log('A28 tocar "Continuar: Desktop"');
+  await page.getByRole('button', { name: /Continuar: Desktop/ }).tap(); await page.waitForTimeout(1500);
+  console.log('URL', page.url(), 'scroll', await sy(page));
+  await L.shot(page, '24-passo3-desktop-topo');
+  await L.shot(page, '24-passo3-desktop-inteira', true);
+  const t = await L.text(page, 20000); const i = t.indexOf('Etapa 3'); console.log(t.slice(i, i + 3500));
+  console.log('FIXED', JSON.stringify((await L.fixedBars(page)).filter(f => f.x >= 0)));
+  console.log('OVERFLOW', JSON.stringify(await L.overflow(page)));
+  const m = await L.measure(page); console.log('small', JSON.stringify(m.filter(x => x.small && x.y > 0)));
+  console.log('FONTS', JSON.stringify(await L.fonts(page)));
+  await ctx.close();
+})();

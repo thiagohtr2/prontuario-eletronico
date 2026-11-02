@@ -1,0 +1,193 @@
+- main:
+  - navigation "Você está em":
+    - list:
+      - listitem:
+        - link "Início":
+          - /url: "#/"
+      - listitem: ›Construtor guiado
+      - listitem: ›Componentes
+  - navigation "Etapas do construtor guiado":
+    - text: Esqueleto
+    - list:
+      - listitem:
+        - button "1. Objetivo"
+      - listitem:
+        - button "2. Entrada"
+      - listitem:
+        - button "3. Desktop"
+      - listitem:
+        - button "4. Mobile"
+      - listitem:
+        - button "5. Revisão"
+    - text: Acabamento
+    - list:
+      - listitem:
+        - button "6. Prévia"
+      - listitem:
+        - button "7. Cores"
+      - listitem:
+        - button "8. Navegação"
+      - listitem:
+        - button "9. Componentes"
+      - listitem:
+        - button "10. Entrega"
+  - text: Etapa 9 de 10 · Acabamento
+  - heading "Componentes" [level=1]
+  - paragraph: "Escolha e personalize as peças da interface: botões, campos, cards, tabelas… Etapa opcional."
+  - img
+  - strong: Escolha pelos olhos.
+  - text: Escolha um tipo de componente à esquerda e compare-o nas 16 famílias visuais. Todos usam a paleta global aprovada. Clique em
+  - strong: Adicionar ao projeto
+  - text: para incluí-lo no Master Prompt e personalizar textos, ícones e tamanhos.
+  - complementary "Categorias de componentes":
+    - searchbox "Buscar categoria"
+    - paragraph: Começamos pelos componentes essenciais. Você pode ver todos quando quiser.
+    - group "Campos e controles":
+      - text: Campos e controles
+      - button "9 Text inputs"
+      - button "22 Formulários"
+    - group "Botões e navegação":
+      - text: Botões e navegação
+      - button "23 Botões" [pressed]
+      - button "25 Headers e topbars"
+      - button "27 Tabs"
+    - group "Dados e componentes":
+      - text: Dados e componentes
+      - button "35 Cards"
+      - button "37 Tabelas"
+      - button "39 Badges e tags"
+    - group "Sobreposições e alertas":
+      - text: Sobreposições e alertas
+      - button "50 Modais"
+      - button "54 Alertas"
+    - button "Ver todas as 66 categorias":
+      - img
+      - text: Ver todas as 66 categorias
+  - text: Botões e navegação · 23 de 66
+  - heading "Botões" [level=2]
+  - paragraph: "O botão de ação: o texto, o ícone, o tamanho e o estilo de cada um."
+  - searchbox "Buscar família visual"
+  - button "Escolher a família Soft Pill para Botões": 1. Soft Pill Formas de pílula, cores suaves e nada de bordas. Amigável e leve, como apps de bem-estar.
+  - button "Adicionar ao projeto":
+    - img
+    - text: Adicionar ao projeto
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Escolher a família Swiss Minimal para Botões": 2. Swiss Minimal Cantos retos, linhas finas e tipografia forte. Organizado como um cartaz suíço.
+  - button "Adicionar ao projeto":
+    - img
+    - text: Adicionar ao projeto
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Escolher a família Dark Luxury para Botões": 3. Dark Luxury Fundo escuro profundo, títulos serifados finos e detalhes metálicos discretos. Sofisticado.
+  - button "Adicionar ao projeto":
+    - img
+    - text: Adicionar ao projeto
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Escolher a família Glassmorphism para Botões": 4. Glassmorphism Painéis de vidro fosco translúcidos sobre um fundo com manchas de cor. Moderno e leve.
+  - button "Adicionar ao projeto":
+    - img
+    - text: Adicionar ao projeto
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Escolher a família Gradient Glow para Botões": 5. Gradient Glow Ações com gradiente da cor primária para a de destaque e um brilho suave. Energético e tecnológico.
+  - button "Adicionar ao projeto":
+    - img
+    - text: Adicionar ao projeto
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Escolher a família Neo Brutalist para Botões": 6. Neo Brutalist Bordas pretas grossas, sombras duras deslocadas e cores chapadas. Ousado e direto.
+  - button "Adicionar ao projeto":
+    - img
+    - text: Adicionar ao projeto
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Escolher a família Soft Neumorphic para Botões": 7. Soft Neumorphic Elementos que parecem moldados na própria superfície, com luz e sombra suaves. Tátil.
+  - button "Adicionar ao projeto":
+    - img
+    - text: Adicionar ao projeto
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Escolher a família Apple Precision para Botões": "8. Apple Precision Preciso, limpo e familiar: cantos médios, linhas muito finas e fonte do sistema."
+  - button "Adicionar ao projeto":
+    - img
+    - text: Adicionar ao projeto
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Escolher a família Bento Soft para Botões": "9. Bento Soft Blocos arredondados como uma marmita bento: cada informação em seu ladrilho colorido."
+  - button "Adicionar ao projeto":
+    - img
+    - text: Adicionar ao projeto
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Escolher a família Aurora para Botões": 10. Aurora Fundo escuro com luzes coloridas como uma aurora boreal e painéis translúcidos.
+  - button "Adicionar ao projeto":
+    - img
+    - text: Adicionar ao projeto
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Escolher a família Industrial para Botões": 11. Industrial Fonte monoespaçada, rótulos técnicos, marcações e listras de atenção. Painel de máquina.
+  - button "Adicionar ao projeto":
+    - img
+    - text: Adicionar ao projeto
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Escolher a família Playful para Botões": "12. Playful Divertido e cheio de cor: cantos bem redondos, botões \"fofinhos\" com relevo e adesivos."
+  - button "Adicionar ao projeto":
+    - img
+    - text: Adicionar ao projeto
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Escolher a família Compact Pro para Botões": "13. Compact Pro Denso e eficiente, para ferramentas profissionais: mais informação em menos espaço."
+  - button "Adicionar ao projeto":
+    - img
+    - text: Adicionar ao projeto
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Escolher a família Midnight Gold para Botões": 14. Midnight Gold Azul-noite profundo com detalhes dourados metálicos. Premium e noturno.
+  - button "Adicionar ao projeto":
+    - img
+    - text: Adicionar ao projeto
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Escolher a família Retro Paper para Botões": 15. Retro Paper Papel envelhecido, tinta, carimbos e máquina de escrever. Nostálgico e artesanal.
+  - button "Adicionar ao projeto":
+    - img
+    - text: Adicionar ao projeto
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Escolher a família Modern Material para Botões": "16. Modern Material Inspirado no Material moderno: superfícies tonais, botões em pílula e botão flutuante."
+  - button "Adicionar ao projeto":
+    - img
+    - text: Adicionar ao projeto
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - region "No projeto 0":
+    - heading "No projeto 0" [level=2]
+    - paragraph: Cada componente adicionado entra no Master Prompt com sua família, configuração e exceções.
+    - img
+    - paragraph: Nenhum componente adicionado ainda
+    - paragraph: Escolha uma família acima e clique em “Adicionar ao projeto”.
+  - button "Voltar":
+    - img
+    - text: Voltar
+  - 'button "Continuar: Entrega"':
+    - text: "Continuar: Entrega"
+    - img

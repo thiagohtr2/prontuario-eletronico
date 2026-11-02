@@ -1,0 +1,21 @@
+const L = require('./lib');
+const sy = p => p.evaluate(() => Math.round(scrollY));
+(async () => {
+  const { ctx, page } = await L.open('perfil', 'android');
+  await page.goto('http://127.0.0.1:4300/#/guiado/entrada', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(600);
+  L.log('A11 rolar (wheel 550) até ver as opções');
+  await page.mouse.move(180, 400); await page.mouse.wheel(0, 550); await page.waitForTimeout(500);
+  await L.shot(page, '08-passo2-opcoes-visiveis');
+  const before = await sy(page);
+  L.log('A12 tocar "Landing page com chamada para login"');
+  await page.getByRole('button', { name: /Landing page com chamada para login/ }).tap();
+  await page.waitForTimeout(1200);
+  console.log('scroll antes', before, 'depois', await sy(page), 'URL', page.url());
+  await L.shot(page, '09-passo2-apos-escolher');
+  const t = await L.text(page, 12000); console.log('TEXT:\n' + t.slice(t.indexOf('Etapa 2'), t.indexOf('Etapa 2') + 2500));
+  console.log('FIXED', JSON.stringify((await L.fixedBars(page)).filter(f => f.x >= 0)));
+  const m = await L.measure(page);
+  for (const x of m.filter(x => x.y > 240)) console.log(JSON.stringify(x));
+  await ctx.close();
+})();

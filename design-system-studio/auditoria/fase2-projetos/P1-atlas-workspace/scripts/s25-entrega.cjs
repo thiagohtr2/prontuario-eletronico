@@ -1,0 +1,20 @@
+const { open, BASE } = require('./lib.cjs');
+(async () => {
+  const s = await open({ url: BASE + '#/guiado/componentes' });
+  const p = s.page;
+  const reg = p.getByRole('region', { name: /No projeto/ });
+  await reg.scrollIntoViewIfNeeded();
+  await s.shot('26-componentes-no-projeto', { dir: 'capturas', locator: reg });
+  await reg.getByRole('button', { name: 'Personalizar' }).first().click();
+  await p.waitForTimeout(800);
+  await s.shot('25-personalizar-cards', { dir: 'capturas', locator: p.getByRole('dialog').first() });
+  await p.getByRole('dialog').first().getByRole('button', { name: 'Concluir' }).click();
+  await p.waitForTimeout(400);
+  await p.getByRole('button', { name: 'Continuar: Entrega' }).click();
+  await p.waitForTimeout(1200);
+  console.log('URL', p.url());
+  await s.shot('27-entrega', { dir: 'tmp' });
+  await s.shot('27-entrega-full', { dir: 'tmp', full: true });
+  console.log((await p.locator('main#conteudo').ariaSnapshot()).split('\n').filter(l => !l.includes('/url') && !l.includes('- img')).slice(33, 300).join('\n'));
+  await s.done();
+})();

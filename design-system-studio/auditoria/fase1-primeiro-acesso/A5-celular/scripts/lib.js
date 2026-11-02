@@ -89,3 +89,18 @@ async function fixedBars(page) {
 }
 async function text(page, max = 3000) { return (await page.evaluate(() => document.body.innerText)).slice(0, max); }
 module.exports = { open, shot, measure, fonts, overflow, fixedBars, text, log, BASE, DEVICES };
+async function swipe(page, x, y1, y2, steps = 12) {
+  const cdp = page.__cdp || (page.__cdp = await page.context().newCDPSession(page));
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x, y: y1 }] });
+  for (let i = 1; i <= steps; i++) { await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: x + 0, y: y1 + (y2 - y1) * i / steps }] }); await new Promise(r => setTimeout(r, 16)); }
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+  await page.waitForTimeout(700);
+}
+async function hswipe(page, y, x1, x2, steps = 12) {
+  const cdp = page.__cdp || (page.__cdp = await page.context().newCDPSession(page));
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchStart', touchPoints: [{ x: x1, y }] });
+  for (let i = 1; i <= steps; i++) { await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: x1 + (x2 - x1) * i / steps, y }] }); await new Promise(r => setTimeout(r, 16)); }
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+  await page.waitForTimeout(700);
+}
+module.exports.swipe = swipe; module.exports.hswipe = hswipe;

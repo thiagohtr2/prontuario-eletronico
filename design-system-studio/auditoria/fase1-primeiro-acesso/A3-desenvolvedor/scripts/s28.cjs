@@ -1,0 +1,21 @@
+const { open, shot, aria, W } = require('./lib.cjs');
+const fs = require('fs');
+(async () => {
+  const { ctx, page, logs } = await open();
+  await page.goto('http://127.0.0.1:4300/#/guiado/componentes', { waitUntil: 'networkidle' });
+  await page.getByRole('region', { name: /No projeto/ }).getByRole('button', { name: 'Prompt deste elemento' }).click();
+  await page.waitForTimeout(600);
+  const d = page.getByRole('dialog').last();
+  const txt = await d.innerText();
+  fs.writeFileSync(W + '/exportados/prompt-elemento-botoes-compactpro.txt', txt);
+  const i = txt.indexOf('## Identidade herdada');
+  console.log(txt.slice(0, i > 0 ? i : 5000));
+  await page.keyboard.press('Escape');
+  await page.waitForTimeout(300);
+  await page.getByRole('button', { name: /Ver todas as 66 categorias/ }).click();
+  await page.waitForTimeout(500);
+  const cats = await page.getByRole('complementary', { name: 'Categorias de componentes' }).innerText();
+  console.log('CATS:\n' + cats.replace(/\n+/g, ' | '));
+  console.log('LOGS', logs.join('\n'));
+  await ctx.close();
+})();

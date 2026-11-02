@@ -8,11 +8,11 @@ const sy = p => p.evaluate(() => Math.round(scrollY));
   await page.mouse.move(180, 400); await page.mouse.wheel(0, 300); await page.waitForTimeout(500);
   const before = await sy(page);
   L.log('A05 tocar card "Aplicativo ou SaaS"');
-  await page.getByRole('button', { name: /Aplicativo ou SaaS/ }).tap();
+  await page.getByRole('radio', { name: /Aplicativo ou SaaS/ }).tap();
   await page.waitForTimeout(800);
   console.log('scroll antes', before, 'depois', await sy(page));
   await L.shot(page, '04-objetivo-app-selecionado');
-  const pressed = await page.getByRole('button', { name: /Aplicativo ou SaaS/ }).evaluate(e => ({ ap: e.getAttribute('aria-pressed'), cls: e.className }));
+  const pressed = await page.getByRole('radio', { name: /Aplicativo ou SaaS/ }).evaluate(e => ({ ap: e.getAttribute('aria-checked'), cls: e.className }));
   console.log('estado card', JSON.stringify(pressed));
   console.log('footer', JSON.stringify(await L.fixedBars(page)));
   // name field

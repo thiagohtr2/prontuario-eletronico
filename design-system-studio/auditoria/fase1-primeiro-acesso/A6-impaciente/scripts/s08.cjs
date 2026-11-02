@@ -1,0 +1,22 @@
+const L=require('./lib.cjs');
+(async()=>{
+  const {ctx,page}=await L.open();
+  await page.goto('http://127.0.0.1:4300/#/guiado/entrada',{waitUntil:'networkidle'});
+  await page.getByRole('tab',{name:'Landing page'}).click();
+  await page.waitForTimeout(300);
+  const rec = await page.evaluate(()=>(document.body.innerText.match(/recomend\w*|sugest\w*|padrão/gi)||[]));
+  console.log('recommend words:',rec);
+  await page.mouse.wheel(0,500); await page.waitForTimeout(400);
+  await L.snap(page,'08-landing-scroll');
+  let t=Date.now();
+  await page.getByRole('button',{name:/^Aurora Flow/}).click();
+  await page.waitForTimeout(400);
+  const tClick=Date.now()-t;
+  await L.snap(page,'08b-landing-escolhida');
+  const sel = await page.evaluate(()=>{const m=document.querySelector('main');return m.innerText.slice(m.innerText.indexOf('Landing selecionada'), m.innerText.indexOf('Landing selecionada')+200)});
+  const footer = await page.evaluate(()=>[...document.querySelectorAll('main button')].filter(b=>/Continuar/.test(b.innerText)).map(b=>b.innerText+' disabled='+b.disabled));
+  const hint = await page.evaluate(()=>{const b=[...document.querySelectorAll('main button')].find(b=>/Continuar/.test(b.innerText)); return b?.parentElement?.innerText});
+  console.log({tClick,sel,footer,hint, y: await page.evaluate(()=>scrollY)});
+  console.log('LOGS',page._logs);
+  await ctx.close();
+})();

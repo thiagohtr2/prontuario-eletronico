@@ -1,0 +1,21 @@
+const L = require('./lib');
+const sy = p => p.evaluate(() => Math.round(scrollY));
+(async () => {
+  const { ctx, page } = await L.open('perfil', 'android');
+  await page.goto('http://127.0.0.1:4300/#/guiado/entrada', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(600);
+  L.log('A15 tocar aba "Landing page"');
+  await page.getByRole('tab', { name: /Landing page/ }).tap();
+  await page.waitForTimeout(1000);
+  console.log('scroll', await sy(page));
+  await L.shot(page, '12-passo2-aba-landing');
+  await L.shot(page, '12-passo2-aba-landing-inteira', true);
+  const t = await L.text(page, 15000); console.log('TEXT:\n' + t.slice(t.indexOf('Como as pessoas entram'), t.indexOf('Como as pessoas entram') + 3000));
+  const m = await L.measure(page);
+  console.log('small targets:'); for (const x of m.filter(x => x.small && x.y > 0)) console.log(JSON.stringify(x));
+  console.log('targets count', m.length);
+  for (const x of m.filter(x => x.y > 400).slice(0, 40)) console.log(JSON.stringify(x));
+  console.log('FONTS', JSON.stringify(await L.fonts(page)));
+  console.log('IMG', JSON.stringify(await page.evaluate(() => [...document.querySelectorAll('main img, main iframe, main svg')].slice(0, 8).map(e => { const r = e.getBoundingClientRect(); return e.tagName + ' ' + Math.round(r.width) + 'x' + Math.round(r.height); }))));
+  await ctx.close();
+})();

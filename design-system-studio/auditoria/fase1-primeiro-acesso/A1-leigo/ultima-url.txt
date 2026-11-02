@@ -1,1 +1,1 @@
-http://127.0.0.1:4300/#/guiado/objetivo
+http://127.0.0.1:4300/#/guiado/navegacao
