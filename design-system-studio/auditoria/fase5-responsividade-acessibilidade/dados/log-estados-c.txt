@@ -18,3 +18,11 @@
 640 previa-landing fit=true h=942/1024 body=779 foot=77 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=color-contrast:1,landmark-banner-is-top-level:1,landmark-contentinfo-is-top-level:1
 640 previa-login fit=true h=942/1024 body=779 foot=77 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=
 640 previa-cadastro fit=true h=942/1024 body=779 foot=77 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=
+640 prompt-individual fit=true h=786/1024 body=600 foot=77 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=scrollable-region-focusable:1
+640 editor-componente fit=true h=942/1024 body=756 foot=77 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=aria-required-children:5,color-contrast:4
+640 editor-template fit=true h=942/1024 body=746 foot=110 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=color-contrast:4,landmark-no-duplicate-banner:1,scrollable-region-focusable:1
+640 visualizador-inspiracao fit=true h=942/1024 body=700 foot=133 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=color-contrast:4,landmark-no-duplicate-banner:1,landmark-unique:1
+640 detalhe-navegacao fit=true h=942/1024 body=756 foot=77 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=color-contrast:2,heading-order:1,landmark-no-duplicate-banner:1
+640 confirmar-limpar fit=true h=251/1024 body=65 foot=77 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=
+640 drawer-celular-previa fit=false h=740/1024 body=null foot=null out=1 hOv=0 focus0=true esc=0 esc→close=true back=true axe=
+640 menu-header-previa fit=false h=243/1024 body=null foot=null out=2 hOv=0 focus0=false esc=40 esc→close=true back=true axe=aria-required-parent:4

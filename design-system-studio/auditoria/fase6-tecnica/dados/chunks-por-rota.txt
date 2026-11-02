@@ -1,0 +1,19 @@
+rota(chunk) | arquivos | JS bruto KB | JS gzip KB | CSS gzip KB
+Home-CsIdmTa6.js | 8 | 874 | 267 | 9
+FreeHome-BZZozxGx.js | 8 | 869 | 265 | 9
+GuidedStep-BVXEFATf.js | 38 | 1689 | 497 | 32
+ProjectGoalPage-DANy_rJq.js | 6 | 338 | 106 | 9
+LandingPage-ccU0h0TH.js | 18 | 1274 | 379 | 10
+LoginPage-BiZyUlCe.js | 17 | 1268 | 377 | 10
+SignupPage-BfjaVFhc.js | 17 | 1268 | 377 | 10
+DesktopPage-8XFtFo7q.js | 16 | 1198 | 363 | 13
+MobilePage-C3Fn8L0N.js | 16 | 1198 | 363 | 13
+PreviewPage-DSyrA5f8.js | 24 | 1478 | 434 | 25
+ColorPage-DQ8qzNZm.js | 17 | 1118 | 342 | 9
+NavigationPage-C8Dwn44B.js | 18 | 1202 | 365 | 18
+ComponentsPage-DBQ0V0dH.js | 16 | 1242 | 374 | 11
+TemplatesPage-B3gY76Be.js | 19 | 1329 | 397 | 11
+PromptCenter-DpIi_6M3.js | 15 | 1103 | 338 | 9
+ExportPage-Dj6Tkbe3.js | 16 | 1179 | 362 | 9
+ValidationPage-sUC1CE0m.js | 7 | 472 | 145 | 9
+ProjectPage-Bbm4xYe8.js | 11 | 874 | 268 | 9

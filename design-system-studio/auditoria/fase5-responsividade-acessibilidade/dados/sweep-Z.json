@@ -1,0 +1,5724 @@
+[
+  {
+    "id": "home",
+    "route": "/",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 1782,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [
+        {
+          "el": "div.home-mode__art \"Objetivo → Entrada → Desktop → Mobile → Revisão\"",
+          "text": "Objetivo → Entrada → Desktop → Mobile → Revisão",
+          "scrollW": 556,
+          "clientW": 556,
+          "scrollH": 152,
+          "clientH": 146,
+          "ellipsis": false,
+          "lineClamp": false,
+          "dir": "y",
+          "preview": false
+        }
+      ],
+      "truncatedCount": 1,
+      "truncatedPreviewCount": 0,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 0,
+      "smallTextPreviewMin": null,
+      "offscreenFocusable": 37,
+      "targetsTotal": 8,
+      "targetsLt44": 0,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 0,
+      "overlappingTargets": [],
+      "closeTargets": [],
+      "fields": 0,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": null,
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/home--640x400-zoom200.png",
+    "shotFull": "capturas/sw/home--640x400-zoom200--full.png",
+    "ms": 2204
+  },
+  {
+    "id": "livre",
+    "route": "/livre",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/livre",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/livre",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 2184,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 0,
+      "smallTextPreviewMin": null,
+      "offscreenFocusable": 37,
+      "targetsTotal": 21,
+      "targetsLt44": 0,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 0,
+      "overlappingTargets": [],
+      "closeTargets": [],
+      "fields": 0,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [
+        {
+          "el": "span.free-card__icon",
+          "w": 40
+        },
+        {
+          "el": "span.free-card__title \"Objetivo do projeto\"",
+          "w": 138
+        },
+        {
+          "el": "span.free-card__icon",
+          "w": 40
+        },
+        {
+          "el": "span.free-card__title \"Landing pages\"",
+          "w": 107
+        },
+        {
+          "el": "span.free-card__icon",
+          "w": 40
+        },
+        {
+          "el": "span.free-card__title \"Login\"",
+          "w": 40
+        },
+        {
+          "el": "span.free-card__status \"Acesso corporativo\"",
+          "w": 145
+        },
+        {
+          "el": "span.free-card__icon",
+          "w": 40
+        },
+        {
+          "el": "span.free-card__title \"Cadastro\"",
+          "w": 66
+        },
+        {
+          "el": "span.free-card__icon",
+          "w": 40
+        }
+      ],
+      "cardWidths": null,
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/livre--640x400-zoom200.png",
+    "shotFull": "capturas/sw/livre--640x400-zoom200--full.png",
+    "ms": 1382
+  },
+  {
+    "id": "g-objetivo",
+    "route": "/guiado/objetivo",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/guiado/objetivo",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/guiado/objetivo",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 2793,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 0,
+      "smallTextPreviewMin": null,
+      "offscreenFocusable": 37,
+      "targetsTotal": 48,
+      "targetsLt44": 14,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [
+        [
+          "button.gd-step 117x31",
+          10
+        ],
+        [
+          "button. 26x26",
+          4
+        ]
+      ],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 8,
+      "overlappingTargets": [],
+      "closeTargets": [
+        {
+          "a": "button.gd-step \"Objetivo do projeto\"",
+          "b": "button.gd-step \"Landing, login e cadastro\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Landing, login e cadastro\"",
+          "b": "button.gd-step \"Arquitetura do computador\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do computador\"",
+          "b": "button.gd-step \"Arquitetura do celular\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do celular\"",
+          "b": "button.gd-step \"Revisão do esqueleto\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Prévia integrada\"",
+          "b": "button.gd-step \"Identidade visual\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Identidade visual\"",
+          "b": "button.gd-step \"Headers e sidebars\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Headers e sidebars\"",
+          "b": "button.gd-step \"Componentes\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Componentes\"",
+          "b": "button.gd-step \"Master Prompt\"",
+          "gap": 6
+        }
+      ],
+      "fields": 7,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        },
+        {
+          "el": "div.gd-footer \"Início Continuar: Entrada\"",
+          "pos": "sticky",
+          "top": 331,
+          "bottom": 400,
+          "h": 69,
+          "w": 608
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": null,
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [
+      {
+        "el": "h2.ui-section__title \"O que você pretende construir?\"",
+        "by": "div.gd-footer \"Início Continuar: Entrada\"",
+        "coverer": "div.gd-footer \"Início Continuar: Entrada\"",
+        "pos": "sticky",
+        "y": 381
+      },
+      {
+        "el": "input.ui-input",
+        "by": "div.gd-footer \"Início Continuar: Entrada\"",
+        "coverer": "div.gd-footer \"Início Continuar: Entrada\"",
+        "pos": "sticky",
+        "y": 1302
+      },
+      {
+        "el": "label.ui-label \"Objetivo\"",
+        "by": "div.gd-footer \"Início Continuar: Entrada\"",
+        "coverer": "div.gd-footer \"Início Continuar: Entrada\"",
+        "pos": "sticky",
+        "y": 1351
+      },
+      {
+        "el": "input.ui-input",
+        "by": "div.gd-footer \"Início Continuar: Entrada\"",
+        "coverer": "div.gd-footer \"Início Continuar: Entrada\"",
+        "pos": "sticky",
+        "y": 1644
+      },
+      {
+        "el": "p.ui-section__desc \"Liste as partes principais do sistema. E\"",
+        "by": "div.gd-footer \"Início Continuar: Entrada\"",
+        "coverer": "div.gd-footer \"Início Continuar: Entrada\"",
+        "pos": "sticky",
+        "y": 1940
+      },
+      {
+        "el": "input.ui-input \"Nova funcionalidade\"",
+        "by": "div.gd-footer \"Início Continuar: Entrada\"",
+        "coverer": "div.gd-footer \"Início Continuar: Entrada\"",
+        "pos": "sticky",
+        "y": 1990
+      },
+      {
+        "el": "button.ui-btn.ui-btn--secondary \"Adicionar\"",
+        "by": "div.gd-footer \"Início Continuar: Entrada\"",
+        "coverer": "div.gd-footer \"Início Continuar: Entrada\"",
+        "pos": "sticky",
+        "y": 1990
+      }
+    ],
+    "shot": "capturas/sw/g-objetivo--640x400-zoom200.png",
+    "shotFull": "capturas/sw/g-objetivo--640x400-zoom200--full.png",
+    "ms": 1892
+  },
+  {
+    "id": "g-entrada",
+    "route": "/guiado/entrada",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/guiado/entrada",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/guiado/entrada",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 1563,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [
+        {
+          "el": "text",
+          "fontSize": 11,
+          "effective": 11
+        },
+        {
+          "el": "text",
+          "fontSize": 11,
+          "effective": 11
+        },
+        {
+          "el": "text",
+          "fontSize": 11,
+          "effective": 11
+        },
+        {
+          "el": "text",
+          "fontSize": 11,
+          "effective": 11
+        },
+        {
+          "el": "text",
+          "fontSize": 9.5,
+          "effective": 9.5
+        },
+        {
+          "el": "text",
+          "fontSize": 11,
+          "effective": 11
+        },
+        {
+          "el": "text",
+          "fontSize": 11,
+          "effective": 11
+        },
+        {
+          "el": "text",
+          "fontSize": 9.5,
+          "effective": 9.5
+        },
+        {
+          "el": "text",
+          "fontSize": 11,
+          "effective": 11
+        },
+        {
+          "el": "text",
+          "fontSize": 11,
+          "effective": 11
+        },
+        {
+          "el": "text",
+          "fontSize": 10.5,
+          "effective": 10.5
+        },
+        {
+          "el": "text",
+          "fontSize": 10.5,
+          "effective": 10.5
+        },
+        {
+          "el": "text",
+          "fontSize": 10.5,
+          "effective": 10.5
+        }
+      ],
+      "smallTextCount": 13,
+      "smallTextPreviewCount": 0,
+      "smallTextPreviewMin": null,
+      "offscreenFocusable": 37,
+      "targetsTotal": 25,
+      "targetsLt44": 10,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [
+        [
+          "button.gd-step 117x31",
+          10
+        ]
+      ],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 12,
+      "overlappingTargets": [
+        {
+          "a": "button.ui-tab \"Como as pessoas entram\"",
+          "b": "button.ui-btn.ui-btn--secondary \"Voltar\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-tab \"Cadastro\"",
+          "b": "button.ui-btn.ui-btn--primary \"Continuar: Desktop\"",
+          "gap": -1
+        }
+      ],
+      "closeTargets": [
+        {
+          "a": "button.gd-step \"Objetivo do projeto\"",
+          "b": "button.gd-step \"Landing, login e cadastro\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Landing, login e cadastro\"",
+          "b": "button.gd-step \"Arquitetura do computador\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do computador\"",
+          "b": "button.gd-step \"Arquitetura do celular\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do celular\"",
+          "b": "button.gd-step \"Revisão do esqueleto\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Prévia integrada\"",
+          "b": "button.gd-step \"Identidade visual\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Identidade visual\"",
+          "b": "button.gd-step \"Headers e sidebars\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Headers e sidebars\"",
+          "b": "button.gd-step \"Componentes\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Componentes\"",
+          "b": "button.gd-step \"Master Prompt\"",
+          "gap": 6
+        },
+        {
+          "a": "button.ui-tab \"Como as pessoas entram\"",
+          "b": "button.ui-tab \"Login\"",
+          "gap": 4
+        },
+        {
+          "a": "button.ui-tab \"Login\"",
+          "b": "button.ui-tab \"Cadastro\"",
+          "gap": 4
+        }
+      ],
+      "fields": 0,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        },
+        {
+          "el": "div.gd-footer \"Voltar Continuar: Desktop\"",
+          "pos": "sticky",
+          "top": 331,
+          "bottom": 400,
+          "h": 69,
+          "w": 608
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": {
+        "n": 5,
+        "min": 298,
+        "max": 298
+      },
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [
+      {
+        "el": "button.ui-tab \"Como as pessoas entram\"",
+        "by": "div.gd-footer \"Voltar Continuar: Desktop\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Desktop\"",
+        "pos": "sticky",
+        "y": 394
+      },
+      {
+        "el": "button.ui-tab \"Login\"",
+        "by": "div.gd-footer \"Voltar Continuar: Desktop\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Desktop\"",
+        "pos": "sticky",
+        "y": 394
+      },
+      {
+        "el": "button.ui-tab \"Cadastro\"",
+        "by": "div.gd-footer \"Voltar Continuar: Desktop\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Desktop\"",
+        "pos": "sticky",
+        "y": 394
+      },
+      {
+        "el": "button.ui-option__hit \"Landing Login Sistema Landing page com c\"",
+        "by": "div.gd-footer \"Voltar Continuar: Desktop\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Desktop\"",
+        "pos": "sticky",
+        "y": 685
+      },
+      {
+        "el": "button.ui-option__hit \"Landing (uma página) Landing page sem lo\"",
+        "by": "button.ui-btn.ui-btn--primary \"Continuar: Desktop\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Desktop\"",
+        "pos": "sticky",
+        "y": 665
+      }
+    ],
+    "shot": "capturas/sw/g-entrada--640x400-zoom200.png",
+    "shotFull": "capturas/sw/g-entrada--640x400-zoom200--full.png",
+    "ms": 1494
+  },
+  {
+    "id": "g-desktop",
+    "route": "/guiado/desktop",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/guiado/desktop",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/guiado/desktop",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 10860,
+      "overflow": [
+        {
+          "el": "div",
+          "left": 602,
+          "right": 648,
+          "width": 47,
+          "preview": true
+        }
+      ],
+      "overflowCount": 1,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [
+        {
+          "el": "span.lay-chip \"HEADER\"",
+          "fontSize": 10,
+          "effective": 10.1
+        },
+        {
+          "el": "span.lay-chip \"SIDEBAR\"",
+          "fontSize": 10,
+          "effective": 10
+        },
+        {
+          "el": "span.lay-chip \"RAIL\"",
+          "fontSize": 10,
+          "effective": 10
+        },
+        {
+          "el": "span.lay-chip \"CONTEÚDO\"",
+          "fontSize": 10,
+          "effective": 10
+        },
+        {
+          "el": "span.lay-chip \"PAINEL\"",
+          "fontSize": 10,
+          "effective": 9.9
+        }
+      ],
+      "smallTextCount": 5,
+      "smallTextPreviewCount": 141,
+      "smallTextPreviewMin": 7.4,
+      "offscreenFocusable": 37,
+      "targetsTotal": 73,
+      "targetsLt44": 14,
+      "targetsLt24": 4,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [
+        [
+          "button.gd-step 117x31",
+          10
+        ],
+        [
+          "button.ui-term 84x20",
+          1
+        ],
+        [
+          "button.ui-term 73x20",
+          1
+        ],
+        [
+          "button.ui-term 91x20",
+          1
+        ],
+        [
+          "button.ui-term 48x21",
+          1
+        ]
+      ],
+      "targetsLt24Examples": [
+        {
+          "el": "button.ui-term \"barra superior\"",
+          "w": 84,
+          "h": 20
+        },
+        {
+          "el": "button.ui-term \"menu lateral\"",
+          "w": 73,
+          "h": 20
+        },
+        {
+          "el": "button.ui-term \"trilho de ícones\"",
+          "w": 91,
+          "h": 20
+        },
+        {
+          "el": "button.ui-term \"sidebar\"",
+          "w": 48,
+          "h": 21
+        }
+      ],
+      "closeTargetsCount": 8,
+      "overlappingTargets": [],
+      "closeTargets": [
+        {
+          "a": "button.gd-step \"Objetivo do projeto\"",
+          "b": "button.gd-step \"Landing, login e cadastro\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Landing, login e cadastro\"",
+          "b": "button.gd-step \"Arquitetura do computador\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do computador\"",
+          "b": "button.gd-step \"Arquitetura do celular\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do celular\"",
+          "b": "button.gd-step \"Revisão do esqueleto\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Prévia integrada\"",
+          "b": "button.gd-step \"Identidade visual\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Identidade visual\"",
+          "b": "button.gd-step \"Headers e sidebars\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Headers e sidebars\"",
+          "b": "button.gd-step \"Componentes\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Componentes\"",
+          "b": "button.gd-step \"Master Prompt\"",
+          "gap": 6
+        }
+      ],
+      "fields": 0,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        },
+        {
+          "el": "div.gd-footer \"Voltar Continuar: Mobile\"",
+          "pos": "sticky",
+          "top": 331,
+          "bottom": 400,
+          "h": 69,
+          "w": 608
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": {
+        "n": 42,
+        "min": 296,
+        "max": 296
+      },
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [
+      {
+        "el": "label.ui-switch.lay-legend-switch \"Mostrar legendas nos desenhos\"",
+        "by": "div.gd-footer \"Voltar Continuar: Mobile\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Mobile\"",
+        "pos": "sticky",
+        "y": 392
+      },
+      {
+        "el": "p.lay-section__desc \"O menu fica colado na lateral, do topo a\"",
+        "by": "div.gd-footer \"Voltar Continuar: Mobile\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Mobile\"",
+        "pos": "sticky",
+        "y": 1620
+      }
+    ],
+    "shot": "capturas/sw/g-desktop--640x400-zoom200.png",
+    "shotFull": "capturas/sw/g-desktop--640x400-zoom200--full.png",
+    "ms": 5696
+  },
+  {
+    "id": "g-mobile",
+    "route": "/guiado/mobile",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/guiado/mobile",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/guiado/mobile",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 2428,
+      "overflow": [
+        {
+          "el": "div.lay-mob-media",
+          "left": 609,
+          "right": 743,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 757,
+          "right": 891,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 905,
+          "right": 1039,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1053,
+          "right": 1187,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1201,
+          "right": 1335,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1349,
+          "right": 1483,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1497,
+          "right": 1631,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1645,
+          "right": 1779,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1793,
+          "right": 1927,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1941,
+          "right": 2075,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2089,
+          "right": 2223,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2237,
+          "right": 2371,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2385,
+          "right": 2519,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2533,
+          "right": 2667,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2681,
+          "right": 2815,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2829,
+          "right": 2963,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2977,
+          "right": 3111,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3125,
+          "right": 3259,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3273,
+          "right": 3407,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3421,
+          "right": 3555,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3569,
+          "right": 3703,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3717,
+          "right": 3851,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3865,
+          "right": 3999,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 4013,
+          "right": 4147,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "path",
+          "left": 4202,
+          "right": 4212,
+          "width": 10,
+          "preview": false
+        }
+      ],
+      "overflowCount": 41,
+      "truncated": [
+        {
+          "el": "span.ui-option__title \"Bottom Navigation com drawer de opções\"",
+          "text": "Bottom Navigation com drawer de opções",
+          "scrollW": 110,
+          "clientW": 110,
+          "scrollH": 70,
+          "clientH": 53,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        }
+      ],
+      "truncatedCount": 1,
+      "truncatedPreviewCount": 0,
+      "smallText": [
+        {
+          "el": "span.lay-chip \"HEADER\"",
+          "fontSize": 10,
+          "effective": 10.1
+        },
+        {
+          "el": "span.lay-chip \"MENU INFERIOR\"",
+          "fontSize": 10,
+          "effective": 10
+        },
+        {
+          "el": "span.lay-chip \"DRAWER\"",
+          "fontSize": 10,
+          "effective": 10
+        },
+        {
+          "el": "span.lay-chip \"CONTEÚDO\"",
+          "fontSize": 10,
+          "effective": 10
+        }
+      ],
+      "smallTextCount": 4,
+      "smallTextPreviewCount": 3,
+      "smallTextPreviewMin": 10,
+      "offscreenFocusable": 37,
+      "targetsTotal": 74,
+      "targetsLt44": 13,
+      "targetsLt24": 3,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 2,
+      "targetsLt44Groups": [
+        [
+          "button.gd-step 117x31",
+          10
+        ],
+        [
+          "button.ui-term 84x20",
+          1
+        ],
+        [
+          "button.ui-term 87x20",
+          1
+        ],
+        [
+          "button.ui-term 104x20",
+          1
+        ]
+      ],
+      "targetsLt24Examples": [
+        {
+          "el": "button.ui-term \"barra superior\"",
+          "w": 84,
+          "h": 20
+        },
+        {
+          "el": "button.ui-term \"menu embaixo\"",
+          "w": 87,
+          "h": 20
+        },
+        {
+          "el": "button.ui-term \"menu que desliza\"",
+          "w": 104,
+          "h": 20
+        }
+      ],
+      "closeTargetsCount": 8,
+      "overlappingTargets": [],
+      "closeTargets": [
+        {
+          "a": "button.gd-step \"Objetivo do projeto\"",
+          "b": "button.gd-step \"Landing, login e cadastro\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Landing, login e cadastro\"",
+          "b": "button.gd-step \"Arquitetura do computador\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do computador\"",
+          "b": "button.gd-step \"Arquitetura do celular\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do celular\"",
+          "b": "button.gd-step \"Revisão do esqueleto\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Prévia integrada\"",
+          "b": "button.gd-step \"Identidade visual\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Identidade visual\"",
+          "b": "button.gd-step \"Headers e sidebars\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Headers e sidebars\"",
+          "b": "button.gd-step \"Componentes\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Componentes\"",
+          "b": "button.gd-step \"Master Prompt\"",
+          "gap": 6
+        }
+      ],
+      "fields": 0,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        },
+        {
+          "el": "div.gd-footer \"Voltar Continuar: Revisão\"",
+          "pos": "sticky",
+          "top": 331,
+          "bottom": 400,
+          "h": 69,
+          "w": 608
+        }
+      ],
+      "narrowCards": [
+        {
+          "el": "div.lay-mob-card \"Bottom Navigation clássica Sugerido\"",
+          "w": 136
+        },
+        {
+          "el": "div.ui-option \"Bottom Navigation clássica Sugerido\"",
+          "w": 136
+        },
+        {
+          "el": "div.lay-mob-card \"Bottom Navigation com cinco destinos\"",
+          "w": 136
+        },
+        {
+          "el": "div.ui-option \"Bottom Navigation com cinco destinos\"",
+          "w": 136
+        },
+        {
+          "el": "div.lay-mob-card \"Dock flutuante\"",
+          "w": 136
+        },
+        {
+          "el": "div.ui-option \"Dock flutuante\"",
+          "w": 136
+        },
+        {
+          "el": "div.lay-mob-card \"Bottom com ação central\"",
+          "w": 136
+        },
+        {
+          "el": "div.ui-option \"Bottom com ação central\"",
+          "w": 136
+        },
+        {
+          "el": "div.lay-mob-card \"Bottom minimalista\"",
+          "w": 136
+        },
+        {
+          "el": "div.ui-option \"Bottom minimalista\"",
+          "w": 136
+        }
+      ],
+      "cardWidths": {
+        "n": 44,
+        "min": 136,
+        "max": 136
+      },
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [
+      {
+        "el": "label.ui-switch.lay-legend-switch \"Mostrar legendas nos desenhos\"",
+        "by": "div.gd-footer \"Voltar Continuar: Revisão\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Revisão\"",
+        "pos": "sticky",
+        "y": 392
+      },
+      {
+        "el": "p.lay-family-note \"44 modelos em 8 grupos. Toque em um mode\"",
+        "by": "div.gd-footer \"Voltar Continuar: Revisão\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Revisão\"",
+        "pos": "sticky",
+        "y": 706
+      },
+      {
+        "el": "h2 \"Drawer pela esquerda\"",
+        "by": "button.ui-btn.ui-btn--secondary \"Voltar\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Revisão\"",
+        "pos": "sticky",
+        "y": 1964
+      }
+    ],
+    "shot": "capturas/sw/g-mobile--640x400-zoom200.png",
+    "shotFull": "capturas/sw/g-mobile--640x400-zoom200--full.png",
+    "ms": 3947
+  },
+  {
+    "id": "g-revisao",
+    "route": "/guiado/revisao",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/guiado/revisao",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/guiado/revisao",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 2422,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 51,
+      "smallTextPreviewMin": 3,
+      "offscreenFocusable": 37,
+      "targetsTotal": 23,
+      "targetsLt44": 14,
+      "targetsLt24": 4,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [
+        [
+          "button.gd-step 117x31",
+          10
+        ],
+        [
+          "a.u-small 574x21",
+          4
+        ]
+      ],
+      "targetsLt24Examples": [
+        {
+          "el": "a.u-small \"Alterar\"",
+          "w": 574,
+          "h": 21
+        },
+        {
+          "el": "a.u-small \"Alterar\"",
+          "w": 574,
+          "h": 21
+        },
+        {
+          "el": "a.u-small \"Alterar\"",
+          "w": 574,
+          "h": 21
+        },
+        {
+          "el": "a.u-small \"Alterar\"",
+          "w": 574,
+          "h": 21
+        }
+      ],
+      "closeTargetsCount": 8,
+      "overlappingTargets": [],
+      "closeTargets": [
+        {
+          "a": "button.gd-step \"Objetivo do projeto\"",
+          "b": "button.gd-step \"Landing, login e cadastro\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Landing, login e cadastro\"",
+          "b": "button.gd-step \"Arquitetura do computador\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do computador\"",
+          "b": "button.gd-step \"Arquitetura do celular\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do celular\"",
+          "b": "button.gd-step \"Revisão do esqueleto\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Prévia integrada\"",
+          "b": "button.gd-step \"Identidade visual\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Identidade visual\"",
+          "b": "button.gd-step \"Headers e sidebars\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Headers e sidebars\"",
+          "b": "button.gd-step \"Componentes\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Componentes\"",
+          "b": "button.gd-step \"Master Prompt\"",
+          "gap": 6
+        }
+      ],
+      "fields": 0,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        },
+        {
+          "el": "div.gd-footer \"Voltar Continuar para o acabamento\"",
+          "pos": "sticky",
+          "top": 331,
+          "bottom": 400,
+          "h": 69,
+          "w": 608
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": null,
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/g-revisao--640x400-zoom200.png",
+    "shotFull": "capturas/sw/g-revisao--640x400-zoom200--full.png",
+    "ms": 1395
+  },
+  {
+    "id": "g-preview",
+    "route": "/guiado/preview",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/guiado/preview",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/guiado/preview",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 1897,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 60,
+      "smallTextPreviewMin": 5.2,
+      "offscreenFocusable": 37,
+      "targetsTotal": 32,
+      "targetsLt44": 10,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 18,
+      "targetsPrevTotal": 18,
+      "targetsLt44Groups": [
+        [
+          "button.gd-step 117x31",
+          10
+        ]
+      ],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 16,
+      "overlappingTargets": [
+        {
+          "a": "button \"Aplicação\"",
+          "b": "button.ui-btn.ui-btn--secondary \"Voltar\"",
+          "gap": -1
+        },
+        {
+          "a": "button \"Login\"",
+          "b": "button.ui-btn.ui-btn--secondary \"Voltar\"",
+          "gap": -1
+        },
+        {
+          "a": "button \"Tablet\"",
+          "b": "button.ui-btn.ui-btn--primary \"Continuar: Cores\"",
+          "gap": -1
+        },
+        {
+          "a": "button \"Celular\"",
+          "b": "button.ui-btn.ui-btn--primary \"Continuar: Cores\"",
+          "gap": -1
+        }
+      ],
+      "closeTargets": [
+        {
+          "a": "button.gd-step \"Objetivo do projeto\"",
+          "b": "button.gd-step \"Landing, login e cadastro\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Landing, login e cadastro\"",
+          "b": "button.gd-step \"Arquitetura do computador\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do computador\"",
+          "b": "button.gd-step \"Arquitetura do celular\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do celular\"",
+          "b": "button.gd-step \"Revisão do esqueleto\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Prévia integrada\"",
+          "b": "button.gd-step \"Identidade visual\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Identidade visual\"",
+          "b": "button.gd-step \"Headers e sidebars\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Headers e sidebars\"",
+          "b": "button.gd-step \"Componentes\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Componentes\"",
+          "b": "button.gd-step \"Master Prompt\"",
+          "gap": 6
+        },
+        {
+          "a": "button \"Aplicação\"",
+          "b": "button \"Login\"",
+          "gap": 2
+        },
+        {
+          "a": "button \"Login\"",
+          "b": "button \"Cadastro\"",
+          "gap": 2
+        },
+        {
+          "a": "button \"Computador\"",
+          "b": "button \"Tablet\"",
+          "gap": 2
+        },
+        {
+          "a": "button \"Tablet\"",
+          "b": "button \"Celular\"",
+          "gap": 2
+        }
+      ],
+      "fields": 0,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        },
+        {
+          "el": "div.gd-footer \"Voltar Continuar: Cores\"",
+          "pos": "sticky",
+          "top": 331,
+          "bottom": 400,
+          "h": 69,
+          "w": 608
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": null,
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [
+      {
+        "el": "button \"Aplicação\"",
+        "by": "div.gd-footer \"Voltar Continuar: Cores\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Cores\"",
+        "pos": "sticky",
+        "y": 396
+      },
+      {
+        "el": "button \"Login\"",
+        "by": "div.gd-footer \"Voltar Continuar: Cores\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Cores\"",
+        "pos": "sticky",
+        "y": 396
+      },
+      {
+        "el": "button \"Cadastro\"",
+        "by": "div.gd-footer \"Voltar Continuar: Cores\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Cores\"",
+        "pos": "sticky",
+        "y": 396
+      },
+      {
+        "el": "button \"Computador\"",
+        "by": "div.gd-footer \"Voltar Continuar: Cores\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Cores\"",
+        "pos": "sticky",
+        "y": 396
+      },
+      {
+        "el": "button \"Tablet\"",
+        "by": "div.gd-footer \"Voltar Continuar: Cores\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Cores\"",
+        "pos": "sticky",
+        "y": 396
+      },
+      {
+        "el": "button \"Celular\"",
+        "by": "div.gd-footer \"Voltar Continuar: Cores\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Cores\"",
+        "pos": "sticky",
+        "y": 396
+      },
+      {
+        "el": "a \"Alterar Sidebar\"",
+        "by": "div.gd-footer \"Voltar Continuar: Cores\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Cores\"",
+        "pos": "sticky",
+        "y": 1298
+      },
+      {
+        "el": "a \"Alterar Cadastro\"",
+        "by": "button.ui-btn.ui-btn--primary \"Continuar: Cores\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Cores\"",
+        "pos": "sticky",
+        "y": 1628
+      }
+    ],
+    "shot": "capturas/sw/g-preview--640x400-zoom200.png",
+    "shotFull": "capturas/sw/g-preview--640x400-zoom200--full.png",
+    "ms": 1614
+  },
+  {
+    "id": "g-identidade",
+    "route": "/guiado/identidade",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/guiado/identidade",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/guiado/identidade",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 10633,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [
+        {
+          "el": "span \"12 novos\"",
+          "fontSize": 11.5,
+          "effective": 11.4
+        }
+      ],
+      "smallTextCount": 1,
+      "smallTextPreviewCount": 0,
+      "smallTextPreviewMin": null,
+      "offscreenFocusable": 37,
+      "targetsTotal": 155,
+      "targetsLt44": 10,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [
+        [
+          "button.gd-step 117x31",
+          10
+        ]
+      ],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 60,
+      "overlappingTargets": [
+        {
+          "a": "button.ui-option__hit \"Neutro Essencial Minimalistas · clara Preto, branc\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Papel Branco Minimalistas · clara Fundo de papel l\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Grafite Suave Minimalistas · clara Cinzas grafite \"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Monocromo Noturno Minimalistas · escura Modo escur\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Areia Clara Minimalistas · clara Neutros terrosos \"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Oceano Profundo Frias · clara Azul petróleo com na\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Azul Ardósia Frias · clara Azul acinzentado sóbrio\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Lavanda Fria Frias · clara Lilás azulado com verde\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Noite Polar Frias · escura Modo escuro azul-noite \"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Menta Gelada Frias · clara Verde-azulado fresco co\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        }
+      ],
+      "closeTargets": [
+        {
+          "a": "button.gd-step \"Objetivo do projeto\"",
+          "b": "button.gd-step \"Landing, login e cadastro\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Landing, login e cadastro\"",
+          "b": "button.gd-step \"Arquitetura do computador\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do computador\"",
+          "b": "button.gd-step \"Arquitetura do celular\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do celular\"",
+          "b": "button.gd-step \"Revisão do esqueleto\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Prévia integrada\"",
+          "b": "button.gd-step \"Identidade visual\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Identidade visual\"",
+          "b": "button.gd-step \"Headers e sidebars\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Headers e sidebars\"",
+          "b": "button.gd-step \"Componentes\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Componentes\"",
+          "b": "button.gd-step \"Master Prompt\"",
+          "gap": 6
+        },
+        {
+          "a": "button.ui-tab \"Paletas\"",
+          "b": "button.ui-tab \"Ajustar cores\"",
+          "gap": 4
+        },
+        {
+          "a": "button.ui-tab \"Ajustar cores\"",
+          "b": "button.ui-tab \"Tipografia\"",
+          "gap": 4
+        },
+        {
+          "a": "button.ui-tab \"Tipografia\"",
+          "b": "button.ui-tab \"Formas e superfícies\"",
+          "gap": 4
+        }
+      ],
+      "fields": 1,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        },
+        {
+          "el": "div.gd-footer \"Voltar Continuar: Navegação\"",
+          "pos": "sticky",
+          "top": 331,
+          "bottom": 400,
+          "h": 69,
+          "w": 608
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": {
+        "n": 60,
+        "min": 296,
+        "max": 296
+      },
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [
+      {
+        "el": "input.ui-input \"Buscar paletas\"",
+        "by": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "pos": "sticky",
+        "y": 980
+      },
+      {
+        "el": "button.ui-option__hit \"Neutro Essencial Minimalistas · clara Pr\"",
+        "by": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "pos": "sticky",
+        "y": 1303
+      },
+      {
+        "el": "button.ui-option__hit \"Papel Branco Minimalistas · clara Fundo \"",
+        "by": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "pos": "sticky",
+        "y": 1303
+      },
+      {
+        "el": "button.ui-option__hit \"Grafite Suave Minimalistas · clara Cinza\"",
+        "by": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "pos": "sticky",
+        "y": 1620
+      },
+      {
+        "el": "button.ui-option__hit \"Monocromo Noturno Minimalistas · escura \"",
+        "by": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "pos": "sticky",
+        "y": 1620
+      },
+      {
+        "el": "button.ui-option__hit \"Areia Clara Minimalistas · clara Neutros\"",
+        "by": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "pos": "sticky",
+        "y": 1938
+      },
+      {
+        "el": "button.ui-option__hit \"Oceano Profundo Frias · clara Azul petró\"",
+        "by": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "pos": "sticky",
+        "y": 2256
+      },
+      {
+        "el": "button.ui-option__hit \"Azul Ardósia Frias · clara Azul acinzent\"",
+        "by": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "pos": "sticky",
+        "y": 2574
+      },
+      {
+        "el": "button.ui-option__hit \"Lavanda Fria Frias · clara Lilás azulado\"",
+        "by": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "pos": "sticky",
+        "y": 2574
+      },
+      {
+        "el": "button.ui-option__hit \"Noite Polar Frias · escura Modo escuro a\"",
+        "by": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "pos": "sticky",
+        "y": 2892
+      },
+      {
+        "el": "button.ui-option__hit \"Menta Gelada Frias · clara Verde-azulado\"",
+        "by": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Navegação\"",
+        "pos": "sticky",
+        "y": 2892
+      }
+    ],
+    "shot": "capturas/sw/g-identidade--640x400-zoom200.png",
+    "shotFull": "capturas/sw/g-identidade--640x400-zoom200--full.png",
+    "ms": 2385
+  },
+  {
+    "id": "g-navegacao",
+    "route": "/guiado/navegacao",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/guiado/navegacao",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/guiado/navegacao",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 21459,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [
+        {
+          "el": "p.nvs-card__comp \"Logo · menu central · ações. Logo à esquerda, os q\"",
+          "text": "Logo · menu central · ações. Logo à esquerda, os quatro links centralizados na b",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Logo no centro, menu dividido. Dois links à esquer\"",
+          "text": "Logo no centro, menu dividido. Dois links à esquerda, logo exatamente no meio da",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Pílula em toda a largura. Barra flutuante afastada\"",
+          "text": "Pílula em toda a largura. Barra flutuante afastada 12 px do topo e das laterais:",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Três ilhas distribuídas. Ilha do logo à esquerda, \"",
+          "text": "Três ilhas distribuídas. Ilha do logo à esquerda, ilha da navegação (grupo segme",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Abas à esquerda, busca à direita. Logo + abas subl\"",
+          "text": "Abas à esquerda, busca à direita. Logo + abas sublinhadas à esquerda; à direita,",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Utilitários em cima. Faixa fina de 32 px no topo c\"",
+          "text": "Utilitários em cima. Faixa fina de 32 px no topo com ouvidoria, carreiras e tele",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 98,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Busca larga + faixa de departamentos. Linha 1: log\"",
+          "text": "Busca larga + faixa de departamentos. Linha 1: logo, busca larga ao centro, ende",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 98,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Masthead clássico. Faixa superior com data e busca\"",
+          "text": "Masthead clássico. Faixa superior com data e busca à esquerda, nome do jornal gr",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Trilha na barra principal. Logo seguido da trilha \"",
+          "text": "Trilha na barra principal. Logo seguido da trilha “Projetos / Site institucional",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Sobre o hero, menu central. Header transparente so\"",
+          "text": "Sobre o hero, menu central. Header transparente sobre a imagem do hero: logo à e",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Nome central, menu dividido. Duas categorias à esq\"",
+          "text": "Nome central, menu dividido. Duas categorias à esquerda, o nome da maison em ser",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Largura total, uma linha. Logo e menus (com mega m\"",
+          "text": "Largura total, uma linha. Logo e menus (com mega menus) à esquerda, de borda a b",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Menu + chip de perfil. Logo + links em pílula à es\"",
+          "text": "Menu + chip de perfil. Logo + links em pílula à esquerda; à direita, sino e chip",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Barra única na cor da marca. Fundo primário em tod\"",
+          "text": "Barra única na cor da marca. Fundo primário em toda a barra: logo à esquerda, li",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Busca central. Logo com selo “Ajuda” e “Navegar ▾”\"",
+          "text": "Busca central. Logo com selo “Ajuda” e “Navegar ▾” à esquerda, busca larga no ce",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Alto que encolhe. No topo da página tem 80 px; apó\"",
+          "text": "Alto que encolhe. No topo da página tem 80 px; após rolar, encolhe para 60 px e ",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Público e ações em cima. Linha 1 com logo, alterna\"",
+          "text": "Público e ações em cima. Linha 1 com logo, alternador “Para você | Para empresas",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Ícones no centro. Logo à esquerda, abas com ícone \"",
+          "text": "Ícones no centro. Logo à esquerda, abas com ícone + rótulo no centro (contador e",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Categorias ao lado do logo. Logo serifado + catego\"",
+          "text": "Categorias ao lado do logo. Logo serifado + categorias sublinhadas à esquerda; b",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        }
+      ],
+      "truncatedCount": 19,
+      "truncatedPreviewCount": 4,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 30,
+      "smallTextPreviewMin": 11.4,
+      "offscreenFocusable": 37,
+      "targetsTotal": 209,
+      "targetsLt44": 12,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 5,
+      "targetsPrevTotal": 111,
+      "targetsLt44Groups": [
+        [
+          "button.gd-step 117x31",
+          10
+        ],
+        [
+          "button.ui-term 52x24",
+          1
+        ],
+        [
+          "button.ui-term 55x24",
+          1
+        ]
+      ],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 119,
+      "overlappingTargets": [
+        {
+          "a": "button.ui-term \"Sidebar\"",
+          "b": "button.ui-btn.ui-btn--primary \"Continuar: Componentes\"",
+          "gap": -1
+        }
+      ],
+      "closeTargets": [
+        {
+          "a": "button.gd-step \"Objetivo do projeto\"",
+          "b": "button.gd-step \"Landing, login e cadastro\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Landing, login e cadastro\"",
+          "b": "button.gd-step \"Arquitetura do computador\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do computador\"",
+          "b": "button.gd-step \"Arquitetura do celular\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do celular\"",
+          "b": "button.gd-step \"Revisão do esqueleto\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Prévia integrada\"",
+          "b": "button.gd-step \"Identidade visual\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Identidade visual\"",
+          "b": "button.gd-step \"Headers e sidebars\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Headers e sidebars\"",
+          "b": "button.gd-step \"Componentes\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Componentes\"",
+          "b": "button.gd-step \"Master Prompt\"",
+          "gap": 6
+        },
+        {
+          "a": "button.ui-tab \"Headers (36)\"",
+          "b": "button.ui-tab \"Sidebars (36)\"",
+          "gap": 4
+        },
+        {
+          "a": "button.ui-tab \"Sidebars (36)\"",
+          "b": "button.ui-tab \"Combinação\"",
+          "gap": 4
+        },
+        {
+          "a": "button.nvs-card__select \"Linha Essencial Integral Fixo ao rolar O header ma\"",
+          "b": "button \"Logo · menu central · ações\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button.nvs-card__select \"Linha Essencial Integral Fixo ao rolar O header ma\"",
+          "b": "button \"Tudo em uma linha à esquerda\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button \"Logo · menu central · ações\"",
+          "b": "button \"Tudo em uma linha à esquerda\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Vitrine Central Integral Fixo ao rolar O logo fica\"",
+          "b": "button \"Logo no centro, menu dividido\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button.nvs-card__select \"Vitrine Central Integral Fixo ao rolar O logo fica\"",
+          "b": "button \"Logo em cima, menu embaixo\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button \"Logo no centro, menu dividido\"",
+          "b": "button \"Logo em cima, menu embaixo\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Ilha Flutuante Flutuante Fixo ao rolar Uma barra a\"",
+          "b": "button \"Pílula em toda a largura\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button.nvs-card__select \"Ilha Flutuante Flutuante Fixo ao rolar Uma barra a\"",
+          "b": "button \"Pílula estreita central\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button \"Pílula em toda a largura\"",
+          "b": "button \"Pílula estreita central\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Arquipélago Flutuante Fixo ao rolar Em vez de uma \"",
+          "b": "button \"Três ilhas distribuídas\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button.nvs-card__select \"Arquipélago Flutuante Fixo ao rolar Em vez de uma \"",
+          "b": "button \"Ilhas agrupadas à direita\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button \"Três ilhas distribuídas\"",
+          "b": "button \"Ilhas agrupadas à direita\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Painel de Trabalho Integral Fixo ao rolar Header d\"",
+          "b": "button \"Abas à esquerda, busca à direita\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button.nvs-card__select \"Painel de Trabalho Integral Fixo ao rolar Header d\"",
+          "b": "button \"Busca no centro\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button \"Abas à esquerda, busca à direita\"",
+          "b": "button \"Busca no centro\"",
+          "gap": 2
+        }
+      ],
+      "fields": 3,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        },
+        {
+          "el": "div.gd-footer \"Voltar Continuar: Componentes\"",
+          "pos": "sticky",
+          "top": 331,
+          "bottom": 400,
+          "h": 69,
+          "w": 608
+        }
+      ],
+      "narrowCards": [
+        {
+          "el": "span.nvs-card__tag \"Prévia interativa\"",
+          "w": 129
+        },
+        {
+          "el": "span.nvs-card__pill \"Selecionar\"",
+          "w": 99
+        },
+        {
+          "el": "span.nvs-card__tag \"Prévia interativa\"",
+          "w": 129
+        },
+        {
+          "el": "span.nvs-card__pill \"Selecionar\"",
+          "w": 99
+        },
+        {
+          "el": "span.nvs-card__tag \"Prévia interativa\"",
+          "w": 129
+        },
+        {
+          "el": "span.nvs-card__pill \"Selecionar\"",
+          "w": 99
+        },
+        {
+          "el": "span.nvs-card__tag \"Prévia interativa\"",
+          "w": 129
+        },
+        {
+          "el": "span.nvs-card__pill \"Selecionar\"",
+          "w": 99
+        },
+        {
+          "el": "span.nvs-card__tag \"Prévia interativa\"",
+          "w": 129
+        },
+        {
+          "el": "span.nvs-card__pill \"Selecionar\"",
+          "w": 99
+        }
+      ],
+      "cardWidths": null,
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [
+      {
+        "el": "button.ui-term \"Header\"",
+        "by": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "pos": "sticky",
+        "y": 382
+      },
+      {
+        "el": "button.ui-term \"Sidebar\"",
+        "by": "button.ui-btn.ui-btn--primary \"Continuar: Componentes\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "pos": "sticky",
+        "y": 382
+      },
+      {
+        "el": "button.ui-tab \"Headers (36)\"",
+        "by": "button.ui-btn.ui-btn--secondary \"Voltar\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "pos": "sticky",
+        "y": 672
+      },
+      {
+        "el": "button.ui-tab \"Sidebars (36)\"",
+        "by": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "pos": "sticky",
+        "y": 672
+      },
+      {
+        "el": "button.ui-tab \"Combinação\"",
+        "by": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "pos": "sticky",
+        "y": 672
+      },
+      {
+        "el": "button \"Composição A\"",
+        "by": "button.ui-btn.ui-btn--secondary \"Voltar\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "pos": "sticky",
+        "y": 1311
+      },
+      {
+        "el": "button \"Composição B\"",
+        "by": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "pos": "sticky",
+        "y": 1311
+      },
+      {
+        "el": "p.nvs-card__comp \"Logo · menu central · ações. Logo à esqu\"",
+        "by": "button.ui-btn.ui-btn--primary \"Continuar: Componentes\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "pos": "sticky",
+        "y": 1311
+      },
+      {
+        "el": "button.ui-btn.ui-btn--secondary \"Ver em tamanho grande\"",
+        "by": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "pos": "sticky",
+        "y": 1942
+      },
+      {
+        "el": "button.ui-btn.ui-btn--ghost \"Prompt deste elemento\"",
+        "by": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "pos": "sticky",
+        "y": 1942
+      },
+      {
+        "el": "button.nvs-brand \"Sabiá — página inicial\"",
+        "by": "button.ui-btn.ui-btn--secondary \"Voltar\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "pos": "sticky",
+        "y": 2606
+      },
+      {
+        "el": "button.nvs-hi.nvs-menu-btn \"Abrir menu\"",
+        "by": "button.ui-btn.ui-btn--primary \"Continuar: Componentes\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "pos": "sticky",
+        "y": 2606
+      },
+      {
+        "el": "button.nvs-card__select \"Arquipélago Flutuante Fixo ao rolar Em v\"",
+        "by": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Componentes\"",
+        "pos": "sticky",
+        "y": 2927
+      }
+    ],
+    "shot": "capturas/sw/g-navegacao--640x400-zoom200.png",
+    "shotFull": "capturas/sw/g-navegacao--640x400-zoom200--full.png",
+    "ms": 6122
+  },
+  {
+    "id": "g-componentes",
+    "route": "/guiado/componentes",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/guiado/componentes",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/guiado/componentes",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 5531,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [
+        {
+          "el": "span.ui-option__desc \"Formas de pílula, cores suaves e nada de bordas. A\"",
+          "text": "Formas de pílula, cores suaves e nada de bordas. Amigável e leve, como apps de b",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Fundo escuro profundo, títulos serifados finos e d\"",
+          "text": "Fundo escuro profundo, títulos serifados finos e detalhes metálicos discretos. S",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Painéis de vidro fosco translúcidos sobre um fundo\"",
+          "text": "Painéis de vidro fosco translúcidos sobre um fundo com manchas de cor. Moderno e",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Ações com gradiente da cor primária para a de dest\"",
+          "text": "Ações com gradiente da cor primária para a de destaque e um brilho suave. Energé",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Bordas pretas grossas, sombras duras deslocadas e \"",
+          "text": "Bordas pretas grossas, sombras duras deslocadas e cores chapadas. Ousado e diret",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Elementos que parecem moldados na própria superfíc\"",
+          "text": "Elementos que parecem moldados na própria superfície, com luz e sombra suaves. T",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Blocos arredondados como uma marmita bento: cada i\"",
+          "text": "Blocos arredondados como uma marmita bento: cada informação em seu ladrilho colo",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Fundo escuro com luzes coloridas como uma aurora b\"",
+          "text": "Fundo escuro com luzes coloridas como uma aurora boreal e painéis translúcidos.",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Fonte monoespaçada, rótulos técnicos, marcações e \"",
+          "text": "Fonte monoespaçada, rótulos técnicos, marcações e listras de atenção. Painel de ",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Divertido e cheio de cor: cantos bem redondos, bot\"",
+          "text": "Divertido e cheio de cor: cantos bem redondos, botões \"fofinhos\" com relevo e ad",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Denso e eficiente, para ferramentas profissionais:\"",
+          "text": "Denso e eficiente, para ferramentas profissionais: mais informação em menos espa",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Papel envelhecido, tinta, carimbos e máquina de es\"",
+          "text": "Papel envelhecido, tinta, carimbos e máquina de escrever. Nostálgico e artesanal",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Inspirado no Material moderno: superfícies tonais,\"",
+          "text": "Inspirado no Material moderno: superfícies tonais, botões em pílula e botão flut",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        }
+      ],
+      "truncatedCount": 13,
+      "truncatedPreviewCount": 0,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 2,
+      "smallTextPreviewMin": 11.5,
+      "offscreenFocusable": 37,
+      "targetsTotal": 83,
+      "targetsLt44": 13,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [
+        [
+          "button.gd-step 117x31",
+          10
+        ],
+        [
+          "input.ui-input 420x36",
+          3
+        ]
+      ],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 24,
+      "overlappingTargets": [
+        {
+          "a": "button.ui-option__hit \"Escolher a família Soft Pill para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Swiss Minimal para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Dark Luxury para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Glassmorphism para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Gradient Glow para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Neo Brutalist para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Soft Neumorphic para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Apple Precision para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Bento Soft para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Aurora para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        }
+      ],
+      "closeTargets": [
+        {
+          "a": "button.gd-step \"Objetivo do projeto\"",
+          "b": "button.gd-step \"Landing, login e cadastro\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Landing, login e cadastro\"",
+          "b": "button.gd-step \"Arquitetura do computador\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do computador\"",
+          "b": "button.gd-step \"Arquitetura do celular\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do celular\"",
+          "b": "button.gd-step \"Revisão do esqueleto\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Prévia integrada\"",
+          "b": "button.gd-step \"Identidade visual\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Identidade visual\"",
+          "b": "button.gd-step \"Headers e sidebars\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Headers e sidebars\"",
+          "b": "button.gd-step \"Componentes\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Componentes\"",
+          "b": "button.gd-step \"Master Prompt\"",
+          "gap": 6
+        }
+      ],
+      "fields": 5,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        },
+        {
+          "el": "div.gd-footer \"Voltar Continuar: Entrega\"",
+          "pos": "sticky",
+          "top": 331,
+          "bottom": 400,
+          "h": 69,
+          "w": 608
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": {
+        "n": 16,
+        "min": 296,
+        "max": 296
+      },
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [
+      {
+        "el": "p.cmp-cat__desc \"O botão de ação: o texto, o ícone, o tam\"",
+        "by": "div.gd-footer \"Voltar Continuar: Entrega\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Entrega\"",
+        "pos": "sticky",
+        "y": 666
+      },
+      {
+        "el": "button.ui-btn.ui-btn--primary \"Adicionar ao projeto\"",
+        "by": "div.gd-footer \"Voltar Continuar: Entrega\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Entrega\"",
+        "pos": "sticky",
+        "y": 1653
+      },
+      {
+        "el": "button.ui-btn.ui-btn--primary \"Adicionar ao projeto\"",
+        "by": "button.ui-btn.ui-btn--primary \"Continuar: Entrega\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Entrega\"",
+        "pos": "sticky",
+        "y": 1653
+      },
+      {
+        "el": "button.ui-option__hit \"Escolher a família Gradient Glow para Bo\"",
+        "by": "div.gd-footer \"Voltar Continuar: Entrega\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Entrega\"",
+        "pos": "sticky",
+        "y": 1945
+      },
+      {
+        "el": "button.ui-option__hit \"Escolher a família Neo Brutalist para Bo\"",
+        "by": "button.ui-btn.ui-btn--primary \"Continuar: Entrega\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Entrega\"",
+        "pos": "sticky",
+        "y": 1945
+      },
+      {
+        "el": "button.ui-option__hit \"Escolher a família Bento Soft para Botõe\"",
+        "by": "div.gd-footer \"Voltar Continuar: Entrega\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Entrega\"",
+        "pos": "sticky",
+        "y": 2943
+      },
+      {
+        "el": "button.ui-option__hit \"Escolher a família Aurora para Botões\"",
+        "by": "button.ui-btn.ui-btn--primary \"Continuar: Entrega\"",
+        "coverer": "div.gd-footer \"Voltar Continuar: Entrega\"",
+        "pos": "sticky",
+        "y": 2943
+      }
+    ],
+    "shot": "capturas/sw/g-componentes--640x400-zoom200.png",
+    "shotFull": "capturas/sw/g-componentes--640x400-zoom200--full.png",
+    "ms": 2331
+  },
+  {
+    "id": "g-entrega",
+    "route": "/guiado/entrega",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/guiado/entrega",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/guiado/entrega",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 1762,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 0,
+      "smallTextPreviewMin": null,
+      "offscreenFocusable": 37,
+      "targetsTotal": 24,
+      "targetsLt44": 10,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [
+        [
+          "button.gd-step 117x31",
+          10
+        ]
+      ],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 11,
+      "overlappingTargets": [],
+      "closeTargets": [
+        {
+          "a": "button.gd-step \"Objetivo do projeto\"",
+          "b": "button.gd-step \"Landing, login e cadastro\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Landing, login e cadastro\"",
+          "b": "button.gd-step \"Arquitetura do computador\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do computador\"",
+          "b": "button.gd-step \"Arquitetura do celular\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Arquitetura do celular\"",
+          "b": "button.gd-step \"Revisão do esqueleto\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Prévia integrada\"",
+          "b": "button.gd-step \"Identidade visual\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Identidade visual\"",
+          "b": "button.gd-step \"Headers e sidebars\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Headers e sidebars\"",
+          "b": "button.gd-step \"Componentes\"",
+          "gap": 6
+        },
+        {
+          "a": "button.gd-step \"Componentes\"",
+          "b": "button.gd-step \"Master Prompt\"",
+          "gap": 6
+        },
+        {
+          "a": "button.ui-tab \"Master Prompt\"",
+          "b": "button.ui-tab \"Itens (12)\"",
+          "gap": 4
+        },
+        {
+          "a": "button.ui-tab \"Itens (12)\"",
+          "b": "button.ui-tab \"Contradições (0)\"",
+          "gap": 4
+        },
+        {
+          "a": "button.ui-tab \"Contradições (0)\"",
+          "b": "button.ui-tab \"Especificação JSON\"",
+          "gap": 4
+        }
+      ],
+      "fields": 0,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        },
+        {
+          "el": "div.gd-footer \"Voltar Abrir Central de Prompts\"",
+          "pos": "sticky",
+          "top": 331,
+          "bottom": 400,
+          "h": 69,
+          "w": 608
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": null,
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [
+      {
+        "el": "button.ui-tab \"Master Prompt\"",
+        "by": "button.ui-btn.ui-btn--secondary \"Voltar\"",
+        "coverer": "div.gd-footer \"Voltar Abrir Central de Prompts\"",
+        "pos": "sticky",
+        "y": 703
+      },
+      {
+        "el": "button.ui-tab \"Itens (12)\"",
+        "by": "div.gd-footer \"Voltar Abrir Central de Prompts\"",
+        "coverer": "div.gd-footer \"Voltar Abrir Central de Prompts\"",
+        "pos": "sticky",
+        "y": 703
+      },
+      {
+        "el": "button.ui-tab \"Contradições (0)\"",
+        "by": "div.gd-footer \"Voltar Abrir Central de Prompts\"",
+        "coverer": "div.gd-footer \"Voltar Abrir Central de Prompts\"",
+        "pos": "sticky",
+        "y": 703
+      },
+      {
+        "el": "button.ui-tab \"Especificação JSON\"",
+        "by": "button.ui-btn.ui-btn--primary \"Abrir Central de Prompts\"",
+        "coverer": "div.gd-footer \"Voltar Abrir Central de Prompts\"",
+        "pos": "sticky",
+        "y": 703
+      }
+    ],
+    "shot": "capturas/sw/g-entrega--640x400-zoom200.png",
+    "shotFull": "capturas/sw/g-entrega--640x400-zoom200--full.png",
+    "ms": 1620
+  },
+  {
+    "id": "m-objetivo",
+    "route": "/modulos/objetivo",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/modulos/objetivo",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/modulos/objetivo",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 2430,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 0,
+      "smallTextPreviewMin": null,
+      "offscreenFocusable": 37,
+      "targetsTotal": 36,
+      "targetsLt44": 4,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [
+        [
+          "button. 26x26",
+          4
+        ]
+      ],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 0,
+      "overlappingTargets": [],
+      "closeTargets": [],
+      "fields": 7,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": null,
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/m-objetivo--640x400-zoom200.png",
+    "shotFull": "capturas/sw/m-objetivo--640x400-zoom200--full.png",
+    "ms": 1329
+  },
+  {
+    "id": "m-landing",
+    "route": "/modulos/landing",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/modulos/landing",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/modulos/landing",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 11337,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [
+        {
+          "el": "text",
+          "fontSize": 11,
+          "effective": 11
+        },
+        {
+          "el": "text",
+          "fontSize": 11,
+          "effective": 11
+        },
+        {
+          "el": "text",
+          "fontSize": 11,
+          "effective": 11
+        },
+        {
+          "el": "text",
+          "fontSize": 11,
+          "effective": 11
+        },
+        {
+          "el": "text",
+          "fontSize": 9.5,
+          "effective": 9.5
+        },
+        {
+          "el": "text",
+          "fontSize": 11,
+          "effective": 11
+        },
+        {
+          "el": "text",
+          "fontSize": 11,
+          "effective": 11
+        },
+        {
+          "el": "text",
+          "fontSize": 9.5,
+          "effective": 9.5
+        },
+        {
+          "el": "text",
+          "fontSize": 11,
+          "effective": 11
+        },
+        {
+          "el": "text",
+          "fontSize": 11,
+          "effective": 11
+        },
+        {
+          "el": "text",
+          "fontSize": 10.5,
+          "effective": 10.5
+        },
+        {
+          "el": "text",
+          "fontSize": 10.5,
+          "effective": 10.5
+        },
+        {
+          "el": "text",
+          "fontSize": 10.5,
+          "effective": 10.5
+        }
+      ],
+      "smallTextCount": 13,
+      "smallTextPreviewCount": 440,
+      "smallTextPreviewMin": 5.4,
+      "offscreenFocusable": 37,
+      "targetsTotal": 85,
+      "targetsLt44": 0,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 48,
+      "overlappingTargets": [
+        {
+          "a": "button.ui-option__hit \"Aurora Flow Produto Soluções Preços Recursos Entra\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Aurora Flow Produto Soluções Preços Recursos Entra\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt deste elemento\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Folha Viva Plantas Vasos Cuidados Ateliê FLORICULT\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Folha Viva Plantas Vasos Cuidados Ateliê FLORICULT\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt deste elemento\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"VOLTA Modelos Tecnologia Recarga Lojas Entrar Agen\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"VOLTA Modelos Tecnologia Recarga Lojas Entrar Agen\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt deste elemento\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"casa brisa Contato Arquitetura residencial Casas p\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"casa brisa Contato Arquitetura residencial Casas p\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt deste elemento\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Nexa Produtos Empresas Preços Ajuda Entrar Abrir c\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Nexa Produtos Empresas Preços Ajuda Entrar Abrir c\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt deste elemento\"",
+          "gap": -1
+        }
+      ],
+      "closeTargets": [],
+      "fields": 2,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        }
+      ],
+      "cardWidths": {
+        "n": 29,
+        "min": 298,
+        "max": 608
+      },
+      "h1": 25,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/m-landing--640x400-zoom200.png",
+    "shotFull": "capturas/sw/m-landing--640x400-zoom200--full.png",
+    "ms": 3256
+  },
+  {
+    "id": "m-login",
+    "route": "/modulos/login",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/modulos/login",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/modulos/login",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 6628,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 1,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 332,
+      "smallTextPreviewMin": 3.1,
+      "offscreenFocusable": 37,
+      "targetsTotal": 84,
+      "targetsLt44": 0,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 17,
+      "overlappingTargets": [
+        {
+          "a": "button.ui-option__hit \"Nexo Capital Entrar na sua conta Use seu e-mail e \"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Nexo Capital “Organizamos a equipe inteira em uma \"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"NEXO CAPITAL Boas ideias começam com um bom acesso\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Nexo Capital Entrar Bem-vindo de volta ao painel. \"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Nexo Capital Seus números do dia, prontos ao entra\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Nexo Capital Entrar Acesse com seu e-mail corporat\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Nexo Capital Suporte de TI Acesso corporativo Entr\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Nexo Capital MA Bem-vindo de volta, Marina marina@\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Foto: Serra ao amanhecer · ilustração Nexo Capital\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Nexo Capital Entrar Que bom ver você por aqui. E-m\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        }
+      ],
+      "closeTargets": [],
+      "fields": 1,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        }
+      ],
+      "cardWidths": {
+        "n": 24,
+        "min": 296,
+        "max": 296
+      },
+      "h1": 3,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/m-login--640x400-zoom200.png",
+    "shotFull": "capturas/sw/m-login--640x400-zoom200--full.png",
+    "ms": 2287
+  },
+  {
+    "id": "m-cadastro",
+    "route": "/modulos/cadastro",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/modulos/cadastro",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/modulos/cadastro",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 2588,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 111,
+      "smallTextPreviewMin": 8.5,
+      "offscreenFocusable": 37,
+      "targetsTotal": 30,
+      "targetsLt44": 0,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 8,
+      "overlappingTargets": [
+        {
+          "a": "button.ui-option__hit \"Entrar Criar conta Criar conta Leva menos de um mi\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Crie sua conta Preencha seus dados para começar. N\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"1 Conta 2 Perfil 3 Preferências Vamos começar Etap\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"AR PA Ana Ribeiro convidou você para a equipe Proj\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Criar conta sem senha Sem senha para lembrar: envi\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Criar conta Use uma conta que você já tem ou cadas\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Como você vai usar? Escolha um perfil para persona\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Comece em segundos Só o essencial. O resto você co\"",
+          "b": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "gap": -1
+        }
+      ],
+      "closeTargets": [],
+      "fields": 0,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        },
+        {
+          "el": "button.ui-btn.ui-btn--secondary.ui-btn--sm \"Ver prévia\"",
+          "w": 115
+        }
+      ],
+      "cardWidths": {
+        "n": 8,
+        "min": 296,
+        "max": 296
+      },
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/m-cadastro--640x400-zoom200.png",
+    "shotFull": "capturas/sw/m-cadastro--640x400-zoom200--full.png",
+    "ms": 1634
+  },
+  {
+    "id": "m-desktop",
+    "route": "/modulos/desktop",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/modulos/desktop",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/modulos/desktop",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 10531,
+      "overflow": [
+        {
+          "el": "div",
+          "left": 602,
+          "right": 648,
+          "width": 47,
+          "preview": true
+        }
+      ],
+      "overflowCount": 1,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [
+        {
+          "el": "span.lay-chip \"HEADER\"",
+          "fontSize": 10,
+          "effective": 10.1
+        },
+        {
+          "el": "span.lay-chip \"SIDEBAR\"",
+          "fontSize": 10,
+          "effective": 10
+        },
+        {
+          "el": "span.lay-chip \"RAIL\"",
+          "fontSize": 10,
+          "effective": 10
+        },
+        {
+          "el": "span.lay-chip \"CONTEÚDO\"",
+          "fontSize": 10,
+          "effective": 10
+        },
+        {
+          "el": "span.lay-chip \"PAINEL\"",
+          "fontSize": 10,
+          "effective": 9.9
+        }
+      ],
+      "smallTextCount": 5,
+      "smallTextPreviewCount": 141,
+      "smallTextPreviewMin": 7.4,
+      "offscreenFocusable": 37,
+      "targetsTotal": 66,
+      "targetsLt44": 5,
+      "targetsLt24": 4,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [
+        [
+          "button.ui-term 84x20",
+          1
+        ],
+        [
+          "button.ui-term 73x20",
+          1
+        ],
+        [
+          "button.ui-term 91x20",
+          1
+        ],
+        [
+          "button.ui-term 48x21",
+          1
+        ],
+        [
+          "summary. 574x36",
+          1
+        ]
+      ],
+      "targetsLt24Examples": [
+        {
+          "el": "button.ui-term \"barra superior\"",
+          "w": 84,
+          "h": 20
+        },
+        {
+          "el": "button.ui-term \"menu lateral\"",
+          "w": 73,
+          "h": 20
+        },
+        {
+          "el": "button.ui-term \"trilho de ícones\"",
+          "w": 91,
+          "h": 20
+        },
+        {
+          "el": "button.ui-term \"sidebar\"",
+          "w": 48,
+          "h": 21
+        }
+      ],
+      "closeTargetsCount": 7,
+      "overlappingTargets": [
+        {
+          "a": "div.lay-tech \"Como funciona e como se adapta\"",
+          "b": "button.ui-chip \"Sidebar integral clássica\"",
+          "gap": -1
+        },
+        {
+          "a": "div.lay-tech \"Como funciona e como se adapta\"",
+          "b": "button.ui-chip \"Dashboard de três colunas\"",
+          "gap": -1
+        },
+        {
+          "a": "div.lay-tech \"Como funciona e como se adapta\"",
+          "b": "button.ui-chip \"Analytics com lateral direita\"",
+          "gap": -1
+        }
+      ],
+      "closeTargets": [
+        {
+          "a": "button.ui-chip \"Todos 42\"",
+          "b": "div.lay-tech \"Como funciona e como se adapta\"",
+          "gap": 7.4
+        },
+        {
+          "a": "button.ui-chip \"Sidebar integral 5\"",
+          "b": "div.lay-tech \"Como funciona e como se adapta\"",
+          "gap": 7.4
+        },
+        {
+          "a": "button.ui-chip \"Sidebars flutuantes 4\"",
+          "b": "div.lay-tech \"Como funciona e como se adapta\"",
+          "gap": 7.4
+        },
+        {
+          "a": "button.ui-chip \"Rail e navegação dupla 4\"",
+          "b": "div.lay-tech \"Como funciona e como se adapta\"",
+          "gap": 7.4
+        }
+      ],
+      "fields": 0,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": {
+        "n": 42,
+        "min": 296,
+        "max": 296
+      },
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [
+      {
+        "el": "h3",
+        "by": "span.lay-suggest__title \"Sugeridos para seu tipo de projeto (Dash\"",
+        "coverer": "aside.lay-desk-detail \"Detalhes do layout\"",
+        "pos": "static",
+        "y": 1220
+      },
+      {
+        "el": "h3",
+        "by": "button.ui-chip \"Sidebars flutuantes 4\"",
+        "coverer": "button.ui-chip \"Sidebars flutuantes 4\"",
+        "pos": "static",
+        "y": 1406
+      },
+      {
+        "el": "h3",
+        "by": "div.lay-desk-grid \"Escolhido SIDEBAR HEADER CONTEÚDO Sideba\"",
+        "coverer": "div.lay-desk-grid \"Escolhido SIDEBAR HEADER CONTEÚDO Sideba\"",
+        "pos": "static",
+        "y": 1638
+      }
+    ],
+    "shot": "capturas/sw/m-desktop--640x400-zoom200.png",
+    "shotFull": "capturas/sw/m-desktop--640x400-zoom200--full.png",
+    "ms": 4049
+  },
+  {
+    "id": "m-mobile",
+    "route": "/modulos/mobile",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/modulos/mobile",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/modulos/mobile",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 2234,
+      "overflow": [
+        {
+          "el": "div.lay-mob-media",
+          "left": 609,
+          "right": 743,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 757,
+          "right": 891,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 905,
+          "right": 1039,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1053,
+          "right": 1187,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1201,
+          "right": 1335,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1349,
+          "right": 1483,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1497,
+          "right": 1631,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1645,
+          "right": 1779,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1793,
+          "right": 1927,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 1941,
+          "right": 2075,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2089,
+          "right": 2223,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2237,
+          "right": 2371,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2385,
+          "right": 2519,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2533,
+          "right": 2667,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2681,
+          "right": 2815,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2829,
+          "right": 2963,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 2977,
+          "right": 3111,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3125,
+          "right": 3259,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3273,
+          "right": 3407,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3421,
+          "right": 3555,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3569,
+          "right": 3703,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3717,
+          "right": 3851,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 3865,
+          "right": 3999,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "div.lay-mob-media",
+          "left": 4013,
+          "right": 4147,
+          "width": 134,
+          "preview": true
+        },
+        {
+          "el": "path",
+          "left": 4202,
+          "right": 4212,
+          "width": 10,
+          "preview": false
+        }
+      ],
+      "overflowCount": 41,
+      "truncated": [
+        {
+          "el": "span.ui-option__title \"Bottom Navigation com drawer de opções\"",
+          "text": "Bottom Navigation com drawer de opções",
+          "scrollW": 110,
+          "clientW": 110,
+          "scrollH": 70,
+          "clientH": 53,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        }
+      ],
+      "truncatedCount": 1,
+      "truncatedPreviewCount": 0,
+      "smallText": [
+        {
+          "el": "span.lay-chip \"HEADER\"",
+          "fontSize": 10,
+          "effective": 10.1
+        },
+        {
+          "el": "span.lay-chip \"MENU INFERIOR\"",
+          "fontSize": 10,
+          "effective": 10
+        },
+        {
+          "el": "span.lay-chip \"DRAWER\"",
+          "fontSize": 10,
+          "effective": 10
+        },
+        {
+          "el": "span.lay-chip \"CONTEÚDO\"",
+          "fontSize": 10,
+          "effective": 10
+        }
+      ],
+      "smallTextCount": 4,
+      "smallTextPreviewCount": 3,
+      "smallTextPreviewMin": 10,
+      "offscreenFocusable": 37,
+      "targetsTotal": 64,
+      "targetsLt44": 4,
+      "targetsLt24": 3,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 2,
+      "targetsLt44Groups": [
+        [
+          "button.ui-term 84x20",
+          1
+        ],
+        [
+          "button.ui-term 87x20",
+          1
+        ],
+        [
+          "button.ui-term 104x20",
+          1
+        ],
+        [
+          "summary. 608x36",
+          1
+        ]
+      ],
+      "targetsLt24Examples": [
+        {
+          "el": "button.ui-term \"barra superior\"",
+          "w": 84,
+          "h": 20
+        },
+        {
+          "el": "button.ui-term \"menu embaixo\"",
+          "w": 87,
+          "h": 20
+        },
+        {
+          "el": "button.ui-term \"menu que desliza\"",
+          "w": 104,
+          "h": 20
+        }
+      ],
+      "closeTargetsCount": 0,
+      "overlappingTargets": [],
+      "closeTargets": [],
+      "fields": 0,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [
+        {
+          "el": "div.lay-mob-card \"Bottom Navigation clássica Sugerido\"",
+          "w": 136
+        },
+        {
+          "el": "div.ui-option \"Bottom Navigation clássica Sugerido\"",
+          "w": 136
+        },
+        {
+          "el": "div.lay-mob-card \"Bottom Navigation com cinco destinos\"",
+          "w": 136
+        },
+        {
+          "el": "div.ui-option \"Bottom Navigation com cinco destinos\"",
+          "w": 136
+        },
+        {
+          "el": "div.lay-mob-card \"Dock flutuante\"",
+          "w": 136
+        },
+        {
+          "el": "div.ui-option \"Dock flutuante\"",
+          "w": 136
+        },
+        {
+          "el": "div.lay-mob-card \"Bottom com ação central\"",
+          "w": 136
+        },
+        {
+          "el": "div.ui-option \"Bottom com ação central\"",
+          "w": 136
+        },
+        {
+          "el": "div.lay-mob-card \"Bottom minimalista\"",
+          "w": 136
+        },
+        {
+          "el": "div.ui-option \"Bottom minimalista\"",
+          "w": 136
+        }
+      ],
+      "cardWidths": {
+        "n": 44,
+        "min": 136,
+        "max": 136
+      },
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/m-mobile--640x400-zoom200.png",
+    "shotFull": "capturas/sw/m-mobile--640x400-zoom200--full.png",
+    "ms": 3488
+  },
+  {
+    "id": "m-preview",
+    "route": "/modulos/preview",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/modulos/preview",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/modulos/preview",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 1654,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 60,
+      "smallTextPreviewMin": 5.2,
+      "offscreenFocusable": 37,
+      "targetsTotal": 20,
+      "targetsLt44": 0,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 18,
+      "targetsPrevTotal": 18,
+      "targetsLt44Groups": [],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 4,
+      "overlappingTargets": [],
+      "closeTargets": [
+        {
+          "a": "button \"Aplicação\"",
+          "b": "button \"Login\"",
+          "gap": 2
+        },
+        {
+          "a": "button \"Login\"",
+          "b": "button \"Cadastro\"",
+          "gap": 2
+        },
+        {
+          "a": "button \"Computador\"",
+          "b": "button \"Tablet\"",
+          "gap": 2
+        },
+        {
+          "a": "button \"Tablet\"",
+          "b": "button \"Celular\"",
+          "gap": 2
+        }
+      ],
+      "fields": 0,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": null,
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/m-preview--640x400-zoom200.png",
+    "shotFull": "capturas/sw/m-preview--640x400-zoom200--full.png",
+    "ms": 1604
+  },
+  {
+    "id": "m-cores",
+    "route": "/modulos/cores",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/modulos/cores",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/modulos/cores",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 10391,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [
+        {
+          "el": "span \"12 novos\"",
+          "fontSize": 11.5,
+          "effective": 11.4
+        }
+      ],
+      "smallTextCount": 1,
+      "smallTextPreviewCount": 0,
+      "smallTextPreviewMin": null,
+      "offscreenFocusable": 37,
+      "targetsTotal": 143,
+      "targetsLt44": 0,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 52,
+      "overlappingTargets": [
+        {
+          "a": "button.ui-option__hit \"Neutro Essencial Minimalistas · clara Preto, branc\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Papel Branco Minimalistas · clara Fundo de papel l\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Grafite Suave Minimalistas · clara Cinzas grafite \"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Monocromo Noturno Minimalistas · escura Modo escur\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Areia Clara Minimalistas · clara Neutros terrosos \"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Oceano Profundo Frias · clara Azul petróleo com na\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Azul Ardósia Frias · clara Azul acinzentado sóbrio\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Lavanda Fria Frias · clara Lilás azulado com verde\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Noite Polar Frias · escura Modo escuro azul-noite \"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Menta Gelada Frias · clara Verde-azulado fresco co\"",
+          "b": "button.ui-btn.ui-btn--ghost.ui-btn--sm \"Prompt\"",
+          "gap": -1
+        }
+      ],
+      "closeTargets": [
+        {
+          "a": "button.ui-tab \"Paletas\"",
+          "b": "button.ui-tab \"Tokens e cores\"",
+          "gap": 4
+        },
+        {
+          "a": "button.ui-tab \"Tokens e cores\"",
+          "b": "button.ui-tab \"Tipografia\"",
+          "gap": 4
+        },
+        {
+          "a": "button.ui-tab \"Tipografia\"",
+          "b": "button.ui-tab \"Formas e superfícies\"",
+          "gap": 4
+        }
+      ],
+      "fields": 1,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": {
+        "n": 60,
+        "min": 296,
+        "max": 296
+      },
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/m-cores--640x400-zoom200.png",
+    "shotFull": "capturas/sw/m-cores--640x400-zoom200--full.png",
+    "ms": 4184
+  },
+  {
+    "id": "m-navegacao",
+    "route": "/modulos/navegacao",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/modulos/navegacao",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/modulos/navegacao",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 21245,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [
+        {
+          "el": "p.nvs-card__comp \"Logo · menu central · ações. Logo à esquerda, os q\"",
+          "text": "Logo · menu central · ações. Logo à esquerda, os quatro links centralizados na b",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Logo no centro, menu dividido. Dois links à esquer\"",
+          "text": "Logo no centro, menu dividido. Dois links à esquerda, logo exatamente no meio da",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Pílula em toda a largura. Barra flutuante afastada\"",
+          "text": "Pílula em toda a largura. Barra flutuante afastada 12 px do topo e das laterais:",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Três ilhas distribuídas. Ilha do logo à esquerda, \"",
+          "text": "Três ilhas distribuídas. Ilha do logo à esquerda, ilha da navegação (grupo segme",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Abas à esquerda, busca à direita. Logo + abas subl\"",
+          "text": "Abas à esquerda, busca à direita. Logo + abas sublinhadas à esquerda; à direita,",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Utilitários em cima. Faixa fina de 32 px no topo c\"",
+          "text": "Utilitários em cima. Faixa fina de 32 px no topo com ouvidoria, carreiras e tele",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 98,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Busca larga + faixa de departamentos. Linha 1: log\"",
+          "text": "Busca larga + faixa de departamentos. Linha 1: logo, busca larga ao centro, ende",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 98,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Masthead clássico. Faixa superior com data e busca\"",
+          "text": "Masthead clássico. Faixa superior com data e busca à esquerda, nome do jornal gr",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Trilha na barra principal. Logo seguido da trilha \"",
+          "text": "Trilha na barra principal. Logo seguido da trilha “Projetos / Site institucional",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Sobre o hero, menu central. Header transparente so\"",
+          "text": "Sobre o hero, menu central. Header transparente sobre a imagem do hero: logo à e",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Nome central, menu dividido. Duas categorias à esq\"",
+          "text": "Nome central, menu dividido. Duas categorias à esquerda, o nome da maison em ser",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Largura total, uma linha. Logo e menus (com mega m\"",
+          "text": "Largura total, uma linha. Logo e menus (com mega menus) à esquerda, de borda a b",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Menu + chip de perfil. Logo + links em pílula à es\"",
+          "text": "Menu + chip de perfil. Logo + links em pílula à esquerda; à direita, sino e chip",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Barra única na cor da marca. Fundo primário em tod\"",
+          "text": "Barra única na cor da marca. Fundo primário em toda a barra: logo à esquerda, li",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Busca central. Logo com selo “Ajuda” e “Navegar ▾”\"",
+          "text": "Busca central. Logo com selo “Ajuda” e “Navegar ▾” à esquerda, busca larga no ce",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Alto que encolhe. No topo da página tem 80 px; apó\"",
+          "text": "Alto que encolhe. No topo da página tem 80 px; após rolar, encolhe para 60 px e ",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Público e ações em cima. Linha 1 com logo, alterna\"",
+          "text": "Público e ações em cima. Linha 1 com logo, alternador “Para você | Para empresas",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Ícones no centro. Logo à esquerda, abas com ícone \"",
+          "text": "Ícones no centro. Logo à esquerda, abas com ícone + rótulo no centro (contador e",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "p.nvs-card__comp \"Categorias ao lado do logo. Logo serifado + catego\"",
+          "text": "Categorias ao lado do logo. Logo serifado + categorias sublinhadas à esquerda; b",
+          "scrollW": 315,
+          "clientW": 315,
+          "scrollH": 78,
+          "clientH": 59,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        }
+      ],
+      "truncatedCount": 19,
+      "truncatedPreviewCount": 4,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 30,
+      "smallTextPreviewMin": 11.4,
+      "offscreenFocusable": 37,
+      "targetsTotal": 202,
+      "targetsLt44": 2,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 5,
+      "targetsPrevTotal": 111,
+      "targetsLt44Groups": [
+        [
+          "button.ui-term 52x24",
+          1
+        ],
+        [
+          "button.ui-term 55x24",
+          1
+        ]
+      ],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 110,
+      "overlappingTargets": [],
+      "closeTargets": [
+        {
+          "a": "button.ui-tab \"Headers (36)\"",
+          "b": "button.ui-tab \"Sidebars (36)\"",
+          "gap": 4
+        },
+        {
+          "a": "button.ui-tab \"Sidebars (36)\"",
+          "b": "button.ui-tab \"Combinação\"",
+          "gap": 4
+        },
+        {
+          "a": "button.nvs-card__select \"Linha Essencial Integral Fixo ao rolar O header ma\"",
+          "b": "button \"Logo · menu central · ações\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button.nvs-card__select \"Linha Essencial Integral Fixo ao rolar O header ma\"",
+          "b": "button \"Tudo em uma linha à esquerda\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button \"Logo · menu central · ações\"",
+          "b": "button \"Tudo em uma linha à esquerda\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Vitrine Central Integral Fixo ao rolar O logo fica\"",
+          "b": "button \"Logo no centro, menu dividido\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button.nvs-card__select \"Vitrine Central Integral Fixo ao rolar O logo fica\"",
+          "b": "button \"Logo em cima, menu embaixo\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button \"Logo no centro, menu dividido\"",
+          "b": "button \"Logo em cima, menu embaixo\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Ilha Flutuante Flutuante Fixo ao rolar Uma barra a\"",
+          "b": "button \"Pílula em toda a largura\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button.nvs-card__select \"Ilha Flutuante Flutuante Fixo ao rolar Uma barra a\"",
+          "b": "button \"Pílula estreita central\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button \"Pílula em toda a largura\"",
+          "b": "button \"Pílula estreita central\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Arquipélago Flutuante Fixo ao rolar Em vez de uma \"",
+          "b": "button \"Três ilhas distribuídas\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button.nvs-card__select \"Arquipélago Flutuante Fixo ao rolar Em vez de uma \"",
+          "b": "button \"Ilhas agrupadas à direita\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button \"Três ilhas distribuídas\"",
+          "b": "button \"Ilhas agrupadas à direita\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Painel de Trabalho Integral Fixo ao rolar Header d\"",
+          "b": "button \"Abas à esquerda, busca à direita\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button.nvs-card__select \"Painel de Trabalho Integral Fixo ao rolar Header d\"",
+          "b": "button \"Busca no centro\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button \"Abas à esquerda, busca à direita\"",
+          "b": "button \"Busca no centro\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Console do Desenvolvedor Integral Fixo ao rolar Vi\"",
+          "b": "button \"Comandos à direita\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button.nvs-card__select \"Console do Desenvolvedor Integral Fixo ao rolar Vi\"",
+          "b": "button \"Comando no centro\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button \"Comandos à direita\"",
+          "b": "button \"Comando no centro\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Institucional em Duas Linhas Integral Fixo ao rola\"",
+          "b": "button \"Utilitários em cima\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button.nvs-card__select \"Institucional em Duas Linhas Integral Fixo ao rola\"",
+          "b": "button \"Menus na segunda linha\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button \"Utilitários em cima\"",
+          "b": "button \"Menus na segunda linha\"",
+          "gap": 2
+        },
+        {
+          "a": "button.nvs-card__select \"Mega Empório Integral Fixo ao rolar Header de loja\"",
+          "b": "button \"Busca larga + faixa de departamentos\"",
+          "gap": 7.3
+        },
+        {
+          "a": "button.nvs-card__select \"Mega Empório Integral Fixo ao rolar Header de loja\"",
+          "b": "button \"Departamentos ao lado do logo\"",
+          "gap": 7.3
+        }
+      ],
+      "fields": 3,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [
+        {
+          "el": "span.nvs-card__tag \"Prévia interativa\"",
+          "w": 129
+        },
+        {
+          "el": "span.nvs-card__pill \"Selecionar\"",
+          "w": 99
+        },
+        {
+          "el": "span.nvs-card__tag \"Prévia interativa\"",
+          "w": 129
+        },
+        {
+          "el": "span.nvs-card__pill \"Selecionar\"",
+          "w": 99
+        },
+        {
+          "el": "span.nvs-card__tag \"Prévia interativa\"",
+          "w": 129
+        },
+        {
+          "el": "span.nvs-card__pill \"Selecionar\"",
+          "w": 99
+        },
+        {
+          "el": "span.nvs-card__tag \"Prévia interativa\"",
+          "w": 129
+        },
+        {
+          "el": "span.nvs-card__pill \"Selecionar\"",
+          "w": 99
+        },
+        {
+          "el": "span.nvs-card__tag \"Prévia interativa\"",
+          "w": 129
+        },
+        {
+          "el": "span.nvs-card__pill \"Selecionar\"",
+          "w": 99
+        }
+      ],
+      "cardWidths": null,
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/m-navegacao--640x400-zoom200.png",
+    "shotFull": "capturas/sw/m-navegacao--640x400-zoom200--full.png",
+    "ms": 11955
+  },
+  {
+    "id": "m-componentes",
+    "route": "/modulos/componentes",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/modulos/componentes",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/modulos/componentes",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 5373,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [
+        {
+          "el": "span.ui-option__desc \"Formas de pílula, cores suaves e nada de bordas. A\"",
+          "text": "Formas de pílula, cores suaves e nada de bordas. Amigável e leve, como apps de b",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Fundo escuro profundo, títulos serifados finos e d\"",
+          "text": "Fundo escuro profundo, títulos serifados finos e detalhes metálicos discretos. S",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Painéis de vidro fosco translúcidos sobre um fundo\"",
+          "text": "Painéis de vidro fosco translúcidos sobre um fundo com manchas de cor. Moderno e",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Ações com gradiente da cor primária para a de dest\"",
+          "text": "Ações com gradiente da cor primária para a de destaque e um brilho suave. Energé",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Bordas pretas grossas, sombras duras deslocadas e \"",
+          "text": "Bordas pretas grossas, sombras duras deslocadas e cores chapadas. Ousado e diret",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Elementos que parecem moldados na própria superfíc\"",
+          "text": "Elementos que parecem moldados na própria superfície, com luz e sombra suaves. T",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Blocos arredondados como uma marmita bento: cada i\"",
+          "text": "Blocos arredondados como uma marmita bento: cada informação em seu ladrilho colo",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Fundo escuro com luzes coloridas como uma aurora b\"",
+          "text": "Fundo escuro com luzes coloridas como uma aurora boreal e painéis translúcidos.",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Fonte monoespaçada, rótulos técnicos, marcações e \"",
+          "text": "Fonte monoespaçada, rótulos técnicos, marcações e listras de atenção. Painel de ",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Divertido e cheio de cor: cantos bem redondos, bot\"",
+          "text": "Divertido e cheio de cor: cantos bem redondos, botões \"fofinhos\" com relevo e ad",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Denso e eficiente, para ferramentas profissionais:\"",
+          "text": "Denso e eficiente, para ferramentas profissionais: mais informação em menos espa",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Papel envelhecido, tinta, carimbos e máquina de es\"",
+          "text": "Papel envelhecido, tinta, carimbos e máquina de escrever. Nostálgico e artesanal",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        },
+        {
+          "el": "span.ui-option__desc \"Inspirado no Material moderno: superfícies tonais,\"",
+          "text": "Inspirado no Material moderno: superfícies tonais, botões em pílula e botão flut",
+          "scrollW": 262,
+          "clientW": 262,
+          "scrollH": 59,
+          "clientH": 39,
+          "ellipsis": false,
+          "lineClamp": true,
+          "dir": "y",
+          "preview": false
+        }
+      ],
+      "truncatedCount": 13,
+      "truncatedPreviewCount": 0,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 2,
+      "smallTextPreviewMin": 11.5,
+      "offscreenFocusable": 37,
+      "targetsTotal": 78,
+      "targetsLt44": 3,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [
+        [
+          "input.ui-input 420x36",
+          3
+        ]
+      ],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 16,
+      "overlappingTargets": [
+        {
+          "a": "button.ui-option__hit \"Escolher a família Soft Pill para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Swiss Minimal para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Dark Luxury para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Glassmorphism para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Gradient Glow para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Neo Brutalist para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Soft Neumorphic para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Apple Precision para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Bento Soft para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        },
+        {
+          "a": "button.ui-option__hit \"Escolher a família Aurora para Botões\"",
+          "b": "button.ui-btn.ui-btn--primary.ui-btn--sm \"Adicionar ao projeto\"",
+          "gap": -1
+        }
+      ],
+      "closeTargets": [],
+      "fields": 5,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": {
+        "n": 16,
+        "min": 296,
+        "max": 296
+      },
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/m-componentes--640x400-zoom200.png",
+    "shotFull": "capturas/sw/m-componentes--640x400-zoom200--full.png",
+    "ms": 5041
+  },
+  {
+    "id": "m-inspiracao",
+    "route": "/modulos/inspiracao",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/modulos/inspiracao",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/modulos/inspiracao",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 8352,
+      "overflow": [
+        {
+          "el": "span \"CORRIDA ● FORÇA ● MOBILIDADE ● HIIT ● RECUPERAÇÃO \"",
+          "left": -13,
+          "right": 1846,
+          "width": 1859,
+          "preview": true
+        }
+      ],
+      "overflowCount": 1,
+      "truncated": [
+        {
+          "el": "span.ins-approved__text.u-muted \"Nenhum conceito aprovado ainda. Abra um site, esco\"",
+          "text": "Nenhum conceito aprovado ainda. Abra um site, escolha a paleta e clique em Aprov",
+          "scrollW": 613,
+          "clientW": 574,
+          "scrollH": 21,
+          "clientH": 21,
+          "ellipsis": true,
+          "lineClamp": false,
+          "dir": "x",
+          "preview": false
+        }
+      ],
+      "truncatedCount": 1,
+      "truncatedPreviewCount": 5,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 1743,
+      "smallTextPreviewMin": 4.6,
+      "offscreenFocusable": 37,
+      "targetsTotal": 32,
+      "targetsLt44": 0,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 0,
+      "overlappingTargets": [],
+      "closeTargets": [],
+      "fields": 1,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": {
+        "n": 20,
+        "min": 608,
+        "max": 608
+      },
+      "h1": 21,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/m-inspiracao--640x400-zoom200.png",
+    "shotFull": "capturas/sw/m-inspiracao--640x400-zoom200--full.png",
+    "ms": 9587
+  },
+  {
+    "id": "m-templates",
+    "route": "/modulos/templates",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/modulos/templates",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/modulos/templates",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 6049,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 52,
+      "smallTextPreviewMin": 3.1,
+      "offscreenFocusable": 37,
+      "targetsTotal": 45,
+      "targetsLt44": 0,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 0,
+      "overlappingTargets": [],
+      "closeTargets": [],
+      "fields": 1,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": {
+        "n": 28,
+        "min": 296,
+        "max": 296
+      },
+      "h1": 3,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/m-templates--640x400-zoom200.png",
+    "shotFull": "capturas/sw/m-templates--640x400-zoom200--full.png",
+    "ms": 3052
+  },
+  {
+    "id": "prompt",
+    "route": "/prompt",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/prompt",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/prompt",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 1520,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 0,
+      "smallTextPreviewMin": null,
+      "offscreenFocusable": 37,
+      "targetsTotal": 12,
+      "targetsLt44": 0,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 3,
+      "overlappingTargets": [],
+      "closeTargets": [
+        {
+          "a": "button.ui-tab \"Master Prompt\"",
+          "b": "button.ui-tab \"Itens (12)\"",
+          "gap": 4
+        },
+        {
+          "a": "button.ui-tab \"Itens (12)\"",
+          "b": "button.ui-tab \"Contradições (0)\"",
+          "gap": 4
+        },
+        {
+          "a": "button.ui-tab \"Contradições (0)\"",
+          "b": "button.ui-tab \"Especificação JSON\"",
+          "gap": 4
+        }
+      ],
+      "fields": 0,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": null,
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/prompt--640x400-zoom200.png",
+    "shotFull": "capturas/sw/prompt--640x400-zoom200--full.png",
+    "ms": 1456
+  },
+  {
+    "id": "exportar",
+    "route": "/exportar",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/exportar",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/exportar",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 1883,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 0,
+      "smallTextPreviewMin": null,
+      "offscreenFocusable": 37,
+      "targetsTotal": 14,
+      "targetsLt44": 0,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 0,
+      "overlappingTargets": [],
+      "closeTargets": [],
+      "fields": 1,
+      "fieldsSmallFont": [
+        {
+          "el": "input.sr-only \"Arquivo para importar\"",
+          "fontSize": 15,
+          "h": 1
+        }
+      ],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [
+        {
+          "el": "span.ex-card__icon",
+          "w": 40
+        },
+        {
+          "el": "span.ex-card__icon",
+          "w": 40
+        },
+        {
+          "el": "span.ex-card__icon",
+          "w": 40
+        },
+        {
+          "el": "span.ex-card__icon",
+          "w": 40
+        },
+        {
+          "el": "span.ex-card__icon",
+          "w": 40
+        }
+      ],
+      "cardWidths": null,
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/exportar--640x400-zoom200.png",
+    "shotFull": "capturas/sw/exportar--640x400-zoom200--full.png",
+    "ms": 1514
+  },
+  {
+    "id": "validacao",
+    "route": "/validacao",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/validacao",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/validacao",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 2708,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 0,
+      "smallTextPreviewMin": null,
+      "offscreenFocusable": 37,
+      "targetsTotal": 29,
+      "targetsLt44": 0,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 0,
+      "overlappingTargets": [],
+      "closeTargets": [],
+      "fields": 6,
+      "fieldsSmallFont": [
+        {
+          "el": "input.sr-only \"Relatório para importar\"",
+          "fontSize": 15,
+          "h": 1
+        }
+      ],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": null,
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/validacao--640x400-zoom200.png",
+    "shotFull": "capturas/sw/validacao--640x400-zoom200--full.png",
+    "ms": 1637
+  },
+  {
+    "id": "projeto",
+    "route": "/projeto",
+    "size": "640x400",
+    "w": 640,
+    "h": 400,
+    "mobile": true,
+    "state": "cheio",
+    "tag": "640x400-zoom200",
+    "finalHash": "#/projeto",
+    "m": {
+      "vw": 640,
+      "vh": 400,
+      "url": "#/projeto",
+      "docScrollWidth": 640,
+      "bodyScrollWidth": 640,
+      "docOverflowX": 0,
+      "docHeight": 1465,
+      "overflow": [],
+      "overflowCount": 0,
+      "truncated": [],
+      "truncatedCount": 0,
+      "truncatedPreviewCount": 0,
+      "smallText": [],
+      "smallTextCount": 0,
+      "smallTextPreviewCount": 0,
+      "smallTextPreviewMin": null,
+      "offscreenFocusable": 37,
+      "targetsTotal": 10,
+      "targetsLt44": 0,
+      "targetsLt24": 0,
+      "targetsLt44Prev": 0,
+      "targetsPrevTotal": 0,
+      "targetsLt44Groups": [],
+      "targetsLt24Examples": [],
+      "closeTargetsCount": 1,
+      "overlappingTargets": [],
+      "closeTargets": [
+        {
+          "a": "button \"Essencial\"",
+          "b": "button \"Avançado\"",
+          "gap": 2
+        }
+      ],
+      "fields": 1,
+      "fieldsSmallFont": [],
+      "fieldsPreviewSmallFont": 0,
+      "fixed": [
+        {
+          "el": "header.shell-topbar \"Atelier UI Design System Studio Master Prompt\"",
+          "pos": "sticky",
+          "top": 0,
+          "bottom": 60,
+          "h": 60,
+          "w": 640
+        },
+        {
+          "el": "aside#studio-sidebar.shell-sidebar \"Navegação do Studio\"",
+          "pos": "fixed",
+          "top": 0,
+          "bottom": 400,
+          "h": 400,
+          "w": 320
+        }
+      ],
+      "narrowCards": [],
+      "cardWidths": null,
+      "h1": 1,
+      "main": 1
+    },
+    "covered": [],
+    "shot": "capturas/sw/projeto--640x400-zoom200.png",
+    "shotFull": "capturas/sw/projeto--640x400-zoom200--full.png",
+    "ms": 1541
+  }
+]

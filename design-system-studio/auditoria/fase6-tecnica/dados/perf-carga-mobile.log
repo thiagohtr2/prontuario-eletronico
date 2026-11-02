@@ -31,3 +31,22 @@ run 3 /modulos/componentes ready=1262 lcp=1336 js=1242KB load=17.81
 run 3 /modulos/navegacao ready=1497 lcp=1616 js=1202KB load=17.83
 run 3 /modulos/inspiracao ready=2522 lcp=2620 js=1432KB load=17.83
 run 3 /modulos/templates ready=837 lcp=860 js=1329KB load=17.92
+run 3 /modulos/landing ready=1589 lcp=1676 js=1274KB load=17.92
+run 3 /modulos/cores ready=1873 lcp=2432 js=1118KB load=19.05
+run 3 /prompt ready=473 lcp=508 js=1103KB load=19.45
+┌─────────────────────┬─────┬──────┬────────┬─────┬──────┬──────┬─────────┬────────┬───────┬────────┐
+│ (index)             │ fcp │ lcp  │ ready  │ cls │ tbt  │ jsKB │ jsFiles │ fontKB │ nodes │ heapMB │
+├─────────────────────┼─────┼──────┼────────┼─────┼──────┼──────┼─────────┼────────┼───────┼────────┤
+│ (home)              │ 212 │ 396  │ 366.3  │ 0   │ 11   │ 874  │ 6       │ 47     │ 451   │ 5      │
+│ livre               │ 400 │ 508  │ 485.9  │ 0   │ 0    │ 869  │ 6       │ 47     │ 570   │ 5      │
+│ guiado/objetivo     │ 388 │ 816  │ 778.6  │ 0   │ 42   │ 1689 │ 28      │ 47     │ 544   │ 6      │
+│ modulos/desktop     │ 316 │ 1376 │ 1330.8 │ 0   │ 567  │ 1198 │ 14      │ 47     │ 5625  │ 10     │
+│ modulos/mobile      │ 260 │ 1168 │ 1121.5 │ 0   │ 351  │ 1198 │ 14      │ 47     │ 5492  │ 10     │
+│ modulos/componentes │ 504 │ 808  │ 701.7  │ 0   │ 4    │ 1242 │ 14      │ 108    │ 1154  │ 6      │
+│ modulos/navegacao   │ 328 │ 1124 │ 1043.5 │ 0   │ 492  │ 1202 │ 16      │ 122    │ 3154  │ 8      │
+│ modulos/inspiracao  │ 392 │ 2060 │ 1988   │ 0   │ 1422 │ 1432 │ 14      │ 144    │ 9111  │ 11     │
+│ modulos/templates   │ 304 │ 528  │ 508.6  │ 0   │ 0    │ 1329 │ 17      │ 69     │ 973   │ 6      │
+│ modulos/landing     │ 280 │ 840  │ 816.6  │ 0   │ 247  │ 1274 │ 16      │ 105    │ 2598  │ 7      │
+│ modulos/cores       │ 380 │ 900  │ 611    │ 0   │ 246  │ 1118 │ 15      │ 47     │ 2647  │ 6      │
+│ prompt              │ 492 │ 856  │ 771.8  │ 0   │ 25   │ 1103 │ 13      │ 87     │ 377   │ 6      │
+└─────────────────────┴─────┴──────┴────────┴─────┴──────┴──────┴─────────┴────────┴───────┴────────┘

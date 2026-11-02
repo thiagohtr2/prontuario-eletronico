@@ -18,3 +18,11 @@
 640x400-zoom200 m-mobile ok ov=0 ovEls=41 trunc=1 small=4 lt44=4 lt24=3 cov=0 3488ms
 640x400-zoom200 m-preview ok ov=0 ovEls=0 trunc=0 small=0 lt44=0 lt24=0 cov=0 1604ms
 640x400-zoom200 m-cores ok ov=0 ovEls=0 trunc=0 small=1 lt44=0 lt24=0 cov=0 4184ms
+640x400-zoom200 m-navegacao ok ov=0 ovEls=0 trunc=19 small=0 lt44=2 lt24=0 cov=0 11955ms
+640x400-zoom200 m-componentes ok ov=0 ovEls=0 trunc=13 small=0 lt44=3 lt24=0 cov=0 5041ms
+640x400-zoom200 m-inspiracao ok ov=0 ovEls=1 trunc=1 small=0 lt44=0 lt24=0 cov=0 9587ms
+640x400-zoom200 m-templates ok ov=0 ovEls=0 trunc=0 small=0 lt44=0 lt24=0 cov=0 3052ms
+640x400-zoom200 prompt ok ov=0 ovEls=0 trunc=0 small=0 lt44=0 lt24=0 cov=0 1456ms
+640x400-zoom200 exportar ok ov=0 ovEls=0 trunc=0 small=0 lt44=0 lt24=0 cov=0 1514ms
+640x400-zoom200 validacao ok ov=0 ovEls=0 trunc=0 small=0 lt44=0 lt24=0 cov=0 1637ms
+640x400-zoom200 projeto ok ov=0 ovEls=0 trunc=0 small=0 lt44=0 lt24=0 cov=0 1541ms

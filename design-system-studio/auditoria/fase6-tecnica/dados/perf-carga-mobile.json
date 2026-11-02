@@ -1,0 +1,2116 @@
+{
+  "method": {
+    "base": "http://127.0.0.1:4300/",
+    "runs": 3,
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "cache": "contexto novo por medição (frio)",
+    "server": "python http.server (HTTP/1.0, sem compressão)"
+  },
+  "summary": {
+    "(home)": {
+      "n": 3,
+      "ttfb": 4.8,
+      "dcl": 91.1,
+      "loadEvent": 91.1,
+      "fcp": 212,
+      "lcp": 396,
+      "ready": 366.3,
+      "cls": 0,
+      "tbt": 11,
+      "longTasks": 2,
+      "longestTask": 61,
+      "lcpMin": 316,
+      "lcpMax": 648,
+      "readyMin": 235,
+      "readyMax": 563,
+      "requests": 10,
+      "jsKB": 874,
+      "jsFiles": 6,
+      "cssKB": 37,
+      "fontKB": 47,
+      "fontFiles": 1,
+      "domNodes": 451,
+      "heapMB": 5.01,
+      "lcpEl": "P.",
+      "errors": [],
+      "loadavgMedian": 16.53
+    },
+    "livre": {
+      "n": 3,
+      "ttfb": 5.1,
+      "dcl": 129.9,
+      "loadEvent": 130,
+      "fcp": 400,
+      "lcp": 508,
+      "ready": 485.9,
+      "cls": 0,
+      "tbt": 0,
+      "longTasks": 2,
+      "longestTask": 120,
+      "lcpMin": 352,
+      "lcpMax": 744,
+      "readyMin": 325,
+      "readyMax": 688,
+      "requests": 10,
+      "jsKB": 869,
+      "jsFiles": 6,
+      "cssKB": 37,
+      "fontKB": 47,
+      "fontFiles": 1,
+      "domNodes": 570,
+      "heapMB": 5.13,
+      "lcpEl": "P.ui-page-desc",
+      "errors": [],
+      "loadavgMedian": 16.24
+    },
+    "guiado/objetivo": {
+      "n": 3,
+      "ttfb": 11.1,
+      "dcl": 151,
+      "loadEvent": 151.1,
+      "fcp": 388,
+      "lcp": 816,
+      "ready": 778.6,
+      "cls": 0,
+      "tbt": 42,
+      "longTasks": 4,
+      "longestTask": 188,
+      "lcpMin": 364,
+      "lcpMax": 1532,
+      "readyMin": 338,
+      "readyMax": 1474,
+      "requests": 40,
+      "jsKB": 1689,
+      "jsFiles": 28,
+      "cssKB": 144,
+      "fontKB": 47,
+      "fontFiles": 1,
+      "domNodes": 544,
+      "heapMB": 6.03,
+      "lcpEl": "P.",
+      "errors": [],
+      "loadavgMedian": 16.58
+    },
+    "modulos/desktop": {
+      "n": 3,
+      "ttfb": 5.2,
+      "dcl": 114.5,
+      "loadEvent": 114.7,
+      "fcp": 316,
+      "lcp": 1376,
+      "ready": 1330.8,
+      "cls": 0,
+      "tbt": 567,
+      "longTasks": 4,
+      "longestTask": 311,
+      "lcpMin": 508,
+      "lcpMax": 1776,
+      "readyMin": 490,
+      "readyMax": 1736,
+      "requests": 18,
+      "jsKB": 1198,
+      "jsFiles": 14,
+      "cssKB": 58,
+      "fontKB": 47,
+      "fontFiles": 1,
+      "domNodes": 5625,
+      "heapMB": 10.47,
+      "lcpEl": "P.ui-page-desc",
+      "errors": [],
+      "loadavgMedian": 16.84
+    },
+    "modulos/mobile": {
+      "n": 3,
+      "ttfb": 6.1,
+      "dcl": 140.8,
+      "loadEvent": 140.9,
+      "fcp": 260,
+      "lcp": 1168,
+      "ready": 1121.5,
+      "cls": 0,
+      "tbt": 351,
+      "longTasks": 4,
+      "longestTask": 377,
+      "lcpMin": 780,
+      "lcpMax": 1336,
+      "readyMin": 729,
+      "readyMax": 1272,
+      "requests": 18,
+      "jsKB": 1198,
+      "jsFiles": 14,
+      "cssKB": 58,
+      "fontKB": 47,
+      "fontFiles": 1,
+      "domNodes": 5492,
+      "heapMB": 10.35,
+      "lcpEl": "DIV.",
+      "errors": [],
+      "loadavgMedian": 16.84
+    },
+    "modulos/componentes": {
+      "n": 3,
+      "ttfb": 11.9,
+      "dcl": 216,
+      "loadEvent": 216.2,
+      "fcp": 504,
+      "lcp": 808,
+      "ready": 701.7,
+      "cls": 0,
+      "tbt": 4,
+      "longTasks": 3,
+      "longestTask": 180,
+      "lcpMin": 368,
+      "lcpMax": 1336,
+      "readyMin": 316,
+      "readyMax": 1262,
+      "requests": 20,
+      "jsKB": 1242,
+      "jsFiles": 14,
+      "cssKB": 46,
+      "fontKB": 108,
+      "fontFiles": 3,
+      "domNodes": 1154,
+      "heapMB": 6.28,
+      "lcpEl": "DIV.",
+      "errors": [],
+      "loadavgMedian": 17.74
+    },
+    "modulos/navegacao": {
+      "n": 3,
+      "ttfb": 6.5,
+      "dcl": 127.3,
+      "loadEvent": 127.6,
+      "fcp": 328,
+      "lcp": 1124,
+      "ready": 1043.5,
+      "cls": 0,
+      "tbt": 492,
+      "longTasks": 4,
+      "longestTask": 435,
+      "lcpMin": 760,
+      "lcpMax": 1616,
+      "readyMin": 731,
+      "readyMax": 1497,
+      "requests": 22,
+      "jsKB": 1202,
+      "jsFiles": 16,
+      "cssKB": 89,
+      "fontKB": 122,
+      "fontFiles": 3,
+      "domNodes": 3154,
+      "heapMB": 8.3,
+      "lcpEl": "P.nvs-intro__lead",
+      "errors": [],
+      "loadavgMedian": 17.83
+    },
+    "modulos/inspiracao": {
+      "n": 3,
+      "ttfb": 7.3,
+      "dcl": 132.7,
+      "loadEvent": 132.9,
+      "fcp": 392,
+      "lcp": 2060,
+      "ready": 1988,
+      "cls": 0,
+      "tbt": 1422,
+      "longTasks": 6,
+      "longestTask": 1117,
+      "lcpMin": 1156,
+      "lcpMax": 2620,
+      "readyMin": 1110,
+      "readyMax": 2522,
+      "requests": 21,
+      "jsKB": 1432,
+      "jsFiles": 14,
+      "cssKB": 43,
+      "fontKB": 144,
+      "fontFiles": 4,
+      "domNodes": 9111,
+      "heapMB": 11.2,
+      "lcpEl": "P.",
+      "errors": [],
+      "loadavgMedian": 17.83
+    },
+    "modulos/templates": {
+      "n": 3,
+      "ttfb": 10.3,
+      "dcl": 131.2,
+      "loadEvent": 131.4,
+      "fcp": 304,
+      "lcp": 528,
+      "ready": 508.6,
+      "cls": 0,
+      "tbt": 0,
+      "longTasks": 2,
+      "longestTask": 96,
+      "lcpMin": 340,
+      "lcpMax": 860,
+      "readyMin": 322,
+      "readyMax": 837,
+      "requests": 22,
+      "jsKB": 1329,
+      "jsFiles": 17,
+      "cssKB": 43,
+      "fontKB": 69,
+      "fontFiles": 2,
+      "domNodes": 973,
+      "heapMB": 6.18,
+      "lcpEl": "P.ui-page-desc",
+      "errors": [],
+      "loadavgMedian": 17.91
+    },
+    "modulos/landing": {
+      "n": 3,
+      "ttfb": 4.8,
+      "dcl": 99.7,
+      "loadEvent": 99.7,
+      "fcp": 280,
+      "lcp": 840,
+      "ready": 816.6,
+      "cls": 0,
+      "tbt": 247,
+      "longTasks": 3,
+      "longestTask": 294,
+      "lcpMin": 724,
+      "lcpMax": 1676,
+      "readyMin": 695,
+      "readyMax": 1589,
+      "requests": 22,
+      "jsKB": 1274,
+      "jsFiles": 16,
+      "cssKB": 38,
+      "fontKB": 105,
+      "fontFiles": 3,
+      "domNodes": 2598,
+      "heapMB": 7.11,
+      "lcpEl": "P.ui-page-desc",
+      "errors": [],
+      "loadavgMedian": 17.36
+    },
+    "modulos/cores": {
+      "n": 3,
+      "ttfb": 6,
+      "dcl": 187.4,
+      "loadEvent": 187.4,
+      "fcp": 380,
+      "lcp": 900,
+      "ready": 611,
+      "cls": 0,
+      "tbt": 246,
+      "longTasks": 4,
+      "longestTask": 296,
+      "lcpMin": 800,
+      "lcpMax": 2432,
+      "readyMin": 575,
+      "readyMax": 1873,
+      "requests": 19,
+      "jsKB": 1118,
+      "jsFiles": 15,
+      "cssKB": 36,
+      "fontKB": 47,
+      "fontFiles": 1,
+      "domNodes": 2647,
+      "heapMB": 6.33,
+      "lcpEl": "P.ui-page-desc",
+      "errors": [],
+      "loadavgMedian": 17.36
+    },
+    "prompt": {
+      "n": 3,
+      "ttfb": 6.1,
+      "dcl": 184.3,
+      "loadEvent": 184.4,
+      "fcp": 492,
+      "lcp": 856,
+      "ready": 771.8,
+      "cls": 0,
+      "tbt": 25,
+      "longTasks": 4,
+      "longestTask": 208,
+      "lcpMin": 508,
+      "lcpMax": 1028,
+      "readyMin": 473,
+      "readyMax": 892,
+      "requests": 18,
+      "jsKB": 1103,
+      "jsFiles": 13,
+      "cssKB": 37,
+      "fontKB": 87,
+      "fontFiles": 2,
+      "domNodes": 377,
+      "heapMB": 5.85,
+      "lcpEl": "P.ui-page-desc",
+      "errors": [],
+      "loadavgMedian": 16.53
+    }
+  },
+  "raw": [
+    {
+      "run": 1,
+      "route": "",
+      "loadavg": [
+        17.76,
+        9.23,
+        3.68
+      ],
+      "wallMs": 1924,
+      "errors": [],
+      "ttfb": 4.7999999999883585,
+      "dcl": 91.09999999997672,
+      "loadEvent": 91.09999999997672,
+      "fcp": 188,
+      "lcp": 316,
+      "lcpEl": "P.",
+      "ready": 235.19999999995343,
+      "cls": 0,
+      "longTasks": 1,
+      "longTaskTotal": 61,
+      "longestTask": 61,
+      "tbt": 11,
+      "requests": 10,
+      "bytes": {
+        "js": [
+          6,
+          894692
+        ],
+        "css": [
+          2,
+          37390
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 451,
+      "heapMB": 5.000942230224609,
+      "cdpNodes": 600,
+      "layoutCount": 4,
+      "recalcStyleCount": 5,
+      "scriptDuration": 0.08803,
+      "taskDuration": 0.261163
+    },
+    {
+      "run": 1,
+      "route": "livre",
+      "loadavg": [
+        17.76,
+        9.23,
+        3.68
+      ],
+      "wallMs": 2014,
+      "errors": [],
+      "ttfb": 3.2999999999883585,
+      "dcl": 128.70000000001164,
+      "loadEvent": 128.89999999996508,
+      "fcp": 244,
+      "lcp": 352,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 325,
+      "cls": 0,
+      "longTasks": 2,
+      "longTaskTotal": 104,
+      "longestTask": 54,
+      "tbt": 0,
+      "requests": 10,
+      "bytes": {
+        "js": [
+          6,
+          889883
+        ],
+        "css": [
+          2,
+          37390
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 570,
+      "heapMB": 5.181449890136719,
+      "cdpNodes": 748,
+      "layoutCount": 4,
+      "recalcStyleCount": 6,
+      "scriptDuration": 0.142792,
+      "taskDuration": 0.325541
+    },
+    {
+      "run": 1,
+      "route": "guiado/objetivo",
+      "loadavg": [
+        16.58,
+        9.13,
+        3.68
+      ],
+      "wallMs": 2043,
+      "errors": [],
+      "ttfb": 4,
+      "dcl": 151,
+      "loadEvent": 151.09999999997672,
+      "fcp": 280,
+      "lcp": 364,
+      "lcpEl": "P.",
+      "ready": 337.79999999998836,
+      "cls": 0,
+      "longTasks": 1,
+      "longTaskTotal": 67,
+      "longestTask": 67,
+      "tbt": 0,
+      "requests": 40,
+      "bytes": {
+        "js": [
+          28,
+          1729973
+        ],
+        "css": [
+          10,
+          147129
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 544,
+      "heapMB": 6.098598480224609,
+      "cdpNodes": 789,
+      "layoutCount": 5,
+      "recalcStyleCount": 6,
+      "scriptDuration": 0.104063,
+      "taskDuration": 0.274576
+    },
+    {
+      "run": 1,
+      "route": "modulos/desktop",
+      "loadavg": [
+        16.58,
+        9.13,
+        3.68
+      ],
+      "wallMs": 1951,
+      "errors": [],
+      "ttfb": 4.2999999999883585,
+      "dcl": 81.79999999998836,
+      "loadEvent": 81.79999999998836,
+      "fcp": 204,
+      "lcp": 508,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 489.5999999999767,
+      "cls": 0,
+      "longTasks": 3,
+      "longTaskTotal": 258,
+      "longestTask": 128,
+      "tbt": 107,
+      "requests": 18,
+      "bytes": {
+        "js": [
+          14,
+          1227237
+        ],
+        "css": [
+          2,
+          59202
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 5625,
+      "heapMB": 11.28201675415039,
+      "cdpNodes": 6135,
+      "layoutCount": 6,
+      "recalcStyleCount": 7,
+      "scriptDuration": 0.26931,
+      "taskDuration": 0.569398
+    },
+    {
+      "run": 1,
+      "route": "modulos/mobile",
+      "loadavg": [
+        15.49,
+        9.03,
+        3.68
+      ],
+      "wallMs": 2052,
+      "errors": [],
+      "ttfb": 2.7000000000116415,
+      "dcl": 114.60000000003492,
+      "loadEvent": 114.79999999998836,
+      "fcp": 256,
+      "lcp": 780,
+      "lcpEl": "DIV.",
+      "ready": 728.6000000000349,
+      "cls": 0,
+      "longTasks": 3,
+      "longTaskTotal": 407,
+      "longestTask": 267,
+      "tbt": 222,
+      "requests": 18,
+      "bytes": {
+        "js": [
+          14,
+          1227211
+        ],
+        "css": [
+          2,
+          59202
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 5492,
+      "heapMB": 10.34811019897461,
+      "cdpNodes": 10873,
+      "layoutCount": 6,
+      "recalcStyleCount": 8,
+      "scriptDuration": 0.303409,
+      "taskDuration": 0.695909
+    },
+    {
+      "run": 1,
+      "route": "modulos/componentes",
+      "loadavg": [
+        15.49,
+        9.03,
+        3.68
+      ],
+      "wallMs": 2091,
+      "errors": [],
+      "ttfb": 4.7999999999883585,
+      "dcl": 75.20000000001164,
+      "loadEvent": 75.40000000002328,
+      "fcp": 228,
+      "lcp": 368,
+      "lcpEl": "DIV.",
+      "ready": 316,
+      "cls": 0,
+      "longTasks": 2,
+      "longTaskTotal": 137,
+      "longestTask": 82,
+      "tbt": 0,
+      "requests": 20,
+      "bytes": {
+        "js": [
+          14,
+          1272202
+        ],
+        "css": [
+          2,
+          47348
+        ],
+        "font": [
+          3,
+          110948
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 1154,
+      "heapMB": 6.297275543212891,
+      "cdpNodes": 2236,
+      "layoutCount": 6,
+      "recalcStyleCount": 23,
+      "scriptDuration": 0.128691,
+      "taskDuration": 0.341322
+    },
+    {
+      "run": 1,
+      "route": "modulos/navegacao",
+      "loadavg": [
+        15.49,
+        9.03,
+        3.68
+      ],
+      "wallMs": 2452,
+      "errors": [],
+      "ttfb": 6.5,
+      "dcl": 105.79999999998836,
+      "loadEvent": 106,
+      "fcp": 276,
+      "lcp": 760,
+      "lcpEl": "P.nvs-intro__lead",
+      "ready": 730.7999999999884,
+      "cls": 0,
+      "longTasks": 4,
+      "longTaskTotal": 439,
+      "longestTask": 229,
+      "tbt": 191,
+      "requests": 22,
+      "bytes": {
+        "js": [
+          16,
+          1230383
+        ],
+        "css": [
+          2,
+          91487
+        ],
+        "font": [
+          3,
+          125280
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 3154,
+      "heapMB": 8.299369812011719,
+      "cdpNodes": 6003,
+      "layoutCount": 14,
+      "recalcStyleCount": 176,
+      "scriptDuration": 0.270061,
+      "taskDuration": 0.850706
+    },
+    {
+      "run": 1,
+      "route": "modulos/inspiracao",
+      "loadavg": [
+        14.89,
+        9.01,
+        3.7
+      ],
+      "wallMs": 2324,
+      "errors": [],
+      "ttfb": 3,
+      "dcl": 62.90000000002328,
+      "loadEvent": 63,
+      "fcp": 176,
+      "lcp": 1156,
+      "lcpEl": "P.",
+      "ready": 1110.2999999999884,
+      "cls": 0,
+      "longTasks": 4,
+      "longTaskTotal": 931,
+      "longestTask": 696,
+      "tbt": 722,
+      "requests": 21,
+      "bytes": {
+        "js": [
+          14,
+          1466206
+        ],
+        "css": [
+          2,
+          43569
+        ],
+        "font": [
+          4,
+          147568
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 9111,
+      "heapMB": 11.194698333740234,
+      "cdpNodes": 11652,
+      "layoutCount": 6,
+      "recalcStyleCount": 16,
+      "scriptDuration": 0.30468,
+      "taskDuration": 1.346241
+    },
+    {
+      "run": 1,
+      "route": "modulos/templates",
+      "loadavg": [
+        14.89,
+        9.01,
+        3.7
+      ],
+      "wallMs": 2098,
+      "errors": [],
+      "ttfb": 2.900000000023283,
+      "dcl": 72.40000000002328,
+      "loadEvent": 72.40000000002328,
+      "fcp": 220,
+      "lcp": 340,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 321.5999999999767,
+      "cls": 0,
+      "longTasks": 1,
+      "longTaskTotal": 81,
+      "longestTask": 81,
+      "tbt": 0,
+      "requests": 22,
+      "bytes": {
+        "js": [
+          17,
+          1360870
+        ],
+        "css": [
+          2,
+          43775
+        ],
+        "font": [
+          2,
+          70544
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 973,
+      "heapMB": 6.157356262207031,
+      "cdpNodes": 1369,
+      "layoutCount": 6,
+      "recalcStyleCount": 8,
+      "scriptDuration": 0.125325,
+      "taskDuration": 0.35119
+    },
+    {
+      "run": 1,
+      "route": "modulos/landing",
+      "loadavg": [
+        14.5,
+        9.03,
+        3.73
+      ],
+      "wallMs": 2553,
+      "errors": [],
+      "ttfb": 4.5,
+      "dcl": 99.70000000001164,
+      "loadEvent": 99.70000000001164,
+      "fcp": 280,
+      "lcp": 840,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 816.5999999999767,
+      "cls": 0,
+      "longTasks": 3,
+      "longTaskTotal": 464,
+      "longestTask": 294,
+      "tbt": 247,
+      "requests": 22,
+      "bytes": {
+        "js": [
+          16,
+          1304702
+        ],
+        "css": [
+          2,
+          38655
+        ],
+        "font": [
+          3,
+          107164
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 2598,
+      "heapMB": 7.137386322021484,
+      "cdpNodes": 3674,
+      "layoutCount": 5,
+      "recalcStyleCount": 7,
+      "scriptDuration": 0.256385,
+      "taskDuration": 0.845551
+    },
+    {
+      "run": 1,
+      "route": "modulos/cores",
+      "loadavg": [
+        14.5,
+        9.03,
+        3.73
+      ],
+      "wallMs": 2203,
+      "errors": [],
+      "ttfb": 6,
+      "dcl": 112.5,
+      "loadEvent": 116.40000000002328,
+      "fcp": 380,
+      "lcp": 800,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 611,
+      "cls": 0,
+      "longTasks": 3,
+      "longTaskTotal": 371,
+      "longestTask": 164,
+      "tbt": 91,
+      "requests": 19,
+      "bytes": {
+        "js": [
+          15,
+          1144336
+        ],
+        "css": [
+          2,
+          36911
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 2647,
+      "heapMB": 6.330055236816406,
+      "cdpNodes": 3075,
+      "layoutCount": 4,
+      "recalcStyleCount": 5,
+      "scriptDuration": 0.254684,
+      "taskDuration": 0.694551
+    },
+    {
+      "run": 1,
+      "route": "prompt",
+      "loadavg": [
+        14.78,
+        9.17,
+        3.81
+      ],
+      "wallMs": 2743,
+      "errors": [],
+      "ttfb": 19.400000000023283,
+      "dcl": 371.79999999998836,
+      "loadEvent": 371.9000000000233,
+      "fcp": 672,
+      "lcp": 1028,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 892.2999999999884,
+      "cls": 0,
+      "longTasks": 4,
+      "longTaskTotal": 537,
+      "longestTask": 199,
+      "tbt": 63,
+      "requests": 18,
+      "bytes": {
+        "js": [
+          13,
+          1129556
+        ],
+        "css": [
+          2,
+          37516
+        ],
+        "font": [
+          2,
+          88660
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 377,
+      "heapMB": 5.9838104248046875,
+      "cdpNodes": 533,
+      "layoutCount": 5,
+      "recalcStyleCount": 7,
+      "scriptDuration": 0.285208,
+      "taskDuration": 0.743962
+    },
+    {
+      "run": 2,
+      "route": "",
+      "loadavg": [
+        16.24,
+        9.57,
+        3.97
+      ],
+      "wallMs": 2281,
+      "errors": [],
+      "ttfb": 4.199999999953434,
+      "dcl": 98.5,
+      "loadEvent": 98.59999999997672,
+      "fcp": 372,
+      "lcp": 648,
+      "lcpEl": "P.",
+      "ready": 563,
+      "cls": 0,
+      "longTasks": 5,
+      "longTaskTotal": 492,
+      "longestTask": 160,
+      "tbt": 49,
+      "requests": 10,
+      "bytes": {
+        "js": [
+          6,
+          894692
+        ],
+        "css": [
+          2,
+          37390
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 451,
+      "heapMB": 5.1063232421875,
+      "cdpNodes": 600,
+      "layoutCount": 4,
+      "recalcStyleCount": 5,
+      "scriptDuration": 0.218651,
+      "taskDuration": 0.628037
+    },
+    {
+      "run": 2,
+      "route": "livre",
+      "loadavg": [
+        16.24,
+        9.57,
+        3.97
+      ],
+      "wallMs": 2367,
+      "errors": [],
+      "ttfb": 7.100000000034925,
+      "dcl": 129.90000000002328,
+      "loadEvent": 130,
+      "fcp": 416,
+      "lcp": 744,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 688.1000000000349,
+      "cls": 0,
+      "longTasks": 5,
+      "longTaskTotal": 387,
+      "longestTask": 135,
+      "tbt": 16,
+      "requests": 10,
+      "bytes": {
+        "js": [
+          6,
+          889883
+        ],
+        "css": [
+          2,
+          37390
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 570,
+      "heapMB": 5.125560760498047,
+      "cdpNodes": 748,
+      "layoutCount": 4,
+      "recalcStyleCount": 5,
+      "scriptDuration": 0.234199,
+      "taskDuration": 0.698009
+    },
+    {
+      "run": 2,
+      "route": "guiado/objetivo",
+      "loadavg": [
+        17.02,
+        9.84,
+        4.09
+      ],
+      "wallMs": 3098,
+      "errors": [],
+      "ttfb": 231.29999999998836,
+      "dcl": 479.70000000001164,
+      "loadEvent": 480,
+      "fcp": 1288,
+      "lcp": 1532,
+      "lcpEl": "P.",
+      "ready": 1474.2999999999884,
+      "cls": 0,
+      "longTasks": 6,
+      "longTaskTotal": 866,
+      "longestTask": 329,
+      "tbt": 42,
+      "requests": 40,
+      "bytes": {
+        "js": [
+          28,
+          1729973
+        ],
+        "css": [
+          10,
+          147129
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 544,
+      "heapMB": 6.027473449707031,
+      "cdpNodes": 789,
+      "layoutCount": 4,
+      "recalcStyleCount": 6,
+      "scriptDuration": 0.420825,
+      "taskDuration": 1.11508
+    },
+    {
+      "run": 2,
+      "route": "modulos/desktop",
+      "loadavg": [
+        17.02,
+        9.84,
+        4.09
+      ],
+      "wallMs": 3235,
+      "errors": [],
+      "ttfb": 11.700000000011642,
+      "dcl": 114.5,
+      "loadEvent": 114.70000000001164,
+      "fcp": 316,
+      "lcp": 1776,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 1736.4000000000233,
+      "cls": 0,
+      "longTasks": 5,
+      "longTaskTotal": 1589,
+      "longestTask": 1092,
+      "tbt": 1239,
+      "requests": 18,
+      "bytes": {
+        "js": [
+          14,
+          1227237
+        ],
+        "css": [
+          2,
+          59202
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 5625,
+      "heapMB": 10.474285125732422,
+      "cdpNodes": 6135,
+      "layoutCount": 6,
+      "recalcStyleCount": 7,
+      "scriptDuration": 0.816948,
+      "taskDuration": 1.976506
+    },
+    {
+      "run": 2,
+      "route": "modulos/mobile",
+      "loadavg": [
+        17.74,
+        10.11,
+        4.2
+      ],
+      "wallMs": 2594,
+      "errors": [],
+      "ttfb": 6.899999999965075,
+      "dcl": 273.3999999999651,
+      "loadEvent": 273.3999999999651,
+      "fcp": 540,
+      "lcp": 1336,
+      "lcpEl": "DIV.",
+      "ready": 1271.7000000000116,
+      "cls": 0,
+      "longTasks": 4,
+      "longTaskTotal": 883,
+      "longestTask": 533,
+      "tbt": 483,
+      "requests": 18,
+      "bytes": {
+        "js": [
+          14,
+          1227211
+        ],
+        "css": [
+          2,
+          59202
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 5492,
+      "heapMB": 10.468574523925781,
+      "cdpNodes": 10873,
+      "layoutCount": 5,
+      "recalcStyleCount": 6,
+      "scriptDuration": 0.608808,
+      "taskDuration": 1.183052
+    },
+    {
+      "run": 2,
+      "route": "modulos/componentes",
+      "loadavg": [
+        17.74,
+        10.11,
+        4.2
+      ],
+      "wallMs": 2619,
+      "errors": [],
+      "ttfb": 11.899999999965075,
+      "dcl": 216,
+      "loadEvent": 216.20000000001164,
+      "fcp": 504,
+      "lcp": 808,
+      "lcpEl": "DIV.",
+      "ready": 701.7000000000116,
+      "cls": 0,
+      "longTasks": 3,
+      "longTaskTotal": 307,
+      "longestTask": 180,
+      "tbt": 4,
+      "requests": 20,
+      "bytes": {
+        "js": [
+          14,
+          1272202
+        ],
+        "css": [
+          2,
+          47348
+        ],
+        "font": [
+          3,
+          110948
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 1154,
+      "heapMB": 6.274345397949219,
+      "cdpNodes": 2236,
+      "layoutCount": 6,
+      "recalcStyleCount": 23,
+      "scriptDuration": 0.245121,
+      "taskDuration": 0.753451
+    },
+    {
+      "run": 2,
+      "route": "modulos/navegacao",
+      "loadavg": [
+        18.08,
+        10.31,
+        4.3
+      ],
+      "wallMs": 2265,
+      "errors": [],
+      "ttfb": 7.400000000023283,
+      "dcl": 172.40000000002328,
+      "loadEvent": 172.5,
+      "fcp": 328,
+      "lcp": 1124,
+      "lcpEl": "P.nvs-intro__lead",
+      "ready": 1043.5,
+      "cls": 0,
+      "longTasks": 4,
+      "longTaskTotal": 707,
+      "longestTask": 477,
+      "tbt": 492,
+      "requests": 22,
+      "bytes": {
+        "js": [
+          16,
+          1230383
+        ],
+        "css": [
+          2,
+          91487
+        ],
+        "font": [
+          3,
+          125280
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 3154,
+      "heapMB": 9.978324890136719,
+      "cdpNodes": 6003,
+      "layoutCount": 14,
+      "recalcStyleCount": 177,
+      "scriptDuration": 0.346627,
+      "taskDuration": 1.23675
+    },
+    {
+      "run": 2,
+      "route": "modulos/inspiracao",
+      "loadavg": [
+        17.91,
+        10.4,
+        4.36
+      ],
+      "wallMs": 3205,
+      "errors": [],
+      "ttfb": 7.2999999999883585,
+      "dcl": 161,
+      "loadEvent": 161.29999999998836,
+      "fcp": 392,
+      "lcp": 2060,
+      "lcpEl": "P.",
+      "ready": 1988,
+      "cls": 0,
+      "longTasks": 6,
+      "longTaskTotal": 1802,
+      "longestTask": 1117,
+      "tbt": 1422,
+      "requests": 21,
+      "bytes": {
+        "js": [
+          14,
+          1466206
+        ],
+        "css": [
+          2,
+          43569
+        ],
+        "font": [
+          4,
+          147568
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 9111,
+      "heapMB": 11.212841033935547,
+      "cdpNodes": 11652,
+      "layoutCount": 5,
+      "recalcStyleCount": 17,
+      "scriptDuration": 0.663068,
+      "taskDuration": 2.539588
+    },
+    {
+      "run": 2,
+      "route": "modulos/templates",
+      "loadavg": [
+        17.91,
+        10.4,
+        4.36
+      ],
+      "wallMs": 2361,
+      "errors": [],
+      "ttfb": 21.400000000023283,
+      "dcl": 131.20000000001164,
+      "loadEvent": 131.40000000002328,
+      "fcp": 304,
+      "lcp": 528,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 508.6000000000349,
+      "cls": 0,
+      "longTasks": 2,
+      "longTaskTotal": 157,
+      "longestTask": 96,
+      "tbt": 0,
+      "requests": 22,
+      "bytes": {
+        "js": [
+          17,
+          1360870
+        ],
+        "css": [
+          2,
+          43775
+        ],
+        "font": [
+          2,
+          70544
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 973,
+      "heapMB": 6.180580139160156,
+      "cdpNodes": 1369,
+      "layoutCount": 6,
+      "recalcStyleCount": 7,
+      "scriptDuration": 0.178815,
+      "taskDuration": 0.511601
+    },
+    {
+      "run": 2,
+      "route": "modulos/landing",
+      "loadavg": [
+        17.36,
+        10.41,
+        4.4
+      ],
+      "wallMs": 2468,
+      "errors": [],
+      "ttfb": 7.099999999976717,
+      "dcl": 154.09999999997672,
+      "loadEvent": 154.29999999998836,
+      "fcp": 284,
+      "lcp": 724,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 694.7000000000116,
+      "cls": 0,
+      "longTasks": 3,
+      "longTaskTotal": 259,
+      "longestTask": 140,
+      "tbt": 90,
+      "requests": 22,
+      "bytes": {
+        "js": [
+          16,
+          1304702
+        ],
+        "css": [
+          2,
+          38655
+        ],
+        "font": [
+          3,
+          107164
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 2598,
+      "heapMB": 7.109066009521484,
+      "cdpNodes": 3674,
+      "layoutCount": 5,
+      "recalcStyleCount": 8,
+      "scriptDuration": 0.178676,
+      "taskDuration": 0.6564
+    },
+    {
+      "run": 2,
+      "route": "modulos/cores",
+      "loadavg": [
+        17.36,
+        10.41,
+        4.4
+      ],
+      "wallMs": 2239,
+      "errors": [],
+      "ttfb": 14.799999999988358,
+      "dcl": 187.40000000002328,
+      "loadEvent": 187.40000000002328,
+      "fcp": 372,
+      "lcp": 900,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 575.4000000000233,
+      "cls": 0,
+      "longTasks": 4,
+      "longTaskTotal": 553,
+      "longestTask": 296,
+      "tbt": 246,
+      "requests": 19,
+      "bytes": {
+        "js": [
+          15,
+          1144336
+        ],
+        "css": [
+          2,
+          36911
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 2647,
+      "heapMB": 6.350830078125,
+      "cdpNodes": 3075,
+      "layoutCount": 4,
+      "recalcStyleCount": 6,
+      "scriptDuration": 0.269036,
+      "taskDuration": 0.736473
+    },
+    {
+      "run": 2,
+      "route": "prompt",
+      "loadavg": [
+        16.53,
+        10.36,
+        4.41
+      ],
+      "wallMs": 2585,
+      "errors": [],
+      "ttfb": 5,
+      "dcl": 184.29999999998836,
+      "loadEvent": 184.39999999996508,
+      "fcp": 492,
+      "lcp": 856,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 771.7999999999884,
+      "cls": 0,
+      "longTasks": 5,
+      "longTaskTotal": 524,
+      "longestTask": 231,
+      "tbt": 25,
+      "requests": 18,
+      "bytes": {
+        "js": [
+          13,
+          1129556
+        ],
+        "css": [
+          2,
+          37516
+        ],
+        "font": [
+          2,
+          88660
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 377,
+      "heapMB": 5.854198455810547,
+      "cdpNodes": 533,
+      "layoutCount": 5,
+      "recalcStyleCount": 7,
+      "scriptDuration": 0.209713,
+      "taskDuration": 0.754938
+    },
+    {
+      "run": 3,
+      "route": "",
+      "loadavg": [
+        16.53,
+        10.36,
+        4.41
+      ],
+      "wallMs": 2081,
+      "errors": [],
+      "ttfb": 6.100000000034925,
+      "dcl": 89.5,
+      "loadEvent": 89.80000000004657,
+      "fcp": 212,
+      "lcp": 396,
+      "lcpEl": "P.",
+      "ready": 366.30000000004657,
+      "cls": 0,
+      "longTasks": 2,
+      "longTaskTotal": 103,
+      "longestTask": 52,
+      "tbt": 0,
+      "requests": 10,
+      "bytes": {
+        "js": [
+          6,
+          894692
+        ],
+        "css": [
+          2,
+          37390
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 451,
+      "heapMB": 5.005832672119141,
+      "cdpNodes": 600,
+      "layoutCount": 4,
+      "recalcStyleCount": 5,
+      "scriptDuration": 0.115355,
+      "taskDuration": 0.267382
+    },
+    {
+      "run": 3,
+      "route": "livre",
+      "loadavg": [
+        15.61,
+        10.27,
+        4.42
+      ],
+      "wallMs": 2153,
+      "errors": [],
+      "ttfb": 5.099999999976717,
+      "dcl": 204.40000000002328,
+      "loadEvent": 204.5,
+      "fcp": 400,
+      "lcp": 508,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 485.9000000000233,
+      "cls": 0,
+      "longTasks": 1,
+      "longTaskTotal": 120,
+      "longestTask": 120,
+      "tbt": 0,
+      "requests": 10,
+      "bytes": {
+        "js": [
+          6,
+          889883
+        ],
+        "css": [
+          2,
+          37390
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 570,
+      "heapMB": 5.073642730712891,
+      "cdpNodes": 748,
+      "layoutCount": 4,
+      "recalcStyleCount": 5,
+      "scriptDuration": 0.189998,
+      "taskDuration": 0.380109
+    },
+    {
+      "run": 3,
+      "route": "guiado/objetivo",
+      "loadavg": [
+        15.61,
+        10.27,
+        4.42
+      ],
+      "wallMs": 2363,
+      "errors": [],
+      "ttfb": 11.099999999976717,
+      "dcl": 91.5,
+      "loadEvent": 91.69999999995343,
+      "fcp": 388,
+      "lcp": 816,
+      "lcpEl": "P.",
+      "ready": 778.5999999999767,
+      "cls": 0,
+      "longTasks": 4,
+      "longTaskTotal": 457,
+      "longestTask": 188,
+      "tbt": 85,
+      "requests": 40,
+      "bytes": {
+        "js": [
+          28,
+          1729973
+        ],
+        "css": [
+          10,
+          147129
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 544,
+      "heapMB": 5.958141326904297,
+      "cdpNodes": 789,
+      "layoutCount": 4,
+      "recalcStyleCount": 5,
+      "scriptDuration": 0.240209,
+      "taskDuration": 0.726524
+    },
+    {
+      "run": 3,
+      "route": "modulos/desktop",
+      "loadavg": [
+        16.84,
+        10.61,
+        4.56
+      ],
+      "wallMs": 2639,
+      "errors": [],
+      "ttfb": 5.2000000000116415,
+      "dcl": 309.70000000001164,
+      "loadEvent": 309.70000000001164,
+      "fcp": 388,
+      "lcp": 1376,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 1330.7999999999884,
+      "cls": 0,
+      "longTasks": 4,
+      "longTaskTotal": 767,
+      "longestTask": 311,
+      "tbt": 567,
+      "requests": 18,
+      "bytes": {
+        "js": [
+          14,
+          1227237
+        ],
+        "css": [
+          2,
+          59202
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 5625,
+      "heapMB": 10.427387237548828,
+      "cdpNodes": 6135,
+      "layoutCount": 6,
+      "recalcStyleCount": 8,
+      "scriptDuration": 0.499484,
+      "taskDuration": 1.346865
+    },
+    {
+      "run": 3,
+      "route": "modulos/mobile",
+      "loadavg": [
+        16.84,
+        10.61,
+        4.56
+      ],
+      "wallMs": 2337,
+      "errors": [],
+      "ttfb": 6.100000000034925,
+      "dcl": 140.80000000004657,
+      "loadEvent": 140.90000000002328,
+      "fcp": 260,
+      "lcp": 1168,
+      "lcpEl": "DIV.",
+      "ready": 1121.5,
+      "cls": 0,
+      "longTasks": 4,
+      "longTaskTotal": 561,
+      "longestTask": 377,
+      "tbt": 351,
+      "requests": 18,
+      "bytes": {
+        "js": [
+          14,
+          1227211
+        ],
+        "css": [
+          2,
+          59202
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 5492,
+      "heapMB": 10.25405502319336,
+      "cdpNodes": 10873,
+      "layoutCount": 5,
+      "recalcStyleCount": 7,
+      "scriptDuration": 0.456891,
+      "taskDuration": 0.987385
+    },
+    {
+      "run": 3,
+      "route": "modulos/componentes",
+      "loadavg": [
+        17.81,
+        10.92,
+        4.69
+      ],
+      "wallMs": 3117,
+      "errors": [],
+      "ttfb": 14.200000000011642,
+      "dcl": 387.79999999998836,
+      "loadEvent": 388.20000000001164,
+      "fcp": 1056,
+      "lcp": 1336,
+      "lcpEl": "DIV.",
+      "ready": 1261.7999999999884,
+      "cls": 0,
+      "longTasks": 4,
+      "longTaskTotal": 756,
+      "longestTask": 339,
+      "tbt": 7,
+      "requests": 20,
+      "bytes": {
+        "js": [
+          14,
+          1272202
+        ],
+        "css": [
+          2,
+          47348
+        ],
+        "font": [
+          3,
+          110948
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 1154,
+      "heapMB": 6.280338287353516,
+      "cdpNodes": 2236,
+      "layoutCount": 6,
+      "recalcStyleCount": 23,
+      "scriptDuration": 0.505564,
+      "taskDuration": 1.057845
+    },
+    {
+      "run": 3,
+      "route": "modulos/navegacao",
+      "loadavg": [
+        17.83,
+        11.04,
+        4.76
+      ],
+      "wallMs": 2718,
+      "errors": [],
+      "ttfb": 5.900000000023283,
+      "dcl": 127.29999999998836,
+      "loadEvent": 127.60000000003492,
+      "fcp": 328,
+      "lcp": 1616,
+      "lcpEl": "P.nvs-intro__lead",
+      "ready": 1496.7999999999884,
+      "cls": 0,
+      "longTasks": 5,
+      "longTaskTotal": 991,
+      "longestTask": 435,
+      "tbt": 659,
+      "requests": 22,
+      "bytes": {
+        "js": [
+          16,
+          1230383
+        ],
+        "css": [
+          2,
+          91487
+        ],
+        "font": [
+          3,
+          125280
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 3154,
+      "heapMB": 8.248603820800781,
+      "cdpNodes": 6003,
+      "layoutCount": 7,
+      "recalcStyleCount": 170,
+      "scriptDuration": 0.646108,
+      "taskDuration": 1.900219
+    },
+    {
+      "run": 3,
+      "route": "modulos/inspiracao",
+      "loadavg": [
+        17.83,
+        11.04,
+        4.76
+      ],
+      "wallMs": 3794,
+      "errors": [],
+      "ttfb": 21.100000000034925,
+      "dcl": 132.70000000001164,
+      "loadEvent": 132.90000000002328,
+      "fcp": 556,
+      "lcp": 2620,
+      "lcpEl": "P.",
+      "ready": 2521.600000000035,
+      "cls": 0,
+      "longTasks": 7,
+      "longTaskTotal": 2620,
+      "longestTask": 1293,
+      "tbt": 1961,
+      "requests": 21,
+      "bytes": {
+        "js": [
+          14,
+          1466206
+        ],
+        "css": [
+          2,
+          43569
+        ],
+        "font": [
+          4,
+          147568
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 9111,
+      "heapMB": 11.199493408203125,
+      "cdpNodes": 11948,
+      "layoutCount": 5,
+      "recalcStyleCount": 13,
+      "scriptDuration": 0.967012,
+      "taskDuration": 3.719703
+    },
+    {
+      "run": 3,
+      "route": "modulos/templates",
+      "loadavg": [
+        17.92,
+        11.17,
+        4.84
+      ],
+      "wallMs": 2759,
+      "errors": [],
+      "ttfb": 10.299999999988358,
+      "dcl": 230.59999999997672,
+      "loadEvent": 230.89999999996508,
+      "fcp": 708,
+      "lcp": 860,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 837,
+      "cls": 0,
+      "longTasks": 2,
+      "longTaskTotal": 455,
+      "longestTask": 366,
+      "tbt": 0,
+      "requests": 22,
+      "bytes": {
+        "js": [
+          17,
+          1360870
+        ],
+        "css": [
+          2,
+          43775
+        ],
+        "font": [
+          2,
+          70544
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 973,
+      "heapMB": 6.803142547607422,
+      "cdpNodes": 1369,
+      "layoutCount": 6,
+      "recalcStyleCount": 7,
+      "scriptDuration": 0.1924,
+      "taskDuration": 0.798872
+    },
+    {
+      "run": 3,
+      "route": "modulos/landing",
+      "loadavg": [
+        17.92,
+        11.17,
+        4.84
+      ],
+      "wallMs": 2801,
+      "errors": [],
+      "ttfb": 4.7999999999883585,
+      "dcl": 89.5,
+      "loadEvent": 89.70000000001164,
+      "fcp": 256,
+      "lcp": 1676,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 1589.2999999999884,
+      "cls": 0,
+      "longTasks": 6,
+      "longTaskTotal": 1033,
+      "longestTask": 615,
+      "tbt": 690,
+      "requests": 22,
+      "bytes": {
+        "js": [
+          16,
+          1304702
+        ],
+        "css": [
+          2,
+          38655
+        ],
+        "font": [
+          3,
+          107164
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 2598,
+      "heapMB": 7.100879669189453,
+      "cdpNodes": 3674,
+      "layoutCount": 5,
+      "recalcStyleCount": 8,
+      "scriptDuration": 0.308959,
+      "taskDuration": 1.84268
+    },
+    {
+      "run": 3,
+      "route": "modulos/cores",
+      "loadavg": [
+        19.05,
+        11.51,
+        4.99
+      ],
+      "wallMs": 3127,
+      "errors": [],
+      "ttfb": 5.100000000034925,
+      "dcl": 470.29999999998836,
+      "loadEvent": 470.6000000000349,
+      "fcp": 1188,
+      "lcp": 2432,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 1872.7000000000116,
+      "cls": 0,
+      "longTasks": 7,
+      "longTaskTotal": 1639,
+      "longestTask": 545,
+      "tbt": 737,
+      "requests": 19,
+      "bytes": {
+        "js": [
+          15,
+          1144336
+        ],
+        "css": [
+          2,
+          36911
+        ],
+        "font": [
+          1,
+          48256
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 2647,
+      "heapMB": 6.315685272216797,
+      "cdpNodes": 3075,
+      "layoutCount": 4,
+      "recalcStyleCount": 6,
+      "scriptDuration": 0.606521,
+      "taskDuration": 2.041703
+    },
+    {
+      "run": 3,
+      "route": "prompt",
+      "loadavg": [
+        19.45,
+        11.72,
+        5.09
+      ],
+      "wallMs": 2254,
+      "errors": [],
+      "ttfb": 6.099999999976717,
+      "dcl": 84.59999999997672,
+      "loadEvent": 84.79999999998836,
+      "fcp": 392,
+      "lcp": 508,
+      "lcpEl": "P.ui-page-desc",
+      "ready": 473.4000000000233,
+      "cls": 0,
+      "longTasks": 2,
+      "longTaskTotal": 286,
+      "longestTask": 208,
+      "tbt": 0,
+      "requests": 18,
+      "bytes": {
+        "js": [
+          13,
+          1129556
+        ],
+        "css": [
+          2,
+          37516
+        ],
+        "font": [
+          2,
+          88660
+        ],
+        "other": [
+          0,
+          0
+        ]
+      },
+      "domNodes": 377,
+      "heapMB": 5.751964569091797,
+      "cdpNodes": 533,
+      "layoutCount": 5,
+      "recalcStyleCount": 6,
+      "scriptDuration": 0.146131,
+      "taskDuration": 0.484546
+    }
+  ]
+}

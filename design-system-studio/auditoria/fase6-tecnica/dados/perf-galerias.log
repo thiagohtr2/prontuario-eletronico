@@ -1,0 +1,6 @@
+run 1 Layouts desktop (42): n=42 INPmed=64 max=96 LT=3 mut=51.5 rendered=null nodes=5628 load=19.13
+run 1 Layouts mobile (44): n=44 INPmed=120 max=272 LT=6 mut=30 rendered=null nodes=5521 load=21.3
+run 1 Componentes: categorias (66 × 16 famílias): n=66 INPmed=120 max=328 LT=6 mut=66 rendered=null nodes=1778 load=21.58
+run 1 Componentes: famílias: n=16 INPmed=36 max=64 LT=0 mut=6 rendered=null nodes=1157 load=20.71
+run 1 Paletas (60): n=60 INPmed=40 max=64 LT=0 mut=39 rendered=null nodes=2690 load=19.47
+run 1 Navegação: headers/sidebars: n=36 INPmed=40 max=80 LT=0 mut=10 rendered=null nodes=4059 load=18.48
