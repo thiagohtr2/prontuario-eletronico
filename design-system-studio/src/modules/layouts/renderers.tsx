@@ -1,33 +1,14 @@
-import type { ReactNode } from 'react'
-import type { ResolvedTheme } from '@/core/types'
-import type { DesktopLayout, LayoutRegion, MobileLayout } from './types'
-
-export interface DesktopSchematicProps {
-  layout: DesktopLayout
-  /** Largura em px em que o desenho é renderizado (as medidas do grid são escaladas a partir de 1280). */
-  width: number
-  /** Altura em px (padrão: proporção 16:10). */
-  height?: number
-  showLegends: boolean
-  /** Tema opcional; sem tema, usa a estética neutra de esquema. */
-  theme?: ResolvedTheme
-  /** Permite à Live Preview preencher cada região com conteúdo real. */
-  renderRegion?: (region: LayoutRegion, size: { scale: number }) => ReactNode
-}
-
-export function DesktopSchematic(_props: DesktopSchematicProps) {
-  return null
-}
-
-export interface PhonePreviewProps {
-  layout: MobileLayout
-  theme: ResolvedTheme
-  showLegends: boolean
-  /** Largura da tela do celular em px (altura = 2 × largura). */
-  width?: number
-  interactive?: boolean
-}
-
-export function PhonePreview(_props: PhonePreviewProps) {
-  return null
-}
+/**
+ * Renderizadores dos layouts (sem dados de catálogo aqui).
+ *
+ * - `DesktopSchematic`: desenha o grid real de um layout desktop em qualquer largura.
+ *   Para a Live Preview, passe `theme` e `renderRegion(region, { scale, width, height })`
+ *   para preencher cada região com interface real; devolver `null` mantém o desenho padrão.
+ * - `PhonePreview`: celular composicional montado a partir de `layout.config`, herdando o tema.
+ */
+export { DesktopSchematic } from './schematic'
+export type { DesktopSchematicProps, RegionSize } from './schematic'
+export { PhonePreview, phoneMenu, thumbShowsMenu, PHONE_BASE } from './phone'
+export type { PhonePreviewProps } from './phone'
+export { computeRegionRects, computeGeometry } from './geometry'
+export type { Rect } from './geometry'

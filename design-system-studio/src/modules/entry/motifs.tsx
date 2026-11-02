@@ -146,7 +146,7 @@ function draw(kind: MotifKind, a: string, b: string, c: string, d: string): Reac
           <circle cx="100" cy="88" r="42" fill={a} />
           <path d="M70 70 Q100 60 130 76" stroke={c} strokeOpacity=".25" strokeWidth="5" fill="none" />
           <ellipse cx="100" cy="90" rx="78" ry="15" fill="none" stroke={b} strokeWidth="5" transform="rotate(-14 100 90)" />
-          <circle cx="160" cy="44" r="6" fill={b} />
+          <circle cx="34" cy="50" r="6" fill={b} />
         </g>
       )
     case 'cup':

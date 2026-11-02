@@ -128,17 +128,20 @@ function boundsFor(root: HTMLElement): Bounds {
 /** Calcula a posição (relativa a `root`) de um painel ancorado em `anchor`, sem sair dos limites. */
 export function placePanel(
   anchor: HTMLElement,
+  reference: HTMLElement,
   root: HTMLElement,
   width: number | 'anchor',
   align: 'start' | 'end' | 'center',
   placement: Placement,
 ): CSSProperties {
-  const r = root.getBoundingClientRect()
+  // `reference` é o bloco de contenção real do painel (offsetParent); `root` é a prévia.
+  const r = reference.getBoundingClientRect()
   const a = anchor.getBoundingClientRect()
   const b = boundsFor(root)
   const gap = 8
   if (placement === 'sheet') {
-    return { left: b.left - r.left, width: b.width, top: r.height, maxHeight: Math.max(160, b.bottom - r.bottom) }
+    const rr = root.getBoundingClientRect()
+    return { left: b.left - r.left, width: b.width, top: rr.bottom - r.top, maxHeight: Math.max(160, b.bottom - rr.bottom) }
   }
   const wanted = width === 'anchor' ? a.width : width
   const w = Math.max(160, Math.min(wanted, b.width - gap * 2))
@@ -216,7 +219,8 @@ export function Popover({
     const anchor = menus.triggerEl(id)
     const r = root.current
     if (!anchor || !r) return
-    setPos(placePanel(anchor, r, width, align, placement))
+    const reference = (ref.current?.offsetParent as HTMLElement | null) ?? r
+    setPos(placePanel(anchor, reference, r, width, align, placement))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen, id])
 

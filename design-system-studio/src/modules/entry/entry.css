@@ -1,0 +1,288 @@
+/* ==========================================================================
+   Módulo de entrada (landing, login, cadastro) — prefixo ent-
+   As prévias (.ent-lp, .ent-auth) preservam as próprias cores; o restante segue
+   a identidade White Canvas do Studio.
+   ========================================================================== */
+
+/* ---------- Prévias ---------- */
+.ent-lp,
+.ent-auth {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  overflow: clip;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+}
+.ent-lp button,
+.ent-auth button {
+  font: inherit;
+}
+.ent-lp button:focus-visible,
+.ent-auth button:focus-visible,
+.ent-auth input:focus-visible {
+  outline: 2px solid var(--ent-focus, currentColor);
+  outline-offset: 2px;
+}
+.ent-auth input::placeholder {
+  color: var(--ent-ph, #8a8a93);
+  opacity: 1;
+}
+.ent-auth input:focus {
+  outline: none;
+}
+.ent-auth input:focus-visible {
+  outline-offset: 1px;
+}
+.ent-hscroll {
+  scrollbar-width: none;
+}
+.ent-hscroll::-webkit-scrollbar {
+  display: none;
+}
+
+.ent-marquee {
+  animation: ent-marquee 38s linear infinite;
+}
+.ent-marquee:hover {
+  animation-play-state: paused;
+}
+@keyframes ent-marquee {
+  to {
+    transform: translateX(-33.333%);
+  }
+}
+.ent-spin {
+  animation: ent-spin 0.8s linear infinite;
+}
+@keyframes ent-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ent-marquee {
+    animation: none;
+  }
+  .ent-spin {
+    animation-duration: 2.4s;
+  }
+}
+
+/* ---------- Miniaturas escaladas ---------- */
+.ent-thumb {
+  position: relative;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  background: var(--s-surface);
+}
+.ent-thumb__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+}
+.ent-thumb .ent-marquee {
+  animation: none;
+}
+
+/* ---------- Moldura que ajusta a prévia à largura disponível ---------- */
+.ent-fit {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--s-surface);
+}
+.ent-fit__sizer {
+  position: relative;
+}
+.ent-fit__inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+}
+
+.ent-stage {
+  border: 1px solid var(--s-border);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--s-surface);
+}
+.ent-stage--phone {
+  display: flex;
+  justify-content: center;
+  padding: var(--sp-4) var(--sp-3);
+  border: 0;
+  background: transparent;
+}
+.ent-phone {
+  width: 100%;
+  border: 9px solid #18181d;
+  border-radius: 42px;
+  background: #18181d;
+  overflow: hidden;
+  box-shadow: 0 20px 50px -24px rgba(20, 20, 30, 0.45);
+}
+.ent-phone__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 28px;
+  padding: 0 22px;
+  background: #18181d;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+.ent-phone__notch {
+  width: 86px;
+  height: 18px;
+  border-radius: 12px;
+  background: #000;
+}
+.ent-phone .ent-fit {
+  border-radius: 0 0 32px 32px;
+}
+
+/* ---------- Galerias ---------- */
+.ent-gallery {
+  display: grid;
+  gap: var(--sp-5);
+  min-width: 0;
+}
+.ent-toolbar {
+  display: grid;
+  gap: var(--sp-3);
+}
+.ent-toolbar__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-3);
+}
+.ent-toolbar__row > .ui-search {
+  flex: 1 1 260px;
+  max-width: 420px;
+}
+.ent-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  min-height: 56px;
+  padding: var(--sp-2) var(--sp-4);
+  border: 1px solid var(--s-border);
+  border-radius: var(--r-lg);
+}
+.ent-summary__text {
+  display: grid;
+  min-width: 0;
+  font-size: var(--fs-md);
+}
+.ent-summary__label {
+  font-size: var(--fs-xs);
+  color: var(--s-text-3);
+  font-weight: 560;
+}
+.ent-summary__value {
+  font-weight: 620;
+  overflow-wrap: anywhere;
+}
+.ent-arch-note {
+  font-size: var(--fs-sm);
+  color: var(--s-text-2);
+  min-height: 1.5em;
+}
+.ent-grid {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--min, 300px)), 1fr));
+}
+.ent-card-btn {
+  padding-left: 10px;
+  padding-right: 12px;
+}
+.ent-card-meta {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+.ent-dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 9px;
+  background: currentColor;
+  opacity: 0.6;
+}
+
+/* ---------- Modal de prévia ---------- */
+.ent-preview {
+  display: grid;
+  gap: var(--sp-4);
+  min-width: 0;
+}
+.ent-preview__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--sp-3) var(--sp-4);
+}
+.ent-preview__controls .ui-switch {
+  font-size: var(--fs-sm);
+}
+.ent-preview__info {
+  display: grid;
+  gap: var(--sp-2);
+  font-size: var(--fs-sm);
+  color: var(--s-text-2);
+}
+.ent-preview__sections {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.ent-preview__sections span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 26px;
+  padding: 2px 10px;
+  border: 1px solid var(--s-border);
+  border-radius: var(--r-pill);
+  font-size: var(--fs-xs);
+  color: var(--s-text-2);
+}
+
+/* ---------- Seletor de fluxo de entrada ---------- */
+.ent-flow-media {
+  display: grid;
+  place-items: center;
+  height: 112px;
+  padding: var(--sp-3);
+  color: var(--s-text-2);
+}
+.ent-flow-media svg {
+  width: 100%;
+  height: 100%;
+}
+.ui-option[data-selected='true'] .ent-flow-media {
+  color: var(--s-accent);
+}
+.ent-flow-grid {
+  display: grid;
+  gap: var(--sp-3);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
+}
+
+@media (max-width: 720px) {
+  .ent-summary {
+    padding: var(--sp-3);
+  }
+  .ent-toolbar__row > .ui-search {
+    max-width: none;
+  }
+}

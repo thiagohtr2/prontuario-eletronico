@@ -36,7 +36,7 @@ const DEFS: Def[] = [
     style: {
       radius: 999, radiusCard: 22, borderWidth: 0, borderStyle: 'none', borderTone: 'subtle', shadow: 'soft', surface: 'plain', backdrop: 'tint',
       fill: 'solid', field: 'tonal', font: 'inter', headingFont: 'inter', headingWeight: 650, uiWeight: 600, textCase: 'none', tracking: 0,
-      headingTracking: -0.015, fontSize: 14, density: 1.05, controlHeight: 42, iconStroke: 2, iconTreatment: 'circle', indicator: 'pill', focus: 'ring',
+      headingTracking: -0.015, fontSize: 14, density: 1.05, controlHeight: 42, iconStroke: 2, iconTreatment: 'circle', indicator: 'pill', focus: 'ring', media: 'inset',
       composition: 'Blocos arredondados flutuando sobre fundo levemente tingido; agrupamentos por proximidade, sem linhas divisórias.',
       finish: 'Sombras difusas e baixas; preenchimentos tonais; zero bordas.',
       motion: 'Suave (160 ms), leve redução de escala ao pressionar.',
@@ -59,7 +59,7 @@ const DEFS: Def[] = [
     style: {
       radius: 0, radiusCard: 0, borderWidth: 1, borderStyle: 'solid', borderTone: 'ink', shadow: 'none', surface: 'plain', backdrop: 'plain',
       fill: 'solid', field: 'underline', font: 'inter', headingFont: 'inter', headingWeight: 760, uiWeight: 650, textCase: 'uppercase', tracking: 0.08,
-      headingTracking: -0.035, fontSize: 14, density: 1, controlHeight: 40, iconStroke: 1.5, iconTreatment: 'plain', indicator: 'underline', focus: 'outline',
+      headingTracking: -0.035, fontSize: 14, density: 1, controlHeight: 40, iconStroke: 1.5, iconTreatment: 'plain', indicator: 'underline', focus: 'outline', media: 'bleed',
       composition: 'Grid rígido alinhado à esquerda, muito espaço em branco, numeração e réguas de 1 px separando blocos.',
       finish: 'Sem sombras, sem gradientes, sem arredondamento. Contraste puro de tipografia.',
       motion: 'Mínimo: trocas instantâneas de cor (80 ms).',
@@ -83,7 +83,7 @@ const DEFS: Def[] = [
     style: {
       radius: 2, radiusCard: 4, borderWidth: 1, borderStyle: 'solid', borderTone: 'accent', shadow: 'deep', surface: 'dark', backdrop: 'dark',
       fill: 'ivory', field: 'underline', font: 'inter', headingFont: 'fraunces', headingWeight: 480, uiWeight: 560, textCase: 'uppercase', tracking: 0.16,
-      headingTracking: -0.01, fontSize: 14, density: 1.15, controlHeight: 44, iconStroke: 1.25, iconTreatment: 'outline-box', indicator: 'underline', focus: 'outline',
+      headingTracking: -0.01, fontSize: 14, density: 1.15, controlHeight: 44, iconStroke: 1.25, iconTreatment: 'outline-box', indicator: 'underline', focus: 'outline', media: 'framed',
       composition: 'Composição centrada e espaçada, poucos elementos por bloco, linhas metálicas finas como divisores.',
       finish: 'Sombras profundas e escuras, hairlines na cor de destaque, nenhum preenchimento saturado em áreas grandes.',
       motion: 'Lento e elegante (240 ms), fades em vez de deslocamentos.',
@@ -107,7 +107,7 @@ const DEFS: Def[] = [
     style: {
       radius: 14, radiusCard: 20, borderWidth: 1, borderStyle: 'solid', borderTone: 'light', shadow: 'float', surface: 'glass', backdrop: 'blobs',
       fill: 'solid', field: 'glass', font: 'system', headingFont: 'system', headingWeight: 640, uiWeight: 580, textCase: 'none', tracking: 0,
-      headingTracking: -0.02, fontSize: 14, density: 1, controlHeight: 42, iconStroke: 1.75, iconTreatment: 'circle', indicator: 'pill', focus: 'glow',
+      headingTracking: -0.02, fontSize: 14, density: 1, controlHeight: 42, iconStroke: 1.75, iconTreatment: 'circle', indicator: 'pill', focus: 'glow', media: 'inset',
       composition: 'Camadas sobrepostas de vidro; o conteúdo flutua sobre um fundo vivo.',
       finish: 'Translucidez, desfoque, bordas claras e sombras coloridas muito suaves.',
       motion: 'Fluido (200 ms), opacidade e leve elevação no hover.',
@@ -130,7 +130,7 @@ const DEFS: Def[] = [
     style: {
       radius: 12, radiusCard: 18, borderWidth: 1, borderStyle: 'solid', borderTone: 'subtle', shadow: 'glow', surface: 'plain', backdrop: 'wash',
       fill: 'gradient', field: 'outline', font: 'inter', headingFont: 'space-grotesk', headingWeight: 700, uiWeight: 620, textCase: 'none', tracking: 0,
-      headingTracking: -0.025, fontSize: 14, density: 1, controlHeight: 42, iconStroke: 2, iconTreatment: 'gradient-tile', indicator: 'glow', focus: 'glow',
+      headingTracking: -0.025, fontSize: 14, density: 1, controlHeight: 42, iconStroke: 2, iconTreatment: 'gradient-tile', indicator: 'glow', focus: 'glow', media: 'bleed',
       composition: 'Superfícies limpas com acentos de gradiente concentrados nas ações e nos indicadores.',
       finish: 'Gradientes primária→destaque, brilho colorido, texto em gradiente em títulos.',
       motion: 'Vivo (180 ms), o brilho cresce no hover.',
@@ -153,7 +153,7 @@ const DEFS: Def[] = [
     style: {
       radius: 4, radiusCard: 6, borderWidth: 2.5, borderStyle: 'solid', borderTone: 'ink', shadow: 'hard', surface: 'plain', backdrop: 'tint',
       fill: 'accent', field: 'outline', font: 'space-grotesk', headingFont: 'space-grotesk', headingWeight: 800, uiWeight: 700, textCase: 'uppercase', tracking: 0.02,
-      headingTracking: -0.02, fontSize: 14, density: 1, controlHeight: 44, iconStroke: 2.5, iconTreatment: 'square', indicator: 'block', focus: 'offset',
+      headingTracking: -0.02, fontSize: 14, density: 1, controlHeight: 44, iconStroke: 2.5, iconTreatment: 'square', indicator: 'block', focus: 'offset', media: 'bleed',
       composition: 'Blocos encaixados como adesivos, contornos explícitos, hierarquia por peso e cor chapada.',
       finish: 'Sombras duras, bordas grossas, nada de transparência ou desfoque.',
       motion: 'Mecânico (100 ms), deslocamento físico ao pressionar.',
@@ -177,7 +177,7 @@ const DEFS: Def[] = [
     style: {
       radius: 14, radiusCard: 22, borderWidth: 0, borderStyle: 'none', borderTone: 'subtle', shadow: 'neu', surface: 'neu', backdrop: 'neu',
       fill: 'solid', field: 'inset', font: 'inter', headingFont: 'inter', headingWeight: 650, uiWeight: 600, textCase: 'none', tracking: 0,
-      headingTracking: -0.01, fontSize: 14, density: 1.1, controlHeight: 44, iconStroke: 2, iconTreatment: 'circle', indicator: 'inset', focus: 'ring',
+      headingTracking: -0.01, fontSize: 14, density: 1.1, controlHeight: 44, iconStroke: 2, iconTreatment: 'circle', indicator: 'inset', focus: 'ring', media: 'sunken',
       composition: 'Tudo na mesma superfície; agrupamentos por relevo (alto/baixo) em vez de cor.',
       finish: 'Luz superior esquerda, sombras duplas suaves, nenhum contorno.',
       motion: 'Tátil (180 ms), o relevo inverte ao pressionar.',
@@ -200,7 +200,7 @@ const DEFS: Def[] = [
     style: {
       radius: 10, radiusCard: 14, borderWidth: 1, borderStyle: 'solid', borderTone: 'subtle', shadow: 'hairline', surface: 'plain', backdrop: 'alt',
       fill: 'solid', field: 'tonal', font: 'system', headingFont: 'system', headingWeight: 650, uiWeight: 560, textCase: 'none', tracking: -0.005,
-      headingTracking: -0.022, fontSize: 14, density: 0.95, controlHeight: 38, iconStroke: 1.75, iconTreatment: 'app-tile', indicator: 'pill', focus: 'ring',
+      headingTracking: -0.022, fontSize: 14, density: 0.95, controlHeight: 38, iconStroke: 1.75, iconTreatment: 'app-tile', indicator: 'pill', focus: 'ring', media: 'bleed',
       composition: 'Grupos inseridos (inset grouped), linhas com divisórias recuadas, hierarquia por peso.',
       finish: 'Linhas hairline, sombra mínima, materiais translúcidos apenas em barras.',
       motion: 'Preciso (200 ms) com curvas de mola discretas.',
@@ -223,7 +223,7 @@ const DEFS: Def[] = [
     style: {
       radius: 12, radiusCard: 24, borderWidth: 0, borderStyle: 'none', borderTone: 'subtle', shadow: 'none', surface: 'tonal', backdrop: 'plain',
       fill: 'solid', field: 'tonal', font: 'inter', headingFont: 'inter', headingWeight: 720, uiWeight: 620, textCase: 'none', tracking: 0,
-      headingTracking: -0.025, fontSize: 14, density: 1.15, controlHeight: 44, iconStroke: 2, iconTreatment: 'soft-tile', indicator: 'tonal', focus: 'ring',
+      headingTracking: -0.025, fontSize: 14, density: 1.15, controlHeight: 44, iconStroke: 2, iconTreatment: 'soft-tile', indicator: 'tonal', focus: 'ring', media: 'inset',
       composition: 'Grade de ladrilhos de tamanhos variados; cada bloco é autocontido.',
       finish: 'Cores tonais chapadas, cantos generosos, nada de linhas.',
       motion: 'Calmo (180 ms).',
@@ -246,7 +246,7 @@ const DEFS: Def[] = [
     style: {
       radius: 12, radiusCard: 18, borderWidth: 1, borderStyle: 'solid', borderTone: 'light', shadow: 'glow', surface: 'aurora', backdrop: 'aurora',
       fill: 'aurora', field: 'glass', font: 'system', headingFont: 'space-grotesk', headingWeight: 640, uiWeight: 580, textCase: 'none', tracking: 0,
-      headingTracking: -0.02, fontSize: 14, density: 1.05, controlHeight: 42, iconStroke: 1.75, iconTreatment: 'circle', indicator: 'glow', focus: 'glow',
+      headingTracking: -0.02, fontSize: 14, density: 1.05, controlHeight: 42, iconStroke: 1.75, iconTreatment: 'circle', indicator: 'glow', focus: 'glow', media: 'inset',
       composition: 'Painéis flutuando sobre luz; poucos blocos grandes com muito ar.',
       finish: 'Gradientes de três cores, translucidez escura, brilho.',
       motion: 'Etéreo (240 ms), brilho pulsante discreto.',
@@ -269,7 +269,7 @@ const DEFS: Def[] = [
     style: {
       radius: 2, radiusCard: 2, borderWidth: 1, borderStyle: 'solid', borderTone: 'strong', shadow: 'none', surface: 'concrete', backdrop: 'grid',
       fill: 'solid', field: 'outline', font: 'jetbrains-mono', headingFont: 'jetbrains-mono', headingWeight: 700, uiWeight: 600, textCase: 'uppercase', tracking: 0.06,
-      headingTracking: -0.01, fontSize: 13, density: 0.95, controlHeight: 38, iconStroke: 2, iconTreatment: 'outline-box', indicator: 'bar', focus: 'dashed',
+      headingTracking: -0.01, fontSize: 13, density: 0.95, controlHeight: 38, iconStroke: 2, iconTreatment: 'outline-box', indicator: 'bar', focus: 'dashed', media: 'strip',
       composition: 'Módulos rotulados como peças de equipamento, grade técnica visível, informação densa.',
       finish: 'Listras de atenção, códigos de referência, LEDs, linhas tracejadas.',
       motion: 'Seco (90 ms), sem easing elástico.',
@@ -292,7 +292,7 @@ const DEFS: Def[] = [
     style: {
       radius: 16, radiusCard: 20, borderWidth: 2, borderStyle: 'solid', borderTone: 'strong', shadow: 'press', surface: 'plain', backdrop: 'dots',
       fill: 'press', field: 'outline', font: 'system', headingFont: 'fraunces', headingWeight: 800, uiWeight: 750, textCase: 'none', tracking: 0,
-      headingTracking: -0.01, fontSize: 14, density: 1.05, controlHeight: 44, iconStroke: 2.25, iconTreatment: 'soft-tile', indicator: 'block', focus: 'ring',
+      headingTracking: -0.01, fontSize: 14, density: 1.05, controlHeight: 44, iconStroke: 2.25, iconTreatment: 'soft-tile', indicator: 'block', focus: 'ring', media: 'inset',
       composition: 'Elementos com personalidade, cores alternadas, adesivos e emblemas.',
       finish: 'Relevo sólido, bordas coloridas, leve rotação em etiquetas.',
       motion: 'Elástico (220 ms, overshoot leve).',
@@ -315,7 +315,7 @@ const DEFS: Def[] = [
     style: {
       radius: 4, radiusCard: 6, borderWidth: 1, borderStyle: 'solid', borderTone: 'subtle', shadow: 'none', surface: 'plain', backdrop: 'alt',
       fill: 'solid', field: 'outline', font: 'inter', headingFont: 'inter', headingWeight: 640, uiWeight: 560, textCase: 'none', tracking: 0,
-      headingTracking: -0.01, fontSize: 13, density: 0.75, controlHeight: 30, iconStroke: 1.75, iconTreatment: 'plain', indicator: 'underline', focus: 'ring',
+      headingTracking: -0.01, fontSize: 13, density: 0.75, controlHeight: 30, iconStroke: 1.75, iconTreatment: 'plain', indicator: 'underline', focus: 'ring', media: 'bleed',
       composition: 'Informação densa em linhas e colunas alinhadas; barras de ferramentas compactas.',
       finish: 'Neutro e funcional; cor apenas para estado e ação.',
       motion: 'Rápido (100 ms).',
@@ -338,7 +338,7 @@ const DEFS: Def[] = [
     style: {
       radius: 10, radiusCard: 16, borderWidth: 1, borderStyle: 'solid', borderTone: 'accent', shadow: 'glow', surface: 'midnight', backdrop: 'dark',
       fill: 'metal', field: 'outline', font: 'inter', headingFont: 'georgia', headingWeight: 600, uiWeight: 600, textCase: 'uppercase', tracking: 0.1,
-      headingTracking: 0, fontSize: 14, density: 1.05, controlHeight: 42, iconStroke: 1.5, iconTreatment: 'circle', indicator: 'underline', focus: 'glow',
+      headingTracking: 0, fontSize: 14, density: 1.05, controlHeight: 42, iconStroke: 1.5, iconTreatment: 'circle', indicator: 'underline', focus: 'glow', media: 'framed',
       composition: 'Painéis escuros com molduras metálicas finas e destaque concentrado nos números e ações.',
       finish: 'Gradiente metálico, brilho suave, serifas clássicas.',
       motion: 'Elegante (220 ms), brilho que desliza no hover.',
@@ -361,7 +361,7 @@ const DEFS: Def[] = [
     style: {
       radius: 4, radiusCard: 6, borderWidth: 1.5, borderStyle: 'solid', borderTone: 'ink', shadow: 'print', surface: 'paper', backdrop: 'paper',
       fill: 'solid', field: 'underline', font: 'georgia', headingFont: 'georgia', headingWeight: 700, uiWeight: 600, textCase: 'uppercase', tracking: 0.08,
-      headingTracking: -0.01, fontSize: 14, density: 1.05, controlHeight: 40, iconStroke: 1.75, iconTreatment: 'stamp', indicator: 'underline', focus: 'dashed',
+      headingTracking: -0.01, fontSize: 14, density: 1.05, controlHeight: 40, iconStroke: 1.75, iconTreatment: 'stamp', indicator: 'underline', focus: 'dashed', media: 'framed',
       composition: 'Fichas, etiquetas e carimbos; réguas duplas como divisores.',
       finish: 'Papel quente, tinta, impressão deslocada, rótulos datilografados.',
       motion: 'Analógico (150 ms), sem brilhos.',
@@ -384,7 +384,7 @@ const DEFS: Def[] = [
     style: {
       radius: 20, radiusCard: 12, borderWidth: 0, borderStyle: 'none', borderTone: 'subtle', shadow: 'tonal', surface: 'tint', backdrop: 'tint',
       fill: 'solid', field: 'filled', font: 'system', headingFont: 'system', headingWeight: 500, uiWeight: 560, textCase: 'none', tracking: 0.005,
-      headingTracking: 0, fontSize: 14, density: 1.05, controlHeight: 40, iconStroke: 2, iconTreatment: 'circle', indicator: 'tonal', focus: 'ring',
+      headingTracking: 0, fontSize: 14, density: 1.05, controlHeight: 40, iconStroke: 2, iconTreatment: 'circle', indicator: 'tonal', focus: 'ring', media: 'inset',
       composition: 'Hierarquia por cor tonal e elevação; ações flutuantes (FAB) para a tarefa principal.',
       finish: 'Elevação tonal, camadas de estado, cantos arredondados.',
       motion: 'Ênfase (250 ms, easing emphasized).',

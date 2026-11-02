@@ -522,6 +522,10 @@ export function Term({ id, children }: { id: keyof typeof GLOSSARY; children?: R
 /* Modal                                                                       */
 /* -------------------------------------------------------------------------- */
 
+/** Pilha de modais abertos: garante que Esc e Tab atuem só no modal do topo. */
+const MODAL_STACK: object[] = []
+let bodyOverflowBeforeModals = ''
+
 export function Modal({
   open,
   onClose,
@@ -543,12 +547,24 @@ export function Modal({
 }) {
   const panelRef = useRef<HTMLDivElement>(null)
   const titleId = useId()
+  // Referência estável: o efeito não roda de novo quando o pai passa uma função nova a cada render.
+  const onCloseRef = useRef(onClose)
+  onCloseRef.current = onClose
 
   useEffect(() => {
     if (!open) return
     const previous = document.activeElement as HTMLElement | null
+    const token = {}
+    if (MODAL_STACK.length === 0) bodyOverflowBeforeModals = document.body.style.overflow
+    MODAL_STACK.push(token)
+    const isTop = () => MODAL_STACK[MODAL_STACK.length - 1] === token
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose()
+      // Com modais sobrepostos, só o mais recente reage ao teclado (Esc fecha um por vez).
+      if (!isTop()) return
+      if (e.key === 'Escape') {
+        e.stopPropagation()
+        onCloseRef.current()
+      }
       if (e.key === 'Tab' && panelRef.current) {
         const focusables = panelRef.current.querySelectorAll<HTMLElement>(
           'button:not([disabled]), [href], input:not([disabled]), select, textarea, [tabindex]:not([tabindex="-1"])',
@@ -566,19 +582,20 @@ export function Modal({
       }
     }
     document.addEventListener('keydown', onKey)
-    const { overflow } = document.body.style
     document.body.style.overflow = 'hidden'
     requestAnimationFrame(() => panelRef.current?.focus({ preventScroll: true }))
     return () => {
       document.removeEventListener('keydown', onKey)
-      document.body.style.overflow = overflow
+      const index = MODAL_STACK.indexOf(token)
+      if (index >= 0) MODAL_STACK.splice(index, 1)
+      if (MODAL_STACK.length === 0) document.body.style.overflow = bodyOverflowBeforeModals
       previous?.focus?.({ preventScroll: true })
     }
-  }, [open, onClose])
+  }, [open])
 
   if (!open) return null
   return createPortal(
-    <div className="ui-overlay" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
+    <div className="ui-overlay" onMouseDown={(e) => e.target === e.currentTarget && onCloseRef.current()}>
       <div
         ref={panelRef}
         className="ui-modal"

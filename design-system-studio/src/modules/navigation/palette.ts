@@ -168,6 +168,8 @@ export function navVars(theme: ResolvedTheme, c: NavColors): CSSProperties {
     ['--nv-r-sm' as string]: `${m.radiusSm}px`,
     ['--nv-r-md' as string]: `${m.radiusMd}px`,
     ['--nv-r-lg' as string]: `${m.radiusLg}px`,
+    ['--nv-r-float' as string]: theme.geometry.radius === 'pill' ? '999px' : `${m.radiusLg}px`,
+    ['--nv-page' as string]: t.bgAlt,
     ['--nv-head' as string]: m.headingFont,
     ['--nv-body' as string]: m.bodyFont,
     ['--nv-head-w' as string]: String(theme.typography.headingWeight),

@@ -681,7 +681,7 @@ export function Bar({ value, height = 8, striped, color }: { value: number; heig
 
 export function Skel({ w = '100%', h = 12, r, style }: { w?: number | string; h?: number; r?: number | string; style?: CSSProperties }) {
   const { L } = usePv()
-  return <span className="cmp-skel" style={{ display: 'block', width: w, height: h, borderRadius: r ?? Math.min(L.rSm, 8), background: L.dark ? withAlpha(L.text, 0.1) : mix(L.surfaceSolid, L.text, 0.08), ...style }} />
+  return <span className="cmp-skel" style={{ display: 'block', width: w, height: h, borderRadius: r ?? Math.min(L.rSm, 8), backgroundColor: L.dark ? withAlpha(L.text, 0.1) : mix(L.surfaceSolid, L.text, 0.08), ...style }} />
 }
 
 export function Kbd({ children }: { children: ReactNode }) {
@@ -729,7 +729,7 @@ export function navItemStyle(L: Look, active: boolean, orientation: 'h' | 'v' = 
   }
   if (!active) return base
   const ind = L.style.indicator
-  const glowC = L.dark ? L.accent : L.primary
+  const glowC = L.dark ? L.accent : L.brand
   switch (ind) {
     case 'pill':
       return { ...base, color: L.onSoft, background: L.style.surface === 'glass' ? withAlpha('#ffffff', 0.72) : L.style.surface === 'plain' && L.style.field === 'tonal' && L.r < 999 ? L.surfaceSolid : L.soft, boxShadow: L.style.surface === 'glass' || (L.r < 999 && L.style.field === 'tonal') ? L.shadow : undefined }

@@ -87,6 +87,8 @@ export type FamilyStyle = {
   /** Como o item ativo (abas, menus, navegação) é marcado. */
   indicator: 'pill' | 'underline' | 'bar' | 'block' | 'inset' | 'glow' | 'tonal'
   focus: 'ring' | 'outline' | 'glow' | 'offset' | 'dashed'
+  /** Como mídias/ilustrações entram nos cartões: sangrando, recuadas, afundadas, emolduradas ou com faixa técnica. */
+  media: 'bleed' | 'inset' | 'sunken' | 'framed' | 'strip'
   /** Composição e organização interna, em linguagem técnica. */
   composition: string
   /** Acabamento e detalhes. */

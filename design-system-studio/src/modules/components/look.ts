@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react'
-import { contrast, darken, ensureContrast, isDark, isHex, lighten, luminance, mix, normalizeHex, readableOn, withAlpha } from '@/core/color'
+import { contrast, darken, ensureContrast, hexToRgb, isDark, isHex, lighten, luminance, mix, normalizeHex, readableOn, withAlpha } from '@/core/color'
 import { fontStack } from '@/core/tokens'
 import type { ResolvedTheme } from '@/core/types'
 import type { FamilyStyle, VisualFamily } from './types'
@@ -33,6 +33,8 @@ export interface Look {
   accent: string
   secondary: string
   metal: string
+  /** Cor de origem dos tingimentos (primária ou destaque). */
+  brand: string
   soft: string
   onSoft: string
   success: string
@@ -99,6 +101,17 @@ export interface Look {
 
 const hx = (v: string | undefined, fb: string) => (v && isHex(v) ? normalizeHex(v) : fb)
 
+/** Saturação HSL (0–1). */
+function saturation(hex: string): number {
+  const { r, g, b } = hexToRgb(hex)
+  const max = Math.max(r, g, b) / 255
+  const min = Math.min(r, g, b) / 255
+  if (max === min) return 0
+  const l = (max + min) / 2
+  const d = max - min
+  return l > 0.5 ? d / (2 - max - min) : d / (max + min)
+}
+
 export function resolveLook(theme: ResolvedTheme, family: VisualFamily): Look {
   const t = theme.tokens
   const s = family.style
@@ -136,6 +149,9 @@ export function resolveLook(theme: ResolvedTheme, family: VisualFamily): Look {
     gradTo: hx(t.gradientTo, hx(t.accent, '#2563eb')),
   }
   const paletteDark = isDark(T.bg)
+  /** Cor de origem para tingimentos tonais: a primária, ou o destaque quando a primária é neutra (preto/cinza). */
+  const brand = saturation(T.primary) >= 0.2 ? T.primary : T.accent
+  const tonalBrand = (s.backdrop === 'tint' && s.fill !== 'accent') || s.surface === 'tonal' || s.fill === 'gradient'
 
   /* ------------------------------ Superfícies ------------------------------ */
   let bg = T.bg
@@ -159,14 +175,14 @@ export function resolveLook(theme: ResolvedTheme, family: VisualFamily): Look {
 
   switch (s.surface) {
     case 'tint':
-      surface = mix(T.surface, T.primary, paletteDark ? 0.08 : 0.04)
+      surface = mix(T.surface, brand, paletteDark ? 0.08 : 0.035)
       surfaceCss = surface
-      surfaceAlt = mix(T.surface, T.primary, paletteDark ? 0.16 : 0.1)
+      surfaceAlt = mix(T.surface, brand, paletteDark ? 0.16 : 0.09)
       break
     case 'tonal':
       surface = mix(T.surface, T.text, paletteDark ? 0.07 : 0.04)
       surfaceCss = surface
-      surfaceAlt = mix(T.surface, T.primary, paletteDark ? 0.2 : 0.1)
+      surfaceAlt = mix(T.surface, brand, paletteDark ? 0.2 : 0.12)
       break
     case 'glass':
       surfaceCss = withAlpha(T.surface, paletteDark ? 0.42 : 0.58)
@@ -237,8 +253,9 @@ export function resolveLook(theme: ResolvedTheme, family: VisualFamily): Look {
   const divider = s.surface === 'concrete' ? `1px dashed ${strongB}` : s.surface === 'paper' ? `1px solid ${withAlpha(text, 0.3)}` : s.borderTone === 'ink' && s.shadow !== 'hard' ? `1px solid ${text}` : `1px solid ${dark ? withAlpha(text, 0.1) : subtle}`
 
   /* ------------------------------ Soft / semânticos ------------------------------ */
-  const soft = dark ? withAlpha(s.surface === 'midnight' ? metal : primary, 0.16) : s.surface === 'glass' ? withAlpha(T.primary, 0.12) : s.surface === 'paper' ? mix(surface, T.accent, 0.14) : T.primarySoft
-  const onSoft = dark ? (s.surface === 'midnight' ? metal : primary) : s.surface === 'paper' ? ensureContrast(T.accent, mix(surface, T.accent, 0.14), 4.5) : ensureContrast(T.selectedText, T.primarySoft, 4.5)
+  const brandSoft = mix(T.surface, brand, paletteDark ? 0.24 : 0.14)
+  const soft = dark ? withAlpha(s.surface === 'midnight' ? metal : primary, 0.16) : tonalBrand ? brandSoft : s.surface === 'glass' ? withAlpha(T.primary, 0.12) : s.surface === 'paper' ? mix(surface, T.accent, 0.14) : T.primarySoft
+  const onSoft = dark ? (s.surface === 'midnight' ? metal : primary) : tonalBrand ? ensureContrast(brand, brandSoft, 4.5) : s.surface === 'paper' ? ensureContrast(T.accent, mix(surface, T.accent, 0.14), 4.5) : ensureContrast(T.selectedText, T.primarySoft, 4.5)
   const sem = (fg: string, bgc: string) => (dark ? { fg: ensureContrast(lighten(fg, 0.2), surface, 4.5), bg: withAlpha(fg, 0.18) } : { fg: ensureContrast(fg, surface, 4.5), bg: bgc })
   const success = sem(T.success, T.successBg)
   const warning = sem(T.warning, T.warningBg)
@@ -379,7 +396,7 @@ export function resolveLook(theme: ResolvedTheme, family: VisualFamily): Look {
       field = { background: withAlpha('#ffffff', dark ? 0.06 : 0.5), border: `1px solid ${dark ? withAlpha('#ffffff', 0.16) : withAlpha('#ffffff', 0.85)}`, borderRadius: r, backdropFilter: 'blur(10px)' }
       break
     case 'filled':
-      field = { background: mix(T.surface, T.primary, paletteDark ? 0.14 : 0.07), border: 'none', borderBottom: `1.5px solid ${muted}`, borderRadius: '4px 4px 0 0' }
+      field = { background: mix(T.surface, brand, paletteDark ? 0.14 : 0.07), border: 'none', borderBottom: `1.5px solid ${muted}`, borderRadius: '4px 4px 0 0' }
       break
     default:
       field = {
@@ -422,7 +439,7 @@ export function resolveLook(theme: ResolvedTheme, family: VisualFamily): Look {
       : dark
         ? { background: withAlpha(detail, 0.12) }
         : s.field === 'tonal' || s.field === 'filled'
-          ? { background: mix(T.primarySoft, T.primary, 0.08) }
+          ? { background: tonalBrand ? mix(brandSoft, brand, 0.1) : mix(T.primarySoft, T.primary, 0.08) }
           : { background: s.surface === 'glass' ? withAlpha('#ffffff', 0.75) : mix(T.surface, T.text, 0.05) }
 
   const hoverFx: CSSProperties = s.shadow === 'hard' ? { transform: 'translate(-2px, -2px)' } : s.shadow === 'press' ? { transform: 'translateY(-1px)' } : {}
@@ -457,7 +474,7 @@ export function resolveLook(theme: ResolvedTheme, family: VisualFamily): Look {
       : undefined
 
   /* ------------------------------ Palco ------------------------------ */
-  const tintSrc = s.fill === 'accent' ? T.accent : T.primary
+  const tintSrc = s.fill === 'accent' ? T.accent : brand
   const stage = (() => {
     switch (s.backdrop) {
       case 'alt':
@@ -477,7 +494,7 @@ export function resolveLook(theme: ResolvedTheme, family: VisualFamily): Look {
           ? `radial-gradient(60% 55% at 85% 0%, ${withAlpha(metal, 0.14)}, transparent 70%), radial-gradient(120% 90% at 50% 0%, ${mix(bg, '#ffffff', 0.05)}, ${bg})`
           : `radial-gradient(120% 90% at 50% 0%, ${mix(bg, '#ffffff', 0.06)}, ${bg})`
       case 'dots':
-        return `radial-gradient(${withAlpha(T.secondary, 0.22)} 1.4px, transparent 1.6px) 0 0 / 14px 14px, ${mix(T.bg, T.secondary, 0.05)}`
+        return `radial-gradient(${withAlpha(brand, 0.28)} 1.4px, transparent 1.6px) 0 0 / 14px 14px, ${mix(T.bg, brand, 0.05)}`
       case 'wash':
         return `linear-gradient(160deg, ${mix(T.bg, t.gradientEnabled ? T.gradFrom : T.primary, 0.07)}, ${T.bg} 55%, ${mix(T.bg, t.gradientEnabled ? T.gradTo : T.accent, 0.09)})`
       case 'neu':
@@ -519,6 +536,7 @@ export function resolveLook(theme: ResolvedTheme, family: VisualFamily): Look {
     accent: detail === metal ? metal : accent,
     secondary,
     metal,
+    brand,
     soft,
     onSoft,
     success: success.fg,

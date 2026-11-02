@@ -288,7 +288,7 @@ export const padY = (m: boolean) => (m ? 56 : 88)
 
 export function Wrap({ m, children, style, narrow }: { m: boolean; children: ReactNode; style?: CSSProperties; narrow?: number }) {
   return (
-    <div style={{ width: '100%', maxWidth: (narrow ?? 1120) + padX(m) * 2, margin: '0 auto', padding: `0 ${padX(m)}px`, boxSizing: 'border-box', ...style }}>
+    <div style={{ width: '100%', maxWidth: (narrow ?? 1120) + padX(m) * 2, marginLeft: 'auto', marginRight: 'auto', paddingLeft: padX(m), paddingRight: padX(m), boxSizing: 'border-box', ...style }}>
       {children}
     </div>
   )
@@ -316,7 +316,8 @@ export function Block({
       style={{
         background: c.bg,
         color: c.fg,
-        padding: `${pad ?? padY(ctx.m)}px 0`,
+        paddingTop: pad ?? padY(ctx.m),
+        paddingBottom: pad ?? padY(ctx.m),
         fontFamily: ctx.t.body,
         position: 'relative',
         overflow: 'hidden',
@@ -469,12 +470,12 @@ export function Btn({
   const h = size === 'sm' ? 38 : size === 'lg' ? 54 : 48
   const colors: CSSProperties =
     kind === 'primary'
-      ? { background: c.accent, color: c.onAccent, border: `1.5px solid ${c.accent}` }
+      ? { background: c.accent, color: c.onAccent, borderColor: c.accent }
       : kind === 'light'
-        ? { background: '#ffffff', color: '#111111', border: '1.5px solid #ffffff' }
+        ? { background: '#ffffff', color: '#111111', borderColor: '#ffffff' }
         : kind === 'secondary'
-          ? { background: 'transparent', color: c.fg, border: `1.5px solid ${mix(c.bg, c.fg, 0.32)}` }
-          : { background: 'transparent', color: c.fg, border: '1.5px solid transparent' }
+          ? { background: 'transparent', color: c.fg, borderColor: mix(c.bg, c.fg, 0.32) }
+          : { background: 'transparent', color: c.fg, borderColor: 'transparent' }
   return (
     <span
       style={{
@@ -491,6 +492,8 @@ export function Btn({
         whiteSpace: 'nowrap',
         boxSizing: 'border-box',
         width: block ? '100%' : undefined,
+        borderWidth: 1.5,
+        borderStyle: 'solid',
         ...colors,
         ...style,
       }}
@@ -708,6 +711,7 @@ export function Art({
   let body: ReactNode
   let viewBox = '0 0 400 300'
   let fit: 'slice' | 'meet' = 'slice'
+  let align = 'xMidYMid'
   let background: string | undefined
 
   switch (kind) {
@@ -716,6 +720,7 @@ export function Art({
       const line = t.dark ? mix(t.bg, '#ffffff', 0.16) : mix('#ffffff', t.text, 0.1)
       const fill = t.dark ? mix(t.bg, '#ffffff', 0.11) : mix('#ffffff', t.text, 0.05)
       background = t.dark ? mix(t.bg, p, 0.1) : mix(t.bg, p, 0.06)
+      align = 'xMidYMin'
       body = (
         <>
           <rect x="22" y="22" width="356" height="256" rx="10" fill={win} stroke={line} />
@@ -1015,6 +1020,44 @@ export function Art({
       )
       break
     }
+    case 'pastry': {
+      const table = t.dark ? '#3b2a20' : '#e9dccb'
+      const golden = ['#e9b44c', '#d99a3a', '#f0c36a']
+      body = (
+        <>
+          <rect width="400" height="300" fill={table} />
+          <ellipse cx="200" cy="158" rx="132" ry="108" fill="#000" opacity="0.08" />
+          <circle cx="200" cy="150" r="112" fill="#f8f4ee" />
+          <circle cx="200" cy="150" r="90" fill="#efe8df" />
+          {s % 2 === 0 ? (
+            [
+              [168, 124],
+              [226, 118],
+              [150, 176],
+              [204, 170],
+              [252, 168],
+              [196, 218],
+            ].map(([x, y], i) => (
+              <g key={i}>
+                <circle cx={x} cy={y} r="24" fill={golden[i % 3]} />
+                <ellipse cx={x - 7} cy={y - 8} rx="9" ry="5" fill="#ffffff" opacity="0.35" />
+                <circle cx={x + 6} cy={y + 5} r="2.5" fill="#b8742a" />
+              </g>
+            ))
+          ) : (
+            <>
+              <path d="M200 150 L 288 132 A 90 90 0 0 1 270 214 Z" fill="#f2d48a" />
+              <path d="M200 150 L 270 214 A 90 90 0 0 1 128 206 Z" fill="#eecb75" />
+              <path d="M200 150 L 128 206 A 90 90 0 0 1 150 78 Z" fill="#f2d48a" />
+              <path d="M200 150 L 150 78 A 90 90 0 0 1 288 132 Z" fill="#e9c066" />
+              <circle cx="200" cy="150" r="22" fill={table} />
+              <path d="M226 168 l 30 10 l -6 14 l -30 -10 z" fill="#a4161a" opacity="0.85" />
+            </>
+          )}
+        </>
+      )
+      break
+    }
     case 'coffee': {
       const table = t.dark ? '#3b2a20' : '#e9dccb'
       body = (
@@ -1071,6 +1114,7 @@ export function Art({
     case 'product':
     case 'bottle': {
       fit = 'meet'
+      if (kind === 'bottle') viewBox = '70 26 260 262'
       background = mix(t.bg, p, t.dark ? 0.12 : 0.07)
       const tint = seed > 0 ? ['#2d6a4f', '#d8c3a5', '#22223b', '#e76f51', p][seed % 5] : p
       body =
@@ -1162,13 +1206,16 @@ export function Art({
           {[0, 1, 2].map((i) => (
             <path key={i} d={`M${240 + i * 50} 0 L ${150 + i * 50} 300 L ${180 + i * 50} 300 L ${270 + i * 50} 0Z`} fill="#ffffff" opacity={0.04 + i * 0.02} />
           ))}
-          <rect x="70" y="190" width="200" height="14" rx="7" fill="#9a9a9a" />
-          <rect x="60" y="160" width="26" height="74" rx="6" fill="#2b2b2b" stroke="#444" />
-          <rect x="34" y="170" width="24" height="54" rx="6" fill="#2b2b2b" stroke="#444" />
-          <rect x="254" y="160" width="26" height="74" rx="6" fill="#2b2b2b" stroke="#444" />
-          <rect x="282" y="170" width="24" height="54" rx="6" fill="#2b2b2b" stroke="#444" />
-          <path d="M318 120 a 28 28 0 0 1 56 0" fill="none" stroke="#3a3a3a" strokeWidth="12" />
-          <circle cx="346" cy="160" r="40" fill="#2f2f2f" />
+          <g transform="translate(176 46) scale(0.68)">
+            <rect x="70" y="190" width="200" height="14" rx="7" fill="#9a9a9a" />
+            <rect x="60" y="160" width="26" height="74" rx="6" fill="#2b2b2b" stroke="#444" />
+            <rect x="34" y="170" width="24" height="54" rx="6" fill="#2b2b2b" stroke="#444" />
+            <rect x="254" y="160" width="26" height="74" rx="6" fill="#2b2b2b" stroke="#444" />
+            <rect x="282" y="170" width="24" height="54" rx="6" fill="#2b2b2b" stroke="#444" />
+          </g>
+          <path d="M296 96 a 22 22 0 0 1 44 0" fill="none" stroke="#3a3a3a" strokeWidth="10" />
+          <circle cx="318" cy="128" r="32" fill="#2f2f2f" />
+          <circle cx="306" cy="118" r="8" fill="#ffffff" opacity="0.08" />
           <rect x="0" y="250" width="400" height="50" fill="#111" />
           <rect x="0" y="250" width="400" height="4" fill={p} opacity="0.8" />
         </>
@@ -1290,7 +1337,7 @@ export function Art({
       aria-hidden={label ? undefined : true}
       style={{ position: 'relative', width: '100%', height: '100%', overflow: 'hidden', borderRadius: radius, background: background ?? ground, ...style }}
     >
-      <svg viewBox={viewBox} preserveAspectRatio={`xMidYMid ${fit}`} width="100%" height="100%" style={{ display: 'block', position: 'absolute', inset: 0 }}>
+      <svg viewBox={viewBox} preserveAspectRatio={`${align} ${fit}`} width="100%" height="100%" style={{ display: 'block', position: 'absolute', inset: 0 }}>
         {body}
       </svg>
     </div>

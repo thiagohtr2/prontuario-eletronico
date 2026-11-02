@@ -64,6 +64,7 @@ export type ArtKind =
   | 'building'
   | 'room'
   | 'food'
+  | 'pastry'
   | 'coffee'
   | 'portrait'
   | 'product'

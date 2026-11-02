@@ -291,7 +291,7 @@ function TextInput({ v, st }: RP) {
   const pos = str(v, 'posicaoIcone')
   const err = bool(v, 'erro')
   return (
-    <div style={{ width: '100%', maxWidth: 300 }}>
+    <Col gap={16} style={{ width: '100%', maxWidth: 300 }}>
       <Field
         label={str(v, 'rotulo')}
         placeholder={str(v, 'placeholder')}
@@ -304,7 +304,8 @@ function TextInput({ v, st }: RP) {
         value={err ? 'ana@empresa' : st === 'focus' || st === 'active' ? 'ana@' : ''}
         st={st}
       />
-    </div>
+      <Field label="Nome completo" value="Ana Souza" size={str(v, 'tamanho') as 'sm' | 'md' | 'lg'} icon={pos === 'esquerda' ? 'User' : undefined} labelPart="" helpPart="" part="" iconPart="" />
+    </Col>
   )
 }
 
@@ -514,7 +515,6 @@ function Radios({ v, st }: RP) {
 }
 
 function Switches({ v, st }: RP) {
-  const { L } = usePv()
   const left = str(v, 'posicao') === 'esquerda'
   const row = (label: string, desc: string, on: boolean, s?: typeof st, main = false) => (
     <Row gap={14} style={{ flexDirection: left ? 'row-reverse' : 'row', justifyContent: left ? 'flex-end' : undefined }}>

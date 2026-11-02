@@ -228,7 +228,7 @@ export default function TerraForm({ palette: p, device }: SiteProps) {
                 <span style={{ fontFamily: mono, fontSize: 13 }}>{year}</span>
                 <span style={{ fontFamily: mono, fontSize: 13, textAlign: 'right' }}>{area}</span>
                 {i === 1 && (
-                  <div style={{ position: 'absolute', right: 160, top: -40, width: 200, height: 130, border: `1px solid ${p.text}`, background: p.surface, overflow: 'hidden' }}>
+                  <div style={{ position: 'absolute', left: 330, top: -46, width: 160, height: 104, border: `1px solid ${p.text}`, background: p.surface, overflow: 'hidden', boxShadow: `0 12px 30px ${withAlpha('#000000', 0.15)}` }}>
                     <Facade p={p} m />
                   </div>
                 )}

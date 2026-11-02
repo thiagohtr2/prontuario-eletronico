@@ -725,7 +725,7 @@ export const templates: TemplateModel[] = [
         kind: 'feature-split',
         items: [
           { title: 'Parede dupla a vácuo', text: 'O vácuo entre as paredes impede a troca de calor. Por fora, nada de suor nem de mão gelada.', art: 'bottle', list: ['Sem condensação', 'Pintura texturizada antideslizante'] },
-          { title: 'Cabe no porta-copos', text: 'Base de 7,5 cm que entra no carro, na bicicleta e na lateral da mochila.', art: 'product', list: ['Base de 7,5 cm', 'Alça dobrável', 'Boca larga para gelo'] },
+          { title: 'Cabe no porta-copos', text: 'Base de 7,5 cm que entra no carro, na bicicleta e na lateral da mochila.', art: 'bottle', list: ['Base de 7,5 cm', 'Alça dobrável', 'Boca larga para gelo'] },
         ],
       },
       {
@@ -1423,7 +1423,7 @@ export const templates: TemplateModel[] = [
         items: [
           { title: 'Costela', art: 'food' },
           { title: 'Salão', art: 'room' },
-          { title: 'Sobremesa', art: 'food' },
+          { title: 'Sobremesa', art: 'pastry' },
           { title: 'Vinhos', art: 'bottle' },
         ],
       },
@@ -1513,8 +1513,8 @@ export const templates: TemplateModel[] = [
           { title: 'Cappuccino', text: 'Leite vaporizado e canela.', meta: 'R$ 12', art: 'coffee' },
           { title: 'Coado do dia', text: 'Método V60, grão da semana.', meta: 'R$ 14', art: 'coffee', tag: 'Favorito' },
           { title: 'Cold brew', text: '18 horas de extração a frio.', meta: 'R$ 15', art: 'bottle' },
-          { title: 'Pão de queijo', text: 'Receita da avó, queijo canastra.', meta: 'R$ 6', art: 'food' },
-          { title: 'Bolo de fubá', text: 'Com goiabada cascão.', meta: 'R$ 11', art: 'food' },
+          { title: 'Pão de queijo', text: 'Receita da avó, queijo canastra.', meta: 'R$ 6', art: 'pastry' },
+          { title: 'Bolo de fubá', text: 'Com goiabada cascão.', meta: 'R$ 11', art: 'pastry' },
         ],
       },
       {
@@ -1633,7 +1633,7 @@ export const templates: TemplateModel[] = [
         items: [
           { title: 'Praia', art: 'beach' },
           { title: 'Quarto', art: 'room' },
-          { title: 'Café', art: 'food' },
+          { title: 'Café', art: 'pastry' },
           { title: 'Trilha', art: 'forest' },
           { title: 'Piscina', art: 'landscape' },
           { title: 'Varanda', art: 'plant' },
