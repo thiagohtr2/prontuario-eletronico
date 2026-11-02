@@ -1,0 +1,163 @@
+- link "Pular para o conteúdo":
+  - /url: "#conteudo"
+- banner:
+  - link "Atelier UI — início":
+    - /url: "#/"
+    - text: Atelier UI Design System Studio
+  - group "Modo de utilização":
+    - button "Guiado" [pressed]:
+      - img
+      - text: Guiado
+    - button "Livre":
+      - img
+      - text: Livre
+  - button "Buscar funcionalidades (Ctrl+K)": Buscar funcionalidades Ctrl K
+  - text: Esqueleto 5/5
+  - button "Exportar e importar":
+    - img
+  - button "Abrir Master Prompt":
+    - img
+    - text: Master Prompt
+- complementary "Navegação do Studio":
+  - list:
+    - listitem:
+      - link "Início":
+        - /url: "#/"
+  - button "Construtor guiado" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto (concluída)":
+        - /url: "#/guiado/objetivo"
+    - listitem:
+      - link "Landing, login e cadastro (concluída)":
+        - /url: "#/guiado/entrada"
+    - listitem:
+      - link "Arquitetura do computador (concluída)":
+        - /url: "#/guiado/desktop"
+    - listitem:
+      - link "Arquitetura do celular (concluída)":
+        - /url: "#/guiado/mobile"
+    - listitem:
+      - link "Revisão do esqueleto (concluída)":
+        - /url: "#/guiado/revisao"
+    - listitem:
+      - link "Prévia integrada":
+        - /url: "#/guiado/preview"
+    - listitem:
+      - link "Identidade visual":
+        - /url: "#/guiado/identidade"
+    - listitem:
+      - link "Headers e sidebars":
+        - /url: "#/guiado/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/guiado/componentes"
+    - listitem:
+      - link "Master Prompt":
+        - /url: "#/guiado/entrega"
+  - button "Estrutura" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto":
+        - /url: "#/modulos/objetivo"
+    - listitem:
+      - link "Landing pages":
+        - /url: "#/modulos/landing"
+    - listitem:
+      - link "Login":
+        - /url: "#/modulos/login"
+    - listitem:
+      - link "Cadastro":
+        - /url: "#/modulos/cadastro"
+    - listitem:
+      - link "Layout desktop":
+        - /url: "#/modulos/desktop"
+    - listitem:
+      - link "Layout mobile":
+        - /url: "#/modulos/mobile"
+    - listitem:
+      - link "Live Site Preview":
+        - /url: "#/modulos/preview"
+  - button "Identidade" [expanded]
+  - list:
+    - listitem:
+      - link "Color System":
+        - /url: "#/modulos/cores"
+    - listitem:
+      - link "Navigation Showcase":
+        - /url: "#/modulos/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/modulos/componentes"
+  - button "Inspiração" [expanded]
+  - list:
+    - listitem:
+      - link "Inspiration Gallery":
+        - /url: "#/modulos/inspiracao"
+    - listitem:
+      - link "Template Studio":
+        - /url: "#/modulos/templates"
+  - button "Entrega" [expanded]
+  - list:
+    - listitem:
+      - link "Central de Prompts":
+        - /url: "#/prompt"
+    - listitem:
+      - link "Exportar e importar":
+        - /url: "#/exportar"
+  - button "Ferramentas" [expanded]
+  - list:
+    - listitem:
+      - link "Validação responsiva":
+        - /url: "#/validacao"
+    - listitem:
+      - link "Projeto e versões":
+        - /url: "#/projeto"
+  - text: Nexo Capital Salvo automaticamente neste navegador
+- main:
+  - text: Atelier UI · Design System Studio
+  - heading "Do site que você imagina ao site que a IA realmente constrói." [level=1]
+  - paragraph: Escolha visualmente a estrutura, os menus, as cores e os componentes do seu site. No final, o Studio gera um Master Prompt detalhado para entregar ao Claude Code, Cursor ou outra IA de programação.
+  - strong: Continuar “Nexo Capital”
+  - text: "Esqueleto 5/5 · próxima etapa: Prévia integrada · salvo há 5 h"
+  - button "Continuar no modo guiado":
+    - text: Continuar no modo guiado
+    - img
+  - article:
+    - heading "Modo Guiado Recomendado para iniciantes" [level=2]
+    - list:
+      - listitem: O Studio explica cada decisão com exemplos visuais.
+      - listitem: Começa pelo objetivo e pelo esqueleto do site, depois o acabamento.
+      - listitem: Você não precisa conhecer termos como sidebar, drawer ou breakpoint.
+    - button "Começar no modo guiado":
+      - text: Começar no modo guiado
+      - img
+  - article:
+    - heading "Modo Livre" [level=2]
+    - list:
+      - listitem: Acesso direto a qualquer módulo, sem sequência obrigatória.
+      - listitem: Layouts, paletas, componentes, galerias, editor e Master Prompt.
+      - listitem: "As mesmas escolhas do modo guiado: alterne quando quiser."
+    - button "Abrir todos os módulos":
+      - text: Abrir todos os módulos
+      - img
+  - heading "Primeiro o esqueleto, depois o acabamento" [level=2]
+  - paragraph: "A ordem importa: decidir a estrutura antes das cores evita retrabalho com a IA."
+  - list:
+    - listitem:
+      - text: 1 · Esqueleto
+      - strong: Estrutura do site
+      - text: Tipo de site, páginas de entrada e onde ficam header, sidebar e conteúdo — no computador e no celular.
+    - listitem:
+      - text: 2 · Identidade
+      - strong: Cores e tipografia
+      - text: Uma paleta central com tokens que todos os componentes herdam.
+    - listitem:
+      - text: 3 · Componentes
+      - strong: Menus, botões, cards…
+      - text: Escolha e personalize cada peça, com edição visual.
+    - listitem:
+      - text: 4 · Entrega
+      - strong: Master Prompt
+      - text: Especificação completa em texto e JSON, pronta para a IA construir o site.
+- status

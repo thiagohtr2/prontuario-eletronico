@@ -1,0 +1,423 @@
+- link "Pular para o conteúdo":
+  - /url: "#conteudo"
+- banner:
+  - link "Atelier UI — início":
+    - /url: "#/"
+    - text: Atelier UI Design System Studio
+  - group "Modo de utilização":
+    - button "Guiado" [pressed]:
+      - img
+      - text: Guiado
+    - button "Livre":
+      - img
+      - text: Livre
+  - button "Buscar funcionalidades (Ctrl+K)": Buscar funcionalidades Ctrl K
+  - text: Esqueleto 5/5
+  - button "Exportar e importar":
+    - img
+  - button "Abrir Master Prompt":
+    - img
+    - text: Master Prompt
+- complementary "Navegação do Studio":
+  - list:
+    - listitem:
+      - link "Início":
+        - /url: "#/"
+  - button "Construtor guiado" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto (concluída)":
+        - /url: "#/guiado/objetivo"
+    - listitem:
+      - link "Landing, login e cadastro (concluída)":
+        - /url: "#/guiado/entrada"
+    - listitem:
+      - link "Arquitetura do computador (concluída)":
+        - /url: "#/guiado/desktop"
+    - listitem:
+      - link "Arquitetura do celular (concluída)":
+        - /url: "#/guiado/mobile"
+    - listitem:
+      - link "Revisão do esqueleto (concluída)":
+        - /url: "#/guiado/revisao"
+    - listitem:
+      - link "Prévia integrada":
+        - /url: "#/guiado/preview"
+    - listitem:
+      - link "Identidade visual":
+        - /url: "#/guiado/identidade"
+    - listitem:
+      - link "Headers e sidebars":
+        - /url: "#/guiado/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/guiado/componentes"
+    - listitem:
+      - link "Master Prompt":
+        - /url: "#/guiado/entrega"
+  - button "Estrutura" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto":
+        - /url: "#/modulos/objetivo"
+    - listitem:
+      - link "Landing pages":
+        - /url: "#/modulos/landing"
+    - listitem:
+      - link "Login":
+        - /url: "#/modulos/login"
+    - listitem:
+      - link "Cadastro":
+        - /url: "#/modulos/cadastro"
+    - listitem:
+      - link "Layout desktop":
+        - /url: "#/modulos/desktop"
+    - listitem:
+      - link "Layout mobile":
+        - /url: "#/modulos/mobile"
+    - listitem:
+      - link "Live Site Preview":
+        - /url: "#/modulos/preview"
+  - button "Identidade" [expanded]
+  - list:
+    - listitem:
+      - link "Color System":
+        - /url: "#/modulos/cores"
+    - listitem:
+      - link "Navigation Showcase":
+        - /url: "#/modulos/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/modulos/componentes"
+  - button "Inspiração" [expanded]
+  - list:
+    - listitem:
+      - link "Inspiration Gallery":
+        - /url: "#/modulos/inspiracao"
+    - listitem:
+      - link "Template Studio":
+        - /url: "#/modulos/templates"
+  - button "Entrega" [expanded]
+  - list:
+    - listitem:
+      - link "Central de Prompts":
+        - /url: "#/prompt"
+    - listitem:
+      - link "Exportar e importar":
+        - /url: "#/exportar"
+  - button "Ferramentas" [expanded]
+  - list:
+    - listitem:
+      - link "Validação responsiva":
+        - /url: "#/validacao"
+    - listitem:
+      - link "Projeto e versões":
+        - /url: "#/projeto"
+  - text: Nexo Capital Salvo automaticamente neste navegador
+- main:
+  - navigation "Você está em":
+    - list:
+      - listitem:
+        - link "Início":
+          - /url: "#/"
+      - listitem:
+        - text: ›
+        - link "Identidade":
+          - /url: "#/livre"
+      - listitem: ›Color System
+  - text: Identidade
+  - heading "Color System" [level=1]
+  - paragraph: A fonte central de cores e estilos do projeto. Escolha uma das 60 paletas, ajuste tokens individualmente e defina tipografia e formas. Tudo o que herda a identidade global é atualizado na hora.
+  - tablist "Partes da identidade visual":
+    - tab "Paletas" [selected]
+    - tab "Tokens e cores"
+    - tab "Tipografia"
+    - tab "Formas e superfícies"
+  - searchbox "Buscar paletas"
+  - group "Categorias de paletas":
+    - button "Todas 60" [pressed]
+    - button "Minimalistas 6"
+    - button "Frias 6"
+    - button "Quentes 6"
+    - button "Corporativas 6"
+    - button "Tecnológicas 6"
+    - button "Profissionais 6"
+    - button "Sociais 6"
+    - button "Criativas 6"
+    - button "Elegantes 6"
+    - button "Naturais 6"
+  - button "Neutro Essencial Minimalistas · clara Preto, branco e um azul discreto para ações."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Papel Branco Minimalistas · clara Fundo de papel levemente quente com destaque carmim."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Grafite Suave Minimalistas · clara Cinzas grafite e um ciano para pontos de atenção."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Monocromo Noturno Minimalistas · escura Modo escuro radical em preto puro com verde-limão."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Areia Clara Minimalistas · clara Neutros terrosos com um laranja queimado discreto."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Névoa Minimalistas · clara Cinzas azulados e um índigo suave."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Oceano Profundo Frias · clara Azul petróleo com navegação escura e ciano luminoso."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Glacial Frias · clara Cianos gelados e índigo, muito luminosa."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Azul Ardósia Frias · clara Azul acinzentado sóbrio com destaque celeste."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Lavanda Fria Frias · clara Lilás azulado com verde-água como contraponto."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Noite Polar Frias · escura Modo escuro azul-noite com azuis e turquesa."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Menta Gelada Frias · clara Verde-azulado fresco com azul de apoio."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Terracota Quentes · clara Barro cozido, laranja queimado e âmbar."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Pôr do Sol Quentes · clara Laranja e magenta com gradiente quente."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Canela Quentes · clara Marrons acolhedores, ideais para cafés e confeitarias."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Coral Vivo Quentes · clara Coral intenso e amarelo ensolarado."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Mostarda Quentes · clara Amarelo mostarda com verde-garrafa."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Brasa Quentes · escura Modo escuro em carvão com laranjas incandescentes."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - text: Selecionado
+  - button "Azul Institucional Corporativas · clara Azul real confiável com navegação marinho." [pressed]
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Executivo Grafite Corporativas · clara Grafite quase preto com azul de ação."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Verde Banco Corporativas · clara Verde financeiro sólido e azul de apoio."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Marinho Clássico Corporativas · clara Azul marinho com destaque coral."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Vinho Corporativo Corporativas · clara Bordô profundo com âmbar."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Cinza Azulado Corporativas · clara Ardósia neutra com verde-azulado."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Neon Grid Tecnológicas · escura Escuro profundo com ciano, violeta e gradiente."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Violeta Digital Tecnológicas · clara Violeta e índigo com gradiente para ciano."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Terminal Tecnológicas · escura Verde fósforo sobre preto, estética de console."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Elétrico Tecnológicas · clara Azul elétrico, violeta e rosa vibrante."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Cyber Rosa Tecnológicas · escura Rosa e lilás neon sobre roxo profundo."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Silício Tecnológicas · clara Preto-azulado, azul e verde de status."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Clínico Profissionais · clara Azul-petróleo higiênico com verde de confirmação."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Jurídico Profissionais · clara Azul tinta com dourado envelhecido."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Consultoria Profissionais · clara Azul aço com amarelo de destaque."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Engenharia Profissionais · clara Azul técnico e laranja de segurança."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Educação Profissionais · clara Índigo estudioso com âmbar e ciano."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Contábil Profissionais · clara Verde sóbrio, grafite e azul."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Comunidade Sociais · clara Magenta e violeta com gradiente caloroso."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Conversa Sociais · clara Verde de mensagem, azul e laranja."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Pulso Social Sociais · escura Modo escuro com violeta, rosa e verde-água."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Amizade Sociais · clara Laranja amigável, amarelo e azul."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Céu Aberto Sociais · clara Azul céu com coral."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Festival Sociais · clara Roxo, vermelho e amarelo festivos."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Estúdio Pop Criativas · clara Rosa, azul e amarelo de pôster."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Risografia Criativas · clara Laranja e azul de impressão artesanal."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Aquarela Criativas · clara Lilás, rosa e verde suaves."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Neo Brutal Criativas · clara Preto puro, laranja e amarelo chapados."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Galeria Noturna Criativas · escura Escuro de galeria com coral e amarelo."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Tropical Criativas · clara Verde-água, coral e amarelo de verão."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Ouro Noturno Elegantes · escura Preto quente com dourado e champanhe."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Marfim Elegantes · clara Marfim, carvão e couro."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Champagne Elegantes · clara Bege champanhe com bronze."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Esmeralda Real Elegantes · clara Verde esmeralda profundo com ouro."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Ameixa Luxo Elegantes · clara Ameixa, rosé antigo e nude."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Obsidiana Elegantes · escura Preto vulcânico com prata e lilás."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Floresta Naturais · clara Verdes de mata com madeira clara."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Musgo Naturais · clara Oliva, verde-escuro e caramelo."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Argila Naturais · clara Siena, marrom e verde-sálvia."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Sálvia Naturais · clara Sálvia acinzentada com amarelo-mel."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Mar e Areia Naturais · clara Verde-mar com pêssego de areia."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - button "Noite na Mata Naturais · escura Modo escuro verde-floresta com laranja."
+  - button "Prompt":
+    - img
+    - text: Prompt
+  - complementary "Prévia da identidade":
+    - strong: Prévia da identidade
+    - text: Clara
+    - complementary:
+      - text: Marca
+      - img
+      - text: Início
+      - img
+      - text: Projetos
+      - img
+      - text: Equipe
+      - img
+      - text: Ajustes
+    - text: Visão geral Texto secundário com um link
+    - img
+    - img
+    - text: Primário Hover Secundário Destaque Desabilitado Campo Placeholder… Com foco maria@email.com
+    - strong: Pedidos recentes
+    - text: 12 novos Ana Souza R$ 120,00 Bruno Lima R$ 207,00 Carla Dias R$ 294,00
+    - img
+    - text: Alterações salvas
+    - img
+    - text: Plano perto do limite
+    - img
+    - text: Falha no pagamento
+    - img
+    - text: Nova versão disponível
+    - button "Prompt da identidade":
+      - img
+      - text: Prompt da identidade
+    - button "CSS dos tokens":
+      - img
+      - text: CSS dos tokens
+- status

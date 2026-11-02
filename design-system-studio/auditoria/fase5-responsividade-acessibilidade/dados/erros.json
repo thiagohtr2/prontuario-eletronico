@@ -1,0 +1,13 @@
+{
+  "validacaoUrl": {
+    "invalid": null,
+    "describedby": null,
+    "errText": "Use um endereço completo, começando com http:// ou https://",
+    "errRole": null,
+    "live": null
+  },
+  "importacao": {
+    "alert": "Não foi possível importar:\nO arquivo não é um projeto do Atelier UI (campo \"schema\" ausente ou diferente de \"atelier-ui/project\").",
+    "toasts": ""
+  }
+}

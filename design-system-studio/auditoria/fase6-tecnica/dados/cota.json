@@ -2,9 +2,19 @@
   "estadoAntes": 1332,
   "totalCharsArmazenados": 5242873,
   "paletaNaTela": "palette-option-lavanda-fria",
-  "paletaSalva": "lavanda-fria",
-  "gravacaoMudou": true,
-  "avisoVisivel": true,
-  "paletaAposRecarregar": "palette-option-lavanda-fria",
-  "erros": []
+  "paletaSalva": "papel-branco",
+  "gravacaoMudou": false,
+  "avisoVisivel": {
+    "toastAoSalvarVersao": "",
+    "versoesNaTela": 1,
+    "versoesGravadas": 0,
+    "errosAoSalvarVersao": [
+      "QuotaExceededError: Failed to execute 'setItem' on 'Storage': Setting the value of 'atelier-ui:studio:v1' exceeded the quota."
+    ]
+  },
+  "paletaAposRecarregar": "palette-option-papel-branco",
+  "erros": [
+    "QuotaExceededError: Failed to execute 'setItem' on 'Storage': Setting the value of 'atelier-ui:studio:v1' exceeded the quota.",
+    "QuotaExceededError: Failed to execute 'setItem' on 'Storage': Setting the value of 'atelier-ui:studio:v1' exceeded the quota."
+  ]
 }

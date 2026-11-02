@@ -1,0 +1,238 @@
+- link "Pular para o conteúdo":
+  - /url: "#conteudo"
+- banner:
+  - link "Atelier UI — início":
+    - /url: "#/"
+    - text: Atelier UI Design System Studio
+  - group "Modo de utilização":
+    - button "Guiado" [pressed]:
+      - img
+      - text: Guiado
+    - button "Livre":
+      - img
+      - text: Livre
+  - button "Buscar funcionalidades (Ctrl+K)": Buscar funcionalidades Ctrl K
+  - text: Esqueleto 5/5
+  - button "Exportar e importar":
+    - img
+  - button "Abrir Master Prompt":
+    - img
+    - text: Master Prompt
+- complementary "Navegação do Studio":
+  - list:
+    - listitem:
+      - link "Início":
+        - /url: "#/"
+  - button "Construtor guiado" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto (concluída)":
+        - /url: "#/guiado/objetivo"
+    - listitem:
+      - link "Landing, login e cadastro (concluída)":
+        - /url: "#/guiado/entrada"
+    - listitem:
+      - link "Arquitetura do computador (concluída)":
+        - /url: "#/guiado/desktop"
+    - listitem:
+      - link "Arquitetura do celular (concluída)":
+        - /url: "#/guiado/mobile"
+    - listitem:
+      - link "Revisão do esqueleto (concluída)":
+        - /url: "#/guiado/revisao"
+    - listitem:
+      - link "Prévia integrada":
+        - /url: "#/guiado/preview"
+    - listitem:
+      - link "Identidade visual":
+        - /url: "#/guiado/identidade"
+    - listitem:
+      - link "Headers e sidebars":
+        - /url: "#/guiado/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/guiado/componentes"
+    - listitem:
+      - link "Master Prompt":
+        - /url: "#/guiado/entrega"
+  - button "Estrutura" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto":
+        - /url: "#/modulos/objetivo"
+    - listitem:
+      - link "Landing pages":
+        - /url: "#/modulos/landing"
+    - listitem:
+      - link "Login":
+        - /url: "#/modulos/login"
+    - listitem:
+      - link "Cadastro":
+        - /url: "#/modulos/cadastro"
+    - listitem:
+      - link "Layout desktop":
+        - /url: "#/modulos/desktop"
+    - listitem:
+      - link "Layout mobile":
+        - /url: "#/modulos/mobile"
+    - listitem:
+      - link "Live Site Preview":
+        - /url: "#/modulos/preview"
+  - button "Identidade" [expanded]
+  - list:
+    - listitem:
+      - link "Color System":
+        - /url: "#/modulos/cores"
+    - listitem:
+      - link "Navigation Showcase":
+        - /url: "#/modulos/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/modulos/componentes"
+  - button "Inspiração" [expanded]
+  - list:
+    - listitem:
+      - link "Inspiration Gallery":
+        - /url: "#/modulos/inspiracao"
+    - listitem:
+      - link "Template Studio":
+        - /url: "#/modulos/templates"
+  - button "Entrega" [expanded]
+  - list:
+    - listitem:
+      - link "Central de Prompts":
+        - /url: "#/prompt"
+    - listitem:
+      - link "Exportar e importar":
+        - /url: "#/exportar"
+  - button "Ferramentas" [expanded]
+  - list:
+    - listitem:
+      - link "Validação responsiva":
+        - /url: "#/validacao"
+    - listitem:
+      - link "Projeto e versões":
+        - /url: "#/projeto"
+  - text: Nexo Capital Salvo automaticamente neste navegador
+- main:
+  - navigation "Você está em":
+    - list:
+      - listitem:
+        - link "Início":
+          - /url: "#/"
+      - listitem: ›Construtor guiado
+      - listitem: ›Objetivo do projeto
+  - navigation "Etapas do construtor guiado":
+    - text: Esqueleto
+    - list:
+      - listitem:
+        - button "1. Objetivo"
+      - listitem:
+        - button "2. Entrada"
+      - listitem:
+        - button "3. Desktop"
+      - listitem:
+        - button "4. Mobile"
+      - listitem:
+        - button "5. Revisão"
+    - text: Acabamento
+    - list:
+      - listitem:
+        - button "6. Prévia"
+      - listitem:
+        - button "7. Cores"
+      - listitem:
+        - button "8. Navegação"
+      - listitem:
+        - button "9. Componentes"
+      - listitem:
+        - button "10. Entrega"
+  - text: Etapa 1 de 10 · Esqueleto
+  - heading "Objetivo do projeto" [level=1]
+  - paragraph: Conte o que você vai construir. Isso ajuda o Studio a sugerir caminhos — você continua livre para escolher.
+  - region "O que você pretende construir?":
+    - heading "O que você pretende construir?" [level=2]
+    - paragraph: Escolha o tipo mais próximo. Isso só serve para o Studio sugerir caminhos — você continua livre para escolher qualquer estrutura.
+    - radiogroup "Tipo de projeto":
+      - radio "Aplicativo ou SaaS Sistema com login, onde as pessoas trabalham, cadastram e acompanham informações."
+      - radio "Dashboard Painel com indicadores, gráficos e tabelas para acompanhar números." [checked]
+      - radio "Loja ou catálogo Vitrine de produtos com categorias, detalhes e carrinho ou contato."
+      - radio "Landing page Página que apresenta um produto ou serviço e convida a pessoa a agir."
+      - radio "Portfólio Apresentação de trabalhos, projetos ou de uma marca pessoal."
+      - 'radio "One Screen Interface que cabe inteira em uma única tela, sem rolagem principal: painéis, quiosques, TVs."'
+      - radio "Outro tipo Descreva com suas palavras o que pretende construir."
+    - img
+    - strong: "Sugestão (opcional):"
+    - text: "Dashboards precisam de espaço horizontal para gráficos: menus compactos ajudam. Para este tipo de projeto, costuma funcionar o fluxo"
+    - strong: “Apenas login”
+    - text: . (já aplicada)
+  - region "Sobre o projeto":
+    - heading "Sobre o projeto" [level=2]
+    - paragraph: Quanto mais claro, melhor a IA entende o que construir. Só o nome é realmente necessário.
+    - text: Nome do projeto
+    - textbox "Nome do projeto":
+      - /placeholder: "Ex.: Agenda Viva"
+      - text: Nexo Capital
+    - text: Objetivo
+    - textbox "Objetivo":
+      - /placeholder: "Ex.: organizar agendamentos de clientes"
+      - text: Plataforma financeira com dashboard financeiro, tabelas de dados e gráficos.
+    - text: "Em uma frase: o que o site resolve? Descrição resumida"
+    - textbox "Descrição resumida":
+      - /placeholder: Conte em poucas linhas como o site funciona.
+      - text: "Plataforma financeira \"Nexo Capital\": login profissional, dashboard financeiro com tabelas de dados e gráficos, navegação com sidebar e header, design corporativo e responsividade em telas pequenas."
+    - text: Público-alvo
+    - textbox "Público-alvo":
+      - /placeholder: "Ex.: donos de pequenos estúdios"
+    - text: Quem vai usar? Finalidade principal
+    - textbox "Finalidade principal":
+      - /placeholder: "Ex.: marcar um horário em menos de 1 minuto"
+    - text: A ação mais importante que a pessoa faz no site.
+  - region "Módulos e funcionalidades previstas":
+    - heading "Módulos e funcionalidades previstas" [level=2]
+    - paragraph: Liste as partes principais do sistema. Elas entram no Master Prompt.
+    - textbox "Nova funcionalidade":
+      - /placeholder: "Ex.: Agenda semanal"
+    - button "Adicionar":
+      - img
+      - text: Adicionar
+    - list "Funcionalidades adicionadas":
+      - listitem:
+        - text: Login profissional
+        - button "Remover Login profissional"
+      - listitem:
+        - text: Dashboard financeiro
+        - button "Remover Dashboard financeiro"
+      - listitem:
+        - text: Tabelas de dados
+        - button "Remover Tabelas de dados"
+      - listitem:
+        - text: Gráficos
+        - button "Remover Gráficos"
+    - text: "Sugestões para dashboard:"
+    - button "Indicadores (KPIs)"
+    - button "Tabelas com filtros"
+    - button "Filtro por período"
+    - button "Exportar relatórios"
+    - button "Alertas"
+  - region "Tecnologia desejada (opcional)":
+    - heading "Tecnologia desejada (opcional)" [level=2]
+    - paragraph: Se você já sabe com o que a IA deve construir, informe aqui.
+    - text: Tecnologia
+    - textbox "Tecnologia":
+      - /placeholder: "Ex.: React + TypeScript + Tailwind"
+      - text: HTML + CSS + JavaScript
+    - button "React + TypeScript"
+    - button "Next.js"
+    - button "Vue"
+    - button "Svelte"
+    - button "HTML + CSS + JavaScript" [pressed]
+    - button "Tailwind CSS"
+    - button "React Native"
+  - button "Início":
+    - img
+    - text: Início
+  - 'button "Continuar: Entrada"':
+    - text: "Continuar: Entrada"
+    - img
+- status

@@ -1,0 +1,22 @@
+const L = require('./lib')
+const fs = require('fs')
+;(async () => {
+  const b = await L.launch()
+  const { ctx, page } = await L.newPage(b, 375, 800)
+  await L.go(page, '/validacao', 600)
+  await page.fill('#v-url', 'site-sem-protocolo')
+  await page.keyboard.press('Tab')
+  await page.waitForTimeout(300)
+  const v = await page.evaluate(() => { const i = document.querySelector('#v-url'); const err = i.closest('.ui-field').querySelector('.ui-error'); return { invalid: i.getAttribute('aria-invalid'), describedby: i.getAttribute('aria-describedby'), errText: err ? err.innerText : null, errRole: err ? err.getAttribute('role') : null, live: err ? err.getAttribute('aria-live') : null } })
+  await L.shot(page, 'detalhes/validacao-erro-url-375')
+  // importação inválida
+  await L.go(page, '/exportar', 600)
+  const tmp = L.DADOS + '/arquivo-invalido.json'
+  fs.writeFileSync(tmp, '{"isto":"não é um projeto"}')
+  await page.locator('input[type=file]').first().setInputFiles(tmp)
+  await page.waitForTimeout(600)
+  const imp = await page.evaluate(() => { const a = document.querySelector('[role=alert]'); return { alert: a ? a.innerText.slice(0, 160) : null, toasts: document.querySelector('.ui-toasts').innerText } })
+  console.log(JSON.stringify({ validacaoUrl: v, importacao: imp }, null, 1))
+  L.save('erros.json', { validacaoUrl: v, importacao: imp })
+  await ctx.close(); await b.close()
+})()

@@ -1,0 +1,206 @@
+- link "Pular para o conteúdo":
+  - /url: "#conteudo"
+- banner:
+  - link "Atelier UI — início":
+    - /url: "#/"
+    - text: Atelier UI Design System Studio
+  - group "Modo de utilização":
+    - button "Guiado" [pressed]:
+      - img
+      - text: Guiado
+    - button "Livre":
+      - img
+      - text: Livre
+  - button "Buscar funcionalidades (Ctrl+K)": Buscar funcionalidades Ctrl K
+  - text: Esqueleto 5/5
+  - button "Exportar e importar":
+    - img
+  - button "Abrir Master Prompt":
+    - img
+    - text: Master Prompt
+- complementary "Navegação do Studio":
+  - list:
+    - listitem:
+      - link "Início":
+        - /url: "#/"
+  - button "Construtor guiado" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto (concluída)":
+        - /url: "#/guiado/objetivo"
+    - listitem:
+      - link "Landing, login e cadastro (concluída)":
+        - /url: "#/guiado/entrada"
+    - listitem:
+      - link "Arquitetura do computador (concluída)":
+        - /url: "#/guiado/desktop"
+    - listitem:
+      - link "Arquitetura do celular (concluída)":
+        - /url: "#/guiado/mobile"
+    - listitem:
+      - link "Revisão do esqueleto (concluída)":
+        - /url: "#/guiado/revisao"
+    - listitem:
+      - link "Prévia integrada":
+        - /url: "#/guiado/preview"
+    - listitem:
+      - link "Identidade visual":
+        - /url: "#/guiado/identidade"
+    - listitem:
+      - link "Headers e sidebars":
+        - /url: "#/guiado/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/guiado/componentes"
+    - listitem:
+      - link "Master Prompt":
+        - /url: "#/guiado/entrega"
+  - button "Estrutura" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto":
+        - /url: "#/modulos/objetivo"
+    - listitem:
+      - link "Landing pages":
+        - /url: "#/modulos/landing"
+    - listitem:
+      - link "Login":
+        - /url: "#/modulos/login"
+    - listitem:
+      - link "Cadastro":
+        - /url: "#/modulos/cadastro"
+    - listitem:
+      - link "Layout desktop":
+        - /url: "#/modulos/desktop"
+    - listitem:
+      - link "Layout mobile":
+        - /url: "#/modulos/mobile"
+    - listitem:
+      - link "Live Site Preview":
+        - /url: "#/modulos/preview"
+  - button "Identidade" [expanded]
+  - list:
+    - listitem:
+      - link "Color System":
+        - /url: "#/modulos/cores"
+    - listitem:
+      - link "Navigation Showcase":
+        - /url: "#/modulos/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/modulos/componentes"
+  - button "Inspiração" [expanded]
+  - list:
+    - listitem:
+      - link "Inspiration Gallery":
+        - /url: "#/modulos/inspiracao"
+    - listitem:
+      - link "Template Studio":
+        - /url: "#/modulos/templates"
+  - button "Entrega" [expanded]
+  - list:
+    - listitem:
+      - link "Central de Prompts":
+        - /url: "#/prompt"
+    - listitem:
+      - link "Exportar e importar":
+        - /url: "#/exportar"
+  - button "Ferramentas" [expanded]
+  - list:
+    - listitem:
+      - link "Validação responsiva":
+        - /url: "#/validacao"
+    - listitem:
+      - link "Projeto e versões":
+        - /url: "#/projeto"
+  - text: Nexo Capital Salvo automaticamente neste navegador
+- main:
+  - navigation "Você está em":
+    - list:
+      - listitem:
+        - link "Início":
+          - /url: "#/"
+      - listitem:
+        - text: ›
+        - link "Ferramentas":
+          - /url: "#/livre"
+      - listitem: ›Validação responsiva
+  - text: Ferramentas
+  - heading "Responsive Validation Lab" [level=1]
+  - paragraph: Teste um site já construído em várias larguras de tela, encontre problemas de responsividade e gere um prompt de correção. O teste roda no seu computador, com um executor local em Python + Playwright.
+  - img
+  - strong: Em evolução.
+  - text: O executor local é complementar à interface do Studio. A versão atual detecta overflow horizontal, elementos fora da tela, alvos de toque pequenos e fontes pequenas em campos.
+  - heading "1. Configuração" [level=2]
+  - text: URL do site
+  - textbox "URL do site":
+    - /placeholder: https://staging.meusite.com
+  - text: Prefira um ambiente de testes (staging). Espera após carregar (ms)
+  - spinbutton "Espera após carregar (ms)": "800"
+  - text: Tempo para animações e dados carregarem. Rotas autorizadas (uma por linha)
+  - textbox "Rotas autorizadas (uma por linha)": /
+  - text: Somente estas páginas serão visitadas. Não inclua rotas que apagam ou alteram dados.
+  - heading "Larguras de tela" [level=2]
+  - group "Larguras de tela":
+    - button "320 px" [pressed]
+    - button "344 px"
+    - button "360 px" [pressed]
+    - button "375 px" [pressed]
+    - button "390 px" [pressed]
+    - button "412 px" [pressed]
+    - button "430 px" [pressed]
+    - button "480 px"
+    - button "600 px"
+    - button "768 px" [pressed]
+    - button "820 px"
+    - button "1024 px" [pressed]
+    - button "1280 px" [pressed]
+    - button "1440 px" [pressed]
+    - button "1920 px"
+  - spinbutton "Largura personalizada"
+  - button "Adicionar largura"
+  - text: 10 selecionada(s)
+  - heading "Verificações" [level=2]
+  - switch "Overflow horizontal Página mais larga que a tela e os elementos que causam isso." [checked]
+  - text: Overflow horizontal Página mais larga que a tela e os elementos que causam isso.
+  - switch "Elementos fora da tela Elementos cortados na borda esquerda." [checked]
+  - text: Elementos fora da tela Elementos cortados na borda esquerda.
+  - switch "Alvos de toque pequenos Botões e links difíceis de tocar (telas < 768 px)." [checked]
+  - text: Alvos de toque pequenos Botões e links difíceis de tocar (telas < 768 px).
+  - switch "Fonte pequena em campos Inputs com menos de 16 px (zoom automático no iOS)." [checked]
+  - text: Fonte pequena em campos Inputs com menos de 16 px (zoom automático no iOS). Tamanho mínimo do alvo de toque (px)
+  - spinbutton "Tamanho mínimo do alvo de toque (px)": "44"
+  - heading "Sites com login" [level=2]
+  - switch "Login manual antes dos testes O executor abre o navegador para você entrar com uma conta de teste. A senha nunca é pedida aqui nem salva em arquivos."
+  - text: Login manual antes dos testes O executor abre o navegador para você entrar com uma conta de teste. A senha nunca é pedida aqui nem salva em arquivos.
+  - button "Baixar configuração" [disabled]:
+    - img
+    - text: Baixar configuração
+  - button "Baixar executor (runner.py)":
+    - img
+    - text: Baixar executor (runner.py)
+  - heading "2. Rodar no seu computador" [level=2]
+  - list:
+    - listitem:
+      - text: "Instale uma vez:"
+      - code: pip install playwright
+      - text: e
+      - code: python -m playwright install chromium
+    - listitem:
+      - text: "Na pasta dos arquivos baixados:"
+      - code: python runner.py --config validation-config.json --out report.json
+    - listitem: Com login manual, entre na janela que abrir e pressione Enter no terminal.
+  - list:
+    - listitem: Prefira contas de teste, staging e dados fictícios.
+    - listitem: Restrinja as rotas; o executor não clica nem envia formulários.
+    - listitem: Senhas nunca vão para arquivos de configuração nem para o Master Prompt.
+    - listitem: O relatório não contém cookies, tokens, textos da página ou capturas de tela.
+  - heading "3. Relatório e correção" [level=2]
+  - button "Importar relatório (report.json)":
+    - img
+    - text: Importar relatório (report.json)
+  - button "Relatório para importar"
+  - img
+  - paragraph: Nenhum relatório importado
+  - paragraph: Rode o executor local e importe o arquivo gerado.
+- status

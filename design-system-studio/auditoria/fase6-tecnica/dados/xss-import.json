@@ -1,0 +1,21 @@
+{
+  "nomeImportado": "<img src=x onerror=\"window.__xss=1\">XSS",
+  "xssExecutou": null,
+  "imgInjetadaNoDom": 0,
+  "fichaHtmlTagsNaoEscapadas": false,
+  "fichaHtmlTitulo": "<title>&lt;img src=x onerror=\"window.__xss=1\">XSS — Ficha do projeto",
+  "cssCabecalho": "/* |  * <img src=x onerror=\"window.__xss=1\">XSS — CSS de referência gerado pelo Atelier UI.",
+  "mdLinhaNome": "# Master Prompt — <img src=x onerror=\"window.__xss=1\">XSS",
+  "mdNotaDesktop": "Observação do usuário: <img src=x onerror=\"window.__xss=3\">",
+  "erros": [],
+  "fichaAbertaExecutou": null,
+  "importacaoGrandeSeguidaDeOutra": {
+    "erroNaPrimeira": null,
+    "erroNaSegunda": "Não foi possível importar: Failed to execute 'setItem' on 'Storage': Setting the value of 'atelier-ui:studio:v1' exceeded the quota.",
+    "estadoGravado": {
+      "nome": "Atlas Workspace",
+      "versoes": 1,
+      "chars": 3003805
+    }
+  }
+}

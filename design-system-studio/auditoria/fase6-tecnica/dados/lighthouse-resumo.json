@@ -1,0 +1,136 @@
+{
+ "home-desktop": {
+  "n": 3,
+  "score": 95,
+  "scores": [
+   77,
+   95,
+   97
+  ],
+  "fcp_ms": 258.724,
+  "lcp_ms": 1379.501,
+  "tbt_ms": 105.0,
+  "cls": 0.0,
+  "si_ms": 507.858,
+  "tti_ms": 1379.501,
+  "bytes_KB": 960,
+  "mainthread_ms": 579.622,
+  "bootup_ms": 199.278,
+  "unusedJs_KB": 152,
+  "dom": null,
+  "url": "http://127.0.0.1:4300/#/",
+  "warn": []
+ },
+ "home-mobile": {
+  "n": 3,
+  "score": 69,
+  "scores": [
+   53,
+   71,
+   69
+  ],
+  "fcp_ms": 907.752,
+  "lcp_ms": 6545.51,
+  "tbt_ms": 364,
+  "cls": 0,
+  "si_ms": 908.34,
+  "tti_ms": 6545.51,
+  "bytes_KB": 960,
+  "mainthread_ms": 1576.256,
+  "bootup_ms": 451.056,
+  "unusedJs_KB": 152,
+  "dom": null,
+  "url": "http://127.0.0.1:4300/#/",
+  "warn": []
+ },
+ "modulos-inspiracao-desktop": {
+  "n": 3,
+  "score": 52,
+  "scores": [
+   50,
+   52,
+   54
+  ],
+  "fcp_ms": 266.083,
+  "lcp_ms": 2441.124,
+  "tbt_ms": 1384.039,
+  "cls": 0.001,
+  "si_ms": 2254.784,
+  "tti_ms": 3133.882,
+  "bytes_KB": 1624,
+  "mainthread_ms": 3440.125,
+  "bootup_ms": 830.513,
+  "unusedJs_KB": 190,
+  "dom": null,
+  "url": "http://127.0.0.1:4300/#/modulos/inspiracao",
+  "warn": []
+ },
+ "modulos-inspiracao-mobile": {
+  "n": 3,
+  "score": 39,
+  "scores": [
+   40,
+   39,
+   38
+  ],
+  "fcp_ms": 918.594,
+  "lcp_ms": 12289.234,
+  "tbt_ms": 7094.922,
+  "cls": 0,
+  "si_ms": 6548.454,
+  "tti_ms": 15751.234,
+  "bytes_KB": 1624,
+  "mainthread_ms": 13684.32,
+  "bootup_ms": 4323.004,
+  "unusedJs_KB": 190,
+  "dom": null,
+  "url": "http://127.0.0.1:4300/#/modulos/inspiracao",
+  "warn": [
+   "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+  ]
+ },
+ "modulos-mobile-desktop": {
+  "n": 3,
+  "score": 78,
+  "scores": [
+   83,
+   78,
+   78
+  ],
+  "fcp_ms": 260.796,
+  "lcp_ms": 1731.592,
+  "tbt_ms": 339.602,
+  "cls": 0.0,
+  "si_ms": 1166.379,
+  "tti_ms": 1731.592,
+  "bytes_KB": 1308,
+  "mainthread_ms": 1605.904,
+  "bootup_ms": 410.954,
+  "unusedJs_KB": 244,
+  "dom": null,
+  "url": "http://127.0.0.1:4300/#/modulos/mobile",
+  "warn": []
+ },
+ "modulos-mobile-mobile": {
+  "n": 3,
+  "score": 49,
+  "scores": [
+   54,
+   49,
+   43
+  ],
+  "fcp_ms": 903.123,
+  "lcp_ms": 8585.436,
+  "tbt_ms": 1433.891,
+  "cls": 0,
+  "si_ms": 2612.146,
+  "tti_ms": 8585.436,
+  "bytes_KB": 1308,
+  "mainthread_ms": 3907.8,
+  "bootup_ms": 1480.104,
+  "unusedJs_KB": 243,
+  "dom": null,
+  "url": "http://127.0.0.1:4300/#/modulos/mobile",
+  "warn": []
+ }
+}

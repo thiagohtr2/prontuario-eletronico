@@ -1,0 +1,337 @@
+- link "Pular para o conteúdo":
+  - /url: "#conteudo"
+- banner:
+  - link "Atelier UI — início":
+    - /url: "#/"
+    - text: Atelier UI Design System Studio
+  - group "Modo de utilização":
+    - button "Guiado" [pressed]:
+      - img
+      - text: Guiado
+    - button "Livre":
+      - img
+      - text: Livre
+  - button "Buscar funcionalidades (Ctrl+K)": Buscar funcionalidades Ctrl K
+  - text: Esqueleto 5/5
+  - button "Exportar e importar":
+    - img
+  - button "Abrir Master Prompt":
+    - img
+    - text: Master Prompt
+- complementary "Navegação do Studio":
+  - list:
+    - listitem:
+      - link "Início":
+        - /url: "#/"
+  - button "Construtor guiado" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto (concluída)":
+        - /url: "#/guiado/objetivo"
+    - listitem:
+      - link "Landing, login e cadastro (concluída)":
+        - /url: "#/guiado/entrada"
+    - listitem:
+      - link "Arquitetura do computador (concluída)":
+        - /url: "#/guiado/desktop"
+    - listitem:
+      - link "Arquitetura do celular (concluída)":
+        - /url: "#/guiado/mobile"
+    - listitem:
+      - link "Revisão do esqueleto (concluída)":
+        - /url: "#/guiado/revisao"
+    - listitem:
+      - link "Prévia integrada":
+        - /url: "#/guiado/preview"
+    - listitem:
+      - link "Identidade visual":
+        - /url: "#/guiado/identidade"
+    - listitem:
+      - link "Headers e sidebars":
+        - /url: "#/guiado/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/guiado/componentes"
+    - listitem:
+      - link "Master Prompt":
+        - /url: "#/guiado/entrega"
+  - button "Estrutura" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto":
+        - /url: "#/modulos/objetivo"
+    - listitem:
+      - link "Landing pages":
+        - /url: "#/modulos/landing"
+    - listitem:
+      - link "Login":
+        - /url: "#/modulos/login"
+    - listitem:
+      - link "Cadastro":
+        - /url: "#/modulos/cadastro"
+    - listitem:
+      - link "Layout desktop":
+        - /url: "#/modulos/desktop"
+    - listitem:
+      - link "Layout mobile":
+        - /url: "#/modulos/mobile"
+    - listitem:
+      - link "Live Site Preview":
+        - /url: "#/modulos/preview"
+  - button "Identidade" [expanded]
+  - list:
+    - listitem:
+      - link "Color System":
+        - /url: "#/modulos/cores"
+    - listitem:
+      - link "Navigation Showcase":
+        - /url: "#/modulos/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/modulos/componentes"
+  - button "Inspiração" [expanded]
+  - list:
+    - listitem:
+      - link "Inspiration Gallery":
+        - /url: "#/modulos/inspiracao"
+    - listitem:
+      - link "Template Studio":
+        - /url: "#/modulos/templates"
+  - button "Entrega" [expanded]
+  - list:
+    - listitem:
+      - link "Central de Prompts":
+        - /url: "#/prompt"
+    - listitem:
+      - link "Exportar e importar":
+        - /url: "#/exportar"
+  - button "Ferramentas" [expanded]
+  - list:
+    - listitem:
+      - link "Validação responsiva":
+        - /url: "#/validacao"
+    - listitem:
+      - link "Projeto e versões":
+        - /url: "#/projeto"
+  - text: Nexo Capital Salvo automaticamente neste navegador
+- main:
+  - navigation "Você está em":
+    - list:
+      - listitem:
+        - link "Início":
+          - /url: "#/"
+      - listitem:
+        - text: ›
+        - link "Estrutura":
+          - /url: "#/livre"
+      - listitem: ›Landing pages
+  - text: Estrutura
+  - heading "Landing page" [level=1]
+  - paragraph: "A landing page é a página pública que apresenta o seu produto ou serviço para quem ainda não o conhece e convida a pessoa a agir — assinar, comprar, agendar ou entrar. Ela não é a tela de login: é a vitrine que vem antes."
+  - region "Como as pessoas chegam ao seu sistema?":
+    - heading "Como as pessoas chegam ao seu sistema?" [level=2]
+    - paragraph: Escolha o caminho de entrada. Ele define se o projeto terá landing page, login, as duas coisas ou nenhuma.
+    - img
+    - strong: Landing page não é login.
+    - text: A landing apresenta o produto para quem ainda não conhece. O login é a porta da área restrita. Um sistema pode ter os dois, só um deles ou nenhum.
+    - group "Fluxo de entrada":
+      - 'button "Landing page com chamada para login Página pública de apresentação e um botão “Entrar” que leva ao login do sistema. Ex.: um sistema de gestão com página de vendas e área de clientes."'
+      - 'button "Landing page sem login Só a página de apresentação. Não existe área restrita. Ex.: divulgação de um produto, evento ou serviço."'
+      - text: Selecionado
+      - 'button "Apenas login O endereço abre direto na tela de entrar. Sem página de apresentação. Ex.: ferramenta interna de uma empresa." [pressed]'
+      - 'button "Aplicação diretamente O sistema abre direto na tela principal, sem apresentação nem login. Ex.: calculadora, painel de TV ou quiosque."'
+      - 'button "Página institucional Site informativo da empresa ou serviço, com várias seções públicas. Ex.: site de uma clínica, escritório ou escola."'
+  - region "Biblioteca de landing pages":
+    - heading "Biblioteca de landing pages" [level=2]
+    - paragraph: 24 conceitos com 12 estruturas realmente diferentes. Clique em um cartão para escolher; use “Ver prévia” para ver a página inteira no computador e no celular.
+    - img
+    - strong: O fluxo escolhido não tem landing page.
+    - text: Você marcou “Apenas login”. Pode escolher uma landing mesmo assim, mas ela só entra no projeto se você mudar o fluxo de entrada. Landing selecionada Nenhum modelo escolhido ainda.
+    - button "Ver prévia" [disabled]:
+      - img
+      - text: Ver prévia
+    - searchbox "Buscar landing pages"
+    - group "Filtrar por arquitetura":
+      - button "Todas 24" [pressed]
+      - button "Hero centralizado 2"
+      - button "Hero dividido 2"
+      - button "Composição assimétrica 2"
+      - button "Apresentação de produto 2"
+      - button "Layout editorial 2"
+      - button "Página cinematográfica 2"
+      - button "Bento grid 2"
+      - button "Composição em pôster 2"
+      - button "Tipografia monumental 2"
+      - button "Apresentação com dashboard 2"
+      - button "Página minimalista 2"
+      - button "Landing com seções narrativas 2"
+    - paragraph: Doze arquiteturas diferentes, duas marcas fictícias em cada uma.
+    - 'button "Aurora Flow SaaS e produtividade Hero centralizado Apresentação clássica de software: tudo centralizado, com a tela do aplicativo logo abaixo do título."': "Aurora Flow SaaS e produtividadeHero centralizado Apresentação clássica de software: tudo centralizado, com a tela do aplicativo logo abaixo do título."
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - 'button "Folha Viva Plantas Composição assimétrica Visual de revista de jardinagem: blocos desencontrados, fotos altas e muito respiro."': "Folha Viva PlantasComposição assimétrica Visual de revista de jardinagem: blocos desencontrados, fotos altas e muito respiro."
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - 'button "VOLTA Motors Carros elétricos Página cinematográfica Como um trailer de cinema: o carro em tela cheia, fundo escuro e frases curtas sobrepostas."': "VOLTA Motors Carros elétricosPágina cinematográfica Como um trailer de cinema: o carro em tela cheia, fundo escuro e frases curtas sobrepostas."
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - 'button "Casa Brisa Arquitetura Página minimalista Quase nada na tela: um título calmo, uma imagem grande e muito espaço em branco."': "Casa Brisa ArquiteturaPágina minimalista Quase nada na tela: um título calmo, uma imagem grande e muito espaço em branco."
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - button "Nexa Finance Plataforma financeira Apresentação com dashboard Mostra o painel do produto logo na primeira tela, para a pessoa entender na hora o que vai usar.": Nexa Finance Plataforma financeiraApresentação com dashboard Mostra o painel do produto logo na primeira tela, para a pessoa entender na hora o que vai usar.
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - button "Formiga Lab Ciência e formigas Landing com seções narrativas Conta a pesquisa como uma história em capítulos que vão aparecendo conforme a pessoa rola a página.": Formiga Lab Ciência e formigasLanding com seções narrativas Conta a pesquisa como uma história em capítulos que vão aparecendo conforme a pessoa rola a página.
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - button "North Studio Portfólio criativo Tipografia monumental O nome do estúdio em letras gigantes ocupa a tela inteira; os trabalhos aparecem como uma lista elegante.": North Studio Portfólio criativoTipografia monumental O nome do estúdio em letras gigantes ocupa a tela inteira; os trabalhos aparecem como uma lista elegante.
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - 'button "Frost One Eletrodomésticos Apresentação de produto O eletrodoméstico é a estrela: aparece grande no centro, com números e detalhes ao redor."': "Frost One EletrodomésticosApresentação de produto O eletrodoméstico é a estrela: aparece grande no centro, com números e detalhes ao redor."
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - button "Orbit Space Tecnologia espacial Página cinematográfica Cenas espaciais em tela cheia com texto por cima, como a abertura de um documentário.": Orbit Space Tecnologia espacialPágina cinematográfica Cenas espaciais em tela cheia com texto por cima, como a abertura de um documentário.
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - 'button "Sapore Café Cafeteria Composição em pôster A primeira tela parece um cartaz colado na parede: letras enormes, um desenho forte e poucas palavras."': "Sapore Café CafeteriaComposição em pôster A primeira tela parece um cartaz colado na parede: letras enormes, um desenho forte e poucas palavras."
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - button "Lume Health Saúde Hero dividido Texto claro de um lado e uma imagem acolhedora do outro, com cartões que mostram o agendamento.": Lume Health SaúdeHero dividido Texto claro de um lado e uma imagem acolhedora do outro, com cartões que mostram o agendamento.
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - button "Pixel Arcade Games Bento grid Uma grade de cartões de tamanhos diferentes, cada um mostrando um jogo, um número ou uma novidade.": Pixel Arcade GamesBento grid Uma grade de cartões de tamanhos diferentes, cada um mostrando um jogo, um número ou uma novidade.
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - 'button "Trilha Livre Experiências e viagens Landing com seções narrativas Apresenta a viagem dia a dia, como um diário: cada capítulo é uma etapa do roteiro."': "Trilha Livre Experiências e viagensLanding com seções narrativas Apresenta a viagem dia a dia, como um diário: cada capítulo é uma etapa do roteiro."
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - 'button "Monograma Marca editorial Layout editorial Parece a capa de uma revista: logotipo no centro, manchetes, colunas e filetes finos."': "Monograma Marca editorialLayout editorial Parece a capa de uma revista: logotipo no centro, manchetes, colunas e filetes finos."
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - 'button "Bendita Mesa Gastronomia Layout editorial Uma revista de culinária: receita em destaque com foto grande, lista de ingredientes e matérias em colunas."': "Bendita Mesa GastronomiaLayout editorial Uma revista de culinária: receita em destaque com foto grande, lista de ingredientes e matérias em colunas."
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - button "Atlas Learn Educação Hero centralizado Título no centro com cartões de cursos logo abaixo, para a pessoa já ver o que pode estudar.": Atlas Learn EducaçãoHero centralizado Título no centro com cartões de cursos logo abaixo, para a pessoa já ver o que pode estudar.
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - 'button "Aurum Audio Produtos de áudio Apresentação de produto Página de produto premium: o fone aparece grande, com cores para escolher, preço e especificações."': "Aurum Audio Produtos de áudioApresentação de produto Página de produto premium: o fone aparece grande, com cores para escolher, preço e especificações."
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - 'button "Refúgio Hotelaria Página minimalista Calma como a pousada: uma frase, uma foto bonita, poucos detalhes e o botão de reservar."': "Refúgio HotelariaPágina minimalista Calma como a pousada: uma frase, uma foto bonita, poucos detalhes e o botão de reservar."
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - button "Metric Studio Análise e métricas Apresentação com dashboard Mostra gráficos e indicadores do produto logo na primeira tela, em um visual escuro e técnico.": Metric Studio Análise e métricasApresentação com dashboard Mostra gráficos e indicadores do produto logo na primeira tela, em um visual escuro e técnico.
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - button "Éter Fashion Moda Tipografia monumental O nome da coleção em letras gigantes, com uma foto encaixada no meio do texto, como capa de revista de moda.": Éter Fashion ModaTipografia monumental O nome da coleção em letras gigantes, com uma foto encaixada no meio do texto, como capa de revista de moda.
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - button "Campo Claro Produtos naturais Hero dividido Texto de um lado e a foto dos produtos do outro, encostada na borda da tela.": Campo Claro Produtos naturaisHero dividido Texto de um lado e a foto dos produtos do outro, encostada na borda da tela.
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - button "Studio Frame Design e criatividade Composição assimétrica Formas geométricas e blocos desencontrados que mostram ousadia, com um título forte em destaque.": Studio Frame Design e criatividadeComposição assimétrica Formas geométricas e blocos desencontrados que mostram ousadia, com um título forte em destaque.
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - 'button "Pulse Fit Atividade física Composição em pôster Um cartaz esportivo cheio de energia: letras enormes, cor vibrante e a grade de aulas logo abaixo."': "Pulse Fit Atividade físicaComposição em pôster Um cartaz esportivo cheio de energia: letras enormes, cor vibrante e a grade de aulas logo abaixo."
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+    - button "Círculo Social Comunidade Bento grid Cartões coloridos de tamanhos variados mostram grupos, eventos e pessoas da comunidade.": Círculo Social ComunidadeBento grid Cartões coloridos de tamanhos variados mostram grupos, eventos e pessoas da comunidade.
+    - button "Ver prévia":
+      - img
+      - text: Ver prévia
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+- status

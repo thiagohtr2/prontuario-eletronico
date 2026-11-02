@@ -1,0 +1,62 @@
+- dialog "Buscar funcionalidades":
+  - heading "Buscar funcionalidades" [level=2]
+  - button "Fechar":
+    - img
+  - searchbox "Buscar funcionalidades"
+  - listbox "Resultados":
+    - option "Início Escolha entre modo guiado e livre.":
+      - button "Início Escolha entre modo guiado e livre."
+    - option "Todos os módulos Acesso direto a qualquer módulo.":
+      - button "Todos os módulos Acesso direto a qualquer módulo."
+    - option "Objetivo do projeto Nome, tipo, público e funcionalidades.":
+      - button "Objetivo do projeto Nome, tipo, público e funcionalidades."
+    - option "Landing pages 24 conceitos de página de apresentação.":
+      - button "Landing pages 24 conceitos de página de apresentação."
+    - option "Login 24 composições de tela de entrar.":
+      - button "Login 24 composições de tela de entrar."
+    - option "Cadastro 8 fluxos de criação de conta.":
+      - button "Cadastro 8 fluxos de criação de conta."
+    - option "Layout desktop 42 arquiteturas para o computador." [selected]:
+      - button "Layout desktop 42 arquiteturas para o computador."
+    - option "Layout mobile 44 arquiteturas para o celular.":
+      - button "Layout mobile 44 arquiteturas para o celular."
+    - option "Live Site Preview Todas as escolhas em uma prévia única.":
+      - button "Live Site Preview Todas as escolhas em uma prévia única."
+    - option "Color System 60 paletas, tokens, tipografia e geometria.":
+      - button "Color System 60 paletas, tokens, tipografia e geometria."
+    - option "Navigation Showcase 36 headers e 36 sidebars.":
+      - button "Navigation Showcase 36 headers e 36 sidebars."
+    - option "Componentes 66 categorias em 16 famílias visuais.":
+      - button "Componentes 66 categorias em 16 famílias visuais."
+    - option "Inspiration Gallery 20 sites fictícios completos.":
+      - button "Inspiration Gallery 20 sites fictícios completos."
+    - option "Template Studio Modelos reutilizáveis de páginas.":
+      - button "Template Studio Modelos reutilizáveis de páginas."
+    - option "Central de Prompts Master Prompt e prompts individuais.":
+      - button "Central de Prompts Master Prompt e prompts individuais."
+    - option "Exportar e importar JSON, CSS, HTML, backup e importação.":
+      - button "Exportar e importar JSON, CSS, HTML, backup e importação."
+    - option "Validação responsiva Teste sites reais e gere prompts de correção.":
+      - button "Validação responsiva Teste sites reais e gere prompts de correção."
+    - option "Projeto e versões Histórico, versões e limpar projeto.":
+      - button "Projeto e versões Histórico, versões e limpar projeto."
+    - option "Guiado · Objetivo do projeto O que você vai construir e para quem.":
+      - button "Guiado · Objetivo do projeto O que você vai construir e para quem."
+    - option "Guiado · Landing, login e cadastro Como as pessoas chegam e entram no site.":
+      - button "Guiado · Landing, login e cadastro Como as pessoas chegam e entram no site."
+    - option "Guiado · Arquitetura do computador Onde ficam header, sidebar e conteúdo na tela grande.":
+      - button "Guiado · Arquitetura do computador Onde ficam header, sidebar e conteúdo na tela grande."
+    - option "Guiado · Arquitetura do celular Como os menus funcionam no celular.":
+      - button "Guiado · Arquitetura do celular Como os menus funcionam no celular."
+    - option "Guiado · Revisão do esqueleto Confira e aprove a estrutura antes do acabamento.":
+      - button "Guiado · Revisão do esqueleto Confira e aprove a estrutura antes do acabamento."
+    - option "Guiado · Prévia integrada Veja todas as escolhas juntas.":
+      - button "Guiado · Prévia integrada Veja todas as escolhas juntas."
+    - option "Guiado · Identidade visual Paleta, tipografia e geometria.":
+      - button "Guiado · Identidade visual Paleta, tipografia e geometria."
+    - option "Guiado · Headers e sidebars A aparência dos menus.":
+      - button "Guiado · Headers e sidebars A aparência dos menus."
+    - option "Guiado · Componentes Botões, campos, cards, tabelas e mais.":
+      - button "Guiado · Componentes Botões, campos, cards, tabelas e mais."
+    - option "Guiado · Master Prompt Gere a especificação para a IA.":
+      - button "Guiado · Master Prompt Gere a especificação para a IA."

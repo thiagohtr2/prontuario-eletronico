@@ -1,0 +1,44 @@
+{
+  "preview-celular-320": {
+    "w": 288,
+    "h": 740,
+    "scale": "1",
+    "vw": 320
+  },
+  "abas-prompt-320": {
+    "scrollW": 535,
+    "clientW": 288,
+    "escondidas": [
+      "Contradições (0)",
+      "Especificação JSON"
+    ],
+    "scrollbar": "none"
+  },
+  "preview-celular-375": {
+    "w": 343,
+    "h": 740,
+    "scale": "1",
+    "vw": 375
+  },
+  "abas-prompt-375": {
+    "scrollW": 535,
+    "clientW": 343,
+    "escondidas": [
+      "Contradições (0)",
+      "Especificação JSON"
+    ],
+    "scrollbar": "none"
+  },
+  "preview-celular-768": {
+    "w": 380,
+    "h": 740,
+    "scale": "1",
+    "vw": 768
+  },
+  "abas-prompt-768": {
+    "scrollW": 704,
+    "clientW": 704,
+    "escondidas": [],
+    "scrollbar": "none"
+  }
+}

@@ -1,0 +1,114 @@
+- 'dialog "Personalizar: Tabelas de dados"':
+  - 'heading "Personalizar: Tabelas de dados" [level=2]'
+  - paragraph: Tabelas · família Compact Pro. Tudo é salvo na hora e vai para o Master Prompt.
+  - button "Fechar":
+    - img
+  - group "Estado da prévia":
+    - button "Normal" [pressed]
+    - button "Hover"
+    - button "Focus"
+    - button "Active"
+    - button "Disabled"
+  - text: Pedidos recentes Exportar
+  - table:
+    - row "Cliente Status Valor Data"
+    - row "AS Ana Souza Pago R$ 89,00 12/03"
+    - row "BL Bruno Lima Pendente R$ 226,00 11/03"
+    - row "CD Carla Dias Pago R$ 363,00 10/03"
+    - row "DR Diego Rocha Cancelado R$ 500,00 09/03"
+  - paragraph: Clique em qualquer parte da prévia (texto, ícone, botão) para editá-la.
+  - text: Nome no projeto
+  - textbox "Nome no projeto":
+    - /placeholder: Tabelas
+    - text: Tabelas de dados
+  - text: "Ex.: “Botão principal do checkout”. Ajuda a IA a saber onde usar."
+  - region "Token global somente leitura":
+    - text: "1"
+    - heading "Token global somente leitura" [level=3]
+    - paragraph: A paleta aprovada vale para o projeto inteiro. Este componente a herda por padrão.
+    - text: Cor primária Cor de destaque Superfície Texto principal Borda Aa Inter
+    - link "Alterar em Cores e identidade":
+      - /url: "#/modulos/cores"
+  - region "Estilo do componente (variação / família)":
+    - text: "2"
+    - heading "Estilo do componente (variação / família)" [level=3]
+    - paragraph: A família define formato, bordas, sombras, fonte e densidade. Trocar aqui muda só este componente.
+    - combobox "Família visual":
+      - option "1. Soft Pill"
+      - option "2. Swiss Minimal"
+      - option "3. Dark Luxury"
+      - option "4. Glassmorphism"
+      - option "5. Gradient Glow"
+      - option "6. Neo Brutalist"
+      - option "7. Soft Neumorphic"
+      - option "8. Apple Precision"
+      - option "9. Bento Soft"
+      - option "10. Aurora"
+      - option "11. Industrial"
+      - option "12. Playful"
+      - option "13. Compact Pro" [selected]
+      - option "14. Midnight Gold"
+      - option "15. Retro Paper"
+      - option "16. Modern Material"
+    - paragraph: "Denso e eficiente, para ferramentas profissionais: mais informação em menos espaço."
+  - region "Configuração da instância":
+    - text: "3"
+    - heading "Configuração da instância" [level=3]
+    - paragraph: Textos, ícones, tamanhos e opções deste componente. Não afeta outros componentes.
+    - group "Conteúdo":
+      - text: Conteúdo Título
+      - textbox "Título": Pedidos recentes
+      - text: Colunas (uma por linha)
+      - textbox "Colunas (uma por linha)": Cliente Status Valor Data
+      - text: Um item por linha. Linhas de exemplo
+      - slider "Linhas de exemplo": "4"
+      - spinbutton "Linhas de exemplo (valor)": "4"
+    - group "Aparência":
+      - text: Aparência Linhas zebradas
+      - switch "Não"
+      - text: Não Estilo do cabeçalho
+      - group "Estilo do cabeçalho":
+        - button "Simples"
+        - button "Destacado" [pressed]
+        - button "Escuro"
+      - text: Seleção com checkbox
+      - switch "Sim" [checked]
+      - text: Sim Ações por linha
+      - switch "Sim" [checked]
+      - text: Sim
+    - group "Tamanho":
+      - text: Tamanho Densidade
+      - group "Densidade":
+        - button "Compacta"
+        - button "Padrão" [pressed]
+        - button "Confortável"
+  - region "Exceção individual":
+    - text: "4"
+    - heading "Exceção individual" [level=3]
+    - paragraph: Use só quando este componente precisar fugir da paleta global. A exceção aparece destacada no Master Prompt.
+    - text: Cor primária
+    - 'textbox "Cor primária: seletor de cor"': "#1d4ed8"
+    - 'textbox "Cor primária: código hexadecimal"':
+      - /placeholder: "Herda: #1d4ed8"
+    - text: Texto sobre primária
+    - 'textbox "Texto sobre primária: seletor de cor"': "#ffffff"
+    - 'textbox "Texto sobre primária: código hexadecimal"':
+      - /placeholder: "Herda: #ffffff"
+    - text: Cor de destaque
+    - 'textbox "Cor de destaque: seletor de cor"': "#0ea5e9"
+    - 'textbox "Cor de destaque: código hexadecimal"':
+      - /placeholder: "Herda: #0ea5e9"
+    - text: Superfície
+    - 'textbox "Superfície: seletor de cor"': "#ffffff"
+    - 'textbox "Superfície: código hexadecimal"':
+      - /placeholder: "Herda: #ffffff"
+    - button "Mostrar mais cores (4)"
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - button "Duplicar":
+    - img
+    - text: Duplicar
+  - button "Concluir":
+    - img
+    - text: Concluir

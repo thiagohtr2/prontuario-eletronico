@@ -1,0 +1,1388 @@
+- link "Pular para o conteúdo":
+  - /url: "#conteudo"
+- banner:
+  - link "Atelier UI — início":
+    - /url: "#/"
+    - text: Atelier UI Design System Studio
+  - group "Modo de utilização":
+    - button "Guiado" [pressed]:
+      - img
+      - text: Guiado
+    - button "Livre":
+      - img
+      - text: Livre
+  - button "Buscar funcionalidades (Ctrl+K)": Buscar funcionalidades Ctrl K
+  - text: Esqueleto 5/5
+  - button "Exportar e importar":
+    - img
+  - button "Abrir Master Prompt":
+    - img
+    - text: Master Prompt
+- complementary "Navegação do Studio":
+  - list:
+    - listitem:
+      - link "Início":
+        - /url: "#/"
+  - button "Construtor guiado" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto (concluída)":
+        - /url: "#/guiado/objetivo"
+    - listitem:
+      - link "Landing, login e cadastro (concluída)":
+        - /url: "#/guiado/entrada"
+    - listitem:
+      - link "Arquitetura do computador (concluída)":
+        - /url: "#/guiado/desktop"
+    - listitem:
+      - link "Arquitetura do celular (concluída)":
+        - /url: "#/guiado/mobile"
+    - listitem:
+      - link "Revisão do esqueleto (concluída)":
+        - /url: "#/guiado/revisao"
+    - listitem:
+      - link "Prévia integrada":
+        - /url: "#/guiado/preview"
+    - listitem:
+      - link "Identidade visual":
+        - /url: "#/guiado/identidade"
+    - listitem:
+      - link "Headers e sidebars":
+        - /url: "#/guiado/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/guiado/componentes"
+    - listitem:
+      - link "Master Prompt":
+        - /url: "#/guiado/entrega"
+  - button "Estrutura" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto":
+        - /url: "#/modulos/objetivo"
+    - listitem:
+      - link "Landing pages":
+        - /url: "#/modulos/landing"
+    - listitem:
+      - link "Login":
+        - /url: "#/modulos/login"
+    - listitem:
+      - link "Cadastro":
+        - /url: "#/modulos/cadastro"
+    - listitem:
+      - link "Layout desktop":
+        - /url: "#/modulos/desktop"
+    - listitem:
+      - link "Layout mobile":
+        - /url: "#/modulos/mobile"
+    - listitem:
+      - link "Live Site Preview":
+        - /url: "#/modulos/preview"
+  - button "Identidade" [expanded]
+  - list:
+    - listitem:
+      - link "Color System":
+        - /url: "#/modulos/cores"
+    - listitem:
+      - link "Navigation Showcase":
+        - /url: "#/modulos/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/modulos/componentes"
+  - button "Inspiração" [expanded]
+  - list:
+    - listitem:
+      - link "Inspiration Gallery":
+        - /url: "#/modulos/inspiracao"
+    - listitem:
+      - link "Template Studio":
+        - /url: "#/modulos/templates"
+  - button "Entrega" [expanded]
+  - list:
+    - listitem:
+      - link "Central de Prompts":
+        - /url: "#/prompt"
+    - listitem:
+      - link "Exportar e importar":
+        - /url: "#/exportar"
+  - button "Ferramentas" [expanded]
+  - list:
+    - listitem:
+      - link "Validação responsiva":
+        - /url: "#/validacao"
+    - listitem:
+      - link "Projeto e versões":
+        - /url: "#/projeto"
+  - text: Nexo Capital Salvo automaticamente neste navegador
+- main:
+  - navigation "Você está em":
+    - list:
+      - listitem:
+        - link "Início":
+          - /url: "#/"
+      - listitem:
+        - text: ›
+        - link "Identidade":
+          - /url: "#/livre"
+      - listitem: ›Navigation Showcase
+  - text: Navegação
+  - heading "Navigation Showcase" [level=1]
+  - paragraph: "36 headers e 36 sidebars, cada um com duas composições: 144 formas de apresentar a navegação do seu site, todas com a sua identidade visual."
+  - paragraph:
+    - text: O
+    - strong: Layout Studio
+    - text: decide
+    - strong: onde
+    - text: ficam o
+    - button "Header"
+    - text: (a barra do topo) e a
+    - button "Sidebar"
+    - text: (o menu lateral). Aqui você decide
+    - strong: como a navegação se parece
+    - text: ": o estilo dos links, a altura, a busca, os menus que se abrem e o perfil. Tudo herda a identidade visual do projeto — cores, fontes e cantos."
+  - img
+  - strong: "Como escolher:"
+  - text: as prévias funcionam de verdade — abra os menus, clique nos itens, recolha as sidebars. Cada modelo tem duas composições (A e B) com arrumações diferentes. Quando gostar, clique em
+  - strong: Selecionar
+  - text: ", logo abaixo da prévia: a escolha entra no Master Prompt."
+  - img
+  - text: "Header: Painel Analítico · A"
+  - img
+  - text: "Sidebar: Sóbria Corporativa · A"
+  - tablist "Tipo de navegação":
+    - tab "Headers (36)" [selected]:
+      - img
+      - text: Headers (36)
+    - tab "Sidebars (36)":
+      - img
+      - text: Sidebars (36)
+    - tab "Combinação":
+      - img
+      - text: Combinação
+  - group "Filtrar headers":
+    - button "Todos 36" [pressed]
+    - button "Flutuantes 4"
+    - button "Fixos 9"
+    - button "Minimalistas 8"
+    - button "Tecnológicos 7"
+    - button "Corporativos 8"
+    - button "SaaS 12"
+    - button "Editoriais 4"
+    - button "Criativos 10"
+    - button "Com busca 9"
+    - button "Com mega menu 3"
+    - button "Compactos 3"
+  - paragraph: Todos os 36 headers. Cada um tem duas composições (A e B).
+  - article "Linha Essencial":
+    - 'group "Prévia interativa: Linha Essencial, composição A"':
+      - button "Ipê — página inicial": Ipê
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Produto"
+          - listitem:
+            - button "Recursos"
+          - listitem:
+            - button "Preços"
+          - listitem:
+            - button "Sobre"
+      - button "Entrar"
+      - button "Começar grátis"
+      - text: Novo · versão 2.0
+      - strong: Organize o trabalho da equipe em um só lugar
+      - text: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas. Começar agora Ver demonstração Prévia interativa
+    - 'button "Linha Essencial Integral Fixo ao rolar O header mais simples possível: logo, quatro links e um botão. Nada disputa atenção com o conteúdo. Selecionar"'
+    - group "Composição de Linha Essencial":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Logo · menu central · ações.
+      - text: Logo à esquerda, os quatro links centralizados na barra e “Entrar” + “Começar grátis” à direita. Equilíbrio simétrico clássico.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Vitrine Central":
+    - 'group "Prévia interativa: Vitrine Central, composição A"':
+      - navigation "Principal, primeira parte":
+        - list:
+          - listitem:
+            - button "Coleção"
+          - listitem:
+            - button "Novidades"
+      - button "Cajá — página inicial": Cajá
+      - navigation "Principal, segunda parte":
+        - list:
+          - listitem:
+            - button "Ateliê"
+          - listitem:
+            - button "Diário"
+      - button "Abrir busca"
+      - button "Sacola (3 itens)"
+      - text: Coleção de verão
+      - strong: Leve, fresca e feita para durar
+      - text: Ver coleção Vaso de cerâmica
+      - strong: R$ 129
+      - text: Luminária Brisa
+      - strong: R$ 249
+      - text: Manta de linho
+      - strong: R$ 189
+      - text: Caneca esmaltada
+      - strong: R$ 59
+      - text: Prévia interativa
+    - button "Vitrine Central Integral Fixo ao rolar O logo fica no centro, como numa vitrine, e os links se dividem dos dois lados. Elegante para marcas e lojas. Selecionar"
+    - group "Composição de Vitrine Central":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Logo no centro, menu dividido.
+      - text: Dois links à esquerda, logo exatamente no meio da barra e os outros dois links + busca, favoritos e sacola à direita. Simetria de vitrine.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Ilha Flutuante":
+    - 'group "Prévia interativa: Ilha Flutuante, composição A"':
+      - button "Buriti — página inicial": Buriti
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Produto"
+          - listitem:
+            - button "Clientes"
+          - listitem:
+            - button "Preços"
+          - listitem:
+            - button "Docs"
+      - button "Entrar"
+      - button "Testar agora"
+      - text: Novo · versão 2.0
+      - strong: Organize o trabalho da equipe em um só lugar
+      - text: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas. Começar agora Ver demonstração Prévia interativa
+    - button "Ilha Flutuante Flutuante Fixo ao rolar Uma barra arredondada que “flutua” afastada das bordas, por cima do conteúdo. Moderna e leve. Selecionar"
+    - group "Composição de Ilha Flutuante":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Pílula em toda a largura.
+      - text: "Barra flutuante afastada 12 px do topo e das laterais: logo à esquerda, links em pílula no centro, “Entrar” e “Testar agora” à direita."
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Arquipélago":
+    - 'group "Prévia interativa: Arquipélago, composição A"':
+      - button "Sabiá — página inicial": Sabiá
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Início"
+          - listitem:
+            - button "Projetos"
+          - listitem:
+            - button "Estúdio"
+          - listitem:
+            - button "Contato"
+      - button "Usar tema escuro"
+      - button "Vamos conversar"
+      - text: Temporada 2027
+      - strong: Viagens que começam pelo silêncio
+      - text: Roteiros autorais por paisagens pouco conhecidas do Brasil. Explorar destinos Prévia interativa
+    - 'button "Arquipélago Flutuante Fixo ao rolar Em vez de uma barra, pequenas “ilhas” separadas: uma para o logo, outra para o menu e outra para as ações. Selecionar"'
+    - group "Composição de Arquipélago":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Três ilhas distribuídas.
+      - text: Ilha do logo à esquerda, ilha da navegação (grupo segmentado) no centro e ilha de ações à direita, cada uma com fundo e sombra próprios e o conteúdo visível entre elas.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Painel de Trabalho":
+    - 'group "Prévia interativa: Painel de Trabalho, composição A"':
+      - button "Jacarandá — página inicial": Jacarandá
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Visão geral"
+          - listitem:
+            - button "Projetos"
+          - listitem:
+            - button "Tarefas"
+          - listitem:
+            - button "Relatórios"
+      - searchbox "Buscar"
+      - button "Notificações (2 novas)"
+      - button "Abrir menu do perfil"
+      - text: Início / Visão geral
+      - strong: Visão geral
+      - text: + Novo Receita
+      - strong: R$ 48,2 mil
+      - text: +12% Pedidos
+      - strong: "1.284"
+      - text: +4% Clientes
+      - strong: "312"
+      - text: −2% Prévia interativa
+    - button "Painel de Trabalho Integral Fixo ao rolar Header de sistema (SaaS) com abas, busca, notificações e o avatar da pessoa logada. Selecionar"
+    - group "Composição de Painel de Trabalho":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Abas à esquerda, busca à direita.
+      - text: Logo + abas sublinhadas à esquerda; à direita, campo de busca compacto (≈ 220 px), ajuda, sino com contador e avatar.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Console do Desenvolvedor":
+    - 'group "Prévia interativa: Console do Desenvolvedor, composição A"':
+      - button "carnauba — página inicial": carnauba
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Plataforma"
+          - listitem:
+            - button "Desenvolvedores"
+          - listitem:
+            - button "Preços"
+          - listitem:
+            - button "Empresas"
+      - button "Buscar… ⌘K"
+      - button "Entrar"
+      - button "Começar a construir"
+      - text: Introdução Instalação Autenticação Primeira chamada Erros comuns Plataforma
+      - strong: Autenticação com chaves de API
+      - text: "curl https://api.exemplo.dev/v1/projetos \\ -H \"Authorization: Bearer $CHAVE\" Prévia interativa"
+    - button "Console do Desenvolvedor Integral Fixo ao rolar Visual técnico com logo em fonte de código e uma busca de comandos (⌘K). Para produtos de tecnologia. Selecionar"
+    - group "Composição de Console do Desenvolvedor":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Comandos à direita.
+      - text: Logo monoespaçado + links à esquerda; à direita, botão “Buscar ⌘K”, indicador de status, “Entrar” e o CTA.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Institucional em Duas Linhas":
+    - 'group "Prévia interativa: Institucional em Duas Linhas, composição A"':
+      - text: Ouvidoria Trabalhe conosco 0800 123 4567
+      - button "Araucária Seguros — página inicial": Araucária Seguros
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Para você"
+          - listitem:
+            - button "Para empresas"
+          - listitem:
+            - button "Sinistros"
+          - listitem:
+            - button "Sobre nós"
+      - button "Entrar"
+      - button "Fazer cotação"
+      - text: Novo · versão 2.0
+      - strong: Organize o trabalho da equipe em um só lugar
+      - text: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas. Começar agora Ver demonstração Prévia interativa
+    - 'button "Institucional em Duas Linhas Integral Fixo ao rolar Para empresas tradicionais: uma faixa fina com contatos e, abaixo, o menu principal com submenus. Selecionar"'
+    - group "Composição de Institucional em Duas Linhas":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Utilitários em cima.
+      - text: Faixa fina de 32 px no topo com ouvidoria, carreiras e telefone; abaixo, barra de 72 px com logo, menus suspensos centralizados e idioma, “Entrar” e “Fazer cotação”.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Mega Empório":
+    - 'group "Prévia interativa: Mega Empório, composição A"':
+      - text: Frete grátis acima de R$ 199 · Parcele em até 10x Saiba mais
+      - button "Dispensar anúncio"
+      - button "Empório Murici — página inicial": Empório Murici
+      - searchbox "Buscar"
+      - button "Entregar em Rua das Flores, 120":
+        - text: Entregar em
+        - strong: Rua das Flores, 120
+      - button "Abrir menu do perfil"
+      - button "Sacola (3 itens)"
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Departamentos"
+          - listitem:
+            - button "Ofertas -40%"
+          - listitem:
+            - button "Mercado"
+          - listitem:
+            - button "Casa"
+          - listitem:
+            - button "Eletrônicos"
+      - text: Coleção de verão
+      - strong: Leve, fresca e feita para durar
+      - text: Ver coleção Vaso de cerâmica
+      - strong: R$ 129
+      - text: Luminária Brisa
+      - strong: R$ 249
+      - text: Manta de linho
+      - strong: R$ 189
+      - text: Caneca esmaltada
+      - strong: R$ 59
+      - text: Prévia interativa
+    - 'button "Mega Empório Integral Fixo ao rolar Header de loja grande: busca em destaque, carrinho e um mega menu com todos os departamentos. Selecionar"'
+    - group "Composição de Mega Empório":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Busca larga + faixa de departamentos.
+      - text: "Linha 1: logo, busca larga ao centro, endereço de entrega, conta e carrinho. Linha 2: “Departamentos” (abre o mega menu) seguido de atalhos de categorias."
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Faixa de Lançamento":
+    - 'group "Prévia interativa: Faixa de Lançamento, composição A"':
+      - text: "Novidade: relatórios automáticos com IA — conheça Saiba mais"
+      - button "Dispensar anúncio"
+      - button "Pitanga — página inicial": Pitanga
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Produto"
+          - listitem:
+            - button "Integrações"
+          - listitem:
+            - button "Preços"
+          - listitem:
+            - button "Blog"
+      - button "Entrar"
+      - button "Criar conta"
+      - text: Novo · versão 2.0
+      - strong: Organize o trabalho da equipe em um só lugar
+      - text: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas. Começar agora Ver demonstração Prévia interativa
+    - button "Faixa de Lançamento Integral Fixo ao rolar Um aviso no topo (“Novidade!”) chama a atenção para um lançamento, acima do menu principal. Selecionar"
+    - group "Composição de Faixa de Lançamento":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Anúncio em faixa.
+      - text: Faixa de anúncio de 36 px na cor primária acima do header, com link e botão ✕; abaixo, logo, links centrais e ações.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Gazeta Aurora":
+    - 'group "Prévia interativa: Gazeta Aurora, composição A"':
+      - text: Terça-feira, 3 de novembro
+      - button "Abrir busca"
+      - button "Gazeta Aurora — página inicial": Gazeta Aurora
+      - button "Assine"
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Política"
+          - listitem:
+            - button "Economia"
+          - listitem:
+            - button "Cultura"
+          - listitem:
+            - button "Ciência"
+          - listitem:
+            - button "Esportes"
+          - listitem:
+            - button "Opinião"
+      - text: POLÍTICA
+      - strong: A cidade que aprendeu a ouvir os próprios rios
+      - text: Uma reportagem sobre bairros que transformaram enchentes em parques.
+      - strong: Economia circular ganha força no interior
+      - strong: O retorno das livrarias de bairro
+      - text: Prévia interativa
+    - 'button "Gazeta Aurora Integral Rola com a página Cabeçalho de jornal ou revista: nome grande e serifado no centro e as editorias logo abaixo. Selecionar"'
+    - group "Composição de Gazeta Aurora":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Masthead clássico.
+      - text: Faixa superior com data e busca à esquerda, nome do jornal grande e serifado no centro e “Assine” à direita; abaixo, as editorias em caixa alta entre fios horizontais.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Trilha de Contexto":
+    - 'group "Prévia interativa: Trilha de Contexto, composição A"':
+      - button "Tucano — página inicial": Tucano
+      - navigation "Você está em":
+        - list:
+          - listitem:
+            - button "Projetos"
+          - listitem:
+            - button "Site institucional"
+          - listitem:
+            - button "Página inicial"
+      - button "Notificações (2 novas)"
+      - button "Abrir menu do perfil"
+      - text: Início / Visão geral
+      - strong: Visão geral
+      - text: + Novo Receita
+      - strong: R$ 48,2 mil
+      - text: +12% Pedidos
+      - strong: "1.284"
+      - text: +4% Clientes
+      - strong: "312"
+      - text: −2% Prévia interativa
+    - button "Trilha de Contexto Integral Fixo ao rolar Mostra “onde você está” (Projetos / Site / Página) direto no header. Ótimo para sistemas com muitos níveis. Selecionar"
+    - group "Composição de Trilha de Contexto":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Trilha na barra principal.
+      - text: Logo seguido da trilha “Projetos / Site institucional / Página inicial”; cada nível é clicável e o último fica em negrito. Notificações e avatar à direita.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Horizonte Transparente":
+    - 'group "Prévia interativa: Horizonte Transparente, composição A"':
+      - button "Mandacaru — página inicial": Mandacaru
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Destinos"
+          - listitem:
+            - button "Experiências"
+          - listitem:
+            - button "Hospedagem"
+          - listitem:
+            - button "Sobre"
+      - button "Reservar"
+      - text: Temporada 2027
+      - strong: Viagens que começam pelo silêncio
+      - text: Roteiros autorais por paisagens pouco conhecidas do Brasil. Explorar destinos Prévia interativa
+    - button "Horizonte Transparente Integral Fixo ao rolar Fica transparente por cima da imagem de destaque e ganha fundo quando a pessoa rola a página. Selecionar"
+    - group "Composição de Horizonte Transparente":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Sobre o hero, menu central.
+      - text: "Header transparente sobre a imagem do hero: logo à esquerda, links claros ao centro, idioma e botão contornado “Reservar” à direita."
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Maison Lumière":
+    - 'group "Prévia interativa: Maison Lumière, composição A"':
+      - navigation "Principal, primeira parte":
+        - list:
+          - listitem:
+            - button "Coleções"
+          - listitem:
+            - button "Joalheria"
+      - button "Maison Lumière — página inicial": Maison Lumière
+      - navigation "Principal, segunda parte":
+        - list:
+          - listitem:
+            - button "A Maison"
+          - listitem:
+            - button "Boutiques"
+      - button "Abrir busca"
+      - button "Sacola (3 itens)"
+      - text: NOVA COLEÇÃO
+      - strong: Lumière d’Automne
+      - text: Prévia interativa
+    - 'button "Maison Lumière Integral Rola com a página Premium e luxuoso: letras espaçadas, muito respiro e o nome da marca no centro. Selecionar"'
+    - group "Composição de Maison Lumière":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Nome central, menu dividido.
+      - text: Duas categorias à esquerda, o nome da maison em serifa no centro, as outras duas + busca, favoritos e sacola à direita; tudo em caixa alta espaçada.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Barra Compacta":
+    - 'group "Prévia interativa: Barra Compacta, composição A"':
+      - button "Babaçu — página inicial": Babaçu
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Painel"
+          - listitem:
+            - button "Fluxos"
+          - listitem:
+            - button "Dados"
+          - listitem:
+            - button "Logs"
+      - button "Abrir busca"
+      - button "Notificações (2 novas)"
+      - button "Abrir menu do perfil"
+      - text: Início / Painel
+      - strong: Painel
+      - text: + Novo Receita
+      - strong: R$ 48,2 mil
+      - text: +12% Pedidos
+      - strong: "1.284"
+      - text: +4% Clientes
+      - strong: "312"
+      - text: −2% Prévia interativa
+    - button "Barra Compacta Integral Fixo ao rolar Header baixinho (44 px) para ferramentas onde cada pixel de tela conta. Selecionar"
+    - group "Composição de Barra Compacta":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Tudo em 44 px.
+      - text: Logo pequeno + links em pílulas de 28 px à esquerda; busca, ajuda, notificações e avatar (28 px) à direita.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Portal Amplo":
+    - 'group "Prévia interativa: Portal Amplo, composição A"':
+      - button "Grupo Jatobá — página inicial": Grupo Jatobá
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Soluções"
+          - listitem:
+            - button "Setores"
+          - listitem:
+            - button "Recursos"
+          - listitem:
+            - button "Sobre"
+      - searchbox "Buscar"
+      - button "Entrar"
+      - button "Fale conosco"
+      - text: Novo · versão 2.0
+      - strong: Organize o trabalho da equipe em um só lugar
+      - text: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas. Começar agora Ver demonstração Prévia interativa
+    - button "Portal Amplo Integral Fixo ao rolar Ocupa toda a largura da tela, com busca e mega menus para sites com muito conteúdo. Selecionar"
+    - group "Composição de Portal Amplo":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Largura total, uma linha.
+      - text: Logo e menus (com mega menus) à esquerda, de borda a borda; campo de busca, “Entrar” e “Fale conosco” à direita.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Conversão Direta":
+    - 'group "Prévia interativa: Conversão Direta, composição A"':
+      - button "Graviola — página inicial": Graviola
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Como funciona"
+          - listitem:
+            - button "Planos"
+          - listitem:
+            - button "Depoimentos"
+          - listitem:
+            - button "Dúvidas"
+      - button "Teste grátis por 14 dias"
+      - text: Novo · versão 2.0
+      - strong: Organize o trabalho da equipe em um só lugar
+      - text: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas. Começar agora Ver demonstração Prévia interativa
+    - button "Conversão Direta Integral Fixo ao rolar Tudo leva ao botão principal. Para páginas de venda onde o objetivo é a pessoa começar um teste. Selecionar"
+    - group "Composição de Conversão Direta":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: CTA na ponta direita.
+      - text: Logo à esquerda, links centrais com ponto no ativo, “Falar com vendas” (link discreto) e o CTA à direita.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Conta Pessoal":
+    - 'group "Prévia interativa: Conta Pessoal, composição A"':
+      - button "Cupuaçu — página inicial": Cupuaçu
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Início"
+          - listitem:
+            - button "Carteira"
+          - listitem:
+            - button "Metas"
+          - listitem:
+            - button "Relatórios"
+      - button "Notificações (2 novas)"
+      - button "Abrir menu do perfil":
+        - strong: Marina Alves
+        - text: Plano Pro
+      - text: Bom dia, Marina
+      - strong: Início
+      - text: + Novo Receita
+      - strong: R$ 48,2 mil
+      - text: +12% Pedidos
+      - strong: "1.284"
+      - text: +4% Clientes
+      - strong: "312"
+      - text: −2% Prévia interativa
+    - 'button "Conta Pessoal Integral Fixo ao rolar Destaca a pessoa logada: foto, nome e plano ficam à vista. Para apps de uso pessoal. Selecionar"'
+    - group "Composição de Conta Pessoal":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Menu + chip de perfil.
+      - text: Logo + links em pílula à esquerda; à direita, sino e chip de perfil (avatar, “Marina Alves” e plano “Pro”) que abre o menu da conta.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Vidro Fosco":
+    - 'group "Prévia interativa: Vidro Fosco, composição A"':
+      - button "Ondina — página inicial": Ondina
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Produto"
+          - listitem:
+            - button "Recursos"
+          - listitem:
+            - button "Preços"
+          - listitem:
+            - button "Comunidade"
+      - button "Entrar"
+      - button "Baixar app"
+      - text: Temporada 2027
+      - strong: Viagens que começam pelo silêncio
+      - text: Roteiros autorais por paisagens pouco conhecidas do Brasil. Explorar destinos Prévia interativa
+    - button "Vidro Fosco Flutuante Fixo ao rolar Barra translúcida, como vidro, que deixa o fundo colorido aparecer por trás. Visual tecnológico e leve. Selecionar"
+    - group "Composição de Vidro Fosco":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Vidro em toda a largura.
+      - text: "Barra de vidro flutuante a 12 px das bordas, em toda a largura: logo, links em pílula no centro, “Entrar” e “Baixar app”."
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Faixa da Marca":
+    - 'group "Prévia interativa: Faixa da Marca, composição A"':
+      - button "Aroeira Engenharia — página inicial": Aroeira Engenharia
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Empresa"
+          - listitem:
+            - button "Serviços"
+          - listitem:
+            - button "Obras"
+          - listitem:
+            - button "Contato"
+      - button "Solicitar orçamento"
+      - text: Novo · versão 2.0
+      - strong: Organize o trabalho da equipe em um só lugar
+      - text: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas. Começar agora Ver demonstração Prévia interativa
+    - button "Faixa da Marca Integral Fixo ao rolar O header inteiro na cor principal da marca. Forte e institucional. Selecionar"
+    - group "Composição de Faixa da Marca":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Barra única na cor da marca.
+      - text: "Fundo primário em toda a barra: logo à esquerda, links claros sublinhados no centro, telefone e botão invertido (fundo claro) à direita."
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Documentação Viva":
+    - 'group "Prévia interativa: Documentação Viva, composição A"':
+      - button "Jabuti — página inicial": Jabuti Docs
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Guias"
+          - listitem:
+            - button "Referência"
+          - listitem:
+            - button "Exemplos"
+          - listitem:
+            - button "Changelog"
+      - button "Buscar… ⌘K"
+      - button "v3.2"
+      - button "Usar tema escuro"
+      - text: Introdução Instalação Autenticação Primeira chamada Erros comuns Guias
+      - strong: Autenticação com chaves de API
+      - text: "curl https://api.exemplo.dev/v1/projetos \\ -H \"Authorization: Bearer $CHAVE\" Prévia interativa"
+    - 'button "Documentação Viva Integral Fixo ao rolar Header de documentação técnica: abas de seções, versão, busca rápida e tema claro/escuro. Selecionar"'
+    - group "Composição de Documentação Viva":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Abas à esquerda.
+      - text: Logo com selo “Docs” + abas sublinhadas à esquerda; busca ⌘K, seletor de versão e tema à direita.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Noturno Neon":
+    - 'group "Prévia interativa: Noturno Neon, composição A"':
+      - button "Vagalume — página inicial": Vagalume
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Plataforma"
+          - listitem:
+            - button "Casos"
+          - listitem:
+            - button "Preços"
+          - listitem:
+            - button "Docs"
+      - button "Entrar"
+      - button "Solicitar acesso"
+      - text: Novo · versão 2.0
+      - strong: Organize o trabalho da equipe em um só lugar
+      - text: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas. Começar agora Ver demonstração Prévia interativa
+    - button "Noturno Neon Integral Fixo ao rolar Header escuro com detalhes luminosos. Transmite tecnologia e inovação. Selecionar"
+    - group "Composição de Noturno Neon":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Escuro simétrico.
+      - text: "Faixa escura: logo vazado à esquerda, links com ponto luminoso no ativo ao centro, “Entrar” e CTA à direita."
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Abas Segmentadas":
+    - 'group "Prévia interativa: Abas Segmentadas, composição A"':
+      - button "Sapucaia — página inicial": Sapucaia
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Painel"
+          - listitem:
+            - button "Clientes"
+          - listitem:
+            - button "Vendas"
+          - listitem:
+            - button "Estoque"
+      - button "Abrir busca"
+      - button "Notificações (2 novas)"
+      - button "Abrir menu do perfil"
+      - text: Início / Painel
+      - strong: Painel
+      - text: + Novo Receita
+      - strong: R$ 48,2 mil
+      - text: +12% Pedidos
+      - strong: "1.284"
+      - text: +4% Clientes
+      - strong: "312"
+      - text: −2% Prévia interativa
+    - button "Abas Segmentadas Integral Fixo ao rolar O menu parece um controle de abas agrupadas, bem claro sobre qual área está aberta. Selecionar"
+    - group "Composição de Abas Segmentadas":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Abas no centro.
+      - text: Logo à esquerda, grupo segmentado exatamente no centro, busca, notificações e avatar à direita.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Mega Menu Acadêmico":
+    - 'group "Prévia interativa: Mega Menu Acadêmico, composição A"':
+      - button "Instituto Cambuí — página inicial": Instituto Cambuí
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Cursos"
+          - listitem:
+            - button "Graduação"
+          - listitem:
+            - button "Pesquisa"
+          - listitem:
+            - button "Biblioteca"
+      - button "Entrar"
+      - button "Inscreva-se"
+      - text: Novo · versão 2.0
+      - strong: Organize o trabalho da equipe em um só lugar
+      - text: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas. Começar agora Ver demonstração Prévia interativa
+    - 'button "Mega Menu Acadêmico Integral Fixo ao rolar Para instituições com muitos cursos: menus grandes mostram tudo organizado em colunas. Selecionar"'
+    - group "Composição de Mega Menu Acadêmico":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Menus à esquerda.
+      - text: Logo + menus (dois mega menus e um suspenso) à esquerda; “Portal do aluno” e “Inscreva-se” à direita.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Só o Essencial":
+    - 'group "Prévia interativa: Só o Essencial, composição A"':
+      - button "Talha — página inicial": Talha
+      - button "Abrir menu": Menu
+      - text: TRABALHOS
+      - strong: A cidade que aprendeu a ouvir os próprios rios
+      - text: Uma reportagem sobre bairros que transformaram enchentes em parques.
+      - strong: Economia circular ganha força no interior
+      - strong: O retorno das livrarias de bairro
+      - text: Prévia interativa
+    - button "Só o Essencial Integral Rola com a página Apenas o logo e um botão “Menu”. Tudo o mais aparece só quando a pessoa pede. Selecionar"
+    - group "Composição de Só o Essencial":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Logo e Menu.
+      - text: Logo à esquerda e o botão “Menu ☰” à direita; o menu abre um painel com os links em tipografia grande.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Estúdio Vértice":
+    - 'group "Prévia interativa: Estúdio Vértice, composição A"':
+      - button "Vértice — página inicial": Vértice
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "01 Trabalhos"
+          - listitem:
+            - button "02 Estúdio"
+          - listitem:
+            - button "03 Serviços"
+          - listitem:
+            - button "04 Contato"
+      - text: Disponível para projetos TRABALHOS
+      - strong: A cidade que aprendeu a ouvir os próprios rios
+      - text: Uma reportagem sobre bairros que transformaram enchentes em parques.
+      - strong: Economia circular ganha força no interior
+      - strong: O retorno das livrarias de bairro
+      - text: Prévia interativa
+    - 'button "Estúdio Vértice Integral Rola com a página Ousado, para agências e portfólios: logo grande, links numerados e um selo de disponibilidade. Selecionar"'
+    - group "Composição de Estúdio Vértice":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Wordmark gigante.
+      - text: Nome do estúdio enorme à esquerda; à direita, links numerados e o selo “Disponível para projetos”.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Busca em Primeiro Lugar":
+    - 'group "Prévia interativa: Busca em Primeiro Lugar, composição A"':
+      - button "Guará — página inicial": Guará Ajuda
+      - button "Navegar"
+      - searchbox "Buscar"
+      - button "Entrar"
+      - button "Abrir chamado"
+      - text: Introdução Instalação Autenticação Primeira chamada Erros comuns Primeiros passos
+      - strong: Autenticação com chaves de API
+      - text: "curl https://api.exemplo.dev/v1/projetos \\ -H \"Authorization: Bearer $CHAVE\" Prévia interativa"
+    - 'button "Busca em Primeiro Lugar Integral Fixo ao rolar Para centrais de ajuda e bases de conhecimento: a busca é a maior coisa do header. Selecionar"'
+    - group "Composição de Busca em Primeiro Lugar":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Busca central.
+      - text: Logo com selo “Ajuda” e “Navegar ▾” à esquerda, busca larga no centro com sugestões, “Entrar” e “Abrir chamado” à direita.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Âncora Fixa":
+    - 'group "Prévia interativa: Âncora Fixa, composição A"':
+      - button "Copaíba Serviços — página inicial": Copaíba Serviços
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Serviços"
+          - listitem:
+            - button "Unidades"
+          - listitem:
+            - button "Planos"
+          - listitem:
+            - button "Sobre"
+      - button "Agendar visita"
+      - text: Novo · versão 2.0
+      - strong: Organize o trabalho da equipe em um só lugar
+      - text: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas. Começar agora Ver demonstração Prévia interativa
+    - button "Âncora Fixa Integral Fixo ao rolar Começa alto e encolhe quando a pessoa rola a página, sempre visível no topo. Selecionar"
+    - group "Composição de Âncora Fixa":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Alto que encolhe.
+      - text: No topo da página tem 80 px; após rolar, encolhe para 60 px e ganha sombra. Logo à esquerda, links no centro, telefone e CTA à direita.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Painel Analítico":
+    - text: Selecionado
+    - 'group "Prévia interativa: Painel Analítico, composição A"':
+      - button "Seriema — página inicial": Seriema
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Visão geral"
+          - listitem:
+            - button "Aquisição"
+          - listitem:
+            - button "Retenção"
+          - listitem:
+            - button "Receita"
+      - button "Últimos 30 dias"
+      - button "Exportar"
+      - button "Abrir menu do perfil"
+      - text: Início / Visão geral
+      - strong: Visão geral
+      - text: + Novo Receita
+      - strong: R$ 48,2 mil
+      - text: +12% Pedidos
+      - strong: "1.284"
+      - text: +4% Clientes
+      - strong: "312"
+      - text: −2% Prévia interativa
+    - 'button "Painel Analítico Integral Fixo ao rolar Para dashboards: abas de relatórios, escolha de período e botão de exportar. Selecionado" [pressed]'
+    - group "Composição de Painel Analítico":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Abas e filtros em uma linha.
+      - text: Logo + abas encaixadas à esquerda; seletor de período, “Exportar” e avatar à direita.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Banco Alameda":
+    - 'group "Prévia interativa: Banco Alameda, composição A"':
+      - button "Banco Alameda — página inicial": Banco Alameda
+      - group "Público":
+        - button "Para você" [pressed]
+        - button "Para empresas"
+      - button "Entrar"
+      - button "Abrir conta"
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Conta"
+          - listitem:
+            - button "Cartões"
+          - listitem:
+            - button "Investimentos"
+          - listitem:
+            - button "Empréstimos"
+      - text: Novo · versão 2.0
+      - strong: Organize o trabalho da equipe em um só lugar
+      - text: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas. Começar agora Ver demonstração Prévia interativa
+    - 'button "Banco Alameda Integral Fixo ao rolar Header de banco ou serviço com públicos diferentes: alterna entre “Para você” e “Para empresas”. Selecionar"'
+    - group "Composição de Banco Alameda":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Público e ações em cima.
+      - text: Linha 1 com logo, alternador “Para você | Para empresas”, “Acessar” e “Abrir conta”; linha 2 com os produtos.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Contagem Regressiva":
+    - 'group "Prévia interativa: Contagem Regressiva, composição A"':
+      - button "Festival Jaçanã — página inicial": Festival Jaçanã
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Line-up"
+          - listitem:
+            - button "Ingressos"
+          - listitem:
+            - button "Mapa"
+          - listitem:
+            - button "Dúvidas"
+      - text: 12d 08h 41m
+      - button "Garantir ingresso"
+      - text: 14 — 16 de março · Parque das Águas
+      - strong: Três dias de música à beira do lago
+      - text: 40 artistas, 3 palcos e acampamento Ver line-up Prévia interativa
+    - 'button "Contagem Regressiva Flutuante Fixo ao rolar Para eventos e lançamentos: mostra quanto tempo falta e um botão para garantir o ingresso. Selecionar"'
+    - group "Composição de Contagem Regressiva":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Pílula em gradiente.
+      - text: "Barra flutuante em gradiente: nome do festival, links em pílula ao centro, contagem regressiva e CTA à direita."
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Feira Express":
+    - 'group "Prévia interativa: Feira Express, composição A"':
+      - button "Feira Juçara — página inicial": Feira Juçara
+      - button "Navegar"
+      - searchbox "Buscar"
+      - button "Entregar em Rua das Flores, 120":
+        - text: Entregar em
+        - strong: Rua das Flores, 120
+      - button "Sacola (3 itens)"
+      - text: Coleção de verão
+      - strong: Leve, fresca e feita para durar
+      - text: Ver coleção Vaso de cerâmica
+      - strong: R$ 129
+      - text: Luminária Brisa
+      - strong: R$ 249
+      - text: Manta de linho
+      - strong: R$ 189
+      - text: Caneca esmaltada
+      - strong: R$ 59
+      - text: Prévia interativa
+    - 'button "Feira Express Integral Fixo ao rolar Para delivery e marketplaces: endereço de entrega, categorias com ícones, busca e carrinho. Selecionar"'
+    - group "Composição de Feira Express":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Endereço + busca central.
+      - text: Logo e “Navegar ▾” à esquerda, busca larga no centro; endereço de entrega e carrinho à direita.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Blocos Bento":
+    - 'group "Prévia interativa: Blocos Bento, composição A"':
+      - button "Mosaico — página inicial": Mosaico
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Criar Páginas e posts"
+          - listitem:
+            - button "Publicar Agende em um clique"
+          - listitem:
+            - button "Medir Resultados ao vivo"
+          - listitem:
+            - button "Automatizar Fluxos sem código"
+      - button "Entrar"
+      - button "Experimentar"
+      - text: Novo · versão 2.0
+      - strong: Organize o trabalho da equipe em um só lugar
+      - text: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas. Começar agora Ver demonstração Prévia interativa
+    - button "Blocos Bento Integral Fixo ao rolar Cada item do menu é um bloquinho com ícone e uma frase curta. Explica o produto já no header. Selecionar"
+    - group "Composição de Blocos Bento":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Blocos no centro.
+      - text: Logo à esquerda, quatro blocos (ícone + rótulo + descrição) no centro, “Entrar” e “Experimentar” à direita.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Praça da Comunidade":
+    - 'group "Prévia interativa: Praça da Comunidade, composição A"':
+      - button "Quero-quero — página inicial": Quero-quero
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Feed"
+          - listitem:
+            - button "Grupos"
+          - listitem:
+            - button "Eventos"
+          - listitem:
+            - button "Mensagens 3"
+      - searchbox "Buscar"
+      - button "Novo"
+      - button "Notificações (2 novas)"
+      - button "Abrir menu do perfil"
+      - text: Início / Feed
+      - strong: Feed
+      - text: + Novo Receita
+      - strong: R$ 48,2 mil
+      - text: +12% Pedidos
+      - strong: "1.284"
+      - text: +4% Clientes
+      - strong: "312"
+      - text: −2% Prévia interativa
+    - 'button "Praça da Comunidade Integral Fixo ao rolar Para redes e comunidades: ícones de feed, grupos e mensagens, busca e botão de publicar. Selecionar"'
+    - group "Composição de Praça da Comunidade":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Ícones no centro.
+      - text: Logo à esquerda, abas com ícone + rótulo no centro (contador em Mensagens), busca, “+ Novo”, notificações e avatar à direita.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Hub de Produtos":
+    - 'group "Prévia interativa: Hub de Produtos, composição A"':
+      - button "Rede Cerrado — página inicial": Rede Cerrado
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Início"
+          - listitem:
+            - button "Recentes"
+          - listitem:
+            - button "Compartilhados"
+          - listitem:
+            - button "Lixeira"
+      - searchbox "Buscar"
+      - button "Aplicativos"
+      - button "Abrir menu do perfil"
+      - text: Bom dia, Marina
+      - strong: Início
+      - text: + Novo Receita
+      - strong: R$ 48,2 mil
+      - text: +12% Pedidos
+      - strong: "1.284"
+      - text: +4% Clientes
+      - strong: "312"
+      - text: −2% Prévia interativa
+    - 'button "Hub de Produtos Integral Fixo ao rolar Para empresas com vários aplicativos: uma grade permite pular de um produto para outro. Selecionar"'
+    - group "Composição de Hub de Produtos":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Grade de apps à direita.
+      - text: Logo + links à esquerda; busca, grade de aplicativos (abre um painel com 6 produtos), ajuda e avatar à direita.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Duplo Compacto":
+    - 'group "Prévia interativa: Duplo Compacto, composição A"':
+      - button "Mangaba ERP — página inicial": Mangaba ERP
+      - searchbox "Buscar"
+      - button "Notificações (2 novas)"
+      - button "Abrir menu do perfil"
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Vendas"
+          - listitem:
+            - button "Compras"
+          - listitem:
+            - button "Estoque"
+          - listitem:
+            - button "Financeiro"
+          - listitem:
+            - button "Fiscal"
+      - text: Início / Vendas
+      - strong: Vendas
+      - text: + Novo Receita
+      - strong: R$ 48,2 mil
+      - text: +12% Pedidos
+      - strong: "1.284"
+      - text: +4% Clientes
+      - strong: "312"
+      - text: −2% Prévia interativa
+    - button "Duplo Compacto Integral Fixo ao rolar Duas faixas baixinhas para sistemas de gestão com muitos módulos (ERP). Selecionar"
+    - group "Composição de Duplo Compacto":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Faixa escura + módulos.
+      - text: Faixa escura de 44 px com logo, busca e ícones; faixa de 36 px com os módulos em abas (vários com submenu).
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - article "Caderno Minimal":
+    - 'group "Prévia interativa: Caderno Minimal, composição A"':
+      - button "Caderno Sépia — página inicial": Caderno Sépia
+      - navigation "Principal":
+        - list:
+          - listitem:
+            - button "Ensaios"
+          - listitem:
+            - button "Entrevistas"
+          - listitem:
+            - button "Guias"
+          - listitem:
+            - button "Arquivo"
+      - button "Abrir busca"
+      - button "Assinar newsletter"
+      - text: ENSAIOS
+      - strong: A cidade que aprendeu a ouvir os próprios rios
+      - text: Uma reportagem sobre bairros que transformaram enchentes em parques.
+      - strong: Economia circular ganha força no interior
+      - strong: O retorno das livrarias de bairro
+      - text: Prévia interativa
+    - 'button "Caderno Minimal Integral Rola com a página Para blogs e newsletters: logo serifado, categorias e um convite para assinar. Selecionar"'
+    - group "Composição de Caderno Minimal":
+      - button "Composição A" [pressed]
+      - button "Composição B"
+    - paragraph:
+      - strong: Categorias ao lado do logo.
+      - text: Logo serifado + categorias sublinhadas à esquerda; busca em ícone e “Assinar newsletter” (contornado) à direita.
+    - button "Ver em tamanho grande":
+      - img
+      - text: Ver em tamanho grande
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+- status

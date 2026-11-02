@@ -1,0 +1,198 @@
+[
+  {
+    "id": "home",
+    "total": 43,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "livre",
+    "total": 57,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "g-objetivo",
+    "total": 84,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "g-entrada",
+    "total": 61,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "g-desktop",
+    "total": 110,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "g-mobile",
+    "total": 113,
+    "emPrevias": 2,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "g-revisao",
+    "total": 59,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "g-preview",
+    "total": 86,
+    "emPrevias": 18,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 18
+  },
+  {
+    "id": "g-identidade",
+    "total": 191,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "g-navegacao",
+    "total": 501,
+    "emPrevias": 256,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "g-componentes",
+    "total": 129,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "g-entrega",
+    "total": 60,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "m-objetivo",
+    "total": 73,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "m-landing",
+    "total": 133,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "m-login",
+    "total": 121,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "m-cadastro",
+    "total": 66,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "m-desktop",
+    "total": 103,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "m-mobile",
+    "total": 103,
+    "emPrevias": 2,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "m-preview",
+    "total": 75,
+    "emPrevias": 18,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 18
+  },
+  {
+    "id": "m-cores",
+    "total": 180,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "m-navegacao",
+    "total": 495,
+    "emPrevias": 256,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "m-componentes",
+    "total": 180,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "m-inspiracao",
+    "total": 69,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "m-templates",
+    "total": 82,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "prompt",
+    "total": 49,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "exportar",
+    "total": 52,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "validacao",
+    "total": 71,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  },
+  {
+    "id": "projeto",
+    "total": 49,
+    "emPrevias": 0,
+    "ariaHiddenFocusable": 0,
+    "roleImgFocusable": 0
+  }
+]

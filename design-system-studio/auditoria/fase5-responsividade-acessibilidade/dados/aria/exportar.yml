@@ -1,0 +1,167 @@
+- link "Pular para o conteúdo":
+  - /url: "#conteudo"
+- banner:
+  - link "Atelier UI — início":
+    - /url: "#/"
+    - text: Atelier UI Design System Studio
+  - group "Modo de utilização":
+    - button "Guiado" [pressed]:
+      - img
+      - text: Guiado
+    - button "Livre":
+      - img
+      - text: Livre
+  - button "Buscar funcionalidades (Ctrl+K)": Buscar funcionalidades Ctrl K
+  - text: Esqueleto 5/5
+  - button "Exportar e importar":
+    - img
+  - button "Abrir Master Prompt":
+    - img
+    - text: Master Prompt
+- complementary "Navegação do Studio":
+  - list:
+    - listitem:
+      - link "Início":
+        - /url: "#/"
+  - button "Construtor guiado" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto (concluída)":
+        - /url: "#/guiado/objetivo"
+    - listitem:
+      - link "Landing, login e cadastro (concluída)":
+        - /url: "#/guiado/entrada"
+    - listitem:
+      - link "Arquitetura do computador (concluída)":
+        - /url: "#/guiado/desktop"
+    - listitem:
+      - link "Arquitetura do celular (concluída)":
+        - /url: "#/guiado/mobile"
+    - listitem:
+      - link "Revisão do esqueleto (concluída)":
+        - /url: "#/guiado/revisao"
+    - listitem:
+      - link "Prévia integrada":
+        - /url: "#/guiado/preview"
+    - listitem:
+      - link "Identidade visual":
+        - /url: "#/guiado/identidade"
+    - listitem:
+      - link "Headers e sidebars":
+        - /url: "#/guiado/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/guiado/componentes"
+    - listitem:
+      - link "Master Prompt":
+        - /url: "#/guiado/entrega"
+  - button "Estrutura" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto":
+        - /url: "#/modulos/objetivo"
+    - listitem:
+      - link "Landing pages":
+        - /url: "#/modulos/landing"
+    - listitem:
+      - link "Login":
+        - /url: "#/modulos/login"
+    - listitem:
+      - link "Cadastro":
+        - /url: "#/modulos/cadastro"
+    - listitem:
+      - link "Layout desktop":
+        - /url: "#/modulos/desktop"
+    - listitem:
+      - link "Layout mobile":
+        - /url: "#/modulos/mobile"
+    - listitem:
+      - link "Live Site Preview":
+        - /url: "#/modulos/preview"
+  - button "Identidade" [expanded]
+  - list:
+    - listitem:
+      - link "Color System":
+        - /url: "#/modulos/cores"
+    - listitem:
+      - link "Navigation Showcase":
+        - /url: "#/modulos/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/modulos/componentes"
+  - button "Inspiração" [expanded]
+  - list:
+    - listitem:
+      - link "Inspiration Gallery":
+        - /url: "#/modulos/inspiracao"
+    - listitem:
+      - link "Template Studio":
+        - /url: "#/modulos/templates"
+  - button "Entrega" [expanded]
+  - list:
+    - listitem:
+      - link "Central de Prompts":
+        - /url: "#/prompt"
+    - listitem:
+      - link "Exportar e importar":
+        - /url: "#/exportar"
+  - button "Ferramentas" [expanded]
+  - list:
+    - listitem:
+      - link "Validação responsiva":
+        - /url: "#/validacao"
+    - listitem:
+      - link "Projeto e versões":
+        - /url: "#/projeto"
+  - text: Nexo Capital Salvo automaticamente neste navegador
+- main:
+  - navigation "Você está em":
+    - list:
+      - listitem:
+        - link "Início":
+          - /url: "#/"
+      - listitem:
+        - text: ›
+        - link "Entrega":
+          - /url: "#/livre"
+      - listitem: ›Exportar e importar
+  - text: Entrega
+  - heading "Exportar e importar" [level=1]
+  - paragraph: Todos os arquivos são gerados a partir do estado atual do projeto e são válidos. Demonstrações em HTML de templates e de sites de inspiração ficam nos respectivos módulos.
+  - heading "Exportar" [level=2]
+  - article:
+    - heading "Master Prompt (.md)" [level=3]
+    - paragraph: Texto completo com todas as decisões aprovadas, pronto para colar na IA.
+    - button "Baixar"
+    - button "Copiar":
+      - img
+      - text: Copiar
+  - article:
+    - heading "Especificação JSON" [level=3]
+    - paragraph: "A fonte da verdade: estrutura, tokens, componentes, regras e o estado do projeto (reimportável)."
+    - button "Baixar"
+    - button "Copiar":
+      - img
+      - text: Copiar
+  - article:
+    - heading "CSS de referência" [level=3]
+    - paragraph: Variáveis CSS dos tokens, tipografia, raios, sombras e espaçamentos, com regras base.
+    - button "Baixar"
+    - button "Copiar":
+      - img
+      - text: Copiar
+  - article:
+    - heading "Ficha do projeto (HTML)" [level=3]
+    - paragraph: Documento autônomo com prévia da identidade, tokens, decisões e o Master Prompt.
+    - button "Baixar"
+  - article:
+    - heading "Backup completo" [level=3]
+    - paragraph: Projeto atual e 0 versão(ões) salva(s), para reutilizar depois ou em outro computador.
+    - button "Baixar"
+  - heading "Importar" [level=2]
+  - paragraph: Aceita backups, projetos e especificações JSON exportados pelo Studio. Antes de importar, o projeto atual é salvo como versão.
+  - strong: Arraste um arquivo .json para cá
+  - text: ou
+  - button "Escolher arquivo"
+  - button "Arquivo para importar"
+- status

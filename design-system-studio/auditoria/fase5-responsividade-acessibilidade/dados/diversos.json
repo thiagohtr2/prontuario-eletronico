@@ -1,0 +1,579 @@
+{
+  "resize": {
+    "cores": {
+      "before": {
+        "tab": "Tipografia"
+      },
+      "out": [
+        {
+          "w": 375,
+          "tab": "Tipografia"
+        },
+        {
+          "w": 768,
+          "tab": "Tipografia"
+        },
+        {
+          "w": 1280,
+          "tab": "Tipografia"
+        }
+      ]
+    },
+    "mobile": {
+      "before": {
+        "chip": "Layouts híbridos\n9",
+        "mode": "wide"
+      },
+      "out": [
+        {
+          "w": 375,
+          "chip": "Layouts híbridos\n9",
+          "mode": "narrow"
+        },
+        {
+          "w": 1024,
+          "chip": "Layouts híbridos\n9",
+          "mode": "medium"
+        },
+        {
+          "w": 1440,
+          "chip": "Layouts híbridos\n9",
+          "mode": "wide"
+        }
+      ]
+    }
+  },
+  "scrollJumps": [
+    {
+      "acao": "selecionar paleta no meio da lista",
+      "antes": 4000,
+      "depois": 4000,
+      "visiveis": 1
+    },
+    {
+      "acao": "filtrar paletas por grupo",
+      "antes": 547,
+      "depois": 547
+    },
+    {
+      "acao": "selecionar layout desktop no meio da lista",
+      "antes": 6000,
+      "depois": 6000,
+      "painelDetalhe": {
+        "detailTop": -5552,
+        "vh": 800
+      }
+    }
+  ],
+  "virtualKeyboard": [
+    {
+      "route": "/guiado/objetivo",
+      "label": "Nome do projeto",
+      "top": 376,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": 351,
+      "footerH": 69,
+      "coveredByFooter": 44,
+      "coveredByTop": 0,
+      "usable": 291,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/guiado/objetivo",
+      "label": "Objetivo",
+      "top": 376,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": 351,
+      "footerH": 69,
+      "coveredByFooter": 44,
+      "coveredByTop": 0,
+      "usable": 291,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/guiado/objetivo",
+      "label": "Descrição resumida",
+      "top": 322,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": 351,
+      "footerH": 69,
+      "coveredByFooter": 69,
+      "coveredByTop": 0,
+      "usable": 291,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/guiado/objetivo",
+      "label": "Público-alvo",
+      "top": 376,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": 351,
+      "footerH": 69,
+      "coveredByFooter": 44,
+      "coveredByTop": 0,
+      "usable": 291,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/guiado/objetivo",
+      "label": "Finalidade principal",
+      "top": 376,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": 351,
+      "footerH": 69,
+      "coveredByFooter": 44,
+      "coveredByTop": 0,
+      "usable": 291,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/guiado/objetivo",
+      "label": "Nova funcionalidade",
+      "top": 376,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": 351,
+      "footerH": 69,
+      "coveredByFooter": 44,
+      "coveredByTop": 0,
+      "usable": 291,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/guiado/objetivo",
+      "label": "Tecnologia",
+      "top": 376,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": 351,
+      "footerH": 69,
+      "coveredByFooter": 44,
+      "coveredByTop": 0,
+      "usable": 291,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/modulos/objetivo",
+      "label": "Nome do projeto",
+      "top": 376,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": null,
+      "footerH": null,
+      "coveredByFooter": 0,
+      "coveredByTop": 0,
+      "usable": 360,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/modulos/objetivo",
+      "label": "Objetivo",
+      "top": 376,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": null,
+      "footerH": null,
+      "coveredByFooter": 0,
+      "coveredByTop": 0,
+      "usable": 360,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/modulos/objetivo",
+      "label": "Descrição resumida",
+      "top": 322,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": null,
+      "footerH": null,
+      "coveredByFooter": 0,
+      "coveredByTop": 0,
+      "usable": 360,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/modulos/objetivo",
+      "label": "Público-alvo",
+      "top": 376,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": null,
+      "footerH": null,
+      "coveredByFooter": 0,
+      "coveredByTop": 0,
+      "usable": 360,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/modulos/objetivo",
+      "label": "Finalidade principal",
+      "top": 376,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": null,
+      "footerH": null,
+      "coveredByFooter": 0,
+      "coveredByTop": 0,
+      "usable": 360,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/modulos/objetivo",
+      "label": "Nova funcionalidade",
+      "top": 376,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": null,
+      "footerH": null,
+      "coveredByFooter": 0,
+      "coveredByTop": 0,
+      "usable": 360,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/modulos/objetivo",
+      "label": "Tecnologia",
+      "top": 376,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": null,
+      "footerH": null,
+      "coveredByFooter": 0,
+      "coveredByTop": 0,
+      "usable": 360,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/validacao",
+      "label": "URL do site",
+      "top": 376,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": null,
+      "footerH": null,
+      "coveredByFooter": 0,
+      "coveredByTop": 0,
+      "usable": 360,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/validacao",
+      "label": "Espera após carregar (ms)",
+      "top": 376,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": null,
+      "footerH": null,
+      "coveredByFooter": 0,
+      "coveredByTop": 0,
+      "usable": 360,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/validacao",
+      "label": "Rotas autorizadas (uma por linha)",
+      "top": 298,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": null,
+      "footerH": null,
+      "coveredByFooter": 0,
+      "coveredByTop": 0,
+      "usable": 360,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/validacao",
+      "label": "Largura personalizada",
+      "top": 376,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": null,
+      "footerH": null,
+      "coveredByFooter": 0,
+      "coveredByTop": 0,
+      "usable": 360,
+      "fontSize": "16px"
+    },
+    {
+      "route": "/validacao",
+      "label": "Tamanho mínimo do alvo de toque (px)",
+      "top": 376,
+      "bottom": 420,
+      "vh": 420,
+      "footerTop": null,
+      "footerH": null,
+      "coveredByFooter": 0,
+      "coveredByTop": 0,
+      "usable": 360,
+      "fontSize": "16px"
+    }
+  ],
+  "reducedMotion": {
+    "sidebarTransition": "1e-05s",
+    "animacoesLongas": 0,
+    "scrollBehavior": "auto",
+    "mq": true,
+    "inspiracao": 0
+  },
+  "reducedMotionOff": 26,
+  "guidedEmpty": [
+    {
+      "w": 320,
+      "step": "objetivo",
+      "hash": "#/guiado/objetivo",
+      "footerH": 158,
+      "vh": 700,
+      "pct": 0.23,
+      "disabled": true,
+      "describedby": null,
+      "hint": "Escolha o tipo de projeto para continuar.",
+      "hintLive": null
+    },
+    {
+      "w": 320,
+      "step": "entrada",
+      "hash": "#/guiado/entrada",
+      "footerH": 158,
+      "vh": 700,
+      "pct": 0.23,
+      "disabled": true,
+      "describedby": null,
+      "hint": "Escolha como as pessoas entram no site.",
+      "hintLive": null
+    },
+    {
+      "w": 320,
+      "step": "desktop",
+      "hash": "#/guiado/desktop",
+      "footerH": 158,
+      "vh": 700,
+      "pct": 0.23,
+      "disabled": true,
+      "describedby": null,
+      "hint": "Escolha uma arquitetura para o computador.",
+      "hintLive": null
+    },
+    {
+      "w": 320,
+      "step": "mobile",
+      "hash": "#/guiado/mobile",
+      "footerH": 158,
+      "vh": 700,
+      "pct": 0.23,
+      "disabled": true,
+      "describedby": null,
+      "hint": "Escolha uma arquitetura para o celular.",
+      "hintLive": null
+    },
+    {
+      "w": 320,
+      "step": "revisao",
+      "hash": "#/guiado/revisao",
+      "footerH": 125,
+      "vh": 700,
+      "pct": 0.18,
+      "disabled": false,
+      "describedby": null,
+      "hint": null,
+      "hintLive": null
+    },
+    {
+      "w": 320,
+      "step": "preview",
+      "hash": "#/guiado/revisao",
+      "footerH": 125,
+      "vh": 700,
+      "pct": 0.18,
+      "disabled": false,
+      "describedby": null,
+      "hint": null,
+      "hintLive": null
+    },
+    {
+      "w": 320,
+      "step": "entrega",
+      "hash": "#/guiado/revisao",
+      "footerH": 125,
+      "vh": 700,
+      "pct": 0.18,
+      "disabled": false,
+      "describedby": null,
+      "hint": null,
+      "hintLive": null
+    },
+    {
+      "w": 375,
+      "step": "objetivo",
+      "hash": "#/guiado/objetivo",
+      "footerH": 158,
+      "vh": 800,
+      "pct": 0.2,
+      "disabled": true,
+      "describedby": null,
+      "hint": "Escolha o tipo de projeto para continuar.",
+      "hintLive": null
+    },
+    {
+      "w": 375,
+      "step": "entrada",
+      "hash": "#/guiado/entrada",
+      "footerH": 158,
+      "vh": 800,
+      "pct": 0.2,
+      "disabled": true,
+      "describedby": null,
+      "hint": "Escolha como as pessoas entram no site.",
+      "hintLive": null
+    },
+    {
+      "w": 375,
+      "step": "desktop",
+      "hash": "#/guiado/desktop",
+      "footerH": 158,
+      "vh": 800,
+      "pct": 0.2,
+      "disabled": true,
+      "describedby": null,
+      "hint": "Escolha uma arquitetura para o computador.",
+      "hintLive": null
+    },
+    {
+      "w": 375,
+      "step": "mobile",
+      "hash": "#/guiado/mobile",
+      "footerH": 158,
+      "vh": 800,
+      "pct": 0.2,
+      "disabled": true,
+      "describedby": null,
+      "hint": "Escolha uma arquitetura para o celular.",
+      "hintLive": null
+    },
+    {
+      "w": 375,
+      "step": "revisao",
+      "hash": "#/guiado/revisao",
+      "footerH": 125,
+      "vh": 800,
+      "pct": 0.16,
+      "disabled": false,
+      "describedby": null,
+      "hint": null,
+      "hintLive": null
+    },
+    {
+      "w": 375,
+      "step": "preview",
+      "hash": "#/guiado/revisao",
+      "footerH": 125,
+      "vh": 800,
+      "pct": 0.16,
+      "disabled": false,
+      "describedby": null,
+      "hint": null,
+      "hintLive": null
+    },
+    {
+      "w": 375,
+      "step": "entrega",
+      "hash": "#/guiado/revisao",
+      "footerH": 125,
+      "vh": 800,
+      "pct": 0.16,
+      "disabled": false,
+      "describedby": null,
+      "hint": null,
+      "hintLive": null
+    },
+    {
+      "w": 1280,
+      "step": "objetivo",
+      "hash": "#/guiado/objetivo",
+      "footerH": 65,
+      "vh": 900,
+      "pct": 0.07,
+      "disabled": true,
+      "describedby": null,
+      "hint": "Escolha o tipo de projeto para continuar.",
+      "hintLive": null
+    },
+    {
+      "w": 1280,
+      "step": "entrada",
+      "hash": "#/guiado/entrada",
+      "footerH": 65,
+      "vh": 900,
+      "pct": 0.07,
+      "disabled": true,
+      "describedby": null,
+      "hint": "Escolha como as pessoas entram no site.",
+      "hintLive": null
+    },
+    {
+      "w": 1280,
+      "step": "desktop",
+      "hash": "#/guiado/desktop",
+      "footerH": 65,
+      "vh": 900,
+      "pct": 0.07,
+      "disabled": true,
+      "describedby": null,
+      "hint": "Escolha uma arquitetura para o computador.",
+      "hintLive": null
+    },
+    {
+      "w": 1280,
+      "step": "mobile",
+      "hash": "#/guiado/mobile",
+      "footerH": 65,
+      "vh": 900,
+      "pct": 0.07,
+      "disabled": true,
+      "describedby": null,
+      "hint": "Escolha uma arquitetura para o celular.",
+      "hintLive": null
+    },
+    {
+      "w": 1280,
+      "step": "revisao",
+      "hash": "#/guiado/revisao",
+      "footerH": 65,
+      "vh": 900,
+      "pct": 0.07,
+      "disabled": false,
+      "describedby": null,
+      "hint": null,
+      "hintLive": null
+    },
+    {
+      "w": 1280,
+      "step": "preview",
+      "hash": "#/guiado/revisao",
+      "footerH": 65,
+      "vh": 900,
+      "pct": 0.07,
+      "disabled": false,
+      "describedby": null,
+      "hint": null,
+      "hintLive": null
+    },
+    {
+      "w": 1280,
+      "step": "entrega",
+      "hash": "#/guiado/revisao",
+      "footerH": 65,
+      "vh": 900,
+      "pct": 0.07,
+      "disabled": false,
+      "describedby": null,
+      "hint": null,
+      "hintLive": null
+    }
+  ]
+}

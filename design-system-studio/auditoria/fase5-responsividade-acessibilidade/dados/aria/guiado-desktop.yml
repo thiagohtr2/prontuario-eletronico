@@ -1,0 +1,351 @@
+- link "Pular para o conteúdo":
+  - /url: "#conteudo"
+- banner:
+  - link "Atelier UI — início":
+    - /url: "#/"
+    - text: Atelier UI Design System Studio
+  - group "Modo de utilização":
+    - button "Guiado" [pressed]:
+      - img
+      - text: Guiado
+    - button "Livre":
+      - img
+      - text: Livre
+  - button "Buscar funcionalidades (Ctrl+K)": Buscar funcionalidades Ctrl K
+  - text: Esqueleto 5/5
+  - button "Exportar e importar":
+    - img
+  - button "Abrir Master Prompt":
+    - img
+    - text: Master Prompt
+- complementary "Navegação do Studio":
+  - list:
+    - listitem:
+      - link "Início":
+        - /url: "#/"
+  - button "Construtor guiado" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto (concluída)":
+        - /url: "#/guiado/objetivo"
+    - listitem:
+      - link "Landing, login e cadastro (concluída)":
+        - /url: "#/guiado/entrada"
+    - listitem:
+      - link "Arquitetura do computador (concluída)":
+        - /url: "#/guiado/desktop"
+    - listitem:
+      - link "Arquitetura do celular (concluída)":
+        - /url: "#/guiado/mobile"
+    - listitem:
+      - link "Revisão do esqueleto (concluída)":
+        - /url: "#/guiado/revisao"
+    - listitem:
+      - link "Prévia integrada":
+        - /url: "#/guiado/preview"
+    - listitem:
+      - link "Identidade visual":
+        - /url: "#/guiado/identidade"
+    - listitem:
+      - link "Headers e sidebars":
+        - /url: "#/guiado/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/guiado/componentes"
+    - listitem:
+      - link "Master Prompt":
+        - /url: "#/guiado/entrega"
+  - button "Estrutura" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto":
+        - /url: "#/modulos/objetivo"
+    - listitem:
+      - link "Landing pages":
+        - /url: "#/modulos/landing"
+    - listitem:
+      - link "Login":
+        - /url: "#/modulos/login"
+    - listitem:
+      - link "Cadastro":
+        - /url: "#/modulos/cadastro"
+    - listitem:
+      - link "Layout desktop":
+        - /url: "#/modulos/desktop"
+    - listitem:
+      - link "Layout mobile":
+        - /url: "#/modulos/mobile"
+    - listitem:
+      - link "Live Site Preview":
+        - /url: "#/modulos/preview"
+  - button "Identidade" [expanded]
+  - list:
+    - listitem:
+      - link "Color System":
+        - /url: "#/modulos/cores"
+    - listitem:
+      - link "Navigation Showcase":
+        - /url: "#/modulos/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/modulos/componentes"
+  - button "Inspiração" [expanded]
+  - list:
+    - listitem:
+      - link "Inspiration Gallery":
+        - /url: "#/modulos/inspiracao"
+    - listitem:
+      - link "Template Studio":
+        - /url: "#/modulos/templates"
+  - button "Entrega" [expanded]
+  - list:
+    - listitem:
+      - link "Central de Prompts":
+        - /url: "#/prompt"
+    - listitem:
+      - link "Exportar e importar":
+        - /url: "#/exportar"
+  - button "Ferramentas" [expanded]
+  - list:
+    - listitem:
+      - link "Validação responsiva":
+        - /url: "#/validacao"
+    - listitem:
+      - link "Projeto e versões":
+        - /url: "#/projeto"
+  - text: Nexo Capital Salvo automaticamente neste navegador
+- main:
+  - navigation "Você está em":
+    - list:
+      - listitem:
+        - link "Início":
+          - /url: "#/"
+      - listitem: ›Construtor guiado
+      - listitem: ›Arquitetura do computador
+  - navigation "Etapas do construtor guiado":
+    - text: Esqueleto
+    - list:
+      - listitem:
+        - button "1. Objetivo"
+      - listitem:
+        - button "2. Entrada"
+      - listitem:
+        - button "3. Desktop"
+      - listitem:
+        - button "4. Mobile"
+      - listitem:
+        - button "5. Revisão"
+    - text: Acabamento
+    - list:
+      - listitem:
+        - button "6. Prévia"
+      - listitem:
+        - button "7. Cores"
+      - listitem:
+        - button "8. Navegação"
+      - listitem:
+        - button "9. Componentes"
+      - listitem:
+        - button "10. Entrega"
+  - text: Etapa 3 de 10 · Esqueleto
+  - heading "Arquitetura do computador" [level=1]
+  - paragraph: "Escolha o esqueleto do site no computador: onde ficam o header (barra do topo), a sidebar (menu lateral) e o conteúdo. Ainda não é hora de cores — só estrutura."
+  - switch "Mostrar legendas nos desenhos" [checked]
+  - text: Mostrar legendas nos desenhos HEADER
+  - button "barra superior"
+  - text: SIDEBAR
+  - button "menu lateral"
+  - text: RAIL
+  - button "trilho de ícones"
+  - text: CONTEÚDO área principal PAINEL coluna de apoio
+  - img
+  - strong: Primeiro o esqueleto.
+  - text: "Escolha como as partes do site se organizam no computador: onde fica o menu, a barra superior e o conteúdo. Cores e estilo vêm depois. Clique em um desenho para escolher — dá para trocar quando quiser."
+  - group "Famílias de layout":
+    - button "Todos 42" [pressed]
+    - button "Sidebar integral 5"
+    - button "Sidebars flutuantes 4"
+    - button "Rail e navegação dupla 4"
+    - button "Navegação à direita 3"
+    - button "Sem sidebar 5"
+    - button "Editoriais 4"
+    - button "Múltiplas colunas e aplicações 11"
+    - button "One Screen 6"
+  - paragraph:
+    - text: 42 modelos em 8 famílias. Uma
+    - button "sidebar"
+    - text: integral vai do topo à base, encostada na borda; uma flutuante fica afastada, como um cartão.
+  - region "Sidebar integral 5 modelos":
+    - heading "Sidebar integral 5 modelos" [level=3]
+    - paragraph: O menu fica colado na lateral, do topo até o fim da tela. Passa sensação de sistema sólido e organizado — ótimo para quem usa todo dia.
+    - text: Escolhido
+    - button "Sidebar integral clássica. Menu fixo do lado esquerdo, de cima a baixo, com o logo no topo. Ao lado ficam uma barra superior e o conteúdo. É o formato mais comum em sistemas." [pressed]:
+      - img "Desenho do layout Sidebar integral clássica"
+      - text: Sidebar integral clássica Sugerido · Sistemas e SaaS
+    - button "Sidebar integral com rodapé. Igual ao menu lateral clássico, mas com uma faixa de rodapé embaixo do conteúdo para versão, links legais ou status do sistema.":
+      - img "Desenho do layout Sidebar integral com rodapé"
+      - text: Sidebar integral com rodapé Sistemas corporativos
+    - button "Sidebar integral com header global. Uma barra superior atravessa a tela inteira com o logo. Embaixo dela, o menu lateral desce até o fim da tela e o conteúdo fica ao lado.":
+      - img "Desenho do layout Sidebar integral com header global"
+      - text: Sidebar integral com header global SaaS com várias áreas
+    - button "Sidebar integral sem topbar. Só o menu lateral e o conteúdo, sem barra no topo. O título e os botões de cada página ficam dentro do próprio conteúdo. Visual limpo e com mais espaço vertical.":
+      - img "Desenho do layout Sidebar integral sem topbar"
+      - text: Sidebar integral sem topbar Aplicativos focados
+    - button "Sidebar integral à direita. O menu lateral fica do lado direito, de cima a baixo. O conteúdo ganha destaque à esquerda, onde o olhar começa a leitura.":
+      - img "Desenho do layout Sidebar integral à direita"
+      - text: Sidebar integral à direita Conteúdo em destaque
+  - region "Sidebars flutuantes 4 modelos":
+    - heading "Sidebars flutuantes 4 modelos" [level=3]
+    - paragraph: O menu vira um “cartão” solto, com espaço em volta e cantos arredondados. Visual mais leve e moderno, mas ocupa um pouco mais de espaço.
+    - button "Sidebar flutuante compacta. Um menu lateral estreito que “flutua” com espaço em volta e cantos arredondados, como um cartão. O título da página fica ao lado, sem barra pesada.":
+      - img "Desenho do layout Sidebar flutuante compacta"
+      - text: Sidebar flutuante compacta SaaS modernos
+    - button "Sidebar flutuante larga. Um menu lateral largo, afastado das bordas, com espaço para busca, seções e atalhos. Bom quando há muitas páginas ou pastas para navegar.":
+      - img "Desenho do layout Sidebar flutuante larga"
+      - text: Sidebar flutuante larga Muitas seções
+    - button "Header e sidebar flutuantes. A barra superior e o menu lateral são dois blocos separados, com espaço entre eles e em volta. O visual fica arejado e moderno.":
+      - img "Desenho do layout Header e sidebar flutuantes"
+      - text: Header e sidebar flutuantes Produtos modernos
+    - 'button "Ilhas de navegação. Todas as partes da tela viram “ilhas” separadas por espaço: menu, barra superior, conteúdo e painel lateral, cada um com cantos arredondados."':
+      - img "Desenho do layout Ilhas de navegação"
+      - text: Ilhas de navegação Workspaces criativos
+  - region "Rail e navegação dupla 4 modelos":
+    - heading "Rail e navegação dupla 4 modelos" [level=3]
+    - paragraph: Um trilho bem fino só com ícones libera espaço para o conteúdo. Pode vir acompanhado de um segundo menu para organizar sistemas grandes.
+    - button "Icon Rail à esquerda. Um trilho bem estreito à esquerda, só com ícones. Sobra muito espaço para o conteúdo; o nome de cada item aparece ao passar o mouse.":
+      - img "Desenho do layout Icon Rail à esquerda"
+      - text: Icon Rail à esquerda Dashboards com gráficos
+    - button "Rail com sidebar contextual. Trilho de ícones para as áreas principais e, ao lado, um segundo menu que muda conforme a área escolhida. Organiza sistemas grandes em dois níveis.":
+      - img "Desenho do layout Rail com sidebar contextual"
+      - text: Rail com sidebar contextual SaaS grandes
+    - 'button "Sidebar dupla em hierarquia. Dois menus com nomes lado a lado: o primeiro com as seções, o segundo com as páginas da seção escolhida. Bom para sistemas com muitas telas."':
+      - img "Desenho do layout Sidebar dupla em hierarquia"
+      - text: Sidebar dupla em hierarquia Sistemas extensos
+    - button "Rail com painel de detalhes. Trilho de ícones à esquerda, conteúdo no meio e um painel à direita que mostra os detalhes do item clicado, sem sair da página.":
+      - img "Desenho do layout Rail com painel de detalhes"
+      - text: Rail com painel de detalhes Listas com detalhes
+  - region "Navegação à direita 3 modelos":
+    - heading "Navegação à direita 3 modelos" [level=3]
+    - paragraph: Menus ou painéis no lado direito. Bom para ferramentas em que o conteúdo é o protagonista e os detalhes ficam ao lado.
+    - button "Sidebar direita compacta. Barra superior de ponta a ponta e um menu estreito do lado direito, abaixo dela. O conteúdo ocupa quase toda a largura à esquerda.":
+      - img "Desenho do layout Sidebar direita compacta"
+      - text: Sidebar direita compacta Portais de conteúdo
+    - button "Inspector ou painel direito. Uma área de trabalho grande no centro e um painel à direita com as propriedades do que está selecionado, como em editores e ferramentas de criação.":
+      - img "Desenho do layout Inspector ou painel direito"
+      - text: Inspector ou painel direito Editores visuais
+    - button "Workspace com chat lateral. Menu à esquerda, área de trabalho no meio e uma conversa (chat ou assistente) sempre aberta do lado direito.":
+      - img "Desenho do layout Workspace com chat lateral"
+      - text: Workspace com chat lateral Assistentes de IA
+  - region "Sem sidebar 5 modelos":
+    - heading "Sem sidebar 5 modelos" [level=3]
+    - paragraph: "Sem menu lateral: tudo fica numa barra no topo. Ideal para sites, lojas e produtos com poucas áreas."
+    - button "Topbar integral fixa. Uma barra no topo, de ponta a ponta, que fica sempre visível ao rolar. Todo o menu fica nela e o conteúdo ocupa a largura toda.":
+      - img "Desenho do layout Topbar integral fixa"
+      - text: Topbar integral fixa Lojas e catálogos
+    - button "Topbar interna. A barra de menu fica dentro da largura do conteúdo, com um pequeno recuo do topo, em vez de ir de ponta a ponta. Visual mais delicado e organizado.":
+      - img "Desenho do layout Topbar interna"
+      - text: Topbar interna Sites de produto
+    - 'button "Navegação superior de duas linhas. Duas faixas no topo: a primeira com logo, busca e conta; a segunda com as categorias. Muito usada em lojas e portais com muitas seções."':
+      - img "Desenho do layout Navegação superior de duas linhas"
+      - text: Navegação superior de duas linhas Lojas virtuais
+    - button "Header central flutuante. Uma barra arredondada flutua no centro do topo, por cima do conteúdo, com espaço em volta. O conteúdo começa logo atrás dela, ocupando a tela toda.":
+      - img "Desenho do layout Header central flutuante"
+      - text: Header central flutuante Landing pages
+    - button "Layout minimalista sem navegação lateral. Uma barra fina no topo com poucos links e o conteúdo em uma coluna central estreita, confortável para ler. Nada de menus laterais.":
+      - img "Desenho do layout Layout minimalista sem navegação lateral"
+      - text: Layout minimalista sem navegação lateral Blogs e artigos
+  - region "Editoriais 4 modelos":
+    - heading "Editoriais 4 modelos" [level=3]
+    - paragraph: Composições de revista, com imagens grandes e textos bem espaçados. Para apresentar marcas, produtos e trabalhos.
+    - button "Landing editorial ampla. Página de apresentação com títulos grandes, imagens largas e seções bem espaçadas, como uma revista. A barra superior é alta e elegante.":
+      - img "Desenho do layout Landing editorial ampla"
+      - text: Landing editorial ampla Landing pages
+    - button "Editorial assimétrica. O conteúdo principal ocupa uma coluna larga e, ao lado, uma coluna mais estreita traz destaques, notas ou chamadas. Lembra a página de um jornal.":
+      - img "Desenho do layout Editorial assimétrica"
+      - text: Editorial assimétrica Revistas e blogs
+    - button "Magazine com índice lateral. Um índice fica fixo do lado esquerdo enquanto o texto rola ao lado. A pessoa sempre sabe em que parte está e pode pular para outra.":
+      - img "Desenho do layout Magazine com índice lateral"
+      - text: Magazine com índice lateral Artigos longos
+    - button "Portfólio full-bleed. Imagens ocupam a tela de ponta a ponta, sem margens. A barra superior é transparente e fica por cima das fotos, discreta.":
+      - img "Desenho do layout Portfólio full-bleed"
+      - text: Portfólio full-bleed Portfólios
+  - region "Múltiplas colunas e aplicações 11 modelos":
+    - heading "Múltiplas colunas e aplicações 11 modelos" [level=3]
+    - paragraph: "Várias colunas lado a lado para ver muita informação de uma vez: dashboards, CRMs, prontuários e ferramentas."
+    - button "Dashboard de três colunas. Menu à esquerda, indicadores e gráficos no centro e um painel à direita com resumos ou atividades. Mostra muita informação de uma vez.":
+      - img "Desenho do layout Dashboard de três colunas"
+      - text: Dashboard de três colunas Sugerido · Dashboards
+    - button "Split View 50/50. A tela é dividida em duas metades iguais, por exemplo para comparar, editar de um lado e ver o resultado do outro.":
+      - img "Desenho do layout Split View 50/50"
+      - text: Split View 50/50 Editores com prévia
+    - button "Master-detail 35/65. Uma lista à esquerda (cerca de um terço da tela) e os detalhes do item escolhido à direita. Como em caixas de e-mail.":
+      - img "Desenho do layout Master-detail 35/65"
+      - text: Master-detail 35/65 E-mail e mensagens
+    - 'button "CRM com painéis duplos. Menu à esquerda, a ficha do cliente no centro e, à direita, dois painéis empilhados: atividades e contatos."':
+      - img "Desenho do layout CRM com painéis duplos"
+      - text: CRM com painéis duplos CRM e vendas
+    - button "Analytics com lateral direita. Barra superior, uma faixa de filtros (período, região…) e gráficos grandes, com um painel de resumo do lado direito.":
+      - img "Desenho do layout Analytics com lateral direita"
+      - text: Analytics com lateral direita Sugerido · Analytics
+    - button "Workspace de produtividade. Árvore de páginas à esquerda, documento no centro com barra de ferramentas e comentários à direita. Como em editores de notas e documentos.":
+      - img "Desenho do layout Workspace de produtividade"
+      - text: Workspace de produtividade Notas e documentos
+    - 'button "Command-first. A interface gira em torno de uma barra de comandos: você digita o que quer fazer e o sistema leva até lá. O resto da tela é bem limpo."':
+      - img "Desenho do layout Command-first"
+      - text: Command-first Ferramentas para usuários avançados
+    - 'button "Sistema hospitalar denso. Feito para quem precisa ver muita informação ao mesmo tempo: faixa com os dados do paciente, menu, tabela densa, alertas à direita e barra de status embaixo."':
+      - img "Desenho do layout Sistema hospitalar denso"
+      - text: Sistema hospitalar denso Saúde e prontuários
+    - button "Painel financeiro com rail. Trilho de ícones à esquerda e, no topo do conteúdo, uma faixa com os principais números (saldo, receitas, despesas). Abaixo, gráficos e lançamentos.":
+      - img "Desenho do layout Painel financeiro com rail"
+      - text: Painel financeiro com rail Finanças
+    - button "Kanban com filtro lateral. Quadro com colunas de tarefas (a fazer, fazendo, feito) e um painel de filtros ao lado para encontrar o que importa.":
+      - img "Desenho do layout Kanban com filtro lateral"
+      - text: Kanban com filtro lateral Gestão de tarefas
+    - 'button "Admin sem sidebar. Painel administrativo sem menu lateral: barra superior com as áreas, uma faixa com título e botões da página e uma tabela larga."':
+      - img "Desenho do layout Admin sem sidebar"
+      - text: Admin sem sidebar Back-office simples
+  - region "One Screen 6 modelos":
+    - heading "One Screen 6 modelos" [level=3]
+    - paragraph: Tudo cabe em uma única tela, sem rolar a página. Para painéis, TVs e totens. Conteúdo longo rola dentro dos blocos, nunca é cortado.
+    - button "Dashboard sem scroll principal. Todos os indicadores cabem em uma única tela, organizados em blocos. Ninguém precisa rolar a página para ver o essencial.":
+      - img "Desenho do layout Dashboard sem scroll principal"
+      - text: Dashboard sem scroll principal Painéis de acompanhamento
+    - 'button "Painel operacional. Uma central de operações em uma tela só: blocos de status no centro, alertas à direita e uma barra de status embaixo."':
+      - img "Desenho do layout Painel operacional"
+      - text: Painel operacional Centrais de operação
+    - 'button "Kiosk ou TV. Tela para totens, TVs ou painéis de parede: poucos blocos enormes, letras grandes e nada de rolagem. Dá para ler de longe."':
+      - img "Desenho do layout Kiosk ou TV"
+      - text: Kiosk ou TV Totens de autoatendimento
+    - 'button "Split Workspace. Uma área de trabalho dividida em partes que cabem na tela: dois painéis lado a lado e um painel embaixo, como em ferramentas de programação."':
+      - img "Desenho do layout Split Workspace"
+      - text: Split Workspace Editores e IDEs
+    - button "Interface minimalista. Uma tela única e calma, com um elemento principal no centro (um número, um botão, um formulário curto) e quase nada em volta.":
+      - img "Desenho do layout Interface minimalista"
+      - text: Interface minimalista Ferramentas de uma função
+    - 'button "Controle de dispositivos. Painel para controlar aparelhos ou ambientes: lista de cômodos à esquerda, botões e controles no centro e os detalhes do aparelho escolhido à direita."':
+      - img "Desenho do layout Controle de dispositivos"
+      - text: Controle de dispositivos Casa inteligente
+  - complementary "Detalhes do layout":
+    - img "Desenho do layout Sidebar integral clássica"
+    - text: Escolhido para o seu projeto
+    - heading "Sidebar integral clássica" [level=2]
+    - text: Sidebar integral
+    - paragraph: Menu fixo do lado esquerdo, de cima a baixo, com o logo no topo. Ao lado ficam uma barra superior e o conteúdo. É o formato mais comum em sistemas.
+    - paragraph:
+      - strong: "Combina com:"
+      - text: Sistemas e SaaS · Painéis administrativos · Áreas logadas
+    - text: Medidas recomendadas (referência 1280 × 800 — não são fixas)
+    - list "Medidas recomendadas":
+      - listitem: Sidebar ≈252 px
+      - listitem: Header ≈64 px
+    - button "Prompt deste elemento":
+      - img
+      - text: Prompt deste elemento
+  - button "Voltar":
+    - img
+    - text: Voltar
+  - 'button "Continuar: Mobile"':
+    - text: "Continuar: Mobile"
+    - img
+- status

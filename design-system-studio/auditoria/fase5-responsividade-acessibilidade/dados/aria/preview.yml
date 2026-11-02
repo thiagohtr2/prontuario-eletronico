@@ -1,0 +1,256 @@
+- link "Pular para o conteúdo":
+  - /url: "#conteudo"
+- banner:
+  - link "Atelier UI — início":
+    - /url: "#/"
+    - text: Atelier UI Design System Studio
+  - group "Modo de utilização":
+    - button "Guiado" [pressed]:
+      - img
+      - text: Guiado
+    - button "Livre":
+      - img
+      - text: Livre
+  - button "Buscar funcionalidades (Ctrl+K)": Buscar funcionalidades Ctrl K
+  - text: Esqueleto 5/5
+  - button "Exportar e importar":
+    - img
+  - button "Abrir Master Prompt":
+    - img
+    - text: Master Prompt
+- complementary "Navegação do Studio":
+  - list:
+    - listitem:
+      - link "Início":
+        - /url: "#/"
+  - button "Construtor guiado" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto (concluída)":
+        - /url: "#/guiado/objetivo"
+    - listitem:
+      - link "Landing, login e cadastro (concluída)":
+        - /url: "#/guiado/entrada"
+    - listitem:
+      - link "Arquitetura do computador (concluída)":
+        - /url: "#/guiado/desktop"
+    - listitem:
+      - link "Arquitetura do celular (concluída)":
+        - /url: "#/guiado/mobile"
+    - listitem:
+      - link "Revisão do esqueleto (concluída)":
+        - /url: "#/guiado/revisao"
+    - listitem:
+      - link "Prévia integrada":
+        - /url: "#/guiado/preview"
+    - listitem:
+      - link "Identidade visual":
+        - /url: "#/guiado/identidade"
+    - listitem:
+      - link "Headers e sidebars":
+        - /url: "#/guiado/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/guiado/componentes"
+    - listitem:
+      - link "Master Prompt":
+        - /url: "#/guiado/entrega"
+  - button "Estrutura" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto":
+        - /url: "#/modulos/objetivo"
+    - listitem:
+      - link "Landing pages":
+        - /url: "#/modulos/landing"
+    - listitem:
+      - link "Login":
+        - /url: "#/modulos/login"
+    - listitem:
+      - link "Cadastro":
+        - /url: "#/modulos/cadastro"
+    - listitem:
+      - link "Layout desktop":
+        - /url: "#/modulos/desktop"
+    - listitem:
+      - link "Layout mobile":
+        - /url: "#/modulos/mobile"
+    - listitem:
+      - link "Live Site Preview":
+        - /url: "#/modulos/preview"
+  - button "Identidade" [expanded]
+  - list:
+    - listitem:
+      - link "Color System":
+        - /url: "#/modulos/cores"
+    - listitem:
+      - link "Navigation Showcase":
+        - /url: "#/modulos/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/modulos/componentes"
+  - button "Inspiração" [expanded]
+  - list:
+    - listitem:
+      - link "Inspiration Gallery":
+        - /url: "#/modulos/inspiracao"
+    - listitem:
+      - link "Template Studio":
+        - /url: "#/modulos/templates"
+  - button "Entrega" [expanded]
+  - list:
+    - listitem:
+      - link "Central de Prompts":
+        - /url: "#/prompt"
+    - listitem:
+      - link "Exportar e importar":
+        - /url: "#/exportar"
+  - button "Ferramentas" [expanded]
+  - list:
+    - listitem:
+      - link "Validação responsiva":
+        - /url: "#/validacao"
+    - listitem:
+      - link "Projeto e versões":
+        - /url: "#/projeto"
+  - text: Nexo Capital Salvo automaticamente neste navegador
+- main:
+  - navigation "Você está em":
+    - list:
+      - listitem:
+        - link "Início":
+          - /url: "#/"
+      - listitem:
+        - text: ›
+        - link "Estrutura":
+          - /url: "#/livre"
+      - listitem: ›Live Site Preview
+  - text: Estrutura
+  - heading "Live Site Preview" [level=1]
+  - paragraph: "Todas as suas escolhas juntas: layout, header, sidebar, paleta, tipografia, landing, login e cadastro. Alterne entre computador, tablet e celular e olhe com calma: é assim que o site deve ficar?"
+  - group "Página da prévia":
+    - button "Aplicação" [pressed]
+    - button "Login"
+    - button "Cadastro"
+  - group "Dispositivo da prévia":
+    - button "Computador" [pressed]:
+      - img
+      - text: Computador
+    - button "Tablet":
+      - img
+      - text: Tablet
+    - button "Celular":
+      - img
+      - text: Celular
+  - img "Prévia do computador":
+    - navigation "Menu lateral":
+      - 'button "Espaço atual: Matriz — São Paulo. Trocar"':
+        - strong: Matriz — São Paulo
+        - text: Unidade
+      - text: Gestão
+      - list "Gestão":
+        - listitem:
+          - button "Painel"
+        - listitem:
+          - button "Contratos"
+        - listitem:
+          - button "Fornecedores"
+        - listitem:
+          - button "Compras"
+      - text: Pessoas
+      - list "Pessoas":
+        - listitem:
+          - button "Colaboradores"
+        - listitem:
+          - button "Folha"
+      - text: Administração
+      - list "Administração":
+        - listitem:
+          - button "Auditoria"
+        - listitem:
+          - button "Permissões"
+      - button "Abrir menu do perfil":
+        - strong: Marina Alves
+        - text: Gerente de compras
+    - button "Seriema — página inicial": Seriema
+    - navigation "Principal":
+      - list:
+        - listitem:
+          - button "Visão geral"
+        - listitem:
+          - button "Aquisição"
+        - listitem:
+          - button "Retenção"
+        - listitem:
+          - button "Receita"
+    - button "Últimos 30 dias"
+    - button "Exportar"
+    - button "Abrir menu do perfil"
+    - text: Visão geral Atualizado há 5 minutos
+    - img
+    - text: Filtros
+    - img
+    - text: Novo Receita R$ 48,2 mil
+    - img
+    - text: 12,4% Clientes ativos 1.284
+    - img
+    - text: 3,1% Ticket médio R$ 186
+    - img
+    - text: 5,8% Satisfação 94%
+    - img
+    - text: 1,2%
+    - strong: Receita mensal
+    - text: Últimos 12 meses
+    - strong: Clientes recentes
+    - text: Ver todos
+    - img
+    - text: Marina Costa Plano Pro Ativo R$ 249,00 João Pereira Plano Básico Pendente R$ 89,00 Luiza Rocha Plano Pro Ativo R$ 249,00 Pedro Alves Empresa Atrasado R$ 990,00
+  - complementary "Escolhas nesta prévia":
+    - strong: Escolhas nesta prévia
+    - term: Fluxo de entrada
+    - definition:
+      - text: Apenas login
+      - link "Alterar Fluxo de entrada":
+        - /url: "#/guiado/entrada"
+    - term: Layout desktop
+    - definition:
+      - text: Sidebar integral clássica
+      - link "Alterar Layout desktop":
+        - /url: "#/modulos/desktop"
+    - term: Layout mobile
+    - definition:
+      - text: Drawer pela esquerda
+      - link "Alterar Layout mobile":
+        - /url: "#/modulos/mobile"
+    - term: Header
+    - definition:
+      - text: Painel Analítico · composição A
+      - link "Alterar Header":
+        - /url: "#/modulos/navegacao"
+    - term: Sidebar
+    - definition:
+      - text: Sóbria Corporativa · composição A
+      - link "Alterar Sidebar":
+        - /url: "#/modulos/navegacao"
+    - term: Paleta
+    - definition:
+      - text: Azul Institucional
+      - link "Alterar Paleta":
+        - /url: "#/modulos/cores"
+    - term: Tipografia
+    - definition:
+      - text: Inter + Inter
+      - link "Alterar Tipografia":
+        - /url: "#/modulos/cores"
+    - term: Login
+    - definition:
+      - text: Acesso corporativo
+      - link "Alterar Login":
+        - /url: "#/modulos/login"
+    - term: Cadastro
+    - definition:
+      - text: Não escolhido
+      - link "Alterar Cadastro":
+        - /url: "#/modulos/cadastro"
+    - paragraph: Qualquer alteração em outro módulo aparece aqui imediatamente.
+- status

@@ -290,3 +290,156 @@ traz até 9 subtítulos fixos. O JSON carrega cada item duas vezes (na seção e
 5. **Deduplicação no render**: regras por componente só uma vez, filtradas pelos tipos presentes; `Set` de linhas por seção;
    família visual descrita uma vez e referenciada pelas instâncias; JSON sem `items[]` duplicado (ou só com chaves).
    Estimativa: −20 a −35 % de tamanho sem perder informação.
+
+## 5. Desempenho do build congelado
+
+<!-- SECAO5 -->
+
+## 6. Tratamento de erros, segurança e testabilidade
+
+### 6.1 Tratamento de erros (medido no build congelado — `scripts/robustez.cjs`, `cota.cjs`, `xss-import.cjs`)
+
+| Cenário | O que acontece | Evidência |
+| --- | --- | --- |
+| Chunk de um módulo falha ao carregar (rede instável, ou deploy novo que troca os hashes enquanto a aba está aberta) | **O Studio inteiro some** e aparece a página padrão do React Router, em inglês, com a pilha: “Unexpected Application Error! Failed to fetch dynamically imported module …/TemplatesPage-B3gY76Be.js”. Topbar e menu desaparecem; só volta trocando o endereço. O comentário de `App.tsx:6` (“um erro em um módulo não derruba o Studio inteiro”) não se confirma: não há `errorElement` nas rotas (`App.tsx:32-60`) nem error boundary em volta do `<Outlet/>` (`Shell.tsx:376-378`). Único error boundary do app: `ComponentPreview.tsx:32`. | `dados/robustez.json → chunkLazyFalha`, `dados/capturas/r1-chunk-falhou.png` |
+| Qualquer exceção de renderização (ex.: restaurar uma versão incompleta) | Mesma tela branca “Unexpected Application Error! Cannot read properties of undefined (reading 'showLegends')”. Ao recarregar, o projeto “restaurado” (incompleto, completado com padrões) é o que fica salvo. | `robustez.json → restaurarVersaoCorrompida`, `capturas/r8-…png` |
+| localStorage com JSON corrompido | O app abre com projeto vazio, **sem aviso**; o primeiro clique sobrescreve o conteúdo salvo (não há cópia de segurança do valor ilegível). | `robustez.json → localStorageJsonCorrompido` |
+| Projeto salvo que não passa no Zod | Abre vazio, sem aviso; após o primeiro clique o nome salvo vira “” (projeto perdido); o histórico, não validado, é mantido. | `projetoSalvoInvalido` |
+| Estado salvo com outra `version` | Descartado; só `console.error("…couldn't be migrated since no migrate function was provided")`. | `versaoDiferenteSemMigrate` |
+| localStorage indisponível | O app funciona, mas nada é salvo e **o usuário não é avisado** (apenas `console.warn` do Zustand a cada clique). | `localStorageIndisponivel` |
+| Cota do localStorage estourada (capacidade medida: 5 242 368 caracteres) | `QuotaExceededError` não tratado dentro do `set` do Zustand: a versão aparece na tela mas **não é gravada**, o toast de sucesso nem aparece, e **todas as alterações seguintes também deixam de ser gravadas em silêncio** (paleta na tela “lavanda-fria”, gravada “papel-branco”; ao recarregar volta a antiga). | `dados/cota.json`, `capturas/r6-cota-estourada.png` |
+| Importar JSON inválido / com tipo errado | Bem tratado: “O arquivo não contém um JSON válido.” / “identity.typography.baseSize: Expected number, received string”. Mensagens do Zod em inglês. | `robustez.json → importacao` |
+| Importar ids que não existem no catálogo | Aceito sem aviso; as escolhas somem do prompt e não viram pendência. | idem, `ids-inexistentes.json` |
+| Importar descrição de 3 MB | Aceito e gravado (3 008 774 caracteres). A importação seguinte falha com a mensagem crua do navegador, em inglês: “Failed to execute 'setItem' on 'Storage' … exceeded the quota.” | `dados/xss-import.json` |
+| Arquivo de backup com versões | Importa o projeto e **descarta as versões** do arquivo. | `dados/sondas.json` |
+
+### 6.2 Segurança
+
+- **XSS na interface: não encontrado.** Não há `dangerouslySetInnerHTML`, `innerHTML`, `eval` nem `new Function` em `src/`.
+  Importei um projeto com `<img src=x onerror=…>` e `<script>` no nome, objetivo e observações e percorri 9 rotas: nada
+  executou, nenhum `<img src="x">` no DOM (`xss-import.json`).
+- **Ficha HTML:** textos escapados com `esc()` (`ExportPage.tsx:16`), `<title>` escapa `<` (`download.ts:85`); o
+  `renderToStaticMarkup` da prévia só recebe tokens (cores validadas como `#RRGGBB` pelo Zod). Aberta num navegador, a ficha
+  com o projeto malicioso não executou nada. Os HTML demonstrativos de templates/inspiração não usam texto do usuário (fontes
+  passam por `validFont`, cores por regex).
+- **CSS de referência:** o nome do projeto entra cru num comentário (`css.ts:35`). Um nome com `*/` fecha o comentário e injeta
+  CSS (sonda: `Nome */ body{display:none} /*` → regra ativa). Baixo impacto (arquivo de referência), correção trivial.
+- **Master Prompt (.md):** textos do usuário entram sem escape (HTML cru e quebras de linha que criam itens/títulos novos). Para
+  o próprio usuário não é vulnerabilidade, mas um projeto importado de terceiros pode carregar **injeção de prompt** para a IA
+  que vai implementar o site, e um visualizador Markdown com HTML habilitado executaria o `<img onerror>`. Sugestão: colocar
+  textos livres entre aspas/bloco de citação e normalizar quebras de linha.
+- **localStorage:** contém só o projeto (sem credenciais). O relatório de validação passa por `parseReport` com um filtro de
+  termos sensíveis em `element` (`src/prompt/validation.ts:25-32`), mas fica guardado dentro do projeto e é copiado para cada
+  versão e para o `source` da especificação exportada.
+- **Executor Python** (`tools/validation-runner/runner.py`): bom desenho — só abre a URL e rotas da mesma origem
+  (`same_origin`, `runner.py:198` e checagem em `:229`), não clica nem envia formulários, login manual pelo próprio usuário,
+  relatório sem cookies/textos/capturas, saída limitada (≤ ≈61 ocorrências por página × largura). Observações menores: o
+  seletor reportado pode conter crases e quebrar o Markdown do prompt de correção (`validation.ts:86`); não há testes
+  automatizados do executor.
+
+### 6.3 Testabilidade — cobertura real e o que os testes não protegem
+
+Cobertura medida (Vitest + V8, cópia isolada, `dados/coverage-summary.json`): **87,5 % das linhas, 76,5 % das funções**. O número
+é inflado pelos catálogos (dados contam como linhas cobertas ao serem importados). Por área:
+
+| Área | Linhas cobertas |
+| --- | --- |
+| templates, inspiration | 99 % |
+| navigation, components, layouts, entry | 86–93 % |
+| core | 90 % (store 86 %, download 32 %) |
+| prompt | 84,5 % — **conflicts.ts 53 %**, PromptButton 42 % |
+| ui | 70 % |
+| color | 18 % |
+| shell, guided, home, preview, project, **prompts (Central/Exportar)**, validation, App | **0 %** |
+
+E2E (Playwright, 22 declarações de teste — 26 casos com as 5 larguras parametrizadas — em 4 arquivos — não executados por mim, por instrução): abrem todas as rotas, checam overflow,
+downloads válidos, importação de backup, persistência após recarregar, seleção sem rolar a página.
+
+O que **nenhum** teste protege hoje (todos os defeitos desta auditoria passaram pelos 235 testes verdes):
+
+1. coerência entre itens do prompt (medidas, posição, navegação móvel, tipografia/raio) — os testes de prompt verificam
+   presença de seções e de itens, não contradições;
+2. que trocar a primária atualiza os tokens derivados (o teste `aplica e remove exceções de token` só olha o token alterado);
+3. que a composição B gera medidas da composição B (`navigation.test.tsx:131` só confere o nome da variante);
+4. ausência de conteúdo de demonstração no prompt; duplicação/tamanho do prompt;
+5. erros de carregamento de chunk, error boundaries, cota do localStorage, localStorage indisponível/corrompido, migração;
+6. importação de backup **com histórico**, ids inexistentes, limites de tamanho;
+7. ExportPage/PromptWorkspace (0 % de cobertura unitária), a ficha HTML e o CSS com textos hostis;
+8. desempenho (nenhum orçamento de bundle ou de interação), e o executor Python.
+
+Os testes de renderização dos módulos são majoritariamente “renderiza sem erro” — úteis contra quebras, mas não verificam
+que a prévia corresponde à spec que vai para o prompt.
+
+## 7. Lista consolidada de problemas
+
+Prioridade: P0 = compromete o objetivo do produto (o site construído pela IA sai diferente do aprovado); P1 = perda de dados
+ou de confiança, ou fidelidade relevante; P2 = qualidade/desempenho/manutenção com impacto perceptível; P3 = melhoria.
+
+| ID | Título | Evidência | Causa | Sugestão concreta | Prior. | Esforço | Depende de | Critério de aceitação |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| TE-01 | Detector marca 0 contradições com 4–17 contradições no texto | 4.2; `conflicts.ts:32-164`; P1 tem 15, P5 17; `conflicts.ts` 53 % coberto | 8 regras fixas sobre booleanos; valores só existem em texto livre de cada catálogo; preâmbulo “implemente exatamente” | Modelo de fatos estruturados por item + resolvedor por precedência (4.6-1); prompt renderizado a partir do valor resolvido; “perguntar” só onde a política exigir | P0 | alto | — | Nos 5 projetos da fase 2, cada chave (altura do header, largura da sidebar, posição do header, navegação móvel, raio/fonte/tamanho/sombra dos componentes) aparece com **um** valor no prompt ou como contradição aberta; teste com o backup de P1 |
+| TE-02 | Trocar a primária não atualiza hover, active, foco, link, seleção, navegação ativa, gradiente | 4.4; 11 tokens; `theme.ts:10-12`, `tokens.ts:191` | overrides aplicados depois de `deriveTokens` | Overrides de base antes da derivação; overrides de derivados “travados” depois (4.6-3) | P0 | baixo | — | Com primária `#e11d48` em `neutro-essencial`, `primaryHover/link/focusRing/selectedText/navActiveText/gradientFrom` são derivados da nova cor no editor, prompt, CSS e ficha; teste unitário |
+| TE-03 | Conteúdo de demonstração (marca, menus, breadcrumbs, contadores) entra como especificação | 4.3; 1–14 ocorrências por projeto; `navigation/catalog.ts:149,153,167,197,1555-1565` | projeto sem campos de conteúdo; spec interpola a receita de demonstração | `project.content` (marca, itens de navegação, grupos, CTA); gerador usa esses campos ou escreve “rótulos ilustrativos” (4.6-2) | P0 | médio | TE-01 (mesma refatoração dos geradores) | Nenhum rótulo de `look.nav`, `look.groups`, `breadcrumbs`, `brand` aparece no prompt sem confirmação do usuário; teste automatizado com os 72 modelos |
+| TE-04 | Composição B de headers/sidebars é exportada com a estrutura e as medidas da composição A | 2.2; `gazeta-aurora` B = 60 px, prompt diz 88 px; 7 sidebars | `spec: headerSpec(d)` gerado uma vez a partir de `d.look` (`navigation/catalog.ts:270,1662`) | Gerar spec sob demanda com `headerLookFor/sidebarLookFor(model, variant)` | P1 | baixo | — | Para os 72 modelos × 2 composições, altura/largura/logo do prompt = receita da composição escolhida (teste parametrizado) |
+| TE-05 | Erro de carregamento de chunk ou de renderização derruba o Studio inteiro (tela em inglês com pilha) | 6.1; `capturas/r1-…png`; sem `errorElement` (`App.tsx:32-60`) | nenhum error boundary no nível de rota/Outlet | `errorElement` na rota raiz + `ErrorBoundary` em volta do `<Outlet/>` com mensagem em português, botão “Tentar de novo” (re-import do chunk) e “Recarregar”; `vite:preloadError` → recarregar uma vez | P1 | baixo | — | Com o chunk de Templates bloqueado, topbar e menu continuam visíveis, aparece mensagem em português e o retry funciona; teste E2E com `page.route(abort)` |
+| TE-06 | Falhas de gravação são silenciosas (cota estourada, localStorage indisponível) | 6.1; `dados/cota.json`: versão na tela, não gravada; alterações seguintes perdidas | `QuotaExceededError` propagado de dentro do `set` do Zustand; nenhum `onRehydrateStorage`/aviso | `storage` próprio com `try/catch` que publica um estado “não salvo” na store; faixa persistente “Suas alterações não estão sendo salvas — exporte um backup”; poda automática de versões antigas ao estourar | P1 | baixo | — | Com a cota cheia, o usuário vê o aviso em ≤ 1 s, nenhum erro não tratado no console, e a poda permite continuar salvando o projeto atual |
+| TE-07 | Hidratação descarta dados sem aviso e sem cópia (JSON ilegível, projeto inválido, outra versão) e não há `migrate` | 3.3, 6.1; `store.ts:272-292` | `merge` devolve projeto novo; Zustand descarta versão diferente; próximo clique sobrescreve | Antes de descartar, copiar o valor bruto para `atelier-ui:studio:v1:recuperacao-<data>` e avisar com opção de baixar; implementar `migrate(state, version)` com testes por versão; validar `history` com o mesmo esquema (descartando só as versões inválidas) | P1 | médio | — | Os três cenários de `robustez.cjs` mostram aviso e preservam o conteúdo original; teste de migração v1→v2 |
+| TE-08 | Relatório de validação guardado no projeto e copiado em 30 versões | 3.2; 1 000 ocorrências = 8 M caracteres > cota de 5,24 M | `validation.report` dentro de `Project` | Guardar o relatório fora do projeto (chave própria ou IndexedDB), fora dos snapshots e do `source` exportado; limitar ocorrências por tipo | P1 | baixo | TE-06 | Importar um relatório de 3 000 ocorrências e salvar 30 versões não estoura a cota |
+| TE-09 | Observação do usuário no item “Paleta e tokens” some do Master Prompt | 3.3; `dados/sondas.json`; `text.ts:106` | o render filtra o item `palette`, onde a nota é guardada | Renderizar `exceptions`/`notes` do item da paleta na seção D (ou nota global de identidade) | P1 | baixo | — | Nota na paleta aparece no prompt; teste unitário |
+| TE-10 | Backup “completo” não restaura as versões | 3.3; `ExportPage.tsx:114`, `schema.ts:140`, `store.ts:259-265` | parse e import usam só `raw.project` | `importProject` aceita `history` validado (mesclando ou substituindo, com escolha) | P2 | baixo | TE-07 | Importar backup com N versões restaura as N versões; teste |
+| TE-11 | Restaurar versão incompleta quebra o app | 6.1; `store.ts:252-257`; sonda `paletteId` | snapshots não passam pelo Zod | `restoreSnapshot` usa `parseProjectFile`; `ProjectPage.tsx:101` com `?.` | P2 | baixo | TE-05 | Versão incompleta é recusada com mensagem; nenhuma tela de erro |
+| TE-12 | Importação valida tipos, não domínio: ids inexistentes aceitos sem pendência; chaves livres em `overrides`; textos sem limite (3 MB aceitos); `report: z.any()` | 3.3, 6.1 | esquema Zod com `z.string()` livre | `z.enum`/`refine` contra os catálogos (ou aviso “item não encontrado” + pendência); `z.enum(TOKEN_KEYS)` nas chaves; `.max()` em textos; esquema do relatório | P2 | baixo | — | Os arquivos `ids-inexistentes.json` e `texto-gigante.json` geram aviso claro; prompt lista a pendência |
+| TE-13 | Prompt longo e repetitivo | 4.5; 23–47 KB; 2,5–10,7 KB repetidos; regras de tabela sem tabela | regras por tipo anexadas ao item **e** no fim; família repetida por instância | Deduplicar no render, filtrar regras pelos tipos presentes, família descrita uma vez (4.6-5) | P2 | médio | TE-01 | −20 % de caracteres nos 5 projetos sem perder fatos (comparação por chaves); nenhuma linha ≥ 25 caracteres repetida fora dos subtítulos |
+| TE-14 | Code splitting anulado pelo grafo de imports | 2.3, 5; home 874 KB; rotas 1,10–1,69 MB | `PromptButton` importa o motor e os catálogos; `home/status.ts` importa 7 catálogos; `GuidedStep` importa 9 áreas | `PromptButton` com `import()` dinâmico do motor ao abrir o modal; `status.ts` usar um índice leve `{id → nome}` gerado dos catálogos; `GuidedStep` com `lazy` por etapa | P2 | médio | — | Home ≤ 350 KB de JS bruto; rota de cores ≤ 500 KB; medir com `scripts/perf-carga.cjs` |
+| TE-15 | Galeria de inspiração e galerias de layouts pesadas | 5; inspiração: <!--INS--> | 20 sites completos (desktop) renderizados como miniaturas ao abrir a página; layouts: 42–44 esquemas/celulares interativos | Miniaturas estáticas (SVG/PNG gerados no build) ou renderização sob demanda com `IntersectionObserver` + `content-visibility: auto`; prévia completa só no visualizador | P2 | médio | — | Inspiração: LCP (Lighthouse mobile) < 4 s e < 2 500 nós na abertura |
+| TE-16 | Prévias não isoladas do CSS global do Studio | 2.5; `styles/base.css` (h1–h4, a, button, body) | prévias no mesmo documento, sem reset escopado | Renderizar prévias de sites/componentes dentro de um contêiner com `all: revert`/reset próprio ou shadow DOM; garantir que o HTML exportado use o mesmo reset | P2 | médio | — | Comparação visual prévia × HTML exportado sem diferença de tipografia em 5 modelos |
+| TE-17 | Kits de prévia duplicados (Btn ×5, Avatar ×4, molduras ×5, hook de largura ×4, 4 modelos de cor) | 2.4 | cada módulo nasceu isolado | Pacote `src/preview-kit/` (primitivas + tema único derivado de `ResolvedTheme`) e migração gradual | P2 | alto | TE-02 | Nenhuma primitiva duplicada; todas as prévias recebem `ResolvedTheme` |
+| TE-18 | Assinaturas do projeto inteiro causam re-render amplo | 3.1, 5 (<!--REN-->) | 9 componentes com `useStudio((s) => s.project)` | Seletores finos (`useShallow` de fatias), `memo` nos cartões, mover cálculos derivados para seletores memorizados | P3 | baixo | — | Clique em paleta renderiza ≤ 60 componentes (medido com o gancho de `perf-lib.cjs`) |
+| TE-19 | Componentes gigantes | 2.6; `PhonePreview` 1 362 linhas/245 ramos; `AuthScreen` 1 215/396 | renderização condicional acumulada | Quebrar por região (topo, inferior, lateral, sobreposições) em componentes com testes de contrato | P3 | alto | TE-17 | Nenhuma função > 300 linhas nos renderizadores |
+| TE-20 | Dependências circulares prompt ↔ módulos e core → módulo | 2.3; `theme.ts:2` | `PromptButton` dentro de `prompt/` e `describe` dentro dos módulos | Mover `PromptButton` para `ui/` (com import dinâmico); `core` recebe as paletas por injeção | P3 | médio | TE-14 | Grafo sem ciclos entre áreas (script `dados/acoplamento.txt`) |
+| TE-21 | Textos do usuário sem escape no CSS e no Markdown | 6.2; `css.ts:35` | interpolação direta | Remover `*/` do nome no comentário; citar textos livres no Markdown e normalizar quebras | P3 | baixo | — | Sondas de `scripts/sondas.test.ts`/`analise-motor.test.ts` passam a dar `false` |
+| TE-22 | Testes não protegem fidelidade nem modos de falha | 6.3; prompts/shell 0 %, `conflicts.ts` 53 % | testes focados em “renderiza” e “contém seção” | Suíte de fidelidade (contradições, tokens derivados, composição B, conteúdo de demonstração, tamanho) usando os 5 backups da fase 2 como fixtures; E2E de falhas (chunk, cota, storage corrompido); orçamento de bundle no CI | P1 | médio | TE-01…TE-08 | Cada defeito P0/P1 desta lista tem um teste que falha no commit `e4c79f3` e passa após a correção |
+| TE-23 | Fontes e build autônomo pesados | 5; 18 arquivos woff2 (422 KB), autônomo 3,1 MB com 19 fontes base64 | importa os pacotes `@fontsource-variable` completos (todos os subsets) | Importar só `latin` e `latin-ext` (`@fontsource-variable/inter/wght.css` com subset) e, no autônomo, só Inter | P3 | baixo | — | Autônomo < 2 MB |
+| TE-24 | Violações da regra 9 do CSS (classes `ui-*` redefinidas em 6 arquivos) | 2.5 | estilos de ajuste por módulo | Variantes/props nas primitivas ou variáveis CSS em vez de sobrescrever `ui-*` | P3 | baixo | — | Nenhuma regra de módulo com seletor `.ui-*` no sujeito |
+| TE-25 | Itens retirados do prompt continuam gerando contradições | 3.3; sonda | `detectConflicts` lê o projeto, não os itens incluídos | Detectar sobre os itens incluídos (ou fatos resolvidos) | P3 | baixo | TE-01 | Header excluído não gera contradição |
+
+## 8. O que está bom
+
+- **Base técnica limpa**: TypeScript `strict` sem nenhum erro; 235 testes unitários verdes; estrutura de pastas e guia de
+  módulos claros; nomes e textos consistentes em português.
+- **Fonte única da verdade de fato**: todas as escolhas vivem em `project`, alteradas só por ações imutáveis; modos Guiado e
+  Livre leem o mesmo estado; seletores estáveis (nenhum loop de `getSnapshot`), `useShallow` onde necessário.
+- **Exportações tecnicamente válidas e seguras**: JSON reimportável, ficha HTML autônoma e escapada, nenhum XSS encontrado
+  com entradas hostis, nenhum uso de `innerHTML`/`eval`; o executor Python tem um modelo de segurança cuidadoso (mesma origem,
+  sem cliques, login manual, sem segredos).
+- **Importação com Zod**: tipos errados e JSON inválido são recusados com mensagem objetiva; arquivos parciais são completados
+  com padrões; o estado anterior vira versão antes de importar/restaurar/limpar.
+- **Desempenho de interação aceitável na maior parte das galerias** (ver seção 5), **CLS = 0** em todas as rotas e perfis, e
+  **memória estável**: após 3 voltas por 18 rotas o heap fica em ≈12 MB e o número de nós e de listeners volta ao inicial —
+  sem vazamento detectável.
+- **Derivação de tokens com contraste garantido** (`ensureContrast`, testes de AA em 60 paletas) — o problema é só a ordem de
+  aplicação dos overrides (TE-02), não o algoritmo.
+- **Motor de prompts rápido** (1–4 ms por geração) e determinístico a partir do estado, o que torna as correções
+  arquiteturais propostas baratas de testar.
+
+## 9. Notas
+
+| Dimensão | Nota (0–10) |
+| --- | --- |
+| Qualidade técnica e estabilidade | **6** |
+| Confiabilidade das exportações | **4** |
+
+**Rubrica — Qualidade técnica e estabilidade.** 9–10: falhas tratadas com recuperação (error boundaries, migração, aviso de
+persistência), orçamento de bundle, testes nos caminhos críticos, pouca duplicação. 7–8: sólido, lacunas localizadas. 5–6:
+funciona bem no caminho feliz e é estável em uso normal (sem erros de console, memória estável, CLS 0, tipos e testes verdes),
+mas os modos de falha derrubam o app ou perdem dados em silêncio, o code splitting é anulado e há dívida de manutenção
+relevante (duplicação, componentes de mais de mil linhas). 3–4: falhas frequentes no uso normal. 0–2: inutilizável.
+→ **6**: o caminho feliz é robusto; TE-05, TE-06, TE-07 e TE-14/17/19 impedem nota maior.
+
+**Rubrica — Confiabilidade das exportações.** 9–10: todo valor exportado é igual ao estado e à prévia, sem contradições nem
+conteúdo de demonstração, ida e volta sem perda. 7–8: divergências raras e sinalizadas. 5–6: arquivos válidos, algumas
+divergências silenciosas pontuais. 3–4: arquivos válidos, mas o conteúdo é sistematicamente contraditório ou inexato de formas
+que mudam o site construído. 0–2: arquivos inválidos ou ilegíveis.
+→ **4**: os arquivos são válidos, completos e seguros (por isso não 2–3), mas em 5 de 5 projetos o Master Prompt contém
+contradições não sinalizadas (4–17), conteúdo de demonstração tratado como especificação (1–14), tokens derivados errados
+quando a primária é alterada, medidas da composição errada e uma observação do usuário descartada; o backup perde as versões.

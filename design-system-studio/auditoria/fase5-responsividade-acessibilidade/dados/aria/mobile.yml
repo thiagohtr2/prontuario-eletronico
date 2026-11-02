@@ -1,0 +1,240 @@
+- link "Pular para o conteúdo":
+  - /url: "#conteudo"
+- banner:
+  - link "Atelier UI — início":
+    - /url: "#/"
+    - text: Atelier UI Design System Studio
+  - group "Modo de utilização":
+    - button "Guiado" [pressed]:
+      - img
+      - text: Guiado
+    - button "Livre":
+      - img
+      - text: Livre
+  - button "Buscar funcionalidades (Ctrl+K)": Buscar funcionalidades Ctrl K
+  - text: Esqueleto 5/5
+  - button "Exportar e importar":
+    - img
+  - button "Abrir Master Prompt":
+    - img
+    - text: Master Prompt
+- complementary "Navegação do Studio":
+  - list:
+    - listitem:
+      - link "Início":
+        - /url: "#/"
+  - button "Construtor guiado" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto (concluída)":
+        - /url: "#/guiado/objetivo"
+    - listitem:
+      - link "Landing, login e cadastro (concluída)":
+        - /url: "#/guiado/entrada"
+    - listitem:
+      - link "Arquitetura do computador (concluída)":
+        - /url: "#/guiado/desktop"
+    - listitem:
+      - link "Arquitetura do celular (concluída)":
+        - /url: "#/guiado/mobile"
+    - listitem:
+      - link "Revisão do esqueleto (concluída)":
+        - /url: "#/guiado/revisao"
+    - listitem:
+      - link "Prévia integrada":
+        - /url: "#/guiado/preview"
+    - listitem:
+      - link "Identidade visual":
+        - /url: "#/guiado/identidade"
+    - listitem:
+      - link "Headers e sidebars":
+        - /url: "#/guiado/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/guiado/componentes"
+    - listitem:
+      - link "Master Prompt":
+        - /url: "#/guiado/entrega"
+  - button "Estrutura" [expanded]
+  - list:
+    - listitem:
+      - link "Objetivo do projeto":
+        - /url: "#/modulos/objetivo"
+    - listitem:
+      - link "Landing pages":
+        - /url: "#/modulos/landing"
+    - listitem:
+      - link "Login":
+        - /url: "#/modulos/login"
+    - listitem:
+      - link "Cadastro":
+        - /url: "#/modulos/cadastro"
+    - listitem:
+      - link "Layout desktop":
+        - /url: "#/modulos/desktop"
+    - listitem:
+      - link "Layout mobile":
+        - /url: "#/modulos/mobile"
+    - listitem:
+      - link "Live Site Preview":
+        - /url: "#/modulos/preview"
+  - button "Identidade" [expanded]
+  - list:
+    - listitem:
+      - link "Color System":
+        - /url: "#/modulos/cores"
+    - listitem:
+      - link "Navigation Showcase":
+        - /url: "#/modulos/navegacao"
+    - listitem:
+      - link "Componentes":
+        - /url: "#/modulos/componentes"
+  - button "Inspiração" [expanded]
+  - list:
+    - listitem:
+      - link "Inspiration Gallery":
+        - /url: "#/modulos/inspiracao"
+    - listitem:
+      - link "Template Studio":
+        - /url: "#/modulos/templates"
+  - button "Entrega" [expanded]
+  - list:
+    - listitem:
+      - link "Central de Prompts":
+        - /url: "#/prompt"
+    - listitem:
+      - link "Exportar e importar":
+        - /url: "#/exportar"
+  - button "Ferramentas" [expanded]
+  - list:
+    - listitem:
+      - link "Validação responsiva":
+        - /url: "#/validacao"
+    - listitem:
+      - link "Projeto e versões":
+        - /url: "#/projeto"
+  - text: Nexo Capital Salvo automaticamente neste navegador
+- main:
+  - navigation "Você está em":
+    - list:
+      - listitem:
+        - link "Início":
+          - /url: "#/"
+      - listitem:
+        - text: ›
+        - link "Estrutura":
+          - /url: "#/livre"
+      - listitem: ›Layout mobile
+  - text: Esqueleto · Celular
+  - heading "Arquitetura mobile" [level=1]
+  - paragraph: "Escolha como as pessoas navegam pelo celular: menu embaixo, barras flutuantes, menus que deslizam ou de tela cheia. São 44 modelos — teste cada um no celular grande."
+  - switch "Mostrar legendas nos desenhos" [checked]
+  - text: Mostrar legendas nos desenhos HEADER
+  - button "barra superior"
+  - text: MENU INFERIOR
+  - button "menu embaixo"
+  - text: DRAWER
+  - button "menu que desliza"
+  - text: CONTEÚDO o que a pessoa vê e usa
+  - img
+  - strong: O celular tem arquitetura própria.
+  - text: "Escolha aqui como o site funciona no celular. O menu lateral do computador não vira automaticamente um drawer: o que valer no celular é o que você escolher nesta página."
+  - group "Grupos de navegação móvel":
+    - button "Todos 44" [pressed]
+    - button "Navegação inferior 6"
+    - button "Headers e menus flutuantes 8"
+    - button "Layouts híbridos 9"
+    - button "Navegação superior 5"
+    - button "Drawers e menus laterais 5"
+    - button "Navegação lateral compacta 3"
+    - button "Menus de tela cheia 4"
+    - button "One Screen móvel 4"
+  - paragraph: 44 modelos em 8 grupos. Clique em um modelo para vê-lo no celular grande e testar os menus.
+  - region "Navegação inferior":
+    - heading "Navegação inferior 6 modelos" [level=3]
+    - paragraph: Menu fixo embaixo, ao alcance do polegar.
+    - button "Bottom Navigation clássica. Uma barra fixa embaixo com 4 ícones e os nomes dos destinos principais, sempre ao alcance do polegar. É o padrão mais conhecido de aplicativos.": Bottom Navigation clássica Sugerido
+    - button "Bottom Navigation com cinco destinos. A barra inferior com cinco destinos, por exemplo Início, Buscar, Categorias, Carrinho e Conta. Ideal para lojas e apps com várias áreas.": Bottom Navigation com cinco destinos
+    - button "Dock flutuante. O menu de baixo vira uma “ilha” arredondada, afastada das bordas, flutuando sobre o conteúdo. Moderno e leve.": Dock flutuante
+    - button "Bottom com ação central. Barra inferior com um botão redondo de destaque no meio, para a ação mais importante, como “Novo” ou “Publicar”.": Bottom com ação central
+    - button "Bottom minimalista. Uma barra inferior bem discreta, só com ícones e um pontinho no item ativo. Deixa o conteúdo e as imagens em primeiro plano.": Bottom minimalista
+    - button "Bottom com título superior. Barra inferior clássica combinada com um título grande no topo de cada tela, que diminui quando a pessoa rola.": Bottom com título superior
+  - region "Headers e menus flutuantes":
+    - heading "Headers e menus flutuantes 8 modelos" [level=3]
+    - paragraph: Barras afastadas das bordas, como ilhas.
+    - button "Topbar flutuante compacta. Uma barra superior pequena e arredondada, afastada das bordas, com logo e um botão de menu que abre uma lista curta de links.": Topbar flutuante compacta
+    - button "Topbar flutuante com drawer esquerdo. Barra superior flutuante com um botão de menu à esquerda. Ao tocar, um menu lateral desliza pela esquerda.": Topbar flutuante com drawer esquerdo
+    - button "Topbar flutuante com drawer direito. Barra superior flutuante com o botão de menu do lado direito, mais fácil de alcançar com o polegar. O menu desliza pela direita.": Topbar flutuante com drawer direito
+    - 'button "Topbar flutuante com dock inferior. Duas ilhas: uma barra flutuante no topo e um dock flutuante embaixo. O conteúdo passa por trás das duas."': Topbar flutuante com dock inferior
+    - button "Topbar como ilha central com dock pill. No topo, uma pequena cápsula central com o título; embaixo, um menu em forma de pílula só com ícones. Visual limpo e marcante.": Topbar como ilha central com dock pill
+    - button "Menu inferior pill com ícones. Um menu flutuante em forma de pílula na parte de baixo. O item ativo se expande e mostra o nome; os outros mostram só o ícone.": Menu inferior pill com ícones
+    - 'button "Dock inferior transparente. Um dock flutuante translúcido, como vidro fosco: dá para ver o conteúdo passando por trás. Fica bonito com fotos e cores."': Dock inferior transparente
+    - button "Menu flutuante inferior compacto. Um único botão redondo flutuando no canto de baixo. Ao tocar, ele abre uma pequena lista de ações rápidas acima dele.": Menu flutuante inferior compacto
+  - region "Layouts híbridos":
+    - heading "Layouts híbridos 9 modelos" [level=3]
+    - paragraph: Combinações de header, stories, dock e drawer.
+    - button "Stories fixos com dock flutuante. No topo, uma faixa de círculos com destaques que desliza para o lado; embaixo, um menu flutuante arredondado.": Stories fixos com dock flutuante
+    - button "Stories com dock e drawer lateral. Faixa de destaques no topo, menu flutuante embaixo e, para as opções menos usadas, um menu lateral que abre pelo botão de menu.": Stories com dock e drawer lateral
+    - button "Stories com dock translúcido. Faixa de destaques no topo e um dock embaixo com efeito de vidro fosco, deixando ver o conteúdo por trás.": Stories com dock translúcido
+    - button "Header fixo com busca e menu inferior flutuante. Barra superior fixa com campo de busca, logo abaixo uma faixa de categorias que desliza para o lado e um menu flutuante arredondado embaixo.": Header fixo com busca e menu inferior flutuante
+    - button "Topbar com Bottom Navigation. Barra superior com logo e atalhos (busca, notificações) e barra inferior com os destinos principais. Equilíbrio entre marca e navegação.": Topbar com Bottom Navigation
+    - button "Bottom Navigation com drawer de opções. Barra inferior com quatro destinos e um botão “Mais” que abre um painel de baixo para cima com as demais opções.": Bottom Navigation com drawer de opções
+    - button "Header com menu de perfil. Barra superior com saudação e a foto da pessoa; tocar na foto abre um menu da conta. Embaixo, a barra com os destinos principais.": Header com menu de perfil
+    - button "Rail com menu inferior. Uma coluna fina de ícones na lateral para filtros ou atalhos e a barra inferior para os destinos principais.": Rail com menu inferior
+    - 'button "Menu compacto adaptável. Um menu pequeno flutuando embaixo com três atalhos e um botão “mais”. Ele se adapta: vira trilho lateral quando o celular está deitado."': Menu compacto adaptável
+  - region "Navegação superior":
+    - heading "Navegação superior 5 modelos" [level=3]
+    - paragraph: Menus e abas concentrados no topo.
+    - button "Topbar com menu hambúrguer. Barra superior com o ícone de três linhas. Ao tocar, o menu desce do topo, logo abaixo da barra, com os links do site.": Topbar com menu hambúrguer
+    - 'button "Topbar com abas. Barra superior com abas logo abaixo do título (por exemplo: Todos, Recentes, Favoritos). Trocar de aba muda o conteúdo da tela."': Topbar com abas Sugerido
+    - button "Navegação horizontal rolável. Uma fileira de seções no topo que desliza para o lado, como em portais de notícias. Cabe muitas categorias sem apertar.": Navegação horizontal rolável
+    - 'button "Topbar com busca. A busca é a estrela: um campo grande logo no topo, sempre à mão. Ideal quando as pessoas chegam sabendo o que procuram."': Topbar com busca
+    - button "Header compacto com perfil. Uma barra superior fina com a foto e o nome da pessoa, sem ocupar muito espaço. O conteúdo ganha quase a tela toda.": Header compacto com perfil
+  - region "Drawers e menus laterais":
+    - heading "Drawers e menus laterais 5 modelos" [level=3]
+    - paragraph: Menus escondidos que deslizam para dentro da tela.
+    - text: Escolhido
+    - 'button "Drawer pela esquerda. O clássico menu escondido: toca nas três linhas e um painel desliza da esquerda por cima do conteúdo." [pressed]': Drawer pela esquerda Sugerido
+    - button "Drawer pela direita. O menu escondido abre do lado direito, onde o polegar alcança com facilidade em quem segura o celular com a mão direita.": Drawer pela direita
+    - button "Drawer que empurra o conteúdo. Ao abrir o menu, a tela inteira desliza para o lado e revela o menu por baixo, em vez de cobri-la.": Drawer que empurra o conteúdo
+    - button "Bottom Sheet. Uma alça fica visível na parte de baixo; ao tocar ou puxar, um painel sobe com o menu e as opções.": Bottom Sheet
+    - button "Menu deslizante com grupos. Menu lateral que organiza as opções em grupos com títulos, que podem abrir e fechar. Bom para sistemas com muitas páginas.": Menu deslizante com grupos
+  - region "Navegação lateral compacta":
+    - heading "Navegação lateral compacta 3 modelos" [level=3]
+    - paragraph: Trilhos finos sempre visíveis na lateral.
+    - button "Mini Sidebar sempre visível. Uma coluna estreita à esquerda, sempre visível, com ícones e nomes pequenos. Não precisa abrir menu para trocar de área.": Mini Sidebar sempre visível
+    - button "Sidebar fina expansível. Um trilho fino de ícones à esquerda que se expande, mostrando os nomes, quando a pessoa toca no botão de abrir.": Sidebar fina expansível
+    - button "Navegação lateral direita. Uma coluna estreita de ícones e nomes do lado direito da tela, perto do polegar de quem usa o celular com a mão direita.": Navegação lateral direita
+  - region "Menus de tela cheia":
+    - heading "Menus de tela cheia 4 modelos" [level=3]
+    - paragraph: O menu ocupa a tela inteira quando aberto.
+    - button "Menu fullscreen. Ao tocar no menu, ele cobre a tela inteira com links grandes e fáceis de tocar. Simples e muito claro.": Menu fullscreen
+    - button "Menu editorial fullscreen. Menu de tela cheia com tipografia enorme e numerada, como uma capa de revista. Perfeito para portfólios e marcas criativas.": Menu editorial fullscreen
+    - button "Menu em grade de aplicativos. O menu abre uma tela com ícones grandes em grade, como a tela inicial de um celular. Cada ícone leva a uma área.": Menu em grade de aplicativos
+    - button "Menu de comandos. Em vez de procurar no menu, a pessoa toca na busca e digita o que quer fazer. As opções aparecem enquanto ela escreve.": Menu de comandos
+  - region "One Screen móvel":
+    - heading "One Screen móvel 4 modelos" [level=3]
+    - paragraph: Tudo cabe na tela do celular, sem rolagem principal.
+    - button "One Screen com Bottom Navigation. Cada tela cabe inteira no celular, sem rolar, organizada em blocos. Embaixo, a barra com os destinos.": One Screen com Bottom Navigation
+    - button "One Screen com Sidebar Rail. Tudo cabe na tela, com uma coluna fina de ícones na lateral para trocar de área. Funciona muito bem com o celular deitado.": One Screen com Sidebar Rail
+    - 'button "One Screen Kiosk. Tela de autoatendimento: poucos botões enormes, fáceis de tocar e de ler, tudo visível de uma vez."': One Screen Kiosk
+    - button "One Screen com painel em abas. Uma tela única com abas no topo; cada aba troca o painel, que sempre cabe inteiro na tela, sem rolar.": One Screen com painel em abas
+  - text: Escolhido para o seu projeto
+  - heading "Drawer pela esquerda" [level=2]
+  - text: Drawers e menus laterais
+  - paragraph: "O clássico menu escondido: toca nas três linhas e um painel desliza da esquerda por cima do conteúdo."
+  - paragraph:
+    - strong: "Combina com:"
+    - text: Apps com muitas seções · Sistemas · Dashboards
+  - button "Prompt deste elemento":
+    - img
+    - text: Prompt deste elemento
+  - group: "Detalhes técnicos: comportamento e adaptações"
+  - 'group "Prévia do celular: Drawer pela esquerda"':
+    - text: 10:24
+    - button "Abrir menu"
+    - text: Orla
+    - button "Buscar"
+    - text: "Saldo do mês +8,2% R$ 12.480 Pedidos 128 Clientes 64 Atividade recente Ver tudo P1 Pedido #1042 Confirmado há 5 min R$ 289 MA Marina Alves Nova cliente Hoje RS Relatório semanal Pronto para baixar PDF RE Reunião de equipe Amanhã, 9h 9:00 PG Pagamento recebido Cartão final 4821 R$ 1.200 ES Estoque atualizado 12 itens repostos +12"
+  - paragraph: "Toque nos botões do celular: menus abrem e fecham como no site de verdade."
+- status
