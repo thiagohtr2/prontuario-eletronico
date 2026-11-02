@@ -1,0 +1,405 @@
+[
+  {
+    "id": "aria-allowed-attr",
+    "impact": "critical",
+    "help": "Elements must only use supported ARIA attributes",
+    "tags": [
+      "wcag2a",
+      "wcag412"
+    ],
+    "total": 12,
+    "rotas": [
+      "g-navegacao",
+      "m-navegacao"
+    ],
+    "porLargura": {
+      "375": 6,
+      "1280": 6
+    },
+    "exemplos": [
+      {
+        "rota": "g-navegacao",
+        "w": 1280,
+        "target": "div[data-nv-trigger=\"nvh9-suggest\"] > input[aria-haspopup=\"listbox\"]",
+        "html": "<input type=\"search\" placeholder=\"Buscar produtos, marcas e lojas\" aria-label=\"Buscar\" aria-expanded=\"false\" aria-haspopup=\"listbox\" value=\"\">",
+        "summary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+      },
+      {
+        "rota": "g-navegacao",
+        "w": 1280,
+        "target": "div[data-nv-trigger=\"nvh27-suggest\"] > input[aria-haspopup=\"listbox\"]",
+        "html": "<input type=\"search\" placeholder=\"Buscar artigos, dúvidas e guias\" aria-label=\"Buscar\" aria-expanded=\"false\" aria-haspopup=\"listbox\" value=\"\">",
+        "summary": "Fix all of the following:\n  ARIA attribute is not allowed: aria-expanded=\"false\""
+      }
+    ]
+  },
+  {
+    "id": "color-contrast",
+    "impact": "serious",
+    "help": "Elements must meet minimum color contrast ratio thresholds",
+    "tags": [
+      "wcag2aa",
+      "wcag143"
+    ],
+    "total": 1871,
+    "rotas": [
+      "home",
+      "livre",
+      "g-objetivo",
+      "g-entrada",
+      "g-desktop",
+      "g-mobile",
+      "g-revisao",
+      "g-preview",
+      "g-identidade",
+      "g-navegacao",
+      "g-componentes",
+      "g-entrega",
+      "m-objetivo",
+      "m-landing",
+      "m-login",
+      "m-cadastro",
+      "m-desktop",
+      "m-mobile",
+      "m-preview",
+      "m-cores",
+      "m-navegacao",
+      "m-componentes",
+      "m-inspiracao",
+      "m-templates",
+      "prompt",
+      "exportar",
+      "validacao",
+      "projeto"
+    ],
+    "porLargura": {
+      "375": 730,
+      "1280": 1141
+    },
+    "exemplos": [
+      {
+        "rota": "home",
+        "w": 1280,
+        "target": ".shell-brand__sub",
+        "html": "<span class=\"shell-brand__sub\">Design System Studio</span>",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.12 (foreground color: #7c7c87, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast rati"
+      },
+      {
+        "rota": "home",
+        "w": 1280,
+        "target": ".shell-search-btn > span",
+        "html": "<span>Buscar funcionalidades</span>",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.12 (foreground color: #7c7c87, background color: #ffffff, font size: 10.9pt (14.5px), font weight: normal). Expected contrast r"
+      },
+      {
+        "rota": "livre",
+        "w": 375,
+        "target": "#free-estrutura",
+        "html": "<h2 id=\"free-estrutura\">Estrutura</h2>",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.12 (foreground color: #7c7c87, background color: #ffffff, font size: 10.1pt (13.5px), font weight: normal). Expected contrast r"
+      },
+      {
+        "rota": "livre",
+        "w": 375,
+        "target": "a[data-testid=\"module-cadastro\"] > span:nth-child(2) > .free-card__status[data-done=\"false\"] > .u-truncate",
+        "html": "<span class=\"u-truncate\">Ainda não escolhido</span>",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.12 (foreground color: #7c7c87, background color: #ffffff, font size: 10.1pt (13.5px), font weight: normal). Expected contrast r"
+      },
+      {
+        "rota": "g-objetivo",
+        "w": 375,
+        "target": "div:nth-child(1) > .gd-phase__label",
+        "html": "<div class=\"gd-phase__label\">",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.12 (foreground color: #7c7c87, background color: #ffffff, font size: 9.4pt (12.5px), font weight: normal). Expected contrast ra"
+      },
+      {
+        "rota": "m-objetivo",
+        "w": 375,
+        "target": ".ui-field:nth-child(2) > .ui-help",
+        "html": "<span class=\"ui-help\">Em uma frase: o que o site resolve?</span>",
+        "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.12 (foreground color: #7c7c87, background color: #ffffff, font size: 10.1pt (13.5px), font weight: normal). Expected contrast r"
+      }
+    ]
+  },
+  {
+    "id": "label-content-name-mismatch",
+    "impact": "serious",
+    "help": "Elements must have their visible text as part of their accessible name",
+    "tags": [
+      "wcag21a",
+      "wcag253"
+    ],
+    "total": 516,
+    "rotas": [
+      "home",
+      "livre",
+      "g-objetivo",
+      "g-entrada",
+      "g-desktop",
+      "g-mobile",
+      "g-revisao",
+      "g-preview",
+      "g-identidade",
+      "g-navegacao",
+      "g-componentes",
+      "g-entrega",
+      "m-objetivo",
+      "m-landing",
+      "m-login",
+      "m-cadastro",
+      "m-desktop",
+      "m-mobile",
+      "m-preview",
+      "m-cores",
+      "m-navegacao",
+      "m-componentes",
+      "m-inspiracao",
+      "m-templates",
+      "prompt",
+      "exportar",
+      "validacao",
+      "projeto"
+    ],
+    "porLargura": {
+      "375": 230,
+      "1280": 286
+    },
+    "exemplos": [
+      {
+        "rota": "home",
+        "w": 1280,
+        "target": ".shell-brand",
+        "html": "<a class=\"shell-brand\" aria-label=\"Atelier UI — início\" href=\"#/\">",
+        "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+      },
+      {
+        "rota": "home",
+        "w": 1280,
+        "target": ".shell-search-btn",
+        "html": "<button type=\"button\" class=\"shell-search-btn\" aria-label=\"Buscar funcionalidades (Ctrl+K)\">",
+        "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+      },
+      {
+        "rota": "g-desktop",
+        "w": 375,
+        "target": ".ui-option[data-selected=\"true\"] > .ui-option__hit",
+        "html": "<button type=\"button\" class=\"ui-option__hit\" aria-pressed=\"true\" aria-label=\"Sidebar integral clássica. Menu fixo do lado esquerdo, de cima a baixo, com o logo ",
+        "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+      },
+      {
+        "rota": "g-desktop",
+        "w": 375,
+        "target": "section[aria-labelledby=\"lay-fam-sidebar-integral\"] > .lay-desk-grid > .ui-option[data-selected=\"false\"]:nth-child(2) > .ui-option__hit",
+        "html": "<button type=\"button\" class=\"ui-option__hit\" aria-pressed=\"false\" aria-label=\"Sidebar integral com rodapé. Igual ao menu lateral clássico, mas com uma faixa de ",
+        "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+      },
+      {
+        "rota": "g-mobile",
+        "w": 375,
+        "target": ".lay-mob-card:nth-child(1) > .ui-option[data-selected=\"false\"] > .ui-option__hit",
+        "html": "<button type=\"button\" class=\"ui-option__hit\" aria-pressed=\"false\" aria-label=\"Bottom Navigation clássica. Uma barra fixa embaixo com 4 ícones e os nomes dos des",
+        "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+      },
+      {
+        "rota": "g-mobile",
+        "w": 375,
+        "target": "div[data-testid=\"mobile-option-topbar-abas\"] > .ui-option__hit",
+        "html": "<button type=\"button\" class=\"ui-option__hit\" aria-pressed=\"false\" aria-label=\"Topbar com abas. Barra superior com abas logo abaixo do título (por exemplo: Todos",
+        "summary": "Fix any of the following:\n  Text inside the element is not included in the accessible name"
+      }
+    ]
+  },
+  {
+    "id": "target-size",
+    "impact": "serious",
+    "help": "All touch targets must be 24px large, or leave sufficient space",
+    "tags": [
+      "wcag22aa",
+      "wcag258"
+    ],
+    "total": 44,
+    "rotas": [
+      "g-preview",
+      "m-preview"
+    ],
+    "porLargura": {
+      "375": 28,
+      "1280": 16
+    },
+    "exemplos": [
+      {
+        "rota": "g-preview",
+        "w": 1280,
+        "target": ".nvs-si[aria-current=\"page\"]",
+        "html": "<button type=\"button\" class=\"nvs-si\" aria-current=\"page\">",
+        "summary": "Fix any of the following:\n  Target has insufficient size (122.3px by 18.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diame"
+      },
+      {
+        "rota": "g-preview",
+        "w": 1280,
+        "target": "ul[aria-labelledby=\"nvs1-g0\"] > li:nth-child(2) > .nvs-si",
+        "html": "<button type=\"button\" class=\"nvs-si\">",
+        "summary": "Fix any of the following:\n  Target has insufficient size (122.3px by 18.1px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diame"
+      },
+      {
+        "rota": "g-preview",
+        "w": 375,
+        "target": ".nvs-ws",
+        "html": "<button type=\"button\" class=\"nvs-ws\" aria-label=\"Espaço atual: Matriz — São Paulo. Trocar\" data-nv-trigger=\"nvs1-ws-bottom\" aria-expanded=\"false\" aria-haspopup=",
+        "summary": "Fix any of the following:\n  Target has insufficient size (64px by 11.4px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter"
+      },
+      {
+        "rota": "m-preview",
+        "w": 375,
+        "target": ".nvs-ws",
+        "html": "<button type=\"button\" class=\"nvs-ws\" aria-label=\"Espaço atual: Matriz — São Paulo. Trocar\" data-nv-trigger=\"nvs2-ws-bottom\" aria-expanded=\"false\" aria-haspopup=",
+        "summary": "Fix any of the following:\n  Target has insufficient size (64px by 11.4px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter"
+      }
+    ]
+  },
+  {
+    "id": "scrollable-region-focusable",
+    "impact": "serious",
+    "help": "Scrollable region must have keyboard access",
+    "tags": [
+      "wcag2a",
+      "wcag211",
+      "wcag213"
+    ],
+    "total": 8,
+    "rotas": [
+      "g-mobile",
+      "g-entrega",
+      "m-mobile",
+      "prompt"
+    ],
+    "porLargura": {
+      "375": 4,
+      "1280": 4
+    },
+    "exemplos": [
+      {
+        "rota": "g-mobile",
+        "w": 1280,
+        "target": "div[data-detail=\"full\"] > .lay-ph-body > .lay-ph-middle > .lay-ph-content",
+        "html": "<div class=\"lay-ph-content\" style=\"overflow-y: auto;\">",
+        "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+      },
+      {
+        "rota": "g-entrega",
+        "w": 1280,
+        "target": "pre",
+        "html": "<pre class=\"ui-code\" data-testid=\"master-prompt-text\" style=\"max-height: 720px;\">",
+        "summary": "Fix any of the following:\n  Element should have focusable content\n  Element should be focusable"
+      }
+    ]
+  },
+  {
+    "id": "nested-interactive",
+    "impact": "serious",
+    "help": "Interactive controls must not be nested",
+    "tags": [
+      "wcag2a",
+      "wcag412"
+    ],
+    "total": 4,
+    "rotas": [
+      "g-preview",
+      "m-preview"
+    ],
+    "porLargura": {
+      "375": 2,
+      "1280": 2
+    },
+    "exemplos": [
+      {
+        "rota": "g-preview",
+        "w": 1280,
+        "target": ".lp-frame",
+        "html": "<div class=\"lp-frame\" aria-label=\"Prévia do computador\" role=\"img\" style=\"width: 644px; height: 402.5px;\">",
+        "summary": "Fix any of the following:\n  Element has focusable descendants. Move them outside of the element, or remove them."
+      },
+      {
+        "rota": "g-preview",
+        "w": 375,
+        "target": ".lp-frame",
+        "html": "<div class=\"lp-frame\" aria-label=\"Prévia do computador\" role=\"img\" style=\"width: 343px; height: 214.375px;\">",
+        "summary": "Fix any of the following:\n  Element has focusable descendants. Move them outside of the element, or remove them."
+      }
+    ]
+  },
+  {
+    "id": "landmark-unique",
+    "impact": "moderate",
+    "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+    "tags": [
+      "best-practice"
+    ],
+    "total": 8,
+    "rotas": [
+      "g-navegacao",
+      "m-navegacao"
+    ],
+    "porLargura": {
+      "1280": 8
+    },
+    "exemplos": [
+      {
+        "rota": "g-navegacao",
+        "w": 1280,
+        "target": ".shell-crumbs",
+        "html": "<nav class=\"shell-crumbs\" aria-label=\"Você está em\"><ol><li><a href=\"#/\">Início</a></li><li><span>Construtor guiado</span></li><li><span aria-current=\"page\">Hea",
+        "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+      },
+      {
+        "rota": "g-navegacao",
+        "w": 1280,
+        "target": "header[aria-label=\"Header Linha Essencial\"] > .nvs-hbar__in > .nvs-hrow--split.nvs-hrow > .nvs-hrow__center > .nvs-hnav[aria-label=\"Principal\"]",
+        "html": "<nav aria-label=\"Principal\" class=\"nvs-hnav\">",
+        "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+      },
+      {
+        "rota": "m-navegacao",
+        "w": 1280,
+        "target": ".shell-crumbs",
+        "html": "<nav class=\"shell-crumbs\" aria-label=\"Você está em\"><ol><li><a href=\"#/\">Início</a></li><li><a href=\"#/livre\">Identidade</a></li><li><span aria-current=\"page\">N",
+        "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+      }
+    ]
+  },
+  {
+    "id": "heading-order",
+    "impact": "moderate",
+    "help": "Heading levels should only increase by one",
+    "tags": [
+      "best-practice"
+    ],
+    "total": 6,
+    "rotas": [
+      "g-desktop",
+      "g-mobile",
+      "m-desktop",
+      "m-mobile"
+    ],
+    "porLargura": {
+      "375": 2,
+      "1280": 4
+    },
+    "exemplos": [
+      {
+        "rota": "g-desktop",
+        "w": 1280,
+        "target": "#lay-fam-sidebar-integral",
+        "html": "<h3 class=\"lay-section__title\" id=\"lay-fam-sidebar-integral\">Sidebar integral <span class=\"lay-section__count\">5 modelos</span></h3>",
+        "summary": "Fix any of the following:\n  Heading order invalid"
+      },
+      {
+        "rota": "g-mobile",
+        "w": 1280,
+        "target": "section[aria-label=\"Navegação inferior\"] > .lay-section__head > h3",
+        "html": "<h3 class=\"lay-section__title\">Navegação inferior <span class=\"lay-section__count\">6 modelos</span></h3>",
+        "summary": "Fix any of the following:\n  Heading order invalid"
+      }
+    ]
+  }
+]

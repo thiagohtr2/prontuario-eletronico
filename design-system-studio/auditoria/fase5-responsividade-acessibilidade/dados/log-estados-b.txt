@@ -1,0 +1,10 @@
+1280 busca-ctrlk fit=true h=828/900 body=751 foot=null out=0 hOv=0 focus0=true esc=0 esc→close=true back=false axe=color-contrast:10,nested-interactive:28
+1280 busca-botao fit=true h=828/900 body=751 foot=null out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=color-contrast:10,nested-interactive:28
+1280 previa-landing fit=true h=828/900 body=669 foot=73 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=color-contrast:1,landmark-banner-is-top-level:1,landmark-contentinfo-is-top-level:1
+1280 previa-login fit=true h=828/900 body=669 foot=73 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=
+1280 previa-cadastro fit=true h=828/900 body=669 foot=73 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=
+1280 prompt-individual fit=true h=782/900 body=600 foot=73 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=scrollable-region-focusable:1
+1280 editor-componente fit=true h=828/900 body=669 foot=73 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=aria-required-children:5,color-contrast:4
+1280 editor-template fit=true h=809/900 body=650 foot=73 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=color-contrast:8,landmark-no-duplicate-banner:1,scrollable-region-focusable:1
+1280 visualizador-inspiracao fit=true h=828/900 body=669 foot=73 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=color-contrast:6,landmark-no-duplicate-banner:1,landmark-unique:1
+1280 detalhe-navegacao fit=true h=828/900 body=669 foot=73 out=0 hOv=0 focus0=true esc=0 esc→close=true back=true axe=color-contrast:2,heading-order:1,landmark-no-duplicate-banner:1

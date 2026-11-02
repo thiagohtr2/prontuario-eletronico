@@ -1,0 +1,56 @@
+1280 home color-contrast:7 label-content-name-mismatch:2 3425ms
+1280 livre color-contrast:17 label-content-name-mismatch:2 1592ms
+1280 g-objetivo color-contrast:20 label-content-name-mismatch:2 2286ms
+1280 g-entrada color-contrast:21 label-content-name-mismatch:2 2203ms
+1280 g-desktop color-contrast:139 heading-order:1 label-content-name-mismatch:44 6435ms
+1280 g-mobile color-contrast:29 heading-order:1 label-content-name-mismatch:5 scrollable-region-focusable:1 5890ms
+1280 g-revisao color-contrast:29 label-content-name-mismatch:2 2436ms
+1280 g-preview color-contrast:28 label-content-name-mismatch:5 nested-interactive:1 target-size:8 2733ms
+1280 g-identidade color-contrast:81 label-content-name-mismatch:2 3314ms
+1280 g-navegacao aria-allowed-attr:3 color-contrast:54 label-content-name-mismatch:29 landmark-unique:4 8998ms
+1280 g-componentes color-contrast:31 label-content-name-mismatch:18 2233ms
+1280 g-entrega color-contrast:15 label-content-name-mismatch:2 scrollable-region-focusable:1 1442ms
+1280 m-objetivo color-contrast:12 label-content-name-mismatch:2 1521ms
+1280 m-landing color-contrast:61 label-content-name-mismatch:2 4679ms
+1280 m-login color-contrast:78 label-content-name-mismatch:2 2935ms
+1280 m-cadastro color-contrast:14 label-content-name-mismatch:2 2652ms
+1280 m-desktop color-contrast:132 heading-order:1 label-content-name-mismatch:44 6948ms
+1280 m-mobile color-contrast:21 heading-order:1 label-content-name-mismatch:5 scrollable-region-focusable:1 7360ms
+1280 m-preview color-contrast:21 label-content-name-mismatch:5 nested-interactive:1 target-size:8 2633ms
+1280 m-cores color-contrast:74 label-content-name-mismatch:2 3633ms
+1280 m-navegacao aria-allowed-attr:3 color-contrast:50 label-content-name-mismatch:29 landmark-unique:4 4398ms
+1280 m-componentes color-contrast:75 label-content-name-mismatch:18 2188ms
+1280 m-inspiracao color-contrast:50 label-content-name-mismatch:22 7325ms
+1280 m-templates color-contrast:33 label-content-name-mismatch:30 4919ms
+1280 prompt color-contrast:9 label-content-name-mismatch:2 scrollable-region-focusable:1 2069ms
+1280 exportar color-contrast:8 label-content-name-mismatch:2 1262ms
+1280 validacao color-contrast:17 label-content-name-mismatch:2 1621ms
+1280 projeto color-contrast:15 label-content-name-mismatch:2 1239ms
+375 home  2194ms
+375 livre color-contrast:9 1893ms
+375 g-objetivo color-contrast:6 1638ms
+375 g-entrada color-contrast:7 1412ms
+375 g-desktop color-contrast:125 heading-order:1 label-content-name-mismatch:42 4273ms
+375 g-mobile color-contrast:7 label-content-name-mismatch:3 scrollable-region-focusable:1 3243ms
+375 g-revisao color-contrast:15 1811ms
+375 g-preview color-contrast:15 label-content-name-mismatch:3 nested-interactive:1 target-size:14 2755ms
+375 g-identidade color-contrast:65 3500ms
+375 g-navegacao aria-allowed-attr:3 color-contrast:25 label-content-name-mismatch:27 5513ms
+375 g-componentes color-contrast:5 label-content-name-mismatch:16 3691ms
+375 g-entrega color-contrast:3 scrollable-region-focusable:1 2505ms
+375 m-objetivo color-contrast:4 2350ms
+375 m-landing color-contrast:47 6207ms
+375 m-login color-contrast:70 5853ms
+375 m-cadastro color-contrast:4 2480ms
+375 m-desktop color-contrast:124 heading-order:1 label-content-name-mismatch:42 7293ms
+375 m-mobile color-contrast:5 label-content-name-mismatch:3 scrollable-region-focusable:1 5930ms
+375 m-preview color-contrast:13 label-content-name-mismatch:3 nested-interactive:1 target-size:14 1755ms
+375 m-cores color-contrast:63 4490ms
+375 m-navegacao aria-allowed-attr:3 color-contrast:32 label-content-name-mismatch:27 3384ms
+375 m-componentes color-contrast:5 label-content-name-mismatch:16 1810ms
+375 m-inspiracao color-contrast:35 label-content-name-mismatch:20 5048ms
+375 m-templates color-contrast:29 label-content-name-mismatch:28 1546ms
+375 prompt color-contrast:1 scrollable-region-focusable:1 1289ms
+375 exportar  1285ms
+375 validacao color-contrast:9 1200ms
+375 projeto color-contrast:7 1182ms

@@ -35,6 +35,12 @@ async function go(page, route) {
 
 async function setProject(page, patch) {
   // Escreve diretamente no estado persistido e recarrega (atalho só para sondagem).
+  const has = await page.evaluate(() => Boolean(JSON.parse(localStorage.getItem('atelier-ui:studio:v1') || '{}').state))
+  if (!has) {
+    await go(page, '/modulos/objetivo')
+    await page.getByTestId('project-name').fill('Sonda')
+    await page.waitForTimeout(200)
+  }
   await page.evaluate((patch) => {
     const raw = JSON.parse(localStorage.getItem('atelier-ui:studio:v1') || '{}')
     const deep = (a, b) => {

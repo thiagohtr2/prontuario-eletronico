@@ -1,11 +1,76 @@
-run 1 /(home) ready=283 lcp=340 js=874KB load=18.36
-node:internal/process/promises:394
-    triggerUncaughtException(err, true /* fromPromise */);
-    ^
-
-page.waitForTimeout: Target page, context or browser has been closed
-    at /home/user/prontuario-eletronico/design-system-studio/auditoria/fase6-tecnica/scripts/perf-carga.cjs:28:18 {
-  log: []
-}
-
-Node.js v22.23.4
+run 1 /(home) ready=610 lcp=688 js=874KB load=7.33
+run 1 /livre ready=698 lcp=896 js=869KB load=7.33
+run 1 /guiado/objetivo ready=586 lcp=676 js=1689KB load=7.78
+run 1 /modulos/desktop ready=1269 lcp=1464 js=1198KB load=7.78
+run 1 /modulos/mobile ready=1378 lcp=1480 js=1198KB load=8.36
+run 1 /modulos/componentes ready=478 lcp=736 js=1242KB load=8.36
+run 1 /modulos/navegacao ready=1018 lcp=1088 js=1202KB load=9.29
+run 1 /modulos/inspiracao ready=2391 lcp=2940 js=1432KB load=9.29
+run 1 /modulos/templates ready=940 lcp=992 js=1329KB load=9.43
+run 1 /modulos/landing ready=1153 lcp=1300 js=1274KB load=11.4
+run 1 /modulos/cores ready=482 lcp=580 js=1118KB load=11.4
+run 1 /prompt ready=473 lcp=540 js=1103KB load=12.89
+run 2 /(home) ready=605 lcp=704 js=874KB load=12.89
+run 2 /livre ready=852 lcp=976 js=869KB load=14.18
+run 2 /guiado/objetivo ready=699 lcp=760 js=1689KB load=14.18
+run 2 /modulos/desktop ready=825 lcp=888 js=1198KB load=14.08
+run 2 /modulos/mobile ready=1178 lcp=1288 js=1198KB load=14.08
+run 2 /modulos/componentes ready=483 lcp=552 js=1242KB load=15.68
+run 2 /modulos/navegacao ready=1809 lcp=1896 js=1202KB load=15.22
+run 2 /modulos/inspiracao ready=2085 lcp=2856 js=1432KB load=15.22
+run 2 /modulos/templates ready=674 lcp=760 js=1329KB load=15.45
+run 2 /modulos/landing ready=1282 lcp=1392 js=1274KB load=15.65
+run 2 /modulos/cores ready=1396 lcp=1500 js=1118KB load=15.65
+run 2 /prompt ready=1207 lcp=1320 js=1103KB load=15.6
+run 3 /(home) ready=859 lcp=912 js=874KB load=16.99
+run 3 /livre ready=295 lcp=364 js=869KB load=16.99
+run 3 /guiado/objetivo ready=1373 lcp=1520 js=1689KB load=16.59
+run 3 /modulos/desktop ready=1626 lcp=1736 js=1198KB load=16.59
+run 3 /modulos/mobile ready=1251 lcp=1336 js=1198KB load=16.7
+run 3 /modulos/componentes ready=799 lcp=1132 js=1242KB load=16.97
+run 3 /modulos/navegacao ready=1027 lcp=1072 js=1202KB load=16.97
+run 3 /modulos/inspiracao ready=1591 lcp=2156 js=1432KB load=16.57
+run 3 /modulos/templates ready=659 lcp=760 js=1329KB load=16.57
+run 3 /modulos/landing ready=720 lcp=812 js=1274KB load=16.04
+run 3 /modulos/cores ready=479 lcp=592 js=1118KB load=16.04
+run 3 /prompt ready=401 lcp=504 js=1103KB load=15.56
+run 4 /(home) ready=414 lcp=480 js=874KB load=15.56
+run 4 /livre ready=457 lcp=544 js=869KB load=15.43
+run 4 /guiado/objetivo ready=871 lcp=980 js=1689KB load=15.43
+run 4 /modulos/desktop ready=1053 lcp=1124 js=1198KB load=15.56
+run 4 /modulos/mobile ready=1479 lcp=1684 js=1198KB load=15.56
+run 4 /modulos/componentes ready=665 lcp=948 js=1242KB load=14.55
+run 4 /modulos/navegacao ready=1203 lcp=1316 js=1202KB load=14.55
+run 4 /modulos/inspiracao ready=1874 lcp=568 js=1432KB load=14.99
+run 4 /modulos/templates ready=1063 lcp=1120 js=1329KB load=16.19
+run 4 /modulos/landing ready=1224 lcp=1404 js=1274KB load=16.19
+run 4 /modulos/cores ready=548 lcp=680 js=1118KB load=18.02
+run 4 /prompt ready=471 lcp=660 js=1103KB load=18.02
+run 5 /(home) ready=816 lcp=940 js=874KB load=17.7
+run 5 /livre ready=1410 lcp=1464 js=869KB load=17.7
+run 5 /guiado/objetivo ready=1097 lcp=1288 js=1689KB load=18.84
+run 5 /modulos/desktop ready=1615 lcp=1840 js=1198KB load=19.74
+run 5 /modulos/mobile ready=1374 lcp=1452 js=1198KB load=19.74
+run 5 /modulos/componentes ready=611 lcp=828 js=1242KB load=19.6
+run 5 /modulos/navegacao ready=1401 lcp=1484 js=1202KB load=19.6
+run 5 /modulos/inspiracao ready=2856 lcp=3240 js=1432KB load=19.55
+run 5 /modulos/templates ready=507 lcp=556 js=1329KB load=19.91
+run 5 /modulos/landing ready=655 lcp=724 js=1274KB load=19.91
+run 5 /modulos/cores ready=448 lcp=580 js=1118KB load=18.87
+run 5 /prompt ready=317 lcp=408 js=1103KB load=18.87
+┌─────────────────────┬─────┬──────┬────────┬─────┬──────┬──────┬─────────┬────────┬───────┬────────┐
+│ (index)             │ fcp │ lcp  │ ready  │ cls │ tbt  │ jsKB │ jsFiles │ fontKB │ nodes │ heapMB │
+├─────────────────────┼─────┼──────┼────────┼─────┼──────┼──────┼─────────┼────────┼───────┼────────┤
+│ (home)              │ 440 │ 704  │ 609.5  │ 0   │ 0    │ 874  │ 6       │ 47     │ 451   │ 5      │
+│ livre               │ 520 │ 896  │ 698.4  │ 0   │ 0    │ 869  │ 6       │ 47     │ 570   │ 5      │
+│ guiado/objetivo     │ 628 │ 980  │ 871.1  │ 0   │ 52   │ 1689 │ 28      │ 47     │ 544   │ 6      │
+│ modulos/desktop     │ 580 │ 1464 │ 1269   │ 0   │ 597  │ 1198 │ 14      │ 47     │ 5625  │ 9      │
+│ modulos/mobile      │ 468 │ 1452 │ 1374.4 │ 0   │ 213  │ 1198 │ 14      │ 47     │ 5539  │ 8      │
+│ modulos/componentes │ 404 │ 828  │ 611.2  │ 0   │ 100  │ 1242 │ 14      │ 108    │ 1154  │ 6      │
+│ modulos/navegacao   │ 476 │ 1316 │ 1202.8 │ 0   │ 536  │ 1202 │ 16      │ 122    │ 4039  │ 10     │
+│ modulos/inspiracao  │ 568 │ 2856 │ 2085.3 │ 0   │ 1951 │ 1432 │ 14      │ 144    │ 9111  │ 11     │
+│ modulos/templates   │ 516 │ 760  │ 673.8  │ 0   │ 108  │ 1329 │ 17      │ 105    │ 2409  │ 7      │
+│ modulos/landing     │ 480 │ 1300 │ 1153   │ 0   │ 189  │ 1274 │ 16      │ 105    │ 2609  │ 7      │
+│ modulos/cores       │ 332 │ 592  │ 481.7  │ 0   │ 20   │ 1118 │ 15      │ 47     │ 2690  │ 6      │
+│ prompt              │ 300 │ 540  │ 471.3  │ 0   │ 0    │ 1103 │ 13      │ 87     │ 377   │ 6      │
+└─────────────────────┴─────┴──────┴────────┴─────┴──────┴──────┴─────────┴────────┴───────┴────────┘

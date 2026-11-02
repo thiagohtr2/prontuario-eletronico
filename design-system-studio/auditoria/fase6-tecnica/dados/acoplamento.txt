@@ -1,0 +1,51 @@
+Dependências entre áreas (quem importa -> quem é importado: nº de imports)
+App.tsx -> core(1), shell(1)
+core -> modules/color(1)
+main.tsx -> App(1)
+modules/color -> core(10), ui(2), prompt(2)
+modules/components -> core(28), ui(3), prompt(2)
+modules/entry -> core(18), ui(5), prompt(1)
+modules/guided -> core(7), modules/layouts(3), ui(3), modules/entry(3), modules/color(1), modules/components(1), modules/navigation(1), modules/preview(1), modules/project(1), modules/prompts(1), shell(1), prompt(1)
+modules/home -> core(4), shell(2), ui(2), modules/color(1), modules/entry(1), modules/inspiration(1), modules/layouts(1), modules/navigation(1), modules/templates(1)
+modules/inspiration -> core(39), ui(2), prompt(1)
+modules/layouts -> core(15), ui(5), prompt(2)
+modules/navigation -> core(16), ui(5), prompt(2)
+modules/preview -> core(7), modules/layouts(3), ui(2), modules/entry(2), modules/navigation(2), modules/color(1)
+modules/project -> core(3), ui(3), modules/home(1)
+modules/prompts -> prompt(8), core(6), ui(3), modules/color(1), shell(1)
+modules/templates -> core(22), ui(2), prompt(1)
+modules/validation -> core(2), prompt(2), ui(1), validation-runner(1)
+prompt -> core(20), modules/layouts(4), modules/color(3), modules/inspiration(3), modules/templates(3), modules/components(2), modules/navigation(2), modules/entry(1), ui(1)
+shell -> core(3), ui(2)
+ui -> core(2)
+
+Fan-in (quantas áreas importam cada área):
+  core: 17
+  ui: 15
+  prompt: 10
+  modules/color: 6
+  modules/entry: 4
+  modules/layouts: 4
+  modules/navigation: 4
+  shell: 4
+  modules/inspiration: 2
+  modules/templates: 2
+  modules/components: 2
+  App: 1
+  modules/preview: 1
+  modules/project: 1
+  modules/prompts: 1
+  modules/home: 1
+  validation-runner: 1
+
+catalog*.ts importando .tsx (viola regra 2): []
+
+Dependências mútuas entre áreas:
+  modules/inspiration <-> prompt
+  modules/components <-> prompt
+  modules/layouts <-> prompt
+  modules/navigation <-> prompt
+  modules/templates <-> prompt
+  modules/entry <-> prompt
+  modules/color <-> prompt
+  core <-> modules/color

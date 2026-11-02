@@ -1,0 +1,101 @@
+
+### aria-allowed-attr [critical] total=12 rotas=2 porLargura={"375":6,"1280":6} tags=wcag2a,wcag412
+Elements must only use supported ARIA attributes
+  - g-navegacao@1280: div[data-nv-trigger="nvh9-suggest"] > input[aria-haspopup="listbox"] :: <input type="search" placeholder="Buscar produtos, marcas e lojas" aria-label="Buscar" aria-expanded="false" aria-haspopup="listbox" value="">
+      Fix all of the following: |   ARIA attribute is not allowed: aria-expanded="false"
+  - g-navegacao@1280: div[data-nv-trigger="nvh27-suggest"] > input[aria-haspopup="listbox"] :: <input type="search" placeholder="Buscar artigos, dúvidas e guias" aria-label="Buscar" aria-expanded="false" aria-haspopup="listbox" value="">
+      Fix all of the following: |   ARIA attribute is not allowed: aria-expanded="false"
+
+### color-contrast [serious] total=1871 rotas=28 porLargura={"375":730,"1280":1141} tags=wcag2aa,wcag143
+Elements must meet minimum color contrast ratio thresholds
+  - home@1280: .shell-brand__sub :: <span class="shell-brand__sub">Design System Studio</span>
+      Fix any of the following: |   Element has insufficient color contrast of 4.12 (foreground color: #7c7c87, background color: #ffffff, font size: 9.0pt (12px), font weight: normal). Expected contrast rati
+  - home@1280: .shell-search-btn > span :: <span>Buscar funcionalidades</span>
+      Fix any of the following: |   Element has insufficient color contrast of 4.12 (foreground color: #7c7c87, background color: #ffffff, font size: 10.9pt (14.5px), font weight: normal). Expected contrast r
+  - livre@375: #free-estrutura :: <h2 id="free-estrutura">Estrutura</h2>
+      Fix any of the following: |   Element has insufficient color contrast of 4.12 (foreground color: #7c7c87, background color: #ffffff, font size: 10.1pt (13.5px), font weight: normal). Expected contrast r
+  - livre@375: a[data-testid="module-cadastro"] > span:nth-child(2) > .free-card__status[data-done="false"] > .u-truncate :: <span class="u-truncate">Ainda não escolhido</span>
+      Fix any of the following: |   Element has insufficient color contrast of 4.12 (foreground color: #7c7c87, background color: #ffffff, font size: 10.1pt (13.5px), font weight: normal). Expected contrast r
+
+### label-content-name-mismatch [serious] total=516 rotas=28 porLargura={"375":230,"1280":286} tags=wcag21a,wcag253
+Elements must have their visible text as part of their accessible name
+  - home@1280: .shell-brand :: <a class="shell-brand" aria-label="Atelier UI — início" href="#/">
+      Fix any of the following: |   Text inside the element is not included in the accessible name
+  - home@1280: .shell-search-btn :: <button type="button" class="shell-search-btn" aria-label="Buscar funcionalidades (Ctrl+K)">
+      Fix any of the following: |   Text inside the element is not included in the accessible name
+  - g-desktop@375: .ui-option[data-selected="true"] > .ui-option__hit :: <button type="button" class="ui-option__hit" aria-pressed="true" aria-label="Sidebar integral clássica. Menu fixo do lado esquerdo, de cima a baixo, com o logo 
+      Fix any of the following: |   Text inside the element is not included in the accessible name
+  - g-desktop@375: section[aria-labelledby="lay-fam-sidebar-integral"] > .lay-desk-grid > .ui-option[data-selected="false"]:nth-child(2) > .ui-option__hit :: <button type="button" class="ui-option__hit" aria-pressed="false" aria-label="Sidebar integral com rodapé. Igual ao menu lateral clássico, mas com uma faixa de 
+      Fix any of the following: |   Text inside the element is not included in the accessible name
+
+### target-size [serious] total=44 rotas=2 porLargura={"375":28,"1280":16} tags=wcag22aa,wcag258
+All touch targets must be 24px large, or leave sufficient space
+  - g-preview@1280: .nvs-si[aria-current="page"] :: <button type="button" class="nvs-si" aria-current="page">
+      Fix any of the following: |   Target has insufficient size (122.3px by 18.1px, should be at least 24px by 24px) |   Target has insufficient space to its closest neighbors. Safe clickable space has a diame
+  - g-preview@1280: ul[aria-labelledby="nvs1-g0"] > li:nth-child(2) > .nvs-si :: <button type="button" class="nvs-si">
+      Fix any of the following: |   Target has insufficient size (122.3px by 18.1px, should be at least 24px by 24px) |   Target has insufficient space to its closest neighbors. Safe clickable space has a diame
+  - g-preview@375: .nvs-ws :: <button type="button" class="nvs-ws" aria-label="Espaço atual: Matriz — São Paulo. Trocar" data-nv-trigger="nvs1-ws-bottom" aria-expanded="false" aria-haspopup=
+      Fix any of the following: |   Target has insufficient size (64px by 11.4px, should be at least 24px by 24px) |   Target has insufficient space to its closest neighbors. Safe clickable space has a diameter
+  - m-preview@375: .nvs-ws :: <button type="button" class="nvs-ws" aria-label="Espaço atual: Matriz — São Paulo. Trocar" data-nv-trigger="nvs2-ws-bottom" aria-expanded="false" aria-haspopup=
+      Fix any of the following: |   Target has insufficient size (64px by 11.4px, should be at least 24px by 24px) |   Target has insufficient space to its closest neighbors. Safe clickable space has a diameter
+
+### scrollable-region-focusable [serious] total=8 rotas=4 porLargura={"375":4,"1280":4} tags=wcag2a,wcag211,wcag213
+Scrollable region must have keyboard access
+  - g-mobile@1280: div[data-detail="full"] > .lay-ph-body > .lay-ph-middle > .lay-ph-content :: <div class="lay-ph-content" style="overflow-y: auto;">
+      Fix any of the following: |   Element should have focusable content |   Element should be focusable
+  - g-entrega@1280: pre :: <pre class="ui-code" data-testid="master-prompt-text" style="max-height: 720px;">
+      Fix any of the following: |   Element should have focusable content |   Element should be focusable
+
+### nested-interactive [serious] total=4 rotas=2 porLargura={"375":2,"1280":2} tags=wcag2a,wcag412
+Interactive controls must not be nested
+  - g-preview@1280: .lp-frame :: <div class="lp-frame" aria-label="Prévia do computador" role="img" style="width: 644px; height: 402.5px;">
+      Fix any of the following: |   Element has focusable descendants. Move them outside of the element, or remove them.
+  - g-preview@375: .lp-frame :: <div class="lp-frame" aria-label="Prévia do computador" role="img" style="width: 343px; height: 214.375px;">
+      Fix any of the following: |   Element has focusable descendants. Move them outside of the element, or remove them.
+
+### landmark-unique [moderate] total=8 rotas=2 porLargura={"1280":8} tags=best-practice
+Landmarks should have a unique role or role/label/title (i.e. accessible name) combination
+  - g-navegacao@1280: .shell-crumbs :: <nav class="shell-crumbs" aria-label="Você está em"><ol><li><a href="#/">Início</a></li><li><span>Construtor guiado</span></li><li><span aria-current="page">Hea
+      Fix any of the following: |   The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable
+  - g-navegacao@1280: header[aria-label="Header Linha Essencial"] > .nvs-hbar__in > .nvs-hrow--split.nvs-hrow > .nvs-hrow__center > .nvs-hnav[aria-label="Principal"] :: <nav aria-label="Principal" class="nvs-hnav">
+      Fix any of the following: |   The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable
+  - m-navegacao@1280: .shell-crumbs :: <nav class="shell-crumbs" aria-label="Você está em"><ol><li><a href="#/">Início</a></li><li><a href="#/livre">Identidade</a></li><li><span aria-current="page">N
+      Fix any of the following: |   The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable
+
+### heading-order [moderate] total=6 rotas=4 porLargura={"375":2,"1280":4} tags=best-practice
+Heading levels should only increase by one
+  - g-desktop@1280: #lay-fam-sidebar-integral :: <h3 class="lay-section__title" id="lay-fam-sidebar-integral">Sidebar integral <span class="lay-section__count">5 modelos</span></h3>
+      Fix any of the following: |   Heading order invalid
+  - g-mobile@1280: section[aria-label="Navegação inferior"] > .lay-section__head > h3 :: <h3 class="lay-section__title">Navegação inferior <span class="lay-section__count">6 modelos</span></h3>
+      Fix any of the following: |   Heading order invalid
+
+
+## semântica por rota (1280)
+home main 1 nav [] h1 ["Do site que você imagina ao site que a IA realment"] h1Ocultos 0 heads 4 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+livre main 1 nav ["Você está em"] h1 ["Todos os módulos"] h1Ocultos 0 heads 6 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+g-objetivo main 1 nav ["Você está em","Etapas do construtor guiado"] h1 ["Objetivo do projeto"] h1Ocultos 0 heads 5 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+g-entrada main 1 nav ["Você está em","Etapas do construtor guiado"] h1 ["Landing, login e cadastro"] h1Ocultos 0 heads 1 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+g-desktop main 1 nav ["Você está em","Etapas do construtor guiado"] h1 ["Arquitetura do computador"] h1Ocultos 0 heads 10 saltos 1 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+g-mobile main 1 nav ["Você está em","Etapas do construtor guiado"] h1 ["Arquitetura do celular"] h1Ocultos 0 heads 10 saltos 1 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+g-revisao main 1 nav ["Você está em","Etapas do construtor guiado"] h1 ["Revisão do esqueleto"] h1Ocultos 0 heads 3 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+g-preview main 1 nav ["Você está em","Etapas do construtor guiado","Menu lateral","Principal"] h1 ["Prévia integrada"] h1Ocultos 0 heads 1 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+g-identidade main 1 nav ["Você está em","Etapas do construtor guiado"] h1 ["Identidade visual"] h1Ocultos 0 heads 1 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+g-navegacao main 1 nav ["Você está em","Etapas do construtor guiado","Principal","Principal, primeira parte","Principal, segunda parte","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Você está em","Principal","Principal, primeira parte","Principal, segunda parte","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal"] h1 ["Headers e sidebars"] h1Ocultos 0 heads 1 saltos 0 live ["/polite","status/polite"] title Atelier UI · Design System Studio lang pt-BR
+g-componentes main 1 nav ["Você está em","Etapas do construtor guiado"] h1 ["Componentes"] h1Ocultos 0 heads 3 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+g-entrega main 1 nav ["Você está em","Etapas do construtor guiado"] h1 ["Master Prompt"] h1Ocultos 0 heads 1 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+m-objetivo main 1 nav ["Você está em"] h1 ["Objetivo do projeto"] h1Ocultos 0 heads 5 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+m-landing main 1 nav ["Você está em"] h1 ["Landing page"] h1Ocultos 24 heads 3 saltos 0 live ["/polite","status/polite"] title Atelier UI · Design System Studio lang pt-BR
+m-login main 1 nav ["Você está em"] h1 ["Login"] h1Ocultos 2 heads 2 saltos 0 live ["/polite","status/polite"] title Atelier UI · Design System Studio lang pt-BR
+m-cadastro main 1 nav ["Você está em"] h1 ["Cadastro"] h1Ocultos 0 heads 2 saltos 0 live ["/polite","status/polite"] title Atelier UI · Design System Studio lang pt-BR
+m-desktop main 1 nav ["Você está em"] h1 ["Arquitetura desktop"] h1Ocultos 0 heads 13 saltos 1 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+m-mobile main 1 nav ["Você está em"] h1 ["Arquitetura mobile"] h1Ocultos 0 heads 12 saltos 1 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+m-preview main 1 nav ["Você está em","Menu lateral","Principal"] h1 ["Live Site Preview"] h1Ocultos 0 heads 1 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+m-cores main 1 nav ["Você está em"] h1 ["Color System"] h1Ocultos 0 heads 1 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+m-navegacao main 1 nav ["Você está em","Principal","Principal, primeira parte","Principal, segunda parte","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Você está em","Principal","Principal, primeira parte","Principal, segunda parte","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal","Principal"] h1 ["Navigation Showcase"] h1Ocultos 0 heads 1 saltos 0 live ["/polite","status/polite"] title Atelier UI · Design System Studio lang pt-BR
+m-componentes main 1 nav ["Você está em"] h1 ["Componentes"] h1Ocultos 0 heads 3 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+m-inspiracao main 1 nav ["Você está em"] h1 ["Inspiration Gallery"] h1Ocultos 20 heads 1 saltos 0 live ["/polite","status/polite"] title Atelier UI · Design System Studio lang pt-BR
+m-templates main 1 nav ["Você está em"] h1 ["Template Studio"] h1Ocultos 8 heads 3 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+prompt main 1 nav ["Você está em"] h1 ["Central de Prompts"] h1Ocultos 0 heads 1 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+exportar main 1 nav ["Você está em"] h1 ["Exportar e importar"] h1Ocultos 0 heads 8 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+validacao main 1 nav ["Você está em"] h1 ["Responsive Validation Lab"] h1Ocultos 0 heads 7 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
+projeto main 1 nav ["Você está em"] h1 ["Projeto e versões"] h1Ocultos 0 heads 5 saltos 0 live ["status/polite"] title Atelier UI · Design System Studio lang pt-BR
