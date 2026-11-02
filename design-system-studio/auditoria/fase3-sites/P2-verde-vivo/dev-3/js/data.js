@@ -99,7 +99,7 @@
     var W = o.w || 200, H = o.h || 160, h = VV.hash(key);
     var tone = (o.tone || (h % 3) + 1);
     var withLeaves = o.leaves !== false;
-    var cx = W / 2, base = H * 0.66, potW = W * 0.34, potH = H * 0.2, top = base - potH * 0.25;
+    var cx = W / 2, base = H * (o.base || 0.66), potW = W * 0.34, potH = H * 0.2, top = base - potH * 0.25;
     var n = 5 + (h % 3), leaves = '';
     if (withLeaves) {
       for (var i = 0; i < n; i++) {

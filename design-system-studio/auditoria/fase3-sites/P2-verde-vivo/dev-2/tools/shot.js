@@ -1,5 +1,7 @@
+// Capturas de tela: node tools/shot.js '[{"name":"x","w":1280,"h":800,"hash":"#/catalogo","full":true,"scrollAll":true,"touch":false,"js":"..."}]' (grava em _shots/)
 const { chromium } = require('playwright');
-const D = '/tmp/claude-0/-home-user-prontuario-eletronico/04aab11d-3446-5241-850f-d641810c4069/scratchpad/devs/P2-verde-vivo/dev-2/';
+require('fs').mkdirSync(require('path').resolve(__dirname, '..', '_shots'), { recursive: true });
+const D = require('path').resolve(__dirname, '..') + '/';
 const OUT = D + '_shots/';
 (async () => {
   const b = await chromium.launch();

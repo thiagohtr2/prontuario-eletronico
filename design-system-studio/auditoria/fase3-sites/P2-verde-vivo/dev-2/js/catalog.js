@@ -327,7 +327,7 @@
     if (p.cuid) specs += spec('badge-check', 'Cuidado', VV.CUID[p.cuid]);
     if (p.pet !== null) specs += spec('paw-print', 'Pets', p.pet ? 'Seguro para pets' : 'Tóxica se ingerida');
     specs += spec('package', 'Envio', p.cat === 'vasos' ? 'Embalagem protegida' : 'Caixa com adaptação');
-    pBody.innerHTML = '<div class="pm"><div class="pm__media"><div class="art-frame">' + VV.art.product(p, 'main') + '</div></div>' +
+    pBody.innerHTML = '<div class="pm"><div class="pm__media"><div class="art-frame">' + VV.art.product(p, VV.isMobile() ? 'main' : 'tall') + '</div></div>' +
       '<div class="pm__info"><span class="pcard__label' + (out ? ' is-off' : p.stock <= 3 ? ' is-warn' : '') + '" style="justify-self:start">' + esc(out ? 'Esgotado' : p.stock <= 3 ? 'Últimas unidades' : p.tag) + '</span>' +
       '<h2 id="pm-title">' + esc(p.name) + '</h2><p class="pm__sci">' + esc(p.sci) + '</p>' +
       '<p>' + esc(p.desc) + '</p><div class="pm__specs">' + specs + '</div>' +

@@ -259,7 +259,7 @@
 
   var brl = (typeof Intl !== 'undefined') ? new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }) : null;
   VV.fmt = function (n) {
-    return brl ? brl.format(n).replace(/ /g, ' ') : 'R$ ' + n.toFixed(2).replace('.', ',');
+    return brl ? brl.format(n) : 'R$ ' + n.toFixed(2).replace('.', ',');
   };
 
   VV.norm = function (s) {

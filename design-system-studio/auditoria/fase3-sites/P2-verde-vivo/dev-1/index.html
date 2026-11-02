@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Verde Vivo — plantas que transformam cantos em jardins</title>
+  <meta name="description" content="Verde Vivo: loja de plantas online (demonstração com dados fictícios). Catálogo com busca, filtros, favoritos e sacola.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232d6a4f'/%3E%3Cpath d='M15 25a9 9 0 0 1-1.5-17.9C20.7 5.7 22.6 5 25 2c1.3 2.5 2.5 5.2 2.5 10 0 7-6 13-12.5 13Z' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round' transform='translate(-3 3) scale(.85)'/%3E%3C/svg%3E">
+  <!-- Fraunces (títulos, peso 650) + Inter (textos). Sem internet, caem para Georgia / system-ui. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&amp;family=Inter:wght@400..700&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Faixa de anúncio (36 px; 32 px no celular) -->
+  <aside class="announce" id="announce" aria-label="Aviso da loja"></aside>
+
+  <!-- Header: duas linhas no desktop; barra + busca + faixa de categorias no celular -->
+  <header class="site-header" id="site-header"></header>
+
+  <main id="conteudo" tabindex="-1">
+    <noscript><div class="container" style="padding:48px 0">A demonstração da Verde Vivo precisa de JavaScript ativado.</div></noscript>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <!-- Menu inferior flutuante (somente < 768 px) -->
+  <nav class="dock" id="dock" aria-label="Navegação inferior"></nav>
+
+  <!-- Sobreposições -->
+  <div class="mmenu" id="mobile-menu" hidden></div>
+  <div class="sscreen" id="search-screen" role="dialog" aria-modal="true" aria-label="Buscar plantas" hidden></div>
+  <div class="drawer drawer--sheet" id="filters-drawer" hidden></div>
+  <div class="drawer" id="cart-drawer" hidden></div>
+  <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/illustrations.js"></script>
+  <script src="assets/js/store.js"></script>
+  <script src="assets/js/ui.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/header.js"></script>
+  <script src="assets/js/pages.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

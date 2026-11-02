@@ -46,7 +46,7 @@ w('| --- | --- | --- | --- |')
 for line in open(os.path.join(D, 'chunks-por-rota.txt')).read().splitlines()[1:]:
     c, n, jr, jg, cg = [x.strip() for x in line.split('|')]
     w(f'| {c.split("-")[0]} | {n} | {jr} KB | {jg} KB |')
-w('\nA própria página de cores tem 0,8 KB, mas a rota exige 1,12 MB porque o `PromptButton` puxa o motor e todos os catálogos (TE-14).\n')
+w('\nO módulo de cores (`ColorPage` + `ColorSystem`) tem ≈12 KB, mas a rota exige 1,12 MB porque o `PromptButton` puxa o motor e todos os catálogos (TE-14).\n')
 
 # 5.3 carga a frio
 for tag, label in [('desktop', 'desktop 1440×900, 5 execuções'), ('mobile', 'viewport 390×844 sem limitação de CPU/rede, 3 execuções')]:

@@ -159,6 +159,12 @@ html.search-open .announce { visibility: hidden; }
   .search.is-full {
     position: fixed;
     inset: 0;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    max-width: none;
+    align-self: stretch;
+    justify-self: stretch;
     z-index: var(--z-overlay);
     display: flex;
     flex-direction: column;
@@ -374,7 +380,7 @@ html.search-open .announce { visibility: hidden; }
   font-size: var(--fs-xs);
   font-weight: var(--fw-strong);
 }
-.pcard__label.is-warn { background: var(--color-warning-bg); color: var(--color-warning); }
+.pcard__label.is-warn { background: var(--color-warning-bg); color: var(--color-text); box-shadow: inset 0 0 0 1px var(--color-warning); }
 .pcard__label.is-off { background: var(--color-disabled); color: var(--color-text-muted); }
 .pcard__title {
   font-family: var(--font-body);

@@ -10,3 +10,22 @@ dev-2 1280x600
 dev-2 390x844
 dev-2 360x780
 dev-2 375x667
+dev-2 412x915
+dev-2 430x932
+dev-2 390x500
+dev-2 740x360
+dev-2 844x390
+dev-2 sweep 320
+dev-2 sweep 360
+dev-2 sweep 375
+dev-2 sweep 390
+dev-2 sweep 412
+dev-2 sweep 430
+dev-2 sweep 480
+dev-2 sweep 600
+dev-2 sweep 768
+dev-2 sweep 820
+dev-2 sweep 1024
+dev-2 sweep 1280
+dev-2 sweep 1440
+dev-2 sweep 1920

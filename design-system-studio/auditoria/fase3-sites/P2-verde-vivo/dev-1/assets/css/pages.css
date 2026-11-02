@@ -57,12 +57,12 @@
    ===================================================================== */
 .grid12 { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--sp-6); }
 .l-section { padding-block: var(--sp-24); }
+.l-section--flush { padding-top: 0; }
 
 /* Hero assimétrico */
 .hero { padding-top: var(--sp-14); }
+.hero__head { grid-column: 1 / 9; grid-row: 1; }
 .hero__title {
-  grid-column: 1 / 9;
-  grid-row: 1;
   font-size: clamp(2.5rem, 1.2rem + 4.4vw, 5rem);
   line-height: 1.04;
   letter-spacing: -0.025em;
@@ -174,7 +174,7 @@
   .l-section { padding-block: var(--sp-14); }
   .hero { padding-top: var(--sp-8); }
   .grid12 { grid-template-columns: minmax(0, 1fr); }
-  .hero__title, .hero__text, .hero__tall, .hero__small, .stagger__head, .stagger__list { grid-column: 1; grid-row: auto; }
+  .hero__head, .hero__text, .hero__tall, .hero__small, .stagger__head, .stagger__list { grid-column: 1; grid-row: auto; }
   .hero__title { font-size: clamp(2.375rem, 1.6rem + 4vw, 2.875rem); }
   .hero__text { margin-top: var(--sp-5); margin-left: var(--sp-6); }
   .hero__tall { margin-top: var(--sp-8); margin-left: 40px; height: 320px; }

@@ -74,7 +74,7 @@
 }
 
 /* ---------- Cartões escalonados ---------- */
-.care { margin-top: calc(var(--section-gap) + 24px); scroll-margin-top: 140px; }
+.care { margin-top: calc(var(--section-gap) + 24px); }
 .care__head { display: grid; gap: var(--space-4); max-width: 58ch; margin-bottom: var(--space-12); }
 .care__head p:last-child { color: var(--color-text-muted); font-size: var(--fs-lg); }
 .care__grid {
@@ -125,7 +125,7 @@
   column-gap: var(--space-12);
   margin-top: var(--section-gap);
   padding-left: max(var(--gutter), calc((100% - var(--content-max)) / 2));
-  scroll-margin-top: 140px;
+ 
 }
 .bleed__text { display: grid; justify-items: start; gap: var(--space-5); max-width: 440px; padding-block: var(--space-6); }
 .bleed__text > p:not(.eyebrow) { color: var(--color-text-muted); }

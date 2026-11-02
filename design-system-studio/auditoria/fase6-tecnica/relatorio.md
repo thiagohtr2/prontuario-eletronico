@@ -40,7 +40,7 @@ TE-01 (fatos + precedência), TE-02 (derivação de tokens em duas camadas) e TE
 | --- | --- |
 | Máquina | 4 CPUs compartilhadas, 16 GB RAM, Chromium 1243 headless (Playwright 1.63), Node 22 |
 | Servidor do build | `python3 -m http.server` — HTTP/1.0, **sem compressão** e sem cabeçalhos de cache (bytes medidos = bytes brutos) |
-| Interferência | load average entre **9 e 21** durante as medições (outros agentes rodando Chromium em paralelo). Todos os tempos absolutos estão inflados; as comparações relativas entre rotas/galerias são mais confiáveis que os valores absolutos. A carga do momento é registrada em cada linha dos dados brutos (`loadavg`). |
+| Interferência | load average entre **6 e 23** durante as medições (outros agentes rodando Chromium em paralelo). Todos os tempos absolutos estão inflados; as comparações relativas entre rotas/galerias são mais confiáveis que os valores absolutos. A carga do momento é registrada em cada linha dos dados brutos (`loadavg`). |
 | Repetições | carga a frio: 5× desktop (1440×900) e 3× celular (390×844) por rota; galerias: 3 rodadas × 10 cliques; memória: 3 rodadas × 3 voltas por 18 rotas; Lighthouse: 3× por URL e perfil. Reporto **mediana** (e mín–máx quando relevante). |
 | Verificações só de leitura no repositório | `npx tsc -b --noEmit` (0 erros, 28,7 s) e `npx vitest run` (8 arquivos, **235 testes, todos passam**, 27 s) — saídas em `dados/tsc.txt` e `dados/vitest.txt` |
 
@@ -95,7 +95,7 @@ Grafo de imports entre áreas (`dados/acoplamento.txt`):
   1,69 MB de JS de uma vez.
 
 Consequência prática: o code splitting existe, mas é anulado pelo grafo — cada rota de módulo carrega entre 1,10 e 1,48 MB de
-JS bruto (338–434 KB gzip) mesmo quando o módulo em si tem poucos KB (ex.: `ColorPage` = 0,8 KB, mas a rota pesa 1,12 MB).
+JS bruto (338–434 KB gzip) mesmo quando o módulo em si tem poucos KB (ex.: o módulo de cores, `ColorPage` + `ColorSystem`, tem ≈12 KB, mas a rota pesa 1,12 MB).
 
 ### 2.4 Código duplicado entre módulos (kits de prévia)
 
@@ -264,7 +264,7 @@ largura total da janela (full width)”; a sidebar diz na mesma lista “Abaixo 
 ### 4.3 Por que textos de exemplo entram no prompt como especificação
 
 **Causa raiz:** o modelo de projeto não tem campos de conteúdo (marca, itens de menu, grupos da sidebar, CTAs) —
-`ProjectMeta` (`src/core/project.ts:33-43`) só guarda nome, objetivo, descrição, público, finalidade, tipo, funcionalidades e
+`ProjectMeta` (`src/core/project.ts:31-41`) só guarda nome, objetivo, descrição, público, finalidade, tipo, funcionalidades e
 tecnologia. Os geradores de spec interpolam o conteúdo da **receita de demonstração** do catálogo:
 `navigation/catalog.ts:149` (marca), `:153` (itens do menu, com mega menu/dropdown), `:167` (breadcrumbs), `:197` (itens do menu
 de perfil), `:1555-1565` (grupos e itens da sidebar, com contadores “Projetos (12)”, “Mensagens (3)”);
@@ -374,7 +374,7 @@ Fontes: 4 famílias variáveis (Inter, Fraunces, Space Grotesk, JetBrains Mono) 
 | ValidationPage | 7 | 472 KB | 145 KB |
 | ProjectPage | 11 | 874 KB | 268 KB |
 
-A própria página de cores tem 0,8 KB, mas a rota exige 1,12 MB porque o `PromptButton` puxa o motor e todos os catálogos (TE-14).
+O módulo de cores (`ColorPage` + `ColorSystem`) tem ≈12 KB, mas a rota exige 1,12 MB porque o `PromptButton` puxa o motor e todos os catálogos (TE-14).
 
 ### 5.3a Carga a frio por rota — desktop 1440×900, 5 execuções (mediana; `dados/perf-carga-desktop.json`)
 

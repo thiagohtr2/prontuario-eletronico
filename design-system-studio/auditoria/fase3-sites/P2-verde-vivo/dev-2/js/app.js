@@ -59,7 +59,7 @@
       if (r.product) VV.openProduct(r.product, $('#brand'));
     }
     current = r.view;
-    if (!first && focusEl && !r.product) {
+    if (!first && focusEl && !r.product && (changed || r.section)) {
       if (!focusEl.hasAttribute('tabindex')) focusEl.setAttribute('tabindex', '-1');
       focusEl.focus({ preventScroll: true });
     }

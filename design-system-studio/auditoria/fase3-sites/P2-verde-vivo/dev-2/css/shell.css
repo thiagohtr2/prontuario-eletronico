@@ -492,9 +492,9 @@
     grid-template-areas: "brand actions" "search search";
     column-gap: var(--space-2);
   }
-  .brand { grid-area: brand; font-size: 1.1rem; }
-  .hdr-actions { grid-area: actions; gap: var(--space-2); }
-  .search { grid-area: search; align-self: center; }
+  .hdr-main__inner > .brand { grid-area: brand; font-size: 1.1rem; }
+  .hdr-main__inner > .hdr-actions { grid-area: actions; gap: var(--space-2); }
+  .hdr-main__inner > .search { grid-area: search; align-self: center; }
   .hdr-strip { display: block; }
 
   .dock {

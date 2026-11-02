@@ -399,6 +399,9 @@
     if (a.extra === 'trowel') {
       o.front = '<g transform="translate(236 ' + (base - 6) + ') rotate(-18)"><rect class="clay-d" x="-3" y="-34" width="6" height="30" rx="3"/><path class="stone" d="M-8 -4h16l-5 22h-6z"/></g>';
     }
+    if (view === 'tall') {
+      o.vb = '65 -38 190 238';
+    }
     if (view === 'detail') {
       var main = items[0], H = a.H || NOM[a.kind] || 100, potH = a.potH || 44;
       var cy = base - potH - H * 0.58;
@@ -416,7 +419,7 @@
       arch: { w: 250, x: 180, y: 28, b: 340 },
       label: 'Ilustração de uma costela-de-adão em vaso de barro diante de uma janela em arco',
       extra: '<rect class="bg2" x="-200" y="340" width="900" height="300"/><ellipse class="ground" cx="180" cy="342" rx="120" ry="7"/>',
-      items: [{ kind: 'monstera', x: 180, y: 392, potW: 110, potH: 80, H: 258, pot: 'terracotta', seed: 11 }]
+      items: [{ kind: 'monstera', x: 180, y: 396, potW: 104, potH: 76, H: 208, pot: 'terracotta', seed: 11 }]
     });
   }
   function leaves() {

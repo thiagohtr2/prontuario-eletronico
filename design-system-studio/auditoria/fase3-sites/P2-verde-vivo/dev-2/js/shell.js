@@ -123,7 +123,8 @@
     var y = window.scrollY, dy = y - lastY;
     header.classList.toggle('is-scrolled', y > 8);
     var short = window.matchMedia('(max-height: 520px)').matches;
-    var focusInside = $('#hdr-nav', header).contains(document.activeElement) || $('#hdr-strip', header).contains(document.activeElement);
+    var ae = document.activeElement;
+    var focusInside = ae && ae.matches && ae.matches(':focus-visible') && (($('#hdr-nav', header).contains(ae)) || ($('#hdr-strip', header).contains(ae)));
     if (y <= 8) {
       header.classList.remove('is-collapsed');
     } else if (dy > 6 && y > 96 && !megaOpen && !focusInside) {

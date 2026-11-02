@@ -1,0 +1,68 @@
+expected   passed   exp=passed  22.4s  REG-01 · Layout escolhido mostra estado selecionado › desktop 1440: todas as galerias marcam o cartão escolhido (aria-pressed, selo e borda)
+expected   passed   exp=passed  4.7s  REG-01 · Layout escolhido mostra estado selecionado › modo guiado: painel de destaque confirma "Escolhido para o seu projeto"
+expected   passed   exp=passed  11.1s  REG-01 · Layout escolhido mostra estado selecionado › celular 360×800 › toque marca o cartão escolhido em layouts, paletas e landing
+expected   passed   exp=passed  4.6s  REG-02 · Clicar em miniaturas não rola a página sozinha › desktop 1440: "Escolher este modelo" no guiado não desloca a página
+expected   passed   exp=passed  16.4s  REG-02 · Clicar em miniaturas não rola a página sozinha › celular 360×800 (toque real, sem rolagem automática da ferramenta) › etapa 3 do guiado: "Escolher este modelo" e miniaturas mantêm a rolagem
+expected   passed   exp=passed  9.2s  REG-02 · Clicar em miniaturas não rola a página sozinha › celular 360×800 (toque real, sem rolagem automática da ferramenta) › celular (etapa 4) e paletas: tocar em miniaturas mantém a rolagem
+expected   failed   exp=failed  2.9s  REG-03 · Controles da identidade e dos componentes alteram a prévia › "Tamanho base do texto" muda o corpo do texto da prévia, não só o título
+      Error: texto "linha" da prévia deve crescer com a base de 18 px | expect(received).toBeGreaterThan(expected) | Expected: > 13 | Received:   13
+expected   failed   exp=failed  3.2s  REG-03 · Controles da identidade e dos componentes alteram a prévia › "Estilo dos ícones" (Preenchido/Duotone) muda os ícones da prévia da identidade
+      Error: ícones da prévia devem refletir o estilo "Preenchido" | expect(received).not.toBe(expected) // Object.is equality | Expected: not "none|none|2;none|none|2;none|none|2;none|none|2;none|none|2;none|none|2;none|none|2;none|none|2;none|none|2;none|none|2" |   279 |     await page.getByRole('button', { name: 'Preenchido' }).click()
+expected   failed   exp=failed  4.2s  REG-03 · Controles da identidade e dos componentes alteram a prévia › densidade da tabela mostrada no editor ("Padrão") é a mesma do Master Prompt
+      Error: densidade no prompt | expect(received).toBe(expected) // Object.is equality | Expected: "padrão" | Received: "confortável"
+expected   passed   exp=passed  3.6s  REG-03 · Controles da identidade e dos componentes alteram a prévia › cantos, densidade global e fontes alteram a prévia (proteção)
+expected   passed   exp=passed  9.8s  REG-04 · Botões grudados ou sobrepostos › desktop 1440: nenhum par de botões sobreposto ou a menos de 4 px
+expected   passed   exp=passed  9.8s  REG-04 · Botões grudados ou sobrepostos › celular 360×800 › nenhum par de botões sobreposto ou a menos de 4 px
+expected   failed   exp=failed  3.4s  REG-04 · Botões grudados ou sobrepostos › tablet 768×1024 › "Escolher este modelo" do celular grande não fica por cima das miniaturas
+      Error: expect(received).toEqual(expected) // deep equality | - Expected  - 1 | + Received  + 3 | - Array []
+expected   passed   exp=passed  16.5s  REG-05 · Cartões sem ações duplicadas › desktop 1440 › cada cartão tem uma única ação de seleção e nenhum rótulo repetido
+expected   passed   exp=passed  14.5s  REG-05 · Cartões sem ações duplicadas › celular 360 › cada cartão tem uma única ação de seleção e nenhum rótulo repetido
+expected   passed   exp=passed  3.9s  REG-06 · Sidebar do Studio com largura adequada › desktop 1440: sidebar ≥ 240 px e nenhum rótulo cortado
+expected   passed   exp=passed  2.4s  REG-06 · Sidebar do Studio com largura adequada › celular 360×800 › drawer ≥ 280 px, ≤ 90% da tela e itens com 44 px de altura
+expected   passed   exp=passed  12.9s  REG-07 · Filtros com letras legíveis › desktop 1440 › nenhum texto de filtro, aba ou contador abaixo de 12 px
+expected   passed   exp=passed  11.3s  REG-07 · Filtros com letras legíveis › celular 360 › nenhum texto de filtro, aba ou contador abaixo de 12 px
+expected   passed   exp=passed  5.4s  REG-08 · Prévias de celular com tamanho útil › desktop 1440: celular grande ≥ 340 px e prévia integrada no modo Celular ≥ 340 px
+expected   passed   exp=passed  4.8s  REG-08 · Prévias de celular com tamanho útil › celular 360×800 › celular grande ocupa ≥ 85% da largura e a prévia da landing mostra o aparelho com ≥ 280 px
+expected   passed   exp=passed  4.4s  REG-08 · Prévias de celular com tamanho útil › iPhone 390×844 › celular grande ocupa ≥ 85% da largura e a prévia da landing mostra o aparelho com ≥ 280 px
+expected   passed   exp=passed  55.5s  REG-09 · Menus móveis com texto e ícones proporcionais › nos 44 layouts móveis (com menus abertos): texto ≥ 10 px e ícone entre 0,75× e 2,5× o texto
+expected   passed   exp=passed  3.0s  REG-10 · Diagramas: conteúdo não parece menu flutuante › regiões de CONTEÚDO não usam a elevação dos menus flutuantes e sempre têm a etiqueta
+expected   passed   exp=passed  17.1s  REG-11 · Decisões chegam ao Master Prompt › entrada, layouts, navegação, paleta, tipografia, geometria e componente aparecem no prompt
+expected   failed   exp=failed  4.8s  REG-11 · Decisões chegam ao Master Prompt › propriedade escolhida no componente (Densidade = Compacta) chega ao prompt
+      Error: expect(received).toBe(expected) // Object.is equality | Expected: "compacta" | Received: "confortável" |   642 |     await page.keyboard.press('Escape')
+expected   passed   exp=passed  6.0s  REG-12 · Mudanças na paleta se propagam › trocar a paleta atualiza prévia da identidade, celular grande, CSS exportado e prompt
+expected   failed   exp=failed  3.1s  REG-12 · Mudanças na paleta se propagam › troca manual da cor primária recalcula hover, active, foco e link
+      Error: Primária — hover deve acompanhar a nova primária | expect(received).not.toBe(expected) // Object.is equality | Expected: not "#161618" |   681 |     await expect.poll(async () => (await savedProject(page)).identity.overrides.primary).toBe('#0b6e4f')
+expected   passed   exp=passed  15.3s  REG-13 · Seleções preservadas ao voltar de etapa › guiado: voltar até a entrada e avançar de novo mantém fluxo, landing, login, cadastro, desktop e mobile
+expected   passed   exp=passed  5.5s  REG-14 · Arquivos exportados válidos e downloads no primeiro clique › Exportar, Central de Prompts e identidade: .md, JSON, CSS (CSSOM), HTML e backup válidos no primeiro clique
+expected   failed   exp=failed  8.2s  REG-14 · Arquivos exportados válidos e downloads no primeiro clique › guiado 1440×900: o primeiro clique real em "CSS dos tokens" baixa o arquivo
+      Error: download no primeiro clique (ponto coberto por: ui-btn ui-btn--primary) | expect(received).toBe(expected) // Object.is equality | Expected: true | Received: false
+expected   passed   exp=passed  16.8s  REG-15 · O aplicativo sempre carrega › todas as rotas abrem sem erro de JavaScript e sem recurso 4xx/5xx (desktop)
+expected   passed   exp=passed  6.7s  REG-15 · O aplicativo sempre carrega › armazenamento corrompido ou de outra versão não impede a abertura
+expected   passed   exp=passed  13.3s  REG-15 · O aplicativo sempre carrega › celular 360×800 › todas as rotas abrem sem erro de JavaScript
+expected   failed   exp=failed  6.0s  REG-16 · Conteúdo não fica encoberto pela barra fixa inferior › guiado 1440×900: "Prompt da identidade" e "CSS dos tokens" ficam acima do rodapé fixo
+      Error: Prompt da identidade em scrollY=600: coberto por gd-footer | expect(received).toBe(expected) // Object.is equality | Expected: true | Received: false
+expected   failed   exp=failed  6.5s  REG-16 · Conteúdo não fica encoberto pela barra fixa inferior › guiado 1440×900 (etapa 4): a base do celular grande fixo não fica sob o rodapé
+      Error: base do celular grande × topo do rodapé | expect(received).toBeLessThanOrEqual(expected) | Expected: <= 835 | Received:    858
+expected   passed   exp=passed  13.0s  REG-16 · Conteúdo não fica encoberto pela barra fixa inferior › desktop 1440×900 › guiado: ações principais de cada etapa podem ser trazidas acima do rodapé
+expected   passed   exp=passed  13.4s  REG-16 · Conteúdo não fica encoberto pela barra fixa inferior › celular 360×800 › guiado: ações principais de cada etapa podem ser trazidas acima do rodapé
+expected   passed   exp=passed  12.0s  REG-17 · Sem overflow nas galerias de layouts › 320 px: página sem rolagem lateral e conteúdo dos cartões dentro do cartão
+expected   passed   exp=passed  11.7s  REG-17 · Sem overflow nas galerias de layouts › 360 px: página sem rolagem lateral e conteúdo dos cartões dentro do cartão
+expected   passed   exp=passed  11.5s  REG-17 · Sem overflow nas galerias de layouts › 1024 px: página sem rolagem lateral e conteúdo dos cartões dentro do cartão
+expected   passed   exp=passed  12.5s  REG-17 · Sem overflow nas galerias de layouts › 1440 px: página sem rolagem lateral e conteúdo dos cartões dentro do cartão
+expected   failed   exp=failed  4.0s  REG-17 · Sem overflow nas galerias de layouts › tablet 768×1024 › galeria do celular: coluna de miniaturas com largura útil e nenhuma miniatura coberta
+      Error: largura da coluna de miniaturas | expect(received).toBeGreaterThanOrEqual(expected) | Expected: >= 128 | Received:    0
+expected   failed   exp=failed  3.6s  REG-17 · Sem overflow nas galerias de layouts › celular deitado 800×360 › galeria do celular: coluna de miniaturas com largura útil e nenhuma miniatura coberta
+      Error: largura da coluna de miniaturas | expect(received).toBeGreaterThanOrEqual(expected) | Expected: >= 128 | Received:    0
+expected   failed   exp=failed  5.2s  REG-18 · Desktop e celular compatíveis › Master Prompt define um único ponto de troca entre arquitetura mobile e desktop
+      Error: larguras de troca citadas no prompt | expect(received).toHaveLength(expected) | Expected length: 1 | Received length: 2
+expected   passed   exp=passed  24.1s  REG-18 · Desktop e celular compatíveis › as mesmas escolhas feitas no desktop e no celular geram o mesmo projeto e o mesmo prompt
+expected   failed   exp=failed  8.0s  REG-18 · Desktop e celular compatíveis › celular 360×800 › a prévia integrada abre no modo Celular quando a tela é de celular
+      Error: expect(locator).toBeVisible() failed | Locator: getByTestId('live-preview').getByTestId('phone-preview').first() | Expected: visible | Timeout: 3000ms
+expected   failed   exp=failed  14.9s  REG-19 · Login e cadastro correspondem à seleção › com "Apenas login" e sem cadastro escolhido, a prévia integrada não oferece a página "Cadastro"
+      Error: expect(locator).toHaveCount(expected) failed | Locator:  getByRole('group', { name: 'Página da prévia' }).getByRole('button', { name: 'Cadastro' }) | Expected: 0 | Received: 1
+expected   passed   exp=passed  4.7s  REG-19 · Login e cadastro correspondem à seleção › com cadastro escolhido, a página "Cadastro" mostra o cadastro selecionado (proteção)
+expected   failed   exp=failed  5.5s  REG-20 · Alterar um módulo não quebra outro › trocar o fluxo para "Aplicação diretamente" tira o login antigo do prompt e da prévia
+      Error: expect(received).toMatch(expected) | Expected pattern: /Login: nenhum/ | Received string:  "# Master Prompt — Projeto sem nome· | > Especificação gerada pelo Atelier UI (Design System Studio) em 02/11/2026, 23:56:25.
+expected   passed   exp=passed  17.3s  REG-20 · Alterar um módulo não quebra outro › mudanças em sequência em vários módulos mantêm as escolhas anteriores e todas as telas abrindo (proteção)
+
+stats {"startTime":"2026-11-02T23:53:41.611Z","duration":182907.413,"expected":51,"skipped":0,"unexpected":0,"flaky":0}

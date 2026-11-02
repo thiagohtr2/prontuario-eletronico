@@ -29,10 +29,11 @@
       var list = [];
       containers.forEach(function (c) { if (c) list = list.concat(ui.focusables(c)); });
       if (!list.length) return;
-      var first = list[0], last = list[list.length - 1];
+      // Controla sempre o próximo alvo: os contêineres podem não ser vizinhos no DOM
       var idx = list.indexOf(document.activeElement);
-      if (e.shiftKey && (idx <= 0)) { e.preventDefault(); last.focus(); }
-      else if (!e.shiftKey && (idx === list.length - 1 || idx === -1)) { e.preventDefault(); first.focus(); }
+      var next = e.shiftKey ? (idx <= 0 ? list.length - 1 : idx - 1) : (idx === -1 || idx === list.length - 1 ? 0 : idx + 1);
+      e.preventDefault();
+      list[next].focus();
     }
     document.addEventListener('keydown', handler, true);
     return function release() { document.removeEventListener('keydown', handler, true); };

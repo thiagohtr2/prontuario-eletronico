@@ -52,6 +52,7 @@
   transform: none;
   filter: none;
 }
+.sp-btn__count[hidden] { display: none; }
 .sp-btn__count {
   display: inline-grid; place-items: center;
   min-width: 22px; height: 22px;
@@ -155,6 +156,7 @@ button.icon-circle:active { transform: scale(0.98); }
 .pcard:hover { box-shadow: var(--shadow-soft-hover); }
 .pcard:active { transform: scale(0.98); }
 .pcard__media {
+  --illu-bg: var(--surface-alt);
   aspect-ratio: 16 / 9;
   border-radius: var(--radius-container) var(--radius-container) 0 0;
   overflow: hidden;
@@ -163,6 +165,7 @@ button.icon-circle:active { transform: scale(0.98); }
 .pcard__body { display: flex; flex-direction: column; gap: var(--sp-2); flex: 1; padding: 15px; }
 .tag {
   align-self: flex-start;
+  justify-self: start;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -176,7 +179,7 @@ button.icon-circle:active { transform: scale(0.98); }
 }
 .tag .icon { width: 14px; height: 14px; }
 .tag--off { background: var(--disabled); color: var(--text-muted); }
-.tag--accent { background: var(--warning-bg); color: var(--warning); }
+.tag--accent { background: var(--accent); color: var(--on-accent); }
 .pcard__title {
   margin: 0;
   font-family: var(--font-body);
@@ -226,6 +229,7 @@ button.icon-circle:active { transform: scale(0.98); }
   position: absolute;
   top: 10px; right: 10px;
   z-index: 2;
+  box-shadow: var(--shadow-soft);
 }
 .pcard__fav[aria-pressed="true"] .icon { fill: currentColor; }
 .pcard--skeleton { box-shadow: none; background: var(--surface); }
@@ -442,7 +446,7 @@ button.icon-circle:active { transform: scale(0.98); }
 /* Itens do minicarrinho / sacola */
 .cart-list { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--sp-4); }
 .cart-item { display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; gap: var(--sp-3); align-items: center; }
-.cart-item__thumb { width: 72px; height: 72px; border-radius: 16px; overflow: hidden; background: var(--illu-bg); }
+.cart-item__thumb { --illu-bg: var(--surface-alt); width: 72px; height: 72px; border-radius: 16px; overflow: hidden; background: var(--illu-bg); }
 .cart-item__name { font-weight: 600; color: var(--text); text-decoration: none; }
 .cart-item__name:hover { text-decoration: underline; color: var(--text); }
 .cart-item__sub { color: var(--text-muted); font-size: var(--fs-13); }

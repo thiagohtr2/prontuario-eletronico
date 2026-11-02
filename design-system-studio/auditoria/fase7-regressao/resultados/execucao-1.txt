@@ -46,3 +46,13 @@ Running 51 tests using 3 workers
   ✘  43 [chromium] › tests/e2e/regression.spec.ts:915:7 › REG-17 · Sem overflow nas galerias de layouts › tablet 768×1024 › galeria do celular: coluna de miniaturas com largura útil e nenhuma miniatura coberta (4.0s)
   ✓  42 [chromium] › tests/e2e/regression.spec.ts:900:5 › REG-17 · Sem overflow nas galerias de layouts › 1440 px: página sem rolagem lateral e conteúdo dos cartões dentro do cartão (12.5s)
   ✘  44 [chromium] › tests/e2e/regression.spec.ts:915:7 › REG-17 · Sem overflow nas galerias de layouts › celular deitado 800×360 › galeria do celular: coluna de miniaturas com largura útil e nenhuma miniatura coberta (3.6s)
+  ✘  45 [chromium] › tests/e2e/regression.spec.ts:931:3 › REG-18 · Desktop e celular compatíveis › Master Prompt define um único ponto de troca entre arquitetura mobile e desktop (5.2s)
+  ✘  47 [chromium] › tests/e2e/regression.spec.ts:973:5 › REG-18 · Desktop e celular compatíveis › celular 360×800 › a prévia integrada abre no modo Celular quando a tela é de celular (8.0s)
+  ✓  49 [chromium] › tests/e2e/regression.spec.ts:992:3 › REG-19 · Login e cadastro correspondem à seleção › com cadastro escolhido, a página "Cadastro" mostra o cadastro selecionado (proteção) (4.7s)
+  ✘  50 [chromium] › tests/e2e/regression.spec.ts:1002:3 › REG-20 · Alterar um módulo não quebra outro › trocar o fluxo para "Aplicação diretamente" tira o login antigo do prompt e da prévia (5.5s)
+  ✘  48 [chromium] › tests/e2e/regression.spec.ts:983:3 › REG-19 · Login e cadastro correspondem à seleção › com "Apenas login" e sem cadastro escolhido, a prévia integrada não oferece a página "Cadastro" (14.9s)
+  ✓  46 [chromium] › tests/e2e/regression.spec.ts:942:3 › REG-18 · Desktop e celular compatíveis › as mesmas escolhas feitas no desktop e no celular geram o mesmo projeto e o mesmo prompt (24.1s)
+  ✓  51 [chromium] › tests/e2e/regression.spec.ts:1017:3 › REG-20 · Alterar um módulo não quebra outro › mudanças em sequência em vários módulos mantêm as escolhas anteriores e todas as telas abrindo (proteção) (17.3s)
+
+  51 passed (3.0m)
+exit=0

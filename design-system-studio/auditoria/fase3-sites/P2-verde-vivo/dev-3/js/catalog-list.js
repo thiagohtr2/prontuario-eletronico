@@ -320,7 +320,7 @@
 
   /* ---------- Arte das seções fixas (placeholders vetoriais) ---------- */
   function fillArt() {
-    VV.$('#campaign-bg').innerHTML = VV.art('campanha', { w: 1440, h: 620, tone: 1, leaves: true });
+    VV.$('#campaign-bg').innerHTML = VV.art('campanha', { w: 1440, h: 620, tone: 1, leaves: true, base: 0.4 });
     var imgs = VV.$$('.origem-img');
     imgs[0].innerHTML = VV.art('mudas', { w: 480, h: 320, tone: 2, leaves: true });
     imgs[1].innerHTML = VV.art('regador', { w: 480, h: 320, tone: 3, leaves: false });

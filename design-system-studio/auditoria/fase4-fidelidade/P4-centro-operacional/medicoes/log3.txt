@@ -10,3 +10,22 @@ dev-3 1280x600
 dev-3 390x844
 dev-3 360x780
 dev-3 375x667
+dev-3 412x915
+dev-3 430x932
+dev-3 390x500
+dev-3 740x360
+dev-3 844x390
+dev-3 sweep 320
+dev-3 sweep 360
+dev-3 sweep 375
+dev-3 sweep 390
+dev-3 sweep 412
+dev-3 sweep 430
+dev-3 sweep 480
+dev-3 sweep 600
+dev-3 sweep 768
+dev-3 sweep 820
+dev-3 sweep 1024
+dev-3 sweep 1280
+dev-3 sweep 1440
+dev-3 sweep 1920
