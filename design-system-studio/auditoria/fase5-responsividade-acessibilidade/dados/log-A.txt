@@ -182,3 +182,15 @@
 430 m-landing ok ov=0 ovEls=0 trunc=0 small=13 lt44=0 lt24=0 cov=0 1303ms
 430 m-login ok ov=0 ovEls=0 trunc=1 small=0 lt44=0 lt24=0 cov=0 1242ms
 430 m-cadastro ok ov=0 ovEls=0 trunc=0 small=0 lt44=0 lt24=0 cov=0 1020ms
+430 m-desktop ok ov=0 ovEls=2 trunc=1 small=5 lt44=5 lt24=4 cov=3 1502ms
+430 m-mobile ok ov=0 ovEls=43 trunc=1 small=4 lt44=4 lt24=3 cov=0 1407ms
+430 m-preview ok ov=0 ovEls=0 trunc=0 small=0 lt44=0 lt24=0 cov=0 895ms
+430 m-cores ok ov=0 ovEls=0 trunc=0 small=1 lt44=0 lt24=0 cov=0 1243ms
+430 m-navegacao ok ov=0 ovEls=0 trunc=6 small=0 lt44=2 lt24=0 cov=0 1382ms
+430 m-componentes ok ov=0 ovEls=0 trunc=0 small=0 lt44=3 lt24=0 cov=0 1148ms
+430 m-inspiracao ok ov=0 ovEls=1 trunc=0 small=0 lt44=0 lt24=0 cov=0 2837ms
+430 m-templates ok ov=0 ovEls=1 trunc=0 small=0 lt44=0 lt24=0 cov=0 1207ms
+430 prompt ok ov=0 ovEls=0 trunc=0 small=0 lt44=0 lt24=0 cov=0 891ms
+430 exportar ok ov=0 ovEls=0 trunc=0 small=0 lt44=0 lt24=0 cov=0 895ms
+430 validacao ok ov=0 ovEls=0 trunc=0 small=0 lt44=0 lt24=0 cov=0 897ms
+430 projeto ok ov=0 ovEls=0 trunc=0 small=0 lt44=0 lt24=0 cov=0 839ms
