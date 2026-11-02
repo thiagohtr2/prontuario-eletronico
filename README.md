@@ -117,3 +117,10 @@ de 4,5:1 para texto e 3:1 para ícones).
 
 - Tipografia Inter, espaçamento em múltiplos de 4 px, cantos de 8 a 12 px e sombras discretas.
 - Datas no padrão brasileiro (DD/MM/AAAA) e horários em 24 h.
+
+## Design System Studio (Atelier UI)
+
+A pasta [`design-system-studio/`](design-system-studio/) contém um projeto independente: uma plataforma
+visual para especificar a arquitetura e a identidade de sites e gerar um Master Prompt para IAs de
+programação. Tem `package.json` próprio e não interfere no build nem no deploy do prontuário.
+Veja o [README do Studio](design-system-studio/README.md).
