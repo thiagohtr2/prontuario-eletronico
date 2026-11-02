@@ -211,6 +211,11 @@
     min-height: 2.8em;
   }
 }
+.ent-select {
+  display: grid;
+  gap: 6px;
+  max-width: 420px;
+}
 .ent-arch-note {
   font-size: var(--fs-sm);
   color: var(--s-text-2);
@@ -298,6 +303,9 @@
 }
 
 @media (max-width: 720px) {
+  .ent-flow-media {
+    height: 92px;
+  }
   .ent-toolbar__row > .ui-search {
     max-width: none;
   }

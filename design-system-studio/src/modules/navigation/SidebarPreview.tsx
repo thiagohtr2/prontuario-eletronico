@@ -876,12 +876,7 @@ export function SidebarPreview({
           </div>
         )
       case 'logo-cta':
-        return (
-          <>
-            {!hideBrand && <Brand ctx={ctx} extra={extra} />}
-            {!arr.cta && null}
-          </>
-        )
+        return hideBrand ? null : <Brand ctx={ctx} extra={extra} />
       case 'project':
         return <ProjectTop ctx={ctx} sections={sections} section={section} setSection={setSection} />
       case 'tabs':
@@ -904,8 +899,6 @@ export function SidebarPreview({
         return null
     }
   })()
-
-  const ctaNode = arr.top === 'logo-cta' && !arr.cta ? null : cta
 
   const body = (
     <div className="nvs-sbody" onScroll={hideTip}>
@@ -1008,7 +1001,7 @@ export function SidebarPreview({
           </div>
         )}
         {top}
-        {ctaNode}
+        {cta}
         {body}
         {footer}
       </>

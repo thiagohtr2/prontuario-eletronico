@@ -10,6 +10,8 @@ import { buildDemoHtml } from '@/modules/inspiration/exportHtml'
 import { InspirationGallery } from '@/modules/inspiration/InspirationGallery'
 import { applyOverrides, PALETTE_IDS, resolvePalette } from '@/modules/inspiration/palette'
 import { SITE_COMPONENTS } from '@/modules/inspiration/sites/registry'
+import { collectPromptItems, itemForTarget } from '@/prompt/items'
+import { renderItemPrompt } from '@/prompt/text'
 
 const COLOR_KEYS = ['bg', 'surface', 'text', 'muted', 'accent', 'onAccent', 'secondary'] as const
 const FONT_IDS = FONT_OPTIONS.map((f) => f.id)
@@ -88,6 +90,21 @@ describe('paletas e descrição', () => {
     expect(describeInspiration({ siteId: 'nada', paletteId: 'original', overrides: {} })).toBeNull()
     const d = describeInspiration({ siteId: site.id, paletteId: 'inexistente', overrides: {} })!
     expect(d.variant).toBe('Original')
+  })
+})
+
+describe('integração com o motor de prompts', () => {
+  it('o conceito aprovado entra no Master Prompt e o prompt individual traz cores e seções', () => {
+    const project = structuredClone(useStudio.getState().project)
+    project.inspiration = { siteId: 'tide-resort', paletteId: 'arenito', overrides: { bg: '#fff8ee' } }
+    const item = collectPromptItems(project).find((i) => i.kind === 'inspiration')!
+    expect(item.name).toBe('TIDE RESORT')
+    expect(item.colors.fundo).toBe('#fff8ee')
+    const single = itemForTarget({ kind: 'inspiration', siteId: 'pixel-play', paletteId: 'escura', overrides: {} }, project)!
+    const text = renderItemPrompt(single, project)
+    expect(text).toContain('PIXEL PLAY')
+    expect(text).toContain('Escura premium')
+    expect(text).toContain('Ranking semanal')
   })
 })
 

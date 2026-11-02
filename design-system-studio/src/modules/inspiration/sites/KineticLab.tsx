@@ -1,6 +1,6 @@
 import { mix, readableOn, withAlpha } from '@/core/color'
 import type { SitePalette } from '../types'
-import { Burger, ff, hair, Icon, SiteRoot, Wrap, type SiteProps } from './kit'
+import { band, Burger, ff, hair, Icon, SiteRoot, Wrap, type SiteProps } from './kit'
 
 type Pose = 'run' | 'lift' | 'stretch'
 
@@ -55,18 +55,18 @@ function Athlete({ p, pose, body, lines = true }: { p: SitePalette; pose: Pose; 
   )
 }
 
-function Ring({ p, value, label, sub, color }: { p: SitePalette; value: number; label: string; sub: string; color: string }) {
+function Ring({ fg, value, label, sub, color }: { fg: string; value: number; label: string; sub: string; color: string }) {
   const r = 46
   const c = 2 * Math.PI * r
   return (
     <div style={{ textAlign: 'center' }}>
       <svg width="100%" viewBox="0 0 120 120" aria-hidden="true" style={{ display: 'block', maxWidth: 150, margin: '0 auto' }}>
-        <circle cx={60} cy={60} r={r} stroke={withAlpha(p.bg, 0.15)} strokeWidth={12} fill="none" />
+        <circle cx={60} cy={60} r={r} stroke={withAlpha(fg, 0.15)} strokeWidth={12} fill="none" />
         <circle cx={60} cy={60} r={r} stroke={color} strokeWidth={12} fill="none" strokeDasharray={`${c * value} ${c}`} strokeLinecap="round" transform="rotate(-90 60 60)" />
-        <text x={60} y={58} textAnchor="middle" fontSize={22} fontWeight={700} fill={p.bg} fontFamily={ff('space-grotesk')}>
+        <text x={60} y={58} textAnchor="middle" fontSize={22} fontWeight={700} fill={fg} fontFamily={ff('space-grotesk')}>
           {label}
         </text>
-        <text x={60} y={78} textAnchor="middle" fontSize={10} fill={withAlpha(p.bg, 0.65)} fontFamily={ff('inter')}>
+        <text x={60} y={78} textAnchor="middle" fontSize={10} fill={withAlpha(fg, 0.65)} fontFamily={ff('inter')}>
           {sub}
         </text>
       </svg>
@@ -78,11 +78,12 @@ export default function KineticLab({ palette: p, device }: SiteProps) {
   const m = device === 'mobile'
   const g = ff('space-grotesk')
   const line = hair(p, 0.14)
+  const inv = band(p)
   const slant = { fontFamily: g, fontWeight: 700, fontStyle: 'italic' as const, textTransform: 'uppercase' as const, letterSpacing: '-0.04em' }
   return (
     <SiteRoot p={p} font={ff('inter')} name="KINETIC LAB">
       {/* Header */}
-      <header style={{ background: p.text, color: p.bg }}>
+      <header style={{ background: inv.bg, color: inv.fg }}>
         <Wrap m={m} max={1320} style={{ display: 'flex', alignItems: 'center', gap: 36, height: m ? 62 : 76 }}>
           <span style={{ ...slant, fontSize: m ? 20 : 24, letterSpacing: '-0.02em' }}>
             KINETIC<span style={{ color: p.accent }}>/</span>LAB
@@ -96,7 +97,7 @@ export default function KineticLab({ palette: p, device }: SiteProps) {
           )}
           <div style={{ flex: 1 }} />
           {m ? (
-            <Burger color={p.bg} weight={2.6} />
+            <Burger color={inv.fg} weight={2.6} />
           ) : (
             <span style={{ background: p.accent, color: p.onAccent, padding: '12px 22px', transform: 'skewX(-12deg)', display: 'inline-block' }}>
               <span style={{ display: 'inline-block', transform: 'skewX(12deg)', ...slant, fontSize: 15, letterSpacing: '0.02em' }}>Aula grátis</span>
@@ -106,8 +107,8 @@ export default function KineticLab({ palette: p, device }: SiteProps) {
       </header>
 
       {/* Hero invertido com corte diagonal */}
-      <section style={{ background: p.text, color: p.bg, clipPath: m ? 'polygon(0 0, 100% 0, 100% 96%, 0 100%)' : 'polygon(0 0, 100% 0, 100% 88%, 0 100%)', paddingBottom: m ? 48 : 120, position: 'relative', overflow: 'hidden' }}>
-        <div aria-hidden="true" style={{ position: 'absolute', inset: 0, background: `repeating-linear-gradient(-60deg, transparent 0 60px, ${withAlpha(p.bg, 0.03)} 60px 120px)` }} />
+      <section style={{ background: inv.bg, color: inv.fg, clipPath: m ? 'polygon(0 0, 100% 0, 100% 96%, 0 100%)' : 'polygon(0 0, 100% 0, 100% 88%, 0 100%)', paddingBottom: m ? 48 : 120, position: 'relative', overflow: 'hidden' }}>
+        <div aria-hidden="true" style={{ position: 'absolute', inset: 0, background: `repeating-linear-gradient(-60deg, transparent 0 60px, ${withAlpha(inv.fg, 0.03)} 60px 120px)` }} />
         <Wrap m={m} max={1320} style={{ position: 'relative', display: 'grid', gridTemplateColumns: m ? '1fr' : 'minmax(0, 7fr) minmax(0, 5fr)', gap: m ? 12 : 24, alignItems: 'center', paddingTop: m ? 28 : 56 }}>
           <div>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 10, fontSize: 13, fontWeight: 700, letterSpacing: '0.16em', color: p.accent }}>
@@ -116,24 +117,24 @@ export default function KineticLab({ palette: p, device }: SiteProps) {
             <h1 style={{ ...slant, fontSize: m ? 54 : 118, lineHeight: 0.86, marginTop: 18 }}>
               Mova-se
               <br />
-              <span style={{ color: 'transparent', WebkitTextStroke: `${m ? 1.5 : 2.5}px ${p.bg}` }}>com</span>
+              <span style={{ color: 'transparent', WebkitTextStroke: `${m ? 1.5 : 2.5}px ${inv.fg}` }}>com</span>
               <br />
               <span style={{ color: p.accent, whiteSpace: 'nowrap' }}>intenção.</span>
             </h1>
             <p style={{ fontSize: m ? 16 : 19, marginTop: 24, maxWidth: 480, opacity: 0.8 }}>Corrida, força e mobilidade no mesmo plano — ajustado toda semana pelos seus dados e por um coach de verdade.</p>
             <div style={{ display: 'flex', gap: 14, marginTop: 30, flexDirection: m ? 'column' : 'row' }}>
               <span style={{ background: p.accent, color: p.onAccent, padding: '17px 30px', ...slant, fontSize: 17, letterSpacing: '0.01em', textAlign: 'center' }}>Começar 7 dias grátis</span>
-              <span style={{ border: `2px solid ${withAlpha(p.bg, 0.5)}`, padding: '15px 28px', ...slant, fontSize: 17, letterSpacing: '0.01em', textAlign: 'center' }}>Ver programas</span>
+              <span style={{ border: `2px solid ${withAlpha(inv.fg, 0.5)}`, padding: '15px 28px', ...slant, fontSize: 17, letterSpacing: '0.01em', textAlign: 'center' }}>Ver programas</span>
             </div>
           </div>
           <div style={{ position: 'relative', height: m ? 300 : 520 }}>
             <div style={{ position: 'absolute', right: '6%', top: '8%', width: m ? 220 : 380, height: m ? 220 : 380, borderRadius: '50%', border: `${m ? 14 : 22}px solid ${p.secondary}`, opacity: 0.9 }} />
             <div style={{ position: 'absolute', inset: 0 }}>
-              <Athlete p={p} pose="run" body={p.bg} />
+              <Athlete p={p} pose="run" body={inv.fg} />
             </div>
-            <div style={{ position: 'absolute', left: m ? 0 : '4%', bottom: m ? 0 : '6%', background: p.bg, color: p.text, padding: m ? '10px 14px' : '14px 18px', transform: 'skewX(-8deg)' }}>
+            <div style={{ position: 'absolute', left: m ? 0 : '4%', bottom: m ? 0 : '6%', background: inv.fg, color: inv.bg, padding: m ? '10px 14px' : '14px 18px', transform: 'skewX(-8deg)' }}>
               <div style={{ transform: 'skewX(8deg)' }}>
-                <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '0.1em', color: p.muted }}>PACE MÉDIO</div>
+                <div style={{ fontSize: 11.5, fontWeight: 700, letterSpacing: '0.1em', opacity: 0.7 }}>PACE MÉDIO</div>
                 <div style={{ ...slant, fontSize: m ? 24 : 32 }}>4'52"/km</div>
               </div>
             </div>
@@ -185,24 +186,24 @@ export default function KineticLab({ palette: p, device }: SiteProps) {
       </section>
 
       {/* Painel de desempenho */}
-      <section style={{ background: p.text, color: p.bg }}>
+      <section style={{ background: inv.bg, color: inv.fg }}>
         <Wrap m={m} max={1320} style={{ display: 'grid', gridTemplateColumns: m ? '1fr' : 'minmax(0, 4fr) minmax(0, 8fr)', gap: m ? 28 : 64, padding: m ? '56px 20px' : '104px 48px', alignItems: 'center' }}>
           <div>
             <div style={{ fontSize: 13, fontWeight: 700, letterSpacing: '0.16em', color: p.accent }}>APP KINETIC</div>
             <h2 style={{ ...slant, fontSize: m ? 40 : 64, lineHeight: 0.9, marginTop: 14 }}>Seus dados viram treino.</h2>
             <p style={{ opacity: 0.75, marginTop: 16, fontSize: m ? 15 : 17 }}>Relógio, balança e sono conectados. Seu coach ajusta a carga antes de você se machucar.</p>
           </div>
-          <div style={{ background: withAlpha(p.bg, 0.06), border: `1px solid ${withAlpha(p.bg, 0.12)}`, padding: m ? 18 : 32 }}>
+          <div style={{ background: withAlpha(inv.fg, 0.06), border: `1px solid ${withAlpha(inv.fg, 0.12)}`, padding: m ? 18 : 32 }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, minmax(0, 1fr))', gap: m ? 10 : 24 }}>
-              <Ring p={p} value={0.82} label="52" sub="VO₂ máx" color={p.accent} />
-              <Ring p={p} value={0.64} label="+18%" sub="força" color={p.secondary} />
-              <Ring p={p} value={0.9} label="7h40" sub="sono" color={mix(p.accent, p.secondary, 0.5)} />
+              <Ring fg={inv.fg} value={0.82} label="52" sub="VO₂ máx" color={p.accent} />
+              <Ring fg={inv.fg} value={0.64} label="+18%" sub="força" color={p.secondary} />
+              <Ring fg={inv.fg} value={0.9} label="7h40" sub="sono" color={mix(p.accent, p.secondary, 0.5)} />
             </div>
             <div style={{ marginTop: m ? 18 : 28, fontSize: 12.5, fontWeight: 700, letterSpacing: '0.1em', opacity: 0.7 }}>CARGA SEMANAL</div>
             <div style={{ display: 'flex', alignItems: 'flex-end', gap: m ? 6 : 10, height: m ? 90 : 120, marginTop: 10 }}>
               {[40, 55, 48, 70, 62, 85, 30].map((v, i) => (
                 <div key={i} style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 6, alignItems: 'center', justifyContent: 'flex-end', height: '100%' }}>
-                  <span style={{ display: 'block', width: '100%', height: (v / 100) * (m ? 68 : 94), background: i === 5 ? p.accent : withAlpha(p.bg, 0.25), transform: 'skewX(-8deg)' }} />
+                  <span style={{ display: 'block', width: '100%', height: (v / 100) * (m ? 68 : 94), background: i === 5 ? p.accent : withAlpha(inv.fg, 0.25), transform: 'skewX(-8deg)' }} />
                   <span style={{ fontSize: 11, opacity: 0.6 }}>{['S', 'T', 'Q', 'Q', 'S', 'S', 'D'][i]}</span>
                 </div>
               ))}
@@ -257,7 +258,7 @@ export default function KineticLab({ palette: p, device }: SiteProps) {
               ['Híbrido', 'R$ 189', ['Tudo do Digital', 'Aulas ilimitadas', 'Coach dedicado', 'Avaliação física'], true],
               ['Performance', 'R$ 349', ['Tudo do Híbrido', 'Nutricionista', 'Fisioterapia preventiva'], false],
             ].map(([n, price, items, hi]) => (
-              <div key={n as string} style={{ background: hi ? p.text : p.bg, color: hi ? p.bg : p.text, border: hi ? 'none' : `1px solid ${line}` }}>
+              <div key={n as string} style={{ background: hi ? inv.bg : p.bg, color: hi ? inv.fg : p.text, border: `1px solid ${line}` }}>
                 <div style={{ background: hi ? p.accent : 'transparent', color: hi ? p.onAccent : p.text, padding: m ? '14px 20px' : '18px 28px', borderBottom: hi ? 'none' : `1px solid ${line}`, ...slant, fontSize: m ? 22 : 26 }}>{n as string}</div>
                 <div style={{ padding: m ? 20 : 28 }}>
                   <div style={{ ...slant, fontSize: m ? 44 : 56 }}>
@@ -291,7 +292,7 @@ export default function KineticLab({ palette: p, device }: SiteProps) {
         </Wrap>
       </section>
 
-      <footer style={{ background: p.text, color: p.bg }}>
+      <footer style={{ background: inv.bg, color: inv.fg }}>
         <Wrap m={m} max={1320} style={{ display: 'grid', gridTemplateColumns: m ? '1fr 1fr' : '2fr repeat(3, 1fr)', gap: 24, padding: m ? '36px 20px' : '56px 48px', fontSize: 14 }}>
           <div style={{ gridColumn: m ? '1 / -1' : 'auto' }}>
             <span style={{ ...slant, fontSize: 26 }}>

@@ -4,7 +4,7 @@
  * (contêiner, ícones de linha, hambúrguer, ids de SVG).
  */
 import { useId, type CSSProperties, type ReactNode } from 'react'
-import { withAlpha } from '@/core/color'
+import { isDark, withAlpha } from '@/core/color'
 import { fontStack } from '@/core/tokens'
 import type { SitePalette, SiteProps } from '../types'
 
@@ -17,6 +17,14 @@ export const r = <T,>(mobile: boolean, desktop: T, phone: T): T => (mobile ? pho
 
 /** Linha fina derivada do texto (funciona em paletas claras e escuras). */
 export const hair = (p: SitePalette, alpha = 0.14) => withAlpha(p.text, alpha)
+
+/**
+ * Faixa “invertida” (fundo na cor do texto). Em paletas escuras, usa a superfície para que
+ * o destaque continue legível sobre ela.
+ */
+export function band(p: SitePalette): { bg: string; fg: string } {
+  return isDark(p.bg) ? { bg: p.surface, fg: p.text } : { bg: p.text, fg: p.bg }
+}
 
 /** Ids únicos para gradientes/máscaras SVG — evita colisão entre miniaturas e prévia. */
 export function useSvgId(prefix: string) {

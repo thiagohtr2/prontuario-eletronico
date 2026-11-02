@@ -1,6 +1,6 @@
 import { mix, withAlpha } from '@/core/color'
 import type { SitePalette } from '../types'
-import { Burger, ff, hair, Icon, SiteRoot, Wrap, type SiteProps } from './kit'
+import { band, Burger, ff, hair, Icon, SiteRoot, Wrap, type SiteProps } from './kit'
 
 const C30 = Math.cos(Math.PI / 6)
 const iso = (x: number, y: number, z: number) => [(x - y) * C30, (x + y) * 0.5 - z]
@@ -305,11 +305,11 @@ export default function TerraForm({ palette: p, device }: SiteProps) {
       </section>
 
       {/* Contato monumental */}
-      <footer style={{ background: p.text, color: p.bg }}>
+      <footer style={{ background: band(p).bg, color: band(p).fg }}>
         <Wrap m={m} max={1440} style={{ padding: m ? '48px 20px 24px' : '104px 48px 32px' }}>
           <h2 style={{ fontWeight: 600, fontSize: m ? 40 : 104, letterSpacing: '-0.055em', lineHeight: 0.92, maxWidth: 1100 }}>Vamos conversar sobre o seu terreno.</h2>
           <div style={{ fontSize: m ? 20 : 36, fontWeight: 500, marginTop: m ? 20 : 36, color: p.accent, letterSpacing: '-0.02em' }}>ola@terraform.exemplo</div>
-          <div style={{ display: 'grid', gridTemplateColumns: m ? '1fr 1fr' : 'repeat(4, minmax(0, 1fr))', gap: 24, marginTop: m ? 40 : 88, paddingTop: 20, borderTop: `1px solid ${withAlpha(p.bg, 0.25)}`, fontSize: 14 }}>
+          <div style={{ display: 'grid', gridTemplateColumns: m ? '1fr 1fr' : 'repeat(4, minmax(0, 1fr))', gap: 24, marginTop: m ? 40 : 88, paddingTop: 20, borderTop: `1px solid ${withAlpha(band(p).fg, 0.25)}`, fontSize: 14 }}>
             {[
               ['São Paulo', 'Rua Fradique, 410\nPinheiros'],
               ['Lisboa', 'Rua do Açúcar, 22\nMarvila'],

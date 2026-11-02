@@ -1,18 +1,19 @@
-import { mix, withAlpha } from '@/core/color'
+import { isDark, mix, withAlpha } from '@/core/color'
 import type { SitePalette } from '../types'
 import { Burger, ff, hair, Icon, SiteRoot, useSvgId, Wrap, type IconName, type SiteProps } from './kit'
 
 /** Mar ao amanhecer, com sol baixo e ondas. */
 function Seascape({ p, palms = true }: { p: SitePalette; palms?: boolean }) {
   const id = useSvgId('tide-sea')
-  const sea = mix(p.accent, '#0b2a33', 0.15)
+  const night = isDark(p.bg)
+  const sea = mix(p.accent, '#0b2a33', night ? 0.55 : 0.15)
   return (
     <svg viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice" width="100%" height="100%" aria-hidden="true" style={{ display: 'block' }}>
       <defs>
         <linearGradient id={id('sky')} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor={mix(p.secondary, '#ffffff', 0.55)} />
-          <stop offset="0.7" stopColor={mix(p.secondary, '#ffffff', 0.15)} />
-          <stop offset="1" stopColor={p.secondary} />
+          <stop offset="0" stopColor={night ? mix(p.bg, '#000000', 0.2) : mix(p.secondary, '#ffffff', 0.55)} />
+          <stop offset="0.7" stopColor={night ? mix(p.bg, p.secondary, 0.45) : mix(p.secondary, '#ffffff', 0.15)} />
+          <stop offset="1" stopColor={night ? mix(p.secondary, p.accent, 0.4) : p.secondary} />
         </linearGradient>
         <linearGradient id={id('sea')} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor={mix(sea, '#ffffff', 0.35)} />
@@ -20,7 +21,8 @@ function Seascape({ p, palms = true }: { p: SitePalette; palms?: boolean }) {
         </linearGradient>
       </defs>
       <rect width="1440" height="800" fill={`url(#${id('sky')})`} />
-      <circle cx={720} cy={520} r={130} fill={mix(p.secondary, '#ffffff', 0.7)} opacity={0.9} />
+      <circle cx={720} cy={520} r={130} fill={night ? mix(p.accent, '#ffffff', 0.55) : mix(p.secondary, '#ffffff', 0.7)} opacity={0.9} />
+      {night && Array.from({ length: 40 }, (_, i) => <circle key={i} cx={(i * 211) % 1440} cy={(i * 97) % 420} r={1.4 + (i % 3) * 0.6} fill={withAlpha('#ffffff', 0.6)} />)}
       <rect y={520} width="1440" height="280" fill={`url(#${id('sea')})`} />
       <path d="M560 540 L880 540" stroke={withAlpha('#ffffff', 0.55)} strokeWidth={3} />
       {Array.from({ length: 9 }, (_, i) => {

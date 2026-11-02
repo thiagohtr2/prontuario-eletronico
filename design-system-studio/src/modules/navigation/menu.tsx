@@ -40,7 +40,20 @@ export function useMenus(enabled = true): MenuApi {
   const openRef = useRef<string | null>(null)
   openRef.current = open
   const triggers = useRef(new Map<string, HTMLElement>())
+  // Callbacks de ref estáveis por id: o React não desanexa/reanexa o gatilho a cada render.
+  const refCbs = useRef(new Map<string, (el: HTMLElement | null) => void>())
   const keyboard = useRef(false)
+  const refFor = (id: string) => {
+    let cb = refCbs.current.get(id)
+    if (!cb) {
+      cb = (el: HTMLElement | null) => {
+        if (el) triggers.current.set(id, el)
+        else triggers.current.delete(id)
+      }
+      refCbs.current.set(id, cb)
+    }
+    return cb
+  }
 
   const close = useCallback((returnFocus = false) => {
     const current = openRef.current
@@ -90,10 +103,7 @@ export function useMenus(enabled = true): MenuApi {
       'data-nv-trigger': id,
       'aria-expanded': open === id,
       'aria-haspopup': haspopup,
-      ref: (el: HTMLElement | null) => {
-        if (el) triggers.current.set(id, el)
-        else triggers.current.delete(id)
-      },
+      ref: refFor(id),
       onClick: (e: ReactMouseEvent) => {
         if (!enabled) return
         keyboard.current = e.detail === 0

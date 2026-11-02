@@ -320,7 +320,7 @@ export default function PulseHealth({ palette: p, device }: SiteProps) {
                 ))}
               </div>
             </div>
-            <div style={{ justifySelf: 'center', width: m ? 200 : 250, height: m ? 220 : 300, borderRadius: '32px 32px 0 0', border: `8px solid ${withAlpha(p.bg, 0.2)}`, borderBottom: 0, background: p.bg, color: p.text, padding: '20px 16px', alignSelf: 'end' }}>
+            <div style={{ justifySelf: 'center', width: m ? 200 : 250, height: m ? 220 : 300, borderRadius: '32px 32px 0 0', borderTop: `8px solid ${withAlpha(p.bg, 0.2)}`, borderLeft: `8px solid ${withAlpha(p.bg, 0.2)}`, borderRight: `8px solid ${withAlpha(p.bg, 0.2)}`, background: p.bg, color: p.text, padding: '20px 16px', alignSelf: 'end' }}>
               <div style={{ fontSize: 12, color: p.muted }}>Olá, Marina</div>
               <div style={{ fontWeight: 700, fontSize: 17, marginTop: 2 }}>Seus lembretes</div>
               {['Losartana 50 mg · 8h', 'Hemograma · resultado ✓', 'Consulta · Ter 14h'].map((t, i) => (

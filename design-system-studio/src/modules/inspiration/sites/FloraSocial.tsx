@@ -12,13 +12,13 @@ function GardenPhoto({ p, kind, height }: { p: SitePalette; kind: Photo; height:
     return (
       <div style={{ height, borderRadius: 16, background: `linear-gradient(180deg, ${mix(p.secondary, '#ffffff', 0.55)} 0 22%, ${mix(p.secondary, '#7aa36b', 0.4)} 22% 100%)`, position: 'relative', overflow: 'hidden' }}>
         {[0, 1, 2].map((i) => (
-          <div key={i} style={{ position: 'absolute', left: `${8 + i * 30}%`, width: '24%', top: '32%', bottom: '10%', borderRadius: 10, background: soil, transform: 'perspective(200px) rotateX(18deg)', backgroundImage: `radial-gradient(circle, ${green} 6px, transparent 7px)`, backgroundSize: '22px 22px' }} />
+          <div key={i} style={{ position: 'absolute', left: `${8 + i * 30}%`, width: '24%', top: '32%', bottom: '10%', borderRadius: 10, backgroundColor: soil, transform: 'perspective(200px) rotateX(18deg)', backgroundImage: `radial-gradient(circle, ${green} 6px, transparent 7px)`, backgroundSize: '22px 22px' }} />
         ))}
       </div>
     )
   if (kind === 'sprouts')
     return (
-      <div style={{ height, borderRadius: 16, background: soil, backgroundImage: `radial-gradient(ellipse 5px 9px at 50% 40%, ${mix(p.secondary, '#ffffff', 0.2)} 98%, transparent), radial-gradient(ellipse 5px 9px at 50% 40%, ${green} 98%, transparent)`, backgroundSize: '26px 26px, 26px 26px', backgroundPosition: '0 0, 13px 13px' }} />
+      <div style={{ height, borderRadius: 16, backgroundColor: soil, backgroundImage: `radial-gradient(ellipse 5px 9px at 50% 40%, ${mix(p.secondary, '#ffffff', 0.2)} 98%, transparent), radial-gradient(ellipse 5px 9px at 50% 40%, ${green} 98%, transparent)`, backgroundSize: '26px 26px, 26px 26px', backgroundPosition: '0 0, 13px 13px' }} />
     )
   return (
     <div style={{ height, borderRadius: 16, background: mix(p.surface, p.secondary, 0.25), display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', placeItems: 'center', padding: 12, gap: 6 }}>

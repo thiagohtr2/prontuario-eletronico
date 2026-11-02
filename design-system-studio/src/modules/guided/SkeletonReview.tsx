@@ -4,11 +4,22 @@ import { AlertTriangle, Pencil } from 'lucide-react'
 import { ENTRY_FLOWS, PROJECT_TYPES } from '@/core/project'
 import { useStudio } from '@/core/store'
 import { useResolvedTheme } from '@/core/theme'
+import { AuthPreview, LandingPreview } from '@/modules/entry'
 import { landingById, loginById, signupById } from '@/modules/entry/catalog'
 import { DesktopSchematic, PhonePreview } from '@/modules/layouts'
 import { desktopById, mobileById } from '@/modules/layouts/catalog'
 import { detectConflicts, detectPending } from '@/prompt/conflicts'
 import { Callout, Section } from '@/ui'
+
+/** Miniatura estática: renderiza em 1280 × 800 e reduz para caber no cartão. */
+function Thumb({ children }: { children: ReactNode }) {
+  const scale = 300 / 1280
+  return (
+    <div style={{ width: 1280 * scale, height: 800 * scale, overflow: 'hidden', pointerEvents: 'none' }} aria-hidden="true">
+      <div style={{ width: 1280, height: 800, transform: `scale(${scale})`, transformOrigin: 'top left' }}>{children}</div>
+    </div>
+  )
+}
 
 function ReviewCard({ kind, name, media, to, empty }: { kind: string; name?: string | null; media?: ReactNode; to: string; empty: string }) {
   return (
@@ -114,8 +125,24 @@ export function SkeletonReview() {
               ) : undefined
             }
           />
-          {flow?.needsLanding && <ReviewCard kind="Landing page" name={landing?.name} empty="Não escolhida" to="/guiado/entrada" />}
-          {flow?.needsLogin && <ReviewCard kind="Login" name={login?.name} empty="Não escolhido" to="/guiado/entrada" />}
+          {flow?.needsLanding && (
+            <ReviewCard
+              kind="Landing page"
+              name={landing?.name}
+              empty="Não escolhida"
+              to="/guiado/entrada"
+              media={landing ? <Thumb><LandingPreview model={landing} device="desktop" theme={project.entry.landingUsesOriginalColors ? null : theme} interactive={false} compact /></Thumb> : undefined}
+            />
+          )}
+          {flow?.needsLogin && (
+            <ReviewCard
+              kind="Login"
+              name={login?.name}
+              empty="Não escolhido"
+              to="/guiado/entrada"
+              media={login ? <Thumb><AuthPreview login={login} view="login" device="desktop" theme={theme} interactive={false} /></Thumb> : undefined}
+            />
+          )}
           {flow?.needsLogin && <ReviewCard kind="Cadastro" name={signup?.name} empty="Sem cadastro escolhido" to="/guiado/entrada" />}
         </div>
       </Section>

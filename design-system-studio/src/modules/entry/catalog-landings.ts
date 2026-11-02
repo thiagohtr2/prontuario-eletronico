@@ -574,7 +574,7 @@ export const landings: LandingModel[] = [
       quote: { text: 'Fechamos o mês em dois dias, não em duas semanas.', author: 'Rafael Moura, diretor financeiro na Trevo Log' },
       closing: { title: 'Abra sua conta em 10 minutos', text: 'Sem mensalidade nos primeiros 6 meses.' },
       footer: ['Produtos', 'Empresa', 'Segurança', 'Legal'],
-      motif: 'bars',
+      motif: 'card',
       items: ['Banco Sul', 'Contab+', 'Fiscal', 'Planilha', 'ERP Uno', 'Pagar', 'Notas', 'API'],
       variant: 0,
     },

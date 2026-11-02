@@ -179,7 +179,7 @@ function headerSpec(d: HeaderDef): ItemSpec {
     )
   if (hasMega)
     behavior.push(
-      'Mega menu: painel de até 760 px (nunca mais largo que a viewport − 16 px) ancorado abaixo do header, com 3 colunas de links com descrição curta e um cartão de destaque; abre ao clicar, fecha com Esc ou clique fora; o foco vai para o primeiro link.',
+      'Mega menu: painel de até 760 px (nunca mais largo que a viewport − 16 px) ancorado abaixo do header, com 3 colunas de links agrupados sob títulos em caixa alta e um cartão de destaque com chamada; abre ao clicar, fecha com Esc ou clique fora; o foco vai para o primeiro link.',
     )
   behavior.push(`Item ativo: ${H_NAVSTYLE[l.navStyle]}. Hover com transição de 120 ms; foco visível com anel de 2 px na cor focusRing.`)
   if (d.sticky)
@@ -1540,7 +1540,7 @@ function sidebarSpec(d: SidebarDef): ItemSpec {
   const l = d.look
   const all = [...l.groups, ...(l.panel ?? []), ...(l.sections ?? []).flatMap((s) => s.groups)].flatMap((g) => g.items)
   const withChildren = all.filter((i) => i.children?.length)
-  const flyout = d.compositions.some((c) => c.arrangement.submenu === 'flyout')
+  const flyoutIn = d.compositions.map((c, i) => (c.arrangement.submenu === 'flyout' ? i : -1)).filter((i) => i >= 0)
   const rail = l.railWidth ?? (d.shape === 'rail' ? d.width : 72)
   const itemH = S_DENSITY[l.density]
   const shapeTxt: Record<SidebarModel['shape'], string> = {
@@ -1574,7 +1574,13 @@ function sidebarSpec(d: SidebarDef): ItemSpec {
   ]
   if (withChildren.length)
     behavior.push(
-      `Submenus (${withChildren.map((i) => i.label).join(', ')}): ${flyout ? 'em uma composição abrem como flyout — painel de 220 px à direita da sidebar, alinhado ao item, reposicionado para caber na altura da janela; na outra, como acordeão.' : 'abrem como acordeão dentro da lista (aria-expanded), com subitens recuados 28 px e uma linha-guia vertical de 1 px.'} Esc fecha o submenu aberto.`,
+      `Submenus (${withChildren.map((i) => i.label).join(', ')}): ${
+        flyoutIn.length === 2
+          ? 'abrem como flyout — painel de 220 px à direita da sidebar, alinhado ao item, com o título da seção, reposicionado para caber na altura da janela.'
+          : flyoutIn.length === 1
+            ? `na composição ${flyoutIn[0] === 0 ? 'A' : 'B'} abrem como flyout (painel de 220 px à direita da sidebar, alinhado ao item e reposicionado para caber na altura da janela); na composição ${flyoutIn[0] === 0 ? 'B' : 'A'}, como acordeão dentro da lista (aria-expanded), com subitens recuados e linha-guia vertical.`
+            : 'abrem como acordeão dentro da lista (aria-expanded), com subitens recuados 28 px e uma linha-guia vertical de 1 px; o item pai fica destacado quando um subitem está ativo.'
+      } Esc fecha o submenu aberto.`,
     )
   if (l.collapsible || d.shape === 'expansivel')
     behavior.push(

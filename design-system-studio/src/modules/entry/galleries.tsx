@@ -5,7 +5,7 @@ import { studio, useProject } from '@/core/store'
 import { useResolvedTheme } from '@/core/theme'
 import type { Device } from '@/core/types'
 import { PromptButton } from '@/prompt/PromptButton'
-import { Button, Callout, DeviceToggle, EmptyState, FilterChips, keepScroll, Modal, OptionCard, SearchInput, Segmented, Switch, toast, useMediaQuery } from '@/ui'
+import { Button, Callout, DeviceToggle, EmptyState, FilterChips, keepScroll, Modal, OptionCard, SearchInput, Segmented, Select, Switch, toast, useMediaQuery } from '@/ui'
 import { AuthPreview } from './AuthPreview'
 import { landingById, landings, loginById, logins, signupById, signups } from './catalog'
 import { PreviewStage, ScaledThumb } from './frames'
@@ -60,7 +60,7 @@ function SelectionSummary({ label, value, detail, onPreview }: { label: string; 
             </>
           ) : (
             <span className="u-subtle" style={{ fontWeight: 500 }}>
-              Nenhum modelo escolhido ainda — clique em um cartão.
+              Nenhum modelo escolhido ainda.
             </span>
           )}
         </span>
@@ -197,6 +197,7 @@ export function LandingGallery({ guided = false }: { guided?: boolean }) {
   const selectedId = useProject((p) => p.entry.landingId)
   const showHints = useProject((p) => p.prefs.showHints)
   const [arch, setArch] = useState('todas')
+  const narrow = useMediaQuery('(max-width: 720px)')
   const [query, setQuery] = useState('')
   const [openId, setOpenId] = useState<string | null>(null)
   const closeModal = useCallback(() => setOpenId(null), [])
@@ -235,17 +236,39 @@ export function LandingGallery({ guided = false }: { guided?: boolean }) {
             <SearchInput value={query} onChange={setQuery} label="Buscar landing pages" placeholder="Buscar por nome, segmento ou estrutura…" />
           </div>
         )}
-        <FilterChips
-          label="Filtrar por arquitetura"
-          options={chipOptions}
-          value={arch}
-          onChange={(id) =>
-            keepScroll(() => {
-              grid.lock()
-              setArch(id)
-            })
-          }
-        />
+        {narrow ? (
+          <label className="ent-select">
+            <span className="ui-label">Estrutura</span>
+            <Select
+              value={arch}
+              onChange={(e) => {
+                const id = e.target.value
+                keepScroll(() => {
+                  grid.lock()
+                  setArch(id)
+                })
+              }}
+            >
+              {chipOptions.map((o) => (
+                <option key={o.id} value={o.id}>
+                  {o.label} ({o.count})
+                </option>
+              ))}
+            </Select>
+          </label>
+        ) : (
+          <FilterChips
+            label="Filtrar por arquitetura"
+            options={chipOptions}
+            value={arch}
+            onChange={(id) =>
+              keepScroll(() => {
+                grid.lock()
+                setArch(id)
+              })
+            }
+          />
+        )}
         {(showHints || guided) && <p className="ent-arch-note">{archInfo ? `${archInfo.name}: ${archInfo.description}` : 'Doze arquiteturas diferentes, duas marcas fictícias em cada uma.'}</p>}
       </div>
       <div ref={grid.ref} style={{ minHeight: grid.minH }}>

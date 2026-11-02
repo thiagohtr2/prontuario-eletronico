@@ -4,7 +4,7 @@ import { Burger, ff, hair, Icon, SiteRoot, Wrap, type IconName, type SiteProps }
 
 function gradientText(p: SitePalette) {
   return {
-    background: `linear-gradient(90deg, ${p.accent}, ${p.secondary})`,
+    backgroundImage: `linear-gradient(90deg, ${p.accent}, ${p.secondary})`,
     WebkitBackgroundClip: 'text' as const,
     backgroundClip: 'text' as const,
     color: 'transparent',

@@ -80,7 +80,8 @@ test.describe('Central de Prompts', () => {
     await page.getByTestId('prompt-item-identity.palette').getByRole('button', { name: 'Prompt deste elemento' }).click()
     await expect(page.getByTestId('prompt-text')).toContainText('Responsividade obrigatória')
     await page.keyboard.press('Escape')
-    await page.getByTestId('prompt-item-identity.typography').getByRole('switch').uncheck()
+    await page.getByTestId('prompt-item-identity.typography').getByText('No Master Prompt').click()
+    await expect(page.getByTestId('prompt-item-identity.typography').getByRole('switch')).not.toBeChecked()
     await page.getByRole('tab', { name: 'Master Prompt' }).click()
     await expect(text).not.toContainText('### Tipografia:')
   })
@@ -106,7 +107,7 @@ test.describe('Validation Lab', () => {
       issues: [{ page: '/', width: 360, type: 'overflow-horizontal', severity: 'alta', element: 'div.hero', description: 'Página 40px mais larga', suggestion: 'Use max-width: 100%' }],
     }
     await page.getByTestId('report-input').setInputFiles({ name: 'report.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(report)) })
-    await expect(page.getByText('Página 40px mais larga')).toBeVisible()
+    await expect(page.locator('.val-issue').getByText('Página 40px mais larga')).toBeVisible()
     await expect(page.locator('pre.ui-code')).toContainText('Correção de responsividade')
   })
 })

@@ -3513,6 +3513,9 @@ li[data-state='todo'] .nvs-step__text strong {
   color: var(--s-text);
   font-weight: 600;
 }
+.nvs-grid--side .nvs-card__comp {
+  flex-basis: 100%;
+}
 .nvs-card__actions {
   display: flex;
   flex-wrap: wrap;

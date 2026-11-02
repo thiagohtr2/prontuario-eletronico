@@ -541,27 +541,29 @@ function SearchArea({ ctx, kind }: { ctx: Ctx; kind: HeaderLook['search'] }) {
   const id = `${ctx.uid}-suggest`
   const trig = ctx.menus.trigger(id, 'listbox')
   return (
-    <div className="nvs-hs-wide" ref={trig.ref as (el: HTMLDivElement | null) => void} data-nv-trigger={id}>
-      <Search size={17} aria-hidden="true" />
-      <input
-        type="search"
-        placeholder={WIDE_PLACEHOLDER[ctx.look.context] ?? 'Buscar no site…'}
-        aria-label="Buscar"
-        aria-expanded={trig['aria-expanded']}
-        aria-haspopup="listbox"
-        value={q}
-        onChange={(e) => setQ(e.target.value)}
-        onFocus={() => ctx.menus.show(id)}
-        onKeyDown={(e) => {
-          if (e.key === 'Escape' && ctx.menus.open !== id) {
-            setQ('')
-            e.currentTarget.blur()
-          }
-        }}
-      />
-      <span className="nvs-hs-wide__btn" aria-hidden="true">
-        <Search size={15} />
-      </span>
+    <>
+      <div className="nvs-hs-wide" ref={trig.ref as (el: HTMLDivElement | null) => void} data-nv-trigger={id}>
+        <Search size={17} aria-hidden="true" />
+        <input
+          type="search"
+          placeholder={WIDE_PLACEHOLDER[ctx.look.context] ?? 'Buscar no site…'}
+          aria-label="Buscar"
+          aria-expanded={trig['aria-expanded']}
+          aria-haspopup="listbox"
+          value={q}
+          onChange={(e) => setQ(e.target.value)}
+          onFocus={() => ctx.menus.show(id)}
+          onKeyDown={(e) => {
+            if (e.key === 'Escape' && ctx.menus.open !== id) {
+              setQ('')
+              e.currentTarget.blur()
+            }
+          }}
+        />
+        <span className="nvs-hs-wide__btn" aria-hidden="true">
+          <Search size={15} />
+        </span>
+      </div>
       <Popover id={id} menus={ctx.menus} root={ctx.root} width="anchor" role="listbox" label="Sugestões">
         <div className="nvs-pop__list">
           <span className="nvs-pop__group">{q ? `Sugestões para “${q}”` : 'Buscas recentes'}</span>
@@ -573,7 +575,7 @@ function SearchArea({ ctx, kind }: { ctx: Ctx; kind: HeaderLook['search'] }) {
           ))}
         </div>
       </Popover>
-    </div>
+    </>
   )
 }
 

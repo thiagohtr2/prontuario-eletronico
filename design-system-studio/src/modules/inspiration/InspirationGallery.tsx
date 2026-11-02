@@ -294,13 +294,15 @@ function SiteViewer({
           <div className="ins-foot__group" role="group" aria-label="Exportar">
             <span className="ins-foot__label">Exportar</span>
             <Button size="sm" variant="secondary" icon={<FileCode2 />} onClick={exportCss} title="Variáveis CSS da paleta escolhida + fontes">
-              CSS de referência
+              <span className="ins-long">CSS de referência</span>
+              <span className="ins-short">CSS</span>
             </Button>
             <Button size="sm" variant="secondary" icon={<Braces />} onClick={exportJson} title="Especificação do site + paleta + ajustes">
               JSON
             </Button>
             <Button size="sm" variant="secondary" icon={<Globe />} onClick={exportHtml} title="Página demonstrativa que abre direto no navegador">
-              HTML demonstrativo
+              <span className="ins-long">HTML demonstrativo</span>
+              <span className="ins-short">HTML</span>
             </Button>
           </div>
           <div className="ins-foot__group ins-foot__group--main">
@@ -331,7 +333,7 @@ function SiteViewer({
               <IconButton label={`Conceito anterior: ${prev.brand}`} outlined size="sm" onClick={() => onNavigate(prev.id)}>
                 <ArrowLeft />
               </IconButton>
-              <span className="ins-viewer__count">
+              <span className="ins-viewer__count" aria-live="polite">
                 {index + 1} / {inspirationSites.length}
               </span>
               <IconButton label={`Próximo conceito: ${next.brand}`} outlined size="sm" onClick={() => onNavigate(next.id)}>

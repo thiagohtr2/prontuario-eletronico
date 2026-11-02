@@ -1078,7 +1078,7 @@ export const inspirationSites: InspirationSite[] = [
     tags: ['games', 'pixel art', 'lúdico', 'escuro', 'neo-brutalismo', 'comunidade'],
     palettes: [
       '1a1433 251d48 fff8e7 b7acd6 ffd23f ff4fa0',
-      'f6f6f4 ffffff 141414 6a6a6a 141414 cfcfcf',
+      'f6f6f4 ffffff 141414 6a6a6a 141414 6e6e6e',
       '0c0c0e 17171b f1efe9 a19e96 d8b45a 5a4a8a',
       'f4ead8 fcf5e8 2b1f14 6e5c48 c4492a 2f7a72',
       '07112a 0e1d42 e8f0ff 8ea0c6 38bdf8 6366f1',

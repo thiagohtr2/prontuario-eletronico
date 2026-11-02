@@ -53,7 +53,7 @@ test.describe('Fluxo completo de criação (modo guiado)', () => {
 
     // 5. Revisão → aprovar
     await expect(page).toHaveURL(/#\/guiado\/revisao/)
-    await expect(page.getByText('Esqueleto completo.')).toBeVisible()
+    await expect(page.getByText('Esqueleto completo.').first()).toBeVisible()
     await page.getByTestId('guided-next').click()
 
     // 6–9. Acabamento

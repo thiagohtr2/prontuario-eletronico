@@ -1,4 +1,4 @@
-import { mix, withAlpha } from '@/core/color'
+import { isDark, mix, withAlpha } from '@/core/color'
 import type { SitePalette } from '../types'
 import { Avatar, Burger, ff, hair, Icon, SiteRoot, useSvgId, Wrap, type IconName, type SiteProps } from './kit'
 
@@ -8,8 +8,15 @@ type Scene = 'mountains' | 'desert' | 'coast' | 'forest' | 'snow'
 function Landscape({ p, scene, trail = false, shift = 0 }: { p: SitePalette; scene: Scene; trail?: boolean; shift?: number }) {
   const id = useSvgId('nomad-land')
   const sec = p.secondary
-  const skyTop = scene === 'snow' ? mix(sec, '#ffffff', 0.55) : scene === 'desert' ? mix(p.accent, '#ffffff', 0.45) : mix(p.accent, '#ffffff', 0.62)
-  const skyBottom = mix(p.accent, '#ffffff', scene === 'desert' ? 0.2 : 0.85)
+  const night = isDark(p.bg)
+  const skyTop = night
+    ? mix(p.bg, sec, 0.25)
+    : scene === 'snow'
+      ? mix(sec, '#ffffff', 0.55)
+      : scene === 'desert'
+        ? mix(p.accent, '#ffffff', 0.45)
+        : mix(p.accent, '#ffffff', 0.62)
+  const skyBottom = night ? mix(p.bg, p.accent, 0.35) : mix(p.accent, '#ffffff', scene === 'desert' ? 0.2 : 0.85)
   const layers =
     scene === 'desert'
       ? [mix(p.accent, '#ffffff', 0.3), mix(p.accent, '#7a3b1c', 0.25), mix(p.accent, '#4a2010', 0.45)]
@@ -84,7 +91,7 @@ export default function NomadTrails({ palette: p, device }: SiteProps) {
       {/* Hero com paisagem em tela cheia */}
       <section style={{ position: 'relative', height: m ? 640 : 780 }}>
         <div style={{ position: 'absolute', inset: 0 }}>
-          <Landscape p={p} scene="mountains" trail shift={m ? 140 : 110} />
+          <Landscape p={p} scene="mountains" trail shift={m ? 140 : 150} />
         </div>
         <header style={{ position: 'relative', zIndex: 2 }}>
           <Wrap m={m} max={1280} style={{ display: 'flex', alignItems: 'center', gap: 36, height: m ? 64 : 84 }}>
@@ -130,7 +137,7 @@ export default function NomadTrails({ palette: p, device }: SiteProps) {
                 ['route', 'Estilo', 'Trilhas'],
               ] as [IconName, string, string][]
             ).map(([icon, k, v], i) => (
-              <div key={k} style={{ display: 'flex', gap: 12, alignItems: 'center', padding: m ? '10px 12px' : '8px 24px', borderLeft: !m && i ? `1px solid ${line}` : 'none', border: m ? `1px solid ${line}` : undefined, borderRadius: m ? 14 : 0 }}>
+              <div key={k} style={{ display: 'flex', gap: 12, alignItems: 'center', padding: m ? '10px 12px' : '8px 24px', ...(m ? { border: `1px solid ${line}`, borderRadius: 14 } : { borderLeft: i ? `1px solid ${line}` : 'none' }) }}>
                 <Icon name={icon} size={20} color={p.accent} />
                 <div style={{ minWidth: 0 }}>
                   <div style={{ fontSize: 12, color: p.muted, fontWeight: 600 }}>{k}</div>
