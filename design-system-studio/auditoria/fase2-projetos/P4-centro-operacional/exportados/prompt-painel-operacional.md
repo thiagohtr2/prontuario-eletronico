@@ -40,6 +40,9 @@ Painel operacional One Screen com grade de status, coluna de alertas com rolagem
 - Zoom do navegador até 200% e fonte ampliada do sistema: nenhum conteúdo some; prefira reorganizar (menos colunas) a reduzir a fonte.
 - Abaixo de 768 px vale a arquitetura mobile escolhida separadamente no Studio: não converta a navegação desktop em drawer, rail ou bottom navigation por conta própria.
 
+**Exceções**
+- Observação do usuário: Requisito do cliente: adaptação para monitores grandes.
+
 **Observações**
 - One Screen ≠ One Page: aqui tudo deve caber na viewport sem rolagem da página; em One Page a página rola. Nunca use overflow: hidden para esconder conteúdo que não coube.
 - As medidas são recomendações para 1280 × 800; adapte à tela e ao conteúdo preservando a estrutura escolhida.

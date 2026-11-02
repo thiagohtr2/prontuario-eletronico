@@ -1,0 +1,21 @@
+const { open, dump, controls, C, BASE } = require('./lib.cjs');
+const E = __dirname + '/../exportados/';
+(async () => {
+  const { ctx, page, logs, close } = await open();
+  await page.goto(BASE + '#/guiado/identidade', { waitUntil: 'networkidle' }); await page.getByText('Prévia da identidade').first().waitFor(); await page.waitForTimeout(800);
+  const dlP = page.waitForEvent('download', { timeout: 8000 }).catch(() => null);
+  await page.getByRole('button', { name: 'CSS dos tokens' }).click();
+  const dl = await dlP;
+  if (dl) { const f = E + dl.suggestedFilename(); await dl.saveAs(f); console.log('saved', f); } else console.log('no download');
+  await page.waitForTimeout(500);
+  await page.getByRole('button', { name: 'Prompt da identidade' }).click();
+  await page.waitForTimeout(1200);
+  await page.screenshot({ path: C + '31-prompt-identidade.png' });
+  const txt = await page.evaluate(() => { const d=document.querySelector('[role=dialog]'); if(!d) return 'nodialog'; const ta=d.querySelector('textarea, pre, code'); return (ta ? (ta.value||ta.innerText) : d.innerText); });
+  require('fs').writeFileSync(E + 'prompt-identidade-modal.txt', txt);
+  console.log(txt.slice(0, 6000));
+  const ctr = await page.evaluate(() => { const d=document.querySelector('[role=dialog]'); return d ? [...d.querySelectorAll('button')].map(b=>(b.innerText||b.getAttribute('aria-label')).trim()).join(' | ') : ''; });
+  console.log('CTR', ctr);
+  console.log('LOGS', logs.join('\n'));
+  await close();
+})();

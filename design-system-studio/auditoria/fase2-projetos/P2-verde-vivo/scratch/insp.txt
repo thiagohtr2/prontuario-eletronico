@@ -1,0 +1,71 @@
+- main:
+  - navigation "Você está em":
+    - list:
+      - listitem:
+        - link "Início":
+          - /url: "#/"
+      - listitem:
+        - text: ›
+        - link "Inspiração":
+          - /url: "#/livre"
+      - listitem: ›Inspiration Gallery
+  - text: Referências
+  - heading "Inspiration Gallery" [level=1]
+  - paragraph: 20 sites fictícios completos, cada um com identidade própria e 8 propostas de paleta. Encontre uma experiência inteira que tenha a cara do seu projeto — não só um menu ou um botão.
+  - strong: Inspiração (esta página)
+  - paragraph: "Sites completos e fictícios para você descobrir, olhando, uma identidade que combine com o seu projeto: cores, tipografia, ritmo e composição. Aprove um conceito e ele entra no Master Prompt como referência visual."
+  - strong: Templates
+  - paragraph:
+    - text: Modelos de página reutilizáveis — a estrutura de seções de uma página específica, pronta para receber o seu conteúdo.
+    - link "Ir para Templates":
+      - /url: "#/modulos/templates"
+  - text: Nenhum conceito aprovado ainda. Abra um site, escolha a paleta e clique em
+  - strong: Aprovar conceito
+  - text: .
+  - searchbox "Buscar conceitos"
+  - group "Filtrar por tipo de site":
+    - button "Todos 20" [pressed]
+    - button "Produtos e lojas 7"
+    - button "Serviços 6"
+    - button "Tecnologia 3"
+    - button "Editorial e cultura 4"
+  - button "Abrir o site Verdant Atelier (Plantas e botânica)": Verdant Atelier Plantas e botânica · Fraunces + Inter Editorial botânico assimétrico, com molduras em arco e muito respiro
+  - text: 8 paletas
+  - button "Abrir o site VOLT / MOTORS (Carros elétricos)": VOLT / MOTORS Carros elétricos · Space Grotesk + Inter Hero cinematográfico com produto monumental e tipografia gigante vazada
+  - text: 8 paletas
+  - button "Abrir o site FROST LAB (Geladeiras e eletrodomésticos)": FROST LAB Geladeiras e eletrodomésticos · Inter + Inter Página de produto com imagem anotada, ficha técnica e comparativo
+  - text: 8 paletas
+  - button "Abrir o site FORMICA (Ciência e formigas)": FORMICA Ciência e formigas · Georgia + Georgia Revista documental com pranchas científicas, caderno de campo e infográficos
+  - text: 8 paletas
+  - button "Abrir o site ORBITAL ZERO (Exploração espacial)": ORBITAL ZERO Exploração espacial · Space Grotesk + Inter Hero centralizado com contagem regressiva sobre planeta e campo de estrelas
+  - text: 8 paletas
+  - button "Abrir o site TERRA / FORM (Arquitetura)": TERRA / FORM Arquitetura · Inter + Inter Grade suíça de 12 colunas com tipografia monumental e índice tabular
+  - text: 8 paletas
+  - button "Abrir o site CREMA CLUB (Cafeteria)": CREMA CLUB Cafeteria · Fraunces + Inter Editorial acolhedor com cardápio impresso e selo circular
+  - text: 8 paletas
+  - button "Abrir o site PULSE HEALTH (Saúde)": PULSE HEALTH Saúde · Inter + Fonte do sistema Hero com widget de agendamento e painéis de saúde flutuantes
+  - text: 8 paletas
+  - button "Abrir o site ATLAS CAPITAL (Finanças)": "ATLAS CAPITAL Finanças · Georgia + Inter Corporativo orientado a dados: painel de gráficos, indicadores e tabelas"
+  - text: 8 paletas
+  - button "Abrir o site LUMEN AUDIO (Equipamentos de áudio)": LUMEN AUDIO Equipamentos de áudio · Space Grotesk + Inter Produto centralizado sob holofote, com especificações ao redor
+  - text: 8 paletas
+  - button "Abrir o site FLORA SOCIAL (Comunidade)": FLORA SOCIAL Comunidade · Fraunces + Inter Comunidade calorosa com colagem de avatares, feed em alvenaria e eventos
+  - text: 8 paletas
+  - button "Abrir o site ARC STUDIO (Agência criativa)": ARC STUDIO Agência criativa · Space Grotesk + Space Grotesk Tipografia gigante com cases em grade assimétrica e blocos de cor
+  - text: 8 paletas
+  - button "Abrir o site NOMAD TRAILS (Viagens)": NOMAD TRAILS Viagens · Fraunces + Inter Paisagem em tela cheia com busca sobreposta e roteiro com mapa
+  - text: 8 paletas
+  - button "Abrir o site MORI OBJECTS (Objetos e decoração)": MORI OBJECTS Objetos e decoração · Georgia + Inter Loja minimalista com natureza-morta, grade arejada e tipografia contida
+  - text: 8 paletas
+  - button "Abrir o site SIGNAL / AI (Inteligência artificial)": SIGNAL / AI Inteligência artificial · Inter + JetBrains Mono Gradiente técnico com código no hero e grade bento de recursos
+  - text: 8 paletas
+  - button "Abrir o site TIDE RESORT (Hotelaria)": "TIDE RESORT Hotelaria · Georgia + Georgia Hospitalidade serena: mar em tela cheia, reserva sobreposta e blocos alternados"
+  - text: 8 paletas
+  - button "Abrir o site PIXEL PLAY (Games)": PIXEL PLAY Games · JetBrains Mono + Space Grotesk Grade de pixels lúdica com bordas grossas e sombras sólidas
+  - text: 8 paletas
+  - button "Abrir o site AURORA WEAR (Moda)": AURORA WEAR Moda · Fraunces + Inter Lookbook editorial com figuras de moda e serifa fina
+  - text: 8 paletas
+  - button "Abrir o site RAIZ MARKET (Mercado e alimentação)": RAIZ MARKET Mercado e alimentação · Inter + Inter Varejo alegre com busca central, banners de oferta e grade de produtos
+  - text: 8 paletas
+  - button "Abrir o site KINETIC LAB (Esporte e movimento)": "KINETIC LAB Esporte e movimento · Space Grotesk + Inter Energia diagonal: cortes inclinados, itálico pesado e linhas de velocidade"
+  - text: 8 paletas

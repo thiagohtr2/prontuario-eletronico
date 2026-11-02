@@ -1,0 +1,168 @@
+{
+  "kind": "atelier-ui/backup",
+  "exportedAt": "2026-11-02T18:33:49.577Z",
+  "project": {
+    "schema": "atelier-ui/project",
+    "version": 1,
+    "id": "prj_abc27fd3",
+    "createdAt": "2026-11-02T18:19:11.946Z",
+    "updatedAt": "2026-11-02T18:33:06.738Z",
+    "meta": {
+      "name": "Atlas Workspace",
+      "objective": "SaaS profissional",
+      "description": "",
+      "audience": "",
+      "purpose": "",
+      "projectType": "saas",
+      "projectTypeOther": "",
+      "features": [],
+      "tech": "HTML + CSS + JavaScript"
+    },
+    "mode": "guided",
+    "depth": "essential",
+    "prefs": {
+      "showLegends": true,
+      "showHints": true
+    },
+    "guided": {
+      "step": "desktop",
+      "completed": [
+        "revisao",
+        "objetivo",
+        "entrada",
+        "desktop",
+        "mobile",
+        "preview",
+        "identidade",
+        "navegacao",
+        "componentes"
+      ],
+      "skeletonApproved": true
+    },
+    "entry": {
+      "flow": "login-only",
+      "landingId": null,
+      "loginId": "classico-central",
+      "signupId": "pagina-propria",
+      "landingUsesOriginalColors": false
+    },
+    "layout": {
+      "desktopId": "sidebar-integral-classica",
+      "mobileId": "bottom-nav-classica"
+    },
+    "identity": {
+      "paletteId": "neutro-essencial",
+      "overrides": {},
+      "typography": {
+        "heading": "inter",
+        "body": "inter",
+        "baseSize": 15,
+        "headingWeight": 650,
+        "bodyWeight": 400
+      },
+      "geometry": {
+        "radius": "medium",
+        "borderWidth": 1,
+        "shadow": "none",
+        "surface": "outlined",
+        "density": "comfortable",
+        "iconStyle": "outline"
+      }
+    },
+    "navigation": {
+      "header": {
+        "id": "trilha-contexto",
+        "variant": 0
+      },
+      "sidebar": {
+        "id": "classica-integral",
+        "variant": 0
+      }
+    },
+    "components": [
+      {
+        "id": "cmp_03d08536",
+        "categoryId": "cards",
+        "familyId": "swiss-minimal",
+        "label": "",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:27:39.329Z"
+      },
+      {
+        "id": "cmp_7342ec7b",
+        "categoryId": "tabelas",
+        "familyId": "swiss-minimal",
+        "label": "",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:27:56.546Z"
+      },
+      {
+        "id": "cmp_20e2b3f2",
+        "categoryId": "formularios",
+        "familyId": "swiss-minimal",
+        "label": "",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:27:59.394Z"
+      },
+      {
+        "id": "cmp_7d2f9e72",
+        "categoryId": "kpis-stat-cards",
+        "familyId": "swiss-minimal",
+        "label": "",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:28:02.176Z"
+      },
+      {
+        "id": "cmp_7eb79b70",
+        "categoryId": "dashboard",
+        "familyId": "swiss-minimal",
+        "label": "",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:28:04.959Z"
+      }
+    ],
+    "inspiration": null,
+    "template": null,
+    "prompt": {
+      "excluded": [],
+      "notes": {},
+      "conflictResolutions": {}
+    },
+    "validation": {
+      "config": {
+        "url": "",
+        "routes": [
+          "/"
+        ],
+        "widths": [
+          320,
+          360,
+          375,
+          390,
+          412,
+          430,
+          768,
+          1024,
+          1280,
+          1440
+        ],
+        "manualLogin": false,
+        "waitMs": 800,
+        "checks": {
+          "horizontalOverflow": true,
+          "offscreen": true,
+          "tapTargets": true,
+          "inputFontSize": true
+        },
+        "minTapTarget": 44
+      },
+      "report": null
+    }
+  },
+  "history": []
+}

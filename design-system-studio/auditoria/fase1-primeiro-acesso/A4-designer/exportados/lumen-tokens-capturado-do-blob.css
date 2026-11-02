@@ -1,0 +1,134 @@
+/*
+ * Lumen — CSS de referência gerado pelo Atelier UI.
+ * Tokens da identidade global. Use estas variáveis em todos os componentes.
+ */
+:root {
+  --color-primary: #0b6e4f;
+  --color-primary-hover: #035f91;
+  --color-primary-active: #025481;
+  --color-on-primary: #ffffff;
+  --color-primary-soft: #e1edf4;
+  --color-secondary: #0e7490;
+  --color-on-secondary: #ffffff;
+  --color-accent: #06b6d4;
+  --color-on-accent: #111114;
+  --color-bg: #f0f9ff;
+  --color-bg-alt: #e8f0f6;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f5f5f5;
+  --color-text: #0c1a2b;
+  --color-text-muted: #636f7c;
+  --color-text-disabled: #99a4ae;
+  --color-placeholder: #7e8a95;
+  --color-border: #e6e6e6;
+  --color-border-strong: #c7c7c7;
+  --color-focus-ring: #0369a1;
+  --color-hover: #f4f4f4;
+  --color-active: #ebebeb;
+  --color-pressed: #e0e0e0;
+  --color-selected: #e1edf4;
+  --color-selected-text: #0369a1;
+  --color-disabled: #f0f0f0;
+  --color-disabled-text: #9298a0;
+  --color-success: #117e39;
+  --color-success-bg: #e3f4e9;
+  --color-warning: #a85c04;
+  --color-warning-bg: #faefe1;
+  --color-error: #dc2626;
+  --color-error-bg: #fbe5e5;
+  --color-info: #2563eb;
+  --color-info-bg: #e5ecfd;
+  --color-link: #0369a1;
+  --color-link-hover: #035989;
+  --color-icon: #455260;
+  --color-nav-bg: #0c4a6e;
+  --color-nav-text: #cad7df;
+  --color-nav-active: #2e6382;
+  --color-nav-active-text: #ffffff;
+  --color-gradient-from: #0369a1;
+  --color-gradient-to: #1fbdd8;
+  --gradient-brand: none;
+  --font-heading: 'Space Grotesk Variable', 'Space Grotesk', system-ui, sans-serif;
+  --font-body: 'Inter Variable', Inter, system-ui, sans-serif;
+  --font-size-base: 16px;
+  --font-weight-heading: 600;
+  --font-weight-body: 400;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --border-width: 1px;
+  --shadow-surface: 0 1px 2px rgba(16,16,24,.06), 0 1px 3px rgba(16,16,24,.05);
+  --space-unit: 8px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  color-scheme: light;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-body);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: var(--font-weight-heading); line-height: 1.2; }
+
+a { color: var(--color-link); }
+a:hover { color: var(--color-link-hover); }
+
+img, video, svg { max-width: 100%; height: auto; }
+
+:focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; }
+
+.btn-primary {
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  border: 0;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font: inherit;
+  font-weight: 600;
+}
+.btn-primary:hover { background: var(--color-primary-hover); }
+.btn-primary:active { background: var(--color-primary-active); }
+.btn-primary:disabled { background: var(--color-disabled); color: var(--color-disabled-text); }
+
+.surface {
+  background: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-surface);
+}
+
+input, select, textarea {
+  font: inherit;
+  min-height: 44px;
+  border: var(--border-width) solid var(--color-border-strong);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+input::placeholder, textarea::placeholder { color: var(--color-placeholder); }
+
+@media (max-width: 599px) {
+  input, select, textarea { font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

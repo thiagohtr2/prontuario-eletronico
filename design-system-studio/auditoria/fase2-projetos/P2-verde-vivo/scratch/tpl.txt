@@ -1,0 +1,68 @@
+- main:
+  - navigation "Você está em":
+    - list:
+      - listitem:
+        - link "Início":
+          - /url: "#/"
+      - listitem:
+        - text: ›
+        - link "Inspiração":
+          - /url: "#/livre"
+      - listitem: ›Template Studio
+  - text: Modelos reutilizáveis
+  - heading "Template Studio" [level=1]
+  - paragraph: 28 modelos de página prontos para reaproveitar. Escolha um, ajuste cores, fontes e cantos, marque as partes que quer detalhar e leve tudo para o Master Prompt.
+  - region "Diferença entre templates e inspirações":
+    - heading "Template Studio (você está aqui)" [level=2]
+    - paragraph:
+      - text: Modelos de página para
+      - strong: reaproveitar como molde
+      - text: ": a estrutura (quais partes e em que ordem) vem pronta. Você troca cores, fontes e cantos, e a IA monta essa mesma página no seu projeto."
+    - heading "Galeria de Inspiração" [level=2]
+    - paragraph:
+      - text: Sites fictícios completos para você
+      - strong: se inspirar na identidade
+      - text: — clima, cores e tipografia. Servem de referência visual, não de molde.
+      - link "Abrir a galeria":
+        - /url: "#/modulos/inspiracao"
+  - group "Categorias de template":
+    - button "Todos 28" [pressed]
+    - button "Produtos digitais 5"
+    - button "Lojas e imóveis 3"
+    - button "Criativos 3"
+    - button "Conteúdo e mídia 2"
+    - button "Comida e turismo 4"
+    - button "Serviços e saúde 4"
+    - button "Educação e eventos 3"
+    - button "Comunidade e causas 2"
+    - button "Sistemas e docs 2"
+  - searchbox "Buscar templates"
+  - paragraph: Clique em um modelo para abrir o editor com a prévia grande, no computador e no celular.
+  - button "Abrir o template SaaS de gestão": "SaaS de gestão Produtos digitais · 10 partes A página clássica de software por assinatura: promessa clara, captura do produto, recursos, preços e perguntas."
+  - button "Abrir o template Startup ousada": "Startup ousada Produtos digitais · 9 partes Lançamento de startup com visual escuro e tipografia enorme: manifesto, números, como funciona e convite para a beta."
+  - button "Abrir o template Fintech — Conta digital": "Fintech — Conta digital Produtos digitais · 9 partes Banco digital que transmite confiança: benefício principal, números de segurança, app e perguntas sobre dinheiro."
+  - button "Abrir o template App mobile — Download": "App mobile — Download Produtos digitais · 8 partes Página para baixar um aplicativo: celulares em destaque, selos das lojas, telas do app e avaliações."
+  - button "Abrir o template Em breve — Lista de espera": "Em breve — Lista de espera Produtos digitais · 5 partes Página curta de pré-lançamento: contagem regressiva, cadastro de e-mail e três motivos para entrar na lista."
+  - button "Abrir o template E-commerce de moda": E-commerce de moda Lojas e imóveis · 8 partes Loja online com campanha em destaque, benefícios de compra, categorias, vitrine de produtos e newsletter.
+  - button "Abrir o template Produto único": "Produto único Lojas e imóveis · 9 partes Página de venda de um só produto: produto em destaque, especificações, detalhes, cores e avaliações."
+  - button "Abrir o template Imobiliária": Imobiliária Lojas e imóveis · 8 partes Site de imobiliária com busca em destaque, imóveis em cartões, números, avaliação de imóvel e corretores.
+  - button "Abrir o template Portfólio pessoal": Portfólio pessoal Criativos · 7 partes Portfólio de designer com nome em tamanho gigante, projetos grandes, serviços numerados e contato direto.
+  - button "Abrir o template Agência criativa": "Agência criativa Criativos · 9 partes Agência com visual escuro e marcante: manifesto, clientes, projetos, serviços, números, equipe e rodapé gigante."
+  - button "Abrir o template Fotografia": Fotografia Criativos · 8 partes Site de fotógrafo com foto em tela cheia, galeria em mosaico, sobre, pacotes e formulário de agendamento.
+  - button "Abrir o template Revista / Blog": Revista / Blog Conteúdo e mídia · 7 partes Revista digital com cabeçalho editorial, matéria de capa, últimas notícias, mais lidas e assinatura.
+  - button "Abrir o template Podcast": Podcast Conteúdo e mídia · 7 partes Site de podcast com capa e player, episódios recentes, apresentadores, avaliações e newsletter.
+  - button "Abrir o template Restaurante": Restaurante Comida e turismo · 8 partes Restaurante com foto de abertura, história do chef, cardápio com preços, galeria, avaliações e localização.
+  - button "Abrir o template Cafeteria": Cafeteria Comida e turismo · 8 partes Cafeteria acolhedora com ilustração, diferenciais, cardápio em cartões, fotos do ambiente, clube de assinatura e endereço.
+  - button "Abrir o template Hotel / Pousada": Hotel / Pousada Comida e turismo · 8 partes Hotel com foto e barra de reserva, quartos com preço por noite, comodidades, galeria, depoimento e localização.
+  - button "Abrir o template Viagens e turismo": Viagens e turismo Comida e turismo · 8 partes Agência de viagens com busca de destinos, pacotes com preço, diferenciais, passo a passo, depoimentos e ofertas.
+  - button "Abrir o template Clínica de saúde": "Clínica de saúde Serviços e saúde · 9 partes Clínica médica acolhedora: agendamento em destaque, especialidades, como agendar, médicos, depoimentos e dúvidas."
+  - button "Abrir o template Consultoria": "Consultoria Serviços e saúde · 9 partes Consultoria empresarial sóbria: proposta de valor, clientes, serviços numerados, resultados, método e chamada para diagnóstico."
+  - button "Abrir o template Escritório de advocacia": "Escritório de advocacia Serviços e saúde · 8 partes Escritório de advocacia clássico: título serifado, áreas de atuação, história, sócios, dúvidas e contato."
+  - button "Abrir o template Academia / Fitness": "Academia / Fitness Serviços e saúde · 8 partes Academia com visual escuro e enérgico: foto de abertura, números, grade de aulas, planos, professores e aula grátis."
+  - button "Abrir o template Curso online": "Curso online Educação e eventos · 9 partes Página de venda de curso: promessa, o que você vai aprender, conteúdo por módulos, professora, depoimentos, oferta e dúvidas."
+  - button "Abrir o template Conferência": "Conferência Educação e eventos · 8 partes Conferência de tecnologia: data e contagem regressiva, palestrantes, agenda por dia, ingressos, patrocinadores e dúvidas."
+  - button "Abrir o template Página de evento — Festival": "Página de evento — Festival Educação e eventos · 7 partes Festival de música com visual de cartaz: atrações, programação por horário, informações práticas, fotos e ingressos."
+  - button "Abrir o template Comunidade": "Comunidade Comunidade e causas · 8 partes Comunidade online: convite com avatares, números, discussões recentes, próximos encontros, depoimentos e chamada para entrar."
+  - button "Abrir o template ONG / Causa social": ONG / Causa social Comunidade e causas · 9 partes Organização social com foto inspiradora, números de impacto, projetos, bloco de doação, notícias, parceiros e newsletter.
+  - button "Abrir o template Dashboard administrativo": "Dashboard administrativo Sistemas e docs · 6 partes Painel de administração: menu lateral, barra superior, indicadores, gráfico, atividade recente e tabela de pedidos."
+  - button "Abrir o template Documentação técnica": "Documentação técnica Sistemas e docs · 5 partes Documentação de API em três colunas: navegação, artigo com blocos de código e índice da página."

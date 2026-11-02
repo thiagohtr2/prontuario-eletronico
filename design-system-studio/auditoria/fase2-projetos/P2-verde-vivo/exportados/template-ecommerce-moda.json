@@ -1,0 +1,210 @@
+{
+  "schema": "atelier-ui/template",
+  "version": 1,
+  "generatedAt": "2026-11-02T18:31:23.416Z",
+  "template": {
+    "id": "ecommerce-moda",
+    "name": "E-commerce de moda",
+    "brand": "Linho & Cia",
+    "category": {
+      "id": "lojas",
+      "name": "Lojas e imóveis"
+    },
+    "description": "Loja online com campanha em destaque, benefícios de compra, categorias, vitrine de produtos e newsletter.",
+    "layout": "stack"
+  },
+  "defaults": {
+    "colors": {
+      "primary": "#9f1239",
+      "bg": "#ffffff",
+      "text": "#141414",
+      "surface": "#f6f3f1",
+      "muted": "#5f5a57"
+    },
+    "headingFont": "fraunces",
+    "bodyFont": "inter",
+    "radius": "none"
+  },
+  "overrides": {
+    "primary": "#2d6a4f",
+    "bg": "#f6faf6",
+    "text": "#1b2e24",
+    "radius": "medium"
+  },
+  "final": {
+    "colors": {
+      "primary": "#2d6a4f",
+      "onPrimary": "#ffffff",
+      "primarySoft": "#e2ece5",
+      "bg": "#f6faf6",
+      "surface": "#ecf1ed",
+      "text": "#1b2e24",
+      "muted": "#5d6963",
+      "border": "#dee4df",
+      "mode": "light"
+    },
+    "fonts": {
+      "heading": {
+        "id": "fraunces",
+        "name": "Fraunces",
+        "stack": "'Fraunces Variable', Fraunces, Georgia, serif"
+      },
+      "body": {
+        "id": "inter",
+        "name": "Inter",
+        "stack": "'Inter Variable', Inter, system-ui, sans-serif"
+      }
+    },
+    "radius": {
+      "scale": "medium",
+      "label": "Médios (8 px)",
+      "sm": 6,
+      "md": 8,
+      "lg": 12
+    }
+  },
+  "selectedSections": [
+    "cabecalho",
+    "categorias",
+    "vitrine"
+  ],
+  "sections": [
+    {
+      "order": 1,
+      "id": "cabecalho",
+      "name": "Cabeçalho",
+      "kind": "nav",
+      "kindLabel": "Cabeçalho",
+      "variant": "store",
+      "description": "Faixa de aviso, logo, categorias, busca e sacola.",
+      "selected": true,
+      "layout": "Faixa de aviso no topo + header de loja com logo, categorias, campo de busca e ícones de conta, favoritos e sacola com contador.",
+      "mobile": "No celular: logo à esquerda; busca, sacola e menu (hambúrguer) à direita; categorias vão para o drawer. A faixa de aviso fica em uma linha com texto truncado."
+    },
+    {
+      "order": 2,
+      "id": "hero",
+      "name": "Campanha",
+      "kind": "hero-image",
+      "kindLabel": "Hero com imagem",
+      "variant": "left",
+      "description": "Imagem da coleção com título e botões.",
+      "selected": false,
+      "layout": "Hero de largura total com imagem de fundo e gradiente escuro para legibilidade; texto alinhado à esquerda, na parte inferior. Altura ≈620 px.",
+      "mobile": "No celular: altura ≈520 px (use svh), título ≈34 px, botões em largura total."
+    },
+    {
+      "order": 3,
+      "id": "beneficios",
+      "name": "Benefícios de compra",
+      "kind": "features-grid",
+      "kindLabel": "Grade de recursos",
+      "variant": "inline",
+      "description": "Faixa compacta com frete, trocas e parcelamento.",
+      "selected": false,
+      "layout": "Faixa compacta com 4 benefícios lado a lado (ícone + título + texto curto).",
+      "mobile": "No celular: benefícios em 2 colunas (ícone acima do texto), sem rolagem horizontal."
+    },
+    {
+      "order": 4,
+      "id": "categorias",
+      "name": "Categorias",
+      "kind": "gallery",
+      "kindLabel": "Galeria",
+      "variant": "categories",
+      "description": "Quatro categorias com imagem.",
+      "selected": true,
+      "layout": "4 blocos de categoria com imagem e nome sobreposto, em 4 colunas.",
+      "mobile": "No celular: 2 colunas; o mosaico mantém alturas variadas."
+    },
+    {
+      "order": 5,
+      "id": "vitrine",
+      "name": "Vitrine",
+      "kind": "product-grid",
+      "kindLabel": "Vitrine de produtos",
+      "variant": null,
+      "description": "Oito produtos com preço e cores.",
+      "selected": true,
+      "layout": "Vitrine com 8 produtos em 4 colunas: foto 4:5, selo, nome, preço (com parcelamento) e amostras de cor; filtros/ordenar no topo.",
+      "mobile": "No celular: 2 colunas compactas; filtros viram botão “Filtrar” que abre um painel inferior (bottom sheet)."
+    },
+    {
+      "order": 6,
+      "id": "historia",
+      "name": "Nossa origem",
+      "kind": "feature-split",
+      "kindLabel": "Recursos alternados",
+      "variant": null,
+      "description": "Bloco de imagem e texto sobre a marca.",
+      "selected": false,
+      "layout": "1 linhas alternadas de imagem e texto (zigue-zague), cada uma com título, parágrafo e lista curta de pontos.",
+      "mobile": "No celular: cada linha vira imagem em cima e texto embaixo, sempre na mesma ordem (sem alternância)."
+    },
+    {
+      "order": 7,
+      "id": "newsletter",
+      "name": "Newsletter",
+      "kind": "newsletter",
+      "kindLabel": "Newsletter",
+      "variant": null,
+      "description": "Cadastro com desconto na primeira compra.",
+      "selected": false,
+      "layout": "Faixa de inscrição: título e texto curto à esquerda; campo de e-mail e botão na mesma linha à direita; aviso de privacidade abaixo.",
+      "mobile": "No celular: texto em cima; campo e botão empilhados em largura total."
+    },
+    {
+      "order": 8,
+      "id": "rodape",
+      "name": "Rodapé",
+      "kind": "footer",
+      "kindLabel": "Rodapé",
+      "variant": "columns",
+      "description": "Colunas de links, contato e informações legais.",
+      "selected": false,
+      "layout": "Rodapé com marca e descrição curta à esquerda e 3–4 colunas de links; barra inferior com direitos e links legais.",
+      "mobile": "No celular: colunas de links em grade de 2 colunas; barra inferior empilhada."
+    }
+  ],
+  "spec": {
+    "summary": "Home de loja de moda: header de e-commerce com faixa de aviso, campanha em imagem, benefícios de compra, categorias, vitrine de mais vendidos, história da marca e newsletter.",
+    "structure": [
+      "Seções empilhadas em largura total; conteúdo centralizado com largura máxima ≈1120 px e respiro lateral de 48 px.",
+      "1. Cabeçalho — Faixa de aviso no topo + header de loja com logo, categorias, campo de busca e ícones de conta, favoritos e sacola com contador.",
+      "2. Campanha — Hero de largura total com imagem de fundo e gradiente escuro para legibilidade; texto alinhado à esquerda, na parte inferior. Altura ≈620 px.",
+      "3. Benefícios de compra — Faixa compacta com 4 benefícios lado a lado (ícone + título + texto curto).",
+      "4. Categorias — 4 blocos de categoria com imagem e nome sobreposto, em 4 colunas.",
+      "5. Vitrine — Vitrine com 8 produtos em 4 colunas: foto 4:5, selo, nome, preço (com parcelamento) e amostras de cor; filtros/ordenar no topo.",
+      "6. Nossa origem — 1 linhas alternadas de imagem e texto (zigue-zague), cada uma com título, parágrafo e lista curta de pontos.",
+      "7. Newsletter — Faixa de inscrição: título e texto curto à esquerda; campo de e-mail e botão na mesma linha à direita; aviso de privacidade abaixo.",
+      "8. Rodapé — Rodapé com marca e descrição curta à esquerda e 3–4 colunas de links; barra inferior com direitos e links legais."
+    ],
+    "behavior": [
+      "Ícone da sacola mostra contador e abre um minicarrinho lateral (drawer) ao adicionar produto.",
+      "Busca com sugestões enquanto digita (produtos e categorias).",
+      "Cabeçalho: Header fixo (sticky) no topo; ganha borda inferior ou fundo sólido após 8 px de rolagem. Link da página atual com indicador visível.",
+      "Categorias: Clique em uma imagem abre visualização ampliada (lightbox) com navegação por setas e Esc para fechar.",
+      "Vitrine: Hover no produto mostra segunda foto e botão “Adicionar”; no toque, o botão fica sempre visível."
+    ],
+    "responsive": [
+      "Breakpoints sugeridos: ≤ 599 px (celular, uma coluna), 600–1023 px (tablet, 2 colunas onde houver grade) e ≥ 1024 px (desktop).",
+      "Cabeçalho: logo à esquerda; busca, sacola e menu (hambúrguer) à direita; categorias vão para o drawer. A faixa de aviso fica em uma linha com texto truncado.",
+      "Campanha: altura ≈520 px (use svh), título ≈34 px, botões em largura total.",
+      "Benefícios de compra: benefícios em 2 colunas (ícone acima do texto), sem rolagem horizontal.",
+      "Categorias: 2 colunas; o mosaico mantém alturas variadas.",
+      "Vitrine: 2 colunas compactas; filtros viram botão “Filtrar” que abre um painel inferior (bottom sheet).",
+      "Nossa origem: cada linha vira imagem em cima e texto embaixo, sempre na mesma ordem (sem alternância).",
+      "Newsletter: texto em cima; campo e botão empilhados em largura total.",
+      "Rodapé: colunas de links em grade de 2 colunas; barra inferior empilhada.",
+      "Nenhuma seção pode causar rolagem horizontal da página entre 320 e 1920 px; áreas de toque com no mínimo 44 × 44 px."
+    ],
+    "measurements": {
+      "larguraDoConteudo": "≈1120 px",
+      "respiroVerticalDasSecoes": "≈88 px no desktop / 56 px no celular",
+      "margemLateral": "≈48 px no desktop / 20 px no celular"
+    },
+    "notes": [
+      "Fotos de produto em proporção 4:5, fundo neutro e consistente em toda a vitrine."
+    ]
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "kind": "atelier-ui/backup",
+  "exportedAt": "2026-11-02T18:30:09.071Z",
+  "project": {
+    "schema": "atelier-ui/project",
+    "version": 1,
+    "id": "prj_059a859b",
+    "createdAt": "2026-11-02T18:18:58.795Z",
+    "updatedAt": "2026-11-02T18:29:54.337Z",
+    "meta": {
+      "name": "Centro Operacional",
+      "objective": "Sistema operacional One Screen para acompanhar dados operacionais e indicadores em uma única tela principal.",
+      "description": "Interface de uma única tela principal com dados operacionais e indicadores, conteúdo organizado em colunas, sem rolagem vertical principal quando couber, adaptação para monitores grandes e comportamento móvel definido explicitamente.",
+      "audience": "",
+      "purpose": "",
+      "projectType": "one-screen",
+      "projectTypeOther": "",
+      "features": [
+        "Dados operacionais",
+        "Indicadores"
+      ],
+      "tech": "HTML + CSS + JavaScript"
+    },
+    "mode": "guided",
+    "depth": "essential",
+    "prefs": {
+      "showLegends": true,
+      "showHints": true
+    },
+    "guided": {
+      "step": "entrega",
+      "completed": [
+        "objetivo",
+        "entrada",
+        "desktop",
+        "mobile",
+        "revisao",
+        "preview",
+        "identidade",
+        "navegacao",
+        "componentes"
+      ],
+      "skeletonApproved": true
+    },
+    "entry": {
+      "flow": "app-direct",
+      "landingId": null,
+      "loginId": null,
+      "signupId": null,
+      "landingUsesOriginalColors": false
+    },
+    "layout": {
+      "desktopId": "one-screen-painel-operacional",
+      "mobileId": "one-screen-abas"
+    },
+    "identity": {
+      "paletteId": "neutro-essencial",
+      "overrides": {},
+      "typography": {
+        "heading": "inter",
+        "body": "inter",
+        "baseSize": 15,
+        "headingWeight": 650,
+        "bodyWeight": 400
+      },
+      "geometry": {
+        "radius": "medium",
+        "borderWidth": 1,
+        "shadow": "none",
+        "surface": "outlined",
+        "density": "comfortable",
+        "iconStyle": "outline"
+      }
+    },
+    "navigation": {
+      "header": null,
+      "sidebar": null
+    },
+    "components": [
+      {
+        "id": "cmp_74224c12",
+        "categoryId": "kpis-stat-cards",
+        "familyId": "compact-pro",
+        "label": "Indicadores",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:26:28.262Z"
+      },
+      {
+        "id": "cmp_2dd06fcb",
+        "categoryId": "tabelas",
+        "familyId": "compact-pro",
+        "label": "Dados operacionais",
+        "props": {},
+        "tokenOverrides": {},
+        "createdAt": "2026-11-02T18:26:59.533Z"
+      }
+    ],
+    "inspiration": null,
+    "template": null,
+    "prompt": {
+      "excluded": [],
+      "notes": {
+        "layout.desktop": "Requisito do cliente: adaptação para monitores grandes."
+      },
+      "conflictResolutions": {}
+    },
+    "validation": {
+      "config": {
+        "url": "",
+        "routes": [
+          "/"
+        ],
+        "widths": [
+          320,
+          360,
+          375,
+          390,
+          412,
+          430,
+          768,
+          1024,
+          1280,
+          1440
+        ],
+        "manualLogin": false,
+        "waitMs": 800,
+        "checks": {
+          "horizontalOverflow": true,
+          "offscreen": true,
+          "tapTargets": true,
+          "inputFontSize": true
+        },
+        "minTapTarget": 44
+      },
+      "report": null
+    }
+  },
+  "history": []
+}

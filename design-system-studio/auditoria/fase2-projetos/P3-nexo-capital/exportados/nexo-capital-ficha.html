@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Nexo Capital — Ficha do projeto</title>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;overflow-x:hidden}
+img,svg{max-width:100%}
+
+:root{--s-border:#ebebef}
+body{background:#fff;color:#15151a;line-height:1.5}
+.wrap{max-width:1080px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:34px;margin:4px 0}h2{font-size:20px;margin:40px 0 12px}h3{font-size:14px;margin:20px 0 8px;color:#55555f}
+.eyebrow{color:#4c46dc;font-weight:600;margin:0}.muted{color:#55555f;margin:0}
+.items{list-style:none;padding:0;margin:0;display:grid;gap:10px}.items li{border-top:1px solid #ebebef;padding-top:10px}
+.items p{margin:2px 0 0;color:#55555f;font-size:14px}.kind{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#4c46dc}
+.tokens{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
+.tk{display:flex;gap:10px;align-items:center;font-size:13px}.tk span:last-child{display:grid}
+.sw{width:34px;height:34px;border-radius:8px;border:1px solid #d9d9e0;flex:none}
+code{font-family:ui-monospace,monospace;font-size:12px;color:#7c7c87}
+pre{white-space:pre-wrap;word-break:break-word;border:1px solid #ebebef;border-radius:8px;padding:16px;font-size:12.5px}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <header><p class="eyebrow">Atelier UI · Ficha do projeto</p><h1>Nexo Capital</h1><p class="muted">Dashboard · Plataforma financeira com dashboard financeiro, tabelas de dados e gráficos.</p></header>
+  <section><h2>Prévia da identidade</h2><div data-testid="identity-preview" style="display:grid;grid-template-columns:150px minmax(0, 1fr);background:#f8fafc;color:#0f172a;font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-size:14px;font-weight:400;border-radius:12px;overflow:hidden;border:1px solid var(--s-border);min-height:460px"><aside style="background:#0f1f4d;color:#caced8;padding:16px 8px;display:grid;align-content:start;gap:4px;border-right:1px solid #e6e6e6"><div style="display:flex;align-items:center;gap:8px;padding:0 6px 14px;font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-weight:650;font-size:14px;color:#fff"><span style="width:20px;height:20px;border-radius:6px;background:#1d4ed8"></span>Marca</div><div style="display:flex;align-items:center;gap:8px;height:32px;padding:0 8px;border-radius:8px;background:#313e66;color:#ffffff;font-size:13px;font-weight:600"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Início</div><div style="display:flex;align-items:center;gap:8px;height:32px;padding:0 8px;border-radius:8px;background:transparent;color:#caced8;font-size:13px;font-weight:500"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-grid"><rect width="7" height="7" x="3" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="14" rx="1"></rect><rect width="7" height="7" x="3" y="14" rx="1"></rect></svg>Projetos</div><div style="display:flex;align-items:center;gap:8px;height:32px;padding:0 8px;border-radius:8px;background:transparent;color:#caced8;font-size:13px;font-weight:500"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Equipe</div><div style="display:flex;align-items:center;gap:8px;height:32px;padding:0 8px;border-radius:8px;background:transparent;color:#caced8;font-size:13px;font-weight:500"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>Ajustes</div></aside><div style="display:grid;gap:16px;padding:16px;align-content:start;min-width:0"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap"><div style="min-width:0"><div style="font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-weight:650;font-size:22px;line-height:1.2">Visão geral</div><div style="color:#686d7a;font-size:12.5px">Texto secundário com <a style="color:#1d4ed8;text-decoration:underline">um link</a></div></div><div style="display:flex;gap:6px;color:#49505f"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell"><path d="M10.268 21a2 2 0 0 0 3.464 0"></path><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path></svg></div></div><div style="display:flex;flex-wrap:wrap;gap:8px"><span style="display:inline-flex;align-items:center;height:34px;padding:0 12.8px;border-radius:8px;border:0;background:#1d4ed8;color:#ffffff;font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-size:13px;font-weight:600;white-space:nowrap">Primário</span><span style="display:inline-flex;align-items:center;height:34px;padding:0 12.8px;border-radius:8px;border:0;background:#1a46c2;color:#ffffff;font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-size:13px;font-weight:600;white-space:nowrap">Hover</span><span style="display:inline-flex;align-items:center;height:34px;padding:0 12.8px;border-radius:8px;border:1px solid #c7c7c7;background:#ffffff;color:#0f172a;font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-size:13px;font-weight:600;white-space:nowrap">Secundário</span><span style="display:inline-flex;align-items:center;height:34px;padding:0 12.8px;border-radius:8px;border:0;background:#0ea5e9;color:#111114;font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-size:13px;font-weight:600;white-space:nowrap">Destaque</span><span style="display:inline-flex;align-items:center;height:34px;padding:0 12.8px;border-radius:8px;border:0;background:#f0f0f0;color:#93979f;font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-size:13px;font-weight:600;white-space:nowrap">Desabilitado</span></div><div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));gap:8px"><div style="display:grid;gap:4px"><span style="font-size:12px;font-weight:600">Campo</span><span style="height:34px;display:flex;align-items:center;padding:0 10px;border-radius:8px;border:1px solid #c7c7c7;background:#ffffff;color:#848993;font-size:13px">Placeholder…</span></div><div style="display:grid;gap:4px"><span style="font-size:12px;font-weight:600">Com foco</span><span style="height:34px;display:flex;align-items:center;padding:0 10px;border-radius:8px;border:1px solid #1d4ed8;box-shadow:0 0 0 3px #1d4ed833;background:#ffffff;color:#0f172a;font-size:13px">maria@email.com</span></div></div><div style="background:#ffffff;border:1px solid #e6e6e6;box-shadow:none;border-radius:12px;padding:12px;display:grid;gap:8px"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><strong style="font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-weight:650;font-size:14px">Pedidos recentes</strong><span style="font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:999px;background:#e4eafa;color:#1d4ed8">12 novos</span></div><div style="display:flex;justify-content:space-between;gap:8px;padding:7px 8px;border-radius:6px;background:transparent;color:#0f172a;font-size:13px;border-top:none"><span>Ana Souza</span><span style="color:#686d7a">R$ 120,00</span></div><div style="display:flex;justify-content:space-between;gap:8px;padding:7px 8px;border-radius:6px;background:#e4eafa;color:#1d4ed8;font-size:13px;border-top:1px solid #e6e6e6"><span>Bruno Lima</span><span style="color:#1d4ed8">R$ 207,00</span></div><div style="display:flex;justify-content:space-between;gap:8px;padding:7px 8px;border-radius:6px;background:transparent;color:#0f172a;font-size:13px;border-top:1px solid #e6e6e6"><span>Carla Dias</span><span style="color:#686d7a">R$ 294,00</span></div></div><div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(170px, 1fr));gap:6px"><div style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#e3f4e9;color:#117e39;font-size:12.5px;font-weight:560"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>Alterações salvas</div><div style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#faefe1;color:#a85c04;font-size:12.5px;font-weight:560"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>Plano perto do limite</div><div style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#fbe5e5;color:#dc2626;font-size:12.5px;font-weight:560"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-x"><circle cx="12" cy="12" r="10"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg>Falha no pagamento</div><div style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#e5ecfd;color:#2563eb;font-size:12.5px;font-weight:560"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>Nova versão disponível</div></div></div></div></section>
+  <section><h2>Decisões aprovadas</h2><ul class="items"><li><span class="kind">Fluxo de entrada</span><b>Apenas login</b><p>O endereço abre direto na tela de entrar. Sem página de apresentação.</p></li><li><span class="kind">Login</span><b>Acesso corporativo</b> — Login corporativo com SSO e aviso de segurança<p>Login corporativo com header institucional, botão “Entrar com SSO da empresa” em destaque, alternativa por e-mail e aviso de segurança.</p></li><li><span class="kind">Layout desktop</span><b>Sidebar integral clássica</b> — Sidebar integral<p>Shell de aplicação com sidebar integral à esquerda (do topo à base) e coluna principal com header fixo e conteúdo rolável.</p></li><li><span class="kind">Layout mobile</span><b>Drawer pela esquerda</b> — Drawers e menus laterais<p>Topbar com hambúrguer à esquerda que abre drawer lateral esquerdo sobreposto ao conteúdo, com scrim.</p></li><li><span class="kind">Header</span><b>Painel Analítico</b> — Abas e filtros em uma linha<p>Header de dashboard com abas encaixadas, seletor de período (menu suspenso), exportação e perfil.</p></li><li><span class="kind">Sidebar</span><b>Sóbria Corporativa</b> — Unidade no topo<p>Sidebar corporativa sóbria em bgAlt, grupos em caixa alta, barra no ativo e perfil com cargo.</p></li><li><span class="kind">Paleta e tokens</span><b>Azul Institucional</b> — Corporativas<p>Paleta "Azul Institucional" (modo claro): Azul real confiável com navegação marinho. Todos os componentes herdam estes tokens por padrão.</p></li><li><span class="kind">Tipografia</span><b>Inter + Inter</b><p>Títulos em Inter (peso 650) e textos em Inter (peso 400), tamanho base 15 px.</p></li><li><span class="kind">Geometria e superfícies</span><b>Médios (8 px) · Contornada (bordas finas)</b><p>Cantos médios (8 px), bordas de 1 px, sombra sem sombra, superfícies contornada (bordas finas), densidade confortável.</p></li><li><span class="kind">Componente</span><b>Tabelas de dados</b> — Compact Pro<p>Tabelas na família visual Compact Pro. Tabela de dados com cabeçalho, linhas com status em badge, valores alinhados à direita e ações por linha. Estilo: Alta densidade: controles de 30 px, texto base de 13 px, raio de 4 px, bordas de 1 px sutis, sem sombras e números tabulares.</p></li><li><span class="kind">Componente</span><b>Gráficos</b> — Compact Pro<p>Gráficos na família visual Compact Pro. Gráfico com título, eixos, grade discreta, séries nas cores da paleta e legenda. Estilo: Alta densidade: controles de 30 px, texto base de 13 px, raio de 4 px, bordas de 1 px sutis, sem sombras e números tabulares.</p></li><li><span class="kind">Componente</span><b>Dashboard financeiro</b> — Compact Pro<p>Dashboard na família visual Compact Pro. Página de painel com cabeçalho, linha de KPIs, gráfico principal e lista/tabela de atividades. Estilo: Alta densidade: controles de 30 px, texto base de 13 px, raio de 4 px, bordas de 1 px sutis, sem sombras e números tabulares.</p></li></ul></section>
+  <section><h2>Tokens</h2><h3>Marca</h3><div class="tokens"><div class="tk"><span class="sw" style="background:#1d4ed8"></span><span><b>Cor primária</b><code>primary · #1d4ed8</code></span></div><div class="tk"><span class="sw" style="background:#1a46c2"></span><span><b>Primária — hover</b><code>primaryHover · #1a46c2</code></span></div><div class="tk"><span class="sw" style="background:#173ead"></span><span><b>Primária — active</b><code>primaryActive · #173ead</code></span></div><div class="tk"><span class="sw" style="background:#ffffff"></span><span><b>Texto sobre primária</b><code>onPrimary · #ffffff</code></span></div><div class="tk"><span class="sw" style="background:#e4eafa"></span><span><b>Primária suave</b><code>primarySoft · #e4eafa</code></span></div><div class="tk"><span class="sw" style="background:#1e3a8a"></span><span><b>Cor secundária</b><code>secondary · #1e3a8a</code></span></div><div class="tk"><span class="sw" style="background:#ffffff"></span><span><b>Texto sobre secundária</b><code>onSecondary · #ffffff</code></span></div><div class="tk"><span class="sw" style="background:#0ea5e9"></span><span><b>Cor de destaque</b><code>accent · #0ea5e9</code></span></div><div class="tk"><span class="sw" style="background:#111114"></span><span><b>Texto sobre destaque</b><code>onAccent · #111114</code></span></div></div><h3>Fundos e superfícies</h3><div class="tokens"><div class="tk"><span class="sw" style="background:#f8fafc"></span><span><b>Fundo principal</b><code>bg · #f8fafc</code></span></div><div class="tk"><span class="sw" style="background:#eff1f3"></span><span><b>Fundo secundário</b><code>bgAlt · #eff1f3</code></span></div><div class="tk"><span class="sw" style="background:#ffffff"></span><span><b>Superfície</b><code>surface · #ffffff</code></span></div><div class="tk"><span class="sw" style="background:#f5f5f5"></span><span><b>Superfície alternativa</b><code>surfaceAlt · #f5f5f5</code></span></div></div><h3>Texto</h3><div class="tokens"><div class="tk"><span class="sw" style="background:#0f172a"></span><span><b>Texto principal</b><code>text · #0f172a</code></span></div><div class="tk"><span class="sw" style="background:#686d7a"></span><span><b>Texto secundário</b><code>textMuted · #686d7a</code></span></div><div class="tk"><span class="sw" style="background:#9fa4ac"></span><span><b>Texto desabilitado</b><code>textDisabled · #9fa4ac</code></span></div><div class="tk"><span class="sw" style="background:#848993"></span><span><b>Placeholder</b><code>placeholder · #848993</code></span></div></div><h3>Bordas e foco</h3><div class="tokens"><div class="tk"><span class="sw" style="background:#e6e6e6"></span><span><b>Borda</b><code>border · #e6e6e6</code></span></div><div class="tk"><span class="sw" style="background:#c7c7c7"></span><span><b>Borda forte</b><code>borderStrong · #c7c7c7</code></span></div><div class="tk"><span class="sw" style="background:#1d4ed8"></span><span><b>Borda de foco (focus-visible)</b><code>focusRing · #1d4ed8</code></span></div></div><h3>Estados</h3><div class="tokens"><div class="tk"><span class="sw" style="background:#f4f4f4"></span><span><b>Hover</b><code>hover · #f4f4f4</code></span></div><div class="tk"><span class="sw" style="background:#ebebeb"></span><span><b>Active</b><code>active · #ebebeb</code></span></div><div class="tk"><span class="sw" style="background:#e0e0e0"></span><span><b>Pressed</b><code>pressed · #e0e0e0</code></span></div><div class="tk"><span class="sw" style="background:#e4eafa"></span><span><b>Selected — fundo</b><code>selected · #e4eafa</code></span></div><div class="tk"><span class="sw" style="background:#1d4ed8"></span><span><b>Selected — texto</b><code>selectedText · #1d4ed8</code></span></div><div class="tk"><span class="sw" style="background:#f0f0f0"></span><span><b>Disabled — fundo</b><code>disabled · #f0f0f0</code></span></div><div class="tk"><span class="sw" style="background:#93979f"></span><span><b>Disabled — texto</b><code>disabledText · #93979f</code></span></div></div><h3>Semânticos</h3><div class="tokens"><div class="tk"><span class="sw" style="background:#117e39"></span><span><b>Success</b><code>success · #117e39</code></span></div><div class="tk"><span class="sw" style="background:#e3f4e9"></span><span><b>Success — fundo</b><code>successBg · #e3f4e9</code></span></div><div class="tk"><span class="sw" style="background:#a85c04"></span><span><b>Warning</b><code>warning · #a85c04</code></span></div><div class="tk"><span class="sw" style="background:#faefe1"></span><span><b>Warning — fundo</b><code>warningBg · #faefe1</code></span></div><div class="tk"><span class="sw" style="background:#dc2626"></span><span><b>Error</b><code>error · #dc2626</code></span></div><div class="tk"><span class="sw" style="background:#fbe5e5"></span><span><b>Error — fundo</b><code>errorBg · #fbe5e5</code></span></div><div class="tk"><span class="sw" style="background:#2563eb"></span><span><b>Info</b><code>info · #2563eb</code></span></div><div class="tk"><span class="sw" style="background:#e5ecfd"></span><span><b>Info — fundo</b><code>infoBg · #e5ecfd</code></span></div></div><h3>Links, ícones e navegação</h3><div class="tokens"><div class="tk"><span class="sw" style="background:#1d4ed8"></span><span><b>Link</b><code>link · #1d4ed8</code></span></div><div class="tk"><span class="sw" style="background:#1942b8"></span><span><b>Link — hover</b><code>linkHover · #1942b8</code></span></div><div class="tk"><span class="sw" style="background:#49505f"></span><span><b>Ícones</b><code>icon · #49505f</code></span></div><div class="tk"><span class="sw" style="background:#0f1f4d"></span><span><b>Navegação — fundo</b><code>navBg · #0f1f4d</code></span></div><div class="tk"><span class="sw" style="background:#caced8"></span><span><b>Navegação — texto</b><code>navText · #caced8</code></span></div><div class="tk"><span class="sw" style="background:#313e66"></span><span><b>Navegação — item ativo</b><code>navActive · #313e66</code></span></div><div class="tk"><span class="sw" style="background:#ffffff"></span><span><b>Navegação — texto ativo</b><code>navActiveText · #ffffff</code></span></div></div><h3>Gradiente</h3><div class="tokens"><div class="tk"><span class="sw" style="background:#1d4ed8"></span><span><b>Gradiente — início</b><code>gradientFrom · #1d4ed8</code></span></div><div class="tk"><span class="sw" style="background:#26aeeb"></span><span><b>Gradiente — fim</b><code>gradientTo · #26aeeb</code></span></div></div></section>
+  <section><h2>Master Prompt</h2><pre># Master Prompt — Nexo Capital
+
+&gt; Especificação gerada pelo Atelier UI (Design System Studio) em 02/11/2026, 18:34:00.
+&gt; Todas as decisões abaixo foram visualizadas e aprovadas pelo usuário. Implemente exatamente o que está descrito; quando algo não estiver especificado, escolha a opção mais simples e consistente com o restante, sem adicionar decoração.
+
+## A. Informações do projeto
+
+- Nome: Nexo Capital
+- Tipo de aplicação: Dashboard
+- Objetivo: Plataforma financeira com dashboard financeiro, tabelas de dados e gráficos.
+- Descrição: Plataforma financeira "Nexo Capital": login profissional, dashboard financeiro com tabelas de dados e gráficos, navegação com sidebar e header, design corporativo e responsividade em telas pequenas.
+- Funcionalidades previstas: Login profissional; Dashboard financeiro; Tabelas de dados; Gráficos
+- Tecnologia desejada: HTML + CSS + JavaScript
+
+## B. Arquitetura geral
+
+- Fluxo de entrada: **Apenas login** — O endereço abre direto na tela de entrar. Sem página de apresentação.
+- Landing: nenhuma · Login: Acesso corporativo · Cadastro: nenhum
+- Layout desktop: Sidebar integral clássica · Layout mobile: Drawer pela esquerda
+
+### Login: Acesso corporativo — Login corporativo com SSO e aviso de segurança
+
+`id: acesso-corporativo` · origem: módulo “login”
+
+Login corporativo com header institucional, botão “Entrar com SSO da empresa” em destaque, alternativa por e-mail e aviso de segurança.
+
+**Estrutura**
+- Header fino com logotipo da organização à esquerda e link “Suporte de TI” à direita.
+- Cartão central: botão “Entrar com SSO da empresa”, divisor “ou”, e-mail corporativo e senha.
+- Aviso de segurança no rodapé: “Acesso monitorado. Uso restrito a colaboradores autorizados.”
+- Textos da demonstração: título “Acesso corporativo”, subtítulo “Entre com a conta da sua organização.”.
+
+**Medidas recomendadas (adaptáveis)**
+- larguraFormulario: ≈360–400 px
+- alturaInputs: ≈44 px (desktop) / 48 px (celular)
+
+**Comportamento e estados**
+- Labels visíveis associados aos campos (label for/id). E-mail com type="email", inputMode="email" e autoComplete="username" (ou "email"); senha com autoComplete="current-password".
+- Botão de mostrar/ocultar senha dentro do campo, com aria-label alternando “Mostrar senha”/“Ocultar senha” e aria-pressed.
+- Validação ao enviar e ao sair do campo: mensagem abaixo do campo (aria-invalid + aria-describedby) e resumo no topo do formulário com role="alert".
+- Erro de credenciais genérico (“E-mail ou senha incorretos”), sem revelar qual dos dois está errado.
+- Link “Esqueci minha senha” perto do campo de senha, levando ao fluxo de recuperação por e-mail com mensagem neutra (“Se o e-mail existir, enviaremos um link”).
+- Botão principal com estado de carregamento (“Entrando…”) e desabilitado durante o envio para evitar duplo clique.
+
+**Responsividade deste item**
+- No celular o header fino se mantém (56 px) e o cartão ocupa a largura total.
+- Inputs com font-size ≥ 16 px e altura ≥ 48 px no celular (evita o zoom automático do iOS e facilita o toque).
+- Com o teclado virtual aberto, o campo focado e o botão “Entrar” continuam visíveis (use 100dvh, sem height: 100vh fixo, e scroll-padding).
+- Funciona a partir de 320 px de largura sem rolagem horizontal.
+- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).
+- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.
+
+**Observações**
+- SSO real exige integração com o provedor de identidade da organização (SAML 2.0 ou OpenID Connect).
+- Esta tela é uma demonstração de interface. A autenticação real deve ser implementada pela IA com backend seguro: senhas com hash (Argon2id ou bcrypt), limitação de tentativas, sessão em cookie httpOnly + Secure + SameSite, proteção CSRF e HTTPS obrigatório.
+- Cores, fontes, cantos e superfícies vêm da identidade global do projeto (tokens).
+- A tela é uma demonstração de interface. Implemente a autenticação real com backend seguro (hash de senha, rate limit, tokens httpOnly, proteção CSRF).
+
+### Layout desktop: Sidebar integral clássica — Sidebar integral
+
+`id: sidebar-integral-classica` · origem: módulo “desktop”
+
+Shell de aplicação com sidebar integral à esquerda (do topo à base) e coluna principal com header fixo e conteúdo rolável.
+
+**Estrutura**
+- Grid de duas colunas: grid-template-columns: 252px minmax(0, 1fr); a coluna principal tem grid-template-rows: 64px minmax(0, 1fr) (header + conteúdo).
+- Sidebar integral de ≈252 px na borda esquerda: vai do topo à base da janela (height: 100dvh), encostada na borda, sem margem externa, sem cantos arredondados e sem sombra flutuante.
+- Topo da sidebar com a mesma altura do header (≈64 px), contendo logo e nome do produto, alinhado ao header para formar uma linha horizontal contínua.
+- Itens de navegação com 40–44 px de altura, ícone de 20 px + rótulo, agrupados por seções com título discreto; o item ativo tem fundo de seleção, cor de texto ativa e indicador lateral.
+- Rodapé da sidebar com perfil do usuário e atalho de configurações, separado por borda fina.
+- Header de ≈64 px: título da página ou breadcrumb à esquerda; busca, notificações e avatar à direita; borda inferior fina de 1 px. O header fica somente sobre a coluna principal — não passa por cima da sidebar.
+- Área de conteúdo com padding de 24–32 px, largura fluida e grids internos com minmax(0, 1fr); nenhum cartão encolhe abaixo de ≈280 px — reduza colunas antes.
+
+**Propriedades**
+- gridColumns: 252px 1fr
+- gridRows: 64px 1fr
+- gridAreas: "sidebar header" "sidebar content"
+- gap: 0px
+- padding: 0px
+- regioes: sidebar (sidebar), header (header), content (content)
+- oneScreen: não
+
+**Medidas recomendadas (adaptáveis)**
+- sidebar: ≈252 px
+- header: ≈64 px
+
+**Comportamento e estados**
+- A sidebar é fixa (position: sticky; top: 0; height: 100dvh) e tem rolagem interna própria (overflow-y: auto; overscroll-behavior: contain) quando os itens não cabem; a página rola apenas na coluna de conteúdo.
+- O header é sticky (position: sticky; top: 0) acima do conteúdo e não rola com ele; z-index superior ao conteúdo e inferior a modais.
+- Grupos de navegação podem recolher (accordion) e lembram o estado; hover, focus-visible e item ativo são visualmente distintos.
+
+**Responsividade deste item**
+- 1280 px ou mais: sidebar esquerda com ≈252 px e rótulos completos.
+- 1024–1279 px: a sidebar reduz para ≈220 px; o conteúdo reduz colunas antes de comprimir cartões ou tabelas.
+- 768–1023 px: a sidebar recolhe para um rail integral de ≈72 px (só ícones, com tooltip e aria-label); um botão expande a sidebar completa em sobreposição, com scrim, Esc e clique fora para fechar.
+- Abaixo de 768 px vale a arquitetura mobile escolhida separadamente no Studio: não converta a navegação desktop em drawer, rail ou bottom navigation por conta própria.
+
+**Observações**
+- Sidebar integral: nunca flutuante, sem margem externa e sem cantos arredondados.
+- One Page, não One Screen: a página pode rolar verticalmente; não force o conteúdo a caber em 100dvh nem esconda seções para evitar rolagem.
+- As medidas são recomendações para 1280 × 800; adapte à tela e ao conteúdo preservando a estrutura escolhida.
+
+### Layout mobile: Drawer pela esquerda — Drawers e menus laterais
+
+`id: drawer-esquerda` · origem: módulo “mobile”
+
+Topbar com hambúrguer à esquerda que abre drawer lateral esquerdo sobreposto ao conteúdo, com scrim.
+
+**Estrutura**
+- Topbar de ≈56 px com botão de menu à esquerda e título. A barra superior soma env(safe-area-inset-top) à própria altura, para não colidir com o entalhe da câmera.
+- Drawer de ≈280 px (máx. 85% da largura) que desliza pela esquerda, ocupando a altura total (inclusive safe areas), com scrim escuro sobre o conteúdo.
+- Conteúdo do drawer: cabeçalho com avatar, nome e botão Fechar; lista de destinos com ícone + rótulo (itens de 48 px); grupo secundário (configurações, ajuda) e “Sair” no rodapé.
+
+**Propriedades**
+- topo: topbar-hamburger
+- inferior: none
+- lateral: drawer-left
+- sobreposicao: none
+- stories: não
+- oneScreen: não
+
+**Medidas recomendadas (adaptáveis)**
+- topbar: ≈56 px
+- drawer: ≈280 px (máx. 85%)
+- itens: 48 px
+
+**Comportamento e estados**
+- Ao abrir: foco vai para o botão Fechar ou o primeiro item (sem rolar a página), o foco fica preso dentro do menu e o conteúdo atrás recebe inert/aria-hidden; Esc, toque no scrim e o botão X fecham; ao fechar, o foco volta ao gatilho.
+- Enquanto o menu está aberto, o body não rola (overflow: hidden) e o menu tem rolagem interna própria (overscroll-behavior: contain).
+- Animação de 200–250 ms (ease-out) ao abrir e 150–200 ms ao fechar; com prefers-reduced-motion, apenas fade.
+- Tocar em um destino navega e fecha o drawer.
+
+**Responsividade deste item**
+- 320–359 px: drawer com 85% da largura.
+- Horizontal: drawer com ≈320 px e rolagem interna.
+- A partir de 768 px passa a valer a arquitetura desktop escolhida no Studio; não estique este layout para tablet ou computador.
+- Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco ao gatilho.
+
+**Observações**
+- O drawer é sobreposto: o conteúdo não se move.
+
+### Relação entre desktop e celular
+- No computador, use “Sidebar integral clássica”. No celular, use “Drawer pela esquerda”. São decisões independentes: não derive uma da outra.
+- Entre 600 e 1023 px (tablet), use a estrutura desktop compactada quando couber (sidebar recolhida em rail ou menus colapsados); caso contrário, use a estrutura mobile.
+- As regiões (header, sidebar, conteúdo, painéis) mantêm a mesma hierarquia e os mesmos destinos de navegação nas duas versões.
+
+## C. Navegação
+
+### Header: Painel Analítico — Abas e filtros em uma linha
+
+`id: painel-analitico` · origem: módulo “navegacao”
+
+Header de dashboard com abas encaixadas, seletor de período (menu suspenso), exportação e perfil.
+
+**Estrutura**
+- Barra principal com 56 px de altura, largura total da janela (full width), padding horizontal de 24–32 px.
+- Superfície: fundo navBg com borda inferior de 1 px (token border).
+- Logo: símbolo quadrado de 28 px na cor primária + nome da marca em peso 700 (marca fictícia “Seriema” na prévia — substitua pela marca real).
+- Navegação principal com 4 itens (Visão geral, Aquisição, Retenção, Receita): abas: o item ativo tem o fundo da página e bordas laterais/superior, “encaixado” na área de conteúdo; espaço entre itens de 20–24 px.
+- Ações: seletor de período “Últimos 30 dias ▾”; botão “Exportar”; avatar circular de 32 px com menu de perfil.
+- Disposição conforme a composição escolhida (ver “composicao”): A “Abas e filtros em uma linha” = logo e navegação juntos à esquerda; busca e ações empurradas para a direita; B “Filtros em cima, abas embaixo” = duas faixas: logo, busca e ações na primeira; navegação alinhada à esquerda na segunda.
+
+**Propriedades**
+- flutuante: não
+- fixo: sim
+- composicao: Abas e filtros em uma linha: Logo + abas encaixadas à esquerda; seletor de período, “Exportar” e avatar à direita.
+
+**Medidas recomendadas (adaptáveis)**
+- altura (desktop): 56 px
+- altura (celular): 56 px
+- padding horizontal: 24–32 px (16 px no celular)
+- espaço entre itens: 20–24 px
+- logo: ≈ 28 px de altura
+- área de toque mínima: 44 × 44 px no celular
+
+**Comportamento e estados**
+- Item ativo: abas: o item ativo tem o fundo da página e bordas laterais/superior, “encaixado” na área de conteúdo. Hover com transição de 120 ms; foco visível com anel de 2 px na cor focusRing.
+- Fixo no topo: position: sticky; top: 0; z-index: 40. Após 8 px de rolagem ganha sombra suave.
+- Perfil: o avatar abre um menu com nome e e-mail, “Meu perfil”, “Configurações”, “Ajuda” e “Sair”, alinhado à borda direita.
+
+**Responsividade deste item**
+- Desktop largo (≥ 1280 px): composição completa, como na prévia.
+- De 1024 a 1279 px: o espaço entre itens cai para 16 px.
+- De 768 a 1023 px: a navegação recolhe para o botão ☰; continuam visíveis o logo e a ação principal.
+- Abaixo de 768 px: barra única de 56 px com logo, avatar, botão de menu ☰ (44 × 44 px). Vão para o painel do menu: os 4 itens de navegação.
+- Painel do menu: desliza logo abaixo do header em largura total, altura máxima calc(100dvh − 56 px) com rolagem interna; trava a rolagem do corpo e fecha com ✕, Esc, toque fora ou ao escolher um item.
+- Popovers (perfil, notificações, menus) são reposicionados para caber na viewport: largura máxima calc(100vw − 16 px), alinhados à borda mais próxima; nenhum overflow horizontal de 320 a 1920 px.
+- Continua fixo no celular; recomendado esconder ao rolar para baixo e reaparecer ao rolar para cima para ganhar área útil.
+- Headers: compacte a altura no celular e use a navegação móvel escolhida no layout mobile; o logo e a ação principal continuam visíveis.
+- Dropdowns e popovers: reposicione automaticamente para não sair da viewport; no celular podem virar bottom sheet.
+
+**Observações**
+- Todas as cores vêm dos tokens da identidade global (navBg, navText, navActive, primary, border…); nada de cores fixas.
+- Use &lt;header&gt; com &lt;nav aria-label="Principal"&gt; e lista de links; o item da página atual recebe aria-current="page".
+
+### Sidebar: Sóbria Corporativa — Unidade no topo
+
+`id: sobria-corporativa` · origem: módulo “navegacao”
+
+Sidebar corporativa sóbria em bgAlt, grupos em caixa alta, barra no ativo e perfil com cargo.
+
+**Estrutura**
+- Formato integral: ocupa toda a altura, encostada na borda esquerda, com 264 px de largura.
+- Superfície: fundo levemente diferente da página (bgAlt), sem sombra.
+- Itens: “Gestão”: Painel, Contratos, Fornecedores, Compras | “Pessoas”: Colaboradores, Folha | “Administração”: Auditoria, Permissões.
+- Ícones: ícones de linha de 18 px (estilo de ícone do tema) antes do rótulo; itens de 36 px de altura com padding horizontal de 12 px.
+- Títulos de grupo: caixa alta de 11 px, peso 650, espaçamento 0,08em, em textMuted.
+- Composição A: seletor de espaço de trabalho (avatar quadrado + nome + ▾) no topo; bloco de perfil no rodapé (avatar, nome, cargo e menu ⋯ que abre para cima). Composição B: logo (símbolo + nome) no topo; cartão de perfil destacado no rodapé com status e menu.
+
+**Propriedades**
+- formato: integral
+- flutuante: não
+- largura: ≈264 px
+- composicao: Unidade no topo: Seletor de unidade da empresa no topo; perfil com nome e cargo no rodapé.
+
+**Medidas recomendadas (adaptáveis)**
+- largura: 264 px
+- altura dos itens: 36 px (44 px no celular)
+- padding interno: 12 px
+- ícones: 18–20 px
+- raio dos itens: radiusMd do tema
+- drawer no celular: min(85vw, 280 px)
+
+**Comportamento e estados**
+- Item ativo: item ativo com barra vertical de 3 px na cor primária encostada à esquerda e texto em primary. Clique marca o item como ativo (aria-current="page"); hover com fundo hover; foco visível com anel focusRing de 2 px.
+- Seletor de espaço de trabalho: abre um menu com os espaços (o atual marcado com ✓) e “Criar espaço”; Esc ou clique fora fecham.
+- Menu do perfil abre para cima, dentro da altura da janela: Meu perfil, Preferências, Sair.
+- Fixa: position: sticky; top: 0; height: 100dvh; a lista rola internamente (overflow-y: auto) quando não couber, mantendo topo e rodapé visíveis.
+
+**Responsividade deste item**
+- Desktop (≥ 1024 px): integral: ocupa toda a altura, encostada na borda esquerda, com 264 px de largura.
+- De 768 a 1023 px: inicia recolhida em trilho de 72 px só com ícones; expande por cima do conteúdo (overlay com sombra) ao tocar no botão de menu.
+- Abaixo de 768 px: sai do fluxo e vira um drawer à esquerda com largura min(85vw, 280 px), aberto por um botão ☰ (44 × 44 px) no header; scrim escuro atrás; fecha com ✕, Esc, toque no scrim ou ao escolher um item; trava a rolagem do corpo.
+- No drawer os rótulos aparecem sempre (mesmo em modelos de trilho); itens com no mínimo 44 px de altura.
+- Menus e tooltips da sidebar ficam dentro da viewport: reposicionados para cima quando faltaria espaço abaixo; nenhum overflow horizontal.
+- O rodapé (perfil, medidor ou cartão) fica fixo na base do drawer; a lista rola acima dele.
+- Se o app for usado principalmente no celular, ofereça também uma bottom navigation com os 4–5 destinos principais.
+- Sidebars: no celular, siga exatamente a arquitetura mobile aprovada (não transforme em drawer por conta própria).
+- Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco ao gatilho.
+
+**Observações**
+- Cores dos tokens da identidade global (navBg, navText, navActive, navActiveText, primary, border); nada de cores fixas.
+- Use &lt;nav aria-label="Menu lateral"&gt; com listas; grupos com título usam aria-labelledby; o item atual recebe aria-current="page".
+
+- Item ativo sempre destacado (cor de navegação ativa) e anunciado a leitores de tela (`aria-current="page"`).
+- Dropdowns e submenus abrem por clique/toque e por teclado (Enter/Espaço), fecham com Esc e clique fora.
+- Drawers, bottom sheets e menus de tela cheia prendem o foco enquanto abertos e devolvem o foco ao botão que os abriu.
+
+## D. Identidade visual
+
+Paleta global: **Azul Institucional**. Todos os componentes (botões, inputs, headers, sidebars, cards, tabelas, modais, menus, login, landing e templates) herdam estes tokens por padrão. Exceções só onde estiverem explicitamente listadas.
+
+| Grupo | Token | Nome | Valor |
+| --- | --- | --- | --- |
+| Marca | Cor primária | `primary` | #1d4ed8 |
+| Marca | Primária — hover | `primaryHover` | #1a46c2 |
+| Marca | Primária — active | `primaryActive` | #173ead |
+| Marca | Texto sobre primária | `onPrimary` | #ffffff |
+| Marca | Primária suave | `primarySoft` | #e4eafa |
+| Marca | Cor secundária | `secondary` | #1e3a8a |
+| Marca | Texto sobre secundária | `onSecondary` | #ffffff |
+| Marca | Cor de destaque | `accent` | #0ea5e9 |
+| Marca | Texto sobre destaque | `onAccent` | #111114 |
+| Fundos e superfícies | Fundo principal | `bg` | #f8fafc |
+| Fundos e superfícies | Fundo secundário | `bgAlt` | #eff1f3 |
+| Fundos e superfícies | Superfície | `surface` | #ffffff |
+| Fundos e superfícies | Superfície alternativa | `surfaceAlt` | #f5f5f5 |
+| Texto | Texto principal | `text` | #0f172a |
+| Texto | Texto secundário | `textMuted` | #686d7a |
+| Texto | Texto desabilitado | `textDisabled` | #9fa4ac |
+| Texto | Placeholder | `placeholder` | #848993 |
+| Bordas e foco | Borda | `border` | #e6e6e6 |
+| Bordas e foco | Borda forte | `borderStrong` | #c7c7c7 |
+| Bordas e foco | Borda de foco (focus-visible) | `focusRing` | #1d4ed8 |
+| Estados | Hover | `hover` | #f4f4f4 |
+| Estados | Active | `active` | #ebebeb |
+| Estados | Pressed | `pressed` | #e0e0e0 |
+| Estados | Selected — fundo | `selected` | #e4eafa |
+| Estados | Selected — texto | `selectedText` | #1d4ed8 |
+| Estados | Disabled — fundo | `disabled` | #f0f0f0 |
+| Estados | Disabled — texto | `disabledText` | #93979f |
+| Semânticos | Success | `success` | #117e39 |
+| Semânticos | Success — fundo | `successBg` | #e3f4e9 |
+| Semânticos | Warning | `warning` | #a85c04 |
+| Semânticos | Warning — fundo | `warningBg` | #faefe1 |
+| Semânticos | Error | `error` | #dc2626 |
+| Semânticos | Error — fundo | `errorBg` | #fbe5e5 |
+| Semânticos | Info | `info` | #2563eb |
+| Semânticos | Info — fundo | `infoBg` | #e5ecfd |
+| Links, ícones e navegação | Link | `link` | #1d4ed8 |
+| Links, ícones e navegação | Link — hover | `linkHover` | #1942b8 |
+| Links, ícones e navegação | Ícones | `icon` | #49505f |
+| Links, ícones e navegação | Navegação — fundo | `navBg` | #0f1f4d |
+| Links, ícones e navegação | Navegação — texto | `navText` | #caced8 |
+| Links, ícones e navegação | Navegação — item ativo | `navActive` | #313e66 |
+| Links, ícones e navegação | Navegação — texto ativo | `navActiveText` | #ffffff |
+| Gradiente | Gradiente — início | `gradientFrom` | #1d4ed8 |
+| Gradiente | Gradiente — fim | `gradientTo` | #26aeeb |
+
+### Tipografia: Inter + Inter
+
+`id: identity.typography` · origem: módulo “cores”
+
+Títulos em Inter (peso 650) e textos em Inter (peso 400), tamanho base 15 px.
+
+**Estrutura**
+- Escala sugerida: 13 / 15 / 18 / 23 / 30 / 39 px.
+- Altura de linha de 1.5 para textos e 1.2–1.3 para títulos.
+- Nunca use textos menores que 12 px; filtros e botões com pelo menos 14 px.
+
+**Propriedades**
+- fonteTitulos: Inter
+- fonteTexto: Inter
+- tamanhoBase: 15
+- pesoTitulos: 650
+- pesoTexto: 400
+
+**Responsividade deste item**
+- Títulos grandes reduzem proporcionalmente no celular (use clamp()).
+- Inputs com 16 px no celular para evitar zoom automático.
+
+### Geometria e superfícies: Médios (8 px) · Contornada (bordas finas)
+
+`id: identity.geometry` · origem: módulo “cores”
+
+Cantos médios (8 px), bordas de 1 px, sombra sem sombra, superfícies contornada (bordas finas), densidade confortável.
+
+**Estrutura**
+- Escala de espaçamento em múltiplos de 4 px: 4, 8, 12, 16, 20, 24, 32, 40.
+- Sem sombras em superfícies de conteúdo. Apenas elementos realmente flutuantes (modais, popovers, menus) podem ter elevação.
+- Ícones no estilo contorno (outline), tamanho consistente (16–20 px em interfaces).
+
+**Propriedades**
+- raioPequeno: 6px
+- raioMedio: 8px
+- raioGrande: 12px
+- borda: 1px
+- sombra: none
+- superficie: outlined
+- densidade: comfortable
+- unidadeDeEspaco: 8px
+- ícones: outline
+
+**Responsividade deste item**
+- A geometria se mantém em todas as larguras; no celular aumente apenas as áreas de toque.
+
+### Estados visuais
+- hover: fundo `hover` ou primária `primaryHover`; active/pressed: `active`/`pressed`/`primaryActive`.
+- focus-visible: anel de 2–3 px na cor `focusRing`, sempre visível ao navegar por teclado.
+- selected: fundo `selected` com texto `selectedText`; disabled: fundo `disabled`, texto `disabledText`, sem hover.
+- Mensagens: success/warning/error/info com os fundos semânticos correspondentes.
+
+## E. Componentes
+
+3 componente(s) aprovados. Cada instância tem configuração própria; alterar uma não altera as outras.
+
+### Componente: Tabelas de dados — Compact Pro
+
+`id: tabelas` · origem: módulo “componentes”
+
+Tabelas na família visual Compact Pro. Tabela de dados com cabeçalho, linhas com status em badge, valores alinhados à direita e ações por linha. Estilo: Alta densidade: controles de 30 px, texto base de 13 px, raio de 4 px, bordas de 1 px sutis, sem sombras e números tabulares.
+
+**Estrutura**
+- Título + ações da tabela → &lt;table&gt; semântica (&lt;thead&gt;, &lt;th scope="col"&gt;) → linhas.
+- Números alinhados à direita com tabular-nums; status como badge; ações no fim.
+- Estados de carregando (skeleton), vazio e erro.
+- Altura de controles 30 px (44 px de área de toque no celular); padding reduzido em 25%.
+- Texto base 13 px, rótulos 12 px; números com font-variant-numeric: tabular-nums.
+- Raio de 4 px em controles e 6 px em contêineres; bordas de 1 px sutis.
+- Item ativo marcado por sublinhado de 2 px; ícones de 14–16 px sem fundo.
+- Composição: Informação densa em linhas e colunas alinhadas; barras de ferramentas compactas.
+- Acabamento: Neutro e funcional; cor apenas para estado e ação.
+
+**Propriedades**
+- Família visual: 13. Compact Pro
+- Título: Pedidos recentes
+- Colunas (uma por linha): Cliente | Status | Valor | Data
+- Linhas de exemplo: 4
+- Densidade: compacta
+- Linhas zebradas: não
+- Estilo do cabeçalho: Destacado
+- Seleção com checkbox: sim
+- Ações por linha: sim
+- Raio dos controles: 4 px
+- Raio dos contêineres: 6 px
+- Borda: 1 px sólida (border)
+- Sombra: sem sombra em superfícies de conteúdo
+- Superfície: superfície = token surface
+- Ação principal: primária sólida (primary) com texto onPrimary
+- Fonte de títulos: Inter 640
+- Fonte de texto: Inter
+- Caixa de rótulos e botões: normal (sentence case)
+- Tamanho base: 13 px
+- Altura de controles: 30 px (mínimo 44 px de área de toque no celular)
+- Ícones: lucide, traço 1.75 px, tratamento plain
+- Indicador de ativo: underline
+
+**Cores**
+- Ação principal (fundo): #1d4ed8
+- Ação principal (texto): #ffffff
+- Superfície: #ffffff
+- Texto: #0f172a
+- Texto secundário: #686d7a
+- Borda: #e6e6e6
+- Destaque: #0c91cd
+- Foco: #1d4ed8
+
+**Medidas recomendadas (adaptáveis)**
+- alturaDeControle: 30 px
+- raio: 4 px / 6 px
+- paddingInterno: 11 px
+
+**Comportamento e estados**
+- Hover na linha; seleção com checkbox no cabeçalho (todos/indeterminado); ordenação por clique no cabeçalho com aria-sort.
+- Hover: fundo Primária — hover (primaryHover) na ação principal e Hover (hover) em itens neutros.
+- Focus-visible: anel de 3 px em Borda de foco (focus-visible) (focusRing) a 35%. Nunca remova o foco visível.
+- Active: Primária — active (primaryActive).
+- Disabled: fundo Disabled — fundo (disabled), texto Disabled — texto (disabledText), sem sombra, cursor not-allowed, aria-disabled.
+- Hover com fundo de hover; atalhos de teclado visíveis.
+- Foco com anel de 2 px.
+- Movimento: Rápido (100 ms).
+
+**Responsividade deste item**
+- No celular: rolagem horizontal local dentro do contêiner (overflow-x: auto) com a primeira coluna fixa, ou representação em cartões (cada linha vira um cartão rótulo: valor).
+- No celular, aumente as áreas de toque para 44 px sem aumentar a fonte além de 16 px nos campos; tabelas viram cartões.
+- Tabelas: rolagem horizontal local dentro do próprio contêiner ou representação alternativa em cartões no celular; cabeçalho legível.
+
+**Observações**
+- As cores vêm da paleta global aprovada; a família apenas transforma (gradientes, superfícies derivadas, opacidades).
+- Nome dado pelo usuário: “Tabelas de dados”.
+- Use os tokens da paleta global por padrão; só as exceções listadas fogem dela.
+
+### Componente: Gráficos — Compact Pro
+
+`id: graficos` · origem: módulo “componentes”
+
+Gráficos na família visual Compact Pro. Gráfico com título, eixos, grade discreta, séries nas cores da paleta e legenda. Estilo: Alta densidade: controles de 30 px, texto base de 13 px, raio de 4 px, bordas de 1 px sutis, sem sombras e números tabulares.
+
+**Estrutura**
+- Cabeçalho (título + filtro de período) → área do gráfico → legenda.
+- Série 1 na primária, série 2 no destaque; grade em borda a 50%.
+- Tabela alternativa ou aria-label descritivo para acessibilidade.
+- Altura de controles 30 px (44 px de área de toque no celular); padding reduzido em 25%.
+- Texto base 13 px, rótulos 12 px; números com font-variant-numeric: tabular-nums.
+- Raio de 4 px em controles e 6 px em contêineres; bordas de 1 px sutis.
+- Item ativo marcado por sublinhado de 2 px; ícones de 14–16 px sem fundo.
+- Composição: Informação densa em linhas e colunas alinhadas; barras de ferramentas compactas.
+- Acabamento: Neutro e funcional; cor apenas para estado e ação.
+
+**Propriedades**
+- Família visual: 13. Compact Pro
+- Título: Vendas por mês
+- Tipo: Barras
+- Séries: 2
+- Legenda: sim
+- Linhas de grade: sim
+- Rótulos de valores: não
+- Raio dos controles: 4 px
+- Raio dos contêineres: 6 px
+- Borda: 1 px sólida (border)
+- Sombra: sem sombra em superfícies de conteúdo
+- Superfície: superfície = token surface
+- Ação principal: primária sólida (primary) com texto onPrimary
+- Fonte de títulos: Inter 640
+- Fonte de texto: Inter
+- Caixa de rótulos e botões: normal (sentence case)
+- Tamanho base: 13 px
+- Altura de controles: 30 px (mínimo 44 px de área de toque no celular)
+- Densidade: compacta
+- Ícones: lucide, traço 1.75 px, tratamento plain
+- Indicador de ativo: underline
+
+**Cores**
+- Ação principal (fundo): #1d4ed8
+- Ação principal (texto): #ffffff
+- Superfície: #ffffff
+- Texto: #0f172a
+- Texto secundário: #686d7a
+- Borda: #e6e6e6
+- Destaque: #0c91cd
+- Foco: #1d4ed8
+
+**Medidas recomendadas (adaptáveis)**
+- alturaDeControle: 30 px
+- raio: 4 px / 6 px
+- paddingInterno: 11 px
+
+**Comportamento e estados**
+- Tooltip no hover/toque com valores; legenda clicável liga/desliga séries.
+- Hover: fundo Primária — hover (primaryHover) na ação principal e Hover (hover) em itens neutros.
+- Focus-visible: anel de 3 px em Borda de foco (focus-visible) (focusRing) a 35%. Nunca remova o foco visível.
+- Active: Primária — active (primaryActive).
+- Disabled: fundo Disabled — fundo (disabled), texto Disabled — texto (disabledText), sem sombra, cursor not-allowed, aria-disabled.
+- Hover com fundo de hover; atalhos de teclado visíveis.
+- Foco com anel de 2 px.
+- Movimento: Rápido (100 ms).
+
+**Responsividade deste item**
+- No celular: menos rótulos no eixo X (a cada 2–3), legenda abaixo do gráfico, altura mínima de 200 px, valores nunca cortados.
+- No celular, aumente as áreas de toque para 44 px sem aumentar a fonte além de 16 px nos campos; tabelas viram cartões.
+- Gráficos: adapte eixos, quantidade de rótulos, legendas (abaixo do gráfico no celular) e dimensões; nunca corte valores.
+
+**Observações**
+- As cores vêm da paleta global aprovada; a família apenas transforma (gradientes, superfícies derivadas, opacidades).
+- Nome dado pelo usuário: “Gráficos”.
+- Use os tokens da paleta global por padrão; só as exceções listadas fogem dela.
+
+### Componente: Dashboard financeiro — Compact Pro
+
+`id: dashboard` · origem: módulo “componentes”
+
+Dashboard na família visual Compact Pro. Página de painel com cabeçalho, linha de KPIs, gráfico principal e lista/tabela de atividades. Estilo: Alta densidade: controles de 30 px, texto base de 13 px, raio de 4 px, bordas de 1 px sutis, sem sombras e números tabulares.
+
+**Estrutura**
+- Cabeçalho da página (título, período, ações) → KPIs → gráfico (2/3) + atividades (1/3).
+- Usa a arquitetura desktop/mobile aprovada para a navegação.
+- Altura de controles 30 px (44 px de área de toque no celular); padding reduzido em 25%.
+- Texto base 13 px, rótulos 12 px; números com font-variant-numeric: tabular-nums.
+- Raio de 4 px em controles e 6 px em contêineres; bordas de 1 px sutis.
+- Item ativo marcado por sublinhado de 2 px; ícones de 14–16 px sem fundo.
+- Composição: Informação densa em linhas e colunas alinhadas; barras de ferramentas compactas.
+- Acabamento: Neutro e funcional; cor apenas para estado e ação.
+
+**Propriedades**
+- Família visual: 13. Compact Pro
+- Título: Visão geral
+- Quantidade de KPIs: 3
+- Gráfico principal: Barras
+- Mostrar menu lateral: sim
+- Mostrar lista de atividades: sim
+- Raio dos controles: 4 px
+- Raio dos contêineres: 6 px
+- Borda: 1 px sólida (border)
+- Sombra: sem sombra em superfícies de conteúdo
+- Superfície: superfície = token surface
+- Ação principal: primária sólida (primary) com texto onPrimary
+- Fonte de títulos: Inter 640
+- Fonte de texto: Inter
+- Caixa de rótulos e botões: normal (sentence case)
+- Tamanho base: 13 px
+- Altura de controles: 30 px (mínimo 44 px de área de toque no celular)
+- Densidade: compacta
+- Ícones: lucide, traço 1.75 px, tratamento plain
+- Indicador de ativo: underline
+
+**Cores**
+- Ação principal (fundo): #1d4ed8
+- Ação principal (texto): #ffffff
+- Superfície: #ffffff
+- Texto: #0f172a
+- Texto secundário: #686d7a
+- Borda: #e6e6e6
+- Destaque: #0c91cd
+- Foco: #1d4ed8
+
+**Medidas recomendadas (adaptáveis)**
+- alturaDeControle: 30 px
+- raio: 4 px / 6 px
+- paddingInterno: 11 px
+
+**Comportamento e estados**
+- Filtro de período atualiza todos os blocos; estados de carregando por bloco.
+- Hover: fundo Primária — hover (primaryHover) na ação principal e Hover (hover) em itens neutros.
+- Focus-visible: anel de 3 px em Borda de foco (focus-visible) (focusRing) a 35%. Nunca remova o foco visível.
+- Active: Primária — active (primaryActive).
+- Disabled: fundo Disabled — fundo (disabled), texto Disabled — texto (disabledText), sem sombra, cursor not-allowed, aria-disabled.
+- Hover com fundo de hover; atalhos de teclado visíveis.
+- Foco com anel de 2 px.
+- Movimento: Rápido (100 ms).
+
+**Responsividade deste item**
+- KPIs 4 → 2 → 1 colunas; gráfico e lista empilham; nada de overflow horizontal.
+- No celular, aumente as áreas de toque para 44 px sem aumentar a fonte além de 16 px nos campos; tabelas viram cartões.
+
+**Observações**
+- As cores vêm da paleta global aprovada; a família apenas transforma (gradientes, superfícies derivadas, opacidades).
+- Nome dado pelo usuário: “Dashboard financeiro”.
+- Use os tokens da paleta global por padrão; só as exceções listadas fogem dela.
+
+## F. Responsividade
+
+Valide pelo menos nas larguras: 320, 344, 360, 375, 390, 412, 430, 480, 600, 768, 820, 1024, 1280, 1440, 1920 px, além de larguras intermediárias.
+
+Breakpoints de referência:
+- xs: Celulares pequenos (320–359 px)
+- sm: Celulares (360–599 px)
+- md: Tablets e celulares na horizontal (600–1023 px)
+- lg: Notebooks (1024–1439 px)
+- xl: Monitores grandes (1440 px ou mais)
+
+**Regras gerais**
+- Nenhum overflow horizontal involuntário em nenhuma largura de 320 px a 1920 px (inclusive larguras intermediárias).
+- Nenhum texto cortado: use quebra de linha, `min-width: 0` em itens flex/grid e `overflow-wrap: anywhere` em conteúdos longos (e-mails, URLs, códigos).
+- Nenhuma sobreposição indevida entre elementos, inclusive com o teclado virtual aberto.
+- Alvos de toque com no mínimo 44 × 44 px no celular e espaçamento de pelo menos 8 px entre alvos adjacentes.
+- Campos de formulário com fonte de pelo menos 16 px no celular (evita zoom automático no iOS).
+- Imagens e mídias responsivas (`max-width: 100%`, `aspect-ratio` definido) sem distorção.
+- Grids adaptáveis: reduza colunas progressivamente; nunca comprima cartões abaixo de uma largura legível.
+- Suporte a zoom de até 200% e a fonte ampliada do sistema sem perda de conteúdo ou funcionalidade.
+- Respeite as safe areas (`env(safe-area-inset-*)`) em barras fixas, docks e menus inferiores.
+- Funcione na orientação horizontal do celular: barras fixas não podem ocupar mais de 25% da altura.
+- Use `100dvh` (com fallback) em vez de `100vh` para alturas de tela cheia.
+- Menus acessíveis por mouse, toque e teclado (Tab, Enter, Espaço, Esc), com foco visível.
+- Respeite `prefers-reduced-motion` reduzindo animações.
+
+**Regras por componente**
+- Headers: compacte a altura no celular e use a navegação móvel escolhida no layout mobile; o logo e a ação principal continuam visíveis.
+- Sidebars: no celular, siga exatamente a arquitetura mobile aprovada (não transforme em drawer por conta própria).
+- Dropdowns e popovers: reposicione automaticamente para não sair da viewport; no celular podem virar bottom sheet.
+- Tabelas: rolagem horizontal local dentro do próprio contêiner ou representação alternativa em cartões no celular; cabeçalho legível.
+- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).
+- Calendários: no celular, ofereça modo de lista/agenda quando a grade mensal ficar apertada.
+- Modais: altura máxima de 90dvh com rolagem interna; botões de ação sempre acessíveis; no celular podem ocupar a tela ou virar bottom sheet.
+- Gráficos: adapte eixos, quantidade de rótulos, legendas (abaixo do gráfico no celular) e dimensões; nunca corte valores.
+- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.
+- Cards: altura definida pelo conteúdo (sem alturas fixas que cortem texto); grade reduz colunas progressivamente.
+- Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco ao gatilho.
+
+## G. Regras de implementação
+
+- Não modifique escolhas aprovadas nesta especificação sem solicitação explícita do usuário.
+- Preserve a identidade global: todos os componentes usam os tokens definidos; exceções só onde estiverem listadas.
+- Não adicione decoração por conta própria (sombras, gradientes, vidro, animações, cantos arredondados) além do especificado.
+- Respeite a geometria escolhida: se a sidebar é integral, ela vai do topo à base; se é flutuante, tem afastamento das bordas. Não converta uma na outra.
+- Evite overflow e colisões; valide em todas as larguras de referência.
+- Mantenha consistência de espaçamentos (escala de 4 px), tipografia e estados de interação (hover, focus-visible, active, disabled, selected).
+- Implemente estados de carregamento, vazio e erro para listas, tabelas e formulários.
+- Use componentes reutilizáveis e tokens centralizados (variáveis CSS ou tema); nada de cores fixas espalhadas pelo código.
+- Garanta acessibilidade: HTML semântico, labels, contraste WCAG AA, navegação por teclado e leitores de tela.
+- Teste o resultado (visual e funcional) em celular, tablet e desktop antes de concluir.
+
+## Pendências
+
+Decisões que o usuário ainda não tomou. Não invente: pergunte ou use a opção mais neutra.
+- Escolha um fluxo de cadastro (ou confirme que não haverá cadastro).
+</pre></section>
+</main>
+</body>
+</html>

@@ -1,0 +1,37 @@
+const L = require('./lib');
+const path = require('path'); const fs = require('fs');
+const sy = p => p.evaluate(() => Math.round(scrollY));
+(async () => {
+  const { ctx, page } = await L.open('perfil', 'android');
+  await ctx.grantPermissions(['clipboard-read', 'clipboard-write'], { origin: 'http://127.0.0.1:4300' });
+  await page.goto('http://127.0.0.1:4300/#/guiado/entrega', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(1000);
+  L.log('A54 arrastar o dedo até os botões de copiar/baixar');
+  await L.swipe(page, 180, 600, 300);
+  const cp = page.getByRole('button', { name: /Copiar Master Prompt/ });
+  const b = await cp.boundingBox(); const f = await page.locator('.gd-footer').boundingBox();
+  console.log('copiar box', JSON.stringify(b), 'footer', JSON.stringify(f), 'coberto?', b.y + b.height > f.y);
+  await L.shot(page, '49-master-botoes-visiveis');
+  await page.evaluate(() => navigator.clipboard.writeText('VAZIO'));
+  L.log('A55 tocar "Copiar Master Prompt"');
+  await cp.tap(); await page.waitForTimeout(800);
+  await L.shot(page, '50-master-apos-copiar');
+  const clip = await page.evaluate(() => navigator.clipboard.readText());
+  console.log('CLIPBOARD len', clip.length, 'inicio:', JSON.stringify(clip.slice(0, 80)));
+  console.log('btn label after', await cp.innerText().catch(() => '?'));
+  const toast = await page.evaluate(() => [...document.querySelectorAll('[role=status],[role=alert],[aria-live]')].map(e => e.innerText.trim()).filter(Boolean).join(' | '));
+  console.log('TOAST', toast);
+  L.log('A56 tocar "Baixar .md"');
+  const [dl] = await Promise.all([page.waitForEvent('download', { timeout: 10000 }).catch(e => null), page.getByRole('button', { name: /Baixar \.md/ }).tap()]);
+  if (dl) { const out = path.join(L.BASE, 'downloads', dl.suggestedFilename()); await dl.saveAs(out); const st = fs.statSync(out); console.log('DOWNLOAD', dl.suggestedFilename(), st.size, 'bytes'); console.log(fs.readFileSync(out, 'utf8').split('\n').slice(0, 6).join('\n')); } else console.log('SEM DOWNLOAD');
+  await page.waitForTimeout(600);
+  await L.shot(page, '51-master-apos-baixar');
+  // scroll inside pre
+  const pre = page.locator('pre').first();
+  const pb = await pre.boundingBox(); console.log('pre box', JSON.stringify(pb));
+  L.log('A57 arrastar o dedo dentro da caixa do prompt');
+  await L.swipe(page, 180, Math.min(pb.y + 300, 650), Math.min(pb.y + 300, 650) - 300);
+  console.log('pre scrollTop', await pre.evaluate(e => e.scrollTop), 'page scroll', await sy(page));
+  await L.shot(page, '52-master-rolando-texto');
+  await ctx.close();
+})();

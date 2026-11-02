@@ -1,0 +1,103 @@
+{
+  "gerador": "Atelier UI — Inspiration Gallery",
+  "tipo": "inspiracao",
+  "versao": 1,
+  "geradoEm": "2026-11-02T18:30:29.202Z",
+  "conceito": {
+    "id": "verdant-atelier",
+    "marca": "Verdant Atelier",
+    "segmento": "Plantas e botânica",
+    "descricao": "Loja-ateliê de plantas com cara de revista botânica: serifas elegantes, molduras em arco e ilustrações de espécies.",
+    "composicao": "Editorial botânico assimétrico, com molduras em arco e muito respiro",
+    "secoes": [
+      "Faixa de aviso",
+      "Header com logo central e navegação dividida",
+      "Hero editorial assimétrico com moldura em arco",
+      "Coleção da estação (vitrine de 4 espécies)",
+      "Ensaio do diário com citação e capitular",
+      "Guia de cuidados em quatro gestos",
+      "Chamada para oficinas",
+      "Footer invertido com newsletter"
+    ],
+    "tipografia": {
+      "titulos": {
+        "id": "fraunces",
+        "nome": "Fraunces",
+        "stack": "'Fraunces Variable', Fraunces, Georgia, serif"
+      },
+      "textos": {
+        "id": "inter",
+        "nome": "Inter",
+        "stack": "'Inter Variable', Inter, system-ui, sans-serif"
+      }
+    },
+    "spec": {
+      "summary": "Site de loja-ateliê de plantas com composição editorial botânica: serifa expressiva em corpo grande, molduras em arco, ilustrações vetoriais de espécies e muito espaço em branco.",
+      "structure": [
+        "Faixa de aviso fina no topo (cor de destaque, texto centralizado de 12–13 px).",
+        "Header em três colunas: navegação à esquerda (Plantas, Vasos, Oficinas), logotipo central em serifa itálica com “ATELIER” em versalete espaçado, e à direita Diário, busca e sacola com contador; linha fina inferior.",
+        "Hero em grade 7/5: à esquerda sobretítulo com traço, título serifado de ~96 px com a palavra final em itálico na cor de destaque, parágrafo de até 470 px, CTA em pílula + link sublinhado, e três indicadores separados por linhas verticais finas; à direita moldura em arco (raio superior = metade da largura) com ilustração grande da planta, selo circular com texto em curva sobreposto à borda e legenda “Fig. 01” em itálico.",
+        "Coleção da estação: título serifado + link “Ver todas” alinhados pela base; grade de 4 cartões com topo em arco, ilustração da espécie, etiqueta de cuidado em pílula, nome científico em itálico, preço e nome popular.",
+        "Ensaio do diário: duas colunas separadas por fio vertical — citação grande em serifa itálica com autoria; texto com capitular colorida e link de leitura.",
+        "Guia de cuidados em fundo de superfície: título + 4 colunas numeradas (01–04) com fio superior, ícone de linha, título serifado e descrição curta.",
+        "Chamada para oficinas em bloco de cor de destaque: título grande, texto, botão em pílula com cores invertidas e ilustração de terrário à direita.",
+        "Footer com fundo na cor do texto (invertido): marca, newsletter com campo sublinhado, três colunas de links e linha legal."
+      ],
+      "behavior": [
+        "Hover discreto: links ganham sublinhado; cartões da coleção elevam a ilustração 4 px e mostram “Adicionar à sacola”. Sem animações chamativas.",
+        "Selo circular pode girar lentamente (20 s por volta) — respeitar prefers-reduced-motion.",
+        "CTA principal único por seção; CTA secundário sempre como link sublinhado.",
+        "Imagens/ilustrações entram com fade de 300 ms ao rolar, sem deslocamentos grandes."
+      ],
+      "responsive": [
+        "Header no celular: hambúrguer à esquerda, logotipo central menor (24 px), sacola à direita; a navegação vai para um drawer.",
+        "Hero no celular: a moldura em arco vem primeiro (≈380 px de altura), depois título de ~46 px, texto e CTAs empilhados em largura total.",
+        "Indicadores do hero continuam em 3 colunas, com números menores.",
+        "Coleção passa a 2 colunas (cartões com arco menor); em telas < 340 px, 1 coluna.",
+        "Ensaio: citação e texto empilhados, sem o fio vertical.",
+        "Guia de cuidados em grade 2×2.",
+        "Oficinas: texto acima, ilustração do terrário abaixo, centralizada e menor.",
+        "Footer: colunas empilhadas; newsletter em largura total."
+      ],
+      "measurements": {
+        "conteúdo máximo": "1200 px",
+        "header": "88 px (desktop) / 64 px (celular)",
+        "título do hero": "≈96 px / 46 px",
+        "moldura do hero": "≈460 × 580 px",
+        "respiro entre seções": "96–112 px / 48–56 px"
+      },
+      "notes": [
+        "Ilustrações botânicas vetoriais simples (folhas, vasos), nunca fotos de banco genéricas.",
+        "Referência de identidade e composição: não copiar marcas, logotipos, textos ou imagens de terceiros — criar conteúdo original para o projeto."
+      ]
+    }
+  },
+  "paleta": {
+    "id": "original",
+    "nome": "Original",
+    "proposta": {
+      "id": "original",
+      "name": "Original",
+      "bg": "#f3eee3",
+      "surface": "#faf7f0",
+      "text": "#1d2a1e",
+      "muted": "#5e6a5a",
+      "accent": "#2e5e3e",
+      "onAccent": "#ffffff",
+      "secondary": "#c9a27e"
+    },
+    "final": {
+      "id": "original",
+      "name": "Original",
+      "bg": "#f3eee3",
+      "surface": "#faf7f0",
+      "text": "#1d2a1e",
+      "muted": "#5e6a5a",
+      "accent": "#2e5e3e",
+      "onAccent": "#ffffff",
+      "secondary": "#c9a27e"
+    }
+  },
+  "ajustes": {},
+  "observacao": "Referência de identidade e composição. A marca, os textos e as ilustrações são fictícios e não devem ser copiados literalmente."
+}

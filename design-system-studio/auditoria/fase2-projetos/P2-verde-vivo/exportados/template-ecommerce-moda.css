@@ -1,0 +1,105 @@
+/*
+ * Template “E-commerce de moda” (Linho & Cia) — CSS de referência gerado pelo Atelier UI.
+ * Categoria: Lojas e imóveis.
+ * Fontes: Fraunces (títulos) e Inter (textos). Cantos: Médios (8 px).
+ * Cor principal alterada pelo usuário: #2d6a4f (padrão do template: #9f1239).
+ * Fundo alterada pelo usuário: #f6faf6 (padrão do template: #ffffff).
+ * Texto alterada pelo usuário: #1b2e24 (padrão do template: #141414).
+ * Cantos alterados: Médios (8 px) (padrão: Quadrados (0 px)).
+ */
+:root {
+  --color-primary: #2d6a4f;
+  --color-on-primary: #ffffff;
+  --color-primary-soft: #e2ece5;
+  --color-bg: #f6faf6;
+  --color-surface: #ecf1ed;
+  --color-text: #1b2e24;
+  --color-muted: #5d6963;
+  --color-border: #dee4df;
+  --font-heading: 'Fraunces Variable', Fraunces, Georgia, serif;
+  --font-body: 'Inter Variable', Inter, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', 'JetBrains Mono', ui-monospace, monospace;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --container: 1120px;
+  --gutter: 48px;
+  --section-space: 88px;
+  color-scheme: light;
+}
+
+@media (max-width: 599px) {
+  :root { --gutter: 20px; --section-space: 56px; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3 { margin: 0; font-family: var(--font-heading); line-height: 1.12; letter-spacing: -0.02em; text-wrap: balance; }
+h1 { font-size: clamp(2.25rem, 1.4rem + 3.6vw, 3.75rem); }
+h2 { font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem); }
+h3 { font-size: 1.2rem; line-height: 1.3; }
+p { margin: 0; }
+a { color: var(--color-primary); }
+img, svg, video { max-width: 100%; height: auto; display: block; }
+:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 2px; }
+
+.container { width: 100%; max-width: calc(var(--container) + var(--gutter) * 2); margin: 0 auto; padding: 0 var(--gutter); }
+.section { padding: var(--section-space) 0; }
+.section--surface { background: var(--color-surface); }
+.section--primary { background: var(--color-primary); color: var(--color-on-primary); }
+.muted { color: var(--color-muted); }
+.eyebrow { font-size: 0.85rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-primary); }
+
+.grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); }
+.split { display: grid; gap: 64px; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; }
+@media (max-width: 899px) { .split { grid-template-columns: minmax(0, 1fr); gap: 32px; } }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding: 0 22px;
+  border-radius: var(--radius-md); border: 1.5px solid transparent;
+  font: inherit; font-weight: 600; text-decoration: none; cursor: pointer;
+  transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+}
+.btn-primary { background: var(--color-primary); color: var(--color-on-primary); }
+.btn-primary:hover { filter: brightness(0.94); }
+.btn-secondary { background: transparent; color: var(--color-text); border-color: var(--color-border); }
+.btn-secondary:hover { border-color: var(--color-text); }
+@media (max-width: 599px) { .btn-row { display: grid; } .btn-row .btn { width: 100%; } }
+
+.card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 28px; }
+.badge { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: var(--radius-sm); background: var(--color-primary-soft); color: var(--color-text); font-size: 0.8rem; font-weight: 600; }
+
+input, select, textarea {
+  font: inherit; min-height: 48px; padding: 0 16px; width: 100%;
+  border: 1.5px solid var(--color-border); border-radius: var(--radius-md);
+  background: var(--color-bg); color: var(--color-text);
+}
+textarea { padding: 12px 16px; min-height: 120px; }
+@media (max-width: 599px) { input, select, textarea { font-size: 16px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+
+/* Seções do template, na ordem (★ = parte marcada pelo usuário):
+ * ★ 1. .section-cabecalho — Cabeçalho (Cabeçalho · store)
+ *   2. .section-hero — Campanha (Hero com imagem · left)
+ *   3. .section-beneficios — Benefícios de compra (Grade de recursos · inline)
+ * ★ 4. .section-categorias — Categorias (Galeria · categories)
+ * ★ 5. .section-vitrine — Vitrine (Vitrine de produtos)
+ *   6. .section-historia — Nossa origem (Recursos alternados)
+ *   7. .section-newsletter — Newsletter (Newsletter)
+ *   8. .section-rodape — Rodapé (Rodapé · columns)
+ */

@@ -1,0 +1,22 @@
+const L = require('./lib');
+const path = require('path');
+const sy = p => p.evaluate(() => Math.round(scrollY));
+(async () => {
+  const { ctx, page } = await L.open('perfil', 'android');
+  await ctx.grantPermissions(['clipboard-read', 'clipboard-write'], { origin: 'http://127.0.0.1:4300' });
+  await page.goto('http://127.0.0.1:4300/#/guiado/componentes', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(1000);
+  L.log('A53 tocar "Continuar: Entrega"');
+  await page.locator('.gd-footer').getByRole('button', { name: /Continuar/ }).tap(); await page.waitForTimeout(1800);
+  console.log('URL', page.url(), 'altura', await page.evaluate(() => document.documentElement.scrollHeight));
+  await L.shot(page, '48-passo10-master-topo');
+  await L.shot(page, '48-passo10-master-inteira', true);
+  const t = await L.text(page, 60000); const i = t.indexOf('Etapa 10'); console.log(t.slice(i, i + 2500));
+  console.log('footer', await page.locator('.gd-footer').innerText().catch(() => '-'));
+  const m = await L.measure(page);
+  for (const x of m.filter(x => x.y > 60 && !/^(Objetivo|Landing|Arquitetura|Revisão|Aprove)/.test(x.txt)).slice(0, 40)) console.log(JSON.stringify(x));
+  console.log('FONTS', JSON.stringify(await L.fonts(page)));
+  console.log('OVERFLOW', JSON.stringify(await L.overflow(page)));
+  console.log('pre/textarea', JSON.stringify(await page.evaluate(() => [...document.querySelectorAll('pre, textarea, code')].slice(0, 5).map(e => { const r = e.getBoundingClientRect(); const cs = getComputedStyle(e); return { tag: e.tagName, w: Math.round(r.width), h: Math.round(r.height), sw: e.scrollWidth, fs: cs.fontSize, ws: cs.whiteSpace, ox: cs.overflowX, len: (e.value || e.textContent).length }; }))));
+  await ctx.close();
+})();

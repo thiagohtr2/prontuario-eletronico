@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Centro Operacional — Ficha do projeto</title>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;overflow-x:hidden}
+img,svg{max-width:100%}
+
+:root{--s-border:#ebebef}
+body{background:#fff;color:#15151a;line-height:1.5}
+.wrap{max-width:1080px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:34px;margin:4px 0}h2{font-size:20px;margin:40px 0 12px}h3{font-size:14px;margin:20px 0 8px;color:#55555f}
+.eyebrow{color:#4c46dc;font-weight:600;margin:0}.muted{color:#55555f;margin:0}
+.items{list-style:none;padding:0;margin:0;display:grid;gap:10px}.items li{border-top:1px solid #ebebef;padding-top:10px}
+.items p{margin:2px 0 0;color:#55555f;font-size:14px}.kind{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#4c46dc}
+.tokens{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px}
+.tk{display:flex;gap:10px;align-items:center;font-size:13px}.tk span:last-child{display:grid}
+.sw{width:34px;height:34px;border-radius:8px;border:1px solid #d9d9e0;flex:none}
+code{font-family:ui-monospace,monospace;font-size:12px;color:#7c7c87}
+pre{white-space:pre-wrap;word-break:break-word;border:1px solid #ebebef;border-radius:8px;padding:16px;font-size:12.5px}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <header><p class="eyebrow">Atelier UI · Ficha do projeto</p><h1>Centro Operacional</h1><p class="muted">One Screen · Sistema operacional One Screen para acompanhar dados operacionais e indicadores em uma única tela principal.</p></header>
+  <section><h2>Prévia da identidade</h2><div data-testid="identity-preview" style="display:grid;grid-template-columns:150px minmax(0, 1fr);background:#ffffff;color:#18181b;font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-size:14px;font-weight:400;border-radius:12px;overflow:hidden;border:1px solid var(--s-border);min-height:460px"><aside style="background:#ffffff;color:#4b4b4d;padding:16px 8px;display:grid;align-content:start;gap:4px;border-right:1px solid #e6e6e6"><div style="display:flex;align-items:center;gap:8px;padding:0 6px 14px;font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-weight:650;font-size:14px;color:#18181b"><span style="width:20px;height:20px;border-radius:6px;background:#18181b"></span>Marca</div><div style="display:flex;align-items:center;gap:8px;height:32px;padding:0 8px;border-radius:8px;background:#e3e3e4;color:#18181b;font-size:13px;font-weight:600"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-house"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>Início</div><div style="display:flex;align-items:center;gap:8px;height:32px;padding:0 8px;border-radius:8px;background:transparent;color:#4b4b4d;font-size:13px;font-weight:500"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layout-grid"><rect width="7" height="7" x="3" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="3" rx="1"></rect><rect width="7" height="7" x="14" y="14" rx="1"></rect><rect width="7" height="7" x="3" y="14" rx="1"></rect></svg>Projetos</div><div style="display:flex;align-items:center;gap:8px;height:32px;padding:0 8px;border-radius:8px;background:transparent;color:#4b4b4d;font-size:13px;font-weight:500"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Equipe</div><div style="display:flex;align-items:center;gap:8px;height:32px;padding:0 8px;border-radius:8px;background:transparent;color:#4b4b4d;font-size:13px;font-weight:500"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>Ajustes</div></aside><div style="display:grid;gap:16px;padding:16px;align-content:start;min-width:0"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap"><div style="min-width:0"><div style="font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-weight:650;font-size:22px;line-height:1.2">Visão geral</div><div style="color:#707072;font-size:12.5px">Texto secundário com <a style="color:#18181b;text-decoration:underline">um link</a></div></div><div style="display:flex;gap:6px;color:#525254"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bell"><path d="M10.268 21a2 2 0 0 0 3.464 0"></path><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path></svg></div></div><div style="display:flex;flex-wrap:wrap;gap:8px"><span style="display:inline-flex;align-items:center;height:34px;padding:0 12.8px;border-radius:8px;border:0;background:#18181b;color:#ffffff;font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-size:13px;font-weight:600;white-space:nowrap">Primário</span><span style="display:inline-flex;align-items:center;height:34px;padding:0 12.8px;border-radius:8px;border:0;background:#161618;color:#ffffff;font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-size:13px;font-weight:600;white-space:nowrap">Hover</span><span style="display:inline-flex;align-items:center;height:34px;padding:0 12.8px;border-radius:8px;border:1px solid #c7c7c7;background:#ffffff;color:#18181b;font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-size:13px;font-weight:600;white-space:nowrap">Secundário</span><span style="display:inline-flex;align-items:center;height:34px;padding:0 12.8px;border-radius:8px;border:0;background:#2563eb;color:#ffffff;font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-size:13px;font-weight:600;white-space:nowrap">Destaque</span><span style="display:inline-flex;align-items:center;height:34px;padding:0 12.8px;border-radius:8px;border:0;background:#f0f0f0;color:#979798;font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-size:13px;font-weight:600;white-space:nowrap">Desabilitado</span></div><div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));gap:8px"><div style="display:grid;gap:4px"><span style="font-size:12px;font-weight:600">Campo</span><span style="height:34px;display:flex;align-items:center;padding:0 10px;border-radius:8px;border:1px solid #c7c7c7;background:#ffffff;color:#8c8c8d;font-size:13px">Placeholder…</span></div><div style="display:grid;gap:4px"><span style="font-size:12px;font-weight:600">Com foco</span><span style="height:34px;display:flex;align-items:center;padding:0 10px;border-radius:8px;border:1px solid #18181b;box-shadow:0 0 0 3px #18181b33;background:#ffffff;color:#18181b;font-size:13px">maria@email.com</span></div></div><div style="background:#ffffff;border:1px solid #e6e6e6;box-shadow:none;border-radius:12px;padding:12px;display:grid;gap:8px"><div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><strong style="font-family:&#x27;Inter Variable&#x27;, Inter, system-ui, sans-serif;font-weight:650;font-size:14px">Pedidos recentes</strong><span style="font-size:11.5px;font-weight:600;padding:2px 8px;border-radius:999px;background:#e3e3e4;color:#18181b">12 novos</span></div><div style="display:flex;justify-content:space-between;gap:8px;padding:7px 8px;border-radius:6px;background:transparent;color:#18181b;font-size:13px;border-top:none"><span>Ana Souza</span><span style="color:#707072">R$ 120,00</span></div><div style="display:flex;justify-content:space-between;gap:8px;padding:7px 8px;border-radius:6px;background:#e3e3e4;color:#18181b;font-size:13px;border-top:1px solid #e6e6e6"><span>Bruno Lima</span><span style="color:#18181b">R$ 207,00</span></div><div style="display:flex;justify-content:space-between;gap:8px;padding:7px 8px;border-radius:6px;background:transparent;color:#18181b;font-size:13px;border-top:1px solid #e6e6e6"><span>Carla Dias</span><span style="color:#707072">R$ 294,00</span></div></div><div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(170px, 1fr));gap:6px"><div style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#e3f4e9;color:#117e39;font-size:12.5px;font-weight:560"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>Alterações salvas</div><div style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#faefe1;color:#a85c04;font-size:12.5px;font-weight:560"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>Plano perto do limite</div><div style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#fbe5e5;color:#dc2626;font-size:12.5px;font-weight:560"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-x"><circle cx="12" cy="12" r="10"></circle><path d="m15 9-6 6"></path><path d="m9 9 6 6"></path></svg>Falha no pagamento</div><div style="display:flex;align-items:center;gap:6px;padding:7px 10px;border-radius:8px;background:#e5ecfd;color:#2563eb;font-size:12.5px;font-weight:560"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>Nova versão disponível</div></div></div></div></section>
+  <section><h2>Decisões aprovadas</h2><ul class="items"><li><span class="kind">Fluxo de entrada</span><b>Aplicação diretamente</b><p>O sistema abre direto na tela principal, sem apresentação nem login.</p></li><li><span class="kind">Layout desktop</span><b>Painel operacional</b> — One Screen<p>Painel operacional One Screen com grade de status, coluna de alertas com rolagem interna e barra de status fixa.</p></li><li><span class="kind">Layout mobile</span><b>One Screen com painel em abas</b> — One Screen móvel<p>Tela One Screen com abas fixas no topo que alternam painéis dimensionados para caber na viewport.</p></li><li><span class="kind">Paleta e tokens</span><b>Neutro Essencial</b> — Minimalistas<p>Paleta "Neutro Essencial" (modo claro): Preto, branco e um azul discreto para ações. Todos os componentes herdam estes tokens por padrão.</p></li><li><span class="kind">Tipografia</span><b>Inter + Inter</b><p>Títulos em Inter (peso 650) e textos em Inter (peso 400), tamanho base 15 px.</p></li><li><span class="kind">Geometria e superfícies</span><b>Médios (8 px) · Contornada (bordas finas)</b><p>Cantos médios (8 px), bordas de 1 px, sombra sem sombra, superfícies contornada (bordas finas), densidade confortável.</p></li><li><span class="kind">Componente</span><b>Indicadores</b> — Compact Pro<p>KPIs e stat cards na família visual Compact Pro. Cartão de indicador com rótulo, valor em destaque, variação colorida e mini gráfico de tendência. Estilo: Alta densidade: controles de 30 px, texto base de 13 px, raio de 4 px, bordas de 1 px sutis, sem sombras e números tabulares.</p></li><li><span class="kind">Componente</span><b>Dados operacionais</b> — Compact Pro<p>Tabelas na família visual Compact Pro. Tabela de dados com cabeçalho, linhas com status em badge, valores alinhados à direita e ações por linha. Estilo: Alta densidade: controles de 30 px, texto base de 13 px, raio de 4 px, bordas de 1 px sutis, sem sombras e números tabulares.</p></li></ul></section>
+  <section><h2>Tokens</h2><h3>Marca</h3><div class="tokens"><div class="tk"><span class="sw" style="background:#18181b"></span><span><b>Cor primária</b><code>primary · #18181b</code></span></div><div class="tk"><span class="sw" style="background:#161618"></span><span><b>Primária — hover</b><code>primaryHover · #161618</code></span></div><div class="tk"><span class="sw" style="background:#131316"></span><span><b>Primária — active</b><code>primaryActive · #131316</code></span></div><div class="tk"><span class="sw" style="background:#ffffff"></span><span><b>Texto sobre primária</b><code>onPrimary · #ffffff</code></span></div><div class="tk"><span class="sw" style="background:#e3e3e4"></span><span><b>Primária suave</b><code>primarySoft · #e3e3e4</code></span></div><div class="tk"><span class="sw" style="background:#52525b"></span><span><b>Cor secundária</b><code>secondary · #52525b</code></span></div><div class="tk"><span class="sw" style="background:#ffffff"></span><span><b>Texto sobre secundária</b><code>onSecondary · #ffffff</code></span></div><div class="tk"><span class="sw" style="background:#2563eb"></span><span><b>Cor de destaque</b><code>accent · #2563eb</code></span></div><div class="tk"><span class="sw" style="background:#ffffff"></span><span><b>Texto sobre destaque</b><code>onAccent · #ffffff</code></span></div></div><h3>Fundos e superfícies</h3><div class="tokens"><div class="tk"><span class="sw" style="background:#ffffff"></span><span><b>Fundo principal</b><code>bg · #ffffff</code></span></div><div class="tk"><span class="sw" style="background:#f6f6f6"></span><span><b>Fundo secundário</b><code>bgAlt · #f6f6f6</code></span></div><div class="tk"><span class="sw" style="background:#ffffff"></span><span><b>Superfície</b><code>surface · #ffffff</code></span></div><div class="tk"><span class="sw" style="background:#f5f5f5"></span><span><b>Superfície alternativa</b><code>surfaceAlt · #f5f5f5</code></span></div></div><h3>Texto</h3><div class="tokens"><div class="tk"><span class="sw" style="background:#18181b"></span><span><b>Texto principal</b><code>text · #18181b</code></span></div><div class="tk"><span class="sw" style="background:#707072"></span><span><b>Texto secundário</b><code>textMuted · #707072</code></span></div><div class="tk"><span class="sw" style="background:#a7a7a8"></span><span><b>Texto desabilitado</b><code>textDisabled · #a7a7a8</code></span></div><div class="tk"><span class="sw" style="background:#8c8c8d"></span><span><b>Placeholder</b><code>placeholder · #8c8c8d</code></span></div></div><h3>Bordas e foco</h3><div class="tokens"><div class="tk"><span class="sw" style="background:#e6e6e6"></span><span><b>Borda</b><code>border · #e6e6e6</code></span></div><div class="tk"><span class="sw" style="background:#c7c7c7"></span><span><b>Borda forte</b><code>borderStrong · #c7c7c7</code></span></div><div class="tk"><span class="sw" style="background:#18181b"></span><span><b>Borda de foco (focus-visible)</b><code>focusRing · #18181b</code></span></div></div><h3>Estados</h3><div class="tokens"><div class="tk"><span class="sw" style="background:#f4f4f4"></span><span><b>Hover</b><code>hover · #f4f4f4</code></span></div><div class="tk"><span class="sw" style="background:#ebebeb"></span><span><b>Active</b><code>active · #ebebeb</code></span></div><div class="tk"><span class="sw" style="background:#e0e0e0"></span><span><b>Pressed</b><code>pressed · #e0e0e0</code></span></div><div class="tk"><span class="sw" style="background:#e3e3e4"></span><span><b>Selected — fundo</b><code>selected · #e3e3e4</code></span></div><div class="tk"><span class="sw" style="background:#18181b"></span><span><b>Selected — texto</b><code>selectedText · #18181b</code></span></div><div class="tk"><span class="sw" style="background:#f0f0f0"></span><span><b>Disabled — fundo</b><code>disabled · #f0f0f0</code></span></div><div class="tk"><span class="sw" style="background:#979798"></span><span><b>Disabled — texto</b><code>disabledText · #979798</code></span></div></div><h3>Semânticos</h3><div class="tokens"><div class="tk"><span class="sw" style="background:#117e39"></span><span><b>Success</b><code>success · #117e39</code></span></div><div class="tk"><span class="sw" style="background:#e3f4e9"></span><span><b>Success — fundo</b><code>successBg · #e3f4e9</code></span></div><div class="tk"><span class="sw" style="background:#a85c04"></span><span><b>Warning</b><code>warning · #a85c04</code></span></div><div class="tk"><span class="sw" style="background:#faefe1"></span><span><b>Warning — fundo</b><code>warningBg · #faefe1</code></span></div><div class="tk"><span class="sw" style="background:#dc2626"></span><span><b>Error</b><code>error · #dc2626</code></span></div><div class="tk"><span class="sw" style="background:#fbe5e5"></span><span><b>Error — fundo</b><code>errorBg · #fbe5e5</code></span></div><div class="tk"><span class="sw" style="background:#2563eb"></span><span><b>Info</b><code>info · #2563eb</code></span></div><div class="tk"><span class="sw" style="background:#e5ecfd"></span><span><b>Info — fundo</b><code>infoBg · #e5ecfd</code></span></div></div><h3>Links, ícones e navegação</h3><div class="tokens"><div class="tk"><span class="sw" style="background:#18181b"></span><span><b>Link</b><code>link · #18181b</code></span></div><div class="tk"><span class="sw" style="background:#141417"></span><span><b>Link — hover</b><code>linkHover · #141417</code></span></div><div class="tk"><span class="sw" style="background:#525254"></span><span><b>Ícones</b><code>icon · #525254</code></span></div><div class="tk"><span class="sw" style="background:#ffffff"></span><span><b>Navegação — fundo</b><code>navBg · #ffffff</code></span></div><div class="tk"><span class="sw" style="background:#4b4b4d"></span><span><b>Navegação — texto</b><code>navText · #4b4b4d</code></span></div><div class="tk"><span class="sw" style="background:#e3e3e4"></span><span><b>Navegação — item ativo</b><code>navActive · #e3e3e4</code></span></div><div class="tk"><span class="sw" style="background:#18181b"></span><span><b>Navegação — texto ativo</b><code>navActiveText · #18181b</code></span></div></div><h3>Gradiente</h3><div class="tokens"><div class="tk"><span class="sw" style="background:#18181b"></span><span><b>Gradiente — início</b><code>gradientFrom · #18181b</code></span></div><div class="tk"><span class="sw" style="background:#3b73ed"></span><span><b>Gradiente — fim</b><code>gradientTo · #3b73ed</code></span></div></div></section>
+  <section><h2>Master Prompt</h2><pre># Master Prompt — Centro Operacional
+
+&gt; Especificação gerada pelo Atelier UI (Design System Studio) em 02/11/2026, 18:30:08.
+&gt; Todas as decisões abaixo foram visualizadas e aprovadas pelo usuário. Implemente exatamente o que está descrito; quando algo não estiver especificado, escolha a opção mais simples e consistente com o restante, sem adicionar decoração.
+
+## A. Informações do projeto
+
+- Nome: Centro Operacional
+- Tipo de aplicação: One Screen
+- Objetivo: Sistema operacional One Screen para acompanhar dados operacionais e indicadores em uma única tela principal.
+- Descrição: Interface de uma única tela principal com dados operacionais e indicadores, conteúdo organizado em colunas, sem rolagem vertical principal quando couber, adaptação para monitores grandes e comportamento móvel definido explicitamente.
+- Funcionalidades previstas: Dados operacionais; Indicadores
+- Tecnologia desejada: HTML + CSS + JavaScript
+
+## B. Arquitetura geral
+
+- Fluxo de entrada: **Aplicação diretamente** — O sistema abre direto na tela principal, sem apresentação nem login.
+- Landing: nenhuma · Login: nenhum · Cadastro: nenhum
+- Layout desktop: Painel operacional · Layout mobile: One Screen com painel em abas
+- Experiência One Screen: a interface principal cabe em uma viewport, sem rolagem vertical principal; áreas internas rolam localmente e nada importante é escondido.
+
+### Layout desktop: Painel operacional — One Screen
+
+`id: one-screen-painel-operacional` · origem: módulo “desktop”
+
+Painel operacional One Screen com grade de status, coluna de alertas com rolagem interna e barra de status fixa.
+
+**Estrutura**
+- O shell ocupa exatamente a viewport (height: 100dvh com fallback 100vh; overflow: hidden no body); as linhas do grid usam fr e minmax(0, 1fr) para dividir a altura disponível.
+- grid-template-columns: minmax(0, 1fr) 304px; grid-template-rows: 52px minmax(0, 1fr) 32px.
+- Grade central de blocos de status (filas, SLA, equipes) com cores semânticas acompanhadas de ícone e texto.
+- Coluna de alertas de ≈304 px: lista cronológica com severidade; barra de status de ≈32 px com relógio, conexão e última atualização.
+
+**Propriedades**
+- gridColumns: 1fr 304px
+- gridRows: 52px 1fr 32px
+- gridAreas: "header header" "content panel" "footer footer"
+- gap: 0px
+- padding: 0px
+- regioes: header (header), content (content), panel (panel), footer (footer)
+- oneScreen: sim
+
+**Medidas recomendadas (adaptáveis)**
+- header: ≈52 px
+- panel: ≈304 px
+- footer: ≈32 px
+
+**Comportamento e estados**
+- Não há rolagem principal: cada painel com conteúdo variável rola internamente (overflow: auto; overscroll-behavior: contain), com indicação visual de que há mais conteúdo (sombra interna ou fade na borda).
+- Conteúdo longo nunca é cortado nem escondido: listas usam rolagem interna ou paginação; textos quebram linha; números grandes usam clamp() para caber.
+- Atualização em tempo real sem “pular” o layout: novos alertas entram no topo com animação discreta e aria-live="polite".
+
+**Responsividade deste item**
+- 1280 × 800 ou maior: grade + alertas visíveis.
+- 1024–1279 px: alertas viram aba alternável com a grade.
+- Altura útil menor que ≈640 px (notebook pequeno, janela reduzida ou zoom de 150–200%): o modo One Screen é desativado — o body volta a rolar e os painéis se empilham, sem esconder informação importante.
+- Zoom do navegador até 200% e fonte ampliada do sistema: nenhum conteúdo some; prefira reorganizar (menos colunas) a reduzir a fonte.
+- Abaixo de 768 px vale a arquitetura mobile escolhida separadamente no Studio: não converta a navegação desktop em drawer, rail ou bottom navigation por conta própria.
+
+**Exceções**
+- Observação do usuário: Requisito do cliente: adaptação para monitores grandes.
+
+**Observações**
+- One Screen ≠ One Page: aqui tudo deve caber na viewport sem rolagem da página; em One Page a página rola. Nunca use overflow: hidden para esconder conteúdo que não coube.
+- As medidas são recomendações para 1280 × 800; adapte à tela e ao conteúdo preservando a estrutura escolhida.
+
+### Layout mobile: One Screen com painel em abas — One Screen móvel
+
+`id: one-screen-abas` · origem: módulo “mobile”
+
+Tela One Screen com abas fixas no topo que alternam painéis dimensionados para caber na viewport.
+
+**Estrutura**
+- Topbar de ≈56 px + abas de ≈44 px. A barra superior soma env(safe-area-inset-top) à própria altura, para não colidir com o entalhe da câmera.
+- Sem rolagem principal: a tela ocupa 100dvh (com fallback 100vh) e o conteúdo é dividido em blocos com grid de linhas em fr.
+- Conteúdo variável rola dentro do próprio bloco (overflow: auto; overscroll-behavior: contain); nada importante é cortado ou escondido.
+- Cada painel: um destaque principal no topo e uma grade de blocos menores ocupando o restante da altura.
+
+**Propriedades**
+- topo: topbar-tabs
+- inferior: none
+- lateral: none
+- sobreposicao: none
+- stories: não
+- oneScreen: sim
+
+**Medidas recomendadas (adaptáveis)**
+- abas: ≈44 px
+
+**Comportamento e estados**
+- role="tablist" com aria-selected; setas ←/→ trocam de aba.
+- A troca de aba não altera a altura da tela nem gera rolagem.
+
+**Responsividade deste item**
+- Altura útil menor que ≈560 px (celular pequeno, horizontal ou fonte ampliada): o modo One Screen é desativado e a tela volta a rolar, com os blocos empilhados.
+- Fonte do sistema ampliada e zoom de até 200%: blocos reorganizam em menos colunas em vez de reduzir o texto.
+- Horizontal: abas viram rail vertical à esquerda para economizar altura.
+- A partir de 768 px passa a valer a arquitetura desktop escolhida no Studio; não estique este layout para tablet ou computador.
+- Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco ao gatilho.
+
+**Observações**
+- One Screen ≠ One Page: aqui tudo cabe na tela sem rolar; nunca use overflow: hidden para esconder o que não coube.
+
+### Relação entre desktop e celular
+- No computador, use “Painel operacional”. No celular, use “One Screen com painel em abas”. São decisões independentes: não derive uma da outra.
+- Entre 600 e 1023 px (tablet), use a estrutura desktop compactada quando couber (sidebar recolhida em rail ou menus colapsados); caso contrário, use a estrutura mobile.
+- As regiões (header, sidebar, conteúdo, painéis) mantêm a mesma hierarquia e os mesmos destinos de navegação nas duas versões.
+
+## C. Navegação
+
+Nenhum modelo específico de header ou sidebar foi escolhido no Navigation Showcase. Use a estrutura do layout desktop/mobile com aparência derivada da identidade visual, sem decoração extra.
+
+- Item ativo sempre destacado (cor de navegação ativa) e anunciado a leitores de tela (`aria-current="page"`).
+- Dropdowns e submenus abrem por clique/toque e por teclado (Enter/Espaço), fecham com Esc e clique fora.
+- Drawers, bottom sheets e menus de tela cheia prendem o foco enquanto abertos e devolvem o foco ao botão que os abriu.
+
+## D. Identidade visual
+
+Paleta global: **Neutro Essencial**. Todos os componentes (botões, inputs, headers, sidebars, cards, tabelas, modais, menus, login, landing e templates) herdam estes tokens por padrão. Exceções só onde estiverem explicitamente listadas.
+
+| Grupo | Token | Nome | Valor |
+| --- | --- | --- | --- |
+| Marca | Cor primária | `primary` | #18181b |
+| Marca | Primária — hover | `primaryHover` | #161618 |
+| Marca | Primária — active | `primaryActive` | #131316 |
+| Marca | Texto sobre primária | `onPrimary` | #ffffff |
+| Marca | Primária suave | `primarySoft` | #e3e3e4 |
+| Marca | Cor secundária | `secondary` | #52525b |
+| Marca | Texto sobre secundária | `onSecondary` | #ffffff |
+| Marca | Cor de destaque | `accent` | #2563eb |
+| Marca | Texto sobre destaque | `onAccent` | #ffffff |
+| Fundos e superfícies | Fundo principal | `bg` | #ffffff |
+| Fundos e superfícies | Fundo secundário | `bgAlt` | #f6f6f6 |
+| Fundos e superfícies | Superfície | `surface` | #ffffff |
+| Fundos e superfícies | Superfície alternativa | `surfaceAlt` | #f5f5f5 |
+| Texto | Texto principal | `text` | #18181b |
+| Texto | Texto secundário | `textMuted` | #707072 |
+| Texto | Texto desabilitado | `textDisabled` | #a7a7a8 |
+| Texto | Placeholder | `placeholder` | #8c8c8d |
+| Bordas e foco | Borda | `border` | #e6e6e6 |
+| Bordas e foco | Borda forte | `borderStrong` | #c7c7c7 |
+| Bordas e foco | Borda de foco (focus-visible) | `focusRing` | #18181b |
+| Estados | Hover | `hover` | #f4f4f4 |
+| Estados | Active | `active` | #ebebeb |
+| Estados | Pressed | `pressed` | #e0e0e0 |
+| Estados | Selected — fundo | `selected` | #e3e3e4 |
+| Estados | Selected — texto | `selectedText` | #18181b |
+| Estados | Disabled — fundo | `disabled` | #f0f0f0 |
+| Estados | Disabled — texto | `disabledText` | #979798 |
+| Semânticos | Success | `success` | #117e39 |
+| Semânticos | Success — fundo | `successBg` | #e3f4e9 |
+| Semânticos | Warning | `warning` | #a85c04 |
+| Semânticos | Warning — fundo | `warningBg` | #faefe1 |
+| Semânticos | Error | `error` | #dc2626 |
+| Semânticos | Error — fundo | `errorBg` | #fbe5e5 |
+| Semânticos | Info | `info` | #2563eb |
+| Semânticos | Info — fundo | `infoBg` | #e5ecfd |
+| Links, ícones e navegação | Link | `link` | #18181b |
+| Links, ícones e navegação | Link — hover | `linkHover` | #141417 |
+| Links, ícones e navegação | Ícones | `icon` | #525254 |
+| Links, ícones e navegação | Navegação — fundo | `navBg` | #ffffff |
+| Links, ícones e navegação | Navegação — texto | `navText` | #4b4b4d |
+| Links, ícones e navegação | Navegação — item ativo | `navActive` | #e3e3e4 |
+| Links, ícones e navegação | Navegação — texto ativo | `navActiveText` | #18181b |
+| Gradiente | Gradiente — início | `gradientFrom` | #18181b |
+| Gradiente | Gradiente — fim | `gradientTo` | #3b73ed |
+
+### Tipografia: Inter + Inter
+
+`id: identity.typography` · origem: módulo “cores”
+
+Títulos em Inter (peso 650) e textos em Inter (peso 400), tamanho base 15 px.
+
+**Estrutura**
+- Escala sugerida: 13 / 15 / 18 / 23 / 30 / 39 px.
+- Altura de linha de 1.5 para textos e 1.2–1.3 para títulos.
+- Nunca use textos menores que 12 px; filtros e botões com pelo menos 14 px.
+
+**Propriedades**
+- fonteTitulos: Inter
+- fonteTexto: Inter
+- tamanhoBase: 15
+- pesoTitulos: 650
+- pesoTexto: 400
+
+**Responsividade deste item**
+- Títulos grandes reduzem proporcionalmente no celular (use clamp()).
+- Inputs com 16 px no celular para evitar zoom automático.
+
+### Geometria e superfícies: Médios (8 px) · Contornada (bordas finas)
+
+`id: identity.geometry` · origem: módulo “cores”
+
+Cantos médios (8 px), bordas de 1 px, sombra sem sombra, superfícies contornada (bordas finas), densidade confortável.
+
+**Estrutura**
+- Escala de espaçamento em múltiplos de 4 px: 4, 8, 12, 16, 20, 24, 32, 40.
+- Sem sombras em superfícies de conteúdo. Apenas elementos realmente flutuantes (modais, popovers, menus) podem ter elevação.
+- Ícones no estilo contorno (outline), tamanho consistente (16–20 px em interfaces).
+
+**Propriedades**
+- raioPequeno: 6px
+- raioMedio: 8px
+- raioGrande: 12px
+- borda: 1px
+- sombra: none
+- superficie: outlined
+- densidade: comfortable
+- unidadeDeEspaco: 8px
+- ícones: outline
+
+**Responsividade deste item**
+- A geometria se mantém em todas as larguras; no celular aumente apenas as áreas de toque.
+
+### Estados visuais
+- hover: fundo `hover` ou primária `primaryHover`; active/pressed: `active`/`pressed`/`primaryActive`.
+- focus-visible: anel de 2–3 px na cor `focusRing`, sempre visível ao navegar por teclado.
+- selected: fundo `selected` com texto `selectedText`; disabled: fundo `disabled`, texto `disabledText`, sem hover.
+- Mensagens: success/warning/error/info com os fundos semânticos correspondentes.
+
+## E. Componentes
+
+2 componente(s) aprovados. Cada instância tem configuração própria; alterar uma não altera as outras.
+
+### Componente: Indicadores — Compact Pro
+
+`id: kpis-stat-cards` · origem: módulo “componentes”
+
+KPIs e stat cards na família visual Compact Pro. Cartão de indicador com rótulo, valor em destaque, variação colorida e mini gráfico de tendência. Estilo: Alta densidade: controles de 30 px, texto base de 13 px, raio de 4 px, bordas de 1 px sutis, sem sombras e números tabulares.
+
+**Estrutura**
+- Rótulo + ícone → valor grande (tabular-nums) → variação (seta + %) e comparativo → sparkline.
+- Variação positiva em sucesso, negativa em erro, neutra em texto secundário.
+- Altura de controles 30 px (44 px de área de toque no celular); padding reduzido em 25%.
+- Texto base 13 px, rótulos 12 px; números com font-variant-numeric: tabular-nums.
+- Raio de 4 px em controles e 6 px em contêineres; bordas de 1 px sutis.
+- Item ativo marcado por sublinhado de 2 px; ícones de 14–16 px sem fundo.
+- Composição: Informação densa em linhas e colunas alinhadas; barras de ferramentas compactas.
+- Acabamento: Neutro e funcional; cor apenas para estado e ação.
+
+**Propriedades**
+- Família visual: 13. Compact Pro
+- Rótulo: Receita mensal
+- Valor: R$ 48,2 mil
+- Variação: +12,4%
+- Comparativo: vs. mês anterior
+- Ícone: Carteira (lucide: Wallet)
+- Tendência: Alta (positiva)
+- Mini gráfico: sim
+- Raio dos controles: 4 px
+- Raio dos contêineres: 6 px
+- Borda: 1 px sólida (border)
+- Sombra: sem sombra em superfícies de conteúdo
+- Superfície: superfície = token surface
+- Ação principal: primária sólida (primary) com texto onPrimary
+- Fonte de títulos: Inter 640
+- Fonte de texto: Inter
+- Caixa de rótulos e botões: normal (sentence case)
+- Tamanho base: 13 px
+- Altura de controles: 30 px (mínimo 44 px de área de toque no celular)
+- Densidade: compacta
+- Ícones: lucide, traço 1.75 px, tratamento plain
+- Indicador de ativo: underline
+
+**Cores**
+- Ação principal (fundo): #18181b
+- Ação principal (texto): #ffffff
+- Superfície: #ffffff
+- Texto: #18181b
+- Texto secundário: #707072
+- Borda: #e6e6e6
+- Destaque: #2563eb
+- Foco: #18181b
+
+**Medidas recomendadas (adaptáveis)**
+- alturaDeControle: 30 px
+- raio: 4 px / 6 px
+- paddingInterno: 11 px
+
+**Comportamento e estados**
+- Tooltip no sparkline com valores; clique abre o relatório detalhado.
+- Hover: fundo Primária — hover (primaryHover) na ação principal e Hover (hover) em itens neutros.
+- Focus-visible: anel de 3 px em Borda de foco (focus-visible) (focusRing) a 35%. Nunca remova o foco visível.
+- Active: Primária — active (primaryActive).
+- Disabled: fundo Disabled — fundo (disabled), texto Disabled — texto (disabledText), sem sombra, cursor not-allowed, aria-disabled.
+- Hover com fundo de hover; atalhos de teclado visíveis.
+- Foco com anel de 2 px.
+- Movimento: Rápido (100 ms).
+
+**Responsividade deste item**
+- Grade de KPIs: 4 → 2 → 1 colunas (ou 2 colunas compactas no celular); valor reduz com clamp() sem cortar.
+- No celular, aumente as áreas de toque para 44 px sem aumentar a fonte além de 16 px nos campos; tabelas viram cartões.
+- Cards: altura definida pelo conteúdo (sem alturas fixas que cortem texto); grade reduz colunas progressivamente.
+
+**Observações**
+- As cores vêm da paleta global aprovada; a família apenas transforma (gradientes, superfícies derivadas, opacidades).
+- Nome dado pelo usuário: “Indicadores”.
+- Use os tokens da paleta global por padrão; só as exceções listadas fogem dela.
+
+### Componente: Dados operacionais — Compact Pro
+
+`id: tabelas` · origem: módulo “componentes”
+
+Tabelas na família visual Compact Pro. Tabela de dados com cabeçalho, linhas com status em badge, valores alinhados à direita e ações por linha. Estilo: Alta densidade: controles de 30 px, texto base de 13 px, raio de 4 px, bordas de 1 px sutis, sem sombras e números tabulares.
+
+**Estrutura**
+- Título + ações da tabela → &lt;table&gt; semântica (&lt;thead&gt;, &lt;th scope="col"&gt;) → linhas.
+- Números alinhados à direita com tabular-nums; status como badge; ações no fim.
+- Estados de carregando (skeleton), vazio e erro.
+- Altura de controles 30 px (44 px de área de toque no celular); padding reduzido em 25%.
+- Texto base 13 px, rótulos 12 px; números com font-variant-numeric: tabular-nums.
+- Raio de 4 px em controles e 6 px em contêineres; bordas de 1 px sutis.
+- Item ativo marcado por sublinhado de 2 px; ícones de 14–16 px sem fundo.
+- Composição: Informação densa em linhas e colunas alinhadas; barras de ferramentas compactas.
+- Acabamento: Neutro e funcional; cor apenas para estado e ação.
+
+**Propriedades**
+- Família visual: 13. Compact Pro
+- Título: Pedidos recentes
+- Colunas (uma por linha): Cliente | Status | Valor | Data
+- Linhas de exemplo: 4
+- Densidade: compacta
+- Linhas zebradas: não
+- Estilo do cabeçalho: Destacado
+- Seleção com checkbox: sim
+- Ações por linha: sim
+- Raio dos controles: 4 px
+- Raio dos contêineres: 6 px
+- Borda: 1 px sólida (border)
+- Sombra: sem sombra em superfícies de conteúdo
+- Superfície: superfície = token surface
+- Ação principal: primária sólida (primary) com texto onPrimary
+- Fonte de títulos: Inter 640
+- Fonte de texto: Inter
+- Caixa de rótulos e botões: normal (sentence case)
+- Tamanho base: 13 px
+- Altura de controles: 30 px (mínimo 44 px de área de toque no celular)
+- Ícones: lucide, traço 1.75 px, tratamento plain
+- Indicador de ativo: underline
+
+**Cores**
+- Ação principal (fundo): #18181b
+- Ação principal (texto): #ffffff
+- Superfície: #ffffff
+- Texto: #18181b
+- Texto secundário: #707072
+- Borda: #e6e6e6
+- Destaque: #2563eb
+- Foco: #18181b
+
+**Medidas recomendadas (adaptáveis)**
+- alturaDeControle: 30 px
+- raio: 4 px / 6 px
+- paddingInterno: 11 px
+
+**Comportamento e estados**
+- Hover na linha; seleção com checkbox no cabeçalho (todos/indeterminado); ordenação por clique no cabeçalho com aria-sort.
+- Hover: fundo Primária — hover (primaryHover) na ação principal e Hover (hover) em itens neutros.
+- Focus-visible: anel de 3 px em Borda de foco (focus-visible) (focusRing) a 35%. Nunca remova o foco visível.
+- Active: Primária — active (primaryActive).
+- Disabled: fundo Disabled — fundo (disabled), texto Disabled — texto (disabledText), sem sombra, cursor not-allowed, aria-disabled.
+- Hover com fundo de hover; atalhos de teclado visíveis.
+- Foco com anel de 2 px.
+- Movimento: Rápido (100 ms).
+
+**Responsividade deste item**
+- No celular: rolagem horizontal local dentro do contêiner (overflow-x: auto) com a primeira coluna fixa, ou representação em cartões (cada linha vira um cartão rótulo: valor).
+- No celular, aumente as áreas de toque para 44 px sem aumentar a fonte além de 16 px nos campos; tabelas viram cartões.
+- Tabelas: rolagem horizontal local dentro do próprio contêiner ou representação alternativa em cartões no celular; cabeçalho legível.
+
+**Observações**
+- As cores vêm da paleta global aprovada; a família apenas transforma (gradientes, superfícies derivadas, opacidades).
+- Nome dado pelo usuário: “Dados operacionais”.
+- Use os tokens da paleta global por padrão; só as exceções listadas fogem dela.
+
+## F. Responsividade
+
+Valide pelo menos nas larguras: 320, 344, 360, 375, 390, 412, 430, 480, 600, 768, 820, 1024, 1280, 1440, 1920 px, além de larguras intermediárias.
+
+Breakpoints de referência:
+- xs: Celulares pequenos (320–359 px)
+- sm: Celulares (360–599 px)
+- md: Tablets e celulares na horizontal (600–1023 px)
+- lg: Notebooks (1024–1439 px)
+- xl: Monitores grandes (1440 px ou mais)
+
+**Regras gerais**
+- Nenhum overflow horizontal involuntário em nenhuma largura de 320 px a 1920 px (inclusive larguras intermediárias).
+- Nenhum texto cortado: use quebra de linha, `min-width: 0` em itens flex/grid e `overflow-wrap: anywhere` em conteúdos longos (e-mails, URLs, códigos).
+- Nenhuma sobreposição indevida entre elementos, inclusive com o teclado virtual aberto.
+- Alvos de toque com no mínimo 44 × 44 px no celular e espaçamento de pelo menos 8 px entre alvos adjacentes.
+- Campos de formulário com fonte de pelo menos 16 px no celular (evita zoom automático no iOS).
+- Imagens e mídias responsivas (`max-width: 100%`, `aspect-ratio` definido) sem distorção.
+- Grids adaptáveis: reduza colunas progressivamente; nunca comprima cartões abaixo de uma largura legível.
+- Suporte a zoom de até 200% e a fonte ampliada do sistema sem perda de conteúdo ou funcionalidade.
+- Respeite as safe areas (`env(safe-area-inset-*)`) em barras fixas, docks e menus inferiores.
+- Funcione na orientação horizontal do celular: barras fixas não podem ocupar mais de 25% da altura.
+- Use `100dvh` (com fallback) em vez de `100vh` para alturas de tela cheia.
+- Menus acessíveis por mouse, toque e teclado (Tab, Enter, Espaço, Esc), com foco visível.
+- Respeite `prefers-reduced-motion` reduzindo animações.
+
+**Regras por componente**
+- Headers: compacte a altura no celular e use a navegação móvel escolhida no layout mobile; o logo e a ação principal continuam visíveis.
+- Sidebars: no celular, siga exatamente a arquitetura mobile aprovada (não transforme em drawer por conta própria).
+- Dropdowns e popovers: reposicione automaticamente para não sair da viewport; no celular podem virar bottom sheet.
+- Tabelas: rolagem horizontal local dentro do próprio contêiner ou representação alternativa em cartões no celular; cabeçalho legível.
+- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).
+- Calendários: no celular, ofereça modo de lista/agenda quando a grade mensal ficar apertada.
+- Modais: altura máxima de 90dvh com rolagem interna; botões de ação sempre acessíveis; no celular podem ocupar a tela ou virar bottom sheet.
+- Gráficos: adapte eixos, quantidade de rótulos, legendas (abaixo do gráfico no celular) e dimensões; nunca corte valores.
+- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.
+- Cards: altura definida pelo conteúdo (sem alturas fixas que cortem texto); grade reduz colunas progressivamente.
+- Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco ao gatilho.
+
+## G. Regras de implementação
+
+- Não modifique escolhas aprovadas nesta especificação sem solicitação explícita do usuário.
+- Preserve a identidade global: todos os componentes usam os tokens definidos; exceções só onde estiverem listadas.
+- Não adicione decoração por conta própria (sombras, gradientes, vidro, animações, cantos arredondados) além do especificado.
+- Respeite a geometria escolhida: se a sidebar é integral, ela vai do topo à base; se é flutuante, tem afastamento das bordas. Não converta uma na outra.
+- Evite overflow e colisões; valide em todas as larguras de referência.
+- Mantenha consistência de espaçamentos (escala de 4 px), tipografia e estados de interação (hover, focus-visible, active, disabled, selected).
+- Implemente estados de carregamento, vazio e erro para listas, tabelas e formulários.
+- Use componentes reutilizáveis e tokens centralizados (variáveis CSS ou tema); nada de cores fixas espalhadas pelo código.
+- Garanta acessibilidade: HTML semântico, labels, contraste WCAG AA, navegação por teclado e leitores de tela.
+- Teste o resultado (visual e funcional) em celular, tablet e desktop antes de concluir.
+</pre></section>
+</main>
+</body>
+</html>

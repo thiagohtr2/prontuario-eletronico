@@ -1,0 +1,22 @@
+const { run } = require('./lib');
+const FAM = 'Modern Material';
+const cat = process.argv[2] || '64 Layouts mobile';
+run(async ({ page, shot, CAP }) => {
+  await page.goto('http://127.0.0.1:4300/#/guiado/componentes', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(500);
+  await page.getByRole('button', { name: /Ver todas as 66 categorias/ }).click().catch(() => {});
+  await page.waitForTimeout(200);
+  await page.getByRole('complementary', { name: 'Categorias de componentes' }).getByRole('button', { name: cat, exact: true }).click();
+  await page.waitForTimeout(500);
+  const catName = cat.replace(/^\d+ /, '');
+  const famBtn = page.getByRole('button', { name: `Escolher a família ${FAM} para ${catName}` });
+  const card = famBtn.locator('xpath=ancestor::*[.//button[contains(.,"Adicionar ao projeto")]][1]');
+  await card.getByRole('button', { name: /Adicionar ao projeto/ }).click();
+  await page.waitForTimeout(800);
+  const dlg = page.getByRole('dialog').first();
+  await shot('s26-' + catName.replace(/\s+/g, '_'));
+  const s = await dlg.ariaSnapshot();
+  const i = s.indexOf('Configuração da instância');
+  console.log(s.split('\n').slice(0, 14).join('\n'));
+  console.log(s.slice(i, s.indexOf('Exceção individual')));
+});
