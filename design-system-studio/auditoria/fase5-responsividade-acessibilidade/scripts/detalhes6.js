@@ -1,0 +1,12 @@
+const L = require('./lib')
+;(async () => {
+  const b = await L.launch()
+  const { ctx, page } = await L.newPage(b, 375, 800)
+  await L.go(page, '/modulos/cores', 700)
+  for (let i = 0; i < 12; i++) await page.keyboard.press('Tab')
+  const a = await page.evaluate(() => { const e = document.activeElement; const r = e.getBoundingClientRect(); return { el: e.tagName + ' ' + (e.innerText || e.getAttribute('aria-label') || '').trim().slice(0, 40), x: Math.round(r.left), right: Math.round(r.right), y: Math.round(r.top) } })
+  console.log('Tab 12 em 375:', JSON.stringify(a))
+  await L.shot(page, 'teclado/foco-invisivel-menu-fechado-375-tab12')
+  L.save('foco-invisivel-375.json', a)
+  await ctx.close(); await b.close()
+})()

@@ -1,0 +1,21 @@
+{
+  "guidedNext": {
+    "hash": "#/guiado/mobile",
+    "active": "BUTTON Continuar: Revisão",
+    "scrollY": 0,
+    "h1": "Arquitetura do celular",
+    "title": "Atelier UI · Design System Studio"
+  },
+  "toast": {
+    "toast": [
+      707,
+      776
+    ],
+    "footer": [
+      731,
+      800
+    ],
+    "overlap": 45,
+    "text": "Esqueleto aprovado. Agora vamos ao acabamento."
+  }
+}

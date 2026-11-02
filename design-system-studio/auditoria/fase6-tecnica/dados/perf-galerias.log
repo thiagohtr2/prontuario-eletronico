@@ -4,3 +4,10 @@ run 1 Componentes: categorias (66 × 16 famílias): n=66 INPmed=88 max=128 LT=5 
 run 1 Componentes: famílias: n=16 INPmed=24 max=72 LT=0 mut=6 rendered=null nodes=1157 load=12.21
 run 1 Paletas (60): n=60 INPmed=32 max=64 LT=0 mut=39 rendered=null nodes=2690 load=11.15
 run 1 Navegação: headers/sidebars: n=36 INPmed=36 max=72 LT=0 mut=10 rendered=null nodes=4059 load=11.01
+run 1 Templates: abrir editor (28): n=28 INPmed=156 max=336 LT=11 mut=6 rendered=null nodes=5986 load=10.91
+run 1 Inspiração: abrir visualizador (20): n=20 INPmed=352 max=800 LT=16 mut=4 rendered=null nodes=9111 load=14.16
+run 2 Layouts desktop (42): n=42 INPmed=40 max=104 LT=0 mut=51.5 rendered=null nodes=5628 load=13.56
+run 2 Layouts mobile (44): n=44 INPmed=100 max=216 LT=4 mut=30 rendered=null nodes=5521 load=13.09
+run 2 Componentes: categorias (66 × 16 famílias): n=66 INPmed=132 max=232 LT=6 mut=66 rendered=null nodes=1778 load=14.2
+run 2 Componentes: famílias: n=16 INPmed=40 max=96 LT=1 mut=6 rendered=null nodes=1157 load=16.11
+run 2 Paletas (60): n=60 INPmed=36 max=72 LT=0 mut=39 rendered=null nodes=2690 load=15.02

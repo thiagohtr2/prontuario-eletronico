@@ -2,12 +2,12 @@
 import json, glob, os, statistics, collections
 D = os.path.join(os.path.dirname(__file__), '..', 'dados', 'lighthouse')
 rows = collections.defaultdict(list)
-for f in sorted(glob.glob(os.path.join(D, '*.json'))):
+for f in sorted(glob.glob(os.path.join(D, '*.json')) + glob.glob(os.path.join(D, '*.json.gz'))):
     try:
-        r = json.load(open(f))
+        r = json.load(__import__('gzip').open(f) if f.endswith('.gz') else open(f))
     except Exception:
         continue
-    name = os.path.basename(f).rsplit('-', 1)[0]
+    name = os.path.basename(f).replace('.gz', '').rsplit('-', 1)[0]
     a = r['audits']
     g = lambda k: a[k].get('numericValue') if k in a else None
     rows[name].append({

@@ -1,0 +1,2386 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: regression.spec.ts >> REG-01 · Layout escolhido mostra estado selecionado >> desktop 1440: todas as galerias marcam o cartão escolhido (aria-pressed, selo e borda)
+- Location: tests/e2e/regression.spec.ts:154:3
+
+# Error details
+
+```
+Error: o selo fica dentro do cartão
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: true
+Received: false
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=f1e3]:
+  - link "Pular para o conteúdo" [ref=f1e4] [cursor=pointer]:
+    - /url: "#conteudo"
+  - banner [ref=f1e5]:
+    - link "Atelier UI — início" [ref=f1e6] [cursor=pointer]:
+      - /url: "#/"
+      - generic [ref=f1e12]:
+        - generic [ref=f1e13]: Atelier UI
+        - generic [ref=f1e14]: Design System Studio
+    - group "Modo de utilização" [ref=f1e16]:
+      - button "Guiado" [pressed] [ref=f1e17] [cursor=pointer]
+      - button "Livre" [ref=f1e21] [cursor=pointer]
+    - button "Buscar funcionalidades (Ctrl+K)" [ref=f1e25] [cursor=pointer]:
+      - generic [ref=f1e29]: Buscar funcionalidades
+      - generic [ref=f1e30]: Ctrl K
+    - generic "Progresso do esqueleto" [ref=f1e31]: Esqueleto 0/5
+    - button "Exportar e importar" [ref=f1e33] [cursor=pointer]
+    - button "Abrir Master Prompt" [ref=f1e37] [cursor=pointer]:
+      - generic [ref=f1e43]: Master Prompt
+  - generic [ref=f1e44]:
+    - complementary "Navegação do Studio" [ref=f1e45]:
+      - generic [ref=f1e46]:
+        - list [ref=f1e47]:
+          - listitem [ref=f1e48]:
+            - link "Início" [ref=f1e49] [cursor=pointer]:
+              - /url: "#/"
+        - generic [ref=f1e54]:
+          - button "Construtor guiado" [expanded] [ref=f1e55] [cursor=pointer]
+          - list [ref=f1e58]:
+            - listitem [ref=f1e59]:
+              - link "Objetivo do projeto" [ref=f1e60] [cursor=pointer]:
+                - /url: "#/guiado/objetivo"
+                - generic [aria-hidden] [ref=f1e61]: "1"
+            - listitem [ref=f1e63]:
+              - link "Landing, login e cadastro" [ref=f1e64] [cursor=pointer]:
+                - /url: "#/guiado/entrada"
+                - generic [aria-hidden] [ref=f1e65]: "2"
+            - listitem [ref=f1e67]:
+              - link "Arquitetura do computador" [ref=f1e68] [cursor=pointer]:
+                - /url: "#/guiado/desktop"
+                - generic [aria-hidden] [ref=f1e69]: "3"
+            - listitem [ref=f1e71]:
+              - link "Arquitetura do celular" [ref=f1e72] [cursor=pointer]:
+                - /url: "#/guiado/mobile"
+                - generic [aria-hidden] [ref=f1e73]: "4"
+            - listitem [ref=f1e75]:
+              - link "Revisão do esqueleto" [ref=f1e76] [cursor=pointer]:
+                - /url: "#/guiado/revisao"
+                - generic [aria-hidden] [ref=f1e77]: "5"
+            - listitem [ref=f1e79]:
+              - link "Prévia integrada" [ref=f1e80] [cursor=pointer]:
+                - /url: "#/guiado/preview"
+                - generic [aria-hidden] [ref=f1e81]: "6"
+            - listitem [ref=f1e83]:
+              - link "Identidade visual" [ref=f1e84] [cursor=pointer]:
+                - /url: "#/guiado/identidade"
+                - generic [aria-hidden] [ref=f1e85]: "7"
+            - listitem [ref=f1e87]:
+              - link "Headers e sidebars" [ref=f1e88] [cursor=pointer]:
+                - /url: "#/guiado/navegacao"
+                - generic [aria-hidden] [ref=f1e89]: "8"
+            - listitem [ref=f1e91]:
+              - link "Componentes" [ref=f1e92] [cursor=pointer]:
+                - /url: "#/guiado/componentes"
+                - generic [aria-hidden] [ref=f1e93]: "9"
+            - listitem [ref=f1e95]:
+              - link "Master Prompt" [ref=f1e96] [cursor=pointer]:
+                - /url: "#/guiado/entrega"
+                - generic [aria-hidden] [ref=f1e97]: "10"
+        - generic [ref=f1e99]:
+          - button "Estrutura" [expanded] [ref=f1e100] [cursor=pointer]
+          - list [ref=f1e103]:
+            - listitem [ref=f1e104]:
+              - link "Objetivo do projeto" [ref=f1e105] [cursor=pointer]:
+                - /url: "#/modulos/objetivo"
+            - listitem [ref=f1e111]:
+              - link "Landing pages" [ref=f1e112] [cursor=pointer]:
+                - /url: "#/modulos/landing"
+            - listitem [ref=f1e118]:
+              - link "Login" [ref=f1e119] [cursor=pointer]:
+                - /url: "#/modulos/login"
+            - listitem [ref=f1e124]:
+              - link "Cadastro" [ref=f1e125] [cursor=pointer]:
+                - /url: "#/modulos/cadastro"
+            - listitem [ref=f1e130]:
+              - link "Layout desktop" [ref=f1e131] [cursor=pointer]:
+                - /url: "#/modulos/desktop"
+            - listitem [ref=f1e135]:
+              - link "Layout mobile" [ref=f1e136] [cursor=pointer]:
+                - /url: "#/modulos/mobile"
+            - listitem [ref=f1e140]:
+              - link "Live Site Preview" [ref=f1e141] [cursor=pointer]:
+                - /url: "#/modulos/preview"
+        - generic [ref=f1e146]:
+          - button "Identidade" [expanded] [ref=f1e147] [cursor=pointer]
+          - list [ref=f1e150]:
+            - listitem [ref=f1e151]:
+              - link "Color System" [ref=f1e152] [cursor=pointer]:
+                - /url: "#/modulos/cores"
+            - listitem [ref=f1e160]:
+              - link "Navigation Showcase" [ref=f1e161] [cursor=pointer]:
+                - /url: "#/modulos/navegacao"
+            - listitem [ref=f1e165]:
+              - link "Componentes" [ref=f1e166] [cursor=pointer]:
+                - /url: "#/modulos/componentes"
+        - generic [ref=f1e171]:
+          - button "Inspiração" [expanded] [ref=f1e172] [cursor=pointer]
+          - list [ref=f1e175]:
+            - listitem [ref=f1e176]:
+              - link "Inspiration Gallery" [ref=f1e177] [cursor=pointer]:
+                - /url: "#/modulos/inspiracao"
+            - listitem [ref=f1e181]:
+              - link "Template Studio" [ref=f1e182] [cursor=pointer]:
+                - /url: "#/modulos/templates"
+        - generic [ref=f1e186]:
+          - button "Entrega" [expanded] [ref=f1e187] [cursor=pointer]
+          - list [ref=f1e190]:
+            - listitem [ref=f1e191]:
+              - link "Central de Prompts" [ref=f1e192] [cursor=pointer]:
+                - /url: "#/prompt"
+            - listitem [ref=f1e199]:
+              - link "Exportar e importar" [ref=f1e200] [cursor=pointer]:
+                - /url: "#/exportar"
+        - generic [ref=f1e205]:
+          - button "Ferramentas" [expanded] [ref=f1e206] [cursor=pointer]
+          - list [ref=f1e209]:
+            - listitem [ref=f1e210]:
+              - link "Validação responsiva" [ref=f1e211] [cursor=pointer]:
+                - /url: "#/validacao"
+            - listitem [ref=f1e220]:
+              - link "Projeto e versões" [ref=f1e221] [cursor=pointer]:
+                - /url: "#/projeto"
+      - generic [ref=f1e234]:
+        - generic [ref=f1e235]: Projeto sem nome
+        - generic [ref=f1e236]: Salvo automaticamente neste navegador
+    - main [ref=f1e239]:
+      - navigation "Você está em" [ref=f1e240]:
+        - list [ref=f1e241]:
+          - listitem [ref=f1e242]:
+            - link "Início" [ref=f1e243] [cursor=pointer]:
+              - /url: "#/"
+          - listitem [ref=f1e244]:
+            - text: ›
+            - link "Identidade" [ref=f1e245] [cursor=pointer]:
+              - /url: "#/livre"
+          - listitem [ref=f1e246]: ›Navigation Showcase
+      - generic [ref=f1e247]:
+        - generic [ref=f1e249]:
+          - generic [ref=f1e250]: Navegação
+          - heading "Navigation Showcase" [level=1] [ref=f1e251]
+          - paragraph [ref=f1e252]: "36 headers e 36 sidebars, cada um com duas composições: 144 formas de apresentar a navegação do seu site, todas com a sua identidade visual."
+        - generic [ref=f1e253]:
+          - generic [ref=f1e254]:
+            - paragraph [ref=f1e255]:
+              - text: O
+              - strong [ref=f1e256]: Layout Studio
+              - text: decide
+              - strong [ref=f1e257]: onde
+              - text: ficam o
+              - button "Header" [ref=f1e259]
+              - text: (a barra do topo) e a
+              - button "Sidebar" [ref=f1e261]
+              - text: (o menu lateral). Aqui você decide
+              - strong [ref=f1e262]: como a navegação se parece
+              - text: ": o estilo dos links, a altura, a busca, os menus que se abrem e o perfil. Tudo herda a identidade visual do projeto — cores, fontes e cantos."
+            - generic [ref=f1e266]:
+              - strong [ref=f1e267]: "Como escolher:"
+              - text: as prévias funcionam de verdade — abra os menus, clique nos itens, recolha as sidebars. Cada modelo tem duas composições (A e B) com arrumações diferentes. Quando gostar, clique em
+              - strong [ref=f1e268]: Selecionar
+              - text: ", logo abaixo da prévia: a escolha entra no Master Prompt."
+            - generic [ref=f1e269]:
+              - generic [ref=f1e270]: "Header: Arquipélago · A"
+              - generic [ref=f1e273]: "Sidebar: nenhuma ainda"
+          - tablist "Tipo de navegação" [ref=f1e276]:
+            - tab "Headers (36)" [selected] [ref=f1e277] [cursor=pointer]
+            - tab "Sidebars (36)" [ref=f1e280] [cursor=pointer]
+            - tab "Combinação" [ref=f1e283] [cursor=pointer]
+          - generic [ref=f1e286]:
+            - group "Filtrar headers" [ref=f1e287]:
+              - button "Todos 36" [pressed] [ref=f1e288] [cursor=pointer]:
+                - text: Todos
+                - generic [ref=f1e289]: "36"
+              - button "Flutuantes 4" [ref=f1e290] [cursor=pointer]:
+                - text: Flutuantes
+                - generic [ref=f1e291]: "4"
+              - button "Fixos 9" [ref=f1e292] [cursor=pointer]:
+                - text: Fixos
+                - generic [ref=f1e293]: "9"
+              - button "Minimalistas 8" [ref=f1e294] [cursor=pointer]:
+                - text: Minimalistas
+                - generic [ref=f1e295]: "8"
+              - button "Tecnológicos 7" [ref=f1e296] [cursor=pointer]:
+                - text: Tecnológicos
+                - generic [ref=f1e297]: "7"
+              - button "Corporativos 8" [ref=f1e298] [cursor=pointer]:
+                - text: Corporativos
+                - generic [ref=f1e299]: "8"
+              - button "SaaS 12" [ref=f1e300] [cursor=pointer]:
+                - text: SaaS
+                - generic [ref=f1e301]: "12"
+              - button "Editoriais 4" [ref=f1e302] [cursor=pointer]:
+                - text: Editoriais
+                - generic [ref=f1e303]: "4"
+              - button "Criativos 10" [ref=f1e304] [cursor=pointer]:
+                - text: Criativos
+                - generic [ref=f1e305]: "10"
+              - button "Com busca 9" [ref=f1e306] [cursor=pointer]:
+                - text: Com busca
+                - generic [ref=f1e307]: "9"
+              - button "Com mega menu 3" [ref=f1e308] [cursor=pointer]:
+                - text: Com mega menu
+                - generic [ref=f1e309]: "3"
+              - button "Compactos 3" [ref=f1e310] [cursor=pointer]:
+                - text: Compactos
+                - generic [ref=f1e311]: "3"
+            - paragraph [ref=f1e312]: Todos os 36 headers. Cada um tem duas composições (A e B).
+          - generic [ref=f1e313]:
+            - article "Linha Essencial" [ref=f1e314]:
+              - 'group "Prévia interativa: Linha Essencial, composição A" [ref=f1e315]':
+                - generic [ref=f1e317]:
+                  - generic "Header Linha Essencial" [ref=f1e320]:
+                    - generic [ref=f1e322]:
+                      - button "Ipê — página inicial" [ref=f1e324] [cursor=pointer]:
+                        - generic [ref=f1e325]: Ipê
+                      - navigation "Principal" [ref=f1e331]:
+                        - list [ref=f1e332]:
+                          - listitem [ref=f1e333]:
+                            - button "Produto" [ref=f1e334] [cursor=pointer]
+                          - listitem [ref=f1e336]:
+                            - button "Recursos" [ref=f1e337] [cursor=pointer]
+                          - listitem [ref=f1e339]:
+                            - button "Preços" [ref=f1e340] [cursor=pointer]
+                          - listitem [ref=f1e342]:
+                            - button "Sobre" [ref=f1e343] [cursor=pointer]
+                      - generic [ref=f1e346]:
+                        - button "Entrar" [ref=f1e347] [cursor=pointer]
+                        - button "Começar grátis" [ref=f1e348] [cursor=pointer]
+                  - generic [ref=f1e350]:
+                    - generic [ref=f1e351]: Novo · versão 2.0
+                    - strong [ref=f1e352]: Organize o trabalho da equipe em um só lugar
+                    - generic [ref=f1e353]: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas.
+                    - generic [ref=f1e354]:
+                      - generic [ref=f1e355]: Começar agora
+                      - generic [ref=f1e356]: Ver demonstração
+                - generic: Prévia interativa
+              - 'button "Linha Essencial Integral Fixo ao rolar O header mais simples possível: logo, quatro links e um botão. Nada disputa atenção com o conteúdo. Selecionar" [ref=f1e372] [cursor=pointer]':
+                - generic [ref=f1e373]:
+                  - generic [ref=f1e374]: Linha Essencial
+                  - generic [ref=f1e375]:
+                    - generic [ref=f1e376]: Integral
+                    - generic [ref=f1e377]: Fixo ao rolar
+                  - generic [ref=f1e378]: "O header mais simples possível: logo, quatro links e um botão. Nada disputa atenção com o conteúdo."
+                - generic [ref=f1e379]: Selecionar
+              - generic [ref=f1e380]:
+                - group "Composição de Linha Essencial" [ref=f1e381]:
+                  - button "Composição A" [pressed] [ref=f1e382] [cursor=pointer]
+                  - button "Composição B" [ref=f1e383] [cursor=pointer]
+                - paragraph [ref=f1e384]:
+                  - strong [ref=f1e385]: Logo · menu central · ações.
+                  - text: Logo à esquerda, os quatro links centralizados na barra e “Entrar” + “Começar grátis” à direita. Equilíbrio simétrico clássico.
+                - generic [ref=f1e386]:
+                  - button "Ver em tamanho grande" [ref=f1e387] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e393] [cursor=pointer]
+            - article "Vitrine Central" [ref=f1e397]:
+              - 'group "Prévia interativa: Vitrine Central, composição A" [ref=f1e398]':
+                - generic [ref=f1e400]:
+                  - generic "Header Vitrine Central" [ref=f1e403]:
+                    - generic [ref=f1e405]:
+                      - navigation "Principal, primeira parte" [ref=f1e407]:
+                        - list [ref=f1e408]:
+                          - listitem [ref=f1e409]:
+                            - button "Coleção" [ref=f1e410] [cursor=pointer]
+                          - listitem [ref=f1e412]:
+                            - button "Novidades" [ref=f1e413] [cursor=pointer]
+                      - button "Cajá — página inicial" [ref=f1e416] [cursor=pointer]:
+                        - generic [ref=f1e417]: Cajá
+                      - generic [ref=f1e419]:
+                        - navigation "Principal, segunda parte" [ref=f1e420]:
+                          - list [ref=f1e421]:
+                            - listitem [ref=f1e422]:
+                              - button "Ateliê" [ref=f1e423] [cursor=pointer]
+                            - listitem [ref=f1e425]:
+                              - button "Diário" [ref=f1e426] [cursor=pointer]
+                        - button "Abrir busca" [ref=f1e429] [cursor=pointer]
+                        - generic [ref=f1e433]:
+                          - button "Favoritos" [ref=f1e434] [cursor=pointer]
+                          - button "Sacola (3 itens)" [ref=f1e437] [cursor=pointer]:
+                            - generic [aria-hidden] [ref=f1e441]: "3"
+                  - generic [ref=f1e442]:
+                    - generic [ref=f1e443]:
+                      - generic [ref=f1e444]:
+                        - generic [ref=f1e445]: Coleção de verão
+                        - strong [ref=f1e446]: Leve, fresca e feita para durar
+                      - generic [ref=f1e447]: Ver coleção
+                    - generic [ref=f1e448]:
+                      - generic [ref=f1e449]:
+                        - generic [ref=f1e454]: Vaso de cerâmica
+                        - strong [ref=f1e455]: R$ 129
+                      - generic [ref=f1e456]:
+                        - generic [ref=f1e461]: Luminária Brisa
+                        - strong [ref=f1e462]: R$ 249
+                      - generic [ref=f1e463]:
+                        - generic [ref=f1e468]: Manta de linho
+                        - strong [ref=f1e469]: R$ 189
+                      - generic [ref=f1e470]:
+                        - generic [ref=f1e475]: Caneca esmaltada
+                        - strong [ref=f1e476]: R$ 59
+                - generic: Prévia interativa
+              - button "Vitrine Central Integral Fixo ao rolar O logo fica no centro, como numa vitrine, e os links se dividem dos dois lados. Elegante para marcas e lojas. Selecionar" [ref=f1e477] [cursor=pointer]:
+                - generic [ref=f1e478]:
+                  - generic [ref=f1e479]: Vitrine Central
+                  - generic [ref=f1e480]:
+                    - generic [ref=f1e481]: Integral
+                    - generic [ref=f1e482]: Fixo ao rolar
+                  - generic [ref=f1e483]: O logo fica no centro, como numa vitrine, e os links se dividem dos dois lados. Elegante para marcas e lojas.
+                - generic [ref=f1e484]: Selecionar
+              - generic [ref=f1e485]:
+                - group "Composição de Vitrine Central" [ref=f1e486]:
+                  - button "Composição A" [pressed] [ref=f1e487] [cursor=pointer]
+                  - button "Composição B" [ref=f1e488] [cursor=pointer]
+                - paragraph [ref=f1e489]:
+                  - strong [ref=f1e490]: Logo no centro, menu dividido.
+                  - text: Dois links à esquerda, logo exatamente no meio da barra e os outros dois links + busca, favoritos e sacola à direita. Simetria de vitrine.
+                - generic [ref=f1e491]:
+                  - button "Ver em tamanho grande" [ref=f1e492] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e498] [cursor=pointer]
+            - article "Ilha Flutuante" [ref=f1e502]:
+              - 'group "Prévia interativa: Ilha Flutuante, composição A" [ref=f1e503]':
+                - generic [ref=f1e505]:
+                  - generic "Header Ilha Flutuante" [ref=f1e507]:
+                    - generic [ref=f1e509]:
+                      - button "Buriti — página inicial" [ref=f1e511] [cursor=pointer]:
+                        - generic [ref=f1e512]: Buriti
+                      - navigation "Principal" [ref=f1e518]:
+                        - list [ref=f1e519]:
+                          - listitem [ref=f1e520]:
+                            - button "Produto" [ref=f1e521] [cursor=pointer]
+                          - listitem [ref=f1e525]:
+                            - button "Clientes" [ref=f1e526] [cursor=pointer]
+                          - listitem [ref=f1e528]:
+                            - button "Preços" [ref=f1e529] [cursor=pointer]
+                          - listitem [ref=f1e531]:
+                            - button "Docs" [ref=f1e532] [cursor=pointer]
+                      - generic [ref=f1e535]:
+                        - button "Entrar" [ref=f1e536] [cursor=pointer]
+                        - button "Testar agora" [ref=f1e537] [cursor=pointer]
+                  - generic [ref=f1e539]:
+                    - generic [ref=f1e540]: Novo · versão 2.0
+                    - strong [ref=f1e541]: Organize o trabalho da equipe em um só lugar
+                    - generic [ref=f1e542]: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas.
+                    - generic [ref=f1e543]:
+                      - generic [ref=f1e544]: Começar agora
+                      - generic [ref=f1e545]: Ver demonstração
+                - generic: Prévia interativa
+              - button "Ilha Flutuante Flutuante Fixo ao rolar Uma barra arredondada que “flutua” afastada das bordas, por cima do conteúdo. Moderna e leve. Selecionar" [ref=f1e561] [cursor=pointer]:
+                - generic [ref=f1e562]:
+                  - generic [ref=f1e563]: Ilha Flutuante
+                  - generic [ref=f1e564]:
+                    - generic [ref=f1e565]: Flutuante
+                    - generic [ref=f1e566]: Fixo ao rolar
+                  - generic [ref=f1e567]: Uma barra arredondada que “flutua” afastada das bordas, por cima do conteúdo. Moderna e leve.
+                - generic [ref=f1e568]: Selecionar
+              - generic [ref=f1e569]:
+                - group "Composição de Ilha Flutuante" [ref=f1e570]:
+                  - button "Composição A" [pressed] [ref=f1e571] [cursor=pointer]
+                  - button "Composição B" [ref=f1e572] [cursor=pointer]
+                - paragraph [ref=f1e573]:
+                  - strong [ref=f1e574]: Pílula em toda a largura.
+                  - text: "Barra flutuante afastada 12 px do topo e das laterais: logo à esquerda, links em pílula no centro, “Entrar” e “Testar agora” à direita."
+                - generic [ref=f1e575]:
+                  - button "Ver em tamanho grande" [ref=f1e576] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e582] [cursor=pointer]
+            - article "Arquipélago" [ref=f1e586]:
+              - generic: Selecionado
+              - 'group "Prévia interativa: Arquipélago, composição A" [ref=f1e587]':
+                - generic [ref=f1e589]:
+                  - generic "Header Arquipélago" [ref=f1e591]:
+                    - generic [ref=f1e593]:
+                      - button "Sabiá — página inicial" [ref=f1e595] [cursor=pointer]:
+                        - generic [ref=f1e596]:
+                          - generic [aria-hidden] [ref=f1e597]: S
+                          - generic [ref=f1e598]: Sabiá
+                      - navigation "Principal" [ref=f1e600]:
+                        - list [ref=f1e601]:
+                          - listitem [ref=f1e602]:
+                            - button "Início" [ref=f1e603] [cursor=pointer]
+                          - listitem [ref=f1e605]:
+                            - button "Projetos" [ref=f1e606] [cursor=pointer]
+                          - listitem [ref=f1e608]:
+                            - button "Estúdio" [ref=f1e609] [cursor=pointer]
+                          - listitem [ref=f1e611]:
+                            - button "Contato" [ref=f1e612] [cursor=pointer]
+                      - generic [ref=f1e615]:
+                        - button "Usar tema escuro" [ref=f1e616] [cursor=pointer]
+                        - button "Vamos conversar" [ref=f1e619] [cursor=pointer]
+                  - generic [ref=f1e620]:
+                    - generic [ref=f1e623]: Temporada 2027
+                    - strong [ref=f1e624]: Viagens que começam pelo silêncio
+                    - generic [ref=f1e625]: Roteiros autorais por paisagens pouco conhecidas do Brasil.
+                    - generic [ref=f1e626]: Explorar destinos
+                - generic: Prévia interativa
+              - 'button "Arquipélago Flutuante Fixo ao rolar Em vez de uma barra, pequenas “ilhas” separadas: uma para o logo, outra para o menu e outra para as ações. Selecionado" [active] [pressed] [ref=f1e630] [cursor=pointer]':
+                - generic [ref=f1e631]:
+                  - generic [ref=f1e632]: Arquipélago
+                  - generic [ref=f1e633]:
+                    - generic [ref=f1e634]: Flutuante
+                    - generic [ref=f1e635]: Fixo ao rolar
+                  - generic [ref=f1e636]: "Em vez de uma barra, pequenas “ilhas” separadas: uma para o logo, outra para o menu e outra para as ações."
+                - generic [ref=f1e637]: Selecionado
+              - generic [ref=f1e640]:
+                - group "Composição de Arquipélago" [ref=f1e641]:
+                  - button "Composição A" [pressed] [ref=f1e642] [cursor=pointer]
+                  - button "Composição B" [ref=f1e643] [cursor=pointer]
+                - paragraph [ref=f1e644]:
+                  - strong [ref=f1e645]: Três ilhas distribuídas.
+                  - text: Ilha do logo à esquerda, ilha da navegação (grupo segmentado) no centro e ilha de ações à direita, cada uma com fundo e sombra próprios e o conteúdo visível entre elas.
+                - generic [ref=f1e646]:
+                  - button "Ver em tamanho grande" [ref=f1e647] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e653] [cursor=pointer]
+            - article "Painel de Trabalho" [ref=f1e657]:
+              - 'group "Prévia interativa: Painel de Trabalho, composição A" [ref=f1e658]':
+                - generic [ref=f1e660]:
+                  - generic "Header Painel de Trabalho" [ref=f1e663]:
+                    - generic [ref=f1e665]:
+                      - generic [ref=f1e666]:
+                        - button "Jacarandá — página inicial" [ref=f1e667] [cursor=pointer]:
+                          - generic [ref=f1e668]: Jacarandá
+                        - navigation "Principal" [ref=f1e673]:
+                          - list [ref=f1e674]:
+                            - listitem [ref=f1e675]:
+                              - button "Visão geral" [ref=f1e676] [cursor=pointer]
+                            - listitem [ref=f1e678]:
+                              - button "Projetos" [ref=f1e679] [cursor=pointer]
+                            - listitem [ref=f1e681]:
+                              - button "Tarefas" [ref=f1e682] [cursor=pointer]
+                            - listitem [ref=f1e684]:
+                              - button "Relatórios" [ref=f1e685] [cursor=pointer]
+                      - generic [ref=f1e687]:
+                        - searchbox "Buscar" [ref=f1e692]
+                        - generic [ref=f1e693]:
+                          - button "Ajuda" [ref=f1e694] [cursor=pointer]
+                          - button "Notificações (2 novas)" [ref=f1e698] [cursor=pointer]:
+                            - generic [aria-hidden] [ref=f1e702]: "2"
+                          - button "Abrir menu do perfil" [ref=f1e703] [cursor=pointer]:
+                            - generic [aria-hidden] [ref=f1e704]: MA
+                  - generic [ref=f1e705]:
+                    - generic [ref=f1e706]:
+                      - generic [ref=f1e707]:
+                        - generic [ref=f1e708]: Início / Visão geral
+                        - strong [ref=f1e709]: Visão geral
+                      - generic [ref=f1e710]: + Novo
+                    - generic [ref=f1e711]:
+                      - generic [ref=f1e712]:
+                        - generic [ref=f1e713]: Receita
+                        - strong [ref=f1e714]: R$ 48,2 mil
+                        - generic [ref=f1e715]: +12%
+                      - generic [ref=f1e716]:
+                        - generic [ref=f1e717]: Pedidos
+                        - strong [ref=f1e718]: "1.284"
+                        - generic [ref=f1e719]: +4%
+                      - generic [ref=f1e720]:
+                        - generic [ref=f1e721]: Clientes
+                        - strong [ref=f1e722]: "312"
+                        - generic [ref=f1e723]: −2%
+                - generic: Prévia interativa
+              - button "Painel de Trabalho Integral Fixo ao rolar Header de sistema (SaaS) com abas, busca, notificações e o avatar da pessoa logada. Selecionar" [ref=f1e737] [cursor=pointer]:
+                - generic [ref=f1e738]:
+                  - generic [ref=f1e739]: Painel de Trabalho
+                  - generic [ref=f1e740]:
+                    - generic [ref=f1e741]: Integral
+                    - generic [ref=f1e742]: Fixo ao rolar
+                  - generic [ref=f1e743]: Header de sistema (SaaS) com abas, busca, notificações e o avatar da pessoa logada.
+                - generic [ref=f1e744]: Selecionar
+              - generic [ref=f1e745]:
+                - group "Composição de Painel de Trabalho" [ref=f1e746]:
+                  - button "Composição A" [pressed] [ref=f1e747] [cursor=pointer]
+                  - button "Composição B" [ref=f1e748] [cursor=pointer]
+                - paragraph [ref=f1e749]:
+                  - strong [ref=f1e750]: Abas à esquerda, busca à direita.
+                  - text: Logo + abas sublinhadas à esquerda; à direita, campo de busca compacto (≈ 220 px), ajuda, sino com contador e avatar.
+                - generic [ref=f1e751]:
+                  - button "Ver em tamanho grande" [ref=f1e752] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e758] [cursor=pointer]
+            - article "Console do Desenvolvedor" [ref=f1e762]:
+              - 'group "Prévia interativa: Console do Desenvolvedor, composição A" [ref=f1e763]':
+                - generic [ref=f1e765]:
+                  - generic "Header Console do Desenvolvedor" [ref=f1e768]:
+                    - generic [ref=f1e770]:
+                      - generic [ref=f1e771]:
+                        - button "carnauba — página inicial" [ref=f1e772] [cursor=pointer]:
+                          - generic [ref=f1e773]:
+                            - generic [aria-hidden] [ref=f1e774]: ">_"
+                            - text: carnauba
+                        - navigation "Principal" [ref=f1e775]:
+                          - list [ref=f1e776]:
+                            - listitem [ref=f1e777]:
+                              - button "Plataforma" [ref=f1e778] [cursor=pointer]
+                            - listitem [ref=f1e782]:
+                              - button "Desenvolvedores" [ref=f1e783] [cursor=pointer]
+                            - listitem [ref=f1e785]:
+                              - button "Preços" [ref=f1e786] [cursor=pointer]
+                            - listitem [ref=f1e788]:
+                              - button "Empresas" [ref=f1e789] [cursor=pointer]
+                      - generic [ref=f1e791]:
+                        - button "Buscar… ⌘K" [ref=f1e792] [cursor=pointer]:
+                          - generic [ref=f1e796]: Buscar…
+                          - generic [ref=f1e797]: ⌘K
+                        - generic [ref=f1e798]:
+                          - generic [ref=f1e799]: Operacional
+                          - button "Entrar" [ref=f1e801] [cursor=pointer]
+                          - button "Começar a construir" [ref=f1e802] [cursor=pointer]
+                  - generic [ref=f1e803]:
+                    - generic [ref=f1e804]:
+                      - generic [ref=f1e805]: Introdução
+                      - generic [ref=f1e806]: Instalação
+                      - generic [ref=f1e807]: Autenticação
+                      - generic [ref=f1e808]: Primeira chamada
+                      - generic [ref=f1e809]: Erros comuns
+                    - generic [ref=f1e810]:
+                      - generic [ref=f1e811]: Plataforma
+                      - strong [ref=f1e812]: Autenticação com chaves de API
+                      - generic [ref=f1e816]: "curl https://api.exemplo.dev/v1/projetos \\ -H \"Authorization: Bearer $CHAVE\""
+                - generic: Prévia interativa
+              - button "Console do Desenvolvedor Integral Fixo ao rolar Visual técnico com logo em fonte de código e uma busca de comandos (⌘K). Para produtos de tecnologia. Selecionar" [ref=f1e817] [cursor=pointer]:
+                - generic [ref=f1e818]:
+                  - generic [ref=f1e819]: Console do Desenvolvedor
+                  - generic [ref=f1e820]:
+                    - generic [ref=f1e821]: Integral
+                    - generic [ref=f1e822]: Fixo ao rolar
+                  - generic [ref=f1e823]: Visual técnico com logo em fonte de código e uma busca de comandos (⌘K). Para produtos de tecnologia.
+                - generic [ref=f1e824]: Selecionar
+              - generic [ref=f1e825]:
+                - group "Composição de Console do Desenvolvedor" [ref=f1e826]:
+                  - button "Composição A" [pressed] [ref=f1e827] [cursor=pointer]
+                  - button "Composição B" [ref=f1e828] [cursor=pointer]
+                - paragraph [ref=f1e829]:
+                  - strong [ref=f1e830]: Comandos à direita.
+                  - text: Logo monoespaçado + links à esquerda; à direita, botão “Buscar ⌘K”, indicador de status, “Entrar” e o CTA.
+                - generic [ref=f1e831]:
+                  - button "Ver em tamanho grande" [ref=f1e832] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e838] [cursor=pointer]
+            - article "Institucional em Duas Linhas" [ref=f1e842]:
+              - 'group "Prévia interativa: Institucional em Duas Linhas, composição A" [ref=f1e843]':
+                - generic [ref=f1e845]:
+                  - generic [ref=f1e847]:
+                    - generic [ref=f1e849]:
+                      - generic [ref=f1e850]:
+                        - generic [ref=f1e851]: Ouvidoria
+                        - generic [ref=f1e852]: Trabalhe conosco
+                      - generic [ref=f1e853]: 0800 123 4567
+                    - generic "Header Institucional em Duas Linhas" [ref=f1e856]:
+                      - generic [ref=f1e858]:
+                        - button "Araucária Seguros — página inicial" [ref=f1e860] [cursor=pointer]:
+                          - generic [ref=f1e861]: Araucária Seguros
+                        - navigation "Principal" [ref=f1e867]:
+                          - list [ref=f1e868]:
+                            - listitem [ref=f1e869]:
+                              - button "Para você" [ref=f1e870] [cursor=pointer]
+                            - listitem [ref=f1e874]:
+                              - button "Para empresas" [ref=f1e875] [cursor=pointer]
+                            - listitem [ref=f1e879]:
+                              - button "Sinistros" [ref=f1e880] [cursor=pointer]
+                            - listitem [ref=f1e882]:
+                              - button "Sobre nós" [ref=f1e883] [cursor=pointer]
+                        - generic [ref=f1e886]:
+                          - button "PT" [ref=f1e887] [cursor=pointer]
+                          - button "Entrar" [ref=f1e893] [cursor=pointer]
+                          - button "Fazer cotação" [ref=f1e894] [cursor=pointer]
+                  - generic [ref=f1e896]:
+                    - generic [ref=f1e897]: Novo · versão 2.0
+                    - strong [ref=f1e898]: Organize o trabalho da equipe em um só lugar
+                    - generic [ref=f1e899]: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas.
+                    - generic [ref=f1e900]:
+                      - generic [ref=f1e901]: Começar agora
+                      - generic [ref=f1e902]: Ver demonstração
+                - generic: Prévia interativa
+              - 'button "Institucional em Duas Linhas Integral Fixo ao rolar Para empresas tradicionais: uma faixa fina com contatos e, abaixo, o menu principal com submenus. Selecionar" [ref=f1e918] [cursor=pointer]':
+                - generic [ref=f1e919]:
+                  - generic [ref=f1e920]: Institucional em Duas Linhas
+                  - generic [ref=f1e921]:
+                    - generic [ref=f1e922]: Integral
+                    - generic [ref=f1e923]: Fixo ao rolar
+                  - generic [ref=f1e924]: "Para empresas tradicionais: uma faixa fina com contatos e, abaixo, o menu principal com submenus."
+                - generic [ref=f1e925]: Selecionar
+              - generic [ref=f1e926]:
+                - group "Composição de Institucional em Duas Linhas" [ref=f1e927]:
+                  - button "Composição A" [pressed] [ref=f1e928] [cursor=pointer]
+                  - button "Composição B" [ref=f1e929] [cursor=pointer]
+                - paragraph [ref=f1e930]:
+                  - strong [ref=f1e931]: Utilitários em cima.
+                  - text: Faixa fina de 32 px no topo com ouvidoria, carreiras e telefone; abaixo, barra de 72 px com logo, menus suspensos centralizados e idioma, “Entrar” e “Fazer cotação”.
+                - generic [ref=f1e932]:
+                  - button "Ver em tamanho grande" [ref=f1e933] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e939] [cursor=pointer]
+            - article "Mega Empório" [ref=f1e943]:
+              - 'group "Prévia interativa: Mega Empório, composição A" [ref=f1e944]':
+                - generic [ref=f1e946]:
+                  - generic [ref=f1e948]:
+                    - generic [ref=f1e949]:
+                      - generic [ref=f1e950]:
+                        - text: Frete grátis acima de R$ 199 · Parcele em até 10x
+                        - generic [ref=f1e951]: Saiba mais
+                      - button "Dispensar anúncio" [ref=f1e954] [cursor=pointer]
+                    - generic "Header Mega Empório" [ref=f1e958]:
+                      - generic [ref=f1e959]:
+                        - generic [ref=f1e960]:
+                          - button "Empório Murici — página inicial" [ref=f1e962] [cursor=pointer]:
+                            - generic [ref=f1e963]: Empório Murici
+                          - searchbox "Buscar" [ref=f1e973]
+                          - generic [ref=f1e979]:
+                            - button "Entregar em Rua das Flores, 120" [ref=f1e980] [cursor=pointer]:
+                              - generic [ref=f1e984]:
+                                - generic [ref=f1e985]: Entregar em
+                                - strong [ref=f1e986]: Rua das Flores, 120
+                            - button "Abrir menu do perfil" [ref=f1e989] [cursor=pointer]:
+                              - generic [aria-hidden] [ref=f1e990]: MA
+                            - button "Sacola (3 itens)" [ref=f1e991] [cursor=pointer]:
+                              - generic [aria-hidden] [ref=f1e995]: "3"
+                        - navigation "Principal" [ref=f1e997]:
+                          - list [ref=f1e998]:
+                            - listitem [ref=f1e999]:
+                              - button "Departamentos" [ref=f1e1000] [cursor=pointer]
+                            - listitem [ref=f1e1004]:
+                              - button "Ofertas -40%" [ref=f1e1005] [cursor=pointer]:
+                                - generic [ref=f1e1006]: Ofertas
+                                - generic [ref=f1e1007]: "-40%"
+                            - listitem [ref=f1e1008]:
+                              - button "Mercado" [ref=f1e1009] [cursor=pointer]
+                            - listitem [ref=f1e1011]:
+                              - button "Casa" [ref=f1e1012] [cursor=pointer]
+                            - listitem [ref=f1e1014]:
+                              - button "Eletrônicos" [ref=f1e1015] [cursor=pointer]
+                  - generic [ref=f1e1017]:
+                    - generic [ref=f1e1018]:
+                      - generic [ref=f1e1019]:
+                        - generic [ref=f1e1020]: Coleção de verão
+                        - strong [ref=f1e1021]: Leve, fresca e feita para durar
+                      - generic [ref=f1e1022]: Ver coleção
+                    - generic [ref=f1e1023]:
+                      - generic [ref=f1e1024]:
+                        - generic [ref=f1e1029]: Vaso de cerâmica
+                        - strong [ref=f1e1030]: R$ 129
+                      - generic [ref=f1e1031]:
+                        - generic [ref=f1e1036]: Luminária Brisa
+                        - strong [ref=f1e1037]: R$ 249
+                      - generic [ref=f1e1038]:
+                        - generic [ref=f1e1043]: Manta de linho
+                        - strong [ref=f1e1044]: R$ 189
+                      - generic [ref=f1e1045]:
+                        - generic [ref=f1e1050]: Caneca esmaltada
+                        - strong [ref=f1e1051]: R$ 59
+                - generic: Prévia interativa
+              - 'button "Mega Empório Integral Fixo ao rolar Header de loja grande: busca em destaque, carrinho e um mega menu com todos os departamentos. Selecionar" [ref=f1e1052] [cursor=pointer]':
+                - generic [ref=f1e1053]:
+                  - generic [ref=f1e1054]: Mega Empório
+                  - generic [ref=f1e1055]:
+                    - generic [ref=f1e1056]: Integral
+                    - generic [ref=f1e1057]: Fixo ao rolar
+                  - generic [ref=f1e1058]: "Header de loja grande: busca em destaque, carrinho e um mega menu com todos os departamentos."
+                - generic [ref=f1e1059]: Selecionar
+              - generic [ref=f1e1060]:
+                - group "Composição de Mega Empório" [ref=f1e1061]:
+                  - button "Composição A" [pressed] [ref=f1e1062] [cursor=pointer]
+                  - button "Composição B" [ref=f1e1063] [cursor=pointer]
+                - paragraph [ref=f1e1064]:
+                  - strong [ref=f1e1065]: Busca larga + faixa de departamentos.
+                  - text: "Linha 1: logo, busca larga ao centro, endereço de entrega, conta e carrinho. Linha 2: “Departamentos” (abre o mega menu) seguido de atalhos de categorias."
+                - generic [ref=f1e1066]:
+                  - button "Ver em tamanho grande" [ref=f1e1067] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e1073] [cursor=pointer]
+            - article "Faixa de Lançamento" [ref=f1e1077]:
+              - 'group "Prévia interativa: Faixa de Lançamento, composição A" [ref=f1e1078]':
+                - generic [ref=f1e1080]:
+                  - generic [ref=f1e1082]:
+                    - generic [ref=f1e1083]:
+                      - generic [ref=f1e1084]:
+                        - text: "Novidade: relatórios automáticos com IA — conheça"
+                        - generic [ref=f1e1085]: Saiba mais
+                      - button "Dispensar anúncio" [ref=f1e1088] [cursor=pointer]
+                    - generic "Header Faixa de Lançamento" [ref=f1e1092]:
+                      - generic [ref=f1e1094]:
+                        - button "Pitanga — página inicial" [ref=f1e1096] [cursor=pointer]:
+                          - generic [ref=f1e1097]: Pitanga
+                        - navigation "Principal" [ref=f1e1103]:
+                          - list [ref=f1e1104]:
+                            - listitem [ref=f1e1105]:
+                              - button "Produto" [ref=f1e1106] [cursor=pointer]
+                            - listitem [ref=f1e1108]:
+                              - button "Integrações" [ref=f1e1109] [cursor=pointer]
+                            - listitem [ref=f1e1111]:
+                              - button "Preços" [ref=f1e1112] [cursor=pointer]
+                            - listitem [ref=f1e1114]:
+                              - button "Blog" [ref=f1e1115] [cursor=pointer]
+                        - generic [ref=f1e1118]:
+                          - button "Entrar" [ref=f1e1119] [cursor=pointer]
+                          - button "Criar conta" [ref=f1e1120] [cursor=pointer]
+                  - generic [ref=f1e1122]:
+                    - generic [ref=f1e1123]: Novo · versão 2.0
+                    - strong [ref=f1e1124]: Organize o trabalho da equipe em um só lugar
+                    - generic [ref=f1e1125]: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas.
+                    - generic [ref=f1e1126]:
+                      - generic [ref=f1e1127]: Começar agora
+                      - generic [ref=f1e1128]: Ver demonstração
+                - generic: Prévia interativa
+              - button "Faixa de Lançamento Integral Fixo ao rolar Um aviso no topo (“Novidade!”) chama a atenção para um lançamento, acima do menu principal. Selecionar" [ref=f1e1144] [cursor=pointer]:
+                - generic [ref=f1e1145]:
+                  - generic [ref=f1e1146]: Faixa de Lançamento
+                  - generic [ref=f1e1147]:
+                    - generic [ref=f1e1148]: Integral
+                    - generic [ref=f1e1149]: Fixo ao rolar
+                  - generic [ref=f1e1150]: Um aviso no topo (“Novidade!”) chama a atenção para um lançamento, acima do menu principal.
+                - generic [ref=f1e1151]: Selecionar
+              - generic [ref=f1e1152]:
+                - group "Composição de Faixa de Lançamento" [ref=f1e1153]:
+                  - button "Composição A" [pressed] [ref=f1e1154] [cursor=pointer]
+                  - button "Composição B" [ref=f1e1155] [cursor=pointer]
+                - paragraph [ref=f1e1156]:
+                  - strong [ref=f1e1157]: Anúncio em faixa.
+                  - text: Faixa de anúncio de 36 px na cor primária acima do header, com link e botão ✕; abaixo, logo, links centrais e ações.
+                - generic [ref=f1e1158]:
+                  - button "Ver em tamanho grande" [ref=f1e1159] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e1165] [cursor=pointer]
+            - article "Gazeta Aurora" [ref=f1e1169]:
+              - 'group "Prévia interativa: Gazeta Aurora, composição A" [ref=f1e1170]':
+                - generic [ref=f1e1172]:
+                  - generic "Header Gazeta Aurora" [ref=f1e1175]:
+                    - generic [ref=f1e1176]:
+                      - generic [ref=f1e1177]:
+                        - generic [ref=f1e1178]:
+                          - generic [ref=f1e1179]: Terça-feira, 3 de novembro
+                          - button "Abrir busca" [ref=f1e1181] [cursor=pointer]
+                        - button "Gazeta Aurora — página inicial" [ref=f1e1186] [cursor=pointer]:
+                          - generic [ref=f1e1187]: Gazeta Aurora
+                        - button "Assine" [ref=f1e1190] [cursor=pointer]
+                      - navigation "Principal" [ref=f1e1192]:
+                        - list [ref=f1e1193]:
+                          - listitem [ref=f1e1194]:
+                            - button "Política" [ref=f1e1195] [cursor=pointer]
+                          - listitem [ref=f1e1197]:
+                            - button "Economia" [ref=f1e1198] [cursor=pointer]
+                          - listitem [ref=f1e1200]:
+                            - button "Cultura" [ref=f1e1201] [cursor=pointer]
+                          - listitem [ref=f1e1203]:
+                            - button "Ciência" [ref=f1e1204] [cursor=pointer]
+                          - listitem [ref=f1e1206]:
+                            - button "Esportes" [ref=f1e1207] [cursor=pointer]
+                          - listitem [ref=f1e1209]:
+                            - button "Opinião" [ref=f1e1210] [cursor=pointer]
+                  - generic [ref=f1e1212]:
+                    - generic [ref=f1e1213]:
+                      - generic [ref=f1e1214]: POLÍTICA
+                      - strong [ref=f1e1215]: A cidade que aprendeu a ouvir os próprios rios
+                      - generic [ref=f1e1216]: Uma reportagem sobre bairros que transformaram enchentes em parques.
+                    - generic [ref=f1e1218]:
+                      - strong [ref=f1e1220]: Economia circular ganha força no interior
+                      - strong [ref=f1e1225]: O retorno das livrarias de bairro
+                - generic: Prévia interativa
+              - 'button "Gazeta Aurora Integral Rola com a página Cabeçalho de jornal ou revista: nome grande e serifado no centro e as editorias logo abaixo. Selecionar" [ref=f1e1229] [cursor=pointer]':
+                - generic [ref=f1e1230]:
+                  - generic [ref=f1e1231]: Gazeta Aurora
+                  - generic [ref=f1e1232]:
+                    - generic [ref=f1e1233]: Integral
+                    - generic [ref=f1e1234]: Rola com a página
+                  - generic [ref=f1e1235]: "Cabeçalho de jornal ou revista: nome grande e serifado no centro e as editorias logo abaixo."
+                - generic [ref=f1e1236]: Selecionar
+              - generic [ref=f1e1237]:
+                - group "Composição de Gazeta Aurora" [ref=f1e1238]:
+                  - button "Composição A" [pressed] [ref=f1e1239] [cursor=pointer]
+                  - button "Composição B" [ref=f1e1240] [cursor=pointer]
+                - paragraph [ref=f1e1241]:
+                  - strong [ref=f1e1242]: Masthead clássico.
+                  - text: Faixa superior com data e busca à esquerda, nome do jornal grande e serifado no centro e “Assine” à direita; abaixo, as editorias em caixa alta entre fios horizontais.
+                - generic [ref=f1e1243]:
+                  - button "Ver em tamanho grande" [ref=f1e1244] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e1250] [cursor=pointer]
+            - article "Trilha de Contexto" [ref=f1e1254]:
+              - 'group "Prévia interativa: Trilha de Contexto, composição A" [ref=f1e1255]':
+                - generic [ref=f1e1257]:
+                  - generic "Header Trilha de Contexto" [ref=f1e1260]:
+                    - generic [ref=f1e1262]:
+                      - generic [ref=f1e1263]:
+                        - button "Tucano — página inicial" [ref=f1e1264] [cursor=pointer]:
+                          - generic [ref=f1e1265]: Tucano
+                        - navigation "Você está em" [ref=f1e1270]:
+                          - list [ref=f1e1271]:
+                            - listitem [ref=f1e1272]:
+                              - button "Projetos" [ref=f1e1273] [cursor=pointer]
+                            - listitem [ref=f1e1274]:
+                              - generic [aria-hidden] [ref=f1e1275]: /
+                              - button "Site institucional" [ref=f1e1276] [cursor=pointer]
+                            - listitem [ref=f1e1277]:
+                              - generic [aria-hidden] [ref=f1e1278]: /
+                              - button "Página inicial" [ref=f1e1279] [cursor=pointer]
+                      - generic [ref=f1e1281]:
+                        - button "Notificações (2 novas)" [ref=f1e1282] [cursor=pointer]:
+                          - generic [aria-hidden] [ref=f1e1286]: "2"
+                        - button "Abrir menu do perfil" [ref=f1e1287] [cursor=pointer]:
+                          - generic [aria-hidden] [ref=f1e1288]: MA
+                  - generic [ref=f1e1289]:
+                    - generic [ref=f1e1290]:
+                      - generic [ref=f1e1291]:
+                        - generic [ref=f1e1292]: Início / Visão geral
+                        - strong [ref=f1e1293]: Visão geral
+                      - generic [ref=f1e1294]: + Novo
+                    - generic [ref=f1e1295]:
+                      - generic [ref=f1e1296]:
+                        - generic [ref=f1e1297]: Receita
+                        - strong [ref=f1e1298]: R$ 48,2 mil
+                        - generic [ref=f1e1299]: +12%
+                      - generic [ref=f1e1300]:
+                        - generic [ref=f1e1301]: Pedidos
+                        - strong [ref=f1e1302]: "1.284"
+                        - generic [ref=f1e1303]: +4%
+                      - generic [ref=f1e1304]:
+                        - generic [ref=f1e1305]: Clientes
+                        - strong [ref=f1e1306]: "312"
+                        - generic [ref=f1e1307]: −2%
+                - generic: Prévia interativa
+              - button "Trilha de Contexto Integral Fixo ao rolar Mostra “onde você está” (Projetos / Site / Página) direto no header. Ótimo para sistemas com muitos níveis. Selecionar" [ref=f1e1321] [cursor=pointer]:
+                - generic [ref=f1e1322]:
+                  - generic [ref=f1e1323]: Trilha de Contexto
+                  - generic [ref=f1e1324]:
+                    - generic [ref=f1e1325]: Integral
+                    - generic [ref=f1e1326]: Fixo ao rolar
+                  - generic [ref=f1e1327]: Mostra “onde você está” (Projetos / Site / Página) direto no header. Ótimo para sistemas com muitos níveis.
+                - generic [ref=f1e1328]: Selecionar
+              - generic [ref=f1e1329]:
+                - group "Composição de Trilha de Contexto" [ref=f1e1330]:
+                  - button "Composição A" [pressed] [ref=f1e1331] [cursor=pointer]
+                  - button "Composição B" [ref=f1e1332] [cursor=pointer]
+                - paragraph [ref=f1e1333]:
+                  - strong [ref=f1e1334]: Trilha na barra principal.
+                  - text: Logo seguido da trilha “Projetos / Site institucional / Página inicial”; cada nível é clicável e o último fica em negrito. Notificações e avatar à direita.
+                - generic [ref=f1e1335]:
+                  - button "Ver em tamanho grande" [ref=f1e1336] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e1342] [cursor=pointer]
+            - article "Horizonte Transparente" [ref=f1e1346]:
+              - 'group "Prévia interativa: Horizonte Transparente, composição A" [ref=f1e1347]':
+                - generic [ref=f1e1349]:
+                  - generic "Header Horizonte Transparente" [ref=f1e1351]:
+                    - generic [ref=f1e1353]:
+                      - button "Mandacaru — página inicial" [ref=f1e1355] [cursor=pointer]:
+                        - generic [ref=f1e1356]: Mandacaru
+                      - navigation "Principal" [ref=f1e1359]:
+                        - list [ref=f1e1360]:
+                          - listitem [ref=f1e1361]:
+                            - button "Destinos" [ref=f1e1362] [cursor=pointer]
+                          - listitem [ref=f1e1364]:
+                            - button "Experiências" [ref=f1e1365] [cursor=pointer]
+                          - listitem [ref=f1e1367]:
+                            - button "Hospedagem" [ref=f1e1368] [cursor=pointer]
+                          - listitem [ref=f1e1370]:
+                            - button "Sobre" [ref=f1e1371] [cursor=pointer]
+                      - generic [ref=f1e1374]:
+                        - button "PT" [ref=f1e1375] [cursor=pointer]
+                        - button "Reservar" [ref=f1e1381] [cursor=pointer]
+                  - generic [ref=f1e1382]:
+                    - generic [ref=f1e1385]: Temporada 2027
+                    - strong [ref=f1e1386]: Viagens que começam pelo silêncio
+                    - generic [ref=f1e1387]: Roteiros autorais por paisagens pouco conhecidas do Brasil.
+                    - generic [ref=f1e1388]: Explorar destinos
+                - generic: Prévia interativa
+              - button "Horizonte Transparente Integral Fixo ao rolar Fica transparente por cima da imagem de destaque e ganha fundo quando a pessoa rola a página. Selecionar" [ref=f1e1392] [cursor=pointer]:
+                - generic [ref=f1e1393]:
+                  - generic [ref=f1e1394]: Horizonte Transparente
+                  - generic [ref=f1e1395]:
+                    - generic [ref=f1e1396]: Integral
+                    - generic [ref=f1e1397]: Fixo ao rolar
+                  - generic [ref=f1e1398]: Fica transparente por cima da imagem de destaque e ganha fundo quando a pessoa rola a página.
+                - generic [ref=f1e1399]: Selecionar
+              - generic [ref=f1e1400]:
+                - group "Composição de Horizonte Transparente" [ref=f1e1401]:
+                  - button "Composição A" [pressed] [ref=f1e1402] [cursor=pointer]
+                  - button "Composição B" [ref=f1e1403] [cursor=pointer]
+                - paragraph [ref=f1e1404]:
+                  - strong [ref=f1e1405]: Sobre o hero, menu central.
+                  - text: "Header transparente sobre a imagem do hero: logo à esquerda, links claros ao centro, idioma e botão contornado “Reservar” à direita."
+                - generic [ref=f1e1406]:
+                  - button "Ver em tamanho grande" [ref=f1e1407] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e1413] [cursor=pointer]
+            - article "Maison Lumière" [ref=f1e1417]:
+              - 'group "Prévia interativa: Maison Lumière, composição A" [ref=f1e1418]':
+                - generic [ref=f1e1420]:
+                  - generic "Header Maison Lumière" [ref=f1e1423]:
+                    - generic [ref=f1e1425]:
+                      - navigation "Principal, primeira parte" [ref=f1e1427]:
+                        - list [ref=f1e1428]:
+                          - listitem [ref=f1e1429]:
+                            - button "Coleções" [ref=f1e1430] [cursor=pointer]
+                          - listitem [ref=f1e1432]:
+                            - button "Joalheria" [ref=f1e1433] [cursor=pointer]
+                      - button "Maison Lumière — página inicial" [ref=f1e1436] [cursor=pointer]:
+                        - generic [ref=f1e1437]: Maison Lumière
+                      - generic [ref=f1e1438]:
+                        - navigation "Principal, segunda parte" [ref=f1e1439]:
+                          - list [ref=f1e1440]:
+                            - listitem [ref=f1e1441]:
+                              - button "A Maison" [ref=f1e1442] [cursor=pointer]
+                            - listitem [ref=f1e1444]:
+                              - button "Boutiques" [ref=f1e1445] [cursor=pointer]
+                        - button "Abrir busca" [ref=f1e1448] [cursor=pointer]
+                        - generic [ref=f1e1452]:
+                          - button "Favoritos" [ref=f1e1453] [cursor=pointer]
+                          - button "Sacola (3 itens)" [ref=f1e1456] [cursor=pointer]:
+                            - generic [aria-hidden] [ref=f1e1460]: "3"
+                  - generic [ref=f1e1461]:
+                    - generic [ref=f1e1462]: NOVA COLEÇÃO
+                    - strong [ref=f1e1463]: Lumière d’Automne
+                - generic: Prévia interativa
+              - 'button "Maison Lumière Integral Rola com a página Premium e luxuoso: letras espaçadas, muito respiro e o nome da marca no centro. Selecionar" [ref=f1e1469] [cursor=pointer]':
+                - generic [ref=f1e1470]:
+                  - generic [ref=f1e1471]: Maison Lumière
+                  - generic [ref=f1e1472]:
+                    - generic [ref=f1e1473]: Integral
+                    - generic [ref=f1e1474]: Rola com a página
+                  - generic [ref=f1e1475]: "Premium e luxuoso: letras espaçadas, muito respiro e o nome da marca no centro."
+                - generic [ref=f1e1476]: Selecionar
+              - generic [ref=f1e1477]:
+                - group "Composição de Maison Lumière" [ref=f1e1478]:
+                  - button "Composição A" [pressed] [ref=f1e1479] [cursor=pointer]
+                  - button "Composição B" [ref=f1e1480] [cursor=pointer]
+                - paragraph [ref=f1e1481]:
+                  - strong [ref=f1e1482]: Nome central, menu dividido.
+                  - text: Duas categorias à esquerda, o nome da maison em serifa no centro, as outras duas + busca, favoritos e sacola à direita; tudo em caixa alta espaçada.
+                - generic [ref=f1e1483]:
+                  - button "Ver em tamanho grande" [ref=f1e1484] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e1490] [cursor=pointer]
+            - article "Barra Compacta" [ref=f1e1494]:
+              - 'group "Prévia interativa: Barra Compacta, composição A" [ref=f1e1495]':
+                - generic [ref=f1e1497]:
+                  - generic "Header Barra Compacta" [ref=f1e1500]:
+                    - generic [ref=f1e1502]:
+                      - generic [ref=f1e1503]:
+                        - button "Babaçu — página inicial" [ref=f1e1504] [cursor=pointer]:
+                          - generic [ref=f1e1505]: Babaçu
+                        - navigation "Principal" [ref=f1e1510]:
+                          - list [ref=f1e1511]:
+                            - listitem [ref=f1e1512]:
+                              - button "Painel" [ref=f1e1513] [cursor=pointer]
+                            - listitem [ref=f1e1515]:
+                              - button "Fluxos" [ref=f1e1516] [cursor=pointer]
+                            - listitem [ref=f1e1518]:
+                              - button "Dados" [ref=f1e1519] [cursor=pointer]
+                            - listitem [ref=f1e1521]:
+                              - button "Logs" [ref=f1e1522] [cursor=pointer]
+                      - generic [ref=f1e1524]:
+                        - button "Abrir busca" [ref=f1e1526] [cursor=pointer]
+                        - generic [ref=f1e1530]:
+                          - button "Ajuda" [ref=f1e1531] [cursor=pointer]
+                          - button "Notificações (2 novas)" [ref=f1e1535] [cursor=pointer]:
+                            - generic [aria-hidden] [ref=f1e1539]: "2"
+                          - button "Abrir menu do perfil" [ref=f1e1540] [cursor=pointer]:
+                            - generic [aria-hidden] [ref=f1e1541]: MA
+                  - generic [ref=f1e1542]:
+                    - generic [ref=f1e1543]:
+                      - generic [ref=f1e1544]:
+                        - generic [ref=f1e1545]: Início / Painel
+                        - strong [ref=f1e1546]: Painel
+                      - generic [ref=f1e1547]: + Novo
+                    - generic [ref=f1e1548]:
+                      - generic [ref=f1e1549]:
+                        - generic [ref=f1e1550]: Receita
+                        - strong [ref=f1e1551]: R$ 48,2 mil
+                        - generic [ref=f1e1552]: +12%
+                      - generic [ref=f1e1553]:
+                        - generic [ref=f1e1554]: Pedidos
+                        - strong [ref=f1e1555]: "1.284"
+                        - generic [ref=f1e1556]: +4%
+                      - generic [ref=f1e1557]:
+                        - generic [ref=f1e1558]: Clientes
+                        - strong [ref=f1e1559]: "312"
+                        - generic [ref=f1e1560]: −2%
+                - generic: Prévia interativa
+              - button "Barra Compacta Integral Fixo ao rolar Header baixinho (44 px) para ferramentas onde cada pixel de tela conta. Selecionar" [ref=f1e1574] [cursor=pointer]:
+                - generic [ref=f1e1575]:
+                  - generic [ref=f1e1576]: Barra Compacta
+                  - generic [ref=f1e1577]:
+                    - generic [ref=f1e1578]: Integral
+                    - generic [ref=f1e1579]: Fixo ao rolar
+                  - generic [ref=f1e1580]: Header baixinho (44 px) para ferramentas onde cada pixel de tela conta.
+                - generic [ref=f1e1581]: Selecionar
+              - generic [ref=f1e1582]:
+                - group "Composição de Barra Compacta" [ref=f1e1583]:
+                  - button "Composição A" [pressed] [ref=f1e1584] [cursor=pointer]
+                  - button "Composição B" [ref=f1e1585] [cursor=pointer]
+                - paragraph [ref=f1e1586]:
+                  - strong [ref=f1e1587]: Tudo em 44 px.
+                  - text: Logo pequeno + links em pílulas de 28 px à esquerda; busca, ajuda, notificações e avatar (28 px) à direita.
+                - generic [ref=f1e1588]:
+                  - button "Ver em tamanho grande" [ref=f1e1589] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e1595] [cursor=pointer]
+            - article "Portal Amplo" [ref=f1e1599]:
+              - 'group "Prévia interativa: Portal Amplo, composição A" [ref=f1e1600]':
+                - generic [ref=f1e1602]:
+                  - generic "Header Portal Amplo" [ref=f1e1605]:
+                    - generic [ref=f1e1607]:
+                      - generic [ref=f1e1608]:
+                        - button "Grupo Jatobá — página inicial" [ref=f1e1609] [cursor=pointer]:
+                          - generic [ref=f1e1610]: Grupo Jatobá
+                        - navigation "Principal" [ref=f1e1615]:
+                          - list [ref=f1e1616]:
+                            - listitem [ref=f1e1617]:
+                              - button "Soluções" [ref=f1e1618] [cursor=pointer]
+                            - listitem [ref=f1e1622]:
+                              - button "Setores" [ref=f1e1623] [cursor=pointer]
+                            - listitem [ref=f1e1627]:
+                              - button "Recursos" [ref=f1e1628] [cursor=pointer]
+                            - listitem [ref=f1e1632]:
+                              - button "Sobre" [ref=f1e1633] [cursor=pointer]
+                      - generic [ref=f1e1635]:
+                        - searchbox "Buscar" [ref=f1e1640]
+                        - generic [ref=f1e1641]:
+                          - button "Entrar" [ref=f1e1642] [cursor=pointer]
+                          - button "Fale conosco" [ref=f1e1643] [cursor=pointer]
+                  - generic [ref=f1e1645]:
+                    - generic [ref=f1e1646]: Novo · versão 2.0
+                    - strong [ref=f1e1647]: Organize o trabalho da equipe em um só lugar
+                    - generic [ref=f1e1648]: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas.
+                    - generic [ref=f1e1649]:
+                      - generic [ref=f1e1650]: Começar agora
+                      - generic [ref=f1e1651]: Ver demonstração
+                - generic: Prévia interativa
+              - button "Portal Amplo Integral Fixo ao rolar Ocupa toda a largura da tela, com busca e mega menus para sites com muito conteúdo. Selecionar" [ref=f1e1667] [cursor=pointer]:
+                - generic [ref=f1e1668]:
+                  - generic [ref=f1e1669]: Portal Amplo
+                  - generic [ref=f1e1670]:
+                    - generic [ref=f1e1671]: Integral
+                    - generic [ref=f1e1672]: Fixo ao rolar
+                  - generic [ref=f1e1673]: Ocupa toda a largura da tela, com busca e mega menus para sites com muito conteúdo.
+                - generic [ref=f1e1674]: Selecionar
+              - generic [ref=f1e1675]:
+                - group "Composição de Portal Amplo" [ref=f1e1676]:
+                  - button "Composição A" [pressed] [ref=f1e1677] [cursor=pointer]
+                  - button "Composição B" [ref=f1e1678] [cursor=pointer]
+                - paragraph [ref=f1e1679]:
+                  - strong [ref=f1e1680]: Largura total, uma linha.
+                  - text: Logo e menus (com mega menus) à esquerda, de borda a borda; campo de busca, “Entrar” e “Fale conosco” à direita.
+                - generic [ref=f1e1681]:
+                  - button "Ver em tamanho grande" [ref=f1e1682] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e1688] [cursor=pointer]
+            - article "Conversão Direta" [ref=f1e1692]:
+              - 'group "Prévia interativa: Conversão Direta, composição A" [ref=f1e1693]':
+                - generic [ref=f1e1695]:
+                  - generic "Header Conversão Direta" [ref=f1e1698]:
+                    - generic [ref=f1e1700]:
+                      - button "Graviola — página inicial" [ref=f1e1702] [cursor=pointer]:
+                        - generic [ref=f1e1703]: Graviola
+                      - navigation "Principal" [ref=f1e1709]:
+                        - list [ref=f1e1710]:
+                          - listitem [ref=f1e1711]:
+                            - button "Como funciona" [ref=f1e1712] [cursor=pointer]
+                          - listitem [ref=f1e1714]:
+                            - button "Planos" [ref=f1e1715] [cursor=pointer]
+                          - listitem [ref=f1e1717]:
+                            - button "Depoimentos" [ref=f1e1718] [cursor=pointer]
+                          - listitem [ref=f1e1720]:
+                            - button "Dúvidas" [ref=f1e1721] [cursor=pointer]
+                      - generic [ref=f1e1724]:
+                        - button "Falar com vendas" [ref=f1e1725] [cursor=pointer]
+                        - button "Teste grátis por 14 dias" [ref=f1e1726] [cursor=pointer]
+                  - generic [ref=f1e1728]:
+                    - generic [ref=f1e1729]: Novo · versão 2.0
+                    - strong [ref=f1e1730]: Organize o trabalho da equipe em um só lugar
+                    - generic [ref=f1e1731]: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas.
+                    - generic [ref=f1e1732]:
+                      - generic [ref=f1e1733]: Começar agora
+                      - generic [ref=f1e1734]: Ver demonstração
+                - generic: Prévia interativa
+              - button "Conversão Direta Integral Fixo ao rolar Tudo leva ao botão principal. Para páginas de venda onde o objetivo é a pessoa começar um teste. Selecionar" [ref=f1e1750] [cursor=pointer]:
+                - generic [ref=f1e1751]:
+                  - generic [ref=f1e1752]: Conversão Direta
+                  - generic [ref=f1e1753]:
+                    - generic [ref=f1e1754]: Integral
+                    - generic [ref=f1e1755]: Fixo ao rolar
+                  - generic [ref=f1e1756]: Tudo leva ao botão principal. Para páginas de venda onde o objetivo é a pessoa começar um teste.
+                - generic [ref=f1e1757]: Selecionar
+              - generic [ref=f1e1758]:
+                - group "Composição de Conversão Direta" [ref=f1e1759]:
+                  - button "Composição A" [pressed] [ref=f1e1760] [cursor=pointer]
+                  - button "Composição B" [ref=f1e1761] [cursor=pointer]
+                - paragraph [ref=f1e1762]:
+                  - strong [ref=f1e1763]: CTA na ponta direita.
+                  - text: Logo à esquerda, links centrais com ponto no ativo, “Falar com vendas” (link discreto) e o CTA à direita.
+                - generic [ref=f1e1764]:
+                  - button "Ver em tamanho grande" [ref=f1e1765] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e1771] [cursor=pointer]
+            - article "Conta Pessoal" [ref=f1e1775]:
+              - 'group "Prévia interativa: Conta Pessoal, composição A" [ref=f1e1776]':
+                - generic [ref=f1e1778]:
+                  - generic "Header Conta Pessoal" [ref=f1e1781]:
+                    - generic [ref=f1e1783]:
+                      - generic [ref=f1e1784]:
+                        - button "Cupuaçu — página inicial" [ref=f1e1785] [cursor=pointer]:
+                          - generic [ref=f1e1786]:
+                            - generic [aria-hidden] [ref=f1e1787]: C
+                            - generic [ref=f1e1788]: Cupuaçu
+                        - navigation "Principal" [ref=f1e1789]:
+                          - list [ref=f1e1790]:
+                            - listitem [ref=f1e1791]:
+                              - button "Início" [ref=f1e1792] [cursor=pointer]
+                            - listitem [ref=f1e1794]:
+                              - button "Carteira" [ref=f1e1795] [cursor=pointer]
+                            - listitem [ref=f1e1797]:
+                              - button "Metas" [ref=f1e1798] [cursor=pointer]
+                            - listitem [ref=f1e1800]:
+                              - button "Relatórios" [ref=f1e1801] [cursor=pointer]
+                      - generic [ref=f1e1804]:
+                        - button "Notificações (2 novas)" [ref=f1e1805] [cursor=pointer]:
+                          - generic [aria-hidden] [ref=f1e1809]: "2"
+                        - button "Abrir menu do perfil" [ref=f1e1810] [cursor=pointer]:
+                          - generic [aria-hidden] [ref=f1e1811]: MA
+                          - generic [ref=f1e1812]:
+                            - strong [ref=f1e1813]: Marina Alves
+                            - generic [ref=f1e1814]: Plano Pro
+                  - generic [ref=f1e1817]:
+                    - generic [ref=f1e1818]:
+                      - generic [ref=f1e1819]:
+                        - generic [ref=f1e1820]: Bom dia, Marina
+                        - strong [ref=f1e1821]: Início
+                      - generic [ref=f1e1822]: + Novo
+                    - generic [ref=f1e1823]:
+                      - generic [ref=f1e1824]:
+                        - generic [ref=f1e1825]: Receita
+                        - strong [ref=f1e1826]: R$ 48,2 mil
+                        - generic [ref=f1e1827]: +12%
+                      - generic [ref=f1e1828]:
+                        - generic [ref=f1e1829]: Pedidos
+                        - strong [ref=f1e1830]: "1.284"
+                        - generic [ref=f1e1831]: +4%
+                      - generic [ref=f1e1832]:
+                        - generic [ref=f1e1833]: Clientes
+                        - strong [ref=f1e1834]: "312"
+                        - generic [ref=f1e1835]: −2%
+                - generic: Prévia interativa
+              - 'button "Conta Pessoal Integral Fixo ao rolar Destaca a pessoa logada: foto, nome e plano ficam à vista. Para apps de uso pessoal. Selecionar" [ref=f1e1849] [cursor=pointer]':
+                - generic [ref=f1e1850]:
+                  - generic [ref=f1e1851]: Conta Pessoal
+                  - generic [ref=f1e1852]:
+                    - generic [ref=f1e1853]: Integral
+                    - generic [ref=f1e1854]: Fixo ao rolar
+                  - generic [ref=f1e1855]: "Destaca a pessoa logada: foto, nome e plano ficam à vista. Para apps de uso pessoal."
+                - generic [ref=f1e1856]: Selecionar
+              - generic [ref=f1e1857]:
+                - group "Composição de Conta Pessoal" [ref=f1e1858]:
+                  - button "Composição A" [pressed] [ref=f1e1859] [cursor=pointer]
+                  - button "Composição B" [ref=f1e1860] [cursor=pointer]
+                - paragraph [ref=f1e1861]:
+                  - strong [ref=f1e1862]: Menu + chip de perfil.
+                  - text: Logo + links em pílula à esquerda; à direita, sino e chip de perfil (avatar, “Marina Alves” e plano “Pro”) que abre o menu da conta.
+                - generic [ref=f1e1863]:
+                  - button "Ver em tamanho grande" [ref=f1e1864] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e1870] [cursor=pointer]
+            - article "Vidro Fosco" [ref=f1e1874]:
+              - 'group "Prévia interativa: Vidro Fosco, composição A" [ref=f1e1875]':
+                - generic [ref=f1e1877]:
+                  - generic "Header Vidro Fosco" [ref=f1e1879]:
+                    - generic [ref=f1e1881]:
+                      - button "Ondina — página inicial" [ref=f1e1883] [cursor=pointer]:
+                        - generic [ref=f1e1884]: Ondina
+                      - navigation "Principal" [ref=f1e1890]:
+                        - list [ref=f1e1891]:
+                          - listitem [ref=f1e1892]:
+                            - button "Produto" [ref=f1e1893] [cursor=pointer]
+                          - listitem [ref=f1e1895]:
+                            - button "Recursos" [ref=f1e1896] [cursor=pointer]
+                          - listitem [ref=f1e1900]:
+                            - button "Preços" [ref=f1e1901] [cursor=pointer]
+                          - listitem [ref=f1e1903]:
+                            - button "Comunidade" [ref=f1e1904] [cursor=pointer]
+                      - generic [ref=f1e1907]:
+                        - button "Entrar" [ref=f1e1908] [cursor=pointer]
+                        - button "Baixar app" [ref=f1e1909] [cursor=pointer]
+                  - generic [ref=f1e1910]:
+                    - generic [ref=f1e1913]: Temporada 2027
+                    - strong [ref=f1e1914]: Viagens que começam pelo silêncio
+                    - generic [ref=f1e1915]: Roteiros autorais por paisagens pouco conhecidas do Brasil.
+                    - generic [ref=f1e1916]: Explorar destinos
+                - generic: Prévia interativa
+              - button "Vidro Fosco Flutuante Fixo ao rolar Barra translúcida, como vidro, que deixa o fundo colorido aparecer por trás. Visual tecnológico e leve. Selecionar" [ref=f1e1920] [cursor=pointer]:
+                - generic [ref=f1e1921]:
+                  - generic [ref=f1e1922]: Vidro Fosco
+                  - generic [ref=f1e1923]:
+                    - generic [ref=f1e1924]: Flutuante
+                    - generic [ref=f1e1925]: Fixo ao rolar
+                  - generic [ref=f1e1926]: Barra translúcida, como vidro, que deixa o fundo colorido aparecer por trás. Visual tecnológico e leve.
+                - generic [ref=f1e1927]: Selecionar
+              - generic [ref=f1e1928]:
+                - group "Composição de Vidro Fosco" [ref=f1e1929]:
+                  - button "Composição A" [pressed] [ref=f1e1930] [cursor=pointer]
+                  - button "Composição B" [ref=f1e1931] [cursor=pointer]
+                - paragraph [ref=f1e1932]:
+                  - strong [ref=f1e1933]: Vidro em toda a largura.
+                  - text: "Barra de vidro flutuante a 12 px das bordas, em toda a largura: logo, links em pílula no centro, “Entrar” e “Baixar app”."
+                - generic [ref=f1e1934]:
+                  - button "Ver em tamanho grande" [ref=f1e1935] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e1941] [cursor=pointer]
+            - article "Faixa da Marca" [ref=f1e1945]:
+              - 'group "Prévia interativa: Faixa da Marca, composição A" [ref=f1e1946]':
+                - generic [ref=f1e1948]:
+                  - generic "Header Faixa da Marca" [ref=f1e1951]:
+                    - generic [ref=f1e1953]:
+                      - button "Aroeira Engenharia — página inicial" [ref=f1e1955] [cursor=pointer]:
+                        - generic [ref=f1e1956]: Aroeira Engenharia
+                      - navigation "Principal" [ref=f1e1962]:
+                        - list [ref=f1e1963]:
+                          - listitem [ref=f1e1964]:
+                            - button "Empresa" [ref=f1e1965] [cursor=pointer]
+                          - listitem [ref=f1e1967]:
+                            - button "Serviços" [ref=f1e1968] [cursor=pointer]
+                          - listitem [ref=f1e1972]:
+                            - button "Obras" [ref=f1e1973] [cursor=pointer]
+                          - listitem [ref=f1e1975]:
+                            - button "Contato" [ref=f1e1976] [cursor=pointer]
+                      - generic [ref=f1e1979]:
+                        - generic [ref=f1e1980]: (11) 4000-1234
+                        - button "Solicitar orçamento" [ref=f1e1983] [cursor=pointer]
+                  - generic [ref=f1e1985]:
+                    - generic [ref=f1e1986]: Novo · versão 2.0
+                    - strong [ref=f1e1987]: Organize o trabalho da equipe em um só lugar
+                    - generic [ref=f1e1988]: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas.
+                    - generic [ref=f1e1989]:
+                      - generic [ref=f1e1990]: Começar agora
+                      - generic [ref=f1e1991]: Ver demonstração
+                - generic: Prévia interativa
+              - button "Faixa da Marca Integral Fixo ao rolar O header inteiro na cor principal da marca. Forte e institucional. Selecionar" [ref=f1e2007] [cursor=pointer]:
+                - generic [ref=f1e2008]:
+                  - generic [ref=f1e2009]: Faixa da Marca
+                  - generic [ref=f1e2010]:
+                    - generic [ref=f1e2011]: Integral
+                    - generic [ref=f1e2012]: Fixo ao rolar
+                  - generic [ref=f1e2013]: O header inteiro na cor principal da marca. Forte e institucional.
+                - generic [ref=f1e2014]: Selecionar
+              - generic [ref=f1e2015]:
+                - group "Composição de Faixa da Marca" [ref=f1e2016]:
+                  - button "Composição A" [pressed] [ref=f1e2017] [cursor=pointer]
+                  - button "Composição B" [ref=f1e2018] [cursor=pointer]
+                - paragraph [ref=f1e2019]:
+                  - strong [ref=f1e2020]: Barra única na cor da marca.
+                  - text: "Fundo primário em toda a barra: logo à esquerda, links claros sublinhados no centro, telefone e botão invertido (fundo claro) à direita."
+                - generic [ref=f1e2021]:
+                  - button "Ver em tamanho grande" [ref=f1e2022] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e2028] [cursor=pointer]
+            - article "Documentação Viva" [ref=f1e2032]:
+              - 'group "Prévia interativa: Documentação Viva, composição A" [ref=f1e2033]':
+                - generic [ref=f1e2035]:
+                  - generic "Header Documentação Viva" [ref=f1e2038]:
+                    - generic [ref=f1e2040]:
+                      - generic [ref=f1e2041]:
+                        - button "Jabuti — página inicial" [ref=f1e2042] [cursor=pointer]:
+                          - generic [ref=f1e2043]:
+                            - generic [ref=f1e2047]: Jabuti
+                            - generic [ref=f1e2048]: Docs
+                        - navigation "Principal" [ref=f1e2049]:
+                          - list [ref=f1e2050]:
+                            - listitem [ref=f1e2051]:
+                              - button "Guias" [ref=f1e2052] [cursor=pointer]
+                            - listitem [ref=f1e2054]:
+                              - button "Referência" [ref=f1e2055] [cursor=pointer]
+                            - listitem [ref=f1e2057]:
+                              - button "Exemplos" [ref=f1e2058] [cursor=pointer]
+                            - listitem [ref=f1e2060]:
+                              - button "Changelog" [ref=f1e2061] [cursor=pointer]
+                      - generic [ref=f1e2063]:
+                        - button "Buscar… ⌘K" [ref=f1e2064] [cursor=pointer]:
+                          - generic [ref=f1e2068]: Buscar…
+                          - generic [ref=f1e2069]: ⌘K
+                        - generic [ref=f1e2070]:
+                          - button "v3.2" [ref=f1e2071] [cursor=pointer]
+                          - button "Usar tema escuro" [ref=f1e2074] [cursor=pointer]
+                  - generic [ref=f1e2077]:
+                    - generic [ref=f1e2078]:
+                      - generic [ref=f1e2079]: Introdução
+                      - generic [ref=f1e2080]: Instalação
+                      - generic [ref=f1e2081]: Autenticação
+                      - generic [ref=f1e2082]: Primeira chamada
+                      - generic [ref=f1e2083]: Erros comuns
+                    - generic [ref=f1e2084]:
+                      - generic [ref=f1e2085]: Guias
+                      - strong [ref=f1e2086]: Autenticação com chaves de API
+                      - generic [ref=f1e2090]: "curl https://api.exemplo.dev/v1/projetos \\ -H \"Authorization: Bearer $CHAVE\""
+                - generic: Prévia interativa
+              - 'button "Documentação Viva Integral Fixo ao rolar Header de documentação técnica: abas de seções, versão, busca rápida e tema claro/escuro. Selecionar" [ref=f1e2091] [cursor=pointer]':
+                - generic [ref=f1e2092]:
+                  - generic [ref=f1e2093]: Documentação Viva
+                  - generic [ref=f1e2094]:
+                    - generic [ref=f1e2095]: Integral
+                    - generic [ref=f1e2096]: Fixo ao rolar
+                  - generic [ref=f1e2097]: "Header de documentação técnica: abas de seções, versão, busca rápida e tema claro/escuro."
+                - generic [ref=f1e2098]: Selecionar
+              - generic [ref=f1e2099]:
+                - group "Composição de Documentação Viva" [ref=f1e2100]:
+                  - button "Composição A" [pressed] [ref=f1e2101] [cursor=pointer]
+                  - button "Composição B" [ref=f1e2102] [cursor=pointer]
+                - paragraph [ref=f1e2103]:
+                  - strong [ref=f1e2104]: Abas à esquerda.
+                  - text: Logo com selo “Docs” + abas sublinhadas à esquerda; busca ⌘K, seletor de versão e tema à direita.
+                - generic [ref=f1e2105]:
+                  - button "Ver em tamanho grande" [ref=f1e2106] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e2112] [cursor=pointer]
+            - article "Noturno Neon" [ref=f1e2116]:
+              - 'group "Prévia interativa: Noturno Neon, composição A" [ref=f1e2117]':
+                - generic [ref=f1e2119]:
+                  - generic "Header Noturno Neon" [ref=f1e2122]:
+                    - generic [ref=f1e2124]:
+                      - button "Vagalume — página inicial" [ref=f1e2126] [cursor=pointer]:
+                        - generic [ref=f1e2127]: Vagalume
+                      - navigation "Principal" [ref=f1e2133]:
+                        - list [ref=f1e2134]:
+                          - listitem [ref=f1e2135]:
+                            - button "Plataforma" [ref=f1e2136] [cursor=pointer]
+                          - listitem [ref=f1e2140]:
+                            - button "Casos" [ref=f1e2141] [cursor=pointer]
+                          - listitem [ref=f1e2143]:
+                            - button "Preços" [ref=f1e2144] [cursor=pointer]
+                          - listitem [ref=f1e2146]:
+                            - button "Docs" [ref=f1e2147] [cursor=pointer]
+                      - generic [ref=f1e2150]:
+                        - button "Entrar" [ref=f1e2151] [cursor=pointer]
+                        - button "Solicitar acesso" [ref=f1e2152] [cursor=pointer]
+                  - generic [ref=f1e2154]:
+                    - generic [ref=f1e2155]: Novo · versão 2.0
+                    - strong [ref=f1e2156]: Organize o trabalho da equipe em um só lugar
+                    - generic [ref=f1e2157]: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas.
+                    - generic [ref=f1e2158]:
+                      - generic [ref=f1e2159]: Começar agora
+                      - generic [ref=f1e2160]: Ver demonstração
+                - generic: Prévia interativa
+              - button "Noturno Neon Integral Fixo ao rolar Header escuro com detalhes luminosos. Transmite tecnologia e inovação. Selecionar" [ref=f1e2176] [cursor=pointer]:
+                - generic [ref=f1e2177]:
+                  - generic [ref=f1e2178]: Noturno Neon
+                  - generic [ref=f1e2179]:
+                    - generic [ref=f1e2180]: Integral
+                    - generic [ref=f1e2181]: Fixo ao rolar
+                  - generic [ref=f1e2182]: Header escuro com detalhes luminosos. Transmite tecnologia e inovação.
+                - generic [ref=f1e2183]: Selecionar
+              - generic [ref=f1e2184]:
+                - group "Composição de Noturno Neon" [ref=f1e2185]:
+                  - button "Composição A" [pressed] [ref=f1e2186] [cursor=pointer]
+                  - button "Composição B" [ref=f1e2187] [cursor=pointer]
+                - paragraph [ref=f1e2188]:
+                  - strong [ref=f1e2189]: Escuro simétrico.
+                  - text: "Faixa escura: logo vazado à esquerda, links com ponto luminoso no ativo ao centro, “Entrar” e CTA à direita."
+                - generic [ref=f1e2190]:
+                  - button "Ver em tamanho grande" [ref=f1e2191] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e2197] [cursor=pointer]
+            - article "Abas Segmentadas" [ref=f1e2201]:
+              - 'group "Prévia interativa: Abas Segmentadas, composição A" [ref=f1e2202]':
+                - generic [ref=f1e2204]:
+                  - generic "Header Abas Segmentadas" [ref=f1e2207]:
+                    - generic [ref=f1e2209]:
+                      - button "Sapucaia — página inicial" [ref=f1e2211] [cursor=pointer]:
+                        - generic [ref=f1e2212]: Sapucaia
+                      - navigation "Principal" [ref=f1e2218]:
+                        - list [ref=f1e2219]:
+                          - listitem [ref=f1e2220]:
+                            - button "Painel" [ref=f1e2221] [cursor=pointer]
+                          - listitem [ref=f1e2223]:
+                            - button "Clientes" [ref=f1e2224] [cursor=pointer]
+                          - listitem [ref=f1e2226]:
+                            - button "Vendas" [ref=f1e2227] [cursor=pointer]
+                          - listitem [ref=f1e2229]:
+                            - button "Estoque" [ref=f1e2230] [cursor=pointer]
+                      - generic [ref=f1e2232]:
+                        - button "Abrir busca" [ref=f1e2234] [cursor=pointer]
+                        - generic [ref=f1e2238]:
+                          - button "Notificações (2 novas)" [ref=f1e2239] [cursor=pointer]:
+                            - generic [aria-hidden] [ref=f1e2243]: "2"
+                          - button "Abrir menu do perfil" [ref=f1e2244] [cursor=pointer]:
+                            - generic [aria-hidden] [ref=f1e2245]: MA
+                  - generic [ref=f1e2246]:
+                    - generic [ref=f1e2247]:
+                      - generic [ref=f1e2248]:
+                        - generic [ref=f1e2249]: Início / Painel
+                        - strong [ref=f1e2250]: Painel
+                      - generic [ref=f1e2251]: + Novo
+                    - generic [ref=f1e2252]:
+                      - generic [ref=f1e2253]:
+                        - generic [ref=f1e2254]: Receita
+                        - strong [ref=f1e2255]: R$ 48,2 mil
+                        - generic [ref=f1e2256]: +12%
+                      - generic [ref=f1e2257]:
+                        - generic [ref=f1e2258]: Pedidos
+                        - strong [ref=f1e2259]: "1.284"
+                        - generic [ref=f1e2260]: +4%
+                      - generic [ref=f1e2261]:
+                        - generic [ref=f1e2262]: Clientes
+                        - strong [ref=f1e2263]: "312"
+                        - generic [ref=f1e2264]: −2%
+                - generic: Prévia interativa
+              - button "Abas Segmentadas Integral Fixo ao rolar O menu parece um controle de abas agrupadas, bem claro sobre qual área está aberta. Selecionar" [ref=f1e2278] [cursor=pointer]:
+                - generic [ref=f1e2279]:
+                  - generic [ref=f1e2280]: Abas Segmentadas
+                  - generic [ref=f1e2281]:
+                    - generic [ref=f1e2282]: Integral
+                    - generic [ref=f1e2283]: Fixo ao rolar
+                  - generic [ref=f1e2284]: O menu parece um controle de abas agrupadas, bem claro sobre qual área está aberta.
+                - generic [ref=f1e2285]: Selecionar
+              - generic [ref=f1e2286]:
+                - group "Composição de Abas Segmentadas" [ref=f1e2287]:
+                  - button "Composição A" [pressed] [ref=f1e2288] [cursor=pointer]
+                  - button "Composição B" [ref=f1e2289] [cursor=pointer]
+                - paragraph [ref=f1e2290]:
+                  - strong [ref=f1e2291]: Abas no centro.
+                  - text: Logo à esquerda, grupo segmentado exatamente no centro, busca, notificações e avatar à direita.
+                - generic [ref=f1e2292]:
+                  - button "Ver em tamanho grande" [ref=f1e2293] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e2299] [cursor=pointer]
+            - article "Mega Menu Acadêmico" [ref=f1e2303]:
+              - 'group "Prévia interativa: Mega Menu Acadêmico, composição A" [ref=f1e2304]':
+                - generic [ref=f1e2306]:
+                  - generic "Header Mega Menu Acadêmico" [ref=f1e2309]:
+                    - generic [ref=f1e2311]:
+                      - generic [ref=f1e2312]:
+                        - button "Instituto Cambuí — página inicial" [ref=f1e2313] [cursor=pointer]:
+                          - generic [ref=f1e2314]: Instituto Cambuí
+                        - navigation "Principal" [ref=f1e2319]:
+                          - list [ref=f1e2320]:
+                            - listitem [ref=f1e2321]:
+                              - button "Cursos" [ref=f1e2322] [cursor=pointer]
+                            - listitem [ref=f1e2326]:
+                              - button "Graduação" [ref=f1e2327] [cursor=pointer]
+                            - listitem [ref=f1e2331]:
+                              - button "Pesquisa" [ref=f1e2332] [cursor=pointer]
+                            - listitem [ref=f1e2336]:
+                              - button "Biblioteca" [ref=f1e2337] [cursor=pointer]
+                      - generic [ref=f1e2340]:
+                        - button "Entrar" [ref=f1e2341] [cursor=pointer]
+                        - button "Inscreva-se" [ref=f1e2342] [cursor=pointer]
+                  - generic [ref=f1e2344]:
+                    - generic [ref=f1e2345]: Novo · versão 2.0
+                    - strong [ref=f1e2346]: Organize o trabalho da equipe em um só lugar
+                    - generic [ref=f1e2347]: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas.
+                    - generic [ref=f1e2348]:
+                      - generic [ref=f1e2349]: Começar agora
+                      - generic [ref=f1e2350]: Ver demonstração
+                - generic: Prévia interativa
+              - 'button "Mega Menu Acadêmico Integral Fixo ao rolar Para instituições com muitos cursos: menus grandes mostram tudo organizado em colunas. Selecionar" [ref=f1e2366] [cursor=pointer]':
+                - generic [ref=f1e2367]:
+                  - generic [ref=f1e2368]: Mega Menu Acadêmico
+                  - generic [ref=f1e2369]:
+                    - generic [ref=f1e2370]: Integral
+                    - generic [ref=f1e2371]: Fixo ao rolar
+                  - generic [ref=f1e2372]: "Para instituições com muitos cursos: menus grandes mostram tudo organizado em colunas."
+                - generic [ref=f1e2373]: Selecionar
+              - generic [ref=f1e2374]:
+                - group "Composição de Mega Menu Acadêmico" [ref=f1e2375]:
+                  - button "Composição A" [pressed] [ref=f1e2376] [cursor=pointer]
+                  - button "Composição B" [ref=f1e2377] [cursor=pointer]
+                - paragraph [ref=f1e2378]:
+                  - strong [ref=f1e2379]: Menus à esquerda.
+                  - text: Logo + menus (dois mega menus e um suspenso) à esquerda; “Portal do aluno” e “Inscreva-se” à direita.
+                - generic [ref=f1e2380]:
+                  - button "Ver em tamanho grande" [ref=f1e2381] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e2387] [cursor=pointer]
+            - article "Só o Essencial" [ref=f1e2391]:
+              - 'group "Prévia interativa: Só o Essencial, composição A" [ref=f1e2392]':
+                - generic [ref=f1e2394]:
+                  - generic "Header Só o Essencial" [ref=f1e2397]:
+                    - generic [ref=f1e2399]:
+                      - button "Talha — página inicial" [ref=f1e2401] [cursor=pointer]:
+                        - generic [ref=f1e2402]: Talha
+                      - button "Abrir menu" [ref=f1e2405] [cursor=pointer]:
+                        - generic [ref=f1e2407]: Menu
+                  - generic [ref=f1e2408]:
+                    - generic [ref=f1e2409]:
+                      - generic [ref=f1e2410]: TRABALHOS
+                      - strong [ref=f1e2411]: A cidade que aprendeu a ouvir os próprios rios
+                      - generic [ref=f1e2412]: Uma reportagem sobre bairros que transformaram enchentes em parques.
+                    - generic [ref=f1e2414]:
+                      - strong [ref=f1e2416]: Economia circular ganha força no interior
+                      - strong [ref=f1e2421]: O retorno das livrarias de bairro
+                - generic: Prévia interativa
+              - button "Só o Essencial Integral Rola com a página Apenas o logo e um botão “Menu”. Tudo o mais aparece só quando a pessoa pede. Selecionar" [ref=f1e2425] [cursor=pointer]:
+                - generic [ref=f1e2426]:
+                  - generic [ref=f1e2427]: Só o Essencial
+                  - generic [ref=f1e2428]:
+                    - generic [ref=f1e2429]: Integral
+                    - generic [ref=f1e2430]: Rola com a página
+                  - generic [ref=f1e2431]: Apenas o logo e um botão “Menu”. Tudo o mais aparece só quando a pessoa pede.
+                - generic [ref=f1e2432]: Selecionar
+              - generic [ref=f1e2433]:
+                - group "Composição de Só o Essencial" [ref=f1e2434]:
+                  - button "Composição A" [pressed] [ref=f1e2435] [cursor=pointer]
+                  - button "Composição B" [ref=f1e2436] [cursor=pointer]
+                - paragraph [ref=f1e2437]:
+                  - strong [ref=f1e2438]: Logo e Menu.
+                  - text: Logo à esquerda e o botão “Menu ☰” à direita; o menu abre um painel com os links em tipografia grande.
+                - generic [ref=f1e2439]:
+                  - button "Ver em tamanho grande" [ref=f1e2440] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e2446] [cursor=pointer]
+            - article "Estúdio Vértice" [ref=f1e2450]:
+              - 'group "Prévia interativa: Estúdio Vértice, composição A" [ref=f1e2451]':
+                - generic [ref=f1e2453]:
+                  - generic "Header Estúdio Vértice" [ref=f1e2456]:
+                    - generic [ref=f1e2458]:
+                      - button "Vértice — página inicial" [ref=f1e2460] [cursor=pointer]:
+                        - generic [ref=f1e2461]: Vértice
+                      - generic [ref=f1e2462]:
+                        - navigation "Principal" [ref=f1e2463]:
+                          - list [ref=f1e2464]:
+                            - listitem [ref=f1e2465]:
+                              - button "01 Trabalhos" [ref=f1e2466] [cursor=pointer]:
+                                - generic [ref=f1e2467]: "01"
+                                - generic [ref=f1e2468]: Trabalhos
+                            - listitem [ref=f1e2469]:
+                              - button "02 Estúdio" [ref=f1e2470] [cursor=pointer]:
+                                - generic [ref=f1e2471]: "02"
+                                - generic [ref=f1e2472]: Estúdio
+                            - listitem [ref=f1e2473]:
+                              - button "03 Serviços" [ref=f1e2474] [cursor=pointer]:
+                                - generic [ref=f1e2475]: "03"
+                                - generic [ref=f1e2476]: Serviços
+                            - listitem [ref=f1e2477]:
+                              - button "04 Contato" [ref=f1e2478] [cursor=pointer]:
+                                - generic [ref=f1e2479]: "04"
+                                - generic [ref=f1e2480]: Contato
+                        - generic [ref=f1e2481]: Disponível para projetos
+                  - generic [ref=f1e2485]:
+                    - generic [ref=f1e2486]:
+                      - generic [ref=f1e2487]: TRABALHOS
+                      - strong [ref=f1e2488]: A cidade que aprendeu a ouvir os próprios rios
+                      - generic [ref=f1e2489]: Uma reportagem sobre bairros que transformaram enchentes em parques.
+                    - generic [ref=f1e2491]:
+                      - strong [ref=f1e2493]: Economia circular ganha força no interior
+                      - strong [ref=f1e2498]: O retorno das livrarias de bairro
+                - generic: Prévia interativa
+              - 'button "Estúdio Vértice Integral Rola com a página Ousado, para agências e portfólios: logo grande, links numerados e um selo de disponibilidade. Selecionar" [ref=f1e2502] [cursor=pointer]':
+                - generic [ref=f1e2503]:
+                  - generic [ref=f1e2504]: Estúdio Vértice
+                  - generic [ref=f1e2505]:
+                    - generic [ref=f1e2506]: Integral
+                    - generic [ref=f1e2507]: Rola com a página
+                  - generic [ref=f1e2508]: "Ousado, para agências e portfólios: logo grande, links numerados e um selo de disponibilidade."
+                - generic [ref=f1e2509]: Selecionar
+              - generic [ref=f1e2510]:
+                - group "Composição de Estúdio Vértice" [ref=f1e2511]:
+                  - button "Composição A" [pressed] [ref=f1e2512] [cursor=pointer]
+                  - button "Composição B" [ref=f1e2513] [cursor=pointer]
+                - paragraph [ref=f1e2514]:
+                  - strong [ref=f1e2515]: Wordmark gigante.
+                  - text: Nome do estúdio enorme à esquerda; à direita, links numerados e o selo “Disponível para projetos”.
+                - generic [ref=f1e2516]:
+                  - button "Ver em tamanho grande" [ref=f1e2517] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e2523] [cursor=pointer]
+            - article "Busca em Primeiro Lugar" [ref=f1e2527]:
+              - 'group "Prévia interativa: Busca em Primeiro Lugar, composição A" [ref=f1e2528]':
+                - generic [ref=f1e2530]:
+                  - generic "Header Busca em Primeiro Lugar" [ref=f1e2533]:
+                    - generic [ref=f1e2535]:
+                      - generic [ref=f1e2536]:
+                        - button "Guará — página inicial" [ref=f1e2537] [cursor=pointer]:
+                          - generic [ref=f1e2538]:
+                            - generic [ref=f1e2542]: Guará
+                            - generic [ref=f1e2543]: Ajuda
+                        - button "Navegar" [ref=f1e2544] [cursor=pointer]
+                      - searchbox "Buscar" [ref=f1e2552]
+                      - generic [ref=f1e2558]:
+                        - button "Entrar" [ref=f1e2559] [cursor=pointer]
+                        - button "Abrir chamado" [ref=f1e2560] [cursor=pointer]
+                  - generic [ref=f1e2561]:
+                    - generic [ref=f1e2562]:
+                      - generic [ref=f1e2563]: Introdução
+                      - generic [ref=f1e2564]: Instalação
+                      - generic [ref=f1e2565]: Autenticação
+                      - generic [ref=f1e2566]: Primeira chamada
+                      - generic [ref=f1e2567]: Erros comuns
+                    - generic [ref=f1e2568]:
+                      - generic [ref=f1e2569]: Primeiros passos
+                      - strong [ref=f1e2570]: Autenticação com chaves de API
+                      - generic [ref=f1e2574]: "curl https://api.exemplo.dev/v1/projetos \\ -H \"Authorization: Bearer $CHAVE\""
+                - generic: Prévia interativa
+              - 'button "Busca em Primeiro Lugar Integral Fixo ao rolar Para centrais de ajuda e bases de conhecimento: a busca é a maior coisa do header. Selecionar" [ref=f1e2575] [cursor=pointer]':
+                - generic [ref=f1e2576]:
+                  - generic [ref=f1e2577]: Busca em Primeiro Lugar
+                  - generic [ref=f1e2578]:
+                    - generic [ref=f1e2579]: Integral
+                    - generic [ref=f1e2580]: Fixo ao rolar
+                  - generic [ref=f1e2581]: "Para centrais de ajuda e bases de conhecimento: a busca é a maior coisa do header."
+                - generic [ref=f1e2582]: Selecionar
+              - generic [ref=f1e2583]:
+                - group "Composição de Busca em Primeiro Lugar" [ref=f1e2584]:
+                  - button "Composição A" [pressed] [ref=f1e2585] [cursor=pointer]
+                  - button "Composição B" [ref=f1e2586] [cursor=pointer]
+                - paragraph [ref=f1e2587]:
+                  - strong [ref=f1e2588]: Busca central.
+                  - text: Logo com selo “Ajuda” e “Navegar ▾” à esquerda, busca larga no centro com sugestões, “Entrar” e “Abrir chamado” à direita.
+                - generic [ref=f1e2589]:
+                  - button "Ver em tamanho grande" [ref=f1e2590] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e2596] [cursor=pointer]
+            - article "Âncora Fixa" [ref=f1e2600]:
+              - 'group "Prévia interativa: Âncora Fixa, composição A" [ref=f1e2601]':
+                - generic [ref=f1e2603]:
+                  - generic "Header Âncora Fixa" [ref=f1e2606]:
+                    - generic [ref=f1e2608]:
+                      - button "Copaíba Serviços — página inicial" [ref=f1e2610] [cursor=pointer]:
+                        - generic [ref=f1e2611]:
+                          - generic [aria-hidden] [ref=f1e2612]: C
+                          - generic [ref=f1e2613]: Copaíba Serviços
+                      - navigation "Principal" [ref=f1e2615]:
+                        - list [ref=f1e2616]:
+                          - listitem [ref=f1e2617]:
+                            - button "Serviços" [ref=f1e2618] [cursor=pointer]
+                          - listitem [ref=f1e2622]:
+                            - button "Unidades" [ref=f1e2623] [cursor=pointer]
+                          - listitem [ref=f1e2625]:
+                            - button "Planos" [ref=f1e2626] [cursor=pointer]
+                          - listitem [ref=f1e2628]:
+                            - button "Sobre" [ref=f1e2629] [cursor=pointer]
+                      - generic [ref=f1e2632]:
+                        - generic [ref=f1e2633]: (11) 4000-1234
+                        - button "Agendar visita" [ref=f1e2636] [cursor=pointer]
+                  - generic [ref=f1e2638]:
+                    - generic [ref=f1e2639]: Novo · versão 2.0
+                    - strong [ref=f1e2640]: Organize o trabalho da equipe em um só lugar
+                    - generic [ref=f1e2641]: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas.
+                    - generic [ref=f1e2642]:
+                      - generic [ref=f1e2643]: Começar agora
+                      - generic [ref=f1e2644]: Ver demonstração
+                - generic: Prévia interativa
+              - button "Âncora Fixa Integral Fixo ao rolar Começa alto e encolhe quando a pessoa rola a página, sempre visível no topo. Selecionar" [ref=f1e2660] [cursor=pointer]:
+                - generic [ref=f1e2661]:
+                  - generic [ref=f1e2662]: Âncora Fixa
+                  - generic [ref=f1e2663]:
+                    - generic [ref=f1e2664]: Integral
+                    - generic [ref=f1e2665]: Fixo ao rolar
+                  - generic [ref=f1e2666]: Começa alto e encolhe quando a pessoa rola a página, sempre visível no topo.
+                - generic [ref=f1e2667]: Selecionar
+              - generic [ref=f1e2668]:
+                - group "Composição de Âncora Fixa" [ref=f1e2669]:
+                  - button "Composição A" [pressed] [ref=f1e2670] [cursor=pointer]
+                  - button "Composição B" [ref=f1e2671] [cursor=pointer]
+                - paragraph [ref=f1e2672]:
+                  - strong [ref=f1e2673]: Alto que encolhe.
+                  - text: No topo da página tem 80 px; após rolar, encolhe para 60 px e ganha sombra. Logo à esquerda, links no centro, telefone e CTA à direita.
+                - generic [ref=f1e2674]:
+                  - button "Ver em tamanho grande" [ref=f1e2675] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e2681] [cursor=pointer]
+            - article "Painel Analítico" [ref=f1e2685]:
+              - 'group "Prévia interativa: Painel Analítico, composição A" [ref=f1e2686]':
+                - generic [ref=f1e2688]:
+                  - generic "Header Painel Analítico" [ref=f1e2691]:
+                    - generic [ref=f1e2693]:
+                      - generic [ref=f1e2694]:
+                        - button "Seriema — página inicial" [ref=f1e2695] [cursor=pointer]:
+                          - generic [ref=f1e2696]: Seriema
+                        - navigation "Principal" [ref=f1e2701]:
+                          - list [ref=f1e2702]:
+                            - listitem [ref=f1e2703]:
+                              - button "Visão geral" [ref=f1e2704] [cursor=pointer]
+                            - listitem [ref=f1e2706]:
+                              - button "Aquisição" [ref=f1e2707] [cursor=pointer]
+                            - listitem [ref=f1e2709]:
+                              - button "Retenção" [ref=f1e2710] [cursor=pointer]
+                            - listitem [ref=f1e2712]:
+                              - button "Receita" [ref=f1e2713] [cursor=pointer]
+                      - generic [ref=f1e2716]:
+                        - button "Últimos 30 dias" [ref=f1e2717] [cursor=pointer]
+                        - button "Exportar" [ref=f1e2720] [cursor=pointer]
+                        - button "Abrir menu do perfil" [ref=f1e2724] [cursor=pointer]:
+                          - generic [aria-hidden] [ref=f1e2725]: MA
+                  - generic [ref=f1e2726]:
+                    - generic [ref=f1e2727]:
+                      - generic [ref=f1e2728]:
+                        - generic [ref=f1e2729]: Início / Visão geral
+                        - strong [ref=f1e2730]: Visão geral
+                      - generic [ref=f1e2731]: + Novo
+                    - generic [ref=f1e2732]:
+                      - generic [ref=f1e2733]:
+                        - generic [ref=f1e2734]: Receita
+                        - strong [ref=f1e2735]: R$ 48,2 mil
+                        - generic [ref=f1e2736]: +12%
+                      - generic [ref=f1e2737]:
+                        - generic [ref=f1e2738]: Pedidos
+                        - strong [ref=f1e2739]: "1.284"
+                        - generic [ref=f1e2740]: +4%
+                      - generic [ref=f1e2741]:
+                        - generic [ref=f1e2742]: Clientes
+                        - strong [ref=f1e2743]: "312"
+                        - generic [ref=f1e2744]: −2%
+                - generic: Prévia interativa
+              - 'button "Painel Analítico Integral Fixo ao rolar Para dashboards: abas de relatórios, escolha de período e botão de exportar. Selecionar" [ref=f1e2758] [cursor=pointer]':
+                - generic [ref=f1e2759]:
+                  - generic [ref=f1e2760]: Painel Analítico
+                  - generic [ref=f1e2761]:
+                    - generic [ref=f1e2762]: Integral
+                    - generic [ref=f1e2763]: Fixo ao rolar
+                  - generic [ref=f1e2764]: "Para dashboards: abas de relatórios, escolha de período e botão de exportar."
+                - generic [ref=f1e2765]: Selecionar
+              - generic [ref=f1e2766]:
+                - group "Composição de Painel Analítico" [ref=f1e2767]:
+                  - button "Composição A" [pressed] [ref=f1e2768] [cursor=pointer]
+                  - button "Composição B" [ref=f1e2769] [cursor=pointer]
+                - paragraph [ref=f1e2770]:
+                  - strong [ref=f1e2771]: Abas e filtros em uma linha.
+                  - text: Logo + abas encaixadas à esquerda; seletor de período, “Exportar” e avatar à direita.
+                - generic [ref=f1e2772]:
+                  - button "Ver em tamanho grande" [ref=f1e2773] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e2779] [cursor=pointer]
+            - article "Banco Alameda" [ref=f1e2783]:
+              - 'group "Prévia interativa: Banco Alameda, composição A" [ref=f1e2784]':
+                - generic [ref=f1e2786]:
+                  - generic "Header Banco Alameda" [ref=f1e2789]:
+                    - generic [ref=f1e2790]:
+                      - generic [ref=f1e2791]:
+                        - button "Banco Alameda — página inicial" [ref=f1e2793] [cursor=pointer]:
+                          - generic [ref=f1e2794]: Banco Alameda
+                        - generic [ref=f1e2800]:
+                          - group "Público" [ref=f1e2801]:
+                            - button "Para você" [pressed] [ref=f1e2802] [cursor=pointer]
+                            - button "Para empresas" [ref=f1e2803] [cursor=pointer]
+                          - button "Entrar" [ref=f1e2804] [cursor=pointer]
+                          - button "Abrir conta" [ref=f1e2805] [cursor=pointer]
+                      - navigation "Principal" [ref=f1e2807]:
+                        - list [ref=f1e2808]:
+                          - listitem [ref=f1e2809]:
+                            - button "Conta" [ref=f1e2810] [cursor=pointer]
+                          - listitem [ref=f1e2812]:
+                            - button "Cartões" [ref=f1e2813] [cursor=pointer]
+                          - listitem [ref=f1e2815]:
+                            - button "Investimentos" [ref=f1e2816] [cursor=pointer]
+                          - listitem [ref=f1e2820]:
+                            - button "Empréstimos" [ref=f1e2821] [cursor=pointer]
+                  - generic [ref=f1e2824]:
+                    - generic [ref=f1e2825]: Novo · versão 2.0
+                    - strong [ref=f1e2826]: Organize o trabalho da equipe em um só lugar
+                    - generic [ref=f1e2827]: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas.
+                    - generic [ref=f1e2828]:
+                      - generic [ref=f1e2829]: Começar agora
+                      - generic [ref=f1e2830]: Ver demonstração
+                - generic: Prévia interativa
+              - 'button "Banco Alameda Integral Fixo ao rolar Header de banco ou serviço com públicos diferentes: alterna entre “Para você” e “Para empresas”. Selecionar" [ref=f1e2846] [cursor=pointer]':
+                - generic [ref=f1e2847]:
+                  - generic [ref=f1e2848]: Banco Alameda
+                  - generic [ref=f1e2849]:
+                    - generic [ref=f1e2850]: Integral
+                    - generic [ref=f1e2851]: Fixo ao rolar
+                  - generic [ref=f1e2852]: "Header de banco ou serviço com públicos diferentes: alterna entre “Para você” e “Para empresas”."
+                - generic [ref=f1e2853]: Selecionar
+              - generic [ref=f1e2854]:
+                - group "Composição de Banco Alameda" [ref=f1e2855]:
+                  - button "Composição A" [pressed] [ref=f1e2856] [cursor=pointer]
+                  - button "Composição B" [ref=f1e2857] [cursor=pointer]
+                - paragraph [ref=f1e2858]:
+                  - strong [ref=f1e2859]: Público e ações em cima.
+                  - text: Linha 1 com logo, alternador “Para você | Para empresas”, “Acessar” e “Abrir conta”; linha 2 com os produtos.
+                - generic [ref=f1e2860]:
+                  - button "Ver em tamanho grande" [ref=f1e2861] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e2867] [cursor=pointer]
+            - article "Contagem Regressiva" [ref=f1e2871]:
+              - 'group "Prévia interativa: Contagem Regressiva, composição A" [ref=f1e2872]':
+                - generic [ref=f1e2874]:
+                  - generic "Header Contagem Regressiva" [ref=f1e2876]:
+                    - generic [ref=f1e2878]:
+                      - button "Festival Jaçanã — página inicial" [ref=f1e2880] [cursor=pointer]:
+                        - generic [ref=f1e2881]: Festival Jaçanã
+                      - navigation "Principal" [ref=f1e2884]:
+                        - list [ref=f1e2885]:
+                          - listitem [ref=f1e2886]:
+                            - button "Line-up" [ref=f1e2887] [cursor=pointer]
+                          - listitem [ref=f1e2889]:
+                            - button "Ingressos" [ref=f1e2890] [cursor=pointer]
+                          - listitem [ref=f1e2892]:
+                            - button "Mapa" [ref=f1e2893] [cursor=pointer]
+                          - listitem [ref=f1e2895]:
+                            - button "Dúvidas" [ref=f1e2896] [cursor=pointer]
+                      - generic [ref=f1e2899]:
+                        - generic "Faltam 12 dias e 8 horas" [ref=f1e2900]:
+                          - generic [ref=f1e2901]: 12d
+                          - generic [ref=f1e2902]: 08h
+                          - generic [ref=f1e2903]: 41m
+                        - button "Garantir ingresso" [ref=f1e2904] [cursor=pointer]
+                  - generic [ref=f1e2905]:
+                    - generic [ref=f1e2908]: 14 — 16 de março · Parque das Águas
+                    - strong [ref=f1e2909]: Três dias de música à beira do lago
+                    - generic [ref=f1e2910]: 40 artistas, 3 palcos e acampamento
+                    - generic [ref=f1e2911]: Ver line-up
+                - generic: Prévia interativa
+              - 'button "Contagem Regressiva Flutuante Fixo ao rolar Para eventos e lançamentos: mostra quanto tempo falta e um botão para garantir o ingresso. Selecionar" [ref=f1e2915] [cursor=pointer]':
+                - generic [ref=f1e2916]:
+                  - generic [ref=f1e2917]: Contagem Regressiva
+                  - generic [ref=f1e2918]:
+                    - generic [ref=f1e2919]: Flutuante
+                    - generic [ref=f1e2920]: Fixo ao rolar
+                  - generic [ref=f1e2921]: "Para eventos e lançamentos: mostra quanto tempo falta e um botão para garantir o ingresso."
+                - generic [ref=f1e2922]: Selecionar
+              - generic [ref=f1e2923]:
+                - group "Composição de Contagem Regressiva" [ref=f1e2924]:
+                  - button "Composição A" [pressed] [ref=f1e2925] [cursor=pointer]
+                  - button "Composição B" [ref=f1e2926] [cursor=pointer]
+                - paragraph [ref=f1e2927]:
+                  - strong [ref=f1e2928]: Pílula em gradiente.
+                  - text: "Barra flutuante em gradiente: nome do festival, links em pílula ao centro, contagem regressiva e CTA à direita."
+                - generic [ref=f1e2929]:
+                  - button "Ver em tamanho grande" [ref=f1e2930] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e2936] [cursor=pointer]
+            - article "Feira Express" [ref=f1e2940]:
+              - 'group "Prévia interativa: Feira Express, composição A" [ref=f1e2941]':
+                - generic [ref=f1e2943]:
+                  - generic "Header Feira Express" [ref=f1e2946]:
+                    - generic [ref=f1e2948]:
+                      - generic [ref=f1e2949]:
+                        - button "Feira Juçara — página inicial" [ref=f1e2950] [cursor=pointer]:
+                          - generic [ref=f1e2951]: Feira Juçara
+                        - button "Navegar" [ref=f1e2956] [cursor=pointer]
+                      - searchbox "Buscar" [ref=f1e2964]
+                      - generic [ref=f1e2970]:
+                        - button "Entregar em Rua das Flores, 120" [ref=f1e2971] [cursor=pointer]:
+                          - generic [ref=f1e2975]:
+                            - generic [ref=f1e2976]: Entregar em
+                            - strong [ref=f1e2977]: Rua das Flores, 120
+                        - button "Sacola (3 itens)" [ref=f1e2980] [cursor=pointer]:
+                          - generic [aria-hidden] [ref=f1e2984]: "3"
+                  - generic [ref=f1e2985]:
+                    - generic [ref=f1e2986]:
+                      - generic [ref=f1e2987]:
+                        - generic [ref=f1e2988]: Coleção de verão
+                        - strong [ref=f1e2989]: Leve, fresca e feita para durar
+                      - generic [ref=f1e2990]: Ver coleção
+                    - generic [ref=f1e2991]:
+                      - generic [ref=f1e2992]:
+                        - generic [ref=f1e2997]: Vaso de cerâmica
+                        - strong [ref=f1e2998]: R$ 129
+                      - generic [ref=f1e2999]:
+                        - generic [ref=f1e3004]: Luminária Brisa
+                        - strong [ref=f1e3005]: R$ 249
+                      - generic [ref=f1e3006]:
+                        - generic [ref=f1e3011]: Manta de linho
+                        - strong [ref=f1e3012]: R$ 189
+                      - generic [ref=f1e3013]:
+                        - generic [ref=f1e3018]: Caneca esmaltada
+                        - strong [ref=f1e3019]: R$ 59
+                - generic: Prévia interativa
+              - 'button "Feira Express Integral Fixo ao rolar Para delivery e marketplaces: endereço de entrega, categorias com ícones, busca e carrinho. Selecionar" [ref=f1e3020] [cursor=pointer]':
+                - generic [ref=f1e3021]:
+                  - generic [ref=f1e3022]: Feira Express
+                  - generic [ref=f1e3023]:
+                    - generic [ref=f1e3024]: Integral
+                    - generic [ref=f1e3025]: Fixo ao rolar
+                  - generic [ref=f1e3026]: "Para delivery e marketplaces: endereço de entrega, categorias com ícones, busca e carrinho."
+                - generic [ref=f1e3027]: Selecionar
+              - generic [ref=f1e3028]:
+                - group "Composição de Feira Express" [ref=f1e3029]:
+                  - button "Composição A" [pressed] [ref=f1e3030] [cursor=pointer]
+                  - button "Composição B" [ref=f1e3031] [cursor=pointer]
+                - paragraph [ref=f1e3032]:
+                  - strong [ref=f1e3033]: Endereço + busca central.
+                  - text: Logo e “Navegar ▾” à esquerda, busca larga no centro; endereço de entrega e carrinho à direita.
+                - generic [ref=f1e3034]:
+                  - button "Ver em tamanho grande" [ref=f1e3035] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e3041] [cursor=pointer]
+            - article "Blocos Bento" [ref=f1e3045]:
+              - 'group "Prévia interativa: Blocos Bento, composição A" [ref=f1e3046]':
+                - generic [ref=f1e3048]:
+                  - generic "Header Blocos Bento" [ref=f1e3051]:
+                    - generic [ref=f1e3053]:
+                      - button "Mosaico — página inicial" [ref=f1e3055] [cursor=pointer]:
+                        - generic [ref=f1e3056]: Mosaico
+                      - navigation "Principal" [ref=f1e3062]:
+                        - list [ref=f1e3063]:
+                          - listitem [ref=f1e3064]:
+                            - button "Criar Páginas e posts" [ref=f1e3065] [cursor=pointer]:
+                              - generic [ref=f1e3069]:
+                                - generic [ref=f1e3070]: Criar
+                                - generic [ref=f1e3071]: Páginas e posts
+                          - listitem [ref=f1e3072]:
+                            - button "Publicar Agende em um clique" [ref=f1e3073] [cursor=pointer]:
+                              - generic [ref=f1e3078]:
+                                - generic [ref=f1e3079]: Publicar
+                                - generic [ref=f1e3080]: Agende em um clique
+                          - listitem [ref=f1e3081]:
+                            - button "Medir Resultados ao vivo" [ref=f1e3082] [cursor=pointer]:
+                              - generic [ref=f1e3086]:
+                                - generic [ref=f1e3087]: Medir
+                                - generic [ref=f1e3088]: Resultados ao vivo
+                          - listitem [ref=f1e3089]:
+                            - button "Automatizar Fluxos sem código" [ref=f1e3090] [cursor=pointer]:
+                              - generic [ref=f1e3094]:
+                                - generic [ref=f1e3095]: Automatizar
+                                - generic [ref=f1e3096]: Fluxos sem código
+                      - generic [ref=f1e3098]:
+                        - button "Entrar" [ref=f1e3099] [cursor=pointer]
+                        - button "Experimentar" [ref=f1e3100] [cursor=pointer]
+                  - generic [ref=f1e3102]:
+                    - generic [ref=f1e3103]: Novo · versão 2.0
+                    - strong [ref=f1e3104]: Organize o trabalho da equipe em um só lugar
+                    - generic [ref=f1e3105]: Planeje, acompanhe e entregue projetos com clareza, sem planilhas soltas.
+                    - generic [ref=f1e3106]:
+                      - generic [ref=f1e3107]: Começar agora
+                      - generic [ref=f1e3108]: Ver demonstração
+                - generic: Prévia interativa
+              - button "Blocos Bento Integral Fixo ao rolar Cada item do menu é um bloquinho com ícone e uma frase curta. Explica o produto já no header. Selecionar" [ref=f1e3124] [cursor=pointer]:
+                - generic [ref=f1e3125]:
+                  - generic [ref=f1e3126]: Blocos Bento
+                  - generic [ref=f1e3127]:
+                    - generic [ref=f1e3128]: Integral
+                    - generic [ref=f1e3129]: Fixo ao rolar
+                  - generic [ref=f1e3130]: Cada item do menu é um bloquinho com ícone e uma frase curta. Explica o produto já no header.
+                - generic [ref=f1e3131]: Selecionar
+              - generic [ref=f1e3132]:
+                - group "Composição de Blocos Bento" [ref=f1e3133]:
+                  - button "Composição A" [pressed] [ref=f1e3134] [cursor=pointer]
+                  - button "Composição B" [ref=f1e3135] [cursor=pointer]
+                - paragraph [ref=f1e3136]:
+                  - strong [ref=f1e3137]: Blocos no centro.
+                  - text: Logo à esquerda, quatro blocos (ícone + rótulo + descrição) no centro, “Entrar” e “Experimentar” à direita.
+                - generic [ref=f1e3138]:
+                  - button "Ver em tamanho grande" [ref=f1e3139] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e3145] [cursor=pointer]
+            - article "Praça da Comunidade" [ref=f1e3149]:
+              - 'group "Prévia interativa: Praça da Comunidade, composição A" [ref=f1e3150]':
+                - generic [ref=f1e3152]:
+                  - generic "Header Praça da Comunidade" [ref=f1e3155]:
+                    - generic [ref=f1e3157]:
+                      - button "Quero-quero — página inicial" [ref=f1e3159] [cursor=pointer]:
+                        - generic [ref=f1e3160]:
+                          - generic [aria-hidden] [ref=f1e3161]: Q
+                          - generic [ref=f1e3162]: Quero-quero
+                      - navigation "Principal" [ref=f1e3164]:
+                        - list [ref=f1e3165]:
+                          - listitem [ref=f1e3166]:
+                            - button "Feed" [ref=f1e3167] [cursor=pointer]
+                          - listitem [ref=f1e3172]:
+                            - button "Grupos" [ref=f1e3173] [cursor=pointer]
+                          - listitem [ref=f1e3180]:
+                            - button "Eventos" [ref=f1e3181] [cursor=pointer]
+                          - listitem [ref=f1e3185]:
+                            - button "Mensagens 3" [ref=f1e3186] [cursor=pointer]:
+                              - generic [ref=f1e3189]: Mensagens
+                              - generic [ref=f1e3190]: "3"
+                      - generic [ref=f1e3191]:
+                        - searchbox "Buscar" [ref=f1e3196]
+                        - generic [ref=f1e3197]:
+                          - button "Novo" [ref=f1e3198] [cursor=pointer]
+                          - button "Notificações (2 novas)" [ref=f1e3200] [cursor=pointer]:
+                            - generic [aria-hidden] [ref=f1e3204]: "2"
+                          - button "Abrir menu do perfil" [ref=f1e3205] [cursor=pointer]:
+                            - generic [aria-hidden] [ref=f1e3206]: MA
+                  - generic [ref=f1e3207]:
+                    - generic [ref=f1e3208]:
+                      - generic [ref=f1e3209]:
+                        - generic [ref=f1e3210]: Início / Feed
+                        - strong [ref=f1e3211]: Feed
+                      - generic [ref=f1e3212]: + Novo
+                    - generic [ref=f1e3213]:
+                      - generic [ref=f1e3214]:
+                        - generic [ref=f1e3215]: Receita
+                        - strong [ref=f1e3216]: R$ 48,2 mil
+                        - generic [ref=f1e3217]: +12%
+                      - generic [ref=f1e3218]:
+                        - generic [ref=f1e3219]: Pedidos
+                        - strong [ref=f1e3220]: "1.284"
+                        - generic [ref=f1e3221]: +4%
+                      - generic [ref=f1e3222]:
+                        - generic [ref=f1e3223]: Clientes
+                        - strong [ref=f1e3224]: "312"
+                        - generic [ref=f1e3225]: −2%
+                - generic: Prévia interativa
+              - 'button "Praça da Comunidade Integral Fixo ao rolar Para redes e comunidades: ícones de feed, grupos e mensagens, busca e botão de publicar. Selecionar" [ref=f1e3239] [cursor=pointer]':
+                - generic [ref=f1e3240]:
+                  - generic [ref=f1e3241]: Praça da Comunidade
+                  - generic [ref=f1e3242]:
+                    - generic [ref=f1e3243]: Integral
+                    - generic [ref=f1e3244]: Fixo ao rolar
+                  - generic [ref=f1e3245]: "Para redes e comunidades: ícones de feed, grupos e mensagens, busca e botão de publicar."
+                - generic [ref=f1e3246]: Selecionar
+              - generic [ref=f1e3247]:
+                - group "Composição de Praça da Comunidade" [ref=f1e3248]:
+                  - button "Composição A" [pressed] [ref=f1e3249] [cursor=pointer]
+                  - button "Composição B" [ref=f1e3250] [cursor=pointer]
+                - paragraph [ref=f1e3251]:
+                  - strong [ref=f1e3252]: Ícones no centro.
+                  - text: Logo à esquerda, abas com ícone + rótulo no centro (contador em Mensagens), busca, “+ Novo”, notificações e avatar à direita.
+                - generic [ref=f1e3253]:
+                  - button "Ver em tamanho grande" [ref=f1e3254] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e3260] [cursor=pointer]
+            - article "Hub de Produtos" [ref=f1e3264]:
+              - 'group "Prévia interativa: Hub de Produtos, composição A" [ref=f1e3265]':
+                - generic [ref=f1e3267]:
+                  - generic "Header Hub de Produtos" [ref=f1e3270]:
+                    - generic [ref=f1e3272]:
+                      - generic [ref=f1e3273]:
+                        - button "Rede Cerrado — página inicial" [ref=f1e3274] [cursor=pointer]:
+                          - generic [ref=f1e3275]: Rede Cerrado
+                        - navigation "Principal" [ref=f1e3280]:
+                          - list [ref=f1e3281]:
+                            - listitem [ref=f1e3282]:
+                              - button "Início" [ref=f1e3283] [cursor=pointer]
+                            - listitem [ref=f1e3285]:
+                              - button "Recentes" [ref=f1e3286] [cursor=pointer]
+                            - listitem [ref=f1e3288]:
+                              - button "Compartilhados" [ref=f1e3289] [cursor=pointer]
+                            - listitem [ref=f1e3291]:
+                              - button "Lixeira" [ref=f1e3292] [cursor=pointer]
+                      - generic [ref=f1e3294]:
+                        - searchbox "Buscar" [ref=f1e3299]
+                        - generic [ref=f1e3300]:
+                          - button "Aplicativos" [ref=f1e3301] [cursor=pointer]
+                          - button "Ajuda" [ref=f1e3307] [cursor=pointer]
+                          - button "Abrir menu do perfil" [ref=f1e3311] [cursor=pointer]:
+                            - generic [aria-hidden] [ref=f1e3312]: MA
+                  - generic [ref=f1e3313]:
+                    - generic [ref=f1e3314]:
+                      - generic [ref=f1e3315]:
+                        - generic [ref=f1e3316]: Bom dia, Marina
+                        - strong [ref=f1e3317]: Início
+                      - generic [ref=f1e3318]: + Novo
+                    - generic [ref=f1e3319]:
+                      - generic [ref=f1e3320]:
+                        - generic [ref=f1e3321]: Receita
+                        - strong [ref=f1e3322]: R$ 48,2 mil
+                        - generic [ref=f1e3323]: +12%
+                      - generic [ref=f1e3324]:
+                        - generic [ref=f1e3325]: Pedidos
+                        - strong [ref=f1e3326]: "1.284"
+                        - generic [ref=f1e3327]: +4%
+                      - generic [ref=f1e3328]:
+                        - generic [ref=f1e3329]: Clientes
+                        - strong [ref=f1e3330]: "312"
+                        - generic [ref=f1e3331]: −2%
+                - generic: Prévia interativa
+              - 'button "Hub de Produtos Integral Fixo ao rolar Para empresas com vários aplicativos: uma grade permite pular de um produto para outro. Selecionar" [ref=f1e3345] [cursor=pointer]':
+                - generic [ref=f1e3346]:
+                  - generic [ref=f1e3347]: Hub de Produtos
+                  - generic [ref=f1e3348]:
+                    - generic [ref=f1e3349]: Integral
+                    - generic [ref=f1e3350]: Fixo ao rolar
+                  - generic [ref=f1e3351]: "Para empresas com vários aplicativos: uma grade permite pular de um produto para outro."
+                - generic [ref=f1e3352]: Selecionar
+              - generic [ref=f1e3353]:
+                - group "Composição de Hub de Produtos" [ref=f1e3354]:
+                  - button "Composição A" [pressed] [ref=f1e3355] [cursor=pointer]
+                  - button "Composição B" [ref=f1e3356] [cursor=pointer]
+                - paragraph [ref=f1e3357]:
+                  - strong [ref=f1e3358]: Grade de apps à direita.
+                  - text: Logo + links à esquerda; busca, grade de aplicativos (abre um painel com 6 produtos), ajuda e avatar à direita.
+                - generic [ref=f1e3359]:
+                  - button "Ver em tamanho grande" [ref=f1e3360] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e3366] [cursor=pointer]
+            - article "Duplo Compacto" [ref=f1e3370]:
+              - 'group "Prévia interativa: Duplo Compacto, composição A" [ref=f1e3371]':
+                - generic [ref=f1e3373]:
+                  - generic "Header Duplo Compacto" [ref=f1e3376]:
+                    - generic [ref=f1e3377]:
+                      - generic [ref=f1e3378]:
+                        - button "Mangaba ERP — página inicial" [ref=f1e3380] [cursor=pointer]:
+                          - generic [ref=f1e3381]: Mangaba ERP
+                        - searchbox "Buscar" [ref=f1e3391]
+                        - generic [ref=f1e3393]:
+                          - button "Notificações (2 novas)" [ref=f1e3394] [cursor=pointer]:
+                            - generic [aria-hidden] [ref=f1e3398]: "2"
+                          - button "Ajuda" [ref=f1e3399] [cursor=pointer]
+                          - button "Abrir menu do perfil" [ref=f1e3403] [cursor=pointer]:
+                            - generic [aria-hidden] [ref=f1e3404]: MA
+                      - navigation "Principal" [ref=f1e3406]:
+                        - list [ref=f1e3407]:
+                          - listitem [ref=f1e3408]:
+                            - button "Vendas" [ref=f1e3409] [cursor=pointer]
+                          - listitem [ref=f1e3413]:
+                            - button "Compras" [ref=f1e3414] [cursor=pointer]
+                          - listitem [ref=f1e3418]:
+                            - button "Estoque" [ref=f1e3419] [cursor=pointer]
+                          - listitem [ref=f1e3421]:
+                            - button "Financeiro" [ref=f1e3422] [cursor=pointer]
+                          - listitem [ref=f1e3426]:
+                            - button "Fiscal" [ref=f1e3427] [cursor=pointer]
+                  - generic [ref=f1e3429]:
+                    - generic [ref=f1e3430]:
+                      - generic [ref=f1e3431]:
+                        - generic [ref=f1e3432]: Início / Vendas
+                        - strong [ref=f1e3433]: Vendas
+                      - generic [ref=f1e3434]: + Novo
+                    - generic [ref=f1e3435]:
+                      - generic [ref=f1e3436]:
+                        - generic [ref=f1e3437]: Receita
+                        - strong [ref=f1e3438]: R$ 48,2 mil
+                        - generic [ref=f1e3439]: +12%
+                      - generic [ref=f1e3440]:
+                        - generic [ref=f1e3441]: Pedidos
+                        - strong [ref=f1e3442]: "1.284"
+                        - generic [ref=f1e3443]: +4%
+                      - generic [ref=f1e3444]:
+                        - generic [ref=f1e3445]: Clientes
+                        - strong [ref=f1e3446]: "312"
+                        - generic [ref=f1e3447]: −2%
+                - generic: Prévia interativa
+              - button "Duplo Compacto Integral Fixo ao rolar Duas faixas baixinhas para sistemas de gestão com muitos módulos (ERP). Selecionar" [ref=f1e3461] [cursor=pointer]:
+                - generic [ref=f1e3462]:
+                  - generic [ref=f1e3463]: Duplo Compacto
+                  - generic [ref=f1e3464]:
+                    - generic [ref=f1e3465]: Integral
+                    - generic [ref=f1e3466]: Fixo ao rolar
+                  - generic [ref=f1e3467]: Duas faixas baixinhas para sistemas de gestão com muitos módulos (ERP).
+                - generic [ref=f1e3468]: Selecionar
+              - generic [ref=f1e3469]:
+                - group "Composição de Duplo Compacto" [ref=f1e3470]:
+                  - button "Composição A" [pressed] [ref=f1e3471] [cursor=pointer]
+                  - button "Composição B" [ref=f1e3472] [cursor=pointer]
+                - paragraph [ref=f1e3473]:
+                  - strong [ref=f1e3474]: Faixa escura + módulos.
+                  - text: Faixa escura de 44 px com logo, busca e ícones; faixa de 36 px com os módulos em abas (vários com submenu).
+                - generic [ref=f1e3475]:
+                  - button "Ver em tamanho grande" [ref=f1e3476] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e3482] [cursor=pointer]
+            - article "Caderno Minimal" [ref=f1e3486]:
+              - 'group "Prévia interativa: Caderno Minimal, composição A" [ref=f1e3487]':
+                - generic [ref=f1e3489]:
+                  - generic "Header Caderno Minimal" [ref=f1e3492]:
+                    - generic [ref=f1e3494]:
+                      - generic [ref=f1e3495]:
+                        - button "Caderno Sépia — página inicial" [ref=f1e3496] [cursor=pointer]:
+                          - generic [ref=f1e3497]: Caderno Sépia
+                        - navigation "Principal" [ref=f1e3498]:
+                          - list [ref=f1e3499]:
+                            - listitem [ref=f1e3500]:
+                              - button "Ensaios" [ref=f1e3501] [cursor=pointer]
+                            - listitem [ref=f1e3503]:
+                              - button "Entrevistas" [ref=f1e3504] [cursor=pointer]
+                            - listitem [ref=f1e3506]:
+                              - button "Guias" [ref=f1e3507] [cursor=pointer]
+                            - listitem [ref=f1e3509]:
+                              - button "Arquivo" [ref=f1e3510] [cursor=pointer]
+                      - generic [ref=f1e3512]:
+                        - button "Abrir busca" [ref=f1e3514] [cursor=pointer]
+                        - button "Assinar newsletter" [ref=f1e3519] [cursor=pointer]
+                  - generic [ref=f1e3520]:
+                    - generic [ref=f1e3521]:
+                      - generic [ref=f1e3522]: ENSAIOS
+                      - strong [ref=f1e3523]: A cidade que aprendeu a ouvir os próprios rios
+                      - generic [ref=f1e3524]: Uma reportagem sobre bairros que transformaram enchentes em parques.
+                    - generic [ref=f1e3526]:
+                      - strong [ref=f1e3528]: Economia circular ganha força no interior
+                      - strong [ref=f1e3533]: O retorno das livrarias de bairro
+                - generic: Prévia interativa
+              - 'button "Caderno Minimal Integral Rola com a página Para blogs e newsletters: logo serifado, categorias e um convite para assinar. Selecionar" [ref=f1e3537] [cursor=pointer]':
+                - generic [ref=f1e3538]:
+                  - generic [ref=f1e3539]: Caderno Minimal
+                  - generic [ref=f1e3540]:
+                    - generic [ref=f1e3541]: Integral
+                    - generic [ref=f1e3542]: Rola com a página
+                  - generic [ref=f1e3543]: "Para blogs e newsletters: logo serifado, categorias e um convite para assinar."
+                - generic [ref=f1e3544]: Selecionar
+              - generic [ref=f1e3545]:
+                - group "Composição de Caderno Minimal" [ref=f1e3546]:
+                  - button "Composição A" [pressed] [ref=f1e3547] [cursor=pointer]
+                  - button "Composição B" [ref=f1e3548] [cursor=pointer]
+                - paragraph [ref=f1e3549]:
+                  - strong [ref=f1e3550]: Categorias ao lado do logo.
+                  - text: Logo serifado + categorias sublinhadas à esquerda; busca em ícone e “Assinar newsletter” (contornado) à direita.
+                - generic [ref=f1e3551]:
+                  - button "Ver em tamanho grande" [ref=f1e3552] [cursor=pointer]
+                  - button "Prompt deste elemento" [ref=f1e3558] [cursor=pointer]
+  - status:
+    - generic [ref=f1e3562]: Header “Arquipélago” (composição A) selecionado e incluído no Master Prompt.
+```
+
+# Test source
+
+```ts
+  45  |   )
+  46  |   await page.reload()
+  47  | }
+  48  | 
+  49  | /** Controle de seleção do cartão (nunca um botão de dentro da prévia interativa). */
+  50  | const hitOf = (card: Locator) => card.locator('xpath=self::*[@aria-pressed] | .//*[@data-role="select"] | .//*[contains(concat(" ", @class, " "), " ui-option__hit ")]').first()
+  51  | const scrollY = (page: Page) => page.evaluate(() => Math.round(window.scrollY))
+  52  | 
+  53  | /** Rola a página para que o centro do elemento fique na altura `y` da janela. */
+  54  | async function placeAt(page: Page, target: Locator, y: number) {
+  55  |   await target.scrollIntoViewIfNeeded()
+  56  |   await target.evaluate((el, y) => {
+  57  |     const r = el.getBoundingClientRect()
+  58  |     window.scrollBy(0, r.top + r.height / 2 - y)
+  59  |   }, y)
+  60  |   await page.waitForTimeout(250)
+  61  | }
+  62  | 
+  63  | /** Centro do elemento e se ele mesmo recebe o toque nesse ponto (nada por cima). */
+  64  | async function hitInfo(target: Locator) {
+  65  |   return target.evaluate((el) => {
+  66  |     const r = el.getBoundingClientRect()
+  67  |     const x = r.left + r.width / 2
+  68  |     const y = r.top + r.height / 2
+  69  |     const hit = document.elementFromPoint(x, y)
+  70  |     const cover = hit && !el.contains(hit) ? (hit.closest('[class]') as HTMLElement | null)?.className?.toString().slice(0, 40) ?? hit.tagName : null
+  71  |     return { x, y, own: Boolean(hit && el.contains(hit)), cover }
+  72  |   })
+  73  | }
+  74  | 
+  75  | /** Toque "humano": dedo na coordenada visível, sem a rolagem automática do Playwright. */
+  76  | async function tapWhereVisible(page: Page, target: Locator) {
+  77  |   const h = await hitInfo(target)
+  78  |   expect(h.own, `o alvo precisa estar visível e livre no ponto do toque (coberto por ${h.cover})`).toBe(true)
+  79  |   await page.touchscreen.tap(h.x, h.y)
+  80  | }
+  81  | 
+  82  | async function masterPrompt(page: Page) {
+  83  |   await go(page, '/prompt')
+  84  |   return (await page.getByTestId('master-prompt-text').textContent()) ?? ''
+  85  | }
+  86  | 
+  87  | async function download(page: Page, trigger: () => Promise<void>, timeout = 10_000) {
+  88  |   const [d] = await Promise.all([page.waitForEvent('download', { timeout }), trigger()])
+  89  |   return { name: d.suggestedFilename(), text: readFileSync((await d.path())!, 'utf8') }
+  90  | }
+  91  | 
+  92  | /** Valida um texto CSS no próprio navegador (CSSOM) e devolve as variáveis de :root. */
+  93  | async function parseCss(page: Page, css: string) {
+  94  |   return page.evaluate((css) => {
+  95  |     const sheet = new CSSStyleSheet()
+  96  |     sheet.replaceSync(css)
+  97  |     const vars: Record<string, string> = {}
+  98  |     for (const rule of Array.from(sheet.cssRules)) {
+  99  |       if (rule instanceof CSSStyleRule && rule.selectorText === ':root') {
+  100 |         for (const name of Array.from(rule.style)) if (name.startsWith('--')) vars[name] = rule.style.getPropertyValue(name).trim()
+  101 |       }
+  102 |     }
+  103 |     return { rules: sheet.cssRules.length, vars }
+  104 |   }, css)
+  105 | }
+  106 | 
+  107 | const GALLERIES = [
+  108 |   { route: '/modulos/desktop', prefix: 'desktop-option-' },
+  109 |   { route: '/modulos/mobile', prefix: 'mobile-option-' },
+  110 |   { route: '/modulos/landing', prefix: 'landing-option-' },
+  111 |   { route: '/modulos/login', prefix: 'login-option-' },
+  112 |   { route: '/modulos/cadastro', prefix: 'signup-option-' },
+  113 |   { route: '/modulos/cores', prefix: 'palette-option-' },
+  114 |   { route: '/modulos/navegacao', prefix: 'header-option-' },
+  115 |   { route: '/modulos/navegacao', prefix: 'sidebar-option-', tab: /Sidebars/ },
+  116 | ]
+  117 | 
+  118 | async function openGallery(page: Page, g: (typeof GALLERIES)[number]) {
+  119 |   await go(page, g.route)
+  120 |   if (g.tab) await page.getByRole('tab', { name: g.tab }).click()
+  121 |   await expect(page.locator(`[data-testid^="${g.prefix}"]`).first()).toBeVisible()
+  122 | }
+  123 | 
+  124 | /** Critério de "estado selecionado visível": aria-pressed, data-selected, selo legível dentro do cartão e borda alterada. */
+  125 | async function expectVisiblySelected(page: Page, prefix: string, index: number, how: 'click' | 'tap') {
+  126 |   const card = page.locator(`[data-testid^="${prefix}"]`).nth(index)
+  127 |   await placeAt(page, card, 420)
+  128 |   const borderBefore = await card.evaluate((el) => `${getComputedStyle(el).borderColor}|${getComputedStyle(el).boxShadow}`)
+  129 |   if (how === 'tap') await tapWhereVisible(page, hitOf(card))
+  130 |   else await hitOf(card).click()
+  131 |   await expect(hitOf(card)).toHaveAttribute('aria-pressed', 'true')
+  132 |   await expect(card).toHaveAttribute('data-selected', 'true')
+  133 |   const badge = card.locator('.ui-option__check, .nvs-card__badge')
+  134 |   await expect(badge).toBeVisible()
+  135 |   const b = await badge.evaluate((el) => {
+  136 |     const r = el.getBoundingClientRect()
+  137 |     const c = el.closest('[data-testid]')!.getBoundingClientRect()
+  138 |     const cs = getComputedStyle(el)
+  139 |     return { w: r.width, h: r.height, fs: parseFloat(cs.fontSize), opacity: Number(cs.opacity), inside: r.left >= c.left - 1 && r.right <= c.right + 1 && r.top >= c.top - 1, text: el.textContent?.trim() }
+  140 |   })
+  141 |   expect(b.w, `selo de seleção (${b.text}) com largura legível`).toBeGreaterThanOrEqual(60)
+  142 |   expect(b.h).toBeGreaterThanOrEqual(20)
+  143 |   expect(b.fs).toBeGreaterThanOrEqual(12)
+  144 |   expect(b.opacity).toBeGreaterThan(0.9)
+> 145 |   expect(b.inside, 'o selo fica dentro do cartão').toBe(true)
+      |                                                    ^ Error: o selo fica dentro do cartão
+  146 |   const borderAfter = await card.evaluate((el) => `${getComputedStyle(el).borderColor}|${getComputedStyle(el).boxShadow}`)
+  147 |   expect(borderAfter, 'a borda do cartão muda ao selecionar').not.toBe(borderBefore)
+  148 |   await expect(page.locator(`[data-testid^="${prefix}"][data-selected="true"]`), 'só um cartão selecionado por galeria').toHaveCount(1)
+  149 | }
+  150 | 
+  151 | /* ========================================================================== */
+  152 | 
+  153 | test.describe('REG-01 · Layout escolhido mostra estado selecionado', () => {
+  154 |   test('desktop 1440: todas as galerias marcam o cartão escolhido (aria-pressed, selo e borda)', async ({ page }) => {
+  155 |     await freshStart(page)
+  156 |     for (const g of GALLERIES) {
+  157 |       await openGallery(page, g)
+  158 |       await expectVisiblySelected(page, g.prefix, 3, 'click')
+  159 |     }
+  160 |   })
+  161 | 
+  162 |   test.describe('celular 360×800', () => {
+  163 |     test.use(MOBILE)
+  164 |     test('toque marca o cartão escolhido em layouts, paletas e landing', async ({ page }) => {
+  165 |       await freshStart(page)
+  166 |       for (const g of GALLERIES.filter((x) => ['desktop-option-', 'mobile-option-', 'palette-option-', 'landing-option-'].includes(x.prefix))) {
+  167 |         await openGallery(page, g)
+  168 |         await expectVisiblySelected(page, g.prefix, 2, 'tap')
+  169 |       }
+  170 |     })
+  171 |   })
+  172 | 
+  173 |   test('modo guiado: painel de destaque confirma "Escolhido para o seu projeto"', async ({ page }) => {
+  174 |     await freshStart(page)
+  175 |     await go(page, '/guiado/desktop')
+  176 |     await expect(page.getByText('Exemplo · ainda não escolhido')).toBeVisible()
+  177 |     await page.getByRole('button', { name: 'Escolher este modelo' }).click()
+  178 |     await expect(page.getByText('Escolhido para o seu projeto')).toBeVisible()
+  179 |     await expect(page.getByTestId('guided-next')).toBeEnabled()
+  180 |   })
+  181 | })
+  182 | 
+  183 | test.describe('REG-02 · Clicar em miniaturas não rola a página sozinha', () => {
+  184 |   test.describe('celular 360×800 (toque real, sem rolagem automática da ferramenta)', () => {
+  185 |     test.use(MOBILE)
+  186 |     test('etapa 3 do guiado: "Escolher este modelo" e miniaturas mantêm a rolagem', async ({ page }) => {
+  187 |       await freshStart(page)
+  188 |       await go(page, '/guiado/objetivo')
+  189 |       await page.getByTestId('project-type-saas').tap()
+  190 |       await go(page, '/guiado/desktop')
+  191 |       const choose = page.getByRole('button', { name: 'Escolher este modelo' })
+  192 |       // O relato original (−378 px) veio de locator.tap() com o botão sob a barra superior fixa:
+  193 |       // o Playwright rola o alvo para o centro antes de tocar. Aqui o dedo toca onde o botão está.
+  194 |       for (const y of [140, 420]) {
+  195 |         await placeAt(page, choose, y)
+  196 |         const before = await scrollY(page)
+  197 |         await tapWhereVisible(page, choose)
+  198 |         await expect.poll(async () => (await savedProject(page)).layout.desktopId).toBe('sidebar-integral-classica')
+  199 |         await page.waitForTimeout(400)
+  200 |         expect(await scrollY(page), `rolagem ao tocar "Escolher este modelo" em y=${y}`).toBe(before)
+  201 |         await page.evaluate((key) => {
+  202 |           const raw = JSON.parse(localStorage.getItem(key)!)
+  203 |           raw.state.project.layout.desktopId = null
+  204 |           localStorage.setItem(key, JSON.stringify(raw))
+  205 |         }, STORAGE)
+  206 |         await page.reload()
+  207 |         await go(page, '/guiado/desktop')
+  208 |       }
+  209 |       const cards = page.locator('[data-testid^="desktop-option-"]')
+  210 |       for (const i of [4, 19, 36]) {
+  211 |         const hit = hitOf(cards.nth(i))
+  212 |         await placeAt(page, hit, 400)
+  213 |         const before = await scrollY(page)
+  214 |         await tapWhereVisible(page, hit)
+  215 |         await page.waitForTimeout(400)
+  216 |         expect(await scrollY(page), `miniatura ${i}`).toBe(before)
+  217 |         await expect(hit).toHaveAttribute('aria-pressed', 'true')
+  218 |       }
+  219 |     })
+  220 | 
+  221 |     test('celular (etapa 4) e paletas: tocar em miniaturas mantém a rolagem', async ({ page }) => {
+  222 |       await freshStart(page)
+  223 |       for (const [route, prefix, idx] of [
+  224 |         ['/modulos/mobile', 'mobile-option-', [1, 3]],
+  225 |         ['/modulos/cores', 'palette-option-', [7, 30]],
+  226 |       ] as const) {
+  227 |         await go(page, route)
+  228 |         for (const i of idx) {
+  229 |           const hit = hitOf(page.locator(`[data-testid^="${prefix}"]`).nth(i))
+  230 |           await hit.scrollIntoViewIfNeeded()
+  231 |           await placeAt(page, hit, 400)
+  232 |           const before = await scrollY(page)
+  233 |           await tapWhereVisible(page, hit)
+  234 |           await page.waitForTimeout(400)
+  235 |           expect(await scrollY(page), `${route} #${i}`).toBe(before)
+  236 |         }
+  237 |       }
+  238 |     })
+  239 |   })
+  240 | 
+  241 |   test('desktop 1440: "Escolher este modelo" no guiado não desloca a página', async ({ page }) => {
+  242 |     await freshStart(page)
+  243 |     await go(page, '/guiado/desktop')
+  244 |     await page.mouse.wheel(0, 600)
+  245 |     await page.waitForTimeout(300)
+```
