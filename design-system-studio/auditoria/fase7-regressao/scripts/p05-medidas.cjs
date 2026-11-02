@@ -56,7 +56,7 @@ async function cardOverflow(page) {
 
 ;(async () => {
   // REG-04 / REG-17
-  for (const vp of [{ width: 360, height: 800 }, { width: 1440, height: 900 }]) {
+  if (!process.env.ONLY_PREVIEWS) for (const vp of [{ width: 360, height: 800 }, { width: 1440, height: 900 }]) {
     const { browser, page } = await open(vp.width < 500 ? 'android' : 'desktop')
     for (const r of ['/', '/guiado/objetivo', '/guiado/entrada', '/modulos/desktop', '/modulos/mobile', '/modulos/landing', '/modulos/login', '/modulos/cadastro', '/modulos/cores', '/modulos/navegacao', '/modulos/componentes', '/modulos/templates', '/modulos/inspiracao', '/prompt', '/exportar']) {
       await go(page, r)
@@ -66,7 +66,7 @@ async function cardOverflow(page) {
     }
     await browser.close()
   }
-  for (const w of [320, 768, 1024]) {
+  if (!process.env.ONLY_PREVIEWS) for (const w of [320, 768, 1024]) {
     const { browser, page } = await open('desktop', { viewport: { width: w, height: 900 } })
     for (const r of ['/modulos/desktop', '/modulos/mobile', '/modulos/landing', '/modulos/login', '/modulos/navegacao', '/modulos/cores']) {
       await go(page, r)
@@ -76,8 +76,8 @@ async function cardOverflow(page) {
     console.log('REG-17', w, 'ok/medido')
     await browser.close()
   }
-  // landscape 800x360 sobreposição de texto no estágio mobile
-  {
+  // landscape 800x360: ver p06-paisagem.cjs
+  if (false) {
     const { browser, page } = await open('android', { viewport: { width: 800, height: 360 } })
     await go(page, '/modulos/mobile')
     await page.locator('[data-testid^="mobile-option-"]').first().locator('.ui-option__hit').click()

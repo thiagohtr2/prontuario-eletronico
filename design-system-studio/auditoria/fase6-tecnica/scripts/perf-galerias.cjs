@@ -16,7 +16,7 @@ const SCENARIOS = [
   { name: 'Componentes: famílias', route: 'modulos/componentes', sel: '[data-testid^="family-option-"] .ui-option__hit' },
   { name: 'Paletas (60)', route: 'modulos/cores', sel: '[data-testid^="palette-option-"] .ui-option__hit' },
   { name: 'Navegação: headers/sidebars', route: 'modulos/navegacao', sel: '[data-testid^="header-option-"] .nvs-card__select' },
-  { name: 'Templates (28)', route: 'modulos/templates', sel: '[data-testid^="template-option-"] .ui-option__hit' },
+  { name: 'Templates: abrir editor (28)', route: 'modulos/templates', sel: '[data-testid^="template-option-"] .ui-option__hit', closeWithEsc: true },
   { name: 'Inspiração: abrir visualizador (20)', route: 'modulos/inspiracao', sel: '[data-testid^="inspiration-option-"] .ui-option__hit', closeWithEsc: true },
 ]
 
