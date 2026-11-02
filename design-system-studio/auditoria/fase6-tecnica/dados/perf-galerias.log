@@ -11,3 +11,26 @@ run 2 Layouts mobile (44): n=44 INPmed=100 max=216 LT=4 mut=30 rendered=null nod
 run 2 Componentes: categorias (66 × 16 famílias): n=66 INPmed=132 max=232 LT=6 mut=66 rendered=null nodes=1778 load=14.2
 run 2 Componentes: famílias: n=16 INPmed=40 max=96 LT=1 mut=6 rendered=null nodes=1157 load=16.11
 run 2 Paletas (60): n=60 INPmed=36 max=72 LT=0 mut=39 rendered=null nodes=2690 load=15.02
+run 2 Navegação: headers/sidebars: n=36 INPmed=44 max=64 LT=0 mut=10 rendered=null nodes=4059 load=14.65
+run 2 Templates: abrir editor (28): n=28 INPmed=216 max=456 LT=17 mut=6 rendered=null nodes=5986 load=14.55
+run 2 Inspiração: abrir visualizador (20): n=20 INPmed=172 max=656 LT=11 mut=4 rendered=null nodes=9111 load=15.69
+run 3 Layouts desktop (42): n=42 INPmed=32 max=56 LT=0 mut=51.5 rendered=null nodes=5628 load=14.91
+run 3 Layouts mobile (44): n=44 INPmed=52 max=80 LT=0 mut=30 rendered=null nodes=5521 load=13.79
+run 3 Componentes: categorias (66 × 16 famílias): n=66 INPmed=84 max=112 LT=4 mut=66 rendered=null nodes=1778 load=12.13
+run 3 Componentes: famílias: n=16 INPmed=24 max=32 LT=0 mut=6 rendered=null nodes=1157 load=10.5
+run 3 Paletas (60): n=60 INPmed=28 max=40 LT=0 mut=39 rendered=null nodes=2690 load=9.27
+run 3 Navegação: headers/sidebars: n=36 INPmed=40 max=88 LT=1 mut=10 rendered=null nodes=4059 load=9.81
+run 3 Templates: abrir editor (28): n=28 INPmed=112 max=344 LT=11 mut=6 rendered=null nodes=5986 load=10.26
+run 3 Inspiração: abrir visualizador (20): n=20 INPmed=152 max=248 LT=10 mut=4 rendered=null nodes=9111 load=9.22
+┌────────────────────────────────────────────┬──────┬───────┬───────────────────────┬─────────┬─────────────┬────────────────────┬─────────────────────┬───────────────────┬──────────────────────────────────┬──────────────────┬────────┬────────┬─────────┐
+│ (index)                                    │ runs │ items │ inpMedianaDasMedianas │ inpPior │ procMediana │ longTasksPorRodada │ longTaskMsPorRodada │ mutacoesPorClique │ componentesRenderizadosPorClique │ commitsPorClique │ nosDom │ heapMB │ loadavg │
+├────────────────────────────────────────────┼──────┼───────┼───────────────────────┼─────────┼─────────────┼────────────────────┼─────────────────────┼───────────────────┼──────────────────────────────────┼──────────────────┼────────┼────────┼─────────┤
+│ Layouts desktop (42)                       │ 3    │ 42    │ 36                    │ 104     │ 6           │ 0                  │ 0                   │ 51.5              │ undefined                        │ undefined        │ 5628   │ 12.6   │ 14.91   │
+│ Layouts mobile (44)                        │ 3    │ 44    │ 52                    │ 216     │ 7           │ 0                  │ 0                   │ 30                │ undefined                        │ undefined        │ 5521   │ 10.2   │ 13.79   │
+│ Componentes: categorias (66 × 16 famílias) │ 3    │ 66    │ 88                    │ 232     │ 16          │ 5                  │ 346                 │ 66                │ undefined                        │ undefined        │ 1778   │ 10.2   │ 13.72   │
+│ Componentes: famílias                      │ 3    │ 16    │ 24                    │ 96      │ 6.5         │ 0                  │ 0                   │ 6                 │ undefined                        │ undefined        │ 1157   │ 9.6    │ 12.21   │
+│ Paletas (60)                               │ 3    │ 60    │ 32                    │ 72      │ 9.5         │ 0                  │ 0                   │ 39                │ undefined                        │ undefined        │ 2690   │ 8.9    │ 11.15   │
+│ Navegação: headers/sidebars                │ 3    │ 36    │ 40                    │ 88      │ 5           │ 0                  │ 0                   │ 10                │ undefined                        │ undefined        │ 4059   │ 12.9   │ 11.01   │
+│ Templates: abrir editor (28)               │ 3    │ 28    │ 156                   │ 456     │ 69.5        │ 11                 │ 1298                │ 6                 │ undefined                        │ undefined        │ 5986   │ 14.4   │ 10.91   │
+│ Inspiração: abrir visualizador (20)        │ 3    │ 20    │ 172                   │ 800     │ 78.5        │ 11                 │ 1619                │ 4                 │ undefined                        │ undefined        │ 9111   │ 27.5   │ 14.16   │
+└────────────────────────────────────────────┴──────┴───────┴───────────────────────┴─────────┴─────────────┴────────────────────┴─────────────────────┴───────────────────┴──────────────────────────────────┴──────────────────┴────────┴────────┴─────────┘

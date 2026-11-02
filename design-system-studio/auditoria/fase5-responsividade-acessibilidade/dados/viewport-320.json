@@ -1,0 +1,34 @@
+{
+  "320/livre": {
+    "innerWidth": 348,
+    "innerHeight": 870,
+    "clientW": 320,
+    "scrollW": 348,
+    "vvW": 320,
+    "vvScale": 1
+  },
+  "344/livre": {
+    "innerWidth": 348,
+    "innerHeight": 810,
+    "clientW": 344,
+    "scrollW": 348,
+    "vvW": 344,
+    "vvScale": 1
+  },
+  "320/modulos/cores": {
+    "innerWidth": 320,
+    "innerHeight": 800,
+    "clientW": 320,
+    "scrollW": 320,
+    "vvW": 320,
+    "vvScale": 1
+  },
+  "360/livre": {
+    "innerWidth": 360,
+    "innerHeight": 800,
+    "clientW": 360,
+    "scrollW": 360,
+    "vvW": 360,
+    "vvScale": 1
+  }
+}

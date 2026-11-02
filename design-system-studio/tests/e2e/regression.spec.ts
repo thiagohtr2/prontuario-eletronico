@@ -136,13 +136,13 @@ async function expectVisiblySelected(page: Page, prefix: string, index: number, 
     const r = el.getBoundingClientRect()
     const c = el.closest('[data-testid]')!.getBoundingClientRect()
     const cs = getComputedStyle(el)
-    return { w: r.width, h: r.height, fs: parseFloat(cs.fontSize), opacity: Number(cs.opacity), inside: r.left >= c.left - 1 && r.right <= c.right + 1 && r.top >= c.top - 1, text: el.textContent?.trim() }
+    return { w: r.width, h: r.height, fs: parseFloat(cs.fontSize), opacity: Number(cs.opacity), inside: r.left >= c.left - 1 && r.right <= c.right + 1 && r.top >= c.top - r.height / 2 - 1, text: el.textContent?.trim() }
   })
   expect(b.w, `selo de seleção (${b.text}) com largura legível`).toBeGreaterThanOrEqual(60)
   expect(b.h).toBeGreaterThanOrEqual(20)
   expect(b.fs).toBeGreaterThanOrEqual(12)
   expect(b.opacity).toBeGreaterThan(0.9)
-  expect(b.inside, 'o selo fica dentro do cartão').toBe(true)
+  expect(b.inside, 'o selo fica dentro do cartão (pode montar sobre a borda superior)').toBe(true)
   const borderAfter = await card.evaluate((el) => `${getComputedStyle(el).borderColor}|${getComputedStyle(el).boxShadow}`)
   expect(borderAfter, 'a borda do cartão muda ao selecionar').not.toBe(borderBefore)
   await expect(page.locator(`[data-testid^="${prefix}"][data-selected="true"]`), 'só um cartão selecionado por galeria').toHaveCount(1)
