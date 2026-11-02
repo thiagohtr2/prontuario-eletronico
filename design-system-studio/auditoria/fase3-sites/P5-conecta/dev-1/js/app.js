@@ -260,7 +260,13 @@
     const inner = $('#header-inner');
     const end = inner.querySelector('.header-end');
     const nav = $('#main-nav');
-    const overflowing = () => inner.scrollWidth > inner.clientWidth + 1 || nav.getBoundingClientRect().right > end.getBoundingClientRect().left;
+    const brand = inner.querySelector('.brand');
+    const overflowing = () => {
+      const n = nav.getBoundingClientRect();
+      return inner.scrollWidth > inner.clientWidth + 1 ||
+        n.right > end.getBoundingClientRect().left - 8 ||
+        n.left < Math.max.apply(null, $all('.brand-mark, .brand-name', brand).map((x) => x.getBoundingClientRect().right)) + 8;
+    };
     for (let i = items.length - 1; i > 0 && overflowing(); i--) {
       items[i].hidden = true;
       moreItems[i].hidden = false;
@@ -502,11 +508,11 @@
     const conv = D.CONVERSATIONS.find((c) => c.with === id);
     const stats = own ? (state.user.stats || D.ME.stats) : u.stats;
     const postsCount = own ? stats.posts + state.myPosts.length : stats.posts;
-    const followers = stats.followers + (!own && following && !D.ME.followingSeed ? 0 : 0);
+    const followers = stats.followers;
     profileTab = 'publicacoes';
     const tabs = [['publicacoes', 'Publicações'], ['midia', 'Mídia'], ['sobre', 'Sobre']];
     return {
-      title: own ? 'Meu perfil' : u.name, key: own ? 'perfil' : (activeKey === 'feed' ? 'feed' : ''),
+      title: own ? 'Meu perfil' : u.name, key: own ? 'perfil' : '',
       html: `<div class="container page">
         <section class="profile tone-${u.tone}" aria-labelledby="profile-name">
           <div class="profile-cover" aria-hidden="true"></div>
@@ -685,7 +691,7 @@
     const u = user(c.with);
     return `<section class="chat" aria-labelledby="chat-title">
       <div class="chat-head">${withBack ? `<a class="icon-btn" href="#/mensagens" aria-label="Voltar para conversas">${icon('arrow-left')}</a>` : ''}
-        ${avatar(u, 40)}<div style="min-width:0"><h2 id="chat-title" tabindex="-1">${esc(u.name)}</h2><span>${esc(u.role)}</span></div></div>
+        ${avatar(u, 40)}<div style="min-width:0"><h2 id="chat-title" tabindex="-1">${esc(u.name)}</h2><span class="chat-sub">${esc(u.role)}</span></div></div>
       <div class="chat-log" id="chat-log" role="log" aria-label="Mensagens com ${esc(u.name)}">${convMessages(c).map(bubble).join('')}</div>
       <div class="typing" id="typing" aria-live="polite"></div>
       <form class="chat-form" id="chat-form" data-conv="${c.id}" novalidate>
@@ -1208,8 +1214,11 @@
     Login.init(onLoginSuccess);
 
     let resizeRaf = 0;
+    let settleTimer = 0;
     window.addEventListener('resize', () => {
       cancelAnimationFrame(resizeRaf);
+      clearTimeout(settleTimer);
+      settleTimer = setTimeout(fitNav, 220); // depois da transição de largura da busca
       resizeRaf = requestAnimationFrame(() => {
         fitNav();
         const open = Popovers.openOne();

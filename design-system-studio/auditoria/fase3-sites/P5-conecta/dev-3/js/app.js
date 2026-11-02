@@ -139,7 +139,11 @@
   /* ---------- Drawer lateral (celular) ---------- */
   function renderizarDrawer() {
     var atual = (location.hash.replace(/^#\/?/, '').split(/[?/]/)[0]) || 'feed';
+    /* Grupos, Eventos e Mensagens nao cabem no dock; no celular ficam aqui (mesmos destinos do desktop). */
     var itens = [
+      ['grupos', 'Grupos', 'users'],
+      ['eventos', 'Eventos', 'calendar'],
+      ['mensagens', 'Mensagens', 'message'],
       ['notificacoes', 'Notificações', 'bell'],
       ['configuracoes', 'Configurações', 'sliders'],
       ['ajuda', 'Ajuda', 'help'],

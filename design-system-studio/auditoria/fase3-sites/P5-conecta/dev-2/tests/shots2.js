@@ -1,0 +1,44 @@
+const { chromium } = require('playwright');
+const path = require('path');
+const url = 'file://' + path.resolve(__dirname, '..', 'index.html');
+const out = n => path.join(__dirname, 'shots', n);
+(async () => {
+  const b = await chromium.launch();
+  async function app(w, h, mobile) {
+    const ctx = await b.newContext({ viewport: { width: w, height: h }, hasTouch: mobile, isMobile: mobile });
+    const page = await ctx.newPage();
+    await page.goto(url);
+    await page.fill('#login-email', 'ana@conecta.demo'); await page.fill('#login-pass', 'Conecta123'); await page.click('#btn-login');
+    await page.waitForSelector('#app:not([hidden])'); await page.waitForTimeout(1000);
+    return page;
+  }
+  let page = await app(390, 844, true);
+  await page.evaluate(() => location.hash = '#/perfil'); await page.waitForTimeout(500);
+  await page.screenshot({ path: out('m390-perfil.png') });
+  await page.evaluate(() => location.hash = '#/mensagens'); await page.waitForTimeout(1000);
+  await page.screenshot({ path: out('m390-mensagens.png') });
+  await page.evaluate(() => location.hash = '#/feed'); await page.waitForTimeout(500);
+  await page.click('.story[data-story="carla"]'); await page.waitForTimeout(600);
+  await page.screenshot({ path: out('m390-story.png') });
+  await page.keyboard.press('Escape'); await page.waitForTimeout(400);
+  await page.click('#btn-new'); await page.waitForTimeout(500);
+  await page.click('#cp-submit'); await page.waitForTimeout(200);
+  await page.screenshot({ path: out('m390-compose.png') });
+  await page.keyboard.press('Escape'); await page.waitForTimeout(400);
+  await page.click('#btn-avatar'); await page.waitForTimeout(300);
+  await page.screenshot({ path: out('m390-avatar-menu.png') });
+  page = await app(1280, 800, false);
+  await page.evaluate(() => location.hash = '#/perfil'); await page.waitForTimeout(500);
+  await page.screenshot({ path: out('d1280-perfil.png') });
+  await page.click('#btn-bell'); await page.waitForTimeout(300);
+  await page.screenshot({ path: out('d1280-notif.png') });
+  await page.keyboard.press('Escape');
+  await page.evaluate(() => location.hash = '#/post/p1'); await page.waitForTimeout(500);
+  await page.screenshot({ path: out('d1280-post.png') });
+  await page.evaluate(() => location.hash = '#/eventos'); await page.waitForTimeout(1000);
+  await page.screenshot({ path: out('d1280-eventos.png') });
+  page = await app(820, 900, false);
+  await page.click('#btn-panel'); await page.waitForTimeout(300);
+  await page.screenshot({ path: out('t820-panel.png') });
+  await b.close();
+})();

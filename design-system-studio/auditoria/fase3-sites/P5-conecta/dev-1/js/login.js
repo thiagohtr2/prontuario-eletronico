@@ -7,6 +7,7 @@
   var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
   var screen, onSuccess;
   var dirty = {};
+  var pendingSubmit = false;
 
   function digits(s) { return String(s || '').replace(/\D/g, ''); }
 
@@ -50,6 +51,7 @@
     screen.setAttribute('data-view', isSignup ? 'cadastro' : (name === 'recuperar' ? 'recuperar' : 'entrar'));
     if (!opts.silentUrl) setUrlTab(isSignup ? 'cadastro' : (name === 'recuperar' ? 'recuperar' : ''));
     if (opts.focusTab) (isSignup ? tabCad : tabEntrar).focus();
+    document.title = (isSignup ? 'Criar conta' : (name === 'recuperar' ? 'Recuperar senha' : 'Entrar')) + ' · Conecta';
   }
 
   function showRecover(show, opts) {
@@ -137,8 +139,10 @@
         dirty[id] = true;
         if (input.getAttribute('aria-invalid') === 'true') validateField(input);
       });
-      input.addEventListener('blur', function () {
-        // valida ao sair do campo quando a pessoa já interagiu com ele
+      input.addEventListener('blur', function (e) {
+        // valida ao sair do campo quando a pessoa já interagiu com ele;
+        // se o foco vai para o botão de envio, o envio valida tudo (evita o botão "fugir" do clique)
+        if (pendingSubmit || (e.relatedTarget && e.relatedTarget.type === 'submit')) return;
         if (dirty[id] || input.getAttribute('aria-invalid') === 'true') validateField(input);
       });
     });
@@ -306,9 +310,10 @@
       tab.addEventListener('keydown', function (e) {
         if (['ArrowLeft', 'ArrowRight', 'Home', 'End'].indexOf(e.key) === -1) return;
         e.preventDefault();
-        var toSignup = (e.key === 'ArrowRight' || e.key === 'End') ? true : (e.key === 'ArrowLeft' || e.key === 'Home') ? false : null;
-        if (e.key === 'ArrowRight' && tab.id === 'tab-cadastro') toSignup = false;
-        if (e.key === 'ArrowLeft' && tab.id === 'tab-entrar') toSignup = true;
+        var toSignup;
+        if (e.key === 'Home') toSignup = false;
+        else if (e.key === 'End') toSignup = true;
+        else toSignup = tab.id !== 'tab-cadastro';
         selectTab(toSignup ? 'cadastro' : 'entrar', { focusTab: true });
       });
     });
@@ -334,6 +339,11 @@
 
     bindPasswordToggles();
     bindBlurValidation();
+    screen.addEventListener('pointerdown', function (e) {
+      if (!e.target.closest('button[type="submit"]')) return;
+      pendingSubmit = true;
+      setTimeout(function () { pendingSubmit = false; }, 600);
+    });
     $('#signup-password').addEventListener('input', updateReqs);
     updateReqs();
 

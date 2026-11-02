@@ -207,12 +207,13 @@
   background: rgba(27, 27, 31, 0.4);
   opacity: 0;
   visibility: hidden;
-  transition: opacity 250ms cubic-bezier(0.2, 0, 0, 1), visibility 250ms;
+  transition: opacity 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0s linear 250ms;
 }
 
 .scrim.is-aberto {
   opacity: 1;
   visibility: visible;
+  transition: opacity 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0s;
 }
 
 .drawer {
@@ -230,12 +231,14 @@
   padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px);
   transform: translateX(-100%);
   visibility: hidden;
-  transition: transform 250ms cubic-bezier(0.2, 0, 0, 1), visibility 250ms;
+  transition: transform 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0s linear 250ms;
 }
 
+/* Abrir: visivel ja no inicio (o foco precisa funcionar); fechar: visibility so depois da animacao. */
 .drawer.is-aberto {
   transform: none;
   visibility: visible;
+  transition: transform 250ms cubic-bezier(0.2, 0, 0, 1), visibility 0s;
 }
 
 .drawer__cabecalho {
@@ -548,8 +551,9 @@
 }
 
 @media (min-width: 1024px) {
+  /* logo | navegacao (centralizada no espaco livre) | acoes */
   .barra {
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     gap: 24px;
   }
 
@@ -606,11 +610,16 @@
   list-style: none;
 }
 
+.nav-principal__lista > li {
+  display: flex;
+}
+
 .nav-link {
   position: relative;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  height: 64px;
   padding: 0 4px;
   color: var(--nav-text);
   font-size: 14px;

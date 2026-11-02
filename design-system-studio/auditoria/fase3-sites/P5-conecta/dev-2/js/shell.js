@@ -143,7 +143,6 @@
     body.style.padding = '0'; body.style.flex = '1'; body.style.display = 'flex'; body.style.overflow = 'hidden';
     ctrl.root.querySelector('.dialog__panel').setAttribute('aria-label', 'Story de ' + p.name);
     ctrl.root.querySelector('.dialog__panel').removeAttribute('aria-labelledby');
-    ctrl.root.querySelector('.dialog__header').insertAdjacentHTML('afterend', '');
 
     function render() {
       var s = data.slides[idx];
@@ -329,7 +328,7 @@
     // redimensionamento: reavalia o que cabe no menu principal
     var rt;
     window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(fitNav, 80); });
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitNav);
+    if (document.fonts) { if (document.fonts.ready) document.fonts.ready.then(fitNav); if (document.fonts.addEventListener) document.fonts.addEventListener('loadingdone', fitNav); }
     fitNav();
     document.body.classList.add('has-dock');
   }

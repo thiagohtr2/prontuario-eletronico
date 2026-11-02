@@ -26,7 +26,7 @@ async function entrar(page) {
   await page.fill('#login-senha', 'demo1234');
   await page.click('#btn-entrar');
   await page.waitForSelector('#app:not([hidden])', { timeout: 5000 });
-  await page.waitForSelector('.cartao, .estado, .perfil', { timeout: 5000 });
+  await page.waitForSelector('.cartao:not(.cartao--esqueleto), .estado, .perfil', { timeout: 5000 });
 }
 
 async function semRolagemHorizontal(page) {
@@ -108,16 +108,16 @@ async function semRolagemHorizontal(page) {
   await p.click('#aba-cadastro');
   checar('aba Criar conta atualiza URL', p.url().includes('?aba=cadastro'));
   await p.click('#aba-entrar');
-  await p.click('#metodo-telefone');
+  await p.click('label[for="metodo-telefone"]');
   checar('alternancia para telefone mostra campo tel', await p.isVisible('#login-telefone'));
   checar('telefone com type=tel e inputmode=tel', (await p.$eval('#login-telefone', (el) => el.type + '|' + el.inputMode)) === 'tel|tel');
-  await p.click('#metodo-email');
+  await p.click('label[for="metodo-email"]');
   await p.fill('#login-email', 'demo@conecta.app');
   await p.fill('#login-senha', 'demo1234');
   await p.click('#btn-entrar');
   await p.waitForSelector('#app:not([hidden])', { timeout: 5000 });
-  await p.waitForSelector('.cartao', { timeout: 5000 });
-  checar('login correto abre o feed com 6 cards', (await p.$$('.cartao')).length === 6);
+  await p.waitForSelector('.cartao:not(.cartao--esqueleto)', { timeout: 5000 });
+  checar('login correto abre o feed com 6 cards', (await p.$$('.cartao:not(.cartao--esqueleto)')).length === 6);
   checar('URL do app em #/feed', p.url().includes('#/feed'));
   await p.screenshot({ path: path.join(PASTA_SHOTS, 'm-feed.png'), fullPage: false });
   checar('dock visivel no celular', await p.isVisible('#dock'));
@@ -134,6 +134,7 @@ async function semRolagemHorizontal(page) {
   await p.waitForTimeout(300);
   checar('drawer abre', await p.$eval('#drawer', (el) => el.classList.contains('is-aberto')));
   checar('foco vai para Fechar', await p.evaluate(() => document.activeElement.id === 'btn-fechar-drawer'));
+  checar('drawer traz Grupos, Eventos e Mensagens (celular)', (await p.$('[data-drawer-link][href="#/mensagens"]')) !== null && (await p.$('[data-drawer-link][href="#/grupos"]')) !== null);
   checar('body sem rolagem enquanto aberto', await p.evaluate(() => document.body.style.overflow === 'hidden'));
   checar('conteudo atras esta inert', await p.evaluate(() => document.getElementById('app').inert === true));
   const larguraDrawer = await p.$eval('#drawer', (el) => el.getBoundingClientRect().width);
@@ -204,8 +205,8 @@ async function semRolagemHorizontal(page) {
   await p.waitForSelector('.estado--erro', { timeout: 4000 }).catch(() => {});
   checar('feed com erro mostra alerta', await p.isVisible('.estado--erro'));
   await p.click('[data-acao="tentar"]');
-  await p.waitForSelector('.cartao', { timeout: 4000 });
-  checar('tentar novamente carrega o feed', (await p.$$('.cartao')).length === 6);
+  await p.waitForSelector('.cartao:not(.cartao--esqueleto)', { timeout: 4000 });
+  checar('tentar novamente carrega o feed', (await p.$$('.cartao:not(.cartao--esqueleto)')).length === 6);
   await p.close();
 
   console.log('\n[7] Cadastro na mesma tela');
@@ -270,7 +271,7 @@ async function semRolagemHorizontal(page) {
   await p.fill('#nova-texto', 'Teste de publicação');
   await p.click('#form-nova button[type="submit"]');
   await p.waitForTimeout(300);
-  checar('nova publicacao aparece no feed', (await p.textContent('.cartao__texto')).length > 0 && (await p.$$('.cartao')).length === 7);
+  checar('nova publicacao aparece no feed', (await p.textContent('.cartao__texto')).length > 0 && (await p.$$('.cartao:not(.cartao--esqueleto)')).length === 7);
   await p.fill('#busca-input', 'Diego');
   await p.press('#busca-input', 'Enter');
   await p.waitForSelector('.lista__item, .estado', { timeout: 4000 });
@@ -280,7 +281,7 @@ async function semRolagemHorizontal(page) {
   await p.waitForSelector('.estado', { timeout: 4000 });
   checar('busca sem resultado: estado vazio', (await p.textContent('.estado h2')).includes('Nenhum resultado'));
   await p.goto(URL_BASE + '#/feed');
-  await p.waitForSelector('.cartao', { timeout: 4000 });
+  await p.waitForSelector('.cartao:not(.cartao--esqueleto)', { timeout: 4000 });
   await p.screenshot({ path: path.join(PASTA_SHOTS, 'd-feed.png') });
   await p.close();
 

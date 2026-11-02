@@ -248,6 +248,7 @@
 }
 .form-summary:empty { display: block; padding: 0; border: 0; height: 0; margin: 0; overflow: hidden; background: none; }
 .form-summary .icon { color: var(--error); margin-top: 1px; }
+.dialog__body .form-summary:not(:empty) { margin-bottom: 16px; }
 .form-summary strong { display: block; font-size: var(--fs-base); font-weight: var(--fw-title); }
 .form-summary ul { margin-top: 4px; display: grid; gap: 2px; }
 .form-summary a { color: var(--text); text-decoration: underline; }

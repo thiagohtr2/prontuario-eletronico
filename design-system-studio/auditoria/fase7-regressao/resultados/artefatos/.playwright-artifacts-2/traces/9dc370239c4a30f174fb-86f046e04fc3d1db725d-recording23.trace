@@ -1,1 +1,0 @@
-{"version":9,"type":"context-options","origin":"library","browserName":"","playwrightVersion":"1.63.0","options":{},"platform":"linux","wallTime":1793663884308,"monotonicTime":79210.262,"sdkLanguage":"javascript","title":"regression.spec.ts:670 › REG-12 · Mudanças na paleta se propagam › troca manual da cor primária recalcula hover, active, foco e link"}
