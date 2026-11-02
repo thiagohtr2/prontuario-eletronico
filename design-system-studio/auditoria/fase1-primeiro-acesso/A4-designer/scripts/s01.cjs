@@ -1,0 +1,21 @@
+const { chromium } = require('playwright');
+(async () => {
+  const ctx = await chromium.launchPersistentContext('../perfil', { viewport: { width: 1440, height: 900 }, acceptDownloads: true });
+  const page = ctx.pages()[0] || await ctx.newPage();
+  const logs = [];
+  page.on('console', m => logs.push(m.type() + ': ' + m.text()));
+  page.on('pageerror', e => logs.push('PAGEERROR: ' + e.message));
+  await page.goto('http://127.0.0.1:4300/', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(1000);
+  console.log('TITLE', await page.title(), 'URL', page.url());
+  await page.screenshot({ path: '../capturas/01-home-1440-viewport.png' });
+  await page.screenshot({ path: '../capturas/01-home-1440-full.png', fullPage: true });
+  const h = await page.evaluate(() => document.documentElement.scrollHeight);
+  console.log('scrollHeight', h);
+  const text = await page.evaluate(() => document.body.innerText);
+  console.log(text.slice(0, 4000));
+  const els = await page.evaluate(() => [...document.querySelectorAll('a,button,input,select,textarea,[role=tab],[role=button]')].map(e => `${e.tagName} | ${(e.innerText||e.value||e.getAttribute('aria-label')||e.placeholder||'').trim().slice(0,60)} | ${e.getAttribute('href')||''}`).slice(0,150));
+  console.log(els.join('\n'));
+  console.log('LOGS', logs.join('\n'));
+  await ctx.close();
+})();

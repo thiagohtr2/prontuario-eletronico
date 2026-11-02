@@ -1,0 +1,20 @@
+const L = require('./lib');
+(async () => {
+  const { ctx, page } = await L.open('perfil', 'android');
+  L.log('A01 abrir http://127.0.0.1:4300/ (Android 360x800)');
+  await page.goto('http://127.0.0.1:4300/', { waitUntil: 'networkidle' });
+  await page.waitForTimeout(800);
+  console.log('URL', page.url(), 'TITLE', await page.title());
+  await L.shot(page, '01-home-360-topo');
+  await L.shot(page, '01-home-360-pagina-inteira', true);
+  console.log('TEXT:\n' + await L.text(page, 4000));
+  console.log('OVERFLOW', JSON.stringify(await L.overflow(page)));
+  console.log('FIXED', JSON.stringify(await L.fixedBars(page)));
+  const m = await L.measure(page);
+  console.log('TARGETS total', m.length, 'small', m.filter(x => x.small).length);
+  for (const t of m) console.log(JSON.stringify(t));
+  console.log('FONTS', JSON.stringify(await L.fonts(page)));
+  const vp = await page.evaluate(() => document.querySelector('meta[name=viewport]')?.content);
+  console.log('META VIEWPORT', vp);
+  await ctx.close();
+})();

@@ -6,3 +6,5 @@ dist
 .DS_Store
 .netlify
 *.tsbuildinfo
+design-system-studio/auditoria/**/perfil/
+design-system-studio/auditoria/**/node_modules/

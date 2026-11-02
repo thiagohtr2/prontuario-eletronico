@@ -1,0 +1,24 @@
+const L = require('./lib');
+(async () => {
+  const { ctx, page } = await L.open('perfil', 'android');
+  await page.goto('http://127.0.0.1:4300/', { waitUntil: 'networkidle' });
+  L.log('A02 rolar a home com o dedo (wheel 700px)');
+  await page.mouse.move(180, 500);
+  await page.mouse.wheel(0, 700); await page.waitForTimeout(600);
+  console.log('scrollY', await page.evaluate(() => scrollY));
+  await L.shot(page, '02-home-360-rolada');
+  L.log('A03 tocar "Começar no modo guiado"');
+  await page.getByRole('button', { name: /Começar no modo guiado/ }).tap();
+  await page.waitForTimeout(1200);
+  console.log('URL', page.url(), 'scrollY', await page.evaluate(() => scrollY));
+  await L.shot(page, '03-guiado-passo1-topo');
+  await L.shot(page, '03-guiado-passo1-inteira', true);
+  console.log('TEXT:\n' + await L.text(page, 5000));
+  console.log('OVERFLOW', JSON.stringify(await L.overflow(page)));
+  console.log('FIXED', JSON.stringify(await L.fixedBars(page)));
+  const m = await L.measure(page);
+  console.log('TARGETS total', m.length, 'small', m.filter(x => x.small).length);
+  for (const t of m) console.log(JSON.stringify(t));
+  console.log('FONTS', JSON.stringify(await L.fonts(page)));
+  await ctx.close();
+})();
