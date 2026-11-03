@@ -58,6 +58,7 @@ pre{white-space:pre-wrap;word-break:break-word;border:1px solid #ebebef;border-r
 export default function ExportPage() {
   const project = useStudio((s) => s.project)
   const history = useStudio((s) => s.history)
+  const library = useStudio((s) => s.library)
   const importProject = useStudio((s) => s.importProject)
   const [errors, setErrors] = useState<string[] | null>(null)
   const [over, setOver] = useState(false)
@@ -147,8 +148,8 @@ export default function ExportPage() {
     {
       icon: Archive,
       title: 'Backup completo',
-      description: `Projeto atual e ${history.length} versão(ões) salva(s), para reutilizar depois ou em outro computador.`,
-      action: () => downloadJson(`${base}-backup.json`, { kind: 'atelier-ui/backup', exportedAt: new Date().toISOString(), project, history }),
+      description: `Projeto atual, ${history.length} versão(ões) salva(s) e ${library.length} outro(s) projeto(s), para reutilizar depois ou em outro computador.`,
+      action: () => downloadJson(`${base}-backup.json`, { kind: 'atelier-ui/backup', exportedAt: new Date().toISOString(), project, history, library }),
       testId: 'export-backup',
     },
   ] as { icon: typeof FileText; title: string; description: string; action: () => void; copy?: () => string; testId: string }[]

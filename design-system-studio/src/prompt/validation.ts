@@ -1,6 +1,8 @@
 import { z } from 'zod'
 import type { Project, ValidationReport } from '@/core/project'
 import { desktopById, mobileById } from '@/modules/layouts/catalog'
+import { projectTheme } from '@/core/theme'
+import { buildFacts } from './devexport'
 import { GLOBAL_RESPONSIVE_RULES, IMPLEMENTATION_RULES } from './responsive'
 
 const issueSchema = z.object({
@@ -13,6 +15,15 @@ const issueSchema = z.object({
   suggestion: z.string().catch(''),
 })
 
+const fidelitySchema = z.object({
+  id: z.string(),
+  label: z.string(),
+  width: z.number(),
+  expected: z.string(),
+  measured: z.string(),
+  ok: z.boolean(),
+})
+
 export const reportSchema = z.object({
   tool: z.string().catch('desconhecido'),
   generatedAt: z.string().catch(() => new Date().toISOString()),
@@ -20,7 +31,29 @@ export const reportSchema = z.object({
   widths: z.array(z.number()),
   pages: z.array(z.string()),
   issues: z.array(issueSchema),
+  fidelity: z.array(fidelitySchema).optional().catch(undefined),
 })
+
+/**
+ * O que o executor confere no site construído (5.0): os fatos da especificação, sem nenhum texto
+ * do site no relatório — só “encontrado/não encontrado” e medidas.
+ */
+export function buildFidelityExpectations(project: Project) {
+  const f = buildFacts(project)
+  const theme = projectTheme(project)
+  return {
+    brand: f.brand,
+    navItems: f.navItems,
+    headerHeight: f.layout.header?.height.value ?? null,
+    sidebarWidth: f.layout.sidebar?.width.value ?? null,
+    bottomSlots: f.mobileNavigation?.bottomSlots ?? null,
+    drawer: f.mobileNavigation?.drawer ?? false,
+    fonts: { heading: f.identity.typography.headingFamily, body: f.identity.typography.bodyFamily },
+    primary: theme.tokens.primary,
+    desktopWidth: 1280,
+    mobileWidth: 390,
+  }
+}
 
 const SENSITIVE = /(cookie|token|authorization|password|senha|bearer)/i
 
@@ -47,6 +80,7 @@ export function buildRunnerConfig(project: Project) {
       waitMs: c.waitMs,
       checks: c.checks,
       minTapTarget: c.minTapTarget,
+      ...(c.checks.fidelity ? { expect: buildFidelityExpectations(project) } : {}),
     },
   }
 }
@@ -87,7 +121,15 @@ export function buildFixPrompt(report: ValidationReport, project: Project): stri
         .join('\n'),
     )
   }
-  if (report.issues.length === 0) out.push('Nenhum problema encontrado. Mantenha as regras abaixo em novas alterações.')
+  const failed = (report.fidelity ?? []).filter((r) => !r.ok)
+  if (failed.length) {
+    out.push(
+      `## Fidelidade à especificação\nO site não segue estes fatos da especificação aprovada. Ajuste o site (não a especificação):\n${failed
+        .map((r) => `- **${r.label}** (${r.width}px): esperado ${r.expected}; medido ${r.measured}.`)
+        .join('\n')}`,
+    )
+  }
+  if (report.issues.length === 0 && failed.length === 0) out.push('Nenhum problema encontrado. Mantenha as regras abaixo em novas alterações.')
   out.push(`## Regras gerais de responsividade\n${GLOBAL_RESPONSIVE_RULES.map((r) => `- ${r}`).join('\n')}`)
   out.push(`## Regras de implementação\n${IMPLEMENTATION_RULES.map((r) => `- ${r}`).join('\n')}`)
   return out.join('\n\n') + '\n'

@@ -13,6 +13,10 @@ const CHECK_LABEL = {
   offscreen: { label: 'Elementos fora da tela', help: 'Elementos cortados na borda esquerda.' },
   tapTargets: { label: 'Alvos de toque pequenos', help: 'Botões e links difíceis de tocar (telas < 768 px).' },
   inputFontSize: { label: 'Fonte pequena em campos', help: 'Inputs com menos de 16 px (zoom automático no iOS).' },
+  fidelity: {
+    label: 'Fidelidade à especificação',
+    help: 'Confere se o site segue o que foi decidido aqui: marca, itens do menu, altura do header, largura da sidebar, navegação do celular, fontes e cor primária.',
+  },
 } as const
 
 function ConfigForm() {
@@ -170,6 +174,24 @@ function ReportView() {
           <p className="u-subtle u-small">
             {report.baseUrl} · {new Date(report.generatedAt).toLocaleString('pt-BR')} · {report.tool}
           </p>
+          {report.fidelity && report.fidelity.length > 0 && (
+            <Section
+              title={`Fidelidade à especificação: ${report.fidelity.filter((r) => r.ok).length} de ${report.fidelity.length} fatos conferem`}
+              description="O que foi decidido no Studio comparado com o site construído. Os itens que não conferem entram no prompt de correção."
+            >
+              <ul className="val-fidelity" data-testid="fidelity-results">
+                {report.fidelity.map((r, idx) => (
+                  <li key={idx} data-ok={r.ok}>
+                    <Badge tone={r.ok ? 'success' : 'danger'}>{r.ok ? 'confere' : 'não confere'}</Badge>
+                    <strong>{r.label}</strong>
+                    <span className="u-subtle u-small">
+                      {r.width} px · esperado {r.expected} · medido {r.measured}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </Section>
+          )}
           {types.length > 0 && (
             <div className="ui-chips" role="group" aria-label="Filtrar por tipo">
               {['todas', ...types].map((t) => (

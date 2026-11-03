@@ -87,15 +87,19 @@ const safeStorage: StateStorage = {
     } catch {
       // Cota estourada: tenta de novo com menos versões (o projeto atual tem prioridade).
       try {
-        const data = JSON.parse(value) as { state?: { history?: unknown[] } }
+        const data = JSON.parse(value) as { state?: { history?: unknown[]; library?: { history?: unknown[] }[] } }
         for (const keep of [10, 0]) {
-          if (!data.state?.history || data.state.history.length <= keep) continue
+          if (!data.state?.history) continue
+          if (data.state.history.length <= keep && !(keep === 0 && data.state.library?.some((e) => e.history?.length))) continue
           data.state.history = data.state.history.slice(0, keep)
+          // Último recurso: as versões dos outros projetos também saem (os projetos continuam).
+          if (keep === 0) data.state.library = data.state.library?.map((e) => ({ ...e, history: [] }))
           try {
             localStorage.setItem(name, JSON.stringify(data))
             const history = data.state.history as Snapshot[]
             useSaveStatus.setState({ failed: false, pruned: true })
-            queueMicrotask(() => useStudio.setState({ history }))
+            const library = data.state.library as LibraryEntry[] | undefined
+            queueMicrotask(() => useStudio.setState(library ? { history, library } : { history }))
             return
           } catch {
             /* ainda não coube */
@@ -116,9 +120,20 @@ const safeStorage: StateStorage = {
   },
 }
 
+/** Projeto guardado na biblioteca (projetos nomeados): o projeto e as versões dele. */
+export interface LibraryEntry {
+  id: string
+  name: string
+  savedAt: string
+  project: Project
+  history: Snapshot[]
+}
+
 interface StudioState {
   project: Project
   history: Snapshot[]
+  /** Outros projetos deste navegador (o atual não fica aqui enquanto está aberto). */
+  library: LibraryEntry[]
 
   // Projeto e modos
   updateMeta: (patch: Partial<ProjectMeta>) => void
@@ -184,6 +199,15 @@ interface StudioState {
   /** Importa projeto, especificação ou backup; versões de um backup completo são restauradas junto. */
   importProject: (raw: unknown) => { ok: true; versions: number; skipped: number } | { ok: false; errors: string[] }
   resetProject: () => void
+
+  // Projetos nomeados
+  /** Guarda o projeto atual na biblioteca e abre um projeto novo e vazio. */
+  newProject: () => void
+  /** Guarda o projeto atual na biblioteca e abre outro (com as versões dele). */
+  openProject: (id: string) => void
+  deleteLibraryProject: (id: string) => void
+  /** Duplica o projeto atual na biblioteca (ponto de partida para uma variação). */
+  duplicateProject: () => void
 }
 
 type Recipe = (p: Project) => Project
@@ -206,9 +230,23 @@ export const useStudio = create<StudioState>()(
       const pushSnapshot = (label: string) =>
         set((s) => ({ history: [snapshotOf(label, s.project), ...s.history].slice(0, MAX_SNAPSHOTS) }))
 
+      /** Entrada da biblioteca para o projeto atual (sem relatório de validação, que é grande). */
+      const libraryEntryOf = (project: Project, history: Snapshot[]): LibraryEntry => ({
+        id: project.id,
+        name: project.meta.name.trim() || 'Projeto sem nome',
+        savedAt: new Date().toISOString(),
+        project: structuredClone({ ...project, validation: { ...project.validation, report: null } }),
+        history,
+      })
+      /** Projeto atual vale a pena guardar? (um projeto vazio e nunca tocado não ocupa a biblioteca) */
+      const worthKeeping = (p: Project) => Boolean(p.meta.name.trim() || p.meta.projectType || p.layout.desktopId || p.layout.mobileId || p.components.length)
+      const stash = (s: StudioState): LibraryEntry[] =>
+        worthKeeping(s.project) ? [libraryEntryOf(s.project, s.history), ...s.library.filter((e) => e.id !== s.project.id)] : s.library
+
       return {
         project: createProject(),
         history: [],
+        library: [],
 
         updateMeta: (patch) => edit((p) => ({ ...p, meta: { ...p.meta, ...patch } })),
         setMode: (mode) => edit((p) => ({ ...p, mode })),
@@ -366,7 +404,17 @@ export const useStudio = create<StudioState>()(
             const history = [...s.history, ...snapshots.filter((h) => !known.has(h.id))]
               .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
               .slice(0, MAX_SNAPSHOTS)
-            return { project: { ...result.project, updatedAt: new Date().toISOString() }, history }
+            // Outros projetos do backup entram na biblioteca (os já existentes são mantidos).
+            const raw0 = raw as { library?: unknown }
+            const incoming = Array.isArray(raw0?.library)
+              ? (raw0.library as LibraryEntry[]).flatMap((e) => {
+                  const p = e && typeof e === 'object' ? parseProjectFile(e.project) : null
+                  return p?.ok && !s.library.some((x) => x.id === e.id) && e.id !== result.project.id
+                    ? [{ id: String(e.id), name: String(e.name || p.project.meta.name || 'Projeto sem nome'), savedAt: String(e.savedAt || new Date().toISOString()), project: p.project, history: [] }]
+                    : []
+                })
+              : []
+            return { project: { ...result.project, updatedAt: new Date().toISOString() }, history, library: [...s.library, ...incoming] }
           })
           return { ok: true, versions: snapshots.length, skipped }
         },
@@ -374,6 +422,21 @@ export const useStudio = create<StudioState>()(
           pushSnapshot('Antes de limpar o projeto')
           set({ project: createProject() })
         },
+        newProject: () => set((s) => ({ library: stash(s), project: createProject(), history: [] })),
+        openProject: (id) =>
+          set((s) => {
+            const entry = s.library.find((e) => e.id === id)
+            const parsed = entry ? parseProjectFile(entry.project) : null
+            if (!entry || !parsed?.ok) return {}
+            return { library: stash(s).filter((e) => e.id !== id), project: parsed.project, history: entry.history }
+          }),
+        deleteLibraryProject: (id) => set((s) => ({ library: s.library.filter((e) => e.id !== id) })),
+        duplicateProject: () =>
+          set((s) => {
+            const copy = { ...structuredClone(s.project), id: uid('prj'), createdAt: new Date().toISOString() }
+            copy.meta = { ...copy.meta, name: `${s.project.meta.name.trim() || 'Projeto sem nome'} (cópia)` }
+            return { library: [libraryEntryOf(copy, []), ...s.library] }
+          }),
       }
     },
     {
@@ -382,9 +445,9 @@ export const useStudio = create<StudioState>()(
       storage: createJSONStorage(() => safeStorage),
       // Estados de outra versão passam pela mesma validação/mesclagem em vez de serem descartados.
       migrate: (persisted) => persisted as StudioState,
-      partialize: (s) => ({ project: s.project, history: s.history }),
+      partialize: (s) => ({ project: s.project, history: s.history, library: s.library }),
       merge: (persisted, current) => {
-        const saved = persisted as Partial<Pick<StudioState, 'project' | 'history'>> | undefined
+        const saved = persisted as Partial<Pick<StudioState, 'project' | 'history' | 'library'>> | undefined
         if (!saved?.project) return current
         const parsed = parseProjectFile(saved.project)
         // Projeto salvo inválido: nada é descartado sem antes guardar uma cópia de recuperação.
@@ -396,10 +459,15 @@ export const useStudio = create<StudioState>()(
               return p?.ok ? [{ ...(h as Snapshot), project: p.project }] : []
             })
           : []
+        // Biblioteca: só entradas com projeto válido (as demais são ignoradas, não quebram a abertura).
+        const library = Array.isArray(saved.library)
+          ? saved.library.flatMap((e) => (e && typeof e === 'object' && parseProjectFile((e as LibraryEntry).project).ok ? [{ ...(e as LibraryEntry), history: Array.isArray((e as LibraryEntry).history) ? (e as LibraryEntry).history : [] }] : []))
+          : []
         return {
           ...current,
           project: parsed.ok ? parsed.project : current.project,
           history,
+          library,
         }
       },
     },

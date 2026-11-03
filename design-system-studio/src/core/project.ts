@@ -114,6 +114,8 @@ export interface ValidationConfig {
     offscreen: boolean
     tapTargets: boolean
     inputFontSize: boolean
+    /** Confere o site construído contra os fatos da especificação (marca, menu, medidas, fontes, cor). */
+    fidelity: boolean
   }
   minTapTarget: number
 }
@@ -128,6 +130,16 @@ export interface ValidationIssue {
   suggestion: string
 }
 
+/** Um fato da especificação conferido no site construído. */
+export interface FidelityResult {
+  id: string
+  label: string
+  width: number
+  expected: string
+  measured: string
+  ok: boolean
+}
+
 export interface ValidationReport {
   tool: string
   generatedAt: string
@@ -135,6 +147,8 @@ export interface ValidationReport {
   widths: number[]
   pages: string[]
   issues: ValidationIssue[]
+  /** Conferência dos fatos da especificação (ausente em relatórios de versões antigas do executor). */
+  fidelity?: FidelityResult[]
 }
 
 export interface Project {
@@ -211,7 +225,7 @@ export const DEFAULT_VALIDATION_CONFIG: ValidationConfig = {
   widths: [320, 360, 375, 390, 412, 430, 768, 1024, 1280, 1440],
   manualLogin: false,
   waitMs: 800,
-  checks: { horizontalOverflow: true, offscreen: true, tapTargets: true, inputFontSize: true },
+  checks: { horizontalOverflow: true, offscreen: true, tapTargets: true, inputFontSize: true, fidelity: true },
   minTapTarget: 44,
 }
 

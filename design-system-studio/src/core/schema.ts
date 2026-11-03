@@ -117,6 +117,7 @@ export const projectSchema = z.object({
         offscreen: z.boolean(),
         tapTargets: z.boolean(),
         inputFontSize: z.boolean(),
+        fidelity: z.boolean(),
       }),
       minTapTarget: z.number().min(16).max(96),
     }),

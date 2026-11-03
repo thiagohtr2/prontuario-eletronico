@@ -3,7 +3,9 @@
 Atelier UI — Responsive Validation Runner
 
 Executor local que abre um site em várias larguras de tela e procura problemas de
-responsividade. Gera um relatório JSON que pode ser importado no Studio
+responsividade. Desde a versão 1.1 também confere o site contra os fatos da especificação
+exportada pelo Studio (marca, itens do menu, altura do header, largura da sidebar, navegação
+inferior do celular, fontes e cor primária). Gera um relatório JSON que pode ser importado no Studio
 (Ferramentas → Validação responsiva) para gerar um prompt de correção.
 
 Uso:
@@ -28,7 +30,7 @@ import json
 import sys
 from urllib.parse import urljoin, urlparse
 
-TOOL_NAME = "atelier-ui-validation-runner/1.0"
+TOOL_NAME = "atelier-ui-validation-runner/1.1"
 
 DETECTOR_JS = r"""
 (opts) => {
@@ -164,6 +166,103 @@ DETECTOR_JS = r"""
 }
 """
 
+FIDELITY_JS = r"""
+(opts) => {
+  const out = [];
+  const vw = window.innerWidth, vh = window.innerHeight;
+  const norm = (s) => (s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/\s+/g, ' ').trim();
+  const visible = (el) => {
+    const r = el.getBoundingClientRect();
+    const cs = getComputedStyle(el);
+    return r.width > 1 && r.height > 1 && r.right > 0 && r.left < vw && cs.visibility !== 'hidden' && cs.display !== 'none' && parseFloat(cs.opacity) > 0;
+  };
+  const add = (id, label, expected, measured, ok) => out.push({ id, label, width: vw, expected: String(expected), measured: String(measured), ok: Boolean(ok) });
+  const leafTexts = () =>
+    Array.from(document.querySelectorAll('a, button, [role="tab"], [role="menuitem"], li, span, p, strong, h1, h2, h3, h4, div'))
+      .filter((el) => el.matches('a, button, [role="tab"], [role="menuitem"]') || el.children.length === 0)
+      .filter(visible)
+      .map((el) => norm(el.textContent));
+  const hasText = (texts, item) => texts.some((t) => t === norm(item) || t.startsWith(norm(item) + ' ') || t.endsWith(' ' + norm(item)));
+  const rgb = (hex) => {
+    const h = (hex || '').replace('#', '');
+    if (h.length !== 6) return null;
+    return `rgb(${parseInt(h.slice(0, 2), 16)}, ${parseInt(h.slice(2, 4), 16)}, ${parseInt(h.slice(4, 6), 16)})`;
+  };
+  const sidebarLike = () =>
+    Array.from(document.querySelectorAll('aside, nav, [role="navigation"], [class*="sidebar" i]'))
+      .filter(visible)
+      .map((el) => el.getBoundingClientRect())
+      .filter((r) => r.left <= 24 && r.height >= vh * 0.6 && r.width >= 48 && r.width <= 440);
+
+  if (opts.brand) {
+    const found = norm(document.body.innerText).includes(norm(opts.brand));
+    add('brand', 'Marca do projeto visível', `“${opts.brand}”`, found ? 'encontrada' : 'não encontrada', found);
+  }
+
+  if (opts.phase === 'desktop') {
+    if (opts.navItems && opts.navItems.length) {
+      const texts = leafTexts();
+      const found = opts.navItems.filter((n) => hasText(texts, n));
+      add('nav-desktop', 'Itens do menu visíveis no computador', `${opts.navItems.length} itens`, `${found.length} encontrados`, found.length === opts.navItems.length);
+    }
+    if (opts.headerHeight) {
+      const cands = Array.from(document.querySelectorAll('header, [role="banner"], [class*="header" i], [class*="topbar" i]'))
+        .filter(visible)
+        .map((el) => ({ el, r: el.getBoundingClientRect() }))
+        .filter(({ r }) => r.top <= 4 && r.height >= 32 && r.height <= 200 && r.width >= vw * 0.4);
+      const pick = cands.find(({ el }) => el.matches('header, [role="banner"]')) || cands[0];
+      if (pick) {
+        const h = Math.round(pick.r.height);
+        add('header-height', 'Altura do header', `${opts.headerHeight} px`, `${h} px`, Math.abs(h - opts.headerHeight) <= 4);
+      } else add('header-height', 'Altura do header', `${opts.headerHeight} px`, 'header não encontrado', false);
+    }
+    if (opts.sidebarWidth) {
+      const cands = sidebarLike();
+      if (cands.length) {
+        const w = Math.round(Math.max(...cands.map((r) => r.width)));
+        add('sidebar-width', 'Largura da sidebar', `${opts.sidebarWidth} px`, `${w} px`, Math.abs(w - opts.sidebarWidth) <= 8);
+      } else add('sidebar-width', 'Largura da sidebar', `${opts.sidebarWidth} px`, 'sidebar não encontrada', false);
+    }
+    if (opts.fonts) {
+      const bodyFont = norm(getComputedStyle(document.body).fontFamily);
+      add('font-body', 'Fonte dos textos', opts.fonts.body, bodyFont.split(',')[0] || '—', bodyFont.includes(norm(opts.fonts.body)));
+      const heading = Array.from(document.querySelectorAll('h1, h2')).find(visible);
+      if (heading) {
+        const hf = norm(getComputedStyle(heading).fontFamily);
+        add('font-heading', 'Fonte dos títulos', opts.fonts.heading, hf.split(',')[0] || '—', hf.includes(norm(opts.fonts.heading)));
+      }
+    }
+    const primary = rgb(opts.primary);
+    if (primary) {
+      const used = Array.from(document.querySelectorAll('button, a, [role="button"], [aria-current], [class*="active" i]'))
+        .filter(visible)
+        .some((el) => { const cs = getComputedStyle(el); return cs.backgroundColor === primary || cs.color === primary || cs.borderColor === primary; });
+      add('primary', 'Cor primária em ações', opts.primary, used ? 'usada' : 'não usada em botões, links ou item ativo', used);
+    }
+  } else {
+    if (opts.bottomSlots) {
+      const bars = Array.from(document.querySelectorAll('nav, [role="navigation"], [role="tablist"], footer, div'))
+        .filter(visible)
+        .map((el) => ({ el, r: el.getBoundingClientRect(), pos: getComputedStyle(el).position }))
+        .filter(({ r, pos }) => (pos === 'fixed' || pos === 'sticky') && r.bottom >= vh - 8 && r.height <= 140 && r.width >= vw * 0.6);
+      const bar = bars.find(({ el }) => el.querySelectorAll('a, button, [role="tab"]').length >= 2);
+      const count = bar ? Array.from(bar.el.querySelectorAll('a, button, [role="tab"]')).filter(visible).length : 0;
+      const expected = Math.min(opts.bottomSlots, Math.max(opts.navItems ? opts.navItems.length : opts.bottomSlots, 1));
+      add('bottom-nav', 'Navegação inferior no celular', `${expected} destinos`, bar ? `${count} destinos` : 'barra inferior não encontrada', Boolean(bar) && count === expected);
+    }
+    if (opts.drawer) {
+      const trigger = Array.from(document.querySelectorAll('button, [role="button"]')).filter(visible).find((el) => /menu/i.test(el.getAttribute('aria-label') || '') || el.hasAttribute('aria-controls'));
+      add('drawer-trigger', 'Botão do menu lateral (☰) no celular', 'presente', trigger ? 'presente' : 'ausente', Boolean(trigger));
+    }
+    if (opts.sidebarWidth) {
+      const cands = sidebarLike().filter((r) => r.width < vw * 0.9);
+      add('sidebar-hidden-mobile', 'Sidebar do computador fora da tela no celular', 'oculta', cands.length ? 'visível' : 'oculta', cands.length === 0);
+    }
+  }
+  return out;
+}
+"""
+
 
 def load_config(path: str) -> dict:
     with open(path, "r", encoding="utf-8") as fh:
@@ -192,6 +291,7 @@ def load_config(path: str) -> dict:
         "waitMs": int(cfg.get("waitMs") or 800),
         "minTapTarget": int(cfg.get("minTapTarget") or 44),
         "checks": checks,
+        "expect": cfg.get("expect") if checks.get("fidelity", True) else None,
     }
 
 
@@ -248,6 +348,21 @@ def run(cfg: dict, headed: bool, channel: str | None = None, browser_path: str |
                     issues.append({"page": route, "width": width, **item})
                 print(f"  {route} @ {width}px — {len(found)} ocorrência(s)")
 
+        fidelity: list[dict] = []
+        if cfg.get("expect") and pages:
+            target = urljoin(cfg["url"], pages[0])
+            exp = cfg["expect"]
+            for phase, width in (("desktop", int(exp.get("desktopWidth") or 1280)), ("mobile", int(exp.get("mobileWidth") or 390))):
+                page.set_viewport_size({"width": width, "height": 800 if width >= 768 else 780})
+                try:
+                    page.goto(target, wait_until="load", timeout=45000)
+                    page.wait_for_timeout(cfg["waitMs"])
+                    fidelity.extend(page.evaluate(FIDELITY_JS, {**exp, "phase": phase}))
+                except Exception as exc:  # noqa: BLE001
+                    print(f"  fidelidade @ {width}px não conferida: {type(exc).__name__}")
+            ok = sum(1 for r in fidelity if r.get("ok"))
+            print(f"  fidelidade à especificação: {ok}/{len(fidelity)} fato(s) conferem")
+
         context.close()
         browser.close()
 
@@ -258,6 +373,7 @@ def run(cfg: dict, headed: bool, channel: str | None = None, browser_path: str |
         "widths": cfg["widths"],
         "pages": pages,
         "issues": issues,
+        "fidelity": fidelity,
     }
 
 

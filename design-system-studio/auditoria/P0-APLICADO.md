@@ -84,3 +84,13 @@ Playwright 77 testes passando.
 | B-18 Carregamento | O modal de prompt individual (motor + catálogos) só carrega ao abrir; cada etapa do guiado carrega só o próprio módulo; a tela inicial não importa mais os catálogos; os catálogos de entrada do atalho “Usar recomendados” carregam sob demanda. JS por tela: início 884 → 345 KB, cores 1 139 → 381 KB, guiado 1 724 KB → 339 KB + a etapa aberta. Galeria de inspiração: cada site completo só é montado quando o cartão chega perto da tela. |
 
 **Verificação:** Vitest 476 testes (novo `tests/unit/v423.test.ts`, inclusive transpilação do `tokens.ts`); Playwright 92 testes.
+
+# Versão 5.0 concluída (2026-11-03) — fechar o ciclo
+
+| Item | O que mudou |
+| --- | --- |
+| Fidelidade automática | O executor local (`runner.py` 1.1) confere o site construído contra os fatos da especificação, em 1280 px e 390 px: marca visível, itens do menu, altura do header (±4 px), largura da sidebar (±8 px), fontes de títulos e textos, cor primária em ações, navegação inferior com o número certo de destinos, botão do drawer quando previsto e sidebar fora da tela no celular. A configuração exportada leva só as expectativas (sem segredos); o relatório traz só “confere/não confere” e medidas, nunca textos do site. O Validation Lab mostra “x de y fatos conferem” e o prompt de correção ganha a seção “Fidelidade à especificação”. Nova opção “Fidelidade à especificação” nas verificações. |
+| Comparação entre versões | “Comparar com o atual” em cada versão salva: tabela das decisões que mudaram (projeto, entrada, arquitetura, navegação, identidade, componentes, referências) e quantas linhas do Master Prompt saíram e entraram; dali é possível restaurar a versão. |
+| Projetos nomeados | “Seus projetos”: vários projetos no mesmo navegador, cada um com as próprias versões; “Novo projeto” e “Abrir” guardam o atual automaticamente; “Duplicar o atual” cria uma variação; o backup completo leva também os outros projetos. Com o armazenamento cheio, as versões dos outros projetos são as últimas a sair (os projetos ficam). |
+
+**Verificação:** Vitest 483 testes (novo `tests/unit/v50.test.ts`); Playwright 96 testes (novo `tests/e2e/v50.spec.ts`, que roda o script de fidelidade do executor num site fiel e num site com desvios).

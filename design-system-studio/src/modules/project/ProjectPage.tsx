@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import { History, RotateCcw, Save, Trash2 } from 'lucide-react'
+import { Copy, FilePlus2, FolderOpen, GitCompare, History, RotateCcw, Save, Trash2 } from 'lucide-react'
 import { useProject, useStudio } from '@/core/store'
 import { relativeTime } from '@/core/time'
+import { diffProjects, diffPrompts } from '@/prompt/diff'
 import { Actions, Badge, Button, Callout, Field, Input, Modal, PageHeader, Section, Segmented, Switch, toast } from '@/ui'
 import './project.css'
 
@@ -21,6 +22,13 @@ export default function ProjectPage() {
   const [label, setLabel] = useState('')
   const [confirmReset, setConfirmReset] = useState(false)
   const [confirmRestore, setConfirmRestore] = useState<string | null>(null)
+  const [compareId, setCompareId] = useState<string | null>(null)
+  const project = useStudio((s) => s.project)
+  const library = useStudio((s) => s.library)
+  const { newProject, openProject, deleteLibraryProject, duplicateProject } = useStudio.getState()
+  const compared = history.find((h) => h.id === compareId)
+  const changes = compared ? diffProjects(compared.project, project) : []
+  const promptDelta = compared ? diffPrompts(compared.project, project) : null
 
   return (
     <div className="ui-page">
@@ -49,6 +57,65 @@ export default function ProjectPage() {
             <dd>Neste navegador (localStorage). Para levar a outro computador, exporte um backup em “Exportar e importar”.</dd>
           </div>
         </dl>
+      </Section>
+
+      <Section title="Seus projetos" description="Vários projetos neste navegador, cada um com as próprias versões. Abrir outro projeto guarda o atual aqui automaticamente.">
+        <div className="ui-actions" style={{ marginBottom: 12 }}>
+          <Button
+            icon={<FilePlus2 />}
+            onClick={() => {
+              newProject()
+              toast.success('Projeto novo aberto. O anterior ficou em “Seus projetos”.')
+            }}
+            data-testid="new-project"
+          >
+            Novo projeto
+          </Button>
+          <Button
+            variant="ghost"
+            icon={<Copy />}
+            onClick={() => {
+              duplicateProject()
+              toast.success('Cópia guardada em “Seus projetos”.')
+            }}
+          >
+            Duplicar o atual
+          </Button>
+        </div>
+        <ul className="snap-list" data-testid="project-library">
+          <li className="snap-item" data-current="true">
+            <div className="snap-item__meta">
+              <strong className="u-truncate">{name || 'Projeto sem nome'}</strong>
+              <span className="u-subtle u-small">Aberto agora · alterado {relativeTime(updatedAt)}</span>
+            </div>
+            <Badge tone="accent">Atual</Badge>
+          </li>
+          {library.map((e) => (
+            <li key={e.id} className="snap-item">
+              <div className="snap-item__meta">
+                <strong className="u-truncate">{e.name}</strong>
+                <span className="u-subtle u-small">
+                  Guardado {relativeTime(e.savedAt)} · {e.history.length} versão(ões)
+                </span>
+              </div>
+              <Actions>
+                <Button
+                  size="sm"
+                  icon={<FolderOpen />}
+                  onClick={() => {
+                    openProject(e.id)
+                    toast.success(`“${e.name}” aberto. O projeto anterior ficou em “Seus projetos”.`)
+                  }}
+                >
+                  Abrir
+                </Button>
+                <Button size="sm" variant="ghost" icon={<Trash2 />} onClick={() => deleteLibraryProject(e.id)} aria-label={`Excluir projeto ${e.name}`}>
+                  Excluir
+                </Button>
+              </Actions>
+            </li>
+          ))}
+        </ul>
       </Section>
 
       <Section title="Preferências" description="Valem para todo o Studio e para os dois modos.">
@@ -103,6 +170,9 @@ export default function ProjectPage() {
                   </span>
                 </div>
                 <Actions>
+                  <Button size="sm" variant="ghost" icon={<GitCompare />} onClick={() => setCompareId(h.id)}>
+                    Comparar com o atual
+                  </Button>
                   <Button size="sm" icon={<RotateCcw />} onClick={() => setConfirmRestore(h.id)}>
                     Restaurar
                   </Button>
@@ -148,6 +218,57 @@ export default function ProjectPage() {
         }
       >
         <Badge tone="warning">Esta ação substitui o projeto atual</Badge>
+      </Modal>
+
+      <Modal
+        open={Boolean(compared)}
+        onClose={() => setCompareId(null)}
+        title={compared ? `“${compared.label}” × projeto atual` : ''}
+        subtitle={promptDelta ? `Master Prompt: ${promptDelta.removed} linha(s) saíram e ${promptDelta.added} entraram.` : undefined}
+        width={760}
+        testId="compare-modal"
+        footer={
+          <>
+            <Button onClick={() => setCompareId(null)}>Fechar</Button>
+            <Button
+              variant="primary"
+              icon={<RotateCcw />}
+              onClick={() => {
+                if (compareId) setConfirmRestore(compareId)
+                setCompareId(null)
+              }}
+            >
+              Restaurar esta versão
+            </Button>
+          </>
+        }
+      >
+        {changes.length === 0 ? (
+          <Callout tone="success">Nenhuma decisão mudou entre esta versão e o projeto atual.</Callout>
+        ) : (
+          <table className="cmp-table">
+            <thead>
+              <tr>
+                <th scope="col">Decisão</th>
+                <th scope="col">Na versão</th>
+                <th scope="col">Agora</th>
+              </tr>
+            </thead>
+            <tbody>
+              {changes.map((c) => (
+                <tr key={`${c.area}-${c.label}`}>
+                  <th scope="row">
+                    <span className="u-subtle u-small">{c.area}</span>
+                    <br />
+                    {c.label}
+                  </th>
+                  <td>{c.before}</td>
+                  <td>{c.after}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
       </Modal>
 
       <Modal

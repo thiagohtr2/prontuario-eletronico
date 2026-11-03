@@ -77,3 +77,25 @@
   justify-self: start;
   max-width: 100%;
 }
+
+/* Fidelidade à especificação (5.0). */
+.val-fidelity {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.val-fidelity li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--s-border);
+  border-radius: 10px;
+  background: var(--s-surface);
+}
+.val-fidelity li[data-ok='false'] {
+  border-color: var(--s-danger);
+}
