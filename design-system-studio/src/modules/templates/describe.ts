@@ -2,7 +2,6 @@ import type { ItemDescription } from '@/core/describe'
 import type { TemplateChoice } from '@/core/project'
 import { fontName, RADIUS_VALUES } from '@/core/tokens'
 import { categoryName, templateById } from './catalog'
-import { SECTION_LIBRARY, sectionLabel } from './sections'
 import { describeOverrides, minimalOverrides, resolveTemplateTheme } from './theme'
 
 /**
@@ -17,10 +16,6 @@ export function describeTemplate(choice: TemplateChoice): ItemDescription | null
   const selected = t.sections.filter((s) => (choice.sections ?? []).includes(s.id))
   const radius = RADIUS_VALUES[theme.radius]
   const changes = describeOverrides(t, overrides)
-
-  const selectedLines = selected.map(
-    (s) => `${s.name} (${sectionLabel(s)}${s.variant ? ` · ${s.variant}` : ''}): ${SECTION_LIBRARY[s.kind].layout(s)}`,
-  )
 
   return {
     name: `${t.name} — ${t.brand}`,
@@ -57,8 +52,8 @@ export function describeTemplate(choice: TemplateChoice): ItemDescription | null
       ...t.spec.structure,
       ...(selected.length
         ? [
-            `Partes selecionadas pelo usuário para edição/geração (priorize-as e detalhe-as primeiro): ${selected.length} de ${t.sections.length}.`,
-            ...selectedLines.map((l) => `★ ${l}`),
+            // As seções já estão descritas acima; aqui só a prioridade (sem repetir o texto).
+            `Partes selecionadas pelo usuário para edição/geração (priorize-as e detalhe-as primeiro): ${selected.map((s) => s.name).join(', ')} (${selected.length} de ${t.sections.length}).`,
           ]
         : []),
     ],

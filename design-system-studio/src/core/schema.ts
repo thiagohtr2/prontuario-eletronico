@@ -153,3 +153,34 @@ export function parseProjectFile(raw: unknown): ParseResult {
   }
   return { ok: true, project: result.data as Project }
 }
+
+export interface ParsedSnapshot {
+  id: string
+  label: string
+  createdAt: string
+  project: Project
+}
+
+/**
+ * Versões contidas em um backup completo (`kind: 'atelier-ui/backup'`). Cada versão passa pela
+ * mesma validação de um projeto importado; versões inválidas são descartadas e contadas.
+ */
+export function parseBackupHistory(raw: unknown): { snapshots: ParsedSnapshot[]; skipped: number } {
+  if (!isPlainObject(raw) || raw.kind !== 'atelier-ui/backup' || !Array.isArray(raw.history)) return { snapshots: [], skipped: 0 }
+  const snapshots: ParsedSnapshot[] = []
+  let skipped = 0
+  for (const entry of raw.history) {
+    const parsed = isPlainObject(entry) ? parseProjectFile(entry.project) : null
+    if (!parsed?.ok || !isPlainObject(entry)) {
+      skipped++
+      continue
+    }
+    snapshots.push({
+      id: typeof entry.id === 'string' && entry.id ? entry.id : `snap_import_${snapshots.length}`,
+      label: typeof entry.label === 'string' && entry.label ? entry.label : 'Versão importada',
+      createdAt: typeof entry.createdAt === 'string' ? entry.createdAt : new Date(0).toISOString(),
+      project: parsed.project,
+    })
+  }
+  return { snapshots, skipped }
+}

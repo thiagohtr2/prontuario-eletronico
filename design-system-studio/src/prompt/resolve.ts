@@ -126,8 +126,8 @@ export function resolvePromptItems(items: PromptItem[], project: Project): AutoR
   /* 1. Altura e largura do header: o layout desktop manda. */
   const headerRegion = desktop?.regions.find((r) => r.kind === 'header')
   if (header && headerModel && desktop && headerRegion) {
-    // O texto do catálogo descreve a altura do visual base do modelo.
-    const height = headerModel.look.height
+    // A especificação de cada composição descreve a altura da própria composição.
+    const height = headerLookFor(headerModel, project.navigation.header!.variant).height
     const target = desktop.measurements.header
     if (target && height !== target) {
       const re = new RegExp(`\\b${height}\\s?px`, 'g')
@@ -175,7 +175,8 @@ export function resolvePromptItems(items: PromptItem[], project: Project): AutoR
 
   /* 3. Celular e tablet: o layout mobile e o desktop compactado mandam. */
   if (mobile) {
-    const pointer = mobileNavSummary(project)
+    // Frase curta nos itens; a descrição completa fica uma vez só em “Conteúdo do projeto”.
+    const pointer = `No celular (até 767 px), siga o layout mobile “${mobile.name}” (navegação móvel descrita em “Conteúdo do projeto”).`
     const tablet = 'De 768 a 1023 px: use a estrutura desktop compactada (sidebar recolhida em trilho de ícones, itens excedentes em “Mais ▾”); não introduza ☰ ou drawer que não existam no layout mobile.'
     for (const item of [header, sidebar]) {
       if (!item) continue
@@ -188,7 +189,7 @@ export function resolvePromptItems(items: PromptItem[], project: Project): AutoR
       out.push({
         id: 'navegacao-mobile',
         title: 'Navegação no celular',
-        instruction: `${pointer} Header, sidebar e layout desktop não definem a navegação móvel. Entre 768 e 1023 px vale o desktop compactado.`,
+        instruction: `No celular vale só o layout mobile “${mobile.name}”; header, sidebar e layout desktop não definem a navegação móvel. Entre 768 e 1023 px vale o desktop compactado.`,
       })
   }
 
@@ -250,7 +251,24 @@ export function resolvePromptItems(items: PromptItem[], project: Project): AutoR
       item.notes.push('Títulos, slogans, depoimentos, nomes de planos, números e logos da prévia são conteúdo de exemplo: mantenha a estrutura e escreva o conteúdo real do projeto.')
   }
 
-  /* 8. Componentes: raio e tipografia vêm da identidade global. */
+  /* 8. Referências visuais: o que já foi decidido em outro lugar sai da referência. */
+  const refs = items.filter((i) => i.kind === 'inspiration' || i.kind === 'template')
+  for (const ref of refs) {
+    const conflictId = ref.kind === 'inspiration' ? 'cores-inspiracao' : 'cores-template'
+    if (project.prompt.conflictResolutions[conflictId] === 'global') {
+      ref.colors = {}
+      ref.structure = ref.structure.filter((l) => !l.startsWith('Cores: '))
+      ref.notes.push('Cores: use a paleta global (decisão do usuário); desta referência valem composição, tipografia e atmosfera.')
+    }
+    if (mobile) {
+      const before = ref.responsive.length
+      ref.responsive = ref.responsive.filter((l) => !/hamb[uú]rguer|drawer|☰|bottom sheet/i.test(l))
+      if (ref.responsive.length < before)
+        ref.responsive.push(`No celular (até 767 px), siga o layout mobile “${mobile.name}” (navegação móvel descrita em “Conteúdo do projeto”).`)
+    }
+  }
+
+  /* 9. Componentes: raio e tipografia vêm da identidade global. */
   if (items.some((i) => i.kind === 'component'))
     out.push({
       id: 'componentes-identidade',

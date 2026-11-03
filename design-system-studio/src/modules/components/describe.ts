@@ -67,7 +67,7 @@ function formatValue(param: ParamDef, value: PropValue): PropValue {
  * Remove das descrições da família visual as frases sobre raio, fontes e pesos tipográficos:
  * esses valores vêm da identidade global e não podem aparecer com dois valores no prompt.
  */
-const IDENTITY_SENTENCE = /\braios?\b|radius|\bfontes?\b|serifa|\bpeso \d{3}|\(\d{3}\)/i
+const IDENTITY_SENTENCE = /\braios?\b|radius|\bfontes?\b|serifa|\bpeso \d{3}|\(\d{3}\)|texto base|tamanho base|\b\d+ ?px de texto/i
 function stripIdentity(text: string): string {
   return text
     .split(/(?<=\.)\s+/)
@@ -121,9 +121,11 @@ export function describeComponent(instance: ComponentInstance, theme: ResolvedTh
   }
   for (const [k, v] of Object.entries(familyProps)) if (!(k in properties)) properties[k] = v
 
+  // Só as cores que a família transforma; as que são iguais aos tokens globais já estão na seção D.
+  const globalColors = new Set(Object.values(effective.tokens).filter((v): v is string => typeof v === 'string').map((v) => v.toLowerCase()))
   const colors: Record<string, string> = {}
   const add = (label: string, value: string) => {
-    if (/^#|^rgba?\(/.test(value)) colors[label] = value
+    if (/^#|^rgba?\(/.test(value) && !globalColors.has(value.toLowerCase())) colors[label] = value
   }
   add('Ação principal (fundo)', L.fill)
   add('Ação principal (texto)', L.onFill)
@@ -135,7 +137,8 @@ export function describeComponent(instance: ComponentInstance, theme: ResolvedTh
   add('Foco', L.focusColor)
   if (!/^#|^rgba?\(/.test(L.fill)) colors['Ação principal (gradiente)'] = L.fill
 
-  const tok = (k: TokenKey) => `${TOKEN_LABEL[k]} (${k}${instance.tokenOverrides[k] ? ', exceção individual' : ''})`
+  // Tokens citados pelo nome técnico (a tabela da seção D traz os rótulos e valores).
+  const tok = (k: TokenKey) => `\`${k}\`${instance.tokenOverrides[k] ? ' (exceção individual)' : ''}`
   const behavior = [
     ...(category?.spec.behavior ?? []),
     `Hover: fundo ${tok('primaryHover')} na ação principal e ${tok('hover')} em itens neutros${s.shadow === 'hard' ? '; desloca −2 px e aumenta a sombra dura' : s.shadow === 'press' ? '; sobe 1 px' : ''}.`,
@@ -145,25 +148,20 @@ export function describeComponent(instance: ComponentInstance, theme: ResolvedTh
     ...(family.spec.behavior ?? []),
   ]
 
+  const style = stripIdentity(family.spec.summary)
   const exceptions = overrides.map(([k, v]) => `Exceção individual: ${TOKEN_LABEL[k]} (${k}) = ${v} neste componente — não herda a paleta global; os demais tokens continuam herdados.`)
 
   return {
     name: instance.label || category?.name || instance.categoryId,
     variant: family.name,
-    summary: `${category?.name ?? instance.categoryId} na família visual ${family.name}. ${category?.spec.summary ?? ''} Estilo: ${stripIdentity(family.spec.summary)}`.trim(),
+    summary: [`${category?.name ?? instance.categoryId} na família visual ${family.name}.`, category?.spec.summary ?? '', style ? `Estilo: ${style}` : ''].filter(Boolean).join(' '),
     properties,
     colors,
-    structure: [
-      ...(category?.spec.structure ?? []),
-      `Raio e tipografia herdados da identidade global: ${m.radiusSm} px nos controles, ${m.radiusLg} px nos contêineres; títulos em ${fontName(t.heading)}, textos em ${fontName(t.body)}, base ${t.baseSize} px.`,
-      ...family.spec.structure.map(stripIdentity).filter(Boolean),
-    ],
+    structure: [...(category?.spec.structure ?? []), ...family.spec.structure.map(stripIdentity).filter(Boolean)],
     behavior,
     responsive: [...(category?.spec.responsive ?? ['Adapte o componente a telas a partir de 320 px sem overflow horizontal.']), ...family.spec.responsive],
     measurements: {
       ...(category?.spec.measurements ?? {}),
-      alturaDeControle: `${s.controlHeight} px`,
-      raio: `${m.radiusSm} px / ${m.radiusLg} px (identidade global)`,
       paddingInterno: `${Math.round(14 * s.density)} px`,
     },
     exceptions,
@@ -171,7 +169,6 @@ export function describeComponent(instance: ComponentInstance, theme: ResolvedTh
       ...(category?.spec.notes ?? []),
       ...(family.spec.notes ?? []),
       instance.label ? `Nome dado pelo usuário: “${instance.label}”.` : '',
-      'Use os tokens da paleta global por padrão; só as exceções listadas fogem dela.',
     ].filter(Boolean),
   }
 }

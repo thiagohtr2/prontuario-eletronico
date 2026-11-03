@@ -2,40 +2,65 @@ import type { Project } from '@/core/project'
 import { TOKEN_GROUPS } from '@/core/tokens'
 import type { ThemeTokens } from '@/core/types'
 import { KIND_LABEL, type PromptItem } from './items'
-import { GLOBAL_RESPONSIVE_RULES, IMPLEMENTATION_RULES, REFERENCE_WIDTHS } from './responsive'
+import { GLOBAL_RESPONSIVE_RULES, IMPLEMENTATION_RULES, REFERENCE_WIDTHS, rulesFor } from './responsive'
 import { buildProjectSpec, type ProjectSpec } from './spec'
 
-const bullet = (lines: string[], indent = '') => lines.filter(Boolean).map((l) => `${indent}- ${l}`).join('\n')
+const bulletList = (lines: string[], indent = '') => lines.filter(Boolean).map((l) => `${indent}- ${l}`).join('\n')
+const bullet = bulletList
 
 function formatValue(v: unknown): string {
   if (typeof v === 'boolean') return v ? 'sim' : 'não'
   return String(v)
 }
 
-/** Bloco Markdown completo de um item. */
-export function renderItem(item: PromptItem, heading = '###'): string {
+/** Linhas já escritas no Master Prompt: texto → item onde apareceu primeiro. */
+export type SeenLines = Map<string, { key: string; label: string }>
+
+/**
+ * Bloco Markdown completo de um item. Com `seen` (Master Prompt), linhas idênticas a de um item
+ * anterior não são repetidas: o bloco termina com uma referência ao item onde elas já estão.
+ */
+export function renderItem(item: PromptItem, heading = '###', seen?: SeenLines): string {
   const parts: string[] = []
+  const label = `${item.name}${item.variant ? ` — ${item.variant}` : ''}`
+  const repeatedFrom = new Set<string>()
+  const fresh = (line: string) => {
+    if (!seen || line.length < 25) return true
+    const first = seen.get(line)
+    if (!first) {
+      seen.set(line, { key: item.key, label })
+      return true
+    }
+    if (first.key === item.key) return true
+    repeatedFrom.add(first.label)
+    return false
+  }
+  const bullet = (lines: string[]) => bulletList(lines.filter((l) => l && fresh(l)))
   parts.push(`${heading} ${KIND_LABEL[item.kind]}: ${item.name}${item.variant ? ` — ${item.variant}` : ''}${item.isDefault ? ' (padrão do Studio — não revisado)' : ''}`)
-  parts.push(`\`id: ${item.catalogId ?? item.key}\` · origem: módulo “${item.source}”`)
-  if (item.isDefault) parts.push('_Valor padrão do Studio que o usuário não alterou: trate como sugestão neutra, não como decisão aprovada._')
+  parts.push(`\`id: ${item.catalogId ?? item.key}\``)
   parts.push(item.summary)
-  if (item.structure.length) parts.push(`**Estrutura**\n${bullet(item.structure)}`)
+  const section = (title: string, lines: string[]) => {
+    const body = bullet(lines)
+    if (body) parts.push(`**${title}**\n${body}`)
+  }
+  section('Estrutura', item.structure)
   const props = Object.entries(item.properties).filter(([, v]) => v !== '' && v !== undefined)
-  if (props.length) parts.push(`**Propriedades**\n${bullet(props.map(([k, v]) => `${k}: ${formatValue(v)}`))}`)
-  const colors = Object.entries(item.colors)
-  if (colors.length && item.kind !== 'palette') parts.push(`**Cores**\n${bullet(colors.map(([k, v]) => `${k}: ${v}`))}`)
-  const measures = Object.entries(item.measurements)
-  if (measures.length) parts.push(`**Medidas recomendadas (adaptáveis)**\n${bullet(measures.map(([k, v]) => `${k}: ${v}`))}`)
-  if (item.behavior.length) parts.push(`**Comportamento e estados**\n${bullet(item.behavior)}`)
-  if (item.responsive.length) parts.push(`**Responsividade deste item**\n${bullet(item.responsive)}`)
-  if (item.exceptions.length) parts.push(`**Exceções**\n${bullet(item.exceptions)}`)
-  if (item.notes.length) parts.push(`**Observações**\n${bullet(item.notes)}`)
+  section('Propriedades', props.map(([k, v]) => `${k}: ${formatValue(v)}`))
+  if (item.kind !== 'palette') section('Cores', Object.entries(item.colors).map(([k, v]) => `${k}: ${v}`))
+  section('Medidas recomendadas', Object.entries(item.measurements).map(([k, v]) => `${k}: ${v}`))
+  section('Comportamento e estados', item.behavior)
+  section('Responsividade', item.responsive)
+  // Exceções são sempre do próprio item: nunca são resumidas.
+  if (item.exceptions.length) parts.push(`**Exceções**\n${bulletList(item.exceptions)}`)
+  section('Observações', item.notes)
+  if (repeatedFrom.size)
+    parts.push(`_Também valem aqui as regras idênticas já descritas em ${[...repeatedFrom].map((l) => `“${l}”`).join(', ')} (não repetidas)._`)
   return parts.join('\n\n')
 }
 
 export function renderTokensTable(tokens: ThemeTokens): string {
-  const rows = TOKEN_GROUPS.flatMap((g) => g.keys.map((k) => `| ${g.title} | ${k.label} | \`${k.key}\` | ${tokens[k.key]} |`))
-  return ['| Grupo | Token | Nome | Valor |', '| --- | --- | --- | --- |', ...rows].join('\n')
+  // Uma linha por grupo: nome técnico (autoexplicativo) e valor. Mesmo conteúdo da tabela antiga, ~45% menor.
+  return bulletList(TOKEN_GROUPS.map((g) => `${g.title}: ${g.keys.map((k) => `\`${k.key}\` ${tokens[k.key]}`).join(' · ')}`))
 }
 
 /** Master Prompt: todas as decisões aprovadas, organizadas nas seções A–G. */
@@ -43,6 +68,7 @@ export function renderMasterPrompt(spec: ProjectSpec): string {
   const p = spec.project
   const a = spec.architecture
   const out: string[] = []
+  const seen: SeenLines = new Map()
 
   out.push(`# Master Prompt — ${p.name}`)
   out.push(
@@ -82,7 +108,7 @@ export function renderMasterPrompt(spec: ProjectSpec): string {
       a.oneScreen ? 'Experiência One Screen: a interface principal cabe em uma viewport, sem rolagem vertical principal; áreas internas rolam localmente e nada importante é escondido.' : '',
     ].filter(Boolean)),
   )
-  for (const item of [a.landing, a.login, a.signup, a.desktop, a.mobile]) if (item) out.push(renderItem(item))
+  for (const item of [a.landing, a.login, a.signup, a.desktop, a.mobile]) if (item) out.push(renderItem(item, '###', seen))
   if (a.desktop && a.mobile) {
     out.push(
       `### Relação entre desktop e celular\n${bullet([
@@ -95,7 +121,7 @@ export function renderMasterPrompt(spec: ProjectSpec): string {
 
   out.push('## C. Navegação')
   if (spec.navigation.header || spec.navigation.sidebar) {
-    for (const item of [spec.navigation.header, spec.navigation.sidebar]) if (item) out.push(renderItem(item))
+    for (const item of [spec.navigation.header, spec.navigation.sidebar]) if (item) out.push(renderItem(item, '###', seen))
   } else {
     out.push('Nenhum modelo específico de header ou sidebar foi escolhido no Navigation Showcase. Use a estrutura do layout desktop/mobile com aparência derivada da identidade visual, sem decoração extra.')
   }
@@ -114,7 +140,10 @@ export function renderMasterPrompt(spec: ProjectSpec): string {
   out.push(renderTokensTable(spec.identity.tokens))
   const overrides = Object.entries(spec.identity.overrides)
   if (overrides.length) out.push(`Tokens ajustados manualmente pelo usuário: ${overrides.map(([k, v]) => `\`${k}\` = ${v}`).join(', ')}.`)
-  for (const item of spec.identity.items.filter((i) => i.kind !== 'palette')) out.push(renderItem(item))
+  // A observação escrita no item da paleta fica nas exceções do item, que não é renderizado como bloco.
+  const paletteNotes = (spec.identity.items.find((i) => i.kind === 'palette')?.exceptions ?? []).filter((e) => e.startsWith('Observação do usuário'))
+  if (paletteNotes.length) out.push(`**Observações sobre a paleta**\n${bullet(paletteNotes)}`)
+  for (const item of spec.identity.items.filter((i) => i.kind !== 'palette')) out.push(renderItem(item, '###', seen))
   out.push(
     `### Estados visuais\n${bullet([
       'hover: fundo `hover` ou primária `primaryHover`; active/pressed: `active`/`pressed`/`primaryActive`.',
@@ -127,14 +156,14 @@ export function renderMasterPrompt(spec: ProjectSpec): string {
   out.push('## E. Componentes')
   if (spec.components.length) {
     out.push(`${spec.components.length} componente(s) aprovados. Cada instância tem configuração própria; alterar uma não altera as outras.`)
-    for (const item of spec.components) out.push(renderItem(item))
+    for (const item of spec.components) out.push(renderItem(item, '###', seen))
   } else {
     out.push('Nenhum componente foi personalizado na biblioteca. Crie os componentes necessários usando os tokens e a geometria da seção D.')
   }
 
   if (spec.references.inspiration || spec.references.template) {
     out.push('## Referências visuais aprovadas')
-    for (const item of [spec.references.inspiration, spec.references.template]) if (item) out.push(renderItem(item))
+    for (const item of [spec.references.inspiration, spec.references.template]) if (item) out.push(renderItem(item, '###', seen))
   }
 
   out.push('## F. Responsividade')
@@ -143,7 +172,8 @@ export function renderMasterPrompt(spec: ProjectSpec): string {
     `Breakpoints de referência:\n${bullet(spec.responsive.breakpoints.map((b) => `${b.name}: ${b.description}`))}`,
   )
   out.push(`**Regras gerais**\n${bullet(spec.responsive.globalRules)}`)
-  out.push(`**Regras por componente**\n${bullet(Object.values(spec.responsive.componentRules).flat())}`)
+  const componentRules = Object.values(spec.responsive.componentRules).flat()
+  if (componentRules.length) out.push(`**Regras por tipo de elemento presente no projeto**\n${bullet(componentRules)}`)
 
   out.push('## G. Regras de implementação')
   out.push(bullet(spec.implementationRules))
@@ -196,7 +226,7 @@ export function renderItemPrompt(item: PromptItem, project: Project): string {
       ])}`,
     )
   }
-  out.push(`## Responsividade obrigatória\nValide em ${REFERENCE_WIDTHS.join(', ')} px.\n${bullet(GLOBAL_RESPONSIVE_RULES)}`)
+  out.push(`## Responsividade obrigatória\nValide em ${REFERENCE_WIDTHS.join(', ')} px.\n${bullet([...GLOBAL_RESPONSIVE_RULES, ...rulesFor(item.responsiveKinds)])}`)
   out.push(`## Regras de implementação\n${bullet(IMPLEMENTATION_RULES)}`)
   return out.join('\n\n') + '\n'
 }

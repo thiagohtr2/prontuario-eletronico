@@ -1,4 +1,4 @@
-import type { CatalogItem } from '@/core/types'
+import type { CatalogItem, ItemSpec } from '@/core/types'
 
 /** Uma das duas propostas de composição de cada modelo. */
 export interface NavComposition {
@@ -206,6 +206,8 @@ export interface HeaderModel extends CatalogItem {
   sticky: boolean
   /** Receita visual (dados puros) usada pelo renderizador. */
   look: HeaderLook
+  /** Especificação de cada composição (A e B), com as medidas e a estrutura da própria composição. */
+  specs: [ItemSpec, ItemSpec]
 }
 
 /* -------------------------------------------------------------------------- */
@@ -280,6 +282,8 @@ export interface SidebarModel extends CatalogItem {
   width: number
   /** Receita visual (dados puros) usada pelo renderizador. */
   look: SidebarLook
+  /** Especificação de cada composição (A e B), com a estrutura da própria composição. */
+  specs: [ItemSpec, ItemSpec]
 }
 
 export const HEADER_FILTERS: { id: string; label: string }[] = [

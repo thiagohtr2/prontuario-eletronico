@@ -15,7 +15,6 @@ import { headerById, sidebarById } from '@/modules/navigation/catalog'
 import { describeTemplate } from '@/modules/templates/describe'
 import { templateById } from '@/modules/templates/catalog'
 import { resolvePromptItems, type AutoResolution } from './resolve'
-import { rulesFor } from './responsive'
 
 export type PromptKind =
   | 'entry-flow'
@@ -51,6 +50,11 @@ export interface PromptItem {
   structure: string[]
   behavior: string[]
   responsive: string[]
+  /**
+   * Tipos de regra responsiva por componente que valem para o item (ver COMPONENT_RESPONSIVE_RULES).
+   * No Master Prompt essas regras aparecem uma vez na seção F; no prompt individual, junto do item.
+   */
+  responsiveKinds: string[]
   measurements: Record<string, string>
   exceptions: string[]
   notes: string[]
@@ -96,14 +100,16 @@ function toItem(
     name: d.name,
     variant: d.variant ?? null,
     summary: d.summary,
-    properties: d.properties ?? {},
-    colors: d.colors ?? {},
-    structure: d.structure,
-    behavior: d.behavior ?? [],
-    responsive: [...d.responsive, ...rulesFor(extraResponsiveKinds)],
-    measurements: d.measurements ?? {},
+    // Cópias: o resolvedor reescreve os itens, e os arrays/objetos vêm dos catálogos (compartilhados).
+    properties: { ...(d.properties ?? {}) },
+    colors: { ...(d.colors ?? {}) },
+    structure: [...d.structure],
+    behavior: [...(d.behavior ?? [])],
+    responsive: [...d.responsive],
+    responsiveKinds: [...extraResponsiveKinds],
+    measurements: { ...(d.measurements ?? {}) },
     exceptions: [...(d.exceptions ?? []), ...(note ? [`Observação do usuário: ${note}`] : [])],
-    notes: d.notes ?? [],
+    notes: [...(d.notes ?? [])],
     included: !project.prompt.excluded.includes(key),
   }
 }
@@ -319,7 +325,8 @@ export function collectPromptData(project: Project): { items: PromptItem[]; reso
   const header = project.navigation.header ? headerById(project.navigation.header.id) : undefined
   if (header && project.navigation.header) {
     const comp = header.compositions[project.navigation.header.variant]
-    const d = describeCatalogItem(header, {
+    // Cada composição tem a própria especificação (medidas, logo, busca, disposição).
+    const d = describeCatalogItem({ ...header, spec: header.specs[project.navigation.header.variant] }, {
       variant: comp?.name,
       properties: { flutuante: header.floating, fixo: header.sticky, composicao: comp ? `${comp.name}: ${comp.description}` : '' },
     })
@@ -328,7 +335,7 @@ export function collectPromptData(project: Project): { items: PromptItem[]; reso
   const sidebar = project.navigation.sidebar ? sidebarById(project.navigation.sidebar.id) : undefined
   if (sidebar && project.navigation.sidebar) {
     const comp = sidebar.compositions[project.navigation.sidebar.variant]
-    const d = describeCatalogItem(sidebar, {
+    const d = describeCatalogItem({ ...sidebar, spec: sidebar.specs[project.navigation.sidebar.variant] }, {
       variant: comp?.name,
       properties: { formato: sidebar.shape, flutuante: sidebar.floating, largura: `≈${sidebar.width} px`, composicao: comp ? `${comp.name}: ${comp.description}` : '' },
     })

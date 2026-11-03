@@ -129,11 +129,13 @@ interface HeaderDef {
   tags?: string[]
 }
 
-function headerSpec(d: HeaderDef): ItemSpec {
-  const l = d.look
+/** Especificação de uma composição do header: visual base + ajustes da composição escolhida. */
+function headerSpec(d: HeaderDef, variant: 0 | 1): ItemSpec {
+  const comp = d.compositions[variant]
+  const l: HeaderLook = { ...d.look, ...(comp.patch ?? {}) }
   const menus = l.nav.filter((n) => n.menu)
-  const hasMega = l.nav.some((n) => n.menu === 'mega') || d.compositions.some((c) => c.patch?.nav?.some((n) => n.menu === 'mega'))
-  const hasDropdown = l.nav.some((n) => n.menu === 'dropdown') || d.compositions.some((c) => c.patch?.nav?.some((n) => n.menu === 'dropdown'))
+  const hasMega = l.nav.some((n) => n.menu === 'mega')
+  const hasDropdown = l.nav.some((n) => n.menu === 'dropdown')
   const shapeTxt =
     l.shape === 'floating'
       ? `flutuante: afastada 12 px do topo e das laterais${l.maxWidth ? `, largura máxima de ${l.maxWidth} px centralizada` : ''}, cantos radiusLg e sombra do tema (ou sombra média, se o tema não tiver)`
@@ -167,9 +169,7 @@ function headerSpec(d: HeaderDef): ItemSpec {
       `Breadcrumbs “${l.breadcrumbs.join(' / ')}” ${l.breadcrumbStyle === 'row' ? 'em uma faixa própria de 40 px abaixo da barra' : 'dentro da barra, logo após o logo'}; separador “/” em textMuted e o último nível em peso 600 (aria-current="page").`,
     )
   if (l.greeting) structure.push(`Saudação personalizada “${l.greeting}” com a data abaixo, no lugar da navegação.`)
-  structure.push(
-    `Disposição conforme a composição escolhida (ver “composicao”): A “${d.compositions[0].name}” = ${H_LAYOUT[d.compositions[0].layout]}; B “${d.compositions[1].name}” = ${H_LAYOUT[d.compositions[1].layout]}.`,
-  )
+  structure.push(`Disposição da composição “${comp.name}”: ${H_LAYOUT[comp.layout]}.`)
   if (d.structure) structure.push(...d.structure)
 
   const behavior: string[] = []
@@ -243,7 +243,8 @@ function headerSpec(d: HeaderDef): ItemSpec {
   if (d.measurements) Object.assign(measurements, d.measurements)
 
   return {
-    summary: d.summary,
+    // O resumo do catálogo descreve o visual base; a altura acompanha a composição escolhida.
+    summary: l.height === d.look.height ? d.summary : d.summary.replace(new RegExp(`\\b${d.look.height}\\s?px`, 'g'), `${l.height} px`),
     structure,
     behavior,
     responsive,
@@ -267,7 +268,8 @@ function H(d: HeaderDef): HeaderModel {
     sticky: d.sticky,
     look: d.look,
     compositions: d.compositions,
-    spec: headerSpec(d),
+    spec: headerSpec(d, 0),
+    specs: [headerSpec(d, 0), headerSpec(d, 1)],
   }
 }
 
@@ -1536,17 +1538,20 @@ interface SidebarDef {
   tags?: string[]
 }
 
-function sidebarSpec(d: SidebarDef): ItemSpec {
-  const l = d.look
+/** Especificação de uma composição da sidebar: visual base + arranjo da composição escolhida. */
+function sidebarSpec(d: SidebarDef, variant: 0 | 1): ItemSpec {
+  const comp = d.compositions[variant]
+  const arr = comp.arrangement
+  const l: SidebarLook = { ...d.look, ...(arr.patch ?? {}) }
   const all = [...l.groups, ...(l.panel ?? []), ...(l.sections ?? []).flatMap((s) => s.groups)].flatMap((g) => g.items)
   const withChildren = all.filter((i) => i.children?.length)
-  const flyoutIn = d.compositions.map((c, i) => (c.arrangement.submenu === 'flyout' ? i : -1)).filter((i) => i >= 0)
+  const flyout = arr.submenu === 'flyout'
   const rail = l.railWidth ?? (d.shape === 'rail' ? d.width : 72)
   const itemH = S_DENSITY[l.density]
   const shapeTxt: Record<SidebarModel['shape'], string> = {
     integral: `integral: ocupa toda a altura, encostada na borda esquerda, com ${d.width} px de largura`,
     flutuante: `flutuante: afastada 12 px do topo, da base e da esquerda, ${d.width} px de largura, cantos radiusLg e sombra`,
-    rail: `trilho compacto de ${d.width} px, só ícones${d.compositions.some((c) => c.arrangement.labels === 'below') ? ' (com rótulo curto abaixo do ícone)' : ''}`,
+    rail: `trilho compacto de ${d.width} px, só ícones${arr.labels === 'below' ? ' (com rótulo curto abaixo do ícone)' : ''}`,
     dupla: `dupla: trilho de ícones de 64 px + painel de segundo nível de ${d.width - 64} px (total ${d.width} px)`,
     expansivel: `expansível: ${d.width} px aberta e ${rail} px recolhida`,
     contextual: `contextual: ${d.width} px, cuja lista muda conforme a área escolhida no topo`,
@@ -1564,9 +1569,7 @@ function sidebarSpec(d: SidebarDef): ItemSpec {
   ]
   if (l.panel) structure.push(`Painel de segundo nível com: ${l.panel.map((g) => `${g.title ? g.title + ': ' : ''}${g.items.map((i) => i.label).join(', ')}`).join(' | ')}.`)
   if (l.sections) structure.push(`Áreas que trocam a lista: ${l.sections.map((s) => s.label).join(', ')}.`)
-  structure.push(
-    `Composição A: ${S_TOP[d.compositions[0].arrangement.top]}; ${S_FOOTER[d.compositions[0].arrangement.footer]}. Composição B: ${S_TOP[d.compositions[1].arrangement.top]}; ${S_FOOTER[d.compositions[1].arrangement.footer]}.`,
-  )
+  structure.push(`Composição “${comp.name}”: ${S_TOP[arr.top]}; ${S_FOOTER[arr.footer]}.`)
   if (d.structure) structure.push(...d.structure)
 
   const behavior: string[] = [
@@ -1575,28 +1578,26 @@ function sidebarSpec(d: SidebarDef): ItemSpec {
   if (withChildren.length)
     behavior.push(
       `Submenus (${withChildren.map((i) => i.label).join(', ')}): ${
-        flyoutIn.length === 2
+        flyout
           ? 'abrem como flyout — painel de 220 px à direita da sidebar, alinhado ao item, com o título da seção, reposicionado para caber na altura da janela.'
-          : flyoutIn.length === 1
-            ? `na composição ${flyoutIn[0] === 0 ? 'A' : 'B'} abrem como flyout (painel de 220 px à direita da sidebar, alinhado ao item e reposicionado para caber na altura da janela); na composição ${flyoutIn[0] === 0 ? 'B' : 'A'}, como acordeão dentro da lista (aria-expanded), com subitens recuados e linha-guia vertical.`
-            : 'abrem como acordeão dentro da lista (aria-expanded), com subitens recuados 28 px e uma linha-guia vertical de 1 px; o item pai fica destacado quando um subitem está ativo.'
+          : 'abrem como acordeão dentro da lista (aria-expanded), com subitens recuados 28 px e uma linha-guia vertical de 1 px; o item pai fica destacado quando um subitem está ativo.'
       } Esc fecha o submenu aberto.`,
     )
   if (l.collapsible || d.shape === 'expansivel')
     behavior.push(
       `Botão de recolher (aria-label “Recolher menu”/“Expandir menu”) alterna entre ${d.width} e ${rail} px com transição de 180 ms em width; recolhida, os rótulos somem e aparecem como tooltip à direita no hover/foco. O estado é lembrado (localStorage).`,
     )
-  if (d.compositions.some((c) => c.arrangement.expand === 'hover'))
+  if (arr.expand === 'hover')
     behavior.push(`Expansão por hover: o trilho de ${rail} px se abre para ${d.width} px por cima do conteúdo (overlay com sombra, sem empurrar o layout) ao passar o mouse ou focar com Tab; recolhe ao sair.`)
-  if (d.shape === 'rail' || d.compositions.some((c) => c.arrangement.labels === 'hidden'))
+  if (d.shape === 'rail' || arr.labels === 'hidden')
     behavior.push('Trilho só com ícones: cada botão tem aria-label e mostra tooltip com o rótulo à direita (atraso de 300 ms no hover, imediato no foco).')
   if (d.shape === 'dupla') behavior.push('O trilho troca o conteúdo do painel de segundo nível; o título do painel mostra a área ativa.')
   if (d.shape === 'contextual') behavior.push('O seletor/abas do topo troca a lista inteira de itens conforme a área, mantendo a posição da sidebar.')
-  if (d.compositions.some((c) => c.arrangement.top === 'search' || c.arrangement.top === 'logo-search'))
+  if (arr.top === 'search' || arr.top === 'logo-search')
     behavior.push('A busca filtra os itens enquanto a pessoa digita (sem diferenciar maiúsculas e acentos) e mostra “Nada encontrado” quando não há resultados.')
-  if (d.compositions.some((c) => c.arrangement.top === 'workspace' || c.arrangement.footer === 'workspace'))
+  if (arr.top === 'workspace' || arr.footer === 'workspace')
     behavior.push('Seletor de espaço de trabalho: abre um menu com os espaços (o atual marcado com ✓) e “Criar espaço”; Esc ou clique fora fecham.')
-  if (d.compositions.some((c) => ['profile', 'profile-card'].includes(c.arrangement.footer)))
+  if (['profile', 'profile-card'].includes(arr.footer))
     behavior.push('Menu do perfil abre para cima, dentro da altura da janela: Meu perfil, Preferências, Sair.')
   behavior.push(
     d.fixed === false
@@ -1616,7 +1617,7 @@ function sidebarSpec(d: SidebarDef): ItemSpec {
     'Menus e tooltips da sidebar ficam dentro da viewport: reposicionados para cima quando faltaria espaço abaixo; nenhum overflow horizontal.',
   ]
   if (d.floating) responsive.push('No celular a versão flutuante vira drawer encostado na borda (sem afastamento), com o mesmo raio apenas nos cantos da direita.')
-  if (d.compositions.some((c) => ['profile', 'profile-card', 'upgrade', 'meter', 'workspace'].includes(c.arrangement.footer)))
+  if (['profile', 'profile-card', 'upgrade', 'meter', 'workspace'].includes(arr.footer))
     responsive.push('O rodapé (perfil, medidor ou cartão) fica fixo na base do drawer; a lista rola acima dele.')
   responsive.push('Se o app for usado principalmente no celular, ofereça também uma bottom navigation com os 4–5 destinos principais.')
   if (d.responsive) responsive.push(...d.responsive)
@@ -1659,7 +1660,8 @@ function S(d: SidebarDef): SidebarModel {
     width: d.width,
     look: d.look,
     compositions: d.compositions,
-    spec: sidebarSpec(d),
+    spec: sidebarSpec(d, 0),
+    specs: [sidebarSpec(d, 0), sidebarSpec(d, 1)],
   }
 }
 

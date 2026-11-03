@@ -101,7 +101,7 @@ function exportSpec(kind: Kind, model: HeaderModel | SidebarModel, variant: 0 | 
     },
     properties: isHeader ? { floating: h.floating, sticky: h.sticky } : { shape: s.shape, floating: s.floating, width: s.width },
     filters: model.filters,
-    spec: model.spec,
+    spec: model.specs[variant],
     design: isHeader ? headerLookFor(h, variant) : sidebarLookFor(s, variant),
   })
   toast.success('Especificação exportada em JSON.')
@@ -231,7 +231,7 @@ function DetailModal({
   const [device, setDevice] = useState<Device>('desktop')
   const [technical, setTechnical] = useState(!guided)
   const comp = model.compositions[variant]
-  const spec = model.spec
+  const spec = model.specs[variant]
   const measurements = Object.entries(spec.measurements ?? {}).map(([k, v]) => `${k}: ${v}`)
   return (
     <Modal

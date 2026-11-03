@@ -124,10 +124,10 @@ describe('describeTemplate', () => {
     expect(d.properties?.cantos).toBe(RADIUS_VALUES.pill.label)
     expect(d.properties?.partesSelecionadas).toBe('Abertura, Cardápio')
     expect(d.summary).toContain('Abertura, Cardápio')
-    const starred = d.structure.filter((l) => l.startsWith('★'))
-    expect(starred).toHaveLength(2)
-    expect(starred[0]).toContain('Abertura')
-    expect(starred[1]).toContain('Cardápio')
+    // As partes selecionadas aparecem uma vez, na ordem do template, sem repetir a descrição das seções.
+    const selected = d.structure.filter((l) => l.startsWith('Partes selecionadas'))
+    expect(selected).toHaveLength(1)
+    expect(selected[0]).toContain('Abertura, Cardápio (2 de')
     // O fundo igual ao padrão não conta como exceção.
     expect(d.exceptions).toHaveLength(3)
     expect(d.exceptions?.join(' ')).toContain('#123456')

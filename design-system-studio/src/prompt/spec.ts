@@ -149,7 +149,10 @@ export function buildProjectSpec(project: Project): ProjectSpec {
       referenceWidths: REFERENCE_WIDTHS,
       breakpoints: BREAKPOINTS,
       globalRules: GLOBAL_RESPONSIVE_RULES,
-      componentRules: COMPONENT_RESPONSIVE_RULES,
+      // Só as regras dos tipos de elemento presentes no projeto (nada de regras de tabela sem tabela).
+      componentRules: Object.fromEntries(
+        Object.entries(COMPONENT_RESPONSIVE_RULES).filter(([kind]) => items.some((i) => i.included && i.responsiveKinds.includes(kind))),
+      ),
     },
     implementationRules: IMPLEMENTATION_RULES,
     conflicts: detectConflicts(project),

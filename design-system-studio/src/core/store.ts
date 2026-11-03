@@ -15,7 +15,7 @@ import {
   type ValidationConfig,
   type ValidationReport,
 } from './project'
-import { parseProjectFile } from './schema'
+import { parseBackupHistory, parseProjectFile } from './schema'
 import type { Geometry, TokenKey, Typography } from './types'
 
 export interface Snapshot {
@@ -90,7 +90,8 @@ interface StudioState {
   saveSnapshot: (label: string) => void
   restoreSnapshot: (id: string) => void
   deleteSnapshot: (id: string) => void
-  importProject: (raw: unknown) => { ok: true } | { ok: false; errors: string[] }
+  /** Importa projeto, especificação ou backup; versões de um backup completo são restauradas junto. */
+  importProject: (raw: unknown) => { ok: true; versions: number; skipped: number } | { ok: false; errors: string[] }
   resetProject: () => void
 }
 
@@ -252,16 +253,27 @@ export const useStudio = create<StudioState>()(
         restoreSnapshot: (id) => {
           const snap = get().history.find((h) => h.id === id)
           if (!snap) return
+          // Versões antigas ou incompletas passam pela mesma validação de um arquivo importado.
+          const parsed = parseProjectFile(snap.project)
+          if (!parsed.ok) return
           pushSnapshot('Antes de restaurar uma versão')
-          set({ project: { ...structuredClone(snap.project), updatedAt: new Date().toISOString() } })
+          set({ project: { ...parsed.project, updatedAt: new Date().toISOString() } })
         },
         deleteSnapshot: (id) => set((s) => ({ history: s.history.filter((h) => h.id !== id) })),
         importProject: (raw) => {
           const result = parseProjectFile(raw)
           if (!result.ok) return result
+          const { snapshots, skipped } = parseBackupHistory(raw)
           pushSnapshot('Antes de importar um arquivo')
-          set({ project: { ...result.project, updatedAt: new Date().toISOString() } })
-          return { ok: true }
+          set((s) => {
+            // Mescla as versões do backup com as atuais (nada é apagado); mais recentes primeiro.
+            const known = new Set(s.history.map((h) => h.id))
+            const history = [...s.history, ...snapshots.filter((h) => !known.has(h.id))]
+              .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
+              .slice(0, MAX_SNAPSHOTS)
+            return { project: { ...result.project, updatedAt: new Date().toISOString() }, history }
+          })
+          return { ok: true, versions: snapshots.length, skipped }
         },
         resetProject: () => {
           pushSnapshot('Antes de limpar o projeto')

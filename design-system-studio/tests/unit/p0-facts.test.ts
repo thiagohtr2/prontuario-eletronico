@@ -81,6 +81,11 @@ describe.each(Object.entries(BACKUPS))('P0 — %s', (_id, path) => {
     expect(header.measurements['altura (desktop)']).toMatch(new RegExp(`^${target} px`))
   })
 
+  it('gerar o prompt várias vezes não altera os catálogos (itens são cópias)', () => {
+    const again = renderMasterPrompt(buildProjectSpec(project))
+    expect(again.length).toBe(prompt.length)
+  })
+
   it('a sidebar tem uma única largura: a do layout desktop', () => {
     const sidebar = items.find((i) => i.kind === 'sidebar')
     const model = project.navigation.sidebar ? sidebarById(project.navigation.sidebar.id) : undefined
@@ -139,7 +144,12 @@ describe('P0 — conteúdo do projeto (B-02)', () => {
     expect(prompt).toContain('Visão geral · Projetos · Tarefas · Equipe · Relatórios')
     const items = collectPromptItems(p)
     const nav = items.filter((i) => i.kind === 'header' || i.kind === 'sidebar')
-    for (const item of nav) expect(item.structure.join('\n')).toContain('Visão geral, Projetos, Tarefas, Equipe, Relatórios')
+    for (const item of nav) {
+      // A composição escolhida pode não ter links (ex.: header só com trilha); quando tem, usa os do projeto.
+      if (item.kind === 'header' && !item.structure.some((l) => l.startsWith('Navegação principal'))) continue
+      expect(item.structure.join('\n')).toContain('Visão geral, Projetos, Tarefas, Equipe, Relatórios')
+    }
+    expect(nav.some((i) => i.kind === 'sidebar')).toBe(true)
   })
 
   it('sem itens de menu, gera pendência e não copia o menu de exemplo', () => {
@@ -148,10 +158,10 @@ describe('P0 — conteúdo do projeto (B-02)', () => {
     expect(detectPending(p).some((x) => x.id === 'menu')).toBe(true)
     const header = collectPromptItems(p).find((i) => i.kind === 'header')
     const model = p.navigation.header ? headerById(p.navigation.header.id) : undefined
-    if (header && model && model.look.nav.length) {
-      const line = header.structure.find((l) => l.startsWith('Navegação principal'))!
-      for (const n of model.look.nav) expect(line).not.toContain(`${n.label},`)
-    }
+    const line = header?.structure.find((l) => l.startsWith('Navegação principal'))
+    if (line && model) for (const n of model.look.nav) expect(line).not.toContain(`${n.label},`)
+    const sidebar = collectPromptItems(p).find((i) => i.kind === 'sidebar')
+    expect(sidebar?.structure.find((l) => l.startsWith('Itens: '))).toContain('ainda não definidos')
   })
 
   it('importa backups antigos sem navItems', () => {

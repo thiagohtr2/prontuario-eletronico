@@ -69,7 +69,10 @@ export default function ExportPage() {
     try {
       const raw = await readJsonFile(file)
       const result = importProject(raw)
-      if (result.ok) toast.success('Projeto importado. O estado anterior foi salvo em “Projeto e versões”.')
+      if (result.ok)
+        toast.success(
+          `Projeto importado${result.versions ? ` com ${result.versions} versão(ões) do backup` : ''}${result.skipped ? ` (${result.skipped} versão(ões) inválida(s) ignorada(s))` : ''}. O estado anterior foi salvo em “Projeto e versões”.`,
+        )
       else setErrors(result.errors)
     } catch (e) {
       setErrors([(e as Error).message])
