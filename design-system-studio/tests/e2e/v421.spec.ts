@@ -46,8 +46,10 @@ test.describe('Guiado sem gargalos', () => {
     expect(p.layout.desktopId).toBe('sidebar-integral-classica')
     expect(p.layout.mobileId).toBe('bottom-nav-classica')
     // B-17: o contador reflete as escolhas reais (4 de 5; falta aprovar a revisão).
-    await expect(page.locator('.shell-progress')).toContainText('Esqueleto 4/5')
     await expect(page.getByRole('heading', { name: 'Seu esqueleto (ainda não aprovado)' })).toBeVisible()
+    // No guiado o stepper mostra o progresso; fora dele, o contador do topo usa a mesma regra.
+    await go(page, '/prompt')
+    await expect(page.locator('.shell-progress')).toContainText('Esqueleto 4/5')
   })
 
   test('B-08: a entrega diz o que fazer agora e aponta pendências antes de copiar', async ({ page }) => {

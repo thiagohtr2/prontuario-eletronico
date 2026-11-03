@@ -72,11 +72,30 @@ function SelectionSummary({ label, value, detail, onPreview }: { label: string; 
   )
 }
 
-function SelectButton({ selected, onSelect }: { selected: boolean; onSelect: () => void }) {
+/**
+ * Rodapé padrão dos modais de modelo (B-24): “Fechar” (secundário), prompt e “Escolher este modelo”
+ * (primário), que escolhe e fecha. Já escolhido, o primário mostra o estado e só fecha.
+ */
+function ModalFooter({ selected, onSelect, onClose, prompt }: { selected: boolean; onSelect: () => void; onClose: () => void; prompt: ReactNode }) {
   return (
-    <Button variant="primary" icon={<Check />} onClick={() => keepScroll(onSelect)} disabled={selected} data-testid="select-model">
-      {selected ? 'Modelo selecionado' : 'Selecionar este modelo'}
-    </Button>
+    <>
+      <Button variant="secondary" onClick={onClose}>
+        Fechar
+      </Button>
+      {prompt}
+      <Button
+        variant="primary"
+        icon={<Check />}
+        onClick={() => {
+          if (!selected) keepScroll(onSelect)
+          onClose()
+        }}
+        data-testid="select-model"
+        data-selected={selected}
+      >
+        {selected ? 'Escolhido ✓ — fechar' : 'Escolher este modelo'}
+      </Button>
+    </>
   )
 }
 
@@ -147,12 +166,7 @@ function LandingModal({ model, onClose }: { model: LandingModel; onClose: () => 
       title={model.name}
       subtitle={`${model.segment} · ${architectureName(model.architecture)}`}
       testId="landing-preview-modal"
-      footer={
-        <>
-          <PromptButton target={{ kind: 'landing', id: model.id }} />
-          <SelectButton selected={selected} onSelect={() => selectLandingModel(model)} />
-        </>
-      }
+      footer={<ModalFooter selected={selected} onSelect={() => selectLandingModel(model)} onClose={onClose} prompt={<PromptButton target={{ kind: 'landing', id: model.id }} />} />}
     >
       <div className="ent-preview">
         <div className="ent-preview__controls">
@@ -377,12 +391,7 @@ function AuthModal({
       title={title}
       subtitle={subtitle}
       testId={`${kind}-preview-modal`}
-      footer={
-        <>
-          <PromptButton target={{ kind, id }} />
-          <SelectButton selected={selected} onSelect={onSelect} />
-        </>
-      }
+      footer={<ModalFooter selected={selected} onSelect={onSelect} onClose={onClose} prompt={<PromptButton target={{ kind, id }} />} />}
     >
       <div className="ent-preview">
         <div className="ent-preview__controls">

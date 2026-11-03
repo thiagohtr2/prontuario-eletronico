@@ -653,10 +653,19 @@ const useToasts = create<{ items: ToastItem[]; push: (t: Omit<ToastItem, 'id'>) 
   push: (t) => {
     const id = Date.now() + Math.random()
     set((s) => ({ items: [...s.items.slice(-2), { ...t, id }] }))
-    setTimeout(() => set((s) => ({ items: s.items.filter((i) => i.id !== id) })), 3200)
+    setTimeout(() => set((s) => ({ items: s.items.filter((i) => i.id !== id) })), 3500)
   },
   dismiss: (id) => set((s) => ({ items: s.items.filter((i) => i.id !== id) })),
 }))
+
+/**
+ * Avisos são da tela atual: trocar de rota fecha os antigos (B-24). O aviso da própria ação que
+ * trocou de rota (ex.: “Esqueleto aprovado”, criado há instantes) continua visível.
+ */
+export function clearToasts() {
+  const cutoff = Date.now() - 500
+  useToasts.setState((s) => ({ items: s.items.filter((i) => i.id >= cutoff) }))
+}
 
 export const toast = {
   success: (message: string) => useToasts.getState().push({ message, tone: 'success' }),
@@ -755,4 +764,23 @@ export function useMediaQuery(query: string): boolean {
     return () => mql.removeEventListener('change', onChange)
   }, [query])
   return matches
+}
+
+/**
+ * Tira do Tab os controles de dentro de uma prévia (mouse e toque continuam funcionando).
+ * Usado nas miniaturas das galerias: quem navega por teclado testa a prévia em “Ver em tamanho grande”.
+ */
+export function useNoTabStops(ref: { current: HTMLElement | null }) {
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const apply = () =>
+      el.querySelectorAll<HTMLElement>('a[href], button, input, select, textarea, summary, [tabindex]').forEach((n) => {
+        if (n.tabIndex !== -1) n.tabIndex = -1
+      })
+    apply()
+    const mo = new MutationObserver(apply)
+    mo.observe(el, { childList: true, subtree: true })
+    return () => mo.disconnect()
+  }, [ref])
 }

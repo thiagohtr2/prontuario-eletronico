@@ -724,7 +724,7 @@ test.describe('REG-13 · Seleções preservadas ao voltar de etapa', () => {
     await page.reload()
     const p = await savedProject(page)
     expect(p.entry).toMatchObject({ flow: 'landing-login', landingId: chosen.entry.landingId, loginId: chosen.entry.loginId, signupId: chosen.entry.signupId })
-    expect(p.layout).toEqual({ desktopId: 'sidebar-integral-classica', mobileId: 'bottom-nav-classica' })
+    expect(p.layout).toMatchObject({ desktopId: 'sidebar-integral-classica', mobileId: 'bottom-nav-classica' })
   })
 })
 
@@ -1032,7 +1032,7 @@ test.describe('REG-20 · Alterar um módulo não quebra outro', () => {
     await go(page, '/modulos/templates')
     await go(page, '/modulos/inspiracao')
     const p = await savedProject(page)
-    expect(p.layout).toEqual({ desktopId: 'sidebar-integral-classica', mobileId: 'bottom-nav-classica' })
+    expect(p.layout).toMatchObject({ desktopId: 'sidebar-integral-classica', mobileId: 'bottom-nav-classica' })
     expect(p.identity.paletteId).toBe('floresta')
     expect(p.navigation.header).not.toBeNull()
     expect(p.components).toHaveLength(1)

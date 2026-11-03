@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState, type ReactNode, type RefObject } from 'react'
 import { Link } from 'react-router-dom'
-import { Pencil } from 'lucide-react'
+import { Maximize2, Minimize2, Pencil } from 'lucide-react'
 import { activeEntry, ENTRY_FLOWS } from '@/core/project'
 import { useProject } from '@/core/store'
 import { useResolvedTheme } from '@/core/theme'
@@ -14,7 +14,7 @@ import { desktopById, mobileById } from '@/modules/layouts/catalog'
 import type { DesktopLayout, LayoutRegion } from '@/modules/layouts/types'
 import { HeaderPreview, SidebarPreview } from '@/modules/navigation'
 import { headerById, sidebarById } from '@/modules/navigation/catalog'
-import { Callout, DeviceToggle, EmptyState, Segmented } from '@/ui'
+import { Button, Callout, DeviceToggle, EmptyState, Segmented } from '@/ui'
 import { ChatPanel, DashboardContent, DefaultHeader, DefaultSidebar, DetailPanel, FooterBar, Rail, Submenu, Toolbar } from './regions'
 import './preview.css'
 
@@ -41,10 +41,12 @@ function useWidth<T extends HTMLElement>(): [RefObject<T>, number] {
 }
 
 /** Moldura que renderiza o conteúdo em tamanho real e o reduz para caber na largura disponível. */
-function ScaledFrame({ w, h, available, children, label }: { w: number; h: number; available: number; children: ReactNode; label: string }) {
-  const scale = available > 0 ? Math.min(1, available / w) : 0.5
+function ScaledFrame({ w, h, available, maxH, children, label }: { w: number; h: number; available: number; maxH?: number; children: ReactNode; label: string }) {
+  const byWidth = available > 0 ? Math.min(1, available / w) : 0.5
+  // Em tela cheia a prévia também cabe na altura da janela.
+  const scale = maxH ? Math.min(byWidth, maxH / h) : byWidth
   return (
-    <div className="lp-frame" style={{ width: w * scale, height: h * scale }} aria-label={label} role="img">
+    <div className="lp-frame" style={{ width: w * scale, height: h * scale }} aria-label={label} role="group">
       <div style={{ width: w, height: h, transform: `scale(${scale})`, transformOrigin: 'top left' }}>{children}</div>
     </div>
   )
@@ -60,15 +62,16 @@ function AppFrame({ layout, theme, name, w, h }: { layout: DesktopLayout; theme:
   // Se há um header acima da sidebar, a marca fica no header (não repetimos o logo).
   const touchesTop = (id: string) => (layout.grid.areas[0] ?? '').split(/\s+/).includes(id)
 
-  const navItems = useProject((p) => p.meta.navItems)
-  const nav = navItems.map((s) => s.trim()).filter(Boolean)
+  const nav = useProjectNav()
   const content = { brand: name, nav }
+  // Dentro do app: header na altura do layout (a mesma do Master Prompt) e sem botões de site de marketing.
+  const headerContent = { ...content, height: layout.measurements.header, inApp: true }
 
   const renderRegion = (region: LayoutRegion): ReactNode => {
     const hideBrand = hasHeader && !touchesTop(region.id)
     switch (region.kind) {
       case 'header':
-        return headerModel && header ? <HeaderPreview model={headerModel} variant={header.variant} theme={theme} interactive content={content} /> : <DefaultHeader theme={theme} name={name} nav={nav} />
+        return headerModel && header ? <HeaderPreview model={headerModel} variant={header.variant} theme={theme} interactive content={headerContent} /> : <DefaultHeader theme={theme} name={name} nav={nav} />
       case 'sidebar':
         return sidebarModel && sidebar ? <SidebarPreview model={sidebarModel} variant={sidebar.variant} theme={theme} interactive hideBrand={hideBrand} content={content} /> : <DefaultSidebar theme={theme} name={name} floating={region.floating} hideBrand={hideBrand} nav={nav} />
       case 'rail':
@@ -92,7 +95,18 @@ function AppFrame({ layout, theme, name, w, h }: { layout: DesktopLayout; theme:
   return <DesktopSchematic layout={layout} width={w} height={h} showLegends={false} theme={theme} renderRegion={renderRegion} frame={false} detail="full" />
 }
 
-/** Live Site Preview: todas as escolhas estruturais e visuais juntas, em uma prévia coerente. */
+/**
+ * Itens de menu usados nas prévias: os do projeto; se ainda não foram definidos, as funcionalidades
+ * previstas (são os módulos do sistema) — nunca o menu de exemplo de um modelo.
+ */
+function useProjectNav(): string[] {
+  const navItems = useProject((p) => p.meta.navItems)
+  const features = useProject((p) => p.meta.features)
+  const nav = navItems.map((s) => s.trim()).filter(Boolean)
+  return nav.length ? nav : features.map((s) => s.trim()).filter(Boolean)
+}
+
+/** Prévia integrada: todas as escolhas estruturais e visuais juntas, em uma prévia coerente. */
 export function LiveSitePreview() {
   const theme = useResolvedTheme()
   const name = useProject((p) => p.meta.name) || 'Seu projeto'
@@ -110,6 +124,17 @@ export function LiveSitePreview() {
   // Em tela de celular a prévia abre no modo Celular (no modo Computador o texto ficaria ilegível).
   const [device, setDevice] = useState<Device>(() => (typeof window !== 'undefined' && window.matchMedia?.('(max-width: 700px)').matches ? 'mobile' : 'desktop'))
   const [page, setPage] = useState<PageKind>('app')
+  const [full, setFull] = useState(false)
+  const nav = useProjectNav()
+  const phoneContent = { brand: name, nav }
+
+  useEffect(() => {
+    if (!full) return
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setFull(false)
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [full])
+  const maxH = full ? Math.max(320, window.innerHeight - 120) : undefined
   const [ref, available] = useWidth<HTMLDivElement>()
 
   const flow = ENTRY_FLOWS.find((f) => f.id === flowId)
@@ -132,7 +157,7 @@ export function LiveSitePreview() {
     if (device === 'mobile') {
       stage = mobile ? (
         <div className="lp-phone">
-          <PhonePreview layout={mobile} theme={theme} showLegends={false} width={360} interactive />
+          <PhonePreview layout={mobile} theme={theme} showLegends={false} width={360} interactive content={phoneContent} />
         </div>
       ) : (
         <EmptyState
@@ -147,7 +172,7 @@ export function LiveSitePreview() {
     } else {
       const size = DEVICE_SIZE[device]
       stage = desktop ? (
-        <ScaledFrame w={size.w} h={size.h} available={available} label={`Prévia ${device === 'tablet' ? 'do tablet' : 'do computador'}`}>
+        <ScaledFrame w={size.w} h={size.h} available={available} maxH={maxH} label={`Prévia ${device === 'tablet' ? 'do tablet' : 'do computador'}`}>
           <AppFrame layout={desktop} theme={theme} name={name} w={size.w} h={size.h} />
         </ScaledFrame>
       ) : (
@@ -163,17 +188,19 @@ export function LiveSitePreview() {
     }
   } else if (current === 'landing' && landing) {
     const landingTheme = originalColors ? null : theme
+    // A landing mostra o nome do projeto no lugar da marca fictícia do modelo.
+    const landingModel = { ...landing, content: { ...landing.content, logo: name } }
     stage =
       device === 'mobile' ? (
         <div className="lp-phone lp-phone--scroll">
           <div className="lp-phone__screen">
-            <LandingPreview model={landing} device="mobile" theme={landingTheme} />
+            <LandingPreview model={landingModel} device="mobile" theme={landingTheme} />
           </div>
         </div>
       ) : (
-        <ScaledFrame w={DEVICE_SIZE[device].w} h={DEVICE_SIZE[device].h} available={available} label="Prévia da landing page">
+        <ScaledFrame w={DEVICE_SIZE[device].w} h={DEVICE_SIZE[device].h} available={available} maxH={maxH} label="Prévia da landing page">
           <div className="lp-scroll">
-            <LandingPreview model={landing} device="desktop" theme={landingTheme} />
+            <LandingPreview model={landingModel} device="desktop" theme={landingTheme} />
           </div>
         </ScaledFrame>
       )
@@ -187,7 +214,7 @@ export function LiveSitePreview() {
           </div>
         </div>
       ) : (
-        <ScaledFrame w={DEVICE_SIZE[device].w} h={DEVICE_SIZE[device].h} available={available} label="Prévia do login">
+        <ScaledFrame w={DEVICE_SIZE[device].w} h={DEVICE_SIZE[device].h} available={available} maxH={maxH} label="Prévia do login">
           <div className="lp-scroll">
             <AuthPreview login={login} signup={signup} view={view} device="desktop" theme={theme} onViewChange={(v: 'login' | 'signup') => setPage(v === 'login' ? 'login' : 'signup')} />
           </div>
@@ -209,13 +236,16 @@ export function LiveSitePreview() {
 
   return (
     <div className="lp-layout">
-      <div className="lp-main">
+      <div className="lp-main" data-full={full} role={full ? 'dialog' : undefined} aria-modal={full ? true : undefined} aria-label={full ? 'Prévia integrada em tela cheia' : undefined}>
         <div className="lp-toolbar">
           <Segmented label="Página da prévia" value={current} onChange={setPage} options={pages} />
           <DeviceToggle value={device} onChange={setDevice} devices={['desktop', 'tablet', 'mobile']} />
+          <Button size="sm" variant="ghost" icon={full ? <Minimize2 /> : <Maximize2 />} onClick={() => setFull((f) => !f)} data-testid="preview-fullscreen">
+            {full ? 'Sair da tela cheia' : 'Tela cheia'}
+          </Button>
         </div>
         {current === 'app' && device === 'tablet' && (
-          <Callout>No tablet, a estrutura do computador é compactada. Se não couber, a IA deve usar a estrutura do celular.</Callout>
+          <Callout>No tablet (768–1023 px) vale a estrutura do computador compactada: sidebar recolhida em trilho de ícones e menus excedentes em “Mais”.</Callout>
         )}
         <div ref={ref} className="lp-stage" data-testid="live-preview">
           {stage}

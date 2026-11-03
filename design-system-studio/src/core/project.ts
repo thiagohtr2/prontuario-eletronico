@@ -7,6 +7,21 @@ import type { Geometry, TokenKey, Typography } from './types'
  * escolhas do projeto em outro lugar.
  */
 
+export type WideBehavior = 'centered' | 'fluid' | 'extra'
+export type StoriesScope = 'home' | 'main' | 'all'
+
+export const WIDE_OPTIONS: { id: WideBehavior; name: string; description: string; instruction: string }[] = [
+  { id: 'centered', name: 'Conteúdo centralizado', description: 'O conteúdo para de crescer (≈1440 px) e fica no centro; sobra fundo nas laterais.', instruction: 'Em monitores grandes (≥ 1440 px), o conteúdo para de crescer em ≈1440 px de largura e fica centralizado; navegação e fundo continuam na largura total.' },
+  { id: 'fluid', name: 'Largura total', description: 'Tudo acompanha a tela; as grades ganham mais colunas.', instruction: 'Em monitores grandes (≥ 1440 px), o conteúdo ocupa a largura toda: grades ganham colunas (cartões entre 280 e 360 px) e textos longos continuam limitados a ≈72 caracteres por linha.' },
+  { id: 'extra', name: 'Painel extra', description: 'A partir de 1440 px aparece um painel à direita (detalhes, atividade ou filtros).', instruction: 'Em monitores grandes (≥ 1440 px), aparece um painel fixo à direita (≈320 px) com detalhes do item selecionado, atividade recente ou filtros; abaixo de 1440 px esse conteúdo fica em um painel que abre sob demanda.' },
+]
+
+export const STORIES_OPTIONS: { id: StoriesScope; name: string; instruction: string }[] = [
+  { id: 'home', name: 'Só na tela inicial', instruction: 'A faixa de stories/categorias aparece apenas na tela inicial, logo abaixo do header; as demais telas não a mostram.' },
+  { id: 'main', name: 'Nas telas principais', instruction: 'A faixa de stories/categorias aparece nas telas de primeiro nível da navegação (os destinos da barra inferior); telas internas (detalhes, formulários) não a mostram.' },
+  { id: 'all', name: 'Em todas as telas', instruction: 'A faixa de stories/categorias aparece em todas as telas, sempre logo abaixo do header.' },
+]
+
 export type ProjectType = 'saas' | 'dashboard' | 'loja' | 'landing' | 'portfolio' | 'one-screen' | 'outro'
 
 export type EntryFlow = 'landing-login' | 'landing-only' | 'login-only' | 'app-direct' | 'institutional'
@@ -155,6 +170,10 @@ export interface Project {
   layout: {
     desktopId: string | null
     mobileId: string | null
+    /** Monitores grandes (≥ 1440 px): conteúdo centralizado, fluido ou com painel extra. null = padrão não revisado. */
+    wide: WideBehavior | null
+    /** Em quais telas aparecem os stories/categorias do layout mobile. null = padrão não revisado. */
+    storiesScope: StoriesScope | null
   }
   identity: {
     paletteId: string
@@ -229,7 +248,7 @@ export function createProject(): Project {
     prefs: { showLegends: true, showHints: true },
     guided: { step: 'objetivo', completed: [], skeletonApproved: false },
     entry: { flow: null, landingId: null, loginId: null, signupId: null, landingUsesOriginalColors: false, noSignup: false },
-    layout: { desktopId: null, mobileId: null },
+    layout: { desktopId: null, mobileId: null, wide: null, storiesScope: null },
     identity: {
       paletteId: DEFAULT_PALETTE_ID,
       overrides: {},

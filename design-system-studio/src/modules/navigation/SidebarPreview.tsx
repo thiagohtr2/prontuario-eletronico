@@ -1045,14 +1045,15 @@ export function SidebarPreview({
       onFocus={onFocusIn}
       onBlur={onFocusOut}
     >
-      <nav
+      <div
+        role="group"
         aria-label="Menu lateral"
         className="nvs-spanel"
         data-hover-open={hoverExpand && hovered}
         style={{ width: panelWidth, position: hoverExpand ? 'absolute' : undefined }}
       >
         {panelContent}
-      </nav>
+      </div>
       {tip && (
         <span role="tooltip" className="nvs-tip" style={{ top: tip.top, left: tip.left }}>
           {tip.label}

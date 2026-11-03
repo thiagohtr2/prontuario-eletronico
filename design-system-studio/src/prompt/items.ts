@@ -1,5 +1,5 @@
 import { describeCatalogItem, type ItemDescription } from '@/core/describe'
-import { activeEntry, DEFAULT_PALETTE_ID, ENTRY_FLOWS, PROJECT_TYPES, type Project, type PropValue } from '@/core/project'
+import { activeEntry, DEFAULT_PALETTE_ID, ENTRY_FLOWS, STORIES_OPTIONS, WIDE_OPTIONS, PROJECT_TYPES, type Project, type PropValue } from '@/core/project'
 import { projectTheme } from '@/core/theme'
 import { DEFAULT_GEOMETRY, DEFAULT_TYPOGRAPHY, DENSITY_SPACING, deriveTokens, fontName, RADIUS_VALUES, SHADOW_VALUES, SURFACE_LABEL, TOKEN_LABEL } from '@/core/tokens'
 import type { ResolvedTheme, TokenKey } from '@/core/types'
@@ -305,6 +305,9 @@ export function collectPromptData(project: Project): { items: PromptItem[]; reso
         'As medidas são recomendações para 1280 × 800; adapte à tela e ao conteúdo preservando a estrutura escolhida.',
       ],
     })
+    // Monitores grandes: decisão estruturada (ou o padrão neutro, marcado como não revisado).
+    const wide = WIDE_OPTIONS.find((o) => o.id === (project.layout.wide ?? 'centered'))!
+    d.responsive = [...d.responsive, `${wide.instruction}${project.layout.wide ? '' : ' (padrão do Studio — não revisado)'}`]
     items.push(toItem('layout.desktop', 'desktop', 'architecture', 'desktop', desktop.id, d, project))
   }
 
@@ -321,6 +324,10 @@ export function collectPromptData(project: Project): { items: PromptItem[]; reso
         oneScreen: Boolean(mobile.config.oneScreen),
       },
     })
+    if (mobile.config.stories) {
+      const scope = STORIES_OPTIONS.find((o) => o.id === (project.layout.storiesScope ?? 'home'))!
+      d.structure = [...d.structure, `${scope.instruction}${project.layout.storiesScope ? '' : ' (padrão do Studio — não revisado)'}`]
+    }
     items.push(toItem('layout.mobile', 'mobile', 'architecture', 'mobile', mobile.id, d, project, ['navigation']))
   }
 

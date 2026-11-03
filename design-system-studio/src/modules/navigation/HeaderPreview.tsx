@@ -381,9 +381,9 @@ function NavLinks({ ctx, from = 0, to, label = 'Principal', style: navStyle }: {
     </ul>
   )
   return (
-    <nav aria-label={label} className="nvs-hnav">
+    <div role="group" aria-label={label} className="nvs-hnav">
       {list}
-    </nav>
+    </div>
   )
 }
 
@@ -956,7 +956,7 @@ function MenuButton({ ctx, id, label = 'Menu', text }: { ctx: Ctx; id: string; l
 function Breadcrumbs({ ctx }: { ctx: Ctx }) {
   const crumbs = ctx.look.breadcrumbs ?? []
   return (
-    <nav aria-label="Você está em" className="nvs-crumbs">
+    <div role="group" aria-label="Você está em" className="nvs-crumbs">
       <ol>
         {crumbs.map((c, i) => (
           <li key={c}>
@@ -971,7 +971,7 @@ function Breadcrumbs({ ctx }: { ctx: Ctx }) {
           </li>
         ))}
       </ol>
-    </nav>
+    </div>
   )
 }
 
@@ -1341,12 +1341,12 @@ export function HeaderPreview({ model, variant, theme, interactive = true, compa
           </div>
         </div>
       )}
-      <header className="nvs-hbar" aria-label={`Header ${model.name}`}>
+      <div role="group" className="nvs-hbar" aria-label={`Header ${model.name}`}>
         <div className="nvs-hbar__in">
           {main}
           {second}
         </div>
-      </header>
+      </div>
     </div>
   )
 }

@@ -2771,16 +2771,32 @@ export function sidebarLookFor(model: SidebarModel, variant: 0 | 1): SidebarLook
 export interface NavContent {
   brand?: string
   nav?: string[]
+  /** Altura definida pelo layout desktop (a prévia segue a mesma medida do Master Prompt). */
+  height?: number
+  /** Dentro da aplicação logada: sem “Entrar”, CTAs de marketing, anúncio nem faixa utilitária. */
+  inApp?: boolean
 }
+
+const SITE_ONLY_ACTIONS = new Set<HeaderAction>(['cta', 'cta-outline', 'login', 'lang', 'phone'])
 
 export function withHeaderContent(look: HeaderLook, content?: NavContent): HeaderLook {
   if (!content) return look
   const nav = (content.nav ?? []).map((s) => s.trim()).filter(Boolean)
-  return {
+  const out: HeaderLook = {
     ...look,
     brand: content.brand?.trim() || look.brand,
     nav: nav.length && look.nav.length ? nav.slice(0, Math.max(look.nav.length, 4)).map((label, i) => ({ ...(look.nav[i] ?? { label }), label })) : look.nav,
   }
+  if (content.height) {
+    out.height = content.height
+    if (out.shrink && out.shrink >= content.height) out.shrink = undefined
+  }
+  if (content.inApp) {
+    out.actions = look.actions.filter((a) => !SITE_ONLY_ACTIONS.has(a))
+    out.announcement = undefined
+    out.utility = undefined
+  }
+  return out
 }
 
 export function withSidebarContent(look: SidebarLook, content?: NavContent): SidebarLook {

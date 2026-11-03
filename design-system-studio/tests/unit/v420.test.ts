@@ -126,3 +126,19 @@ describe.each(Object.entries(BACKUPS))('B-14 — prompt enxuto (%s)', (_id, { pa
     }
   })
 })
+
+describe('B-22 — escopo estruturado (4.22)', () => {
+  it('sem escolha, monitores grandes saem com o padrão marcado como não revisado', () => {
+    const p = createProject()
+    p.layout.desktopId = 'sidebar-integral-classica'
+    const desk = collectPromptItems(p).find((i) => i.kind === 'desktop')!
+    expect(desk.responsive.join('\n')).toMatch(/1440 px.*centralizado.*não revisado/)
+  })
+  it('escolhas de monitores grandes e stories entram nos itens', () => {
+    const p = createProject()
+    p.layout = { desktopId: 'sidebar-integral-classica', mobileId: 'stories-dock-flutuante', wide: 'extra', storiesScope: 'all' }
+    const items = collectPromptItems(p)
+    expect(items.find((i) => i.kind === 'desktop')!.responsive.join('\n')).toContain('painel fixo à direita')
+    expect(items.find((i) => i.kind === 'mobile')!.structure.join('\n')).toContain('aparece em todas as telas')
+  })
+})

@@ -4,7 +4,7 @@ import { Check, ChevronDown, Cloud, Compass, FileCode2, FolderDown, Menu, Search
 import { ALL_STEPS, SKELETON_STEPS, skeletonDone, type StepId } from '@/core/project'
 import { useProject, useSaveStatus, useStudio } from '@/core/store'
 import { downloadFile } from '@/core/download'
-import { Button, IconButton, Modal, Segmented, Toaster, cx, toast, useMediaQuery } from '@/ui'
+import { Button, IconButton, Modal, Segmented, Toaster, clearToasts, cx, toast, useMediaQuery } from '@/ui'
 import { ContentBoundary } from './ErrorBoundary'
 import { ALL_ENTRIES, FREE_HOME_ENTRY, HOME_ENTRY, MODULE_GROUPS, STEP_META, type NavEntry } from './nav'
 import './shell.css'
@@ -56,8 +56,22 @@ function ModeToggle() {
   )
 }
 
+/** “Master Prompt” fica secundário até o esqueleto estar quase completo (B-24); rótulo visível no celular. */
+function MasterPromptButton({ onClick }: { onClick: () => void }) {
+  const ready = useProject((p) => skeletonDone(p).length >= 4)
+  return (
+    <Button variant={ready ? 'primary' : 'secondary'} icon={<FileCode2 />} onClick={onClick} aria-label="Abrir Master Prompt">
+      <span className="shell-hide-sm">Master Prompt</span>
+      <span className="shell-only-mobile">Prompt</span>
+    </Button>
+  )
+}
+
 function SkeletonProgress() {
   const done = useProject((p) => skeletonDone(p).length)
+  const { pathname } = useLocation()
+  // Dentro do guiado o stepper mostra o progresso; um indicador a menos na mesma tela (B-24).
+  if (pathname.startsWith('/guiado')) return null
   return (
     <span className="shell-progress" title="Progresso do esqueleto">
       Esqueleto {done}/{SKELETON_STEPS.length}
@@ -280,7 +294,8 @@ function FeatureSearch({ open, onClose }: { open: boolean; onClose: () => void }
 
 function Breadcrumbs() {
   const { pathname } = useLocation()
-  if (pathname === '/') return null
+  // No guiado, o stepper já mostra onde a pessoa está: sem breadcrumb repetindo a posição (B-24).
+  if (pathname === '/' || pathname.startsWith('/guiado')) return null
   const crumbs: { label: string; path?: string }[] = [{ label: 'Início', path: '/' }]
   const step = pathname.match(/^\/guiado\/([a-z]+)/)?.[1] as StepId | undefined
   if (step && STEP_META[step]) {
@@ -348,6 +363,7 @@ export function Shell() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior })
     setMenuOpen(false)
+    clearToasts()
   }, [location.pathname])
 
   // Falhas de download na página publicada (ex.: formato não permitido) viram um aviso visível.
@@ -412,9 +428,7 @@ export function Shell() {
         <IconButton label="Exportar e importar" className="shell-hide-sm" onClick={() => navigate('/exportar')}>
           <FolderDown />
         </IconButton>
-        <Button variant="primary" icon={<FileCode2 />} onClick={() => navigate('/prompt')} aria-label="Abrir Master Prompt">
-          <span className="shell-hide-sm">Master Prompt</span>
-        </Button>
+        <MasterPromptButton onClick={() => navigate('/prompt')} />
       </header>
       <div className="shell-body">
         <div className="shell-scrim" data-open={menuOpen} onClick={() => setMenuOpen(false)} aria-hidden="true" />

@@ -42,7 +42,12 @@ export const projectSchema = z.object({
     landingUsesOriginalColors: z.boolean(),
     noSignup: z.boolean(),
   }),
-  layout: z.object({ desktopId: z.string().nullable(), mobileId: z.string().nullable() }),
+  layout: z.object({
+    desktopId: z.string().nullable(),
+    mobileId: z.string().nullable(),
+    wide: z.enum(['centered', 'fluid', 'extra']).nullable(),
+    storiesScope: z.enum(['home', 'main', 'all']).nullable(),
+  }),
   identity: z.object({
     paletteId: z.string().min(1),
     overrides: tokenOverrides,

@@ -750,7 +750,8 @@
 .ui-toasts {
   position: fixed;
   left: 50%;
-  bottom: calc(var(--sp-6) + env(safe-area-inset-bottom));
+  /* Acima de barras fixas inferiores (rodapé do guiado): nunca cobre botões (B-24). */
+  bottom: calc(var(--sp-6) + var(--toast-offset, 0px) + env(safe-area-inset-bottom));
   z-index: 120;
   display: grid;
   gap: var(--sp-2);
@@ -997,4 +998,11 @@
   .ui-switch {
     min-height: 44px;
   }
+}
+
+body:has(.gd-page) {
+  --toast-offset: 76px;
+}
+body:has(.ui-modal) {
+  --toast-offset: 72px;
 }

@@ -20,7 +20,7 @@ function fullProject(): Project {
   const p = createProject()
   p.meta = { ...p.meta, name: 'Agenda Viva', projectType: 'saas', objective: 'Organizar agendamentos', features: ['Agenda', 'Clientes'] }
   p.entry = { flow: 'landing-login', landingId: landings[0]?.id ?? null, loginId: logins[0]?.id ?? null, signupId: signups[0]?.id ?? null, landingUsesOriginalColors: false, noSignup: false }
-  p.layout = { desktopId: desktopLayouts[0]?.id ?? null, mobileId: mobileLayouts[0]?.id ?? null }
+  p.layout = { desktopId: desktopLayouts[0]?.id ?? null, mobileId: mobileLayouts[0]?.id ?? null, wide: null, storiesScope: null }
   p.navigation = { header: headers[0] ? { id: headers[0].id, variant: 1 } : null, sidebar: sidebars[0] ? { id: sidebars[0].id, variant: 0 } : null }
   if (componentCategories[0] && visualFamilies[0]) {
     p.components = [

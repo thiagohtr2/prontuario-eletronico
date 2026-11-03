@@ -130,3 +130,17 @@
   width: 15px;
   height: 15px;
 }
+
+/* Tela cheia (B-05): a prévia ocupa a janela inteira; Esc ou o botão saem. */
+.lp-main[data-full='true'] {
+  position: fixed;
+  inset: 0;
+  z-index: 150;
+  overflow: auto;
+  padding: 16px max(16px, env(safe-area-inset-left));
+  background: var(--s-bg);
+}
+.lp-main[data-full='true'] .lp-stage {
+  display: grid;
+  justify-items: center;
+}

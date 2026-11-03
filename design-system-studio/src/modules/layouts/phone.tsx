@@ -80,6 +80,8 @@ export interface PhonePreviewProps {
   /** data-testid da raiz (padrão: "phone-preview"). */
   testId?: string
   className?: string
+  /** Marca e itens de menu reais do projeto (prévia integrada). Sem eles, usa o conteúdo de exemplo. */
+  content?: { brand?: string; nav?: string[] }
 }
 
 /* -------------------------------------------------------------------------- */
@@ -363,20 +365,20 @@ interface NavItem {
   badge?: number
 }
 
-const NAV4: NavItem[] = [
+const BASE_NAV4: NavItem[] = [
   { label: 'Início', icon: Home },
   { label: 'Buscar', icon: Search },
   { label: 'Agenda', icon: Calendar },
   { label: 'Perfil', icon: User },
 ]
-const NAV5: NavItem[] = [
+const BASE_NAV5: NavItem[] = [
   { label: 'Início', icon: Home },
   { label: 'Buscar', icon: Search },
   { label: 'Categorias', icon: LayoutGrid },
   { label: 'Carrinho', icon: ShoppingBag, badge: 2 },
   { label: 'Conta', icon: User },
 ]
-const DOCK: NavItem[] = [
+const BASE_DOCK: NavItem[] = [
   { label: 'Início', icon: Home },
   { label: 'Explorar', icon: Compass },
   { label: 'Salvos', icon: Bookmark },
@@ -384,7 +386,7 @@ const DOCK: NavItem[] = [
 ]
 const MORE: NavItem = { label: 'Mais', icon: MoreHorizontal, more: true }
 
-const RAIL_ITEMS: NavItem[] = [
+const BASE_RAIL_ITEMS: NavItem[] = [
   { label: 'Início', icon: Home },
   { label: 'Buscar', icon: Search },
   { label: 'Agenda', icon: Calendar },
@@ -401,13 +403,56 @@ const LIST = [
   { t: 'Estoque atualizado', s: '12 itens repostos', v: '+12', a: 'ES' },
 ]
 
-const DRAWER_ITEMS: NavItem[] = [
+const BASE_DRAWER_ITEMS: NavItem[] = [
   { label: 'Início', icon: Home },
   { label: 'Pedidos', icon: Package },
   { label: 'Clientes', icon: Users },
   { label: 'Relatórios', icon: BarChart3 },
   { label: 'Agenda', icon: Calendar },
 ]
+
+/** Ícone genérico coerente com o rótulo do item (o ícone do exemplo não combinaria com o item real). */
+const ICON_RULES: [RegExp, LucideIcon][] = [
+  [/in[ií]cio|home|painel|vis[aã]o geral|dashboard/i, Home],
+  [/busca|pesquis|explorar/i, Search],
+  [/agenda|calend|evento|turno|escala/i, Calendar],
+  [/cliente|equipe|usu[aá]rio|pessoa|membro|contato|comunidade/i, Users],
+  [/relat[oó]rio|indicador|an[aá]lise|m[eé]trica|kpi|financeiro/i, BarChart3],
+  [/config|ajuste|prefer/i, Settings],
+  [/pedido|produto|estoque|cat[aá]logo|invent/i, Package],
+  [/carrinho|compra|loja|venda/i, ShoppingBag],
+  [/perfil|conta|minha/i, User],
+  [/mensage|chat|conversa/i, MessageCircle],
+  [/notifica|alerta/i, Bell],
+  [/document|arquivo|contrato/i, FileText],
+  [/projeto|pasta/i, Folder],
+  [/pagamento|cobran|fatura/i, CreditCard],
+  [/carteira|investim|saldo/i, Wallet],
+  [/salvo|favorit/i, Bookmark],
+  [/ajuda|suporte/i, HelpCircle],
+]
+const iconFor = (label: string, fallback: LucideIcon) => ICON_RULES.find(([re]) => re.test(label))?.[1] ?? fallback
+
+/**
+ * Listas de navegação da prévia com os itens do projeto. Barras com vagas fixas mostram os primeiros
+ * itens; se houver mais itens que vagas, a última vaga vira “Mais” (como manda o Master Prompt).
+ */
+function projectLists(nav: string[] | undefined) {
+  const items = (nav ?? []).map((s) => s.trim()).filter(Boolean)
+  const fill = (base: NavItem[], slots: number, overflow: boolean): NavItem[] => {
+    if (!items.length) return base
+    const take = overflow && items.length > slots ? items.slice(0, slots - 1) : items.slice(0, slots)
+    const list = take.map((label, i) => ({ label, icon: iconFor(label, base[i % base.length].icon) }))
+    return overflow && items.length > slots ? [...list, MORE] : list
+  }
+  return {
+    NAV4: fill(BASE_NAV4, 4, true),
+    NAV5: fill(BASE_NAV5, 5, true),
+    DOCK: fill(BASE_DOCK, 4, true),
+    RAIL_ITEMS: fill(BASE_RAIL_ITEMS, 5, false),
+    DRAWER_ITEMS: fill(BASE_DRAWER_ITEMS, 8, false),
+  }
+}
 
 /* -------------------------------------------------------------------------- */
 /* Componente                                                                  */
@@ -482,8 +527,11 @@ export const PhonePreview = memo(function PhonePreview({
   initialOpen = false,
   testId = 'phone-preview',
   className,
+  content: projectContent,
 }: PhonePreviewProps) {
   const cfg = layout.config
+  const { NAV4, NAV5, DOCK, RAIL_ITEMS, DRAWER_ITEMS } = projectLists(projectContent?.nav)
+  const brandName = projectContent?.brand?.trim() || 'Orla'
   const menu = phoneMenu(cfg)
   const thumb = detail === 'thumb'
   const [open, setOpen] = useState(Boolean(initialOpen && menu))
@@ -584,7 +632,7 @@ export const PhonePreview = memo(function PhonePreview({
     <span className="lay-ph-brand">
       <span className="lay-ph-logo" />
       <T size={17} head>
-        Orla
+        {brandName}
       </T>
     </span>
   )
@@ -596,7 +644,9 @@ export const PhonePreview = memo(function PhonePreview({
     </Tap>
   )
 
-  const titleText = cfg.oneScreen ? 'Painel' : 'Início'
+  // Título da tela inicial: o primeiro item do menu do projeto, quando houver.
+  const firstNav = projectContent?.nav?.map((s) => s.trim()).find(Boolean)
+  const titleText = firstNav ?? (cfg.oneScreen ? 'Painel' : 'Início')
 
   const searchField = (command: boolean) => {
     const p = command ? triggerProps('search') : null
@@ -747,7 +797,7 @@ export const PhonePreview = memo(function PhonePreview({
           <div className="lay-ph-row" style={{ height: 52 }}>
             {menuIcon('top-left')}
             <T size={20} head>
-              Jornal Orla
+              {projectContent?.brand?.trim() || 'Jornal Orla'}
             </T>
             <span className="lay-ph-grow" />
             {iconBtn(Search, 'Buscar')}

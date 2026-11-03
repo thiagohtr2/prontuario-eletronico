@@ -1,4 +1,4 @@
-import { memo, useCallback, useMemo, useState, type ReactNode } from 'react'
+import { memo, useCallback, useMemo, useRef, useState, type ReactNode } from 'react'
 import { useShallow } from 'zustand/react/shallow'
 import { Check, Download, Maximize2, MousePointerClick, PanelLeft, PanelTop, Rows3, Trash2 } from 'lucide-react'
 import { downloadJson } from '@/core/download'
@@ -8,7 +8,7 @@ import { useResolvedTheme } from '@/core/theme'
 import type { Device, ResolvedTheme } from '@/core/types'
 import { detectConflicts } from '@/prompt/conflicts'
 import { PromptButton } from '@/prompt/PromptButton'
-import { Badge, Button, Callout, DeviceToggle, FilterChips, keepScroll, Modal, Segmented, Select, Tabs, Term, toast } from '@/ui'
+import { Badge, Button, Callout, DeviceToggle, FilterChips, keepScroll, Modal, Segmented, Select, Tabs, Term, toast, useNoTabStops } from '@/ui'
 import { headerById, headerLookFor, headers, sidebarById, sidebarLookFor, sidebars } from './catalog'
 import { ComboStage, HeaderStage, PhoneHeader, PhoneSidebar, SidebarStage } from './stages'
 import { HEADER_FILTERS, SIDEBAR_FILTERS, type HeaderModel, type SidebarModel } from './types'
@@ -19,6 +19,10 @@ type Tab = 'headers' | 'sidebars' | 'combo'
 
 const HEADER_STAGE_H = 300
 const SIDEBAR_STAGE_H = 420
+
+/** Headers pensados para a área logada de um aplicativo (os demais são de site público). */
+const APP_CONTEXTS = new Set<HeaderModel['look']['context']>(['app', 'docs'])
+type Screen = 'app' | 'site' | 'all'
 
 const GUIDED_HEADER_FILTERS = ['todos', 'minimalistas', 'corporativos', 'saas', 'editoriais', 'flutuantes', 'com-busca']
 const GUIDED_SIDEBAR_FILTERS = ['todos', 'minimalistas', 'corporativos', 'saas', 'com-icones', 'compactos', 'flutuantes']
@@ -128,6 +132,8 @@ const NavCard = memo(function NavCard({ kind, model, variant, selected, theme, s
     kind === 'header'
       ? [(model as HeaderModel).floating ? 'Flutuante' : 'Integral', (model as HeaderModel).sticky ? 'Fixo ao rolar' : 'Rola com a página']
       : [shapeLabel((model as SidebarModel).shape), `≈ ${(model as SidebarModel).width} px`]
+  const previewRef = useRef<HTMLDivElement>(null)
+  useNoTabStops(previewRef)
   return (
     <article className="nvs-card" data-selected={selected} data-testid={`${kind}-option-${model.id}`} aria-label={model.name}>
       {selected && (
@@ -136,7 +142,12 @@ const NavCard = memo(function NavCard({ kind, model, variant, selected, theme, s
           Selecionado
         </span>
       )}
-      <div className="nvs-card__preview" role="group" aria-label={`Prévia interativa: ${model.name}, composição ${variant === 0 ? 'A' : 'B'}`}>
+      <div
+        ref={previewRef}
+        className="nvs-card__preview"
+        role="group"
+        aria-label={`Prévia interativa: ${model.name}, composição ${variant === 0 ? 'A' : 'B'} (teste com o teclado em “Ver em tamanho grande”)`}
+      >
         {kind === 'header' ? (
           <HeaderStage model={model as HeaderModel} variant={variant} theme={theme} height={HEADER_STAGE_H} />
         ) : (
@@ -493,6 +504,9 @@ export function NavigationShowcase({ guided = false }: { guided?: boolean }) {
   const sidebarChoice = useStudio(useShallow((s) => s.project.navigation.sidebar))
   const [tab, setTab] = useState<Tab>('headers')
   const [filters, setFilters] = useState<Record<Kind, string>>({ header: 'todos', sidebar: 'todos' })
+  // Galeria filtrada pelo tipo de tela (B-21): sistemas veem primeiro headers de aplicativo; sites, de site.
+  const projectType = useProject((p) => p.meta.projectType)
+  const [screen, setScreen] = useState<Screen>(() => (!projectType ? 'all' : ['landing', 'portfolio', 'loja'].includes(projectType) ? 'site' : 'app'))
   const [variants, setVariants] = useState<Record<string, 0 | 1>>({})
   const [detail, setDetail] = useState<{ kind: Kind; id: string } | null>(null)
 
@@ -517,7 +531,8 @@ export function NavigationShowcase({ guided = false }: { guided?: boolean }) {
   const goTo = useCallback((t: Tab) => keepScroll(() => setTab(t)), [])
 
   const kind: Kind = tab === 'sidebars' ? 'sidebar' : 'header'
-  const list: (HeaderModel | SidebarModel)[] = kind === 'header' ? headers : sidebars
+  const screenOf = (m: HeaderModel): Screen => (APP_CONTEXTS.has(m.look.context) ? 'app' : 'site')
+  const list: (HeaderModel | SidebarModel)[] = kind === 'header' ? headers.filter((m) => screen === 'all' || screenOf(m) === screen) : sidebars
   const filterDefs = (kind === 'header' ? HEADER_FILTERS : SIDEBAR_FILTERS).filter((f) => !guided || (kind === 'header' ? GUIDED_HEADER_FILTERS : GUIDED_SIDEBAR_FILTERS).includes(f.id))
   const filterId = filters[kind]
   const filterOptions = filterDefs.map((f) => ({ id: f.id, label: f.label, count: f.id === 'todos' ? list.length : list.filter((m) => m.filters.includes(f.id)).length }))
@@ -567,6 +582,18 @@ export function NavigationShowcase({ guided = false }: { guided?: boolean }) {
       ) : (
         <>
           <div className="nvs-toolbar">
+            {kind === 'header' && (
+              <Segmented
+                label="Tipo de tela"
+                value={screen}
+                onChange={(v) => keepScroll(() => setScreen(v))}
+                options={[
+                  { value: 'app', label: `Área logada do aplicativo (${headers.filter((m) => screenOf(m) === 'app').length})` },
+                  { value: 'site', label: `Site público (${headers.filter((m) => screenOf(m) === 'site').length})` },
+                  { value: 'all', label: `Todos (${headers.length})` },
+                ]}
+              />
+            )}
             <FilterChips
               label={kind === 'header' ? 'Filtrar headers' : 'Filtrar sidebars'}
               options={filterOptions}

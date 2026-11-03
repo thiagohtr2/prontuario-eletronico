@@ -1,5 +1,6 @@
 import { PageHeader } from '@/ui'
 import { MobileStudio } from './galleries'
+import { ScopeOptions } from './ScopeOptions'
 
 export default function MobilePage() {
   return (
@@ -10,6 +11,7 @@ export default function MobilePage() {
         description="Escolha como as pessoas navegam pelo celular: menu embaixo, barras flutuantes, menus que deslizam ou de tela cheia. São 44 modelos — teste cada um no celular grande."
       />
       <MobileStudio />
+      <ScopeOptions show="mobile" />
     </div>
   )
 }

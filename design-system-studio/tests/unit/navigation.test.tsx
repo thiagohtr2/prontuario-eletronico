@@ -201,7 +201,7 @@ describe('SidebarPreview', () => {
   it.each([0, 1] as const)('renderiza todas as sidebars na composição %s (desktop e drawer)', (variant) => {
     for (const s of sidebars) {
       const { unmount, container } = render(<SidebarPreview model={s} variant={variant} theme={theme} />)
-      expect(container.querySelector('nav[aria-label="Menu lateral"]')).not.toBeNull()
+      expect(container.querySelector('[role="group"][aria-label="Menu lateral"]')).not.toBeNull()
       unmount()
       const drawer = render(<SidebarPreview model={s} variant={variant} theme={theme} compact onClose={() => {}} />)
       expect(drawer.getByRole('button', { name: 'Fechar menu' })).toBeInTheDocument()

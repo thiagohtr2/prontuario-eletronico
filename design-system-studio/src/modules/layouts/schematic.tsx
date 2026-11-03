@@ -1505,6 +1505,12 @@ function RegionView(p: RegionViewProps) {
     for (const o of p.overlays) if (intersects(box, o)) chipTop = Math.max(chipTop, o.y + o.h - rect.y + chip.inset)
   }
   const inner: CSSProperties = { position: 'absolute', inset: 0, overflow: 'hidden', borderRadius: 'inherit' }
+  // Header e sidebar reais (prévia integrada): menus e popovers podem sair da região sem serem cortados.
+  if (hasCustom && (kind === 'header' || kind === 'sidebar')) {
+    inner.overflow = 'visible'
+    style.zIndex = Math.max(Number(style.zIndex ?? 0), kind === 'header' ? 6 : 5)
+    style.position = style.position ?? 'relative'
+  }
   if (placement && !hasCustom) {
     if (placement.place === 'top' && chipTop === chip.inset) inner.paddingTop = chip.h + chip.inset
     if (placement.place === 'end') inner.paddingRight = placement.textW + chip.inset * 2

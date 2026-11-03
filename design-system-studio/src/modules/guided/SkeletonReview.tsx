@@ -8,6 +8,7 @@ import { AuthPreview, LandingPreview } from '@/modules/entry'
 import { landingById, loginById, signupById } from '@/modules/entry/catalog'
 import { DesktopSchematic, PhonePreview } from '@/modules/layouts'
 import { desktopById, mobileById } from '@/modules/layouts/catalog'
+import { ScopeOptions } from '@/modules/layouts/ScopeOptions'
 import { detectConflicts, detectPending } from '@/prompt/conflicts'
 import { Callout, Section } from '@/ui'
 
@@ -147,6 +148,8 @@ export function SkeletonReview() {
           {flow?.needsLogin && <ReviewCard kind="Cadastro" name={signup?.name} empty="Sem cadastro escolhido" to="/guiado/entrada" />}
         </div>
       </Section>
+
+      <ScopeOptions />
     </div>
   )
 }

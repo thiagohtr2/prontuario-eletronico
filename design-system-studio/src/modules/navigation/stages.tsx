@@ -391,15 +391,15 @@ export function AppContent({
     : { ...surfaceStyle(theme), borderRadius: theme.metrics.radiusLg }
   if (skeleton)
     return (
-      <main className="nvs-app nvs-app--skeleton" aria-hidden="true">
+      <div className="nvs-app nvs-app--skeleton" aria-hidden="true">
         <span className="nvs-app__sk" style={{ width: '70%', height: 14, background: glass ? withAlpha('#ffffff', 0.6) : t.borderStrong }} />
         {[64, 64, 120].map((h, i) => (
           <span key={i} className="nvs-app__sk" style={{ ...card, height: h }} />
         ))}
-      </main>
+      </div>
     )
   return (
-    <main className="nvs-app" data-narrow={narrow} style={{ paddingTop: topPad + (narrow ? 14 : 20) }}>
+    <div className="nvs-app" data-narrow={narrow} style={{ paddingTop: topPad + (narrow ? 14 : 20) }}>
       <div className="nvs-app__head">
         <span>
           <span className="nvs-f-kicker" style={{ color: glass ? withAlpha('#ffffff', 0.85) : t.textMuted }}>
@@ -441,7 +441,7 @@ export function AppContent({
           </div>
         ))}
       </div>
-    </main>
+    </div>
   )
 }
 

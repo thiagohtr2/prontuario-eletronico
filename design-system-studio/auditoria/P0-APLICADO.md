@@ -61,3 +61,15 @@ Playwright 77 testes passando.
 **Regressão:** os 15 defeitos reproduzidos pela auditoria (`test.fail`) agora são testes normais e passam.
 
 **Verificação:** Vitest 468 testes; Playwright 86 testes (77 anteriores + 9 novos em `tests/e2e/v421.spec.ts`).
+
+# Versão 4.22 concluída (2026-11-03) — prévia fiel
+
+| Item | O que mudou |
+| --- | --- |
+| B-05 Prévia integrada fiel | Header e sidebar escolhidos mostram o nome do projeto e os itens do menu (ou, sem menu definido, as funcionalidades previstas — nunca o menu de exemplo); dentro do app, o header fica na altura do layout desktop (a mesma do Master Prompt) e sem “Entrar”, CTAs, anúncio ou faixa utilitária de site; menus e popovers do header/sidebar não são mais cortados pela região; celular com marca, título e navegação inferior do projeto (vagas fixas + “Mais”), com ícones coerentes com os rótulos; landing com o nome do projeto; botão “Tela cheia” (Esc sai); aviso de tablet alinhado à regra única (desktop compactado). |
+| B-19 Prévias de navegação | Nenhum `<main>`, `<header>` ou `<nav>` dentro das prévias (eram 37 `main` e ~50 `nav "Principal"`); controles das miniaturas fora do Tab (mouse e toque continuam funcionando; teclado testa em “Ver em tamanho grande”); prévia integrada sem controles dentro de `role="img"`. |
+| B-21 Galerias por tipo de tela | Headers filtrados por “Área logada do aplicativo” × “Site público”; o padrão segue o tipo de projeto. |
+| B-22 Escopo estruturado | Escolhas “Em monitores grandes” (centralizado, largura total, painel extra) e “Onde aparecem os stories” (só na inicial, telas principais, todas), nas páginas de arquitetura e na revisão; sem escolha, o prompt usa o padrão marcado como não revisado. |
+| B-24 Padrões únicos | Modais de modelo com rodapé padrão (“Fechar” + prompt + “Escolher este modelo”, que escolhe e fecha); toasts de 3,5 s acima de barras fixas e fechados ao trocar de tela; no guiado, sem breadcrumb nem contador do topo repetindo o stepper; “Master Prompt” secundário até o esqueleto estar quase completo e com rótulo no celular. |
+
+**Verificação:** Vitest 470 testes; Playwright 92 testes (6 novos em `tests/e2e/v422.spec.ts`).

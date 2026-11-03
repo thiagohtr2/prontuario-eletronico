@@ -142,6 +142,8 @@ interface StudioState {
   // Arquitetura
   selectDesktop: (id: string | null) => void
   selectMobile: (id: string | null) => void
+  /** Escopo da arquitetura: monitores grandes e telas com stories. */
+  setLayoutScope: (patch: Partial<Pick<Project['layout'], 'wide' | 'storiesScope'>>) => void
 
   // Identidade visual
   selectPalette: (id: string) => void
@@ -234,6 +236,7 @@ export const useStudio = create<StudioState>()(
 
         selectDesktop: (id) => edit((p) => ({ ...p, layout: { ...p.layout, desktopId: id } })),
         selectMobile: (id) => edit((p) => ({ ...p, layout: { ...p.layout, mobileId: id } })),
+        setLayoutScope: (patch) => edit((p) => ({ ...p, layout: { ...p.layout, ...patch } })),
 
         selectPalette: (id) => edit((p) => ({ ...p, identity: { ...p.identity, paletteId: id } })),
         setTokenOverride: (key, value) =>
