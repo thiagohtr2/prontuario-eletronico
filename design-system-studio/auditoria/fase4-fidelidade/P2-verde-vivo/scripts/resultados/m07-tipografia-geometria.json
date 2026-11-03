@@ -1,0 +1,371 @@
+{
+ "dev-1": {
+  "desktop-landing": {
+   "nTexts": 63,
+   "lt12": {
+    "n": 0,
+    "ex": []
+   },
+   "ctrls": 3,
+   "lt14": {
+    "n": 0,
+    "ex": []
+   },
+   "shadowsNonFloating": [],
+   "nShadows": 0,
+   "radii": {
+    "999px": [
+     "DIV.hero__tall"
+    ],
+    "12px": [
+     "DIV.hero__small",
+     "ARTICLE.ccard",
+     "ARTICLE.ccard"
+    ],
+    "8px": [
+     "DIV.ccard__media",
+     "DIV.ccard__media",
+     "DIV.ccard__media"
+    ],
+    "50%": [
+     "SPAN.icon-circle",
+     "SPAN.icon-circle",
+     "SPAN.icon-circle"
+    ],
+    "6px": [
+     "SPAN.logo__mark"
+    ]
+   }
+  },
+  "desktop-catalogo": {
+   "nTexts": 196,
+   "lt12": {
+    "n": 0,
+    "ex": []
+   },
+   "ctrls": 6,
+   "lt14": {
+    "n": 0,
+    "ex": []
+   },
+   "shadowsNonFloating": [],
+   "nShadows": 0,
+   "radii": {
+    "999px": [
+     "BUTTON.sp-btn",
+     "SELECT.sp-select"
+    ],
+    "6px": [
+     "SPAN.logo__mark"
+    ],
+    "8px": [
+     "INPUT.input",
+     "BUTTON.btn"
+    ]
+   }
+  },
+  "mobile-landing": {
+   "nTexts": 66,
+   "lt12": {
+    "n": 0,
+    "ex": []
+   },
+   "ctrls": 3,
+   "lt14": {
+    "n": 0,
+    "ex": []
+   },
+   "shadowsNonFloating": [],
+   "nShadows": 0,
+   "radii": {
+    "999px": [
+     "DIV.hero__tall"
+    ],
+    "12px": [
+     "DIV.hero__small",
+     "ARTICLE.ccard",
+     "ARTICLE.ccard"
+    ],
+    "8px": [
+     "DIV.ccard__media",
+     "DIV.ccard__media",
+     "DIV.ccard__media"
+    ],
+    "50%": [
+     "SPAN.icon-circle",
+     "SPAN.icon-circle",
+     "SPAN.icon-circle"
+    ],
+    "6px": [
+     "SPAN.logo__mark"
+    ]
+   }
+  },
+  "mobile-catalogo": {
+   "nTexts": 203,
+   "lt12": {
+    "n": 0,
+    "ex": []
+   },
+   "ctrls": 5,
+   "lt14": {
+    "n": 0,
+    "ex": []
+   },
+   "shadowsNonFloating": [],
+   "nShadows": 0,
+   "radii": {
+    "999px": [
+     "BUTTON.sp-btn",
+     "SELECT.sp-select"
+    ],
+    "6px": [
+     "SPAN.logo__mark"
+    ],
+    "8px": [
+     "INPUT.input",
+     "BUTTON.btn"
+    ]
+   }
+  }
+ },
+ "dev-2": {
+  "desktop-landing": {
+   "nTexts": 55,
+   "lt12": {
+    "n": 0,
+    "ex": []
+   },
+   "ctrls": 4,
+   "lt14": {
+    "n": 0,
+    "ex": []
+   },
+   "shadowsNonFloating": [],
+   "nShadows": 0,
+   "radii": {
+    "12px": [
+     "DIV.art-frame",
+     "DIV.art-frame",
+     "LI.care-card"
+    ],
+    "8px": [
+     "DIV.art-frame",
+     "DIV.art-frame",
+     "DIV.art-frame"
+    ]
+   }
+  },
+  "desktop-catalogo": {
+   "nTexts": 221,
+   "lt12": {
+    "n": 0,
+    "ex": []
+   },
+   "ctrls": 33,
+   "lt14": {
+    "n": 4,
+    "ex": [
+     "BUTTON. \"carregando\" 13.0005px",
+     "BUTTON. \"vazio\" 13.0005px",
+     "BUTTON. \"erro\" 13.0005px",
+     "BUTTON. \"voltar ao normal\" 13.0005px"
+    ]
+   },
+   "shadowsNonFloating": [],
+   "nShadows": 0,
+   "radii": {
+    "999px": [
+     "BUTTON.btn",
+     "SELECT."
+    ],
+    "8px": [
+     "SPAN.brand__mark",
+     "INPUT.input",
+     "BUTTON.btn"
+    ]
+   }
+  },
+  "mobile-landing": {
+   "nTexts": 64,
+   "lt12": {
+    "n": 0,
+    "ex": []
+   },
+   "ctrls": 3,
+   "lt14": {
+    "n": 0,
+    "ex": []
+   },
+   "shadowsNonFloating": [],
+   "nShadows": 0,
+   "radii": {
+    "12px": [
+     "DIV.art-frame",
+     "DIV.art-frame",
+     "LI.care-card"
+    ],
+    "8px": [
+     "DIV.art-frame",
+     "DIV.art-frame",
+     "DIV.art-frame"
+    ]
+   }
+  },
+  "mobile-catalogo": {
+   "nTexts": 220,
+   "lt12": {
+    "n": 0,
+    "ex": []
+   },
+   "ctrls": 31,
+   "lt14": {
+    "n": 4,
+    "ex": [
+     "BUTTON. \"carregando\" 13.0005px",
+     "BUTTON. \"vazio\" 13.0005px",
+     "BUTTON. \"erro\" 13.0005px",
+     "BUTTON. \"voltar ao normal\" 13.0005px"
+    ]
+   },
+   "shadowsNonFloating": [],
+   "nShadows": 0,
+   "radii": {
+    "999px": [
+     "BUTTON.btn",
+     "SELECT."
+    ],
+    "8px": [
+     "SPAN.brand__mark",
+     "INPUT.input",
+     "BUTTON.btn"
+    ]
+   }
+  }
+ },
+ "dev-3": {
+  "desktop-landing": {
+   "nTexts": 38,
+   "lt12": {
+    "n": 0,
+    "ex": []
+   },
+   "ctrls": 0,
+   "lt14": {
+    "n": 0,
+    "ex": []
+   },
+   "shadowsNonFloating": [],
+   "nShadows": 0,
+   "radii": {
+    "999px": [
+     "DIV.hero-arch",
+     "A.btn"
+    ],
+    "8px": [
+     "FIGURE.hero-small",
+     "ARTICLE.s-card",
+     "ARTICLE.s-card"
+    ]
+   }
+  },
+  "desktop-catalogo": {
+   "nTexts": 148,
+   "lt12": {
+    "n": 0,
+    "ex": []
+   },
+   "ctrls": 18,
+   "lt14": {
+    "n": 0,
+    "ex": []
+   },
+   "shadowsNonFloating": [],
+   "nShadows": 0,
+   "radii": {
+    "999px": [
+     "A.btn",
+     "BUTTON.btn",
+     "SELECT.field"
+    ],
+    "12px": [
+     "BUTTON.cat-tile",
+     "BUTTON.cat-tile",
+     "BUTTON.cat-tile"
+    ],
+    "22px": [
+     "DIV.origem-img",
+     "DIV.origem-img",
+     "SECTION.newsletter"
+    ],
+    "8px": [
+     "INPUT.field",
+     "BUTTON.btn"
+    ]
+   }
+  },
+  "mobile-landing": {
+   "nTexts": 33,
+   "lt12": {
+    "n": 0,
+    "ex": []
+   },
+   "ctrls": 0,
+   "lt14": {
+    "n": 0,
+    "ex": []
+   },
+   "shadowsNonFloating": [],
+   "nShadows": 0,
+   "radii": {
+    "999px": [
+     "DIV.hero-arch",
+     "A.btn"
+    ],
+    "8px": [
+     "FIGURE.hero-small",
+     "ARTICLE.s-card",
+     "ARTICLE.s-card"
+    ]
+   }
+  },
+  "mobile-catalogo": {
+   "nTexts": 147,
+   "lt12": {
+    "n": 0,
+    "ex": []
+   },
+   "ctrls": 19,
+   "lt14": {
+    "n": 2,
+    "ex": [
+     "BUTTON.dock-item \"Buscar\" 12px",
+     "BUTTON.dock-item \"0Sacola\" 12px"
+    ]
+   },
+   "shadowsNonFloating": [],
+   "nShadows": 0,
+   "radii": {
+    "999px": [
+     "A.btn",
+     "BUTTON.btn",
+     "SELECT.field"
+    ],
+    "12px": [
+     "BUTTON.cat-tile",
+     "BUTTON.cat-tile",
+     "BUTTON.cat-tile"
+    ],
+    "22px": [
+     "DIV.origem-img",
+     "DIV.origem-img",
+     "SECTION.newsletter"
+    ],
+    "8px": [
+     "INPUT.field",
+     "BUTTON.btn"
+    ]
+   }
+  }
+ }
+}

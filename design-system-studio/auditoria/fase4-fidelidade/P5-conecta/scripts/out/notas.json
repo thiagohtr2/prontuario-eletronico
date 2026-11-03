@@ -1,0 +1,131 @@
+{
+ "dev-1": {
+  "dimensoes": {
+   "Arquitetura": {
+    "n": 11,
+    "nota": 100.0
+   },
+   "Celular": {
+    "n": 17,
+    "nota": 97.1
+   },
+   "Desktop/tablet": {
+    "n": 10,
+    "nota": 100.0
+   },
+   "Paleta e tokens": {
+    "n": 10,
+    "nota": 100.0
+   },
+   "Componentes e telas": {
+    "n": 12,
+    "nota": 98.8
+   },
+   "Interações": {
+    "n": 14,
+    "nota": 100.0
+   }
+  },
+  "geral": {
+   "n": 74,
+   "nota": 99.1
+  },
+  "falhas": {
+   "C": [
+    "CEL-13",
+    "CEL-16",
+    "COMP-05"
+   ]
+  }
+ },
+ "dev-2": {
+  "dimensoes": {
+   "Arquitetura": {
+    "n": 11,
+    "nota": 98.6
+   },
+   "Celular": {
+    "n": 17,
+    "nota": 98.5
+   },
+   "Desktop/tablet": {
+    "n": 10,
+    "nota": 97.5
+   },
+   "Paleta e tokens": {
+    "n": 10,
+    "nota": 100.0
+   },
+   "Componentes e telas": {
+    "n": 12,
+    "nota": 100.0
+   },
+   "Interações": {
+    "n": 14,
+    "nota": 100.0
+   }
+  },
+  "geral": {
+   "n": 74,
+   "nota": 99.1
+  },
+  "falhas": {
+   "C": [
+    "ARQ-08",
+    "CEL-16"
+   ],
+   "B": [
+    "DESK-07"
+   ]
+  }
+ },
+ "dev-3": {
+  "dimensoes": {
+   "Arquitetura": {
+    "n": 11,
+    "nota": 95.0
+   },
+   "Celular": {
+    "n": 17,
+    "nota": 89.7
+   },
+   "Desktop/tablet": {
+    "n": 10,
+    "nota": 100.0
+   },
+   "Paleta e tokens": {
+    "n": 10,
+    "nota": 92.5
+   },
+   "Componentes e telas": {
+    "n": 12,
+    "nota": 98.8
+   },
+   "Interações": {
+    "n": 14,
+    "nota": 100.0
+   }
+  },
+  "geral": {
+   "n": 74,
+   "nota": 95.7
+  },
+  "falhas": {
+   "C": [
+    "ARQ-08",
+    "CEL-13",
+    "CEL-14",
+    "CEL-15",
+    "PAL-08",
+    "PAL-10",
+    "COMP-04"
+   ],
+   "B": [
+    "ARQ-10"
+   ],
+   "D": [
+    "PAL-06"
+   ]
+  }
+ }
+}

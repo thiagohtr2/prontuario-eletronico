@@ -1,0 +1,905 @@
+{
+ "site": "dev-2",
+ "login": {
+  "320": {
+   "sw": 320,
+   "iw": 320,
+   "bodySw": 320,
+   "over": false,
+   "cortados": 0
+  },
+  "344": {
+   "sw": 344,
+   "iw": 344,
+   "bodySw": 344,
+   "over": false,
+   "cortados": 0
+  },
+  "360": {
+   "sw": 360,
+   "iw": 360,
+   "bodySw": 360,
+   "over": false,
+   "cortados": 0
+  },
+  "375": {
+   "sw": 375,
+   "iw": 375,
+   "bodySw": 375,
+   "over": false,
+   "cortados": 0
+  },
+  "390": {
+   "sw": 390,
+   "iw": 390,
+   "bodySw": 390,
+   "over": false,
+   "cortados": 0
+  },
+  "412": {
+   "sw": 412,
+   "iw": 412,
+   "bodySw": 412,
+   "over": false,
+   "cortados": 0
+  },
+  "430": {
+   "sw": 430,
+   "iw": 430,
+   "bodySw": 430,
+   "over": false,
+   "cortados": 0
+  },
+  "480": {
+   "sw": 480,
+   "iw": 480,
+   "bodySw": 480,
+   "over": false,
+   "cortados": 0
+  },
+  "600": {
+   "sw": 600,
+   "iw": 600,
+   "bodySw": 600,
+   "over": false,
+   "cortados": 0
+  },
+  "767": {
+   "sw": 767,
+   "iw": 767,
+   "bodySw": 767,
+   "over": false,
+   "cortados": 0
+  },
+  "768": {
+   "sw": 753,
+   "iw": 768,
+   "bodySw": 753,
+   "over": false,
+   "cortados": 0
+  },
+  "820": {
+   "sw": 805,
+   "iw": 820,
+   "bodySw": 805,
+   "over": false,
+   "cortados": 0
+  },
+  "1024": {
+   "sw": 1009,
+   "iw": 1024,
+   "bodySw": 1009,
+   "over": false,
+   "cortados": 0
+  },
+  "1280": {
+   "sw": 1265,
+   "iw": 1280,
+   "bodySw": 1265,
+   "over": false,
+   "cortados": 0
+  },
+  "1440": {
+   "sw": 1425,
+   "iw": 1440,
+   "bodySw": 1425,
+   "over": false,
+   "cortados": 0
+  },
+  "1920": {
+   "sw": 1905,
+   "iw": 1920,
+   "bodySw": 1905,
+   "over": false,
+   "cortados": 0
+  }
+ },
+ "app": {
+  "320": {
+   "#/feed": {
+    "over": false,
+    "sw": 320,
+    "iw": 320,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, ir para o feed 32x44"
+    ]
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 320,
+    "iw": 320,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, ir para o feed 32x44"
+    ]
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 320,
+    "iw": 320,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, ir para o feed 32x44"
+    ]
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 320,
+    "iw": 320,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [
+     "Posso te passar a localização exata.(list-card__desc)",
+     "Testei a receita do bolo de fubá, ficou ótima!(list-card__desc)",
+     "Recebi, obrigada! Vou montar o roteiro hoje.(list-card__desc)",
+     "A playlist nova já está no ar.(list-card__desc)"
+    ],
+    "pequenos": [
+     "Conecta, ir para o feed 32x44"
+    ]
+   }
+  },
+  "344": {
+   "#/feed": {
+    "over": false,
+    "sw": 344,
+    "iw": 344,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, ir para o feed 32x44"
+    ]
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 344,
+    "iw": 344,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, ir para o feed 32x44"
+    ]
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 344,
+    "iw": 344,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, ir para o feed 32x44"
+    ]
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 344,
+    "iw": 344,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [
+     "Posso te passar a localização exata.(list-card__desc)",
+     "Testei a receita do bolo de fubá, ficou ótima!(list-card__desc)",
+     "Recebi, obrigada! Vou montar o roteiro hoje.(list-card__desc)",
+     "A playlist nova já está no ar.(list-card__desc)"
+    ],
+    "pequenos": [
+     "Conecta, ir para o feed 32x44"
+    ]
+   }
+  },
+  "360": {
+   "#/feed": {
+    "over": false,
+    "sw": 360,
+    "iw": 360,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 360,
+    "iw": 360,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 360,
+    "iw": 360,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 360,
+    "iw": 360,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [
+     "Posso te passar a localização exata.(list-card__desc)",
+     "Testei a receita do bolo de fubá, ficou ótima!(list-card__desc)",
+     "Recebi, obrigada! Vou montar o roteiro hoje.(list-card__desc)",
+     "A playlist nova já está no ar.(list-card__desc)"
+    ],
+    "pequenos": []
+   }
+  },
+  "375": {
+   "#/feed": {
+    "over": false,
+    "sw": 375,
+    "iw": 375,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 375,
+    "iw": 375,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 375,
+    "iw": 375,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 375,
+    "iw": 375,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [
+     "Posso te passar a localização exata.(list-card__desc)",
+     "Testei a receita do bolo de fubá, ficou ótima!(list-card__desc)",
+     "Recebi, obrigada! Vou montar o roteiro hoje.(list-card__desc)"
+    ],
+    "pequenos": []
+   }
+  },
+  "390": {
+   "#/feed": {
+    "over": false,
+    "sw": 390,
+    "iw": 390,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 390,
+    "iw": 390,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 390,
+    "iw": 390,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 390,
+    "iw": 390,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [
+     "Posso te passar a localização exata.(list-card__desc)",
+     "Testei a receita do bolo de fubá, ficou ótima!(list-card__desc)",
+     "Recebi, obrigada! Vou montar o roteiro hoje.(list-card__desc)"
+    ],
+    "pequenos": []
+   }
+  },
+  "412": {
+   "#/feed": {
+    "over": false,
+    "sw": 412,
+    "iw": 412,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 412,
+    "iw": 412,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 412,
+    "iw": 412,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 412,
+    "iw": 412,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [
+     "Posso te passar a localização exata.(list-card__desc)",
+     "Testei a receita do bolo de fubá, ficou ótima!(list-card__desc)",
+     "Recebi, obrigada! Vou montar o roteiro hoje.(list-card__desc)"
+    ],
+    "pequenos": []
+   }
+  },
+  "430": {
+   "#/feed": {
+    "over": false,
+    "sw": 430,
+    "iw": 430,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 430,
+    "iw": 430,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 430,
+    "iw": 430,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 430,
+    "iw": 430,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [
+     "Posso te passar a localização exata.(list-card__desc)",
+     "Testei a receita do bolo de fubá, ficou ótima!(list-card__desc)",
+     "Recebi, obrigada! Vou montar o roteiro hoje.(list-card__desc)"
+    ],
+    "pequenos": []
+   }
+  },
+  "480": {
+   "#/feed": {
+    "over": false,
+    "sw": 480,
+    "iw": 480,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 480,
+    "iw": 480,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 480,
+    "iw": 480,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 480,
+    "iw": 480,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [
+     "Testei a receita do bolo de fubá, ficou ótima!(list-card__desc)",
+     "Recebi, obrigada! Vou montar o roteiro hoje.(list-card__desc)"
+    ],
+    "pequenos": []
+   }
+  },
+  "600": {
+   "#/feed": {
+    "over": false,
+    "sw": 600,
+    "iw": 600,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 600,
+    "iw": 600,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 600,
+    "iw": 600,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 600,
+    "iw": 600,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   }
+  },
+  "767": {
+   "#/feed": {
+    "over": false,
+    "sw": 767,
+    "iw": 767,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 767,
+    "iw": 767,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 767,
+    "iw": 767,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 767,
+    "iw": 767,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   }
+  },
+  "768": {
+   "#/feed": {
+    "over": false,
+    "sw": 753,
+    "iw": 768,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 753,
+    "iw": 768,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 753,
+    "iw": 768,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 753,
+    "iw": 768,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   }
+  },
+  "820": {
+   "#/feed": {
+    "over": false,
+    "sw": 805,
+    "iw": 820,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 805,
+    "iw": 820,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 805,
+    "iw": 820,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 805,
+    "iw": 820,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   }
+  },
+  "1024": {
+   "#/feed": {
+    "over": false,
+    "sw": 1009,
+    "iw": 1024,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 1009,
+    "iw": 1024,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 1009,
+    "iw": 1024,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 1009,
+    "iw": 1024,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   }
+  },
+  "1280": {
+   "#/feed": {
+    "over": false,
+    "sw": 1265,
+    "iw": 1280,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 5,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 1265,
+    "iw": 1280,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 5,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 1265,
+    "iw": 1280,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 5,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 1265,
+    "iw": 1280,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 5,
+    "cortados": [],
+    "pequenos": []
+   }
+  },
+  "1440": {
+   "#/feed": {
+    "over": false,
+    "sw": 1425,
+    "iw": 1440,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 5,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 1425,
+    "iw": 1440,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 5,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 1425,
+    "iw": 1440,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 5,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 1425,
+    "iw": 1440,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 5,
+    "cortados": [],
+    "pequenos": []
+   }
+  },
+  "1920": {
+   "#/feed": {
+    "over": false,
+    "sw": 1905,
+    "iw": 1920,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 5,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 1905,
+    "iw": 1920,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 5,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 1905,
+    "iw": 1920,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 5,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 1905,
+    "iw": 1920,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 5,
+    "cortados": [],
+    "pequenos": []
+   }
+  }
+ }
+}

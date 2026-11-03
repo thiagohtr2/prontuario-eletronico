@@ -1,0 +1,1716 @@
+{
+ "dev-1": {
+  "landing": {
+   "static": {
+    "announce": {
+     "r": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 32,
+      "b": 32
+     },
+     "ws": "nowrap",
+     "close": {
+      "x": 338,
+      "y": -6,
+      "w": 44,
+      "h": 44,
+      "b": 38
+     },
+     "textOv": "ellipsis/nowrap"
+    },
+    "topBars": [
+     {
+      "el": "HEADER.site-header#site-header",
+      "pos": "sticky",
+      "r": {
+       "x": 0,
+       "y": 32,
+       "w": 390,
+       "h": 156,
+       "b": 188
+      }
+     }
+    ],
+    "mSearch": {
+     "r": {
+      "x": 16,
+      "y": 88,
+      "w": 358,
+      "h": 44,
+      "b": 132
+     },
+     "fs": "16px",
+     "tag": "BUTTON",
+     "ph": "Buscar plantas…"
+    },
+    "strip": {
+     "r": {
+      "x": 0,
+      "y": 136,
+      "w": 390,
+      "h": 52,
+      "b": 188
+     },
+     "ovx": "auto",
+     "snap": "x",
+     "scrollW": 1166,
+     "clientW": 390,
+     "pills": [
+      {
+       "t": "Todas",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Plantas",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Folhagens",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Suculentas",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Pendentes",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Floríferas",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Árvores",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Vasos",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Cuidados",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Ateliê",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      }
+     ]
+    },
+    "dock": {
+     "r": {
+      "x": 16,
+      "y": 764,
+      "w": 358,
+      "h": 64,
+      "b": 828
+     },
+     "vw": 390,
+     "vh": 844,
+     "pos": "fixed",
+     "radius": "22px",
+     "bg": "#ffffff",
+     "shadow": true,
+     "items": [
+      {
+       "t": "Início",
+       "cur": "page",
+       "color": "#2d6a4f",
+       "icoBg": "#e6edea",
+       "w": 81,
+       "h": 52,
+       "fill": "rgb(45, 106, 79)|rgb(45, 106, 79)",
+       "dot": false
+      },
+      {
+       "t": "Catálogo",
+       "cur": null,
+       "color": "#4d5c54",
+       "icoBg": "#000000@0",
+       "w": 81,
+       "h": 52,
+       "fill": "none|none",
+       "dot": false
+      },
+      {
+       "t": "0Favoritos",
+       "cur": null,
+       "color": "#4d5c54",
+       "icoBg": "#000000@0",
+       "w": 81,
+       "h": 52,
+       "fill": "none|none",
+       "dot": false
+      },
+      {
+       "t": "0Sacola",
+       "cur": null,
+       "color": "#4d5c54",
+       "icoBg": "#000000@0",
+       "w": 81,
+       "h": 52,
+       "fill": "none|none",
+       "dot": false
+      }
+     ]
+    },
+    "hamburger": true,
+    "vw": 390,
+    "sw": 390,
+    "hero": {
+     "tall": {
+      "x": 60,
+      "y": 631,
+      "w": 310,
+      "h": 320,
+      "b": 951
+     },
+     "small": {
+      "x": 20,
+      "y": 967,
+      "w": 310,
+      "h": 180,
+      "b": 1147
+     },
+     "title": {
+      "x": 20,
+      "y": 256,
+      "w": 350,
+      "h": 129,
+      "b": 384
+     },
+     "text": {
+      "x": 44,
+      "y": 404,
+      "w": 326,
+      "h": 195,
+      "b": 599
+     },
+     "titleFs": "41.2px"
+    },
+    "stagger": [
+     {
+      "x": 20,
+      "y": 1346,
+      "w": 326,
+      "h": 468,
+      "b": 1814
+     },
+     {
+      "x": 44,
+      "y": 1834,
+      "w": 326,
+      "h": 468,
+      "b": 2302
+     },
+     {
+      "x": 20,
+      "y": 2322,
+      "w": 326,
+      "h": 468,
+      "b": 2789
+     }
+    ],
+    "inputs": [
+     "news-email:16px"
+    ]
+   },
+   "scrolled": {
+    "tops": [
+     {
+      "el": "HEADER.site-header",
+      "r": [
+       0,
+       156
+      ]
+     }
+    ],
+    "strip": [
+     52,
+     104,
+     "hidden"
+    ],
+    "search": [
+     56,
+     100
+    ]
+   },
+   "bottom": {
+    "dockTop": 764,
+    "lastText": "Privacidade",
+    "lastBottom": 726,
+    "covered": [],
+    "vh": 844
+   },
+   "targets": {
+    "total": 44,
+    "small": 16,
+    "list": [
+     "a.announce__link \"Ver plantas\" 71x20",
+     "a.link-underline \"Ver itens de cuidado\" 148x19",
+     "a.link-underline \"Ver todo o catálogo\" 141x23",
+     "a. \"Plantas\" 48x36",
+     "a. \"Vasos\" 40x36",
+     "a. \"Cuidados\" 63x36",
+     "a. \"Ateliê\" 37x36",
+     "a. \"Entregas e frete\" 105x36",
+     "a. \"Trocas e devoluções\" 137x36",
+     "a. \"Guia de cuidados\" 115x36",
+     "a. \"Fale conosco\" 88x36",
+     "a. \"Nosso viveiro\" 90x36",
+     "a. \"Oficinas do ateliê\" 114x36",
+     "a. \"Trabalhe conosco\" 119x36",
+     "a. \"Privacidade\" 72x16",
+     "a. \"Termos de uso\" 91x16"
+    ]
+   }
+  },
+  "catalogo": {
+   "static": {
+    "announce": {
+     "r": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 32,
+      "b": 32
+     },
+     "ws": "nowrap",
+     "close": {
+      "x": 338,
+      "y": -6,
+      "w": 44,
+      "h": 44,
+      "b": 38
+     },
+     "textOv": "ellipsis/nowrap"
+    },
+    "topBars": [
+     {
+      "el": "HEADER.site-header#site-header",
+      "pos": "sticky",
+      "r": {
+       "x": 0,
+       "y": 32,
+       "w": 390,
+       "h": 156,
+       "b": 188
+      }
+     }
+    ],
+    "mSearch": {
+     "r": {
+      "x": 16,
+      "y": 88,
+      "w": 358,
+      "h": 44,
+      "b": 132
+     },
+     "fs": "16px",
+     "tag": "BUTTON",
+     "ph": "Buscar plantas…"
+    },
+    "strip": {
+     "r": {
+      "x": 0,
+      "y": 136,
+      "w": 390,
+      "h": 52,
+      "b": 188
+     },
+     "ovx": "auto",
+     "snap": "x",
+     "scrollW": 1167,
+     "clientW": 390,
+     "pills": [
+      {
+       "t": "Todas",
+       "svg": true,
+       "h": 44,
+       "cur": "page",
+       "bg": "#e6edea",
+       "color": "#2d6a4f",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Plantas",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Folhagens",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Suculentas",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Pendentes",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Floríferas",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Árvores",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Vasos",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Cuidados",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      },
+      {
+       "t": "Ateliê",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#4d5c54",
+       "snapAlign": "none"
+      }
+     ]
+    },
+    "dock": {
+     "r": {
+      "x": 16,
+      "y": 764,
+      "w": 358,
+      "h": 64,
+      "b": 828
+     },
+     "vw": 390,
+     "vh": 844,
+     "pos": "fixed",
+     "radius": "22px",
+     "bg": "#ffffff",
+     "shadow": true,
+     "items": [
+      {
+       "t": "Início",
+       "cur": null,
+       "color": "#4d5c54",
+       "icoBg": "#000000@0",
+       "w": 81,
+       "h": 52,
+       "fill": "none|none",
+       "dot": false
+      },
+      {
+       "t": "Catálogo",
+       "cur": "page",
+       "color": "#2d6a4f",
+       "icoBg": "#e6edea",
+       "w": 81,
+       "h": 52,
+       "fill": "rgb(45, 106, 79)|rgb(45, 106, 79)",
+       "dot": false
+      },
+      {
+       "t": "0Favoritos",
+       "cur": null,
+       "color": "#4d5c54",
+       "icoBg": "#000000@0",
+       "w": 81,
+       "h": 52,
+       "fill": "none|none",
+       "dot": false
+      },
+      {
+       "t": "0Sacola",
+       "cur": null,
+       "color": "#4d5c54",
+       "icoBg": "#000000@0",
+       "w": 81,
+       "h": 52,
+       "fill": "none|none",
+       "dot": false
+      }
+     ]
+    },
+    "hamburger": true,
+    "vw": 390,
+    "sw": 390,
+    "hero": {
+     "tall": null,
+     "small": null,
+     "title": null,
+     "text": null
+    },
+    "stagger": [],
+    "cols": 1,
+    "cardW": 350,
+    "inputs": [
+     "sort:16px",
+     "news-email:16px"
+    ]
+   },
+   "scrolled": {
+    "tops": [
+     {
+      "el": "HEADER.site-header",
+      "r": [
+       0,
+       156
+      ]
+     }
+    ],
+    "strip": [
+     52,
+     104,
+     "hidden"
+    ],
+    "search": [
+     56,
+     100
+    ]
+   },
+   "bottom": {
+    "dockTop": 764,
+    "lastText": "Privacidade",
+    "lastBottom": 725,
+    "covered": [],
+    "vh": 844
+   },
+   "targets": {
+    "total": 100,
+    "small": 45,
+    "list": [
+     "a.announce__link \"Ver plantas\" 71x20",
+     "a. \"Início\" 33x32",
+     "a.pcard__link \"Costela-de-adão\" 132x20",
+     "a.pcard__link \"Jiboia\" 47x20",
+     "a.pcard__link \"Espada-de-são-jorge\" 167x20",
+     "a.pcard__link \"Zamioculca\" 91x20",
+     "a.pcard__link \"Calathea orbifolia\" 137x20",
+     "a.pcard__link \"Peperômia\" 83x20",
+     "a.pcard__link \"Samambaia\" 91x20",
+     "a.pcard__link \"Echevéria\" 77x20",
+     "a.pcard__link \"Cacto mandacaru\" 138x20",
+     "a.pcard__link \"Babosa\" 58x20",
+     "a.pcard__link \"Colar-de-pérolas\" 133x20",
+     "a.pcard__link \"Orquídea phalaenopsis\" 179x20",
+     "a.pcard__link \"Antúrio\" 58x20",
+     "a.pcard__link \"Lírio-da-paz\" 97x20",
+     "a.pcard__link \"Palmeira-areca\" 118x20",
+     "a.pcard__link \"Figueira-lira\" 94x20",
+     "a.pcard__link \"Maranta-tricolor\" 128x20",
+     "a.pcard__link \"Begônia-maculata\" 142x20",
+     "a.pcard__link \"Pilea\" 38x20",
+     "a.pcard__link \"Vaso de cerâmica Terra ·\" 241x20",
+     "a.pcard__link \"Cachepô de fibra natural\" 253x20",
+     "a.pcard__link \"Vaso autoirrigável · 20 \" 202x20",
+     "a.pcard__link \"Suporte de madeira com v\" 231x20"
+    ]
+   }
+  },
+  "inter": {
+   "searchTap": {
+    "active": "INPUT#m-search fs=16px role=combobox",
+    "panels": [
+     "Buscar plantas 0,0 390x844",
+     "Sugestões de busca 8,60 374x335"
+    ],
+    "text": [
+     "Buscar plantas / Recentes / jiboia / vaso autoirrigável / Sugestões / Plantas para pouca luz / Sombra e meia-sombra / Se",
+     "Recentes / jiboia / vaso autoirrigável / Sugestões / Plantas para pouca luz / Sombra e meia-sombra / Seguras para pets /"
+    ]
+   },
+   "pill": {
+    "tapped": "Folhagens",
+    "before": 99,
+    "after": 99,
+    "n0": 30,
+    "n1": 8,
+    "hash": "#/catalogo?cat=folhagens",
+    "active": [
+     "Folhagens"
+    ],
+    "scrollY": 0
+   },
+   "sheet": {
+    "x": 0,
+    "y": 84,
+    "w": 390,
+    "h": 760,
+    "b": 844,
+    "vh": 844,
+    "radius": "22px 22px 0px 0px",
+    "handle": true,
+    "maxH": "759.6px"
+   },
+   "dockLanding": true,
+   "dockTaps": [
+    {
+     "t": "Início",
+     "hash": "#/",
+     "y": 0,
+     "cur": [
+      "Início"
+     ],
+     "dlg": []
+    },
+    {
+     "t": "Catálogo",
+     "hash": "#/catalogo",
+     "y": 0,
+     "cur": [
+      "Catálogo"
+     ],
+     "dlg": []
+    },
+    {
+     "t": "Favoritos",
+     "hash": "#/favoritos",
+     "y": 0,
+     "cur": [
+      "0Favoritos"
+     ],
+     "dlg": []
+    },
+    {
+     "t": "Sacola",
+     "hash": "#/sacola",
+     "y": 0,
+     "cur": [
+      "0Sacola"
+     ],
+     "dlg": []
+    }
+   ],
+   "hambLand": "Departamentos / Plantas / Vasos / Cuidados / Ateliê / Entregar em / São Paulo · 01310-100 / Alterar",
+   "hambCat": "Departamentos / Plantas / Vasos / Cuidados / Ateliê / Entregar em / São Paulo · 01310-100 / Alterar"
+  },
+  "horiz_landing": {
+   "top": 108,
+   "bottom": 0,
+   "pct": 28,
+   "els": [
+    "HEADER.site-header 0-108"
+   ]
+  },
+  "horiz_catalogo": {
+   "top": 108,
+   "bottom": 0,
+   "pct": 28,
+   "els": [
+    "HEADER.site-header 0-108"
+   ]
+  }
+ },
+ "dev-2": {
+  "landing": {
+   "static": {
+    "announce": {
+     "r": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 32,
+      "b": 32
+     },
+     "ws": "nowrap",
+     "close": {
+      "x": 342,
+      "y": -6,
+      "w": 44,
+      "h": 44,
+      "b": 38
+     },
+     "textOv": "clip/nowrap"
+    },
+    "topBars": [
+     {
+      "el": "HEADER.site-header#site-header",
+      "pos": "sticky",
+      "r": {
+       "x": 0,
+       "y": 32,
+       "w": 390,
+       "h": 156,
+       "b": 188
+      }
+     }
+    ],
+    "mSearch": {
+     "r": {
+      "x": 61,
+      "y": 88,
+      "w": 301,
+      "h": 44,
+      "b": 132
+     },
+     "fs": "15px",
+     "tag": "INPUT",
+     "ph": "Buscar plantas…"
+    },
+    "strip": {
+     "r": {
+      "x": 0,
+      "y": 136,
+      "w": 390,
+      "h": 52,
+      "b": 188
+     },
+     "ovx": "auto",
+     "snap": "x",
+     "scrollW": 795,
+     "clientW": 390,
+     "pills": [
+      {
+       "t": "Todas",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Folhagens",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Suculentas",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Floríferas",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Ervas",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Vasos",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Kits",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      }
+     ]
+    },
+    "dock": {
+     "r": {
+      "x": 16,
+      "y": 764,
+      "w": 358,
+      "h": 64,
+      "b": 828
+     },
+     "vw": 390,
+     "vh": 844,
+     "pos": "fixed",
+     "radius": "22px",
+     "bg": "#ffffff",
+     "shadow": true,
+     "items": [
+      {
+       "t": "Início",
+       "cur": "page",
+       "color": "#2d6a4f",
+       "icoBg": "#000000@0",
+       "w": 81,
+       "h": 52,
+       "fill": "color(srgb 0.176471 0.415686 0.309804 / 0.35)|color(srgb 0.176471 0.415686 0.309804 / 0.35)",
+       "dot": true
+      },
+      {
+       "t": "Plantas",
+       "cur": null,
+       "color": "#4d5c54",
+       "icoBg": "#000000@0",
+       "w": 81,
+       "h": 52,
+       "fill": "none|none",
+       "dot": false
+      },
+      {
+       "t": "Cuidados",
+       "cur": null,
+       "color": "#4d5c54",
+       "icoBg": "#000000@0",
+       "w": 81,
+       "h": 52,
+       "fill": "none|none",
+       "dot": false
+      },
+      {
+       "t": "Ateliê",
+       "cur": null,
+       "color": "#4d5c54",
+       "icoBg": "#000000@0",
+       "w": 81,
+       "h": 52,
+       "fill": "none|none",
+       "dot": false
+      }
+     ]
+    },
+    "hamburger": false,
+    "vw": 390,
+    "sw": 390,
+    "hero": {
+     "tall": {
+      "x": 60,
+      "y": 606,
+      "w": 310,
+      "h": 348,
+      "b": 953
+     },
+     "small": {
+      "x": 94,
+      "y": 977,
+      "w": 252,
+      "h": 189,
+      "b": 1166
+     },
+     "title": {
+      "x": 20,
+      "y": 244,
+      "w": 326,
+      "h": 165,
+      "b": 409
+     },
+     "text": {
+      "x": 52,
+      "y": 429,
+      "w": 318,
+      "h": 93,
+      "b": 522
+     },
+     "titleFs": "39.75px"
+    },
+    "stagger": [
+     {
+      "x": 20,
+      "y": 1486,
+      "w": 326,
+      "h": 438,
+      "b": 1924
+     },
+     {
+      "x": 44,
+      "y": 1948,
+      "w": 326,
+      "h": 438,
+      "b": 2386
+     },
+     {
+      "x": 20,
+      "y": 2410,
+      "w": 326,
+      "h": 438,
+      "b": 2848
+     }
+    ],
+    "inputs": [
+     "search-input:15px",
+     "news-email:16px"
+    ]
+   },
+   "scrolled": {
+    "tops": [
+     {
+      "el": "HEADER.site-header",
+      "r": [
+       0,
+       156
+      ]
+     }
+    ],
+    "strip": [
+     51,
+     103,
+     "hidden"
+    ],
+    "search": [
+     56,
+     100
+    ]
+   },
+   "bottom": {
+    "dockTop": 764,
+    "lastText": "© 2026 Verde Vivo. Loja fictícia criada ",
+    "lastBottom": 724,
+    "covered": [],
+    "vh": 844
+   },
+   "targets": {
+    "total": 37,
+    "small": 10,
+    "list": [
+     "a.announce__link \"Ver plantas\" 71x20",
+     "a. \"Todas as plantas\" 111x36",
+     "a. \"Folhagens\" 68x36",
+     "a. \"Vasos e cachepôs\" 121x36",
+     "a. \"Kits\" 25x36",
+     "a. \"Guia de luz e rega\" 120x36",
+     "a. \"Plantas pet friendly\" 128x36",
+     "a. \"Para iniciantes\" 96x36",
+     "a. \"Sobre o ateliê\" 91x36",
+     "a. \"ola@verdevivo.example\" 157x36"
+    ]
+   }
+  },
+  "catalogo": {
+   "static": {
+    "announce": {
+     "r": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 32,
+      "b": 32
+     },
+     "ws": "nowrap",
+     "close": {
+      "x": 342,
+      "y": -6,
+      "w": 44,
+      "h": 44,
+      "b": 38
+     },
+     "textOv": "clip/nowrap"
+    },
+    "topBars": [
+     {
+      "el": "HEADER.site-header#site-header",
+      "pos": "sticky",
+      "r": {
+       "x": 0,
+       "y": 32,
+       "w": 390,
+       "h": 156,
+       "b": 188
+      }
+     }
+    ],
+    "mSearch": {
+     "r": {
+      "x": 61,
+      "y": 88,
+      "w": 301,
+      "h": 44,
+      "b": 132
+     },
+     "fs": "15px",
+     "tag": "INPUT",
+     "ph": "Buscar plantas…"
+    },
+    "strip": {
+     "r": {
+      "x": 0,
+      "y": 136,
+      "w": 390,
+      "h": 52,
+      "b": 188
+     },
+     "ovx": "auto",
+     "snap": "x",
+     "scrollW": 795,
+     "clientW": 390,
+     "pills": [
+      {
+       "t": "Todas",
+       "svg": true,
+       "h": 44,
+       "cur": "true",
+       "bg": "#2d6a4f",
+       "color": "#ffffff",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Folhagens",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Suculentas",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Floríferas",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Ervas",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Vasos",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Kits",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      }
+     ]
+    },
+    "dock": {
+     "r": {
+      "x": 16,
+      "y": 764,
+      "w": 358,
+      "h": 64,
+      "b": 828
+     },
+     "vw": 390,
+     "vh": 844,
+     "pos": "fixed",
+     "radius": "22px",
+     "bg": "#ffffff",
+     "shadow": true,
+     "items": [
+      {
+       "t": "Início",
+       "cur": null,
+       "color": "#4d5c54",
+       "icoBg": "#000000@0",
+       "w": 81,
+       "h": 52,
+       "fill": "none|none",
+       "dot": false
+      },
+      {
+       "t": "Plantas",
+       "cur": "page",
+       "color": "#2d6a4f",
+       "icoBg": "#000000@0",
+       "w": 81,
+       "h": 52,
+       "fill": "color(srgb 0.176471 0.415686 0.309804 / 0.35)|color(srgb 0.176471 0.415686 0.309804 / 0.35)",
+       "dot": true
+      },
+      {
+       "t": "Cuidados",
+       "cur": null,
+       "color": "#4d5c54",
+       "icoBg": "#000000@0",
+       "w": 81,
+       "h": 52,
+       "fill": "none|none",
+       "dot": false
+      },
+      {
+       "t": "Ateliê",
+       "cur": null,
+       "color": "#4d5c54",
+       "icoBg": "#000000@0",
+       "w": 81,
+       "h": 52,
+       "fill": "none|none",
+       "dot": false
+      }
+     ]
+    },
+    "hamburger": false,
+    "vw": 390,
+    "sw": 390,
+    "hero": {
+     "tall": null,
+     "small": null,
+     "title": null,
+     "text": null
+    },
+    "stagger": [],
+    "cols": 1,
+    "cardW": 350,
+    "inputs": [
+     "search-input:15px",
+     "sort-select:13.9995px",
+     "news-email:16px"
+    ]
+   },
+   "scrolled": {
+    "tops": [
+     {
+      "el": "HEADER.site-header",
+      "r": [
+       0,
+       156
+      ]
+     }
+    ],
+    "strip": [
+     51,
+     103,
+     "hidden"
+    ],
+    "search": [
+     56,
+     100
+    ]
+   },
+   "bottom": {
+    "dockTop": 764,
+    "lastText": "© 2026 Verde Vivo. Loja fictícia criada ",
+    "lastBottom": 724,
+    "covered": [],
+    "vh": 844
+   },
+   "targets": {
+    "total": 102,
+    "small": 11,
+    "list": [
+     "a.announce__link \"Ver plantas\" 71x20",
+     "button. \"erro\" 42x44",
+     "a. \"Todas as plantas\" 111x36",
+     "a. \"Folhagens\" 68x36",
+     "a. \"Vasos e cachepôs\" 121x36",
+     "a. \"Kits\" 25x36",
+     "a. \"Guia de luz e rega\" 120x36",
+     "a. \"Plantas pet friendly\" 128x36",
+     "a. \"Para iniciantes\" 96x36",
+     "a. \"Sobre o ateliê\" 91x36",
+     "a. \"ola@verdevivo.example\" 157x36"
+    ]
+   }
+  },
+  "inter": {
+   "searchTap": {
+    "active": "INPUT#search-input fs=15px role=combobox",
+    "panels": [
+     "Buscar plantas 0,0 390x844",
+     "Sugestões de busca 16,68 358x440"
+    ],
+    "text": [
+     "Recentes / Limpar / Samambaia / Busca recente / Pet friendly / Busca recente / Sugestões / Pet friendly / Em alta / Luz ",
+     "Recentes / Limpar / Samambaia / Busca recente / Pet friendly / Busca recente / Sugestões / Pet friendly / Em alta / Luz "
+    ]
+   },
+   "pill": {
+    "tapped": "Suculentas",
+    "before": 101,
+    "after": 101,
+    "n0": 22,
+    "n1": 4,
+    "hash": "#/catalogo?cat=suculentas",
+    "active": [
+     "Suculentas"
+    ],
+    "scrollY": 0
+   },
+   "sheet": {
+    "x": 0,
+    "y": 84,
+    "w": 390,
+    "h": 760,
+    "b": 844,
+    "vh": 844,
+    "radius": "22px 22px 0px 0px",
+    "handle": true,
+    "maxH": "759.6px"
+   },
+   "dockLanding": true,
+   "dockTaps": [
+    {
+     "t": "Início",
+     "hash": "#/",
+     "y": 0,
+     "cur": [
+      "Início"
+     ],
+     "dlg": []
+    },
+    {
+     "t": "Plantas",
+     "hash": "#/catalogo",
+     "y": 0,
+     "cur": [
+      "Plantas"
+     ],
+     "dlg": []
+    },
+    {
+     "t": "Cuidados",
+     "hash": "#/cuidados",
+     "y": 1102,
+     "cur": [
+      "Cuidados"
+     ],
+     "dlg": []
+    },
+    {
+     "t": "Ateliê",
+     "hash": "#/atelie",
+     "y": 3002,
+     "cur": [
+      "Ateliê"
+     ],
+     "dlg": []
+    }
+   ]
+  },
+  "horiz_landing": {
+   "top": 108,
+   "bottom": 0,
+   "pct": 28,
+   "els": [
+    "HEADER.site-header 0-108"
+   ]
+  },
+  "horiz_catalogo": {
+   "top": 108,
+   "bottom": 0,
+   "pct": 28,
+   "els": [
+    "HEADER.site-header 0-108"
+   ]
+  }
+ },
+ "dev-3": {
+  "landing": {
+   "static": {
+    "topBars": [
+     {
+      "el": "HEADER.l-header",
+      "pos": "sticky",
+      "r": {
+       "x": 0,
+       "y": 0,
+       "w": 390,
+       "h": 65,
+       "b": 65
+      }
+     }
+    ],
+    "hamburger": true,
+    "vw": 390,
+    "sw": 390,
+    "hero": {
+     "tall": {
+      "x": 56,
+      "y": 193,
+      "w": 318,
+      "h": 320,
+      "b": 513
+     },
+     "small": {
+      "x": 150,
+      "y": 697,
+      "w": 200,
+      "h": 170,
+      "b": 867
+     },
+     "title": {
+      "x": 16,
+      "y": 89,
+      "w": 358,
+      "h": 72,
+      "b": 161
+     },
+     "text": {
+      "x": 16,
+      "y": 537,
+      "w": 358,
+      "h": 68,
+      "b": 605
+     },
+     "titleFs": "30px"
+    },
+    "stagger": [
+     {
+      "x": 40,
+      "y": 990,
+      "w": 334,
+      "h": 259,
+      "b": 1249
+     },
+     {
+      "x": 16,
+      "y": 1265,
+      "w": 318,
+      "h": 282,
+      "b": 1547
+     },
+     {
+      "x": 40,
+      "y": 1563,
+      "w": 334,
+      "h": 282,
+      "b": 1844
+     }
+    ],
+    "inputs": []
+   },
+   "scrolled": {
+    "tops": [
+     {
+      "el": "HEADER.l-header",
+      "r": [
+       0,
+       65
+      ]
+     }
+    ],
+    "strip": [
+     0,
+     0,
+     "visible"
+    ],
+    "search": [
+     0,
+     0
+    ]
+   },
+   "bottom": {
+    "dockTop": null,
+    "lastText": "© 2026 Folha Viva. Dados e marca fictíci",
+    "lastBottom": 820,
+    "covered": [],
+    "vh": 844
+   },
+   "targets": {
+    "total": 12,
+    "small": 7,
+    "list": [
+     "a.brand \"Folha Viva, início\" 140x28",
+     "a.btn \"Escolher minha planta\" 358x42",
+     "a.brand \"Folha Viva\" 155x28",
+     "a. \"Plantas\" 48x36",
+     "a. \"Vasos\" 40x36",
+     "a. \"Cuidados\" 63x36",
+     "a. \"Ateliê\" 37x36"
+    ]
+   }
+  },
+  "catalogo": {
+   "static": {
+    "topBars": [
+     {
+      "el": "HEADER.m-top#m-top",
+      "pos": "fixed",
+      "r": {
+       "x": 0,
+       "y": 0,
+       "w": 390,
+       "h": 156,
+       "b": 156
+      }
+     }
+    ],
+    "mSearch": {
+     "r": {
+      "x": 16,
+      "y": 52,
+      "w": 358,
+      "h": 44,
+      "b": 96
+     },
+     "fs": "16px",
+     "tag": "INPUT",
+     "ph": "Buscar plantas…"
+    },
+    "strip": {
+     "r": {
+      "x": 0,
+      "y": 104,
+      "w": 390,
+      "h": 52,
+      "b": 156
+     },
+     "ovx": "auto",
+     "snap": "x",
+     "scrollW": 839,
+     "clientW": 390,
+     "pills": [
+      {
+       "t": "Todas",
+       "svg": true,
+       "h": 44,
+       "cur": "page",
+       "bg": "#e6edea",
+       "color": "#2d6a4f",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Interior",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Exterior",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Suculentas",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Vasos",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Cuidados",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      },
+      {
+       "t": "Acessórios",
+       "svg": true,
+       "h": 44,
+       "cur": null,
+       "bg": "#f5f5f5",
+       "color": "#1b2e24",
+       "snapAlign": "start"
+      }
+     ]
+    },
+    "dock": {
+     "r": {
+      "x": 16,
+      "y": 764,
+      "w": 358,
+      "h": 64,
+      "b": 828
+     },
+     "vw": 390,
+     "vh": 844,
+     "pos": "fixed",
+     "radius": "22px",
+     "bg": "#ffffff",
+     "shadow": true,
+     "items": [
+      {
+       "t": "Início",
+       "cur": null,
+       "color": "#526159",
+       "icoBg": "#000000@0",
+       "w": 87,
+       "h": 52,
+       "fill": "none|none",
+       "dot": false
+      },
+      {
+       "t": "Catálogo",
+       "cur": "page",
+       "color": "#2d6a4f",
+       "icoBg": "#e6edea",
+       "w": 87,
+       "h": 52,
+       "fill": "rgb(45, 106, 79)|rgb(45, 106, 79)",
+       "dot": false
+      },
+      {
+       "t": "Buscar",
+       "cur": null,
+       "color": "#526159",
+       "icoBg": "#000000@0",
+       "w": 87,
+       "h": 52,
+       "fill": "none|none",
+       "dot": false
+      },
+      {
+       "t": "0Sacola",
+       "cur": null,
+       "color": "#526159",
+       "icoBg": "#000000@0",
+       "w": 87,
+       "h": 52,
+       "fill": "none|none",
+       "dot": false
+      }
+     ]
+    },
+    "hamburger": false,
+    "vw": 390,
+    "sw": 390,
+    "hero": {
+     "tall": null,
+     "small": null,
+     "title": null,
+     "text": null
+    },
+    "stagger": [],
+    "cols": 2,
+    "cardW": 171,
+    "inputs": [
+     "q-m:16px",
+     "sort:16px",
+     "news-email:14px"
+    ]
+   },
+   "scrolled": {
+    "tops": [
+     {
+      "el": "HEADER.m-top",
+      "r": [
+       0,
+       112
+      ]
+     }
+    ],
+    "strip": [
+     104,
+     112,
+     "visible"
+    ],
+    "search": [
+     52,
+     96
+    ]
+   },
+   "bottom": {
+    "dockTop": 764,
+    "lastText": "Privacidade",
+    "lastBottom": 730,
+    "covered": [],
+    "vh": 844
+   },
+   "targets": {
+    "total": 56,
+    "small": 27,
+    "list": [
+     "a.brand \"Verde Vivo, início\" 128x28",
+     "a.btn \"Ver plantas\" 358x42",
+     "button.btn \"FiltrosFiltrar\n         \" 108x42",
+     "select.field \"RelevânciaMenor preçoMai\" 143x42",
+     "a.card-link \"Echeveria lilás\" 105x19",
+     "a.card-link \"Monstera deliciosa\" 138x19",
+     "a.card-link \"Alecrim de jardim\" 127x19",
+     "a.card-link \"Espada-de-são-jorge\" 119x39",
+     "a.card-link \"Adubo orgânico 500 g\" 116x39",
+     "a.card-link \"Ficus lyrata\" 85x19",
+     "a.card-link \"Jiboia prateada\" 113x19",
+     "a.card-link \"Kit de cuidados básicos\" 113x39",
+     "a.card-link \"Samambaia americana\" 85x39",
+     "a.card-link \"Substrato para suculenta\" 108x39",
+     "a.card-link \"Zamioculca\" 85x19",
+     "a.card-link \"Haworthia zebra\" 120x19",
+     "a.card-link \"Regador de metal 1 L\" 138x39",
+     "a.card-link \"Lavanda francesa\" 130x19",
+     "a.card-link \"Vaso de cerâmica artesan\" 129x39",
+     "a.card-link \"Vaso de terracota com pr\" 129x39",
+     "input.field \"\" 358x42",
+     "button.btn \"Quero receber\" 358x42",
+     "a.brand \"Verde Vivo\" 134x28",
+     "a. \"Vasos\" 40x44",
+     "a. \"Blog\" 30x44"
+    ]
+   }
+  },
+  "inter": {
+   "searchTap": {
+    "active": "INPUT#q-m fs=16px role=combobox",
+    "panels": [
+     "Sugestões de busca 0,104 390x188"
+    ],
+    "text": [
+     "Sugestões / Monstera / Suculentas para sol / Vasos de terracota"
+    ]
+   },
+   "pill": {
+    "tapped": "Exterior",
+    "before": 129,
+    "after": 115,
+    "n0": 16,
+    "n1": 3,
+    "hash": "#/catalogo",
+    "active": [
+     "Exterior"
+    ],
+    "scrollY": 0
+   },
+   "err": "locator.tap: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#open-filters').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" id=\"open-filters\" class=\"btn btn-soft\" aria-haspopup=\"dialog\" aria-controls=\"filter-drawer\">…</button>\u001b[22m\n\u001b[2m  - attempting tap action\u001b[22"
+  },
+  "horiz_landing": {
+   "top": 73,
+   "bottom": 0,
+   "pct": 19,
+   "els": [
+    "HEADER.l-header 0-73"
+   ]
+  },
+  "horiz_catalogo": {
+   "top": 95,
+   "bottom": 0,
+   "pct": 24,
+   "els": [
+    "HEADER.topbar 0-95"
+   ]
+  }
+ }
+}

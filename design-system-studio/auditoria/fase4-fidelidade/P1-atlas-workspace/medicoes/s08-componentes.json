@@ -1,0 +1,922 @@
+{
+  "dev-1": {
+    "login": {
+      "card": {
+        "x": 520,
+        "y": 196,
+        "w": 400,
+        "h": 419,
+        "radius": "12px",
+        "border": "1px solid #e6e6e6",
+        "borderBottom": "1px #e6e6e6",
+        "shadow": "none",
+        "bg": "#ffffff",
+        "padding": "32px"
+      },
+      "bgFull": {
+        "tag": "DIV",
+        "cls": "auth",
+        "bg": "#f6f6f6",
+        "h": 900
+      },
+      "brand": {
+        "text": "Entrar · Atlas Workspace",
+        "y": 0
+      },
+      "title": "Entrar na sua conta",
+      "titleAlign": "start",
+      "titleFw": "650",
+      "subtitle": "Use seu e-mail e senha para continuar.",
+      "subColor": "#707072",
+      "btn": {
+        "text": "Entrar",
+        "bg": "#18181b",
+        "color": "#ffffff",
+        "w": 334,
+        "formW": 334,
+        "radius": "8px",
+        "h": 44,
+        "tt": "none"
+      },
+      "input": {
+        "h": 44,
+        "radius": "8px",
+        "border": "1px #c7c7c7",
+        "fs": "15px"
+      },
+      "remember": true,
+      "forgot": "Esqueci minha senha",
+      "create": "Criar conta",
+      "foot": []
+    },
+    "loginErrColor": "#dc2626",
+    "focus": {
+      "el": "A Atlas Workspace",
+      "outline": "2px solid #18181b",
+      "offset": "2px",
+      "shadow": "none"
+    },
+    "focusInput": {
+      "el": "INPUT password",
+      "outline": "2px solid #18181b",
+      "offset": "1px",
+      "shadow": "none",
+      "border": "#18181b"
+    },
+    "kpi": {
+      "count": 3,
+      "card": {
+        "x": 284,
+        "y": 303,
+        "w": 359,
+        "h": 195,
+        "radius": "0px",
+        "border": "1px solid #18181b",
+        "borderBottom": "1px #18181b",
+        "shadow": "none",
+        "bg": "#ffffff"
+      },
+      "label": {
+        "text": "Receita mensal",
+        "tt": "uppercase",
+        "ls": "0.96px",
+        "fs": "12px",
+        "color": "#18181b"
+      },
+      "value": {
+        "fs": "34px",
+        "fw": "760",
+        "fvn": "tabular-nums",
+        "ls": "-1.02px"
+      },
+      "compar": true,
+      "icon": 3,
+      "sparkline": true,
+      "text": "RECEITA MENSAL R$ 48,2 mil alta de +12,4% vs. mês anterior Tendência: de R$ 1.598,00 a R$ 1.800,00."
+    },
+    "dashboard": {
+      "title": "Visão geral",
+      "period": [
+        "7 dias",
+        "30 dias",
+        "90 dias",
+        "12 meses"
+      ],
+      "actTitle": "03 —Atividades",
+      "chartTitle": "02 —Receita",
+      "chartW": 733,
+      "actW": 367,
+      "sameRow": true,
+      "bars": 31,
+      "actions": [
+        "7 dias",
+        "30 dias",
+        "90 dias",
+        "12 meses",
+        "Exportar CSV"
+      ],
+      "sectionTitles": [
+        {
+          "t": "01 —Indicadores",
+          "fw": "760",
+          "ls": "-0.36px",
+          "fs": "18px"
+        },
+        {
+          "t": "02 —Receita",
+          "fw": "760",
+          "ls": "-0.36px",
+          "fs": "18px"
+        },
+        {
+          "t": "03 —Atividades",
+          "fw": "760",
+          "ls": "-0.36px",
+          "fs": "18px"
+        }
+      ]
+    },
+    "periodLoading": 4,
+    "period": {
+      "before": [
+        "R$ 48,2 mil"
+      ],
+      "after": [
+        "R$ 139,6 mil"
+      ],
+      "changed": true
+    },
+    "kpiClick": null,
+    "table": {
+      "caption": "Pedidos recentes",
+      "cols": [
+        "",
+        "Cliente",
+        "Status",
+        "Valor",
+        "Data",
+        "Ações"
+      ],
+      "scope": [
+        "col",
+        "col",
+        "col",
+        "col",
+        "col",
+        "col"
+      ],
+      "rows": 4,
+      "headCheckbox": true,
+      "rowCheckbox": true,
+      "rowAction": true,
+      "rowActionText": "",
+      "valAlign": "right",
+      "valFvn": "tabular-nums",
+      "badge": {
+        "text": "Pago",
+        "radius": "0px",
+        "border": "1px solid #18181b",
+        "borderBottom": "1px #18181b",
+        "shadow": "none",
+        "bg": "transparent",
+        "tt": "uppercase"
+      },
+      "th": {
+        "tt": "uppercase",
+        "ls": "0.96px",
+        "fw": "650",
+        "bg": "#f5f5f5",
+        "theadBg": "transparent",
+        "borderBottom": "1px #18181b"
+      },
+      "zebra": [
+        "transparent",
+        "transparent"
+      ],
+      "rowBorder": "1px #e6e6e6",
+      "sortable": 4,
+      "ariaSort": [
+        "none",
+        "none",
+        "none",
+        "descending"
+      ],
+      "wrap": {
+        "radius": "0px",
+        "border": "1px solid #18181b",
+        "borderBottom": "1px #18181b",
+        "shadow": "none",
+        "bg": "#ffffff",
+        "r": {
+          "x": 284,
+          "y": 1176,
+          "w": 1124,
+          "h": 274
+        }
+      },
+      "tableBox": {
+        "radius": "0px",
+        "border": "0px none #18181b",
+        "borderBottom": "0px #18181b",
+        "shadow": "none",
+        "bg": "transparent"
+      },
+      "cellFs": "14px",
+      "states": [
+        "Carregando",
+        "Vazio",
+        "Erro"
+      ]
+    },
+    "tableInteract": {
+      "allChecked": true,
+      "indeterminate": true,
+      "ariaSortAfter": [
+        "ascending",
+        "none",
+        "none",
+        "none"
+      ],
+      "actionOpened": "Ver detalhes Marcar como pago Excluir"
+    },
+    "card": {
+      "title": "Site institucional",
+      "radius": "0px",
+      "border": "1px solid #18181b",
+      "borderBottom": "1px #18181b",
+      "shadow": "none",
+      "bg": "#ffffff",
+      "r": {
+        "x": 284,
+        "y": 325,
+        "w": 359,
+        "h": 457
+      },
+      "mediaRatio": 1.78,
+      "overline": false,
+      "tag": "01 |  | EM ANDAMENTO | ",
+      "btn": {
+        "text": "Ver detalhes",
+        "tt": "uppercase",
+        "ls": "1.12px",
+        "bg": "#18181b",
+        "radius": "0px"
+      },
+      "titleFw": "760",
+      "titleLs": "-0.575px",
+      "footer": true,
+      "text": "01 EM ANDAMENTO Site institucional Redesenho do site da empresa com novo gerenciador de conteúdo, páginas de produto e blog. Prazo 28 nov · 1 tarefa aberta VER "
+    },
+    "form": {
+      "fields": [
+        "Nome",
+        "Sobrenome",
+        "E-mail",
+        "Assunto",
+        "Mensagem"
+      ],
+      "underline": {
+        "top": "0px",
+        "bottom": "1px #18181b",
+        "left": "0px",
+        "radius": "0px"
+      },
+      "textarea": {
+        "top": "0px",
+        "bottom": "1px",
+        "left": "0px"
+      },
+      "label": {
+        "tt": "uppercase",
+        "ls": "0.96px",
+        "fs": "12px"
+      },
+      "twoCols": true,
+      "terms": true,
+      "btn": {
+        "text": "ENVIAR MENSAGEM",
+        "tt": "uppercase",
+        "bg": "#18181b",
+        "radius": "0px"
+      },
+      "wrap": null
+    },
+    "formInteract": {
+      "empty": {
+        "alerts": [
+          "Corrija 3 campos para continuar:Assunto: Escolha um assunto.Mensagem: Escreva sua mensagem.Termos: A"
+        ],
+        "links": 3,
+        "invalid": 3
+      },
+      "sending": {
+        "text": "ENVIANDO…",
+        "disabled": true
+      },
+      "after": "Mensagem enviada"
+    }
+  },
+  "dev-2": {
+    "login": {
+      "card": {
+        "x": 520,
+        "y": 171,
+        "w": 400,
+        "h": 434,
+        "radius": "8px",
+        "border": "1px solid #e6e6e6",
+        "borderBottom": "1px #e6e6e6",
+        "shadow": "none",
+        "bg": "#ffffff",
+        "padding": "32px"
+      },
+      "bgFull": {
+        "tag": "DIV",
+        "cls": "auth",
+        "bg": "#f6f6f6",
+        "h": 900
+      },
+      "brand": {
+        "text": "Entrar — Atlas Workspace",
+        "y": 0
+      },
+      "title": "Entrar na sua conta",
+      "titleAlign": "start",
+      "titleFw": "650",
+      "subtitle": "Use seu e-mail e senha para continuar.",
+      "subColor": "#707072",
+      "btn": {
+        "text": "Entrar",
+        "bg": "#18181b",
+        "color": "#ffffff",
+        "w": 334,
+        "formW": 334,
+        "radius": "8px",
+        "h": 44,
+        "tt": "none"
+      },
+      "input": {
+        "h": 44,
+        "radius": "8px",
+        "border": "1px #c7c7c7",
+        "fs": "15px"
+      },
+      "remember": true,
+      "forgot": "Esqueci minha senha",
+      "create": "Criar conta",
+      "foot": [
+        "Termos de uso",
+        "Política de privacidade"
+      ]
+    },
+    "loginErrColor": "#18181b",
+    "focus": {
+      "el": "A Atlas Workspace — ir para a tela de entrar",
+      "outline": "2px solid #18181b",
+      "offset": "2px",
+      "shadow": "none"
+    },
+    "focusInput": {
+      "el": "INPUT password",
+      "outline": "2px solid #18181b",
+      "offset": "2px",
+      "shadow": "none",
+      "border": "#c7c7c7"
+    },
+    "kpi": null,
+    "dashboard": {
+      "title": "Visão geral",
+      "period": [
+        "30 dias",
+        "90 dias",
+        "12 meses"
+      ],
+      "actTitle": "Atividade recente",
+      "chartTitle": "Receita por período",
+      "chartW": 597,
+      "actW": 364,
+      "sameRow": true,
+      "bars": 11,
+      "actions": [
+        "30 dias",
+        "90 dias",
+        "12 meses",
+        "Atualizar"
+      ],
+      "sectionTitles": [
+        {
+          "t": "Indicadores do período",
+          "fw": "760",
+          "ls": "-0.46px",
+          "fs": "23px"
+        },
+        {
+          "t": "Receita por período",
+          "fw": "760",
+          "ls": "-0.46px",
+          "fs": "23px"
+        },
+        {
+          "t": "Atividade recente",
+          "fw": "760",
+          "ls": "-0.46px",
+          "fs": "23px"
+        }
+      ]
+    },
+    "periodLoading": 5,
+    "period": {
+      "before": [
+        "R$ 48,2 mil"
+      ],
+      "after": [
+        "R$ 44,7 mil"
+      ],
+      "changed": true
+    },
+    "kpiClick": {
+      "hash": "#/relatorios?kpi=receita",
+      "h1": "Relatórios"
+    },
+    "table": {
+      "caption": "Pedidos recentes",
+      "cols": [
+        "",
+        "Cliente",
+        "Status",
+        "Valor",
+        "Data",
+        "Ações"
+      ],
+      "scope": [
+        "col",
+        "col",
+        "col",
+        "col",
+        "col",
+        "col"
+      ],
+      "rows": 4,
+      "headCheckbox": true,
+      "rowCheckbox": true,
+      "rowAction": true,
+      "rowActionText": "",
+      "valAlign": "right",
+      "valFvn": "tabular-nums",
+      "badge": {
+        "text": "Pago",
+        "radius": "0px",
+        "border": "1px solid #117e39",
+        "borderBottom": "1px #117e39",
+        "shadow": "none",
+        "bg": "#e3f4e9",
+        "tt": "uppercase"
+      },
+      "th": {
+        "tt": "uppercase",
+        "ls": "0.96px",
+        "fw": "700",
+        "bg": "#f5f5f5",
+        "theadBg": "transparent",
+        "borderBottom": "1px #18181b"
+      },
+      "zebra": [
+        "#ffffff",
+        "#ffffff"
+      ],
+      "rowBorder": "1px #e6e6e6",
+      "sortable": 4,
+      "ariaSort": [
+        "none",
+        "none",
+        "none",
+        "none"
+      ],
+      "wrap": {
+        "radius": "0px",
+        "border": "0px none #18181b",
+        "borderBottom": "0px #18181b",
+        "shadow": "none",
+        "bg": "transparent",
+        "r": {
+          "x": 284,
+          "y": 322,
+          "w": 1124,
+          "h": 234
+        }
+      },
+      "tableBox": {
+        "radius": "0px",
+        "border": "0px none #18181b",
+        "borderBottom": "0px #18181b",
+        "shadow": "none",
+        "bg": "transparent"
+      },
+      "cellFs": "14px",
+      "states": [
+        "Carregando",
+        "Vazio",
+        "Erro"
+      ]
+    },
+    "tableInteract": {
+      "allChecked": true,
+      "indeterminate": true,
+      "ariaSortAfter": [
+        "ascending",
+        "none",
+        "none",
+        "none"
+      ],
+      "actionOpened": null
+    },
+    "card": {
+      "title": "Site institucional",
+      "radius": "0px",
+      "border": "1px solid #18181b",
+      "borderBottom": "1px #18181b",
+      "shadow": "none",
+      "bg": "#ffffff",
+      "r": {
+        "x": 284,
+        "y": 317,
+        "w": 359,
+        "h": 392
+      },
+      "mediaRatio": 1.78,
+      "overline": true,
+      "tag": "01 — EM ANDAMENTO |  | Site institucional | ",
+      "btn": {
+        "text": "Abrir projeto: Site institucional",
+        "tt": "uppercase",
+        "ls": "1.04px",
+        "bg": "#18181b",
+        "radius": "0px"
+      },
+      "titleFw": "760",
+      "titleLs": "-0.36px",
+      "footer": true,
+      "text": "01 — EM ANDAMENTO Site institucional Novo site da marca com páginas de roteiros, blog e contato. 72% · 31/10/2026 ABRIR PROJETO : SITE INSTITUCIONAL"
+    },
+    "form": {
+      "fields": [
+        "Nome",
+        "Sobrenome",
+        "E-mail",
+        "Assunto",
+        "Mensagem"
+      ],
+      "underline": {
+        "top": "0px",
+        "bottom": "1px #18181b",
+        "left": "0px",
+        "radius": "0px"
+      },
+      "textarea": {
+        "top": "0px",
+        "bottom": "1px",
+        "left": "0px"
+      },
+      "label": {
+        "tt": "uppercase",
+        "ls": "0.96px",
+        "fs": "12px"
+      },
+      "twoCols": true,
+      "terms": true,
+      "btn": {
+        "text": "ENVIAR MENSAGEM",
+        "tt": "uppercase",
+        "bg": "#18181b",
+        "radius": "0px"
+      },
+      "wrap": null
+    },
+    "formInteract": {
+      "empty": {
+        "alerts": [
+          "Corrija os 6 campos abaixo para continuar Informe seu nomeInforme seu sobrenomeInforme seu e-mailEsc"
+        ],
+        "links": 6,
+        "invalid": 6
+      },
+      "sending": {
+        "text": "ENVIANDO…",
+        "disabled": true
+      },
+      "after": "Mensagem enviada"
+    }
+  },
+  "dev-3": {
+    "login": {
+      "card": {
+        "x": 520,
+        "y": 219,
+        "w": 400,
+        "h": 405,
+        "radius": "8px",
+        "border": "1px solid #e6e6e6",
+        "borderBottom": "1px #e6e6e6",
+        "shadow": "none",
+        "bg": "#ffffff",
+        "padding": "32px"
+      },
+      "bgFull": {
+        "tag": "MAIN",
+        "cls": "auth",
+        "bg": "#f6f6f6",
+        "h": 900
+      },
+      "brand": {
+        "text": "Entrar · Atlas Workspace",
+        "y": 0
+      },
+      "title": "Entrar na sua conta",
+      "titleAlign": "start",
+      "titleFw": "650",
+      "subtitle": "Use seu e-mail e senha para continuar.",
+      "subColor": "#707072",
+      "btn": {
+        "text": "Entrar",
+        "bg": "#18181b",
+        "color": "#ffffff",
+        "w": 334,
+        "formW": 334,
+        "radius": "8px",
+        "h": 40,
+        "tt": "none"
+      },
+      "input": {
+        "h": 44,
+        "radius": "8px",
+        "border": "1px #c7c7c7",
+        "fs": "15px"
+      },
+      "remember": true,
+      "forgot": "Esqueci minha senha",
+      "create": "Criar conta",
+      "foot": [
+        "Termos",
+        "Privacidade"
+      ]
+    },
+    "loginErrColor": "#18181b",
+    "focus": {
+      "el": "INPUT password",
+      "outline": "2px solid #18181b",
+      "offset": "0px",
+      "shadow": "none"
+    },
+    "focusInput": {
+      "el": "INPUT password",
+      "outline": "2px solid #18181b",
+      "offset": "0px",
+      "shadow": "rgb(220, 38, 38) 0px 0px 0px 1px inset",
+      "border": "#dc2626"
+    },
+    "kpi": {
+      "count": 3,
+      "card": {
+        "x": 284,
+        "y": 211,
+        "w": 1124,
+        "h": 240,
+        "radius": "0px",
+        "border": "1px solid #18181b",
+        "borderBottom": "1px #18181b",
+        "shadow": "none",
+        "bg": "transparent"
+      },
+      "label": {
+        "text": "Receita mensal",
+        "tt": "uppercase",
+        "ls": "0.96px",
+        "fs": "12px",
+        "color": "#707072"
+      },
+      "value": {
+        "fs": "34px",
+        "fw": "750",
+        "fvn": "tabular-nums",
+        "ls": "-1.02px"
+      },
+      "compar": true,
+      "icon": 9,
+      "sparkline": true,
+      "text": "RECEITA MENSAL R$ 48,2 mil +12,4% vs. mês anterior TAREFAS CONCLUÍDAS 286 +5,9% vs. mês anterior NOVOS CLIENTES 34 -2,1%"
+    },
+    "dashboard": {
+      "title": "Visão geral",
+      "period": [
+        "7 dias",
+        "30 dias",
+        "90 dias"
+      ],
+      "actTitle": "Atividades recentes",
+      "chartTitle": "Receita por semana",
+      "chartW": 734,
+      "actW": 368,
+      "sameRow": true,
+      "bars": 41,
+      "actions": [],
+      "sectionTitles": [
+        {
+          "t": "Receita por semana",
+          "fw": "750",
+          "ls": "-0.54px",
+          "fs": "18px"
+        },
+        {
+          "t": "Atividades recentes",
+          "fw": "750",
+          "ls": "-0.54px",
+          "fs": "18px"
+        }
+      ]
+    },
+    "periodLoading": 2,
+    "period": {
+      "before": [
+        "R$ 48,2 mil",
+        "R$ 13,9 mil",
+        "R$ 10,8 mil"
+      ],
+      "after": [
+        "R$ 131,6 mil",
+        "R$ 45,8 mil",
+        "R$ 40,2 mil"
+      ],
+      "changed": true
+    },
+    "kpiClick": null,
+    "table": {
+      "caption": "Pedidos recentes",
+      "cols": [
+        "",
+        "Cliente",
+        "Status",
+        "Valor",
+        "Data",
+        "Ações"
+      ],
+      "scope": [
+        "col",
+        "col",
+        "col",
+        "col",
+        "col",
+        "col"
+      ],
+      "rows": 4,
+      "headCheckbox": true,
+      "rowCheckbox": true,
+      "rowAction": true,
+      "rowActionText": "VER\nPEDIDO DE STUDIO VARELA",
+      "valAlign": "right",
+      "valFvn": "tabular-nums",
+      "badge": {
+        "text": "Em análise",
+        "radius": "0px",
+        "border": "1px solid #2563eb",
+        "borderBottom": "1px #2563eb",
+        "shadow": "none",
+        "bg": "#ffffff",
+        "tt": "uppercase"
+      },
+      "th": {
+        "tt": "uppercase",
+        "ls": "0.96px",
+        "fw": "650",
+        "bg": "#e3e3e4",
+        "theadBg": "transparent",
+        "borderBottom": "1px #18181b"
+      },
+      "zebra": [
+        "transparent",
+        "transparent"
+      ],
+      "rowBorder": "1px #18181b",
+      "sortable": 4,
+      "ariaSort": [
+        "none",
+        "none",
+        "none",
+        "descending"
+      ],
+      "wrap": {
+        "radius": "0px",
+        "border": "1px solid #18181b",
+        "borderBottom": "1px #18181b",
+        "shadow": "none",
+        "bg": "#ffffff",
+        "r": {
+          "x": 284,
+          "y": 219,
+          "w": 1124,
+          "h": 377
+        }
+      },
+      "tableBox": {
+        "radius": "0px",
+        "border": "0px none #18181b",
+        "borderBottom": "0px #18181b",
+        "shadow": "none",
+        "bg": "transparent"
+      },
+      "cellFs": "14px",
+      "states": []
+    },
+    "tableInteract": {
+      "allChecked": true,
+      "indeterminate": true,
+      "ariaSortAfter": [
+        "ascending",
+        "none",
+        "none",
+        "none"
+      ],
+      "actionOpened": null
+    },
+    "card": {
+      "title": "Viagem a Lisboa",
+      "radius": "0px",
+      "border": "1px solid #18181b",
+      "borderBottom": "1px #18181b",
+      "shadow": "none",
+      "bg": "#ffffff",
+      "r": {
+        "x": 284,
+        "y": 211,
+        "w": 361,
+        "h": 419
+      },
+      "mediaRatio": 1.78,
+      "overline": true,
+      "tag": "01 — |  | NOVO | Viagem a Lisboa",
+      "btn": {
+        "text": "Ver detalhes",
+        "tt": "uppercase",
+        "ls": "0.96px",
+        "bg": "#18181b",
+        "radius": "0px"
+      },
+      "titleFw": "760",
+      "titleLs": "-0.6px",
+      "footer": true,
+      "text": "01 — NOVO Viagem a Lisboa 7 dias com roteiro guiado, hospedagem e passeios inclusos. 12 tarefas · 3 membros VER DETALHES"
+    },
+    "form": {
+      "fields": [
+        "Nome",
+        "E-mail",
+        "Assunto",
+        "Mensagem"
+      ],
+      "underline": {
+        "top": "0px",
+        "bottom": "1px #18181b",
+        "left": "0px",
+        "radius": "0px"
+      },
+      "textarea": {
+        "top": "1px",
+        "bottom": "1px",
+        "left": "1px"
+      },
+      "label": {
+        "tt": "uppercase",
+        "ls": "0.96px",
+        "fs": "12px"
+      },
+      "twoCols": true,
+      "terms": true,
+      "btn": {
+        "text": "ENVIAR MENSAGEM",
+        "tt": "uppercase",
+        "bg": "#18181b",
+        "radius": "0px"
+      },
+      "wrap": {
+        "radius": "0px",
+        "border": "1px solid #18181b",
+        "borderBottom": "1px #18181b",
+        "shadow": "none",
+        "bg": "#ffffff"
+      }
+    },
+    "formInteract": {
+      "empty": {
+        "alerts": [
+          "Revise os campos destacados:Informe seu nome.Informe seu e-mail.Escolha um assunto.Escreva sua mensa"
+        ],
+        "links": 0,
+        "invalid": 5
+      },
+      "sending": {
+        "text": "ENVIANDO…",
+        "disabled": true
+      },
+      "after": "Mensagem enviada"
+    }
+  }
+}

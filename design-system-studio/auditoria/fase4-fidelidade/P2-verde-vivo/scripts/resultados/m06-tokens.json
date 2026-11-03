@@ -1,0 +1,143 @@
+{
+ "dev-1": {
+  "tokensChave": "20/20",
+  "tokensTodos": "44/44",
+  "faltando": [],
+  "hexForaTokens": 9,
+  "exHex": [
+   [
+    "header.css",
+    "#000",
+    "inear-gradient(to right, #000 calc"
+   ],
+   [
+    "header.css",
+    "#000",
+    "inear-gradient(to right, #000 calc"
+   ],
+   [
+    "header.css",
+    "#000",
+    "linear-gradient(to left, #000 calc"
+   ],
+   [
+    "header.css",
+    "#000",
+    "linear-gradient(to left, #000 calc"
+   ],
+   [
+    "header.css",
+    "#000",
+    "t(to right, transparent, #000 48px"
+   ],
+   [
+    "header.css",
+    "#000",
+    " transparent, #000 48px, #000 calc"
+   ],
+   [
+    "header.css",
+    "#000",
+    "t(to right, transparent, #000 48px"
+   ],
+   [
+    "header.css",
+    "#000",
+    " transparent, #000 48px, #000 calc"
+   ]
+  ],
+  "rgbaForaTokens": 0,
+  "inspiracao": {},
+  "reducedMotion": true,
+  "scale098": true,
+  "focusVisible": 10,
+  "safeTop": true,
+  "safeBottom": true,
+  "scrollSnap": true,
+  "dvh": true,
+  "fontsGoogle": true,
+  "fontsLocais": false,
+  "radiusVals": [
+   "12px",
+   "22px",
+   "6px",
+   "8px",
+   "999px"
+  ],
+  "shadowTokens": [
+   "shadow-header",
+   "shadow-pop",
+   "shadow-soft",
+   "shadow-soft-hover"
+  ]
+ },
+ "dev-2": {
+  "tokensChave": "20/20",
+  "tokensTodos": "44/44",
+  "faltando": [],
+  "hexForaTokens": 0,
+  "exHex": [],
+  "rgbaForaTokens": 0,
+  "inspiracao": {},
+  "reducedMotion": true,
+  "scale098": true,
+  "focusVisible": 14,
+  "safeTop": true,
+  "safeBottom": true,
+  "scrollSnap": true,
+  "dvh": true,
+  "fontsGoogle": false,
+  "fontsLocais": true,
+  "radiusVals": [
+   "12px",
+   "22px",
+   "6px",
+   "8px",
+   "999px"
+  ],
+  "shadowTokens": [
+   "shadow-float",
+   "shadow-soft"
+  ]
+ },
+ "dev-3": {
+  "tokensChave": "20/20",
+  "tokensTodos": "44/44",
+  "faltando": [],
+  "hexForaTokens": 2,
+  "exHex": [
+   [
+    "header.css",
+    "#000",
+    "inear-gradient(to right, #000 calc"
+   ],
+   [
+    "header.css",
+    "#000",
+    "inear-gradient(to right, #000 calc"
+   ]
+  ],
+  "rgbaForaTokens": 7,
+  "inspiracao": {},
+  "reducedMotion": true,
+  "scale098": true,
+  "focusVisible": 7,
+  "safeTop": true,
+  "safeBottom": true,
+  "scrollSnap": true,
+  "dvh": true,
+  "fontsGoogle": true,
+  "fontsLocais": false,
+  "radiusVals": [
+   "12px",
+   "22px",
+   "6px",
+   "8px",
+   "999px"
+  ],
+  "shadowTokens": [
+   "shadow-card",
+   "shadow-float"
+  ]
+ }
+}

@@ -1,0 +1,600 @@
+{
+ "dev-1": {
+  "I11": {
+   "open": [
+    {
+     "text": "Ana | Ribeiro | ana.ribeiro@nexocapital.com.br | Meu | perfil | Configurações | Ajuda | ? | Sair",
+     "y": 54,
+     "b": 277,
+     "x": 1198,
+     "r": 1408
+    }
+   ],
+   "expanded": "true",
+   "afterEsc": 0,
+   "focusAfterEsc": "Menu do perfil de Ana Ribeiro",
+   "afterClickOutside": 0
+  },
+  "I12": {
+   "open": [
+    {
+     "text": "Matriz | — | São | Paulo | Filial | — | Rio | de | Janeiro | Filial | — | Curitiba | Criar | unidade",
+     "y": 60,
+     "b": 223,
+     "x": 12,
+     "r": 252
+    }
+   ],
+   "afterEsc": 0
+  },
+  "I13": {
+   "btnY": 827,
+   "open": [
+    {
+     "text": "Meu | perfil | Preferências | Sair",
+     "y": 696,
+     "b": 823,
+     "x": 12,
+     "r": 212
+    }
+   ],
+   "opensUp": true
+  },
+  "I22": {
+   "base": "rgba(0, 0, 0, 0)",
+   "hover": "rgb(244, 244, 244)",
+   "focus": {
+    "t": "Contratos",
+    "outline": "2px solid rgb(29, 78, 216)",
+    "offset": "2px",
+    "shadow": "none"
+   }
+  },
+  "P16": {
+   "content": {
+    "t": "AtualizarR",
+    "outline": "2px solid rgb(29, 78, 216)",
+    "shadow": "none"
+   },
+   "header": {
+    "t": "Aquisição",
+    "outline": "2px solid rgba(0, 0, 0, 0)",
+    "shadow": "rgb(255, 255, 255) 0px 0px 0px 2px, rgb(29, 78, 216) 0px 0px 0px 4px"
+   }
+  },
+  "I18": {
+   "bars": 12,
+   "tip": [
+    "Mai/26 Vendas R$ 1.061.043 Meta R$ 1.475.000"
+   ]
+  },
+  "I19": {
+   "before": {
+    "rgb(228, 234, 250)": 1,
+    "rgb(15, 23, 42)": 1,
+    "rgb(29, 78, 216)": 12,
+    "rgb(12, 145, 205)": 12,
+    "rgba(0, 0, 0, 0)": 12
+   },
+   "after": {
+    "rgb(228, 234, 250)": 1,
+    "rgb(29, 78, 216)": 12,
+    "rgba(0, 0, 0, 0)": 12
+   },
+   "pressedBefore": "true",
+   "pressedAfter": "false"
+  },
+  "I16": {
+   "before": {
+    "sort": null,
+    "vals": [
+     "R$ 76.186,71",
+     "R$ 31.830,80",
+     "R$ 3.260,35",
+     "R$ 5.371,32"
+    ]
+   },
+   "after": {
+    "sort": "descending",
+    "vals": [
+     "R$ 103.587,77",
+     "R$ 101.485,09",
+     "R$ 93.348,37",
+     "R$ 92.471,92"
+    ]
+   }
+  },
+  "I17": {
+   "afterOne": {
+    "indeterminate": true,
+    "checked": false,
+    "aria": null
+   },
+   "bulk": [
+    "1 selecionado\nMarcar como pago\nExportar seleção\nLimpar seleção",
+    "1 selecionado"
+   ],
+   "afterHeader": [
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "I15": {
+   "h1Before": "Visão geral",
+   "h1After": "Receita",
+   "kpiBefore": "Receita líquida / Despesas operacionais / Resultado líquido",
+   "kpiAfter": "Receita faturada / Ticket médio / Inadimplência",
+   "current": [
+    "Receita:page"
+   ],
+   "hash": "#/painel/visao-geral"
+  },
+  "I14": {
+   "where": "menu em header",
+   "before": {
+    "kpi": "R$ 1.595.789 / R$ 1.041.610 / R$ 554.179",
+    "rows": 4,
+    "firstRow": " Rede Mercado Bom Pago R$ 76.186,71 02/11/2026 ",
+    "chartTexts": "R$ 0,R$ 500 mil,R$ 1 mi,R$ 1,5 mi,R$ 2 mi,Nov/25,Dez/25,Jan/26,Fev/26,Mar/26,Abr/26,Mai/26,Jun/26,Jul/26,Ago/26,Set/26,Out/26",
+    "act": "Atividades recentes 43 movimentações no período Pagamento recebido Rede Mercado "
+   },
+   "loading": {
+    "busy": 4,
+    "skel": 55
+   },
+   "after": {
+    "kpi": "R$ 4.281.286 / R$ 2.646.282 / R$ 1.635.005",
+    "rows": 4,
+    "firstRow": " Rede Mercado Bom Pago R$ 76.186,71 02/11/2026 ",
+    "chartTexts": "R$ 0,R$ 500 mil,R$ 1 mi,R$ 1,5 mi,R$ 2 mi,Nov/25,Dez/25,Jan/26,Fev/26,Mar/26,Abr/26,Mai/26,Jun/26,Jul/26,Ago/26,Set/26,Out/26",
+    "act": "Atividades recentes 117 movimentações no período Pagamento recebido Rede Mercado"
+   }
+  },
+  "I20": {
+   "top": "rgb(230, 230, 230) 0px -1px 0px 0px inset",
+   "after20": "rgb(230, 230, 230) 0px -1px 0px 0px inset, color(srgb 0.0588235 0.0901961 0.164706 / 0.18) 0px 2px 8px 0px"
+  },
+  "I21": {
+   "download": "nexo-visao-geral-90d.csv",
+   "toast": [
+    "1–4 de 117",
+    "117 registro(s) exportado(s) em CSV.",
+    "117 registro(s) exportado(s) em CSV."
+   ]
+  },
+  "A4": {
+   "hash": "#/entrar",
+   "loginVisible": true,
+   "status": [
+    "Se o e-mail existir, enviaremos um link para redefinir a senha. Verifique também a caixa de spam.",
+    "117 registro(s) exportado(s) em CSV.Você saiu da sua conta."
+   ]
+  },
+  "railTooltip": {
+   "info": {
+    "aria": null,
+    "title": null,
+    "text": "Fornecedores",
+    "tip": "Fornecedores"
+   },
+   "tip": [
+    "Fornecedores"
+   ]
+  },
+  "I10": {
+   "open": {
+    "sbW": 252,
+    "sbX": 0,
+    "scrim": 1,
+    "mainX": 0,
+    "focusIn": true,
+    "shadow": "color(srgb 0.0588235 0.0901961 0.164706 / 0.16) 0px 10px 28px 0px, color(srgb 0.0588235 0.0901961 0.164706 / 0.1) 0px 2px 6px 0px"
+   },
+   "afterEsc": {
+    "sbW": 72,
+    "focus": "Expandir menu"
+   },
+   "afterClickOutside": 72
+  }
+ },
+ "dev-2": {
+  "I11": {
+   "open": [
+    {
+     "text": "Ana | Souza | ana.souza@nexocapital.com.br | Meu | perfil | Configurações | Ajuda | Sair",
+     "y": 54,
+     "b": 264,
+     "x": 1189,
+     "r": 1416
+    },
+    {
+     "text": "Ana | Souza | ana.souza@nexocapital.com.br | Meu | perfil | Configurações | Ajuda | Sair",
+     "y": 59,
+     "b": 259,
+     "x": 1194,
+     "r": 1411
+    }
+   ],
+   "expanded": "true",
+   "afterEsc": 0,
+   "focusAfterEsc": "Menu do perfil de Ana Souza",
+   "afterClickOutside": 0
+  },
+  "I12": {
+   "open": [
+    {
+     "text": "Matriz | · | São | Paulo | Filial | · | Rio | de | Janeiro | Filial | · | Belo | Horizonte | Criar | espaço",
+     "y": 60,
+     "b": 211,
+     "x": 12,
+     "r": 212
+    },
+    {
+     "text": "Matriz | · | São | Paulo | Filial | · | Rio | de | Janeiro | Filial | · | Belo | Horizonte | Criar | espaço",
+     "y": 65,
+     "b": 206,
+     "x": 17,
+     "r": 207
+    }
+   ],
+   "afterEsc": 0
+  },
+  "I13": {
+   "btnY": 855,
+   "open": [
+    {
+     "text": "Meu | perfil | Preferências | Sair",
+     "y": 731,
+     "b": 849,
+     "x": 207,
+     "r": 407
+    },
+    {
+     "text": "Meu | perfil | Preferências | Sair",
+     "y": 736,
+     "b": 844,
+     "x": 212,
+     "r": 402
+    }
+   ],
+   "opensUp": true
+  },
+  "I22": {
+   "base": "rgba(0, 0, 0, 0)",
+   "hover": "rgb(255, 255, 255)",
+   "focus": {
+    "t": "Contratos",
+    "outline": "2px solid rgb(29, 78, 216)",
+    "offset": "-2px",
+    "shadow": "none"
+   }
+  },
+  "P16": {
+   "content": {
+    "t": "Vendas",
+    "outline": "2px solid rgb(29, 78, 216)",
+    "shadow": "none"
+   },
+   "header": {
+    "t": "Aquisição",
+    "outline": "2px solid rgb(255, 255, 255)",
+    "shadow": "none"
+   }
+  },
+  "I18": {
+   "error": "Cannot read properties of undefined (reading 'x')"
+  },
+  "I19": {
+   "before": {},
+   "after": {},
+   "pressedBefore": "true",
+   "pressedAfter": "false"
+  },
+  "I16": {
+   "before": {
+    "sort": "none",
+    "vals": [
+     "R$ 11.350,61",
+     "R$ 36.310,53",
+     "R$ 1.810,69",
+     "R$ 51.240,39"
+    ]
+   },
+   "after": {
+    "sort": "ascending",
+    "vals": [
+     "R$ 1.810,69",
+     "R$ 11.350,61",
+     "R$ 36.310,53",
+     "R$ 51.240,39"
+    ]
+   }
+  },
+  "I17": {
+   "afterOne": {
+    "indeterminate": true,
+    "checked": false,
+    "aria": null
+   },
+   "bulk": [],
+   "afterHeader": [
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "I15": {
+   "h1Before": "Visão geral",
+   "h1After": "Receita",
+   "kpiBefore": "Receita líquida / Despesas operacionais / Saldo em caixa",
+   "kpiAfter": "Receita recorrente (MRR) / Ticket médio / Inadimplência",
+   "current": [
+    "Receita:page",
+    "Receita:page"
+   ],
+   "hash": "#/painel/visao-geral"
+  },
+  "I14": {
+   "where": "menu em header",
+   "before": {
+    "kpi": "R$ 1.284.560,00 / R$ 742.310,00 / R$ 4.021.118,36",
+    "rows": 4,
+    "firstRow": " Padaria Sol Nascente Em análise R$ 11.350,61 31/10/2026 ",
+    "chartTexts": "0,200,400,600,jun,jul,ago,set,out,nov",
+    "act": "Atividades recentes 7 eventos · Últimos 30 dias Pagamento recebido Orbital Tech "
+   },
+   "loading": {
+    "busy": 6,
+    "skel": 66
+   },
+   "after": {
+    "kpi": "R$ 3.725.224,00 / R$ 2.152.699,00 / R$ 4.150.729,99",
+    "rows": 4,
+    "firstRow": " Metalúrgica Brasil Pendente R$ 53.670,71 01/11/2026 ",
+    "chartTexts": "0,200,400,600,jun,jul,ago,set,out,nov",
+    "act": "Atividades recentes 8 eventos · Últimos 90 dias Pagamento recebido Orbital Tech "
+   }
+  },
+  "I20": {
+   "top": "none",
+   "after20": "color(srgb 0.0588235 0.0901961 0.164706 / 0.18) 0px 1px 4px 0px"
+  },
+  "I21": {
+   "download": "visao-geral-p90.csv",
+   "toast": [
+    "Exportação concluída: visao-geral-p90.csv",
+    "Painel atualizado: Últimos 90 dias."
+   ]
+  },
+  "A4": {
+   "hash": "#/login",
+   "loginVisible": true,
+   "status": [
+    "Sessão encerrada com segurança.",
+    "Exportação concluída: visao-geral-p90.csv",
+    "Painel atualizado: Últimos 90 dias."
+   ]
+  },
+  "railTooltip": {
+   "info": {
+    "aria": "Fornecedores",
+    "title": null,
+    "text": "Fornecedores",
+    "tip": "Fornecedores"
+   },
+   "tip": [
+    "Fornecedores"
+   ]
+  },
+  "I10": {
+   "open": {
+    "sbW": 252,
+    "sbX": 0,
+    "scrim": 1,
+    "mainX": 0,
+    "focusIn": true,
+    "shadow": "color(srgb 0.0588235 0.0901961 0.164706 / 0.16) 0px 8px 24px 0px, color(srgb 0.0588235 0.0901961 0.164706 / 0.12) 0px 1px 3px 0px"
+   },
+   "afterEsc": {
+    "sbW": 72,
+    "focus": "Abrir menu"
+   },
+   "afterClickOutside": 72
+  }
+ },
+ "dev-3": {
+  "I11": {
+   "open": [
+    {
+     "text": "Camila | Ribeiro | camila.ribeiro@nexo.example | Meu | perfil | Configurações | Ajuda | Sair",
+     "y": 52,
+     "b": 261,
+     "x": 1216,
+     "r": 1416
+    }
+   ],
+   "expanded": "true",
+   "afterEsc": 0,
+   "focusAfterEsc": "Menu do perfil: Camila Ribeiro",
+   "afterClickOutside": 0
+  },
+  "I12": {
+   "open": [
+    {
+     "text": "Matriz | · | São | Paulo | Filial | · | Rio | de | Janeiro | Filial | · | Belo | Horizonte | Criar | unidade",
+     "y": 114,
+     "b": 261,
+     "x": 12,
+     "r": 212
+    }
+   ],
+   "afterEsc": 0
+  },
+  "I13": {
+   "btnY": 805,
+   "open": [
+    {
+     "text": "Meu | perfil | Preferências | Sair",
+     "y": 686,
+     "b": 801,
+     "x": 200,
+     "r": 400
+    }
+   ],
+   "opensUp": true
+  },
+  "I22": {
+   "base": "rgba(0, 0, 0, 0)",
+   "hover": "rgb(49, 62, 102)",
+   "focus": {
+    "t": "ContratosContratos",
+    "outline": "3px none rgb(202, 206, 216)",
+    "offset": "2px",
+    "shadow": "rgb(15, 31, 77) 0px 0px 0px 2px, rgb(255, 255, 255) 0px 0px 0px 4px"
+   }
+  },
+  "P16": {
+   "content": {
+    "t": "Exportar",
+    "outline": "2px solid rgb(29, 78, 216)",
+    "shadow": "rgba(29, 78, 216, 0.35) 0px 0px 0px 3px"
+   },
+   "header": {
+    "t": "Aquisição",
+    "outline": "3px none rgb(202, 206, 216)",
+    "shadow": "rgb(15, 31, 77) 0px 0px 0px 2px, rgb(255, 255, 255) 0px 0px 0px 4px"
+   }
+  },
+  "I18": {
+   "bars": 6,
+   "tip": [
+    "Ago 2026: R$ 471.000 2025: R$ 402.000"
+   ]
+  },
+  "I19": {
+   "before": {
+    "rgba(0, 0, 0, 0)": 6,
+    "rgb(29, 78, 216)": 6,
+    "rgb(12, 145, 205)": 6
+   },
+   "after": {
+    "rgba(0, 0, 0, 0)": 6,
+    "rgb(29, 78, 216)": 6
+   },
+   "pressedBefore": "true",
+   "pressedAfter": "false"
+  },
+  "I16": {
+   "before": {
+    "sort": "none",
+    "vals": [
+     "R$ 84.250",
+     "R$ 126.900",
+     "R$ 23.480",
+     "R$ 57.600"
+    ]
+   },
+   "after": {
+    "sort": "ascending",
+    "vals": [
+     "R$ 23.480",
+     "R$ 57.600",
+     "R$ 84.250",
+     "R$ 126.900"
+    ]
+   }
+  },
+  "I17": {
+   "afterOne": {
+    "indeterminate": true,
+    "checked": false,
+    "aria": null
+   },
+   "bulk": [],
+   "afterHeader": [
+    true,
+    true,
+    true,
+    true
+   ]
+  },
+  "I15": {
+   "h1Before": "Visão geral",
+   "h1After": "Receita",
+   "kpiBefore": "Receita líquida / Clientes ativos / Ticket médio",
+   "kpiAfter": "MRR / Inadimplência / Receita por cliente",
+   "current": [
+    "Receita:page"
+   ],
+   "hash": "#/app/painel/visao-geral"
+  },
+  "I14": {
+   "where": "select em main",
+   "before": {
+    "kpi": "R$ 4.820.000 / 12.480 / R$ 386",
+    "rows": 4,
+    "firstRow": " Construtora Alvorada Ltda Aprovado R$ 84.250 31/10/2026 ",
+    "chartTexts": "0,200 mil,400 mil,600 mil,800 mil,Mai,Jun,Jul,Ago,Set,Out",
+    "act": "Atividades recentes Contrato #2841 assinado Atlas Logística 02/11/2026 Pagamento"
+   },
+   "loading": {
+    "busy": 6,
+    "skel": 30
+   },
+   "after": {
+    "kpi": "R$ 13.496.000 / 12.480 / R$ 386",
+    "rows": 6,
+    "firstRow": " Construtora Alvorada Ltda Aprovado R$ 84.250 31/10/2026 ",
+    "chartTexts": "0,500 mil,1 mi,1,5 mi,2 mi,Mai,Jun,Jul,Ago,Set,Out",
+    "act": "Atividades recentes Contrato #2841 assinado Atlas Logística 02/11/2026 Pagamento"
+   }
+  },
+  "I20": {
+   "top": "none",
+   "after20": "rgba(15, 23, 42, 0.18) 0px 2px 8px 0px"
+  },
+  "I21": {
+   "download": null,
+   "toast": [
+    "6 registros",
+    "Exportação simulada (demonstração)."
+   ]
+  },
+  "A4": {
+   "hash": "#/login",
+   "loginVisible": true,
+   "status": [
+    "Exportação simulada (demonstração)."
+   ]
+  },
+  "railTooltip": {
+   "info": {
+    "aria": null,
+    "title": null,
+    "text": "Fornecedores",
+    "tip": null
+   },
+   "tip": [
+    "Fornecedores"
+   ]
+  },
+  "I10": {
+   "open": {
+    "sbW": 252,
+    "sbX": 0,
+    "scrim": 1,
+    "mainX": 0,
+    "focusIn": true,
+    "shadow": "rgba(15, 23, 42, 0.25) 0px 8px 24px 0px"
+   },
+   "afterEsc": {
+    "sbW": 72,
+    "focus": "Expandir menu"
+   },
+   "afterClickOutside": 72
+  }
+ }
+}

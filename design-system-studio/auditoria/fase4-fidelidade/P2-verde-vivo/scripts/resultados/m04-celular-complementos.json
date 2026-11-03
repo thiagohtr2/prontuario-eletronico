@@ -1,0 +1,282 @@
+{
+ "dev3Oscilacao": "1529C 1529C 1529C 1529C 1529C 1529C 1529C 1529C 1529C 1529C",
+ "dev3Sheet": {
+  "x": 0,
+  "y": 84,
+  "w": 390,
+  "h": 760,
+  "vh": 844,
+  "radius": "22px 22px 0px 0px",
+  "handle": true,
+  "maxH": "759.6px"
+ },
+ "dev3Dock": [
+  {
+   "hash": "#/",
+   "cur": [
+    "Catálogo"
+   ],
+   "active": "BODY",
+   "dlg": []
+  },
+  {
+   "hash": "#/catalogo",
+   "cur": [
+    "Catálogo"
+   ],
+   "active": "BODY",
+   "dlg": []
+  },
+  {
+   "hash": "#/catalogo",
+   "cur": [
+    "Catálogo"
+   ],
+   "active": "q-m",
+   "dlg": []
+  },
+  {
+   "hash": "#/catalogo",
+   "cur": [
+    "Catálogo"
+   ],
+   "active": "BODY",
+   "dlg": [
+    "cart-drawer"
+   ]
+  }
+ ],
+ "dev3Hamb": {
+  "text": "Menu / Plantas / Vasos / Cuidados / Ateliê / Escolher minha planta",
+  "r": [
+   16,
+   251,
+   358,
+   342
+  ]
+ },
+ "horiz_667x375_dev-1_landing": {
+  "atTop": {
+   "top": 100,
+   "bottom": 58,
+   "pct": 42,
+   "els": [
+    "HEADER.site-header 0-100",
+    "NAV.dock 317-369"
+   ]
+  },
+  "reading": {
+   "top": 100,
+   "bottom": 0,
+   "pct": 27,
+   "els": [
+    "HEADER.site-header 0-100"
+   ]
+  }
+ },
+ "horiz_667x375_dev-1_catalogo": {
+  "atTop": {
+   "top": 100,
+   "bottom": 58,
+   "pct": 42,
+   "els": [
+    "HEADER.site-header 0-100",
+    "NAV.dock 317-369"
+   ]
+  },
+  "reading": {
+   "top": 100,
+   "bottom": 0,
+   "pct": 27,
+   "els": [
+    "HEADER.site-header 0-100"
+   ]
+  }
+ },
+ "horiz_667x375_dev-2_landing": {
+  "atTop": {
+   "top": 0,
+   "bottom": 64,
+   "pct": 17,
+   "els": [
+    "NAV.dock 311-367"
+   ]
+  },
+  "reading": {
+   "top": 0,
+   "bottom": 64,
+   "pct": 17,
+   "els": [
+    "NAV.dock 311-367"
+   ]
+  }
+ },
+ "horiz_667x375_dev-2_catalogo": {
+  "atTop": {
+   "top": 0,
+   "bottom": 64,
+   "pct": 17,
+   "els": [
+    "NAV.dock 311-367"
+   ]
+  },
+  "reading": {
+   "top": 0,
+   "bottom": 64,
+   "pct": 17,
+   "els": [
+    "NAV.dock 311-367"
+   ]
+  }
+ },
+ "horiz_667x375_dev-3_landing": {
+  "atTop": {
+   "top": 65,
+   "bottom": 0,
+   "pct": 17,
+   "els": [
+    "HEADER.l-header 0-65"
+   ]
+  },
+  "reading": {
+   "top": 65,
+   "bottom": 0,
+   "pct": 17,
+   "els": [
+    "HEADER.l-header 0-65"
+   ]
+  }
+ },
+ "horiz_667x375_dev-3_catalogo": {
+  "atTop": {
+   "top": 132,
+   "bottom": 72,
+   "pct": 54,
+   "els": [
+    "HEADER.m-top 0-132",
+    "NAV.dock 303-359"
+   ]
+  },
+  "reading": {
+   "top": 100,
+   "bottom": 72,
+   "pct": 46,
+   "els": [
+    "HEADER.m-top 0-100",
+    "NAV.dock 303-359"
+   ]
+  }
+ },
+ "horiz_740x360_dev-1_landing": {
+  "atTop": {
+   "top": 100,
+   "bottom": 58,
+   "pct": 44,
+   "els": [
+    "HEADER.site-header 0-100",
+    "NAV.dock 302-354"
+   ]
+  },
+  "reading": {
+   "top": 100,
+   "bottom": 0,
+   "pct": 28,
+   "els": [
+    "HEADER.site-header 0-100"
+   ]
+  }
+ },
+ "horiz_740x360_dev-1_catalogo": {
+  "atTop": {
+   "top": 100,
+   "bottom": 58,
+   "pct": 44,
+   "els": [
+    "HEADER.site-header 0-100",
+    "NAV.dock 302-354"
+   ]
+  },
+  "reading": {
+   "top": 100,
+   "bottom": 0,
+   "pct": 28,
+   "els": [
+    "HEADER.site-header 0-100"
+   ]
+  }
+ },
+ "horiz_740x360_dev-2_landing": {
+  "atTop": {
+   "top": 0,
+   "bottom": 64,
+   "pct": 18,
+   "els": [
+    "NAV.dock 296-352"
+   ]
+  },
+  "reading": {
+   "top": 0,
+   "bottom": 64,
+   "pct": 18,
+   "els": [
+    "NAV.dock 296-352"
+   ]
+  }
+ },
+ "horiz_740x360_dev-2_catalogo": {
+  "atTop": {
+   "top": 0,
+   "bottom": 64,
+   "pct": 18,
+   "els": [
+    "NAV.dock 296-352"
+   ]
+  },
+  "reading": {
+   "top": 0,
+   "bottom": 64,
+   "pct": 18,
+   "els": [
+    "NAV.dock 296-352"
+   ]
+  }
+ },
+ "horiz_740x360_dev-3_landing": {
+  "atTop": {
+   "top": 65,
+   "bottom": 0,
+   "pct": 18,
+   "els": [
+    "HEADER.l-header 0-65"
+   ]
+  },
+  "reading": {
+   "top": 65,
+   "bottom": 0,
+   "pct": 18,
+   "els": [
+    "HEADER.l-header 0-65"
+   ]
+  }
+ },
+ "horiz_740x360_dev-3_catalogo": {
+  "atTop": {
+   "top": 132,
+   "bottom": 72,
+   "pct": 57,
+   "els": [
+    "HEADER.m-top 0-132",
+    "NAV.dock 288-344"
+   ]
+  },
+  "reading": {
+   "top": 100,
+   "bottom": 72,
+   "pct": 48,
+   "els": [
+    "HEADER.m-top 0-100",
+    "NAV.dock 288-344"
+   ]
+  }
+ }
+}

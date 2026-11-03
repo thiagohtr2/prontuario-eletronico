@@ -1,0 +1,1091 @@
+{
+  "dev-1": {
+    "login": {
+      "card": {
+        "cls": "auth",
+        "x": 0,
+        "right": 0,
+        "w": 390,
+        "border": "0px #18181b",
+        "shadow": "none",
+        "radius": "0px",
+        "padding": "0px",
+        "bg": "#f6f6f6"
+      },
+      "inputs": [
+        {
+          "fs": "16px",
+          "h": 48,
+          "x": 20,
+          "right": 20
+        },
+        {
+          "fs": "16px",
+          "h": 48,
+          "x": 20,
+          "right": 20
+        }
+      ],
+      "btnH": 44,
+      "overflow": 0
+    },
+    "loginTargets": {
+      "total": 10,
+      "ok": 8,
+      "small": [
+        {
+          "t": "Mostrar senha",
+          "w": 44,
+          "h": 40,
+          "inline": false
+        },
+        {
+          "t": "Criar conta",
+          "w": 75,
+          "h": 17,
+          "inline": true
+        }
+      ],
+      "smallNonInline": 1
+    },
+    "cadastro": {
+      "inputs": [
+        {
+          "name": "name",
+          "type": "text",
+          "fs": "16px",
+          "h": 48,
+          "x": 20,
+          "w": 350
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "fs": "16px",
+          "h": 48,
+          "x": 20,
+          "w": 350
+        },
+        {
+          "name": "password",
+          "type": "password",
+          "fs": "16px",
+          "h": 48,
+          "x": 20,
+          "w": 350
+        },
+        {
+          "name": "confirm",
+          "type": "password",
+          "fs": "16px",
+          "h": 48,
+          "x": 20,
+          "w": 350
+        }
+      ],
+      "xs": [
+        20
+      ],
+      "checkbox": {
+        "w": 18,
+        "h": 18,
+        "labelW": 350,
+        "labelH": 50.59375
+      },
+      "overflow": 0
+    },
+    "cadastroTargets": {
+      "total": 12,
+      "ok": 7,
+      "small": [
+        {
+          "t": "Mostrar senha",
+          "w": 44,
+          "h": 40,
+          "inline": false
+        },
+        {
+          "t": "Mostrar senha",
+          "w": 44,
+          "h": 40,
+          "inline": false
+        },
+        {
+          "t": "Termos de uso",
+          "w": 99,
+          "h": 20,
+          "inline": false
+        },
+        {
+          "t": "Política de privacidade",
+          "w": 152,
+          "h": 20,
+          "inline": false
+        },
+        {
+          "t": "Entrar",
+          "w": 41,
+          "h": 17,
+          "inline": true
+        }
+      ],
+      "smallNonInline": 4
+    },
+    "app": {
+      "bn": {
+        "r": {
+          "x": 0,
+          "y": 779,
+          "w": 390,
+          "h": 65
+        },
+        "pos": "fixed",
+        "bg": "#ffffff",
+        "borderTop": "1px #e6e6e6",
+        "paddingBottom": "0px",
+        "items": [
+          {
+            "text": "Início",
+            "r": {
+              "x": 8,
+              "y": 780,
+              "w": 87.5,
+              "h": 64
+            },
+            "cur": "page",
+            "color": "#18181b",
+            "bg": "transparent",
+            "icon": {
+              "x": 39.8,
+              "y": 791.8,
+              "w": 24,
+              "h": 24
+            },
+            "iconFill": "none",
+            "labelFs": "12px",
+            "labelFw": "650",
+            "pillBg": "#e3e3e4",
+            "pillRadius": "999px"
+          },
+          {
+            "text": "Painel",
+            "r": {
+              "x": 103.5,
+              "y": 780,
+              "w": 87.5,
+              "h": 64
+            },
+            "cur": null,
+            "color": "#4b4b4d",
+            "bg": "transparent",
+            "icon": {
+              "x": 135.3,
+              "y": 791.8,
+              "w": 24,
+              "h": 24
+            },
+            "iconFill": "none",
+            "labelFs": "12px",
+            "labelFw": "500",
+            "pillBg": "transparent",
+            "pillRadius": "999px"
+          },
+          {
+            "text": "Projetos",
+            "r": {
+              "x": 199,
+              "y": 780,
+              "w": 87.5,
+              "h": 64
+            },
+            "cur": null,
+            "color": "#4b4b4d",
+            "bg": "transparent",
+            "icon": {
+              "x": 230.8,
+              "y": 791.8,
+              "w": 24,
+              "h": 24
+            },
+            "iconFill": "none",
+            "labelFs": "12px",
+            "labelFw": "500",
+            "pillBg": "transparent",
+            "pillRadius": "999px"
+          },
+          {
+            "text": "Mais",
+            "r": {
+              "x": 294.5,
+              "y": 780,
+              "w": 87.5,
+              "h": 64
+            },
+            "cur": null,
+            "color": "#4b4b4d",
+            "bg": "transparent",
+            "icon": {
+              "x": 326.3,
+              "y": 791.8,
+              "w": 24,
+              "h": 24
+            },
+            "iconFill": "none",
+            "labelFs": "12px",
+            "labelFw": "500",
+            "pillBg": "transparent",
+            "pillRadius": "999px"
+          }
+        ]
+      },
+      "top": {
+        "r": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 56
+        },
+        "pos": "fixed",
+        "paddingTop": "0px",
+        "text": "Início MC 3",
+        "controls": [
+          {
+            "label": "Atlas Workspace — ir para o início",
+            "r": {
+              "x": 8,
+              "y": 5.5,
+              "w": 44,
+              "h": 44
+            }
+          },
+          {
+            "label": "Menu do perfil, 3 notificações não lidas",
+            "r": {
+              "x": 334,
+              "y": 5.5,
+              "w": 44,
+              "h": 44
+            }
+          }
+        ]
+      },
+      "sidebarVisible": false,
+      "hamburger": [],
+      "main": {
+        "padTop": "72px",
+        "padBottom": "88px"
+      },
+      "overflow": 0
+    },
+    "appTargets": {
+      "total": 16,
+      "ok": 13,
+      "small": [
+        {
+          "t": "Site institucional",
+          "w": 100,
+          "h": 16,
+          "inline": true
+        },
+        {
+          "t": "Viagem a Lisboa",
+          "w": 102,
+          "h": 16,
+          "inline": true
+        },
+        {
+          "t": "Campanha de verão",
+          "w": 124,
+          "h": 16,
+          "inline": true
+        }
+      ],
+      "smallNonInline": 0
+    },
+    "lastContent": {
+      "scrollY": 1698,
+      "lastBottom": 741,
+      "lastText": "Ver detalhes",
+      "navTop": 779,
+      "hidden": false
+    },
+    "taps": [
+      {
+        "hash": "#/inicio",
+        "h1": "Bom dia, Marina",
+        "topTitle": "Início MC 3",
+        "current": [
+          "Início:page"
+        ],
+        "dialog": false
+      },
+      {
+        "hash": "#/painel",
+        "h1": "Visão geral",
+        "topTitle": "Painel MC 3",
+        "current": [
+          "Painel:page"
+        ],
+        "dialog": false
+      },
+      {
+        "hash": "#/projetos",
+        "h1": "Projetos",
+        "topTitle": "Projetos MC 3",
+        "current": [
+          "Projetos:page"
+        ],
+        "dialog": false
+      },
+      {
+        "hash": "#/mais",
+        "h1": "Mais",
+        "topTitle": "Mais MC 3",
+        "current": [
+          "Mais:page"
+        ],
+        "dialog": false
+      }
+    ],
+    "scrollBehavior": {
+      "before": 500,
+      "restored": 500,
+      "preActiveTap": 400,
+      "afterActiveTap": 0
+    },
+    "landscape": {
+      "bnVis": false,
+      "bnH": 0,
+      "hdH": 64,
+      "hdPos": "sticky",
+      "sbVis": true,
+      "sbW": 72
+    }
+  },
+  "dev-2": {
+    "login": {
+      "card": {
+        "cls": "auth-form",
+        "x": 20,
+        "right": 20,
+        "w": 350,
+        "border": "0px #18181b",
+        "shadow": "none",
+        "radius": "0px",
+        "padding": "0px",
+        "bg": "transparent"
+      },
+      "inputs": [
+        {
+          "fs": "16px",
+          "h": 48,
+          "x": 20,
+          "right": 20
+        },
+        {
+          "fs": "16px",
+          "h": 48,
+          "x": 20,
+          "right": 20
+        }
+      ],
+      "btnH": 44,
+      "overflow": 0
+    },
+    "loginTargets": {
+      "total": 10,
+      "ok": 6,
+      "small": [
+        {
+          "t": "Atlas Workspace — ir para a te",
+          "w": 187,
+          "h": 28,
+          "inline": false
+        },
+        {
+          "t": "Criar conta",
+          "w": 79,
+          "h": 37,
+          "inline": false
+        },
+        {
+          "t": "Termos de uso",
+          "w": 91,
+          "h": 32,
+          "inline": false
+        },
+        {
+          "t": "Política de privacidade",
+          "w": 140,
+          "h": 32,
+          "inline": false
+        }
+      ],
+      "smallNonInline": 4
+    },
+    "cadastro": {
+      "inputs": [
+        {
+          "name": "name",
+          "type": "text",
+          "fs": "16px",
+          "h": 48,
+          "x": 20,
+          "w": 350
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "fs": "16px",
+          "h": 48,
+          "x": 20,
+          "w": 350
+        },
+        {
+          "name": "password",
+          "type": "password",
+          "fs": "16px",
+          "h": 48,
+          "x": 20,
+          "w": 350
+        },
+        {
+          "name": "confirm",
+          "type": "password",
+          "fs": "16px",
+          "h": 48,
+          "x": 20,
+          "w": 350
+        }
+      ],
+      "xs": [
+        20
+      ],
+      "checkbox": {
+        "w": 20,
+        "h": 20,
+        "labelW": 350,
+        "labelH": 60.59375
+      },
+      "overflow": 0
+    },
+    "cadastroTargets": {
+      "total": 11,
+      "ok": 8,
+      "small": [
+        {
+          "t": "Atlas Workspace — ir para a te",
+          "w": 187,
+          "h": 28,
+          "inline": false
+        },
+        {
+          "t": "Termos de uso",
+          "w": 98,
+          "h": 17,
+          "inline": true
+        },
+        {
+          "t": "Política de privacidade",
+          "w": 286,
+          "h": 37,
+          "inline": true
+        }
+      ],
+      "smallNonInline": 1
+    },
+    "app": {
+      "bn": {
+        "r": {
+          "x": 0,
+          "y": 779,
+          "w": 390,
+          "h": 65
+        },
+        "pos": "fixed",
+        "bg": "#ffffff",
+        "borderTop": "1px #e6e6e6",
+        "paddingBottom": "0px",
+        "items": [
+          {
+            "text": "Painel",
+            "r": {
+              "x": 0,
+              "y": 780,
+              "w": 97.5,
+              "h": 64
+            },
+            "cur": "page",
+            "color": "#18181b",
+            "bg": "transparent",
+            "icon": {
+              "x": 36.8,
+              "y": 791.8,
+              "w": 24,
+              "h": 24
+            },
+            "iconFill": "none",
+            "labelFs": "12px",
+            "labelFw": "650",
+            "pillBg": "#e3e3e4",
+            "pillRadius": "14px"
+          },
+          {
+            "text": "Projetos",
+            "r": {
+              "x": 97.5,
+              "y": 780,
+              "w": 97.5,
+              "h": 64
+            },
+            "cur": null,
+            "color": "#707072",
+            "bg": "transparent",
+            "icon": {
+              "x": 134.3,
+              "y": 791.8,
+              "w": 24,
+              "h": 24
+            },
+            "iconFill": "none",
+            "labelFs": "12px",
+            "labelFw": "500",
+            "pillBg": "transparent",
+            "pillRadius": "14px"
+          },
+          {
+            "text": "Tarefas",
+            "r": {
+              "x": 195,
+              "y": 780,
+              "w": 97.5,
+              "h": 64
+            },
+            "cur": null,
+            "color": "#707072",
+            "bg": "transparent",
+            "icon": {
+              "x": 231.8,
+              "y": 791.8,
+              "w": 24,
+              "h": 24
+            },
+            "iconFill": "none",
+            "labelFs": "12px",
+            "labelFw": "500",
+            "pillBg": "transparent",
+            "pillRadius": "14px"
+          },
+          {
+            "text": "Mais",
+            "r": {
+              "x": 292.5,
+              "y": 780,
+              "w": 97.5,
+              "h": 64
+            },
+            "cur": null,
+            "color": "#707072",
+            "bg": "transparent",
+            "icon": {
+              "x": 329.3,
+              "y": 791.8,
+              "w": 24,
+              "h": 24
+            },
+            "iconFill": "none",
+            "labelFs": "12px",
+            "labelFw": "500",
+            "pillBg": "transparent",
+            "pillRadius": "14px"
+          }
+        ]
+      },
+      "top": {
+        "r": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 56
+        },
+        "pos": "sticky",
+        "paddingTop": "0px",
+        "text": "Painel 4",
+        "controls": [
+          {
+            "label": "Notificações, 4 não lidas",
+            "r": {
+              "x": 338,
+              "y": 5.5,
+              "w": 44,
+              "h": 44
+            }
+          }
+        ]
+      },
+      "sidebarVisible": false,
+      "hamburger": [],
+      "main": {
+        "padTop": "20px",
+        "padBottom": "88px"
+      },
+      "overflow": 0
+    },
+    "appTargets": {
+      "total": 12,
+      "ok": 9,
+      "small": [
+        {
+          "t": "RECEITA MENSAL : ABRIR RELATÓR",
+          "w": 118,
+          "h": 17,
+          "inline": false
+        },
+        {
+          "t": "NOVOS CLIENTES : ABRIR RELATÓR",
+          "w": 118,
+          "h": 17,
+          "inline": false
+        },
+        {
+          "t": "TICKET MÉDIO : ABRIR RELATÓRIO",
+          "w": 98,
+          "h": 17,
+          "inline": false
+        }
+      ],
+      "smallNonInline": 3
+    },
+    "lastContent": {
+      "scrollY": 1062,
+      "lastBottom": 695,
+      "lastText": "05",
+      "navTop": 779,
+      "hidden": false
+    },
+    "taps": [
+      {
+        "hash": "#/painel",
+        "h1": "Visão geral",
+        "topTitle": "Painel 4",
+        "current": [
+          "Painel:page"
+        ],
+        "dialog": false
+      },
+      {
+        "hash": "#/projetos",
+        "h1": "Projetos",
+        "topTitle": "Projetos 4",
+        "current": [
+          "Projetos:page"
+        ],
+        "dialog": false
+      },
+      {
+        "hash": "#/tarefas",
+        "h1": "Tarefas",
+        "topTitle": "Tarefas 4",
+        "current": [
+          "Tarefas:page"
+        ],
+        "dialog": false
+      },
+      {
+        "hash": "#/tarefas",
+        "h1": "Tarefas",
+        "topTitle": "Tarefas 4",
+        "current": [
+          "Tarefas:page"
+        ],
+        "dialog": true
+      }
+    ],
+    "scrollBehavior": {
+      "before": 0,
+      "restored": 0,
+      "preActiveTap": 0,
+      "afterActiveTap": 0
+    },
+    "landscape": {
+      "bnVis": false,
+      "bnH": 0,
+      "hdH": 64,
+      "hdPos": "sticky",
+      "sbVis": true,
+      "sbW": 72
+    }
+  },
+  "dev-3": {
+    "login": {
+      "card": {
+        "cls": "auth",
+        "x": 0,
+        "right": 0,
+        "w": 390,
+        "border": "0px #18181b",
+        "shadow": "none",
+        "radius": "0px",
+        "padding": "28px 20px 32px",
+        "bg": "#f6f6f6"
+      },
+      "inputs": [
+        {
+          "fs": "16px",
+          "h": 48,
+          "x": 40,
+          "right": 40
+        },
+        {
+          "fs": "16px",
+          "h": 48,
+          "x": 40,
+          "right": 40
+        }
+      ],
+      "btnH": 44,
+      "overflow": 0
+    },
+    "loginTargets": {
+      "total": 9,
+      "ok": 5,
+      "small": [
+        {
+          "t": "Esqueci minha senha",
+          "w": 150,
+          "h": 23,
+          "inline": false
+        },
+        {
+          "t": "Criar conta",
+          "w": 83,
+          "h": 37,
+          "inline": false
+        },
+        {
+          "t": "Termos",
+          "w": 54,
+          "h": 36,
+          "inline": false
+        },
+        {
+          "t": "Privacidade",
+          "w": 80,
+          "h": 36,
+          "inline": false
+        }
+      ],
+      "smallNonInline": 4
+    },
+    "cadastro": {
+      "inputs": [
+        {
+          "name": "name",
+          "type": "text",
+          "fs": "16px",
+          "h": 48,
+          "x": 40,
+          "w": 310
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "fs": "16px",
+          "h": 48,
+          "x": 40,
+          "w": 310
+        },
+        {
+          "name": "new-password",
+          "type": "password",
+          "fs": "16px",
+          "h": 48,
+          "x": 40,
+          "w": 310
+        },
+        {
+          "name": "new-password-confirm",
+          "type": "password",
+          "fs": "16px",
+          "h": 48,
+          "x": 40,
+          "w": 310
+        }
+      ],
+      "xs": [
+        40
+      ],
+      "checkbox": {
+        "w": 18,
+        "h": 18,
+        "labelW": 310,
+        "labelH": 44
+      },
+      "overflow": 0
+    },
+    "cadastroTargets": {
+      "total": 13,
+      "ok": 8,
+      "small": [
+        {
+          "t": "Termos",
+          "w": 51,
+          "h": 17,
+          "inline": true
+        },
+        {
+          "t": "Privacidade",
+          "w": 80,
+          "h": 17,
+          "inline": true
+        },
+        {
+          "t": "Entrar",
+          "w": 49,
+          "h": 37,
+          "inline": false
+        },
+        {
+          "t": "Termos",
+          "w": 54,
+          "h": 36,
+          "inline": false
+        },
+        {
+          "t": "Privacidade",
+          "w": 80,
+          "h": 36,
+          "inline": false
+        }
+      ],
+      "smallNonInline": 3
+    },
+    "app": {
+      "bn": {
+        "r": {
+          "x": 0,
+          "y": 780,
+          "w": 390,
+          "h": 64
+        },
+        "pos": "fixed",
+        "bg": "#ffffff",
+        "borderTop": "1px #e6e6e6",
+        "paddingBottom": "0px",
+        "items": [
+          {
+            "text": "Início",
+            "r": {
+              "x": 0,
+              "y": 781,
+              "w": 97.5,
+              "h": 63
+            },
+            "cur": "page",
+            "color": "#18181b",
+            "bg": "transparent",
+            "icon": {
+              "x": 36.8,
+              "y": 792.3,
+              "w": 24,
+              "h": 24
+            },
+            "iconFill": "rgb(24, 24, 27)",
+            "labelFs": "12px",
+            "labelFw": "650",
+            "pillBg": "#e3e3e4",
+            "pillRadius": "14px"
+          },
+          {
+            "text": "Projetos",
+            "r": {
+              "x": 97.5,
+              "y": 781,
+              "w": 97.5,
+              "h": 63
+            },
+            "cur": null,
+            "color": "#4b4b4d",
+            "bg": "transparent",
+            "icon": {
+              "x": 134.3,
+              "y": 792.3,
+              "w": 24,
+              "h": 24
+            },
+            "iconFill": "none",
+            "labelFs": "12px",
+            "labelFw": "500",
+            "pillBg": "transparent",
+            "pillRadius": "14px"
+          },
+          {
+            "text": "Equipe",
+            "r": {
+              "x": 195,
+              "y": 781,
+              "w": 97.5,
+              "h": 63
+            },
+            "cur": null,
+            "color": "#4b4b4d",
+            "bg": "transparent",
+            "icon": {
+              "x": 231.8,
+              "y": 792.3,
+              "w": 24,
+              "h": 24
+            },
+            "iconFill": "none",
+            "labelFs": "12px",
+            "labelFw": "500",
+            "pillBg": "transparent",
+            "pillRadius": "14px"
+          },
+          {
+            "text": "Ajustes",
+            "r": {
+              "x": 292.5,
+              "y": 781,
+              "w": 97.5,
+              "h": 63
+            },
+            "cur": null,
+            "color": "#4b4b4d",
+            "bg": "transparent",
+            "icon": {
+              "x": 329.3,
+              "y": 792.3,
+              "w": 24,
+              "h": 24
+            },
+            "iconFill": "none",
+            "labelFs": "12px",
+            "labelFw": "500",
+            "pillBg": "transparent",
+            "pillRadius": "14px"
+          }
+        ]
+      },
+      "top": {
+        "r": {
+          "x": 0,
+          "y": 0,
+          "w": 390,
+          "h": 56
+        },
+        "pos": "fixed",
+        "paddingTop": "0px",
+        "text": "Início 2",
+        "controls": [
+          {
+            "label": "Notificações, 2 não lidas",
+            "r": {
+              "x": 338,
+              "y": 5.5,
+              "w": 44,
+              "h": 44
+            }
+          }
+        ]
+      },
+      "sidebarVisible": false,
+      "hamburger": [],
+      "main": {
+        "padTop": "16px",
+        "padBottom": "24px"
+      },
+      "overflow": 0
+    },
+    "appTargets": {
+      "total": 13,
+      "ok": 9,
+      "small": [
+        {
+          "t": "checkbox",
+          "w": 316,
+          "h": 40,
+          "inline": false
+        },
+        {
+          "t": "checkbox",
+          "w": 316,
+          "h": 40,
+          "inline": false
+        },
+        {
+          "t": "checkbox",
+          "w": 316,
+          "h": 40,
+          "inline": false
+        },
+        {
+          "t": "Ver todas as tarefas",
+          "w": 141,
+          "h": 19,
+          "inline": true
+        }
+      ],
+      "smallNonInline": 3
+    },
+    "lastContent": {
+      "scrollY": 91,
+      "lastBottom": 725,
+      "lastText": "5 tarefas · 2 membros",
+      "navTop": 780,
+      "hidden": false
+    },
+    "taps": [
+      {
+        "hash": "#/app/inicio",
+        "h1": "Bom dia, Ana",
+        "topTitle": "GeralInício2AS",
+        "current": [
+          "Início:page"
+        ],
+        "dialog": false
+      },
+      {
+        "hash": "#/app/projetos",
+        "h1": "Projetos",
+        "topTitle": "GeralProjetos2AS",
+        "current": [
+          "Projetos:page"
+        ],
+        "dialog": false
+      },
+      {
+        "hash": "#/app/equipe",
+        "h1": "Pessoas",
+        "topTitle": "EquipePessoas2AS",
+        "current": [
+          "Equipe:page"
+        ],
+        "dialog": false
+      },
+      {
+        "hash": "#/app/configuracoes",
+        "h1": "Configurações",
+        "topTitle": "ContaConfigurações2AS",
+        "current": [
+          "Ajustes:page"
+        ],
+        "dialog": false
+      }
+    ],
+    "scrollBehavior": {
+      "before": 91,
+      "restored": 91,
+      "preActiveTap": 91,
+      "afterActiveTap": 0
+    },
+    "landscape": {
+      "bnVis": false,
+      "bnH": 0,
+      "hdH": 64,
+      "hdPos": "sticky",
+      "sbVis": true,
+      "sbW": 72
+    }
+  }
+}

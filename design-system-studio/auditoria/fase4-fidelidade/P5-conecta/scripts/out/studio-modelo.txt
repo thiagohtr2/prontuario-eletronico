@@ -1,0 +1,107 @@
+{
+ "phone": [
+  402,
+  782
+ ],
+ "navs": [
+  {
+   "tag": "NAV",
+   "cls": "lay-ph-dock",
+   "x": 28,
+   "y": 670,
+   "w": 346,
+   "h": 68,
+   "radius": "24px",
+   "bg": "rgb(255, 255, 255)",
+   "shadow": "rgba(16, 16, 24, 0.14) 0px 10px 28px 0px",
+   "pos": "absolute"
+  }
+ ],
+ "cands": [
+  {
+   "tag": "DIV",
+   "cls": "lay-phone__screen",
+   "x": 11,
+   "y": 11,
+   "w": 380,
+   "h": 760,
+   "radius": "40px",
+   "bg": "rgb(0, 0, 0)",
+   "shadow": "none",
+   "pos": "relative"
+  },
+  {
+   "tag": "DIV",
+   "cls": "lay-ph",
+   "x": 11,
+   "y": 11,
+   "w": 380,
+   "h": 760,
+   "radius": "0px",
+   "bg": "rgb(255, 255, 255)",
+   "shadow": "none",
+   "pos": "absolute"
+  },
+  {
+   "tag": "DIV",
+   "cls": "lay-ph-body",
+   "x": 11,
+   "y": 11,
+   "w": 380,
+   "h": 760,
+   "radius": "0px",
+   "bg": "rgb(255, 255, 255)",
+   "shadow": "none",
+   "pos": "absolute"
+  },
+  {
+   "tag": "DIV",
+   "cls": "lay-ph-content-inner",
+   "x": 11,
+   "y": 201,
+   "w": 380,
+   "h": 835,
+   "radius": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "shadow": "none",
+   "pos": "static"
+  }
+ ],
+ "menuBtn": {
+  "tag": "BUTTON",
+  "cls": "lay-ph-icon-btn",
+  "x": 17,
+  "y": 51,
+  "w": 46,
+  "h": 46,
+  "radius": "999px",
+  "bg": "rgba(0, 0, 0, 0)",
+  "shadow": "none",
+  "pos": "relative"
+ },
+ "header": {
+  "tag": "DIV",
+  "cls": "lay-ph-top",
+  "x": 11,
+  "y": 45,
+  "w": 380,
+  "h": 59,
+  "radius": "0px",
+  "bg": "rgb(255, 255, 255)",
+  "shadow": "none",
+  "pos": "relative"
+ },
+ "stories": {
+  "tag": "DIV",
+  "cls": "lay-ph-stories",
+  "x": 11,
+  "y": 104,
+  "w": 380,
+  "h": 97,
+  "radius": "0px",
+  "bg": "rgb(255, 255, 255)",
+  "shadow": "none",
+  "pos": "static"
+ }
+}
+drawer {"tag":"DIV","x":11,"y":11,"w":300,"h":760,"radius":"0px","bg":"rgb(255, 255, 255)"}

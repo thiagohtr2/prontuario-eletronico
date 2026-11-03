@@ -601,25 +601,121 @@
    "emptyState": null
   },
   "drawer": {
-   "err": "locator.scrollIntoViewIfNeeded: Timeout 29992.713000000003ms exceeded.\nCall log:\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    2 × waiting for element to be stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying scroll into view action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying scroll into view action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    56 × waiting for element to be stable\u001b[22m\n\u001b[2m       - element is not stable\u001b[22m\n\u001b[2m     - retrying scroll into view action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+   "info": {
+    "x": 1040,
+    "w": 400,
+    "h": 900,
+    "right": 1440,
+    "vw": 1440,
+    "role": "dialog",
+    "modal": "true",
+    "radius": "22px 0px 0px 22px",
+    "bg": "#ffffff",
+    "shadow": true,
+    "scrim": "#1b2e24@0.42",
+    "title": "Filtros",
+    "buttons": [
+     "Fechar filtros",
+     "Limpar",
+     "Aplicar filtros"
+    ],
+    "apply": {
+     "t": "Aplicar filtros",
+     "bg": "#2d6a4f",
+     "radius": "999px",
+     "inFoot": true,
+     "footPos": "static"
+    },
+    "groups": [
+     "Categoria",
+     "Luz",
+     "Porte",
+     "Cuidado",
+     "Preço"
+    ],
+    "activeIn": false,
+    "bodyOverflow": "visible/hidden"
+   },
+   "trapOk": true,
+   "escCloses": true,
+   "focusBack": true,
+   "overlayCloses": true,
+   "closeBtnCloses": true,
+   "nOptions": 44,
+   "clicked": "Interior",
+   "applyText": "Aplicar filtros",
+   "afterApply": 5,
+   "n0": 16,
+   "drawerClosedAfterApply": true
+  },
+  "sort": {
+   "opts": [
+    "relevancia|Relevância",
+    "menor|Menor preço",
+    "maior|Maior preço",
+    "nome|Nome (A–Z)"
+   ],
+   "p0": [
+    29.9,
+    189.9,
+    34.9,
+    64.9,
+    32.9,
+    249.9
+   ],
+   "p1": [
+    27.9,
+    29.9,
+    32.9,
+    34.9,
+    39.9,
+    59.9
+   ]
   },
   "cart": {
    "badge0": {
     "t": "0",
     "hidden": true
    },
-   "err": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#view-catalogo .grid .card').first().locator('a').first()\u001b[22m\n"
+   "via": "produto:#/catalogo",
+   "drawerAfterAdd": [
+    "Sacola 1"
+   ],
+   "badge1": {
+    "t": "1",
+    "hidden": false,
+    "bg": "#b07d4f",
+    "color": "#111114",
+    "radius": "999px"
+   },
+   "afterClick": {
+    "hash": "#/catalogo",
+    "dialogs": [
+     "Sacola 1"
+    ]
+   }
   },
   "profile": {
-   "text": null
+   "text": "Visitante / Modo demonstração: não há login neste site. / Meu perfil / Configurações / Ajuda / Sair"
   },
   "announce": {
-   "err": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#announce-close').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"icon-btn\" id=\"announce-close\" aria-label=\"Dispensar aviso\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    56 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not stable\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+   "visible": false,
+   "headerTop": 0
   },
   "focus": [
    {
-    "el": "A.brand",
+    "el": "A.",
+    "outline": "solid 3px #ffffff",
+    "shadow": "none"
+   },
+   {
+    "el": "BUTTON.icon-btn",
     "outline": "solid 2px #2d6a4f",
+    "shadow": "none"
+   },
+   {
+    "el": "A.brand",
+    "outline": "solid 3px #1b2e24",
     "shadow": "none"
    },
    {
@@ -636,17 +732,8 @@
     "el": "BUTTON.icon-btn",
     "outline": "solid 2px #2d6a4f",
     "shadow": "none"
-   },
-   {
-    "el": "BUTTON.cat-trigger",
-    "outline": "solid 2px #2d6a4f",
-    "shadow": "none"
-   },
-   {
-    "el": "BUTTON.cat-trigger",
-    "outline": "solid 2px #2d6a4f",
-    "shadow": "none"
    }
-  ]
+  ],
+  "obs": "executado com reducedMotion=reduce (rolagem suave do site impedia cliques estáveis)"
  }
 }

@@ -1,0 +1,47 @@
+{
+  "dev-1": {
+    "sparkTip": [
+      "3",
+      "Tendência: de R$ 1.598,00 a R$ 1.800,00."
+    ],
+    "logout": {
+      "hash": "#/entrar",
+      "pwd": true
+    }
+  },
+  "dev-2": {
+    "sparkTip": [
+      "4",
+      "(aumento de 12,4%)"
+    ],
+    "logout": {
+      "hash": "#/login",
+      "pwd": true
+    },
+    "celBell": [
+      {
+        "cls": "dialog dialog--sheet",
+        "x": 0,
+        "y": 335,
+        "w": 390,
+        "h": 509,
+        "text": "Notificações Notificações 4 não lidas Não lida: Letícia Prado comentou em \"Página inicial\" há 12 min"
+      }
+    ]
+  },
+  "dev-3": {
+    "sparkTip": [
+      "2"
+    ],
+    "verAction": {
+      "dialogs": [
+        "Pedido de Studio Varela aberto (demonstração)."
+      ],
+      "hash": "#/app/relatorios"
+    },
+    "logout": {
+      "hash": "#/entrar",
+      "pwd": true
+    }
+  }
+}

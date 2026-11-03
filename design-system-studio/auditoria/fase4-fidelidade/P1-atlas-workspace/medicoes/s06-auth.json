@@ -1,0 +1,951 @@
+{
+  "dev-1": {
+    "attrs": {
+      "emailType": "email",
+      "emailIM": "email",
+      "emailAC": "username",
+      "pwdAC": "current-password",
+      "labelEmail": "E-mail",
+      "labelPwd": "Senha"
+    },
+    "empty": {
+      "fields": [
+        {
+          "type": "email",
+          "name": "email",
+          "invalid": "true",
+          "desc": "Informe seu e-mail.",
+          "label": "E-mail",
+          "ac": "username",
+          "im": "email",
+          "value": ""
+        },
+        {
+          "type": "password",
+          "name": "password",
+          "invalid": "true",
+          "desc": "Informe sua senha.",
+          "label": "Senha",
+          "ac": "current-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "checkbox",
+          "name": "remember",
+          "invalid": null,
+          "desc": "",
+          "label": "wrap",
+          "ac": null,
+          "im": null,
+          "value": false
+        }
+      ],
+      "alerts": [
+        "Corrija 2 campos para continuar:E-mail: Informe seu e-mail.Senha: Informe sua senha."
+      ],
+      "alertLinks": 2
+    },
+    "blur": {
+      "fields": [
+        {
+          "type": "email",
+          "name": "email",
+          "invalid": "true",
+          "desc": "Digite um e-mail válido, como nome@empresa.com.",
+          "label": "E-mail",
+          "ac": "username",
+          "im": "email",
+          "value": "abc"
+        },
+        {
+          "type": "password",
+          "name": "password",
+          "invalid": null,
+          "desc": "",
+          "label": "Senha",
+          "ac": "current-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "checkbox",
+          "name": "remember",
+          "invalid": null,
+          "desc": "",
+          "label": "wrap",
+          "ac": null,
+          "im": null,
+          "value": false
+        }
+      ],
+      "alerts": [],
+      "alertLinks": 0
+    },
+    "wrong": {
+      "alerts": [
+        "E-mail ou senha incorretos.Confira os dados e tente novamente.",
+        "E-mail ou senha incorretos.Confira os dados e tente novamente."
+      ],
+      "errColor": {
+        "color": "rgb(24, 24, 27)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(24, 24, 27)"
+      }
+    },
+    "toggle": {
+      "pre": {
+        "label": "Mostrar senha",
+        "pressed": "false"
+      },
+      "post": {
+        "label": "Ocultar senha",
+        "pressed": "true",
+        "type": "text",
+        "inside": true
+      }
+    },
+    "loading": {
+      "text": "Entrando…",
+      "disabled": true,
+      "busy": null
+    },
+    "afterLogin": {
+      "hash": "#/inicio",
+      "h1": "Bom dia, Marina"
+    },
+    "recLinkNearPwd": 52,
+    "rec": {
+      "hash": "#/recuperar-senha",
+      "h1": "Recuperar senha",
+      "hasEmail": true
+    },
+    "recMsg": " Se o e-mail existir, enviaremos um link.",
+    "cadAttrs": {
+      "fields": [
+        {
+          "type": "text",
+          "name": "name",
+          "invalid": null,
+          "desc": "",
+          "label": "Nome completo",
+          "ac": "name",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "email",
+          "name": "email",
+          "invalid": null,
+          "desc": "",
+          "label": "E-mail",
+          "ac": "email",
+          "im": "email",
+          "value": ""
+        },
+        {
+          "type": "password",
+          "name": "password",
+          "invalid": null,
+          "desc": "Força da senha: —Pelo menos 8 caracteres — pendenteLetras e números — pendenteMaiúsculas e minúsculas ou um símbolo (rec",
+          "label": "Senha",
+          "ac": "new-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "password",
+          "name": "confirm",
+          "invalid": null,
+          "desc": "",
+          "label": "Confirmar senha",
+          "ac": "new-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "checkbox",
+          "name": "terms",
+          "invalid": null,
+          "desc": "",
+          "label": "wrap",
+          "ac": null,
+          "im": null,
+          "value": false
+        }
+      ],
+      "alerts": [],
+      "alertLinks": 0
+    },
+    "cadOrder": [
+      "Nome completo",
+      "E-mail",
+      "Senha",
+      "Confirmar senha",
+      "Li e aceito os Termos de uso e a Polític"
+    ],
+    "cadBlur": [
+      {
+        "type": "text",
+        "name": "name",
+        "invalid": "true",
+        "desc": "Informe seu nome completo.",
+        "label": "Nome completo",
+        "ac": "name",
+        "im": null,
+        "value": ""
+      },
+      {
+        "type": "email",
+        "name": "email",
+        "invalid": null,
+        "desc": "",
+        "label": "E-mail",
+        "ac": "email",
+        "im": "email",
+        "value": ""
+      }
+    ],
+    "cadEmpty": {
+      "fields": [
+        {
+          "type": "text",
+          "name": "name",
+          "invalid": "true",
+          "desc": "Informe seu nome completo.",
+          "label": "Nome completo",
+          "ac": "name",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "email",
+          "name": "email",
+          "invalid": "true",
+          "desc": "Informe seu e-mail.",
+          "label": "E-mail",
+          "ac": "email",
+          "im": "email",
+          "value": ""
+        },
+        {
+          "type": "password",
+          "name": "password",
+          "invalid": "true",
+          "desc": "Crie uma senha. | Força da senha: —Pelo menos 8 caracteres — pendenteLetras e números — pendenteMaiúsculas e minúsculas ",
+          "label": "Senha",
+          "ac": "new-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "password",
+          "name": "confirm",
+          "invalid": "true",
+          "desc": "Repita a senha.",
+          "label": "Confirmar senha",
+          "ac": "new-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "checkbox",
+          "name": "terms",
+          "invalid": "true",
+          "desc": "Aceite os Termos de uso e a Política de privacidade para continuar.",
+          "label": "wrap",
+          "ac": null,
+          "im": null,
+          "value": false
+        }
+      ],
+      "alerts": [
+        "Corrija 5 campos para continuar:Nome completo: Informe seu nome completo.E-mail: Informe seu e-mail.Senha: Crie uma senha.Confirmar senha: Repita a senha.Termos: Aceite os Termos de uso e a Política d"
+      ],
+      "alertLinks": 5
+    },
+    "strength": [
+      [
+        "abc",
+        "fraca"
+      ],
+      [
+        "abcdefg1",
+        "média"
+      ],
+      [
+        "Abcdefg1",
+        "forte"
+      ],
+      [
+        "Abcdefg1!xyz",
+        "forte"
+      ]
+    ],
+    "mismatch": true,
+    "toggleCount": 2,
+    "toggleIndep": [
+      "text",
+      "password"
+    ],
+    "termsRequired": {
+      "invalid": "true",
+      "stillHere": true,
+      "alerts": [
+        "Corrija 1 campo para continuar:Termos: Aceite os Termos de uso e a Política de privacidade para continuar."
+      ]
+    },
+    "valuesKept": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "existing": {
+      "hash": "#/cadastro",
+      "text": " Não foi possível concluir o cadastro com este e-mail. Se você já tem uma conta, entre ou recupere sua senha.",
+      "links": [
+        "recupere sua senha",
+        "Entrar"
+      ]
+    },
+    "success": {
+      "hash": "#/inicio",
+      "h1": "Bom dia, Nova",
+      "msg": "Pular para o conteúdo Atlas Workspace GERAL Início Painel Projetos 12 Tarefas Calendário EQUIPE Pessoas Mensagens 3 Relatórios CONTA Configurações Ajuda NP Nova"
+    }
+  },
+  "dev-2": {
+    "attrs": {
+      "emailType": "email",
+      "emailIM": "email",
+      "emailAC": "username",
+      "pwdAC": "current-password",
+      "labelEmail": "E-mail",
+      "labelPwd": "Senha"
+    },
+    "empty": {
+      "fields": [
+        {
+          "type": "email",
+          "name": "email",
+          "invalid": "true",
+          "desc": "Informe seu e-mail",
+          "label": "E-mail",
+          "ac": "username",
+          "im": "email",
+          "value": ""
+        },
+        {
+          "type": "password",
+          "name": "password",
+          "invalid": "true",
+          "desc": "Informe sua senha",
+          "label": "Senha",
+          "ac": "current-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "checkbox",
+          "name": "remember",
+          "invalid": null,
+          "desc": "",
+          "label": "Lembrar de mim",
+          "ac": null,
+          "im": null,
+          "value": false
+        }
+      ],
+      "alerts": [
+        "Corrija os 2 campos abaixo para continuar Informe seu e-mailInforme sua senha"
+      ],
+      "alertLinks": 2
+    },
+    "blur": {
+      "fields": [
+        {
+          "type": "email",
+          "name": "email",
+          "invalid": "true",
+          "desc": "Informe um e-mail válido, como nome@empresa.com",
+          "label": "E-mail",
+          "ac": "username",
+          "im": "email",
+          "value": "abc"
+        },
+        {
+          "type": "password",
+          "name": "password",
+          "invalid": null,
+          "desc": "",
+          "label": "Senha",
+          "ac": "current-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "checkbox",
+          "name": "remember",
+          "invalid": null,
+          "desc": "",
+          "label": "Lembrar de mim",
+          "ac": null,
+          "im": null,
+          "value": false
+        }
+      ],
+      "alerts": [],
+      "alertLinks": 0
+    },
+    "wrong": {
+      "alerts": [
+        "E-mail ou senha incorretos",
+        "E-mail ou senha incorretos"
+      ],
+      "errColor": {
+        "color": "rgb(24, 24, 27)",
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "rgb(24, 24, 27)"
+      }
+    },
+    "toggle": {
+      "pre": {
+        "label": "Mostrar senha",
+        "pressed": "false"
+      },
+      "post": {
+        "label": "Ocultar senha",
+        "pressed": "true",
+        "type": "text",
+        "inside": true
+      }
+    },
+    "loading": {
+      "text": "Entrando…",
+      "disabled": true,
+      "busy": "true"
+    },
+    "afterLogin": {
+      "hash": "#/painel",
+      "h1": "Visão geral"
+    },
+    "recLinkNearPwd": 60,
+    "rec": {
+      "hash": "#/recuperar",
+      "h1": "Recuperar senha",
+      "hasEmail": true
+    },
+    "recMsg": "Ir para o conteúdo A Atlas Workspace Verifique seu e-mail Se o e-mail existir, enviaremos um link para redefinir a senha.",
+    "cadAttrs": {
+      "fields": [
+        {
+          "type": "text",
+          "name": "name",
+          "invalid": null,
+          "desc": "",
+          "label": "Nome completo",
+          "ac": "name",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "email",
+          "name": "email",
+          "invalid": null,
+          "desc": "",
+          "label": "E-mail",
+          "ac": "email",
+          "im": "email",
+          "value": ""
+        },
+        {
+          "type": "password",
+          "name": "password",
+          "invalid": null,
+          "desc": "Use uma senha única, que você não usa em outros sites.",
+          "label": "Senha",
+          "ac": "new-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "password",
+          "name": "confirm",
+          "invalid": null,
+          "desc": "",
+          "label": "Confirmar senha",
+          "ac": "new-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "checkbox",
+          "name": "terms",
+          "invalid": null,
+          "desc": "",
+          "label": "Li e aceito os Termos de uso e a Polític",
+          "ac": null,
+          "im": null,
+          "value": false
+        }
+      ],
+      "alerts": [],
+      "alertLinks": 0
+    },
+    "cadOrder": [
+      "Nome completo",
+      "E-mail",
+      "Senha",
+      "Confirmar senha",
+      "Li e aceito os Termos de uso e a Polític"
+    ],
+    "cadBlur": [
+      {
+        "type": "text",
+        "name": "name",
+        "invalid": "true",
+        "desc": "Informe seu nome completo",
+        "label": "Nome completo",
+        "ac": "name",
+        "im": null,
+        "value": ""
+      },
+      {
+        "type": "email",
+        "name": "email",
+        "invalid": "true",
+        "desc": "Informe seu e-mail",
+        "label": "E-mail",
+        "ac": "email",
+        "im": "email",
+        "value": ""
+      }
+    ],
+    "cadEmpty": {
+      "fields": [
+        {
+          "type": "text",
+          "name": "name",
+          "invalid": "true",
+          "desc": "Informe seu nome completo",
+          "label": "Nome completo",
+          "ac": "name",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "email",
+          "name": "email",
+          "invalid": "true",
+          "desc": "Informe seu e-mail",
+          "label": "E-mail",
+          "ac": "email",
+          "im": "email",
+          "value": ""
+        },
+        {
+          "type": "password",
+          "name": "password",
+          "invalid": "true",
+          "desc": "Crie uma senha | Use uma senha única, que você não usa em outros sites.",
+          "label": "Senha",
+          "ac": "new-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "password",
+          "name": "confirm",
+          "invalid": "true",
+          "desc": "Confirme sua senha",
+          "label": "Confirmar senha",
+          "ac": "new-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "checkbox",
+          "name": "terms",
+          "invalid": "true",
+          "desc": "Aceite os Termos e a Política de Privacidade para continuar",
+          "label": "Li e aceito os Termos de uso e a Polític",
+          "ac": null,
+          "im": null,
+          "value": false
+        }
+      ],
+      "alerts": [
+        "Corrija os 5 campos abaixo para continuar Informe seu nome completoInforme seu e-mailCrie uma senhaConfirme sua senhaAceite os Termos e a Política de Privacidade para continuar"
+      ],
+      "alertLinks": 5
+    },
+    "strength": [
+      [
+        "abc",
+        "Fraca"
+      ],
+      [
+        "abcdefg1",
+        "Fraca"
+      ],
+      [
+        "Abcdefg1",
+        "Média"
+      ],
+      [
+        "Abcdefg1!xyz",
+        "Forte"
+      ]
+    ],
+    "mismatch": true,
+    "toggleCount": 2,
+    "toggleIndep": [
+      "text",
+      "password"
+    ],
+    "termsRequired": {
+      "invalid": "true",
+      "stillHere": true,
+      "alerts": [
+        "Corrija o campo abaixo para continuar\n          Aceite os Termos e a Política de Privacidade para continuar"
+      ]
+    },
+    "valuesKept": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "existing": {
+      "hash": "#/cadastro",
+      "text": "Ir para o conteúdo A Atlas Workspace Verifique seu e-mail Enviamos as instruções para o endereço informado. Se esse e-mail já tiver uma conta, você pode entrar ou recuperar a senha.",
+      "links": [
+        "Entrar",
+        "Recuperar senha",
+        "Entrar"
+      ]
+    },
+    "success": {
+      "hash": "#/cadastro",
+      "h1": "Crie sua conta",
+      "msg": "Ir para o conteúdo A Atlas Workspace Verifique seu e-mail Enviamos as instruções para o endereço informado. Se esse e-mail já tiver uma conta, você pode entrar "
+    }
+  },
+  "dev-3": {
+    "attrs": {
+      "emailType": "email",
+      "emailIM": "email",
+      "emailAC": "username",
+      "pwdAC": "current-password",
+      "labelEmail": "E-mail",
+      "labelPwd": "Senha"
+    },
+    "empty": {
+      "fields": [
+        {
+          "type": "email",
+          "name": "email",
+          "invalid": "true",
+          "desc": "Informe seu e-mail.",
+          "label": "E-mail",
+          "ac": "username",
+          "im": "email",
+          "value": ""
+        },
+        {
+          "type": "password",
+          "name": "password",
+          "invalid": "true",
+          "desc": "Informe sua senha.",
+          "label": "Senha",
+          "ac": "current-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "checkbox",
+          "name": "remember",
+          "invalid": null,
+          "desc": "",
+          "label": "wrap",
+          "ac": null,
+          "im": null,
+          "value": false
+        }
+      ],
+      "alerts": [
+        "Revise os campos destacados:Informe seu e-mail.Informe sua senha."
+      ],
+      "alertLinks": 0
+    },
+    "blur": {
+      "fields": [
+        {
+          "type": "email",
+          "name": "email",
+          "invalid": "true",
+          "desc": "Informe um e-mail válido, como nome@exemplo.com.",
+          "label": "E-mail",
+          "ac": "username",
+          "im": "email",
+          "value": "abc"
+        },
+        {
+          "type": "password",
+          "name": "password",
+          "invalid": null,
+          "desc": "",
+          "label": "Senha",
+          "ac": "current-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "checkbox",
+          "name": "remember",
+          "invalid": null,
+          "desc": "",
+          "label": "wrap",
+          "ac": null,
+          "im": null,
+          "value": false
+        }
+      ],
+      "alerts": [],
+      "alertLinks": 0
+    },
+    "wrong": {
+      "alerts": [
+        "E-mail ou senha incorretos."
+      ],
+      "errColor": {
+        "color": "rgb(24, 24, 27)",
+        "bg": "rgb(251, 229, 229)",
+        "border": "rgb(220, 38, 38)"
+      }
+    },
+    "toggle": {
+      "pre": {
+        "label": "Mostrar senha",
+        "pressed": "false"
+      },
+      "post": {
+        "label": "Ocultar senha",
+        "pressed": "true",
+        "type": "text",
+        "inside": true
+      }
+    },
+    "loading": {
+      "text": "Entrando…",
+      "disabled": true,
+      "busy": "true"
+    },
+    "afterLogin": {
+      "hash": "#/app/inicio",
+      "h1": "Bom dia, Ana"
+    },
+    "recLinkNearPwd": 65,
+    "rec": {
+      "hash": "#/recuperar",
+      "h1": "Recuperar senha",
+      "hasEmail": true
+    },
+    "recMsg": " Se o e-mail existir, enviaremos um link.",
+    "cadAttrs": {
+      "fields": [
+        {
+          "type": "text",
+          "name": "name",
+          "invalid": null,
+          "desc": "",
+          "label": "Nome completo",
+          "ac": "name",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "email",
+          "name": "email",
+          "invalid": null,
+          "desc": "",
+          "label": "E-mail",
+          "ac": "email",
+          "im": "email",
+          "value": ""
+        },
+        {
+          "type": "password",
+          "name": "new-password",
+          "invalid": null,
+          "desc": "Mínimo de 8 caracteres, com letras e números.",
+          "label": "Senha",
+          "ac": "new-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "password",
+          "name": "new-password-confirm",
+          "invalid": null,
+          "desc": "",
+          "label": "Confirmar senha",
+          "ac": "new-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "checkbox",
+          "name": "terms",
+          "invalid": null,
+          "desc": "",
+          "label": "Li e aceito os Termos e a Privacidade.",
+          "ac": null,
+          "im": null,
+          "value": false
+        }
+      ],
+      "alerts": [],
+      "alertLinks": 0
+    },
+    "cadOrder": [
+      "Nome completo",
+      "E-mail",
+      "Senha",
+      "Confirmar senha",
+      "Li e aceito os Termos e a Privacidade."
+    ],
+    "cadBlur": [
+      {
+        "type": "text",
+        "name": "name",
+        "invalid": "true",
+        "desc": "Informe seu nome completo.",
+        "label": "Nome completo",
+        "ac": "name",
+        "im": null,
+        "value": ""
+      },
+      {
+        "type": "email",
+        "name": "email",
+        "invalid": "true",
+        "desc": "Informe seu e-mail.",
+        "label": "E-mail",
+        "ac": "email",
+        "im": "email",
+        "value": ""
+      }
+    ],
+    "cadEmpty": {
+      "fields": [
+        {
+          "type": "text",
+          "name": "name",
+          "invalid": "true",
+          "desc": "Informe seu nome completo.",
+          "label": "Nome completo",
+          "ac": "name",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "email",
+          "name": "email",
+          "invalid": "true",
+          "desc": "Informe seu e-mail.",
+          "label": "E-mail",
+          "ac": "email",
+          "im": "email",
+          "value": ""
+        },
+        {
+          "type": "password",
+          "name": "new-password",
+          "invalid": "true",
+          "desc": "Mínimo de 8 caracteres, com letras e números. | Crie uma senha.",
+          "label": "Senha",
+          "ac": "new-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "password",
+          "name": "new-password-confirm",
+          "invalid": "true",
+          "desc": "Confirme sua senha.",
+          "label": "Confirmar senha",
+          "ac": "new-password",
+          "im": null,
+          "value": ""
+        },
+        {
+          "type": "checkbox",
+          "name": "terms",
+          "invalid": "true",
+          "desc": "Aceite os Termos e a Privacidade para continuar.",
+          "label": "Li e aceito os Termos e a Privacidade.",
+          "ac": null,
+          "im": null,
+          "value": false
+        }
+      ],
+      "alerts": [
+        "Revise os campos destacados:Informe seu nome completo.Informe seu e-mail.Crie uma senha.Confirme sua senha.Aceite os Termos e a Privacidade para continuar."
+      ],
+      "alertLinks": 0
+    },
+    "strength": [
+      [
+        "abc",
+        "Fraca"
+      ],
+      [
+        "abcdefg1",
+        "Média"
+      ],
+      [
+        "Abcdefg1",
+        "Média"
+      ],
+      [
+        "Abcdefg1!xyz",
+        "Forte"
+      ]
+    ],
+    "mismatch": true,
+    "toggleCount": 2,
+    "toggleIndep": [
+      "text",
+      "password"
+    ],
+    "termsRequired": {
+      "invalid": "true",
+      "stillHere": true,
+      "alerts": [
+        "Revise os campos destacados:Aceite os Termos e a Privacidade para continuar."
+      ]
+    },
+    "valuesKept": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "existing": {
+      "hash": "#/cadastro",
+      "text": " Não foi possível criar a conta com estes dados. Se você já tem uma conta, entre ou recupere sua senha.",
+      "links": [
+        "Entrar",
+        "Recuperar senha",
+        "Entrar"
+      ]
+    },
+    "success": {
+      "hash": "#/app/inicio",
+      "h1": "Bom dia, Nova",
+      "msg": "Atlas Workspace GERAL Início Painel Projetos 12 Tarefas Calendário EQUIPE Pessoas Mensagens 3 Relatórios CONTA Configurações Ajuda NP Nova Pessoa Membro Geral I"
+    }
+  }
+}

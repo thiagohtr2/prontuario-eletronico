@@ -1,0 +1,971 @@
+{
+ "dev-1": {
+  "320": {
+   "login": {
+    "sw": 320,
+    "bsw": 320,
+    "vw": 320,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 320,
+    "bsw": 320,
+    "vw": 320,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": [
+     "DIV.tbl-tabs 389/286"
+    ]
+   },
+   "errors": []
+  },
+  "360": {
+   "login": {
+    "sw": 360,
+    "bsw": 360,
+    "vw": 360,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 360,
+    "bsw": 360,
+    "vw": 360,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": [
+     "DIV.tbl-tabs 389/326"
+    ]
+   },
+   "errors": []
+  },
+  "375": {
+   "login": {
+    "sw": 375,
+    "bsw": 375,
+    "vw": 375,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 375,
+    "bsw": 375,
+    "vw": 375,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": [
+     "DIV.tbl-tabs 389/341"
+    ]
+   },
+   "errors": []
+  },
+  "390": {
+   "login": {
+    "sw": 390,
+    "bsw": 390,
+    "vw": 390,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 390,
+    "bsw": 390,
+    "vw": 390,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": [
+     "DIV.tbl-tabs 389/356"
+    ]
+   },
+   "errors": []
+  },
+  "412": {
+   "login": {
+    "sw": 412,
+    "bsw": 412,
+    "vw": 412,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 412,
+    "bsw": 412,
+    "vw": 412,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": [
+     "DIV.tbl-tabs 389/378"
+    ]
+   },
+   "errors": []
+  },
+  "430": {
+   "login": {
+    "sw": 430,
+    "bsw": 430,
+    "vw": 430,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 430,
+    "bsw": 430,
+    "vw": 430,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "480": {
+   "login": {
+    "sw": 480,
+    "bsw": 480,
+    "vw": 480,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 480,
+    "bsw": 480,
+    "vw": 480,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "600": {
+   "login": {
+    "sw": 600,
+    "bsw": 600,
+    "vw": 600,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 600,
+    "bsw": 600,
+    "vw": 600,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "768": {
+   "login": {
+    "sw": 768,
+    "bsw": 768,
+    "vw": 768,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 768,
+    "bsw": 768,
+    "vw": 768,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [
+     "Painel",
+     "Contratos",
+     "Fornecedores",
+     "Compras",
+     "Colaboradores",
+     "Folha",
+     "Auditoria",
+     "Permissões"
+    ],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "820": {
+   "login": {
+    "sw": 820,
+    "bsw": 820,
+    "vw": 820,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 820,
+    "bsw": 820,
+    "vw": 820,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [
+     "Painel",
+     "Contratos",
+     "Fornecedores",
+     "Compras",
+     "Colaboradores",
+     "Folha",
+     "Auditoria",
+     "Permissões"
+    ],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "1024": {
+   "login": {
+    "sw": 1024,
+    "bsw": 1024,
+    "vw": 1024,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 1024,
+    "bsw": 1024,
+    "vw": 1024,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [
+     "Exportar",
+     "Selecionar todos"
+    ],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "1280": {
+   "login": {
+    "sw": 1280,
+    "bsw": 1280,
+    "vw": 1280,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 1280,
+    "bsw": 1280,
+    "vw": 1280,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [
+     "Selecionar todos"
+    ],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "1440": {
+   "login": {
+    "sw": 1440,
+    "bsw": 1440,
+    "vw": 1440,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 1440,
+    "bsw": 1440,
+    "vw": 1440,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [
+     "Selecionar todos"
+    ],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "1920": {
+   "login": {
+    "sw": 1920,
+    "bsw": 1920,
+    "vw": 1920,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 1920,
+    "bsw": 1920,
+    "vw": 1920,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [
+     "Selecionar todos"
+    ],
+    "hscroll": []
+   },
+   "errors": []
+  }
+ },
+ "dev-2": {
+  "320": {
+   "login": {
+    "sw": 320,
+    "bsw": 320,
+    "vw": 320,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 320,
+    "bsw": 320,
+    "vw": 320,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "360": {
+   "login": {
+    "sw": 360,
+    "bsw": 360,
+    "vw": 360,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 360,
+    "bsw": 360,
+    "vw": 360,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "375": {
+   "login": {
+    "sw": 375,
+    "bsw": 375,
+    "vw": 375,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 375,
+    "bsw": 375,
+    "vw": 375,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "390": {
+   "login": {
+    "sw": 390,
+    "bsw": 390,
+    "vw": 390,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 390,
+    "bsw": 390,
+    "vw": 390,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "412": {
+   "login": {
+    "sw": 412,
+    "bsw": 412,
+    "vw": 412,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 412,
+    "bsw": 412,
+    "vw": 412,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "430": {
+   "login": {
+    "sw": 430,
+    "bsw": 430,
+    "vw": 430,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 430,
+    "bsw": 430,
+    "vw": 430,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "480": {
+   "login": {
+    "sw": 480,
+    "bsw": 480,
+    "vw": 480,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 480,
+    "bsw": 480,
+    "vw": 480,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "600": {
+   "login": {
+    "sw": 600,
+    "bsw": 600,
+    "vw": 600,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 600,
+    "bsw": 600,
+    "vw": 600,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "768": {
+   "login": {
+    "sw": 768,
+    "bsw": 768,
+    "vw": 768,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 768,
+    "bsw": 768,
+    "vw": 768,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [
+     "Painel",
+     "Contratos",
+     "Fornecedores",
+     "Compras",
+     "Colaboradores",
+     "Folha",
+     "Auditoria",
+     "Permissões"
+    ],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "820": {
+   "login": {
+    "sw": 820,
+    "bsw": 820,
+    "vw": 820,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 820,
+    "bsw": 820,
+    "vw": 820,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [
+     "Painel",
+     "Contratos",
+     "Fornecedores",
+     "Compras",
+     "Colaboradores",
+     "Folha",
+     "Auditoria",
+     "Permissões"
+    ],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "1024": {
+   "login": {
+    "sw": 1024,
+    "bsw": 1024,
+    "vw": 1024,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 1024,
+    "bsw": 1024,
+    "vw": 1024,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "1280": {
+   "login": {
+    "sw": 1280,
+    "bsw": 1280,
+    "vw": 1280,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 1280,
+    "bsw": 1280,
+    "vw": 1280,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "1440": {
+   "login": {
+    "sw": 1440,
+    "bsw": 1440,
+    "vw": 1440,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 1440,
+    "bsw": 1440,
+    "vw": 1440,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "1920": {
+   "login": {
+    "sw": 1920,
+    "bsw": 1920,
+    "vw": 1920,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 1920,
+    "bsw": 1920,
+    "vw": 1920,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  }
+ },
+ "dev-3": {
+  "320": {
+   "login": {
+    "sw": 320,
+    "bsw": 320,
+    "vw": 320,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 320,
+    "bsw": 320,
+    "vw": 320,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "360": {
+   "login": {
+    "sw": 360,
+    "bsw": 360,
+    "vw": 360,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 360,
+    "bsw": 360,
+    "vw": 360,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "375": {
+   "login": {
+    "sw": 375,
+    "bsw": 375,
+    "vw": 375,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 375,
+    "bsw": 375,
+    "vw": 375,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "390": {
+   "login": {
+    "sw": 390,
+    "bsw": 390,
+    "vw": 390,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 390,
+    "bsw": 390,
+    "vw": 390,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "412": {
+   "login": {
+    "sw": 412,
+    "bsw": 412,
+    "vw": 412,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 412,
+    "bsw": 412,
+    "vw": 412,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "430": {
+   "login": {
+    "sw": 430,
+    "bsw": 430,
+    "vw": 430,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 430,
+    "bsw": 430,
+    "vw": 430,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "480": {
+   "login": {
+    "sw": 480,
+    "bsw": 480,
+    "vw": 480,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 480,
+    "bsw": 480,
+    "vw": 480,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "600": {
+   "login": {
+    "sw": 600,
+    "bsw": 600,
+    "vw": 600,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 600,
+    "bsw": 600,
+    "vw": 600,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "768": {
+   "login": {
+    "sw": 768,
+    "bsw": 768,
+    "vw": 768,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 768,
+    "bsw": 768,
+    "vw": 768,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [
+     "Nexo Capital",
+     "Painel",
+     "Contratos",
+     "Fornecedores",
+     "Compras",
+     "Colaboradores",
+     "Folha",
+     "Auditoria"
+    ],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "820": {
+   "login": {
+    "sw": 820,
+    "bsw": 820,
+    "vw": 820,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 820,
+    "bsw": 820,
+    "vw": 820,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [
+     "Nexo Capital",
+     "Painel",
+     "Contratos",
+     "Fornecedores",
+     "Compras",
+     "Colaboradores",
+     "Folha",
+     "Auditoria"
+    ],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "1024": {
+   "login": {
+    "sw": 1024,
+    "bsw": 1024,
+    "vw": 1024,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 1024,
+    "bsw": 1024,
+    "vw": 1024,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [
+     "Gerente de Controladoria"
+    ],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "1280": {
+   "login": {
+    "sw": 1280,
+    "bsw": 1280,
+    "vw": 1280,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 1280,
+    "bsw": 1280,
+    "vw": 1280,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [
+     "Gerente de Controladoria"
+    ],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "1440": {
+   "login": {
+    "sw": 1440,
+    "bsw": 1440,
+    "vw": 1440,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 1440,
+    "bsw": 1440,
+    "vw": 1440,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [
+     "Gerente de Controladoria"
+    ],
+    "hscroll": []
+   },
+   "errors": []
+  },
+  "1920": {
+   "login": {
+    "sw": 1920,
+    "bsw": 1920,
+    "vw": 1920,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [],
+    "hscroll": []
+   },
+   "dashboard": {
+    "sw": 1920,
+    "bsw": 1920,
+    "vw": 1920,
+    "overflow": false,
+    "offRight": [],
+    "trunc": [
+     "Gerente de Controladoria"
+    ],
+    "hscroll": []
+   },
+   "errors": []
+  }
+ }
+}

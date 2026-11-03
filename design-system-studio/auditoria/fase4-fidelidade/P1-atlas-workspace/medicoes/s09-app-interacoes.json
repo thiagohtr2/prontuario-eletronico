@@ -1,0 +1,668 @@
+{
+  "dev-1": {
+    "kpi": {
+      "count": 3,
+      "w": 359,
+      "h": 195,
+      "radius": "0px",
+      "borders": "1px 1px 1px 1px",
+      "borderColor": "#18181b/#18181b",
+      "shadow": "none",
+      "label": {
+        "text": "RECEITA MENSAL",
+        "tt": "uppercase",
+        "ls": "0.96px",
+        "color": "#18181b"
+      },
+      "variation": {
+        "text": "alta de +12,4% vs. mês anterior",
+        "color": "#117e39"
+      },
+      "colors": [],
+      "widths": [
+        359,
+        359,
+        359
+      ]
+    },
+    "sparkTip": [],
+    "kpiClick": {
+      "hash": "#/relatorios/receita",
+      "h1": "Receita mensal"
+    },
+    "tableAction": {
+      "popups": [
+        {
+          "role": null,
+          "cls": "popover",
+          "x": 1171,
+          "y": 694,
+          "w": 222,
+          "h": 139,
+          "right": 1393,
+          "bottom": 833,
+          "text": "Ver detalhes Marcar como pago Excluir"
+        },
+        {
+          "role": "menu",
+          "cls": "menu",
+          "x": 1172,
+          "y": 695,
+          "w": 220,
+          "h": 137,
+          "right": 1392,
+          "bottom": 832,
+          "text": "Ver detalhes Marcar como pago Excluir"
+        }
+      ],
+      "hash": "#/painel"
+    },
+    "collapse": {
+      "after": {
+        "w": 72,
+        "labelVisible": false,
+        "toggleLabel": [
+          "Expandir menu",
+          "Menu do perfil"
+        ],
+        "ls": [
+          "atlas.sidebarCollapsed=true"
+        ]
+      },
+      "tooltip": [
+        "Projetos (12)"
+      ],
+      "afterReload": 72,
+      "expanded": 252
+    },
+    "navClick": {
+      "hash": "#/projetos",
+      "h1": "Projetos",
+      "current": [
+        "Projetos\n12"
+      ]
+    },
+    "notif": {
+      "open": [
+        {
+          "role": "dialog",
+          "cls": "popover",
+          "x": 1040,
+          "y": 58,
+          "w": 320,
+          "h": 533,
+          "right": 1360,
+          "bottom": 590,
+          "text": "Notificações Marcar todas como lidas Juliana Alves comentou em “Página inicial”. há 12 min Não lida Lucas Ferreira atribuiu a você “Aprovar roteiro da viagem a "
+        }
+      ],
+      "expanded": "true",
+      "afterEsc": {
+        "popups": 0,
+        "focus": "Notificações, 3 não lidas"
+      },
+      "afterOutside": 0
+    },
+    "profile": {
+      "open": [
+        {
+          "role": null,
+          "cls": "popover",
+          "x": 1186,
+          "y": 58,
+          "w": 222,
+          "h": 246,
+          "right": 1408,
+          "bottom": 304,
+          "text": "Marina Costa marina@atlas.app Meu perfil Configurações Ajuda Sair"
+        },
+        {
+          "role": "menu",
+          "cls": "menu",
+          "x": 1187,
+          "y": 59,
+          "w": 220,
+          "h": 244,
+          "right": 1407,
+          "bottom": 303,
+          "text": "Marina Costa marina@atlas.app Meu perfil Configurações Ajuda Sair"
+        }
+      ],
+      "focusAfterEsc": "Menu do perfil"
+    },
+    "sbMenu": {
+      "trigger": {
+        "y": 847,
+        "label": "Mais opções do perfil"
+      },
+      "open": [
+        {
+          "role": null,
+          "cls": "popover",
+          "x": 17,
+          "y": 702,
+          "w": 222,
+          "h": 139,
+          "right": 239,
+          "bottom": 841,
+          "text": "Meu perfil Preferências Sair"
+        },
+        {
+          "role": "menu",
+          "cls": "menu",
+          "x": 18,
+          "y": 703,
+          "w": 220,
+          "h": 137,
+          "right": 238,
+          "bottom": 840,
+          "text": "Meu perfil Preferências Sair"
+        }
+      ]
+    },
+    "logout": "erro Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor ', .menu'\n    at new",
+    "tablet": {
+      "buttons": [
+        "Expandir menu",
+        "Menu do perfil",
+        "Menu do perfil"
+      ],
+      "open": {
+        "sbW": 252,
+        "sbPos": "fixed",
+        "mainX": 72,
+        "scrim": [
+          {
+            "cls": "shell is-overlay-open",
+            "bg": "rgb(255, 255, 255)",
+            "w": 900
+          },
+          {
+            "cls": "sidebar is-overlay",
+            "bg": "rgb(255, 255, 255)",
+            "w": 252
+          },
+          {
+            "cls": "scrim sidebar-scrim",
+            "bg": "color(srgb 0.0941176 0.0941176 0.105882 / 0.48)",
+            "w": 900
+          }
+        ],
+        "shadow": "color(srgb 0.0941176 0.0941176 0.105882 / 0.14) 0px 12px 32px 0px, color(srgb 0.0941176 0.0941176 0.105882 / 0.08) 0px 2px 6px 0px"
+      },
+      "afterEsc": {
+        "sbW": 72,
+        "focus": "Expandir menu"
+      },
+      "afterOutside": 72
+    },
+    "celPopup": {
+      "label": "Menu do perfil, 3 notificações não lidas",
+      "popups": [
+        {
+          "role": "dialog",
+          "cls": "sheet",
+          "x": 0,
+          "y": 451,
+          "w": 390,
+          "h": 393,
+          "right": 390,
+          "bottom": 844,
+          "text": "Perfil Marina Costa marina@atlas.app Meu perfil Configurações Ajuda Notificações (3 não lidas) Sair"
+        },
+        {
+          "role": null,
+          "cls": "sheet__head",
+          "x": 0,
+          "y": 451,
+          "w": 390,
+          "h": 61,
+          "right": 390,
+          "bottom": 512,
+          "text": "Perfil"
+        },
+        {
+          "role": null,
+          "cls": "sheet__body",
+          "x": 0,
+          "y": 512,
+          "w": 390,
+          "h": 332,
+          "right": 390,
+          "bottom": 844,
+          "text": "Marina Costa marina@atlas.app Meu perfil Configurações Ajuda Notificações (3 não lidas) Sair"
+        },
+        {
+          "role": "menu",
+          "cls": "menu",
+          "x": 8,
+          "y": 520,
+          "w": 374,
+          "h": 316,
+          "right": 382,
+          "bottom": 836,
+          "text": "Marina Costa marina@atlas.app Meu perfil Configurações Ajuda Notificações (3 não lidas) Sair"
+        }
+      ]
+    }
+  },
+  "dev-2": {
+    "kpi": {
+      "count": 3,
+      "w": 359,
+      "h": 186,
+      "radius": "0px",
+      "borders": "1px 1px 1px 1px",
+      "borderColor": "#18181b/#18181b",
+      "shadow": "none",
+      "label": {
+        "text": "01 —\nRECEITA MENSAL\n: ABRIR RELATÓRIO DETALHADO",
+        "tt": "uppercase",
+        "ls": "0.96px",
+        "color": "#707072"
+      },
+      "variation": {
+        "text": "+12,4% (aumento de 12,4%) vs. mês anterior",
+        "color": "#117e39"
+      },
+      "colors": [
+        "#117e39",
+        "#117e39"
+      ],
+      "widths": [
+        359,
+        359,
+        359
+      ]
+    },
+    "sparkTip": [],
+    "kpiClick": {
+      "hash": "#/relatorios?kpi=receita",
+      "h1": "Relatórios"
+    },
+    "tableAction": {
+      "popups": [
+        {
+          "role": "menu",
+          "cls": "menu popover",
+          "x": 1184,
+          "y": 425,
+          "w": 216,
+          "h": 90,
+          "right": 1400,
+          "bottom": 515,
+          "text": "Ver detalhes Excluir"
+        }
+      ],
+      "hash": "#/relatorios"
+    },
+    "collapse": {
+      "after": {
+        "w": 72,
+        "labelVisible": false,
+        "toggleLabel": [
+          "Expandir menu",
+          "Menu do perfil"
+        ],
+        "ls": [
+          "atlas.sidebar.collapsed=true"
+        ]
+      },
+      "tooltip": [
+        "Projetos"
+      ],
+      "afterReload": 72,
+      "expanded": 252
+    },
+    "navClick": {
+      "hash": "#/projetos",
+      "h1": "Projetos",
+      "current": [
+        "Projetos\n12"
+      ]
+    },
+    "notif": {
+      "open": [
+        {
+          "role": "dialog",
+          "cls": "notifs popover",
+          "x": 1052,
+          "y": 60,
+          "w": 320,
+          "h": 499,
+          "right": 1372,
+          "bottom": 559,
+          "text": "Notificações 4 não lidas Não lida: Letícia Prado comentou em \"Página inicial\" há 12 min Não lida: O pedido de Helena Duarte foi pago há 1 h Não lida: Tarefa \"En"
+        }
+      ],
+      "expanded": "true",
+      "afterEsc": {
+        "popups": 0,
+        "focus": "Notificações, 4 não lidas"
+      },
+      "afterOutside": 0
+    },
+    "profile": {
+      "open": [
+        {
+          "role": "menu",
+          "cls": "menu popover",
+          "x": 1200,
+          "y": 56,
+          "w": 216,
+          "h": 245,
+          "right": 1416,
+          "bottom": 300,
+          "text": "Marina Alves demo@atlas.com Meu perfil Configurações Ajuda Sair"
+        }
+      ],
+      "focusAfterEsc": "Menu do perfil"
+    },
+    "sbMenu": {
+      "trigger": {
+        "y": 848,
+        "label": "Menu do perfil"
+      },
+      "open": [
+        {
+          "role": "menu",
+          "cls": "menu popover",
+          "x": 23,
+          "y": 581,
+          "w": 216,
+          "h": 139,
+          "right": 239,
+          "bottom": 720,
+          "text": "Meu perfil Preferências Sair"
+        }
+      ]
+    },
+    "logout": "erro Error: locator.count: SyntaxError: Invalid flags supplied to RegExp constructor ', .menu'\n    at new",
+    "tablet": {
+      "buttons": [
+        "Expandir menu",
+        "Menu do perfil",
+        "Menu do perfil"
+      ],
+      "open": {
+        "sbW": 252,
+        "sbPos": "fixed",
+        "mainX": 72,
+        "scrim": [
+          {
+            "cls": "sb-scrim",
+            "bg": "color(srgb 0.0941176 0.0941176 0.105882 / 0.5)",
+            "w": 900
+          }
+        ],
+        "shadow": "color(srgb 0.0941176 0.0941176 0.105882 / 0.14) 0px 8px 24px 0px, color(srgb 0.0941176 0.0941176 0.105882 / 0.1) 0px 1px 3px 0px"
+      },
+      "afterEsc": {
+        "sbW": 72,
+        "focus": "Expandir menu"
+      },
+      "afterOutside": 72
+    },
+    "celPopup": {
+      "label": null,
+      "popups": []
+    }
+  },
+  "dev-3": {
+    "kpi": {
+      "count": 3,
+      "w": 374,
+      "h": 238,
+      "radius": "0px",
+      "borders": "0px 1px 1px 0px",
+      "borderColor": "#18181b/#18181b",
+      "shadow": "none",
+      "label": {
+        "text": "RECEITA MENSAL",
+        "tt": "uppercase",
+        "ls": "0.96px",
+        "color": "#707072"
+      },
+      "variation": {
+        "text": "+12,4% vs. mês anterior",
+        "color": "#117e39"
+      },
+      "colors": [
+        "#117e39"
+      ],
+      "widths": [
+        374,
+        374,
+        374
+      ]
+    },
+    "sparkTip": [],
+    "kpiClick": {
+      "hash": "#/app/relatorios",
+      "h1": "Relatórios"
+    },
+    "tableAction": {
+      "popups": [],
+      "hash": "#/app/relatorios"
+    },
+    "collapse": {
+      "after": {
+        "w": 72,
+        "labelVisible": false,
+        "toggleLabel": [
+          "Expandir menu",
+          "Perfil de Ana Souza, menu da conta"
+        ],
+        "ls": [
+          "atlas.sidebar.collapsed=true"
+        ]
+      },
+      "tooltip": [
+        "Projetos"
+      ],
+      "afterReload": 72,
+      "expanded": 252
+    },
+    "navClick": {
+      "hash": "#/app/projetos",
+      "h1": "Projetos",
+      "current": [
+        "Projetos\n12"
+      ]
+    },
+    "notif": {
+      "open": [
+        {
+          "role": "dialog",
+          "cls": "popover popover--notif",
+          "x": 1048,
+          "y": 60,
+          "w": 320,
+          "h": 366,
+          "right": 1368,
+          "bottom": 425,
+          "text": "Notificações 2 não lidas Maria comentou em \"Viagem a Lisboa\" há 12 min · não lida Pedido #1042 foi pago há 1 h · não lida Lucas concluiu 3 tarefas ontem Novo me"
+        },
+        {
+          "role": null,
+          "cls": "popover__head",
+          "x": 1055,
+          "y": 67,
+          "w": 306,
+          "h": 63,
+          "right": 1361,
+          "bottom": 129,
+          "text": "Notificações 2 não lidas"
+        },
+        {
+          "role": null,
+          "cls": "popover__foot",
+          "x": 1055,
+          "y": 373,
+          "w": 306,
+          "h": 45,
+          "right": 1361,
+          "bottom": 418,
+          "text": "Ver todas"
+        }
+      ],
+      "expanded": "true",
+      "afterEsc": {
+        "popups": 0,
+        "focus": "Notificações, 2 não lidas"
+      },
+      "afterOutside": 0
+    },
+    "profile": {
+      "open": [
+        {
+          "role": "dialog",
+          "cls": "popover popover--menu",
+          "x": 1216,
+          "y": 60,
+          "w": 200,
+          "h": 250,
+          "right": 1416,
+          "bottom": 309,
+          "text": "Ana Souza demo@atlas.app Meu perfil Preferências Ajuda Sair"
+        },
+        {
+          "role": null,
+          "cls": "popover__head",
+          "x": 1223,
+          "y": 67,
+          "w": 186,
+          "h": 63,
+          "right": 1409,
+          "bottom": 129,
+          "text": "Ana Souza demo@atlas.app"
+        },
+        {
+          "role": null,
+          "cls": "popover__foot",
+          "x": 1223,
+          "y": 257,
+          "w": 186,
+          "h": 45,
+          "right": 1409,
+          "bottom": 302,
+          "text": "Sair"
+        }
+      ],
+      "focusAfterEsc": "Menu do perfil de Ana Souza"
+    },
+    "sbMenu": {
+      "trigger": {
+        "y": 842,
+        "label": "Perfil de Ana Souza, menu da conta"
+      },
+      "open": [
+        {
+          "role": "dialog",
+          "cls": "popover popover--menu",
+          "x": 10,
+          "y": 584,
+          "w": 200,
+          "h": 250,
+          "right": 210,
+          "bottom": 834,
+          "text": "Ana Souza demo@atlas.app Meu perfil Preferências Ajuda Sair"
+        },
+        {
+          "role": null,
+          "cls": "popover__head",
+          "x": 17,
+          "y": 591,
+          "w": 186,
+          "h": 63,
+          "right": 203,
+          "bottom": 654,
+          "text": "Ana Souza demo@atlas.app"
+        },
+        {
+          "role": null,
+          "cls": "popover__foot",
+          "x": 17,
+          "y": 782,
+          "w": 186,
+          "h": 45,
+          "right": 203,
+          "bottom": 827,
+          "text": "Sair"
+        }
+      ]
+    },
+    "logout": {
+      "hash": "#/entrar",
+      "pwd": true
+    },
+    "tablet": {
+      "buttons": [
+        "Perfil de Ana Souza, menu da conta",
+        "Abrir menu",
+        "Menu do perfil de Ana Souza"
+      ],
+      "open": {
+        "sbW": 252,
+        "sbPos": "fixed",
+        "mainX": 72,
+        "scrim": [
+          {
+            "cls": "sidebar is-overlay",
+            "bg": "rgb(255, 255, 255)",
+            "w": 252
+          },
+          {
+            "cls": "scrim",
+            "bg": "color(srgb 0.0941176 0.0941176 0.105882 / 0.4)",
+            "w": 900
+          }
+        ],
+        "shadow": "rgba(24, 24, 27, 0.12) 0px 8px 24px 0px"
+      },
+      "afterEsc": {
+        "sbW": 72,
+        "focus": "Abrir menu"
+      },
+      "afterOutside": 72
+    },
+    "celPopup": {
+      "label": "Notificações, 2 não lidas",
+      "popups": [
+        {
+          "role": "dialog",
+          "cls": "popover popover--notif",
+          "x": 62,
+          "y": 58,
+          "w": 320,
+          "h": 366,
+          "right": 382,
+          "bottom": 423,
+          "text": "Notificações 2 não lidas Maria comentou em \"Viagem a Lisboa\" há 12 min · não lida Pedido #1042 foi pago há 1 h · não lida Lucas concluiu 3 tarefas ontem Novo me"
+        },
+        {
+          "role": null,
+          "cls": "popover__head",
+          "x": 69,
+          "y": 65,
+          "w": 306,
+          "h": 63,
+          "right": 375,
+          "bottom": 127,
+          "text": "Notificações 2 não lidas"
+        },
+        {
+          "role": null,
+          "cls": "popover__foot",
+          "x": 69,
+          "y": 371,
+          "w": 306,
+          "h": 45,
+          "right": 375,
+          "bottom": 416,
+          "text": "Ver todas"
+        }
+      ]
+    }
+  }
+}

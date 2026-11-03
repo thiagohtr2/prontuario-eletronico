@@ -9,10 +9,14 @@ async function vis(page, sel) { if (!sel) return false; return page.evaluate((s)
 async function firstVisible(page, sel) { const loc = page.locator(sel); const n = await loc.count(); for (let i = 0; i < n; i++) if (await loc.nth(i).isVisible()) return loc.nth(i); return null; }
 (async () => {
   const browser = await chromium.launch();
-  const res = {};
-  for (const site of Object.keys(CFG)) {
+  const OUTF = path.join(__dirname, 'resultados', 'm02-desktop-interacoes.json');
+  const res = fs.existsSync(OUTF) ? JSON.parse(fs.readFileSync(OUTF)) : {};
+  const only = process.env.SITES ? process.env.SITES.split(',') : Object.keys(CFG);
+  for (const site of only) {
     const c = CFG[site]; const R = res[site] = {};
-    const { ctx, page } = await open(browser, site, 'desktop', c.catalog);
+    const { ctx, page } = await open(browser, site, 'desktop', c.catalog, process.env.RM ? { reducedMotion: 'reduce' } : {});
+    const base = page.url().split('#')[0];
+    const fresh = async (h) => { await page.goto('about:blank'); await page.goto(base + h); await page.waitForTimeout(1300); };
     await page.waitForTimeout(1500);
     // ---- sombra após 8 px ----
     R.shadow = await page.evaluate(async (c) => {
@@ -102,7 +106,7 @@ async function firstVisible(page, sel) { const loc = page.locator(sel); const n 
       R.search.afterEnter = await page.evaluate((c) => ({ hash: location.hash, cards: [...document.querySelectorAll(c.card)].filter(e => e.getBoundingClientRect().width > 0).map(e => (e.querySelector(c.cardTitle) || {}).textContent).slice(0, 6), n: [...document.querySelectorAll(c.card)].filter(e => e.getBoundingClientRect().width > 0).length }), c);
       R.search.n0 = n0;
       // sem resultado
-      await page.goto(page.url().split('#')[0] + c.catalog); await page.waitForTimeout(1200);
+      await fresh(c.catalog);
       const inp2 = page.locator(c.searchInput).first();
       await inp2.click(); await inp2.fill('xyzqwk'); await page.waitForTimeout(800);
       R.search.emptyPanel = await page.evaluate((c) => { const p = document.querySelector(c.searchPanel); return p ? p.innerText.slice(0, 160) : null; }, c);
@@ -113,7 +117,7 @@ async function firstVisible(page, sel) { const loc = page.locator(sel); const n 
     // ---- drawer de filtros ----
     R.drawer = {};
     try {
-      await page.goto(page.url().split('#')[0] + c.catalog); await page.waitForTimeout(1500);
+      await fresh(c.catalog);
       const n0 = await page.evaluate((c) => [...document.querySelectorAll(c.card)].filter(e => e.getBoundingClientRect().width > 0).length, c);
       const btn = page.locator(c.filterBtn).first();
       await btn.scrollIntoViewIfNeeded(); await btn.click(); await page.waitForTimeout(600);
@@ -167,7 +171,7 @@ async function firstVisible(page, sel) { const loc = page.locator(sel); const n 
       R.drawer.n0 = n0;
       R.drawer.drawerClosedAfterApply = !(await vis(page, c.drawerPanel));
       // ordenação
-      await page.goto(page.url().split('#')[0] + c.catalog); await page.waitForTimeout(1500);
+      await fresh(c.catalog);
       const prices = async () => page.evaluate((c) => [...document.querySelectorAll(c.card)].filter(e => e.getBoundingClientRect().width > 0).slice(0, 6).map(e => { const t = (e.querySelector(c.price) || e).textContent.match(/R\$\s*([\d.]+,\d{2})/); return t ? +t[1].replace('.', '').replace(',', '.') : null; }), c);
       const p0 = await prices();
       const sortSel = page.locator(c.sort).first();
@@ -178,7 +182,7 @@ async function firstVisible(page, sel) { const loc = page.locator(sel); const n 
     // ---- carrinho ----
     R.cart = {};
     try {
-      await page.goto(page.url().split('#')[0] + c.catalog); await page.waitForTimeout(1500);
+      await fresh(c.catalog);
       R.cart.badge0 = await page.evaluate((s) => { const b = document.querySelector(s); return b ? { t: b.textContent.trim(), hidden: b.hidden || getComputedStyle(b).display === 'none' } : null; }, c.cartBadge);
       // abrir produto e adicionar
       const card = page.locator(c.card).first();
@@ -204,7 +208,7 @@ async function firstVisible(page, sel) { const loc = page.locator(sel); const n 
     // ---- perfil ----
     R.profile = {};
     try {
-      await page.goto(page.url().split('#')[0] + c.catalog); await page.waitForTimeout(1200);
+      await fresh(c.catalog);
       await page.locator(c.avatarBtn).first().click(); await page.waitForTimeout(500);
       R.profile.text = await page.evaluate(() => { const p = [...document.querySelectorAll('.popover, [class*="account"], [role=menu], [role=dialog]')].find(e => e.getBoundingClientRect().width > 0 && getComputedStyle(e).visibility !== 'hidden'); return p ? p.innerText.replace(/\n+/g, ' / ').slice(0, 200) : null; });
       await page.screenshot({ path: SHOT(site, 'perfil') });
@@ -213,13 +217,13 @@ async function firstVisible(page, sel) { const loc = page.locator(sel); const n 
     // ---- faixa de anúncio ----
     R.announce = {};
     try {
-      await page.goto(page.url().split('#')[0] + c.catalog); await page.waitForTimeout(1200);
+      await fresh(c.catalog);
       await page.locator(c.announceClose).first().click(); await page.waitForTimeout(600);
       R.announce = await page.evaluate((c) => ({ visible: (() => { const a = document.querySelector(c.announce); if (!a) return null; const r = a.getBoundingClientRect(); return r.height > 1 && getComputedStyle(a).display !== 'none' && !a.hidden; })(), headerTop: Math.round(document.querySelector(c.header).getBoundingClientRect().top) }), c);
     } catch (e) { R.announce.err = e.message; }
     // ---- anel de foco ----
     try {
-      await page.goto(page.url().split('#')[0] + c.catalog); await page.waitForTimeout(1200);
+      await fresh(c.catalog);
       await page.mouse.click(5, 5);
       const rings = [];
       for (let i = 0; i < 6; i++) { await page.keyboard.press('Tab'); rings.push(await page.evaluate(hex => { const h = eval(hex); const e = document.activeElement; const cs = getComputedStyle(e); return { el: e.tagName + '.' + (e.className || '').toString().split(' ')[0], outline: cs.outlineStyle + ' ' + cs.outlineWidth + ' ' + h(cs.outlineColor), shadow: cs.boxShadow.slice(0, 80) }; }, hex)); }
@@ -229,6 +233,7 @@ async function firstVisible(page, sel) { const loc = page.locator(sel); const n 
     console.log(site, 'erros de página:', page._errs.slice(0, 3));
     await ctx.close();
   }
-  fs.writeFileSync(path.join(__dirname, 'resultados', 'm02-desktop-interacoes.json'), JSON.stringify(res, null, 1));
+  if (process.env.RM) res[only[0]].obs = 'executado com reducedMotion=reduce (rolagem suave do site impedia cliques estáveis)';
+  fs.writeFileSync(OUTF, JSON.stringify(res, null, 1));
   await browser.close();
 })();

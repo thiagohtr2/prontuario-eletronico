@@ -1,0 +1,225 @@
+{
+ "dev-1": {
+  "static": {
+   "files": 15,
+   "rootHexDefs": 45,
+   "tokenValuesCovered": 36,
+   "tokenValuesTotal": 36,
+   "looseHex": 0,
+   "looseSample": []
+  },
+  "groupTitleDeep": {
+   "tag": "SPAN",
+   "fs": "12px",
+   "tt": "uppercase",
+   "fw": "650",
+   "ls": "0.96px",
+   "color": "rgb(104, 109, 122)"
+  },
+  "brandTop": {
+   "text": "Nexo Capital",
+   "color": "rgb(15, 23, 42)",
+   "bg": "rgb(239, 241, 243)",
+   "fs": "15px",
+   "fw": "700"
+  },
+  "headerLogo": false,
+  "shortSidebar": {
+   "sbH": 560,
+   "lastLabel": "Permissões",
+   "lastBottom": 532,
+   "footTop": 474,
+   "footBottom": 560,
+   "scrollers": [
+    "NAV.sb-nav 480/410"
+   ]
+  },
+  "states": {
+   "carregando": {
+    "hash": "#/painel/visao-geral",
+    "skel": 55,
+    "busy": 4,
+    "alerts": [],
+    "empties": [],
+    "retry": 0
+   },
+   "vazio": {
+    "hash": "#/painel/visao-geral",
+    "skel": 0,
+    "busy": 0,
+    "alerts": [],
+    "empties": [
+     "Sem dados para o período Não há movimentação registrada para exibir no gráfico.",
+     "Nenhuma atividade no período As movimentações aparecerão aqui assim que forem re",
+     "Nenhum pedido no período Altere o período no seletor para ver outros registros."
+    ],
+    "retry": 0
+   },
+   "erro": {
+    "hash": "#/painel/visao-geral",
+    "skel": 0,
+    "busy": 0,
+    "alerts": [
+     "Não foi possível carregar os indicadores. Tentar novamente",
+     "Não foi possível carregar o gráfico. Tente novamente em instantes. Tentar novame",
+     "Não foi possível carregar as atividades. Tentar novamente",
+     "Não foi possível carregar pedidos. Verifique sua conexão e tente novamente. Tent"
+    ],
+    "empties": [
+     "Não foi possível carregar os indicadores. Tentar novamente",
+     "Não foi possível carregar o gráfico. Tente novamente em instantes. Tentar novame",
+     "Não foi possível carregar as atividades. Tentar novamente",
+     "Não foi possível carregar pedidos. Verifique sua conexão e tente novamente. Tent"
+    ],
+    "retry": 4
+   }
+  }
+ },
+ "dev-2": {
+  "static": {
+   "files": 15,
+   "rootHexDefs": 45,
+   "tokenValuesCovered": 36,
+   "tokenValuesTotal": 36,
+   "looseHex": 1,
+   "looseSample": [
+    "index.html:#0f1f4d"
+   ]
+  },
+  "groupTitleDeep": {
+   "tag": "SPAN",
+   "fs": "12px",
+   "tt": "uppercase",
+   "fw": "650",
+   "ls": "0.96px",
+   "color": "rgb(104, 109, 122)"
+  },
+  "brandTop": {
+   "text": "Nexo Capital",
+   "color": "rgb(15, 23, 42)",
+   "bg": "rgb(239, 241, 243)",
+   "fs": "15px",
+   "fw": "700"
+  },
+  "headerLogo": false,
+  "shortSidebar": {
+   "sbH": 560,
+   "lastLabel": "Permissões",
+   "lastBottom": 540,
+   "footTop": 501,
+   "footBottom": 560,
+   "scrollers": [
+    "NAV.sidebar__nav 488/437"
+   ]
+  },
+  "states": {
+   "carregando": {
+    "hash": "#/painel/visao-geral?estado=carregando",
+    "skel": 66,
+    "busy": 6,
+    "alerts": [],
+    "empties": [],
+    "retry": 0
+   },
+   "vazio": {
+    "hash": "#/painel/visao-geral?estado=vazio",
+    "skel": 0,
+    "busy": 0,
+    "alerts": [],
+    "empties": [
+     "Sem dados no período Não há movimentações para exibir no gráfico.",
+     "Nenhuma atividade Não houve atividades neste período.",
+     "Nenhum registro no período Quando houver movimentações, elas aparecerão aqui."
+    ],
+    "retry": 0
+   },
+   "erro": {
+    "hash": "#/painel/visao-geral?estado=erro",
+    "skel": 0,
+    "busy": 0,
+    "alerts": [
+     "Não foi possível carregar os indicadores Tente novamente em instantes. Tentar no",
+     "Não foi possível carregar o gráfico Verifique sua conexão e tente novamente. Ten",
+     "Não foi possível carregar as atividades Tente novamente em instantes. Tentar nov",
+     "Não foi possível carregar os dados Houve uma falha de comunicação com o servidor"
+    ],
+    "empties": [
+     "Não foi possível carregar os indicadores Tente novamente em instantes. Tentar no",
+     "Não foi possível carregar o gráfico Verifique sua conexão e tente novamente. Ten",
+     "Não foi possível carregar as atividades Tente novamente em instantes. Tentar nov",
+     "Não foi possível carregar os dados Houve uma falha de comunicação com o servidor"
+    ],
+    "retry": 4
+   }
+  }
+ },
+ "dev-3": {
+  "static": {
+   "files": 9,
+   "rootHexDefs": 46,
+   "tokenValuesCovered": 35,
+   "tokenValuesTotal": 36,
+   "looseHex": 3,
+   "looseSample": [
+    "assets/css/shell.css:#fca5a5",
+    "assets/css/shell.css:#ffffff",
+    "assets/css/ui.css:#ffffff"
+   ]
+  },
+  "groupTitleDeep": {
+   "tag": "SPAN",
+   "fs": "11px",
+   "tt": "uppercase",
+   "fw": "650",
+   "ls": "0.88px",
+   "color": "rgb(202, 206, 216)"
+  },
+  "brandTop": {
+   "text": "Nexo Capital",
+   "color": "rgb(15, 23, 42)",
+   "bg": "rgb(15, 31, 77)",
+   "fs": "15px",
+   "fw": "700"
+  },
+  "headerLogo": false,
+  "shortSidebar": {
+   "sbH": 560,
+   "lastLabel": "PermissõesPermissões",
+   "lastBottom": 587,
+   "footTop": 448,
+   "footBottom": 560,
+   "scrollers": []
+  },
+  "states": {
+   "vazio": {
+    "hash": "#/app/fornecedores",
+    "skel": 0,
+    "busy": 0,
+    "alerts": [],
+    "empties": [
+     "Nenhum fornecedor cadastrado ainda.",
+     "Nenhum fornecedor cadastrado ainda."
+    ],
+    "retry": 0
+   },
+   "erro": {
+    "hash": "#/app/auditoria",
+    "skel": 0,
+    "busy": 0,
+    "alerts": [
+     "Não foi possível carregar os dados. Tentar novamente"
+    ],
+    "empties": [],
+    "retry": 1
+   },
+   "carregando": {
+    "hash": "#/app/painel/visao-geral",
+    "skel": 30,
+    "busy": 6,
+    "alerts": [],
+    "empties": [],
+    "retry": 0
+   }
+  }
+ }
+}

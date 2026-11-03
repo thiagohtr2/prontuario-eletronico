@@ -1,0 +1,129 @@
+{
+  "dev-1": {
+    "mais": {
+      "hash": "#/mais",
+      "dialog": false,
+      "bodyOverflow": "visible",
+      "htmlOverflow": "visible"
+    },
+    "before": {
+      "y": 600,
+      "max": 2197,
+      "hash": "#/painel"
+    },
+    "other": {
+      "y": 0,
+      "hash": "#/inicio"
+    },
+    "restored": {
+      "y": 600,
+      "hash": "#/painel"
+    },
+    "preActive": 500,
+    "afterActive": 0,
+    "land667": {
+      "bnH": 45,
+      "hdH": 44,
+      "hdPos": "fixed",
+      "sum": 89,
+      "pct": 23.7,
+      "itemLayout": "lado a lado",
+      "itemH": 48
+    },
+    "land740": {
+      "bnH": 45,
+      "hdH": 44,
+      "hdPos": "fixed",
+      "sum": 89,
+      "pct": 24.7,
+      "itemLayout": "lado a lado",
+      "itemH": 48
+    }
+  },
+  "dev-2": {
+    "mais": {
+      "hash": "#/painel",
+      "dialog": true,
+      "bodyOverflow": "visible",
+      "htmlOverflow": "hidden"
+    },
+    "maisAfterEsc": {
+      "dialog": false,
+      "bodyOverflow": "visible",
+      "focus": "Mais"
+    },
+    "before": {
+      "y": 600,
+      "max": 1062,
+      "hash": "#/painel"
+    },
+    "other": {
+      "y": 0,
+      "hash": "#/projetos"
+    },
+    "restored": {
+      "y": 600,
+      "hash": "#/painel"
+    },
+    "preActive": 600,
+    "afterActive": 0,
+    "land667": {
+      "bnH": 49,
+      "hdH": 44,
+      "hdPos": "sticky",
+      "sum": 93,
+      "pct": 24.8,
+      "itemLayout": "lado a lado",
+      "itemH": 48
+    },
+    "land740": {
+      "bnH": 49,
+      "hdH": 0,
+      "sum": 49,
+      "pct": 13.6,
+      "itemLayout": "lado a lado",
+      "itemH": 48
+    }
+  },
+  "dev-3": {
+    "mais": {
+      "hash": "#/app/configuracoes",
+      "dialog": false,
+      "bodyOverflow": "visible",
+      "htmlOverflow": "visible"
+    },
+    "before": {
+      "y": 600,
+      "max": 1204,
+      "hash": "#/app/projetos"
+    },
+    "other": {
+      "y": 0,
+      "hash": "#/app/inicio"
+    },
+    "restored": {
+      "y": 600,
+      "hash": "#/app/projetos"
+    },
+    "preActive": 500,
+    "afterActive": 0,
+    "land667": {
+      "bnH": 48,
+      "hdH": 48,
+      "hdPos": "fixed",
+      "sum": 96,
+      "pct": 25.6,
+      "itemLayout": "lado a lado",
+      "itemH": 47
+    },
+    "land740": {
+      "bnH": 48,
+      "hdH": 48,
+      "hdPos": "fixed",
+      "sum": 96,
+      "pct": 26.7,
+      "itemLayout": "lado a lado",
+      "itemH": 47
+    }
+  }
+}

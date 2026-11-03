@@ -1,0 +1,545 @@
+{
+ "dev-1": {
+  "firstScreen": {
+   "hash": "",
+   "title": "Entrar · Nexo Capital",
+   "h1": [
+    "Acesso corporativo"
+   ],
+   "hasPassword": true
+  },
+  "inventory": {
+   "headerH": 56,
+   "headerBg": "rgb(255, 255, 255)",
+   "logoLeft": 24,
+   "supportRight": 24,
+   "has": {
+    "suporte": true,
+    "sso": true,
+    "ou": true,
+    "emailCorp": true,
+    "senha": true,
+    "aviso": true,
+    "titulo": true,
+    "subtitulo": true,
+    "cadastro": false,
+    "esqueci": true
+   },
+   "formW": 334,
+   "cardW": 400,
+   "cardRadius": "12px",
+   "cardShadow": "none",
+   "cardBorder": "1px rgb(230, 230, 230)",
+   "inputs": [
+    {
+     "id": "login-email",
+     "type": "email",
+     "inputmode": "email",
+     "ac": "username",
+     "label": "E-mail corporativo",
+     "h": 44,
+     "radius": "8px",
+     "border": "1px rgb(199, 199, 199)",
+     "fs": "15px"
+    },
+    {
+     "id": "login-password",
+     "type": "password",
+     "inputmode": null,
+     "ac": "current-password",
+     "label": "Senha",
+     "h": 44,
+     "radius": "8px",
+     "border": "1px rgb(199, 199, 199)",
+     "fs": "15px"
+    }
+   ],
+   "sso": {
+    "bg": "rgb(29, 78, 216)",
+    "color": "rgb(255, 255, 255)",
+    "h": 44,
+    "radius": "8px",
+    "fw": "500"
+   },
+   "submit": {
+    "text": "Entrar",
+    "bg": "rgb(255, 255, 255)",
+    "color": "rgb(15, 23, 42)",
+    "border": "1px rgb(199, 199, 199)",
+    "h": 44,
+    "radius": "8px"
+   },
+   "pageBg": "rgb(248, 250, 252)",
+   "mainBg": "rgba(0, 0, 0, 0)",
+   "title": {
+    "fs": "30px",
+    "fw": "650",
+    "color": "rgb(15, 23, 42)"
+   },
+   "muted": "rgb(104, 109, 122)"
+  },
+  "submitEmpty": {
+   "email": {
+    "invalid": "true",
+    "describedby": [
+     "Informe seu e-mail corporativo."
+    ]
+   },
+   "pass": {
+    "invalid": "true",
+    "describedby": [
+     "Informe sua senha."
+    ]
+   },
+   "alerts": [
+    "Corrija 2 campos para continuar:Informe seu e-mail corporativo.Informe sua senha."
+   ],
+   "fieldErrors": [
+    "Informe seu e-mail corporativo.",
+    "Informe sua senha."
+   ]
+  },
+  "blurInvalid": {
+   "email": {
+    "invalid": "true",
+    "describedby": [
+     "Digite um e-mail válido, como nome@empresa.com.br."
+    ]
+   },
+   "pass": {
+    "invalid": null,
+    "describedby": []
+   },
+   "alerts": [],
+   "fieldErrors": [
+    "Digite um e-mail válido, como nome@empresa.com.br."
+   ]
+  },
+  "blurEmptyUntouched": {
+   "email": {
+    "invalid": null,
+    "describedby": []
+   },
+   "pass": {
+    "invalid": null,
+    "describedby": []
+   },
+   "alerts": [],
+   "fieldErrors": []
+  },
+  "loadingState": {
+   "text": "Entrando…",
+   "disabled": true,
+   "busy": null
+  },
+  "wrongCreds": {
+   "email": {
+    "invalid": null,
+    "describedby": []
+   },
+   "pass": {
+    "invalid": null,
+    "describedby": []
+   },
+   "alerts": [
+    "E-mail ou senha incorretosVerifique os dados e tente novamente."
+   ],
+   "fieldErrors": []
+  },
+  "wrongCredsText": true,
+  "toggleExists": 1,
+  "toggle": {
+   "type": "text",
+   "aria": "Ocultar senha",
+   "pressed": "true",
+   "w": 40,
+   "h": 40,
+   "before": {
+    "pressed": "false"
+   }
+  },
+  "sso": {
+   "text": [
+    "Redirecionando para o provedor…"
+   ],
+   "status": [
+    "Se o e-mail existir, enviaremos um link para redefinir a senha. Verifique também a caixa de spam."
+   ]
+  },
+  "ssoAfter": {
+   "hash": "#/painel/visao-geral",
+   "pw": false
+  },
+  "recover": {
+   "hash": "#/recuperar-senha",
+   "neutral": "Se o e-mail existir, enviaremos um link para redefinir a senha."
+  },
+  "errors": []
+ },
+ "dev-2": {
+  "firstScreen": {
+   "hash": "#/login",
+   "title": "Nexo Capital · Acesso corporativo",
+   "h1": [
+    "Acesso corporativo"
+   ],
+   "hasPassword": true
+  },
+  "inventory": {
+   "headerH": 56,
+   "headerBg": "rgb(255, 255, 255)",
+   "logoLeft": 24,
+   "supportRight": 16,
+   "has": {
+    "suporte": true,
+    "sso": true,
+    "ou": true,
+    "emailCorp": true,
+    "senha": true,
+    "aviso": true,
+    "titulo": true,
+    "subtitulo": true,
+    "cadastro": false,
+    "esqueci": true
+   },
+   "formW": 374,
+   "cardW": 440,
+   "cardRadius": "12px",
+   "cardShadow": "none",
+   "cardBorder": "1px rgb(230, 230, 230)",
+   "inputs": [
+    {
+     "id": "login-email",
+     "type": "email",
+     "inputmode": "email",
+     "ac": "username",
+     "label": "E-mail corporativo",
+     "h": 44,
+     "radius": "8px",
+     "border": "1px rgb(199, 199, 199)",
+     "fs": "15px"
+    },
+    {
+     "id": "login-pass",
+     "type": "password",
+     "inputmode": null,
+     "ac": "current-password",
+     "label": "Senha",
+     "h": 44,
+     "radius": "8px",
+     "border": "1px rgb(199, 199, 199)",
+     "fs": "15px"
+    }
+   ],
+   "sso": {
+    "bg": "rgb(29, 78, 216)",
+    "color": "rgb(255, 255, 255)",
+    "h": 44,
+    "radius": "8px",
+    "fw": "500"
+   },
+   "submit": {
+    "text": "Entrar",
+    "bg": "rgb(255, 255, 255)",
+    "color": "rgb(15, 23, 42)",
+    "border": "1px rgb(199, 199, 199)",
+    "h": 44,
+    "radius": "8px"
+   },
+   "pageBg": "rgb(248, 250, 252)",
+   "mainBg": "rgba(0, 0, 0, 0)",
+   "title": {
+    "fs": "23px",
+    "fw": "650",
+    "color": "rgb(15, 23, 42)"
+   },
+   "muted": "rgb(104, 109, 122)"
+  },
+  "submitEmpty": {
+   "email": {
+    "invalid": "true",
+    "describedby": [
+     "Informe seu e-mail corporativo."
+    ]
+   },
+   "pass": {
+    "invalid": "true",
+    "describedby": [
+     "Informe sua senha."
+    ]
+   },
+   "alerts": [
+    "Corrija os campos abaixo para continuar:E-mail: Informe seu e-mail corporativo.Senha: Informe sua senha."
+   ],
+   "fieldErrors": [
+    "Informe seu e-mail corporativo.",
+    "Informe sua senha."
+   ]
+  },
+  "blurInvalid": {
+   "email": {
+    "invalid": null,
+    "describedby": [
+     "(oculto)"
+    ]
+   },
+   "pass": {
+    "invalid": null,
+    "describedby": [
+     "(oculto)"
+    ]
+   },
+   "alerts": [],
+   "fieldErrors": []
+  },
+  "blurEmptyUntouched": {
+   "email": {
+    "invalid": null,
+    "describedby": [
+     "(oculto)"
+    ]
+   },
+   "pass": {
+    "invalid": null,
+    "describedby": [
+     "(oculto)"
+    ]
+   },
+   "alerts": [],
+   "fieldErrors": []
+  },
+  "loadingState": {
+   "text": "Entrando…",
+   "disabled": true,
+   "busy": "true"
+  },
+  "wrongCreds": {
+   "email": {
+    "invalid": null,
+    "describedby": [
+     "(oculto)"
+    ]
+   },
+   "pass": {
+    "invalid": null,
+    "describedby": [
+     "(oculto)"
+    ]
+   },
+   "alerts": [
+    "E-mail ou senha incorretos"
+   ],
+   "fieldErrors": []
+  },
+  "wrongCredsText": true,
+  "toggleExists": 1,
+  "toggle": {
+   "type": "text",
+   "aria": "Ocultar senha",
+   "pressed": "true",
+   "w": 44,
+   "h": 44,
+   "before": {
+    "pressed": "false"
+   }
+  },
+  "sso": {
+   "text": [
+    "Redirecionando…"
+   ],
+   "status": []
+  },
+  "ssoAfter": {
+   "hash": "#/painel/visao-geral",
+   "pw": false
+  },
+  "recover": {
+   "hash": "#/recuperar",
+   "neutral": "Se o e-mail existir, enviaremos um link."
+  },
+  "errors": []
+ },
+ "dev-3": {
+  "firstScreen": {
+   "hash": "",
+   "title": "Acesso corporativo · Nexo Capital",
+   "h1": [
+    "Acesso corporativo"
+   ],
+   "hasPassword": true
+  },
+  "inventory": {
+   "headerH": 56,
+   "headerBg": "rgb(255, 255, 255)",
+   "logoLeft": 16,
+   "supportRight": 16,
+   "has": {
+    "suporte": true,
+    "sso": true,
+    "ou": true,
+    "emailCorp": true,
+    "senha": true,
+    "aviso": true,
+    "titulo": true,
+    "subtitulo": true,
+    "cadastro": false,
+    "esqueci": true
+   },
+   "formW": 350,
+   "cardW": 400,
+   "cardRadius": "8px",
+   "cardShadow": "none",
+   "cardBorder": "1px rgb(230, 230, 230)",
+   "inputs": [
+    {
+     "id": "email",
+     "type": "email",
+     "inputmode": "email",
+     "ac": "username",
+     "label": "E-mail corporativo",
+     "h": 44,
+     "radius": "6px",
+     "border": "1px rgb(199, 199, 199)",
+     "fs": "15px"
+    },
+    {
+     "id": "senha",
+     "type": "password",
+     "inputmode": null,
+     "ac": "current-password",
+     "label": "Senha",
+     "h": 44,
+     "radius": "6px",
+     "border": "1px rgb(199, 199, 199)",
+     "fs": "15px"
+    }
+   ],
+   "sso": {
+    "bg": "rgb(29, 78, 216)",
+    "color": "rgb(255, 255, 255)",
+    "h": 44,
+    "radius": "4px",
+    "fw": "500"
+   },
+   "submit": {
+    "text": "Entrar",
+    "bg": "rgb(29, 78, 216)",
+    "color": "rgb(255, 255, 255)",
+    "border": "1px rgba(0, 0, 0, 0)",
+    "h": 44,
+    "radius": "4px"
+   },
+   "pageBg": "rgb(248, 250, 252)",
+   "mainBg": "rgba(0, 0, 0, 0)",
+   "title": {
+    "fs": "30px",
+    "fw": "650",
+    "color": "rgb(15, 23, 42)"
+   },
+   "muted": "rgb(104, 109, 122)"
+  },
+  "submitEmpty": {
+   "email": {
+    "invalid": "true",
+    "describedby": [
+     "Informe seu e-mail corporativo."
+    ]
+   },
+   "pass": {
+    "invalid": "true",
+    "describedby": [
+     "Informe sua senha."
+    ]
+   },
+   "alerts": [
+    "Corrija os campos destacados para continuar."
+   ],
+   "fieldErrors": [
+    "Informe seu e-mail corporativo.",
+    "Informe sua senha."
+   ]
+  },
+  "blurInvalid": {
+   "email": {
+    "invalid": "true",
+    "describedby": [
+     "Digite um e-mail válido, por exemplo nome@empresa.com."
+    ]
+   },
+   "pass": {
+    "invalid": null,
+    "describedby": []
+   },
+   "alerts": [],
+   "fieldErrors": [
+    "Digite um e-mail válido, por exemplo nome@empresa.com."
+   ]
+  },
+  "blurEmptyUntouched": {
+   "email": {
+    "invalid": "true",
+    "describedby": [
+     "Informe seu e-mail corporativo."
+    ]
+   },
+   "pass": {
+    "invalid": null,
+    "describedby": []
+   },
+   "alerts": [],
+   "fieldErrors": [
+    "Informe seu e-mail corporativo."
+   ]
+  },
+  "loadingState": {
+   "text": "Entrando…",
+   "disabled": true,
+   "busy": "true"
+  },
+  "wrongCreds": {
+   "email": {
+    "invalid": "true",
+    "describedby": [
+     "E-mail ou senha incorretos"
+    ]
+   },
+   "pass": {
+    "invalid": "true",
+    "describedby": [
+     "E-mail ou senha incorretos"
+    ]
+   },
+   "alerts": [
+    "E-mail ou senha incorretos"
+   ],
+   "fieldErrors": []
+  },
+  "wrongCredsText": true,
+  "toggleExists": 1,
+  "toggle": {
+   "type": "text",
+   "aria": "Ocultar senha",
+   "pressed": "true",
+   "w": 36,
+   "h": 36,
+   "before": {
+    "pressed": "false"
+   }
+  },
+  "sso": {
+   "text": [
+    "Redirecionando…"
+   ],
+   "status": []
+  },
+  "ssoAfter": {
+   "hash": "#/app/painel/visao-geral",
+   "pw": false
+  },
+  "recover": {
+   "hash": "#/recuperar",
+   "neutral": "Se o e-mail existir, enviaremos um link."
+  },
+  "errors": []
+ }
+}

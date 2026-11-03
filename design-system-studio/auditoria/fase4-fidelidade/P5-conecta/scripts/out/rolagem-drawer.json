@@ -1,0 +1,38 @@
+{
+ "dev-1": {
+  "alturaDoc": 4208,
+  "antes": 1000,
+  "aberto": {
+   "y": 1000,
+   "htmlTop": "auto",
+   "bodyTop": "auto",
+   "bodyPos": "static",
+   "H": 4208
+  },
+  "fechado": 1000
+ },
+ "dev-2": {
+  "alturaDoc": 5728,
+  "antes": 1000,
+  "aberto": {
+   "y": 1000,
+   "htmlTop": "auto",
+   "bodyTop": "auto",
+   "bodyPos": "static",
+   "H": 5728
+  },
+  "fechado": 1000
+ },
+ "dev-3": {
+  "alturaDoc": 2845,
+  "antes": 1000,
+  "aberto": {
+   "y": 1000,
+   "htmlTop": "auto",
+   "bodyTop": "auto",
+   "bodyPos": "static",
+   "H": 2845
+  },
+  "fechado": 1000
+ }
+}

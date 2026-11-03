@@ -1,0 +1,1031 @@
+{
+ "site": "dev-3",
+ "login": {
+  "320": {
+   "sw": 320,
+   "iw": 320,
+   "bodySw": 320,
+   "over": false,
+   "cortados": 0
+  },
+  "344": {
+   "sw": 344,
+   "iw": 344,
+   "bodySw": 344,
+   "over": false,
+   "cortados": 0
+  },
+  "360": {
+   "sw": 360,
+   "iw": 360,
+   "bodySw": 360,
+   "over": false,
+   "cortados": 0
+  },
+  "375": {
+   "sw": 375,
+   "iw": 375,
+   "bodySw": 375,
+   "over": false,
+   "cortados": 0
+  },
+  "390": {
+   "sw": 390,
+   "iw": 390,
+   "bodySw": 390,
+   "over": false,
+   "cortados": 0
+  },
+  "412": {
+   "sw": 412,
+   "iw": 412,
+   "bodySw": 412,
+   "over": false,
+   "cortados": 0
+  },
+  "430": {
+   "sw": 430,
+   "iw": 430,
+   "bodySw": 430,
+   "over": false,
+   "cortados": 0
+  },
+  "480": {
+   "sw": 480,
+   "iw": 480,
+   "bodySw": 480,
+   "over": false,
+   "cortados": 0
+  },
+  "600": {
+   "sw": 600,
+   "iw": 600,
+   "bodySw": 600,
+   "over": false,
+   "cortados": 0
+  },
+  "767": {
+   "sw": 767,
+   "iw": 767,
+   "bodySw": 767,
+   "over": false,
+   "cortados": 0
+  },
+  "768": {
+   "sw": 768,
+   "iw": 768,
+   "bodySw": 768,
+   "over": false,
+   "cortados": 0
+  },
+  "820": {
+   "sw": 820,
+   "iw": 820,
+   "bodySw": 820,
+   "over": false,
+   "cortados": 0
+  },
+  "1024": {
+   "sw": 1024,
+   "iw": 1024,
+   "bodySw": 1024,
+   "over": false,
+   "cortados": 0
+  },
+  "1280": {
+   "sw": 1280,
+   "iw": 1280,
+   "bodySw": 1280,
+   "over": false,
+   "cortados": 0
+  },
+  "1440": {
+   "sw": 1440,
+   "iw": 1440,
+   "bodySw": 1440,
+   "over": false,
+   "cortados": 0
+  },
+  "1920": {
+   "sw": 1920,
+   "iw": 1920,
+   "bodySw": 1920,
+   "over": false,
+   "cortados": 0
+  }
+ },
+ "app": {
+  "320": {
+   "#/feed": {
+    "over": false,
+    "sw": 320,
+    "iw": 320,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 156x32",
+     "Publicação da comunidade 232.5x21",
+     "Bruno Lima 70.1x16",
+     "Ver publicação 132.1x40"
+    ]
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 320,
+    "iw": 320,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 156x32",
+     "Ver perfil de Bruno Lima 101.5x40",
+     "Ver perfil de Carla Mendes 101.5x40",
+     "Ver perfil de Diego Rocha 101.5x40",
+     "Ver perfil de Elisa Tavares 101.5x40",
+     "Ver perfil de Felipe Nunes 101.5x40"
+    ]
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 320,
+    "iw": 320,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 156x32",
+     "Editar perfil 288x40"
+    ]
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 320,
+    "iw": 320,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 156x32"
+    ]
+   }
+  },
+  "344": {
+   "#/feed": {
+    "over": false,
+    "sw": 344,
+    "iw": 344,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 180x32",
+     "Publicação da comunidade 232.5x21",
+     "Bruno Lima 70.1x16",
+     "Ver publicação 132.1x40"
+    ]
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 344,
+    "iw": 344,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 180x32",
+     "Ver perfil de Bruno Lima 101.5x40",
+     "Ver perfil de Carla Mendes 101.5x40",
+     "Ver perfil de Diego Rocha 101.5x40",
+     "Ver perfil de Elisa Tavares 101.5x40",
+     "Ver perfil de Felipe Nunes 101.5x40"
+    ]
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 344,
+    "iw": 344,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 180x32",
+     "Editar perfil 312x40"
+    ]
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 344,
+    "iw": 344,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 180x32"
+    ]
+   }
+  },
+  "360": {
+   "#/feed": {
+    "over": false,
+    "sw": 360,
+    "iw": 360,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 196x32",
+     "Publicação da comunidade 232.5x21",
+     "Bruno Lima 70.1x16",
+     "Ver publicação 132.1x40"
+    ]
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 360,
+    "iw": 360,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 196x32",
+     "Ver perfil de Bruno Lima 101.5x40",
+     "Ver perfil de Carla Mendes 101.5x40",
+     "Ver perfil de Diego Rocha 101.5x40",
+     "Ver perfil de Elisa Tavares 101.5x40",
+     "Ver perfil de Felipe Nunes 101.5x40"
+    ]
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 360,
+    "iw": 360,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 196x32",
+     "Editar perfil 328x40"
+    ]
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 360,
+    "iw": 360,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 196x32"
+    ]
+   }
+  },
+  "375": {
+   "#/feed": {
+    "over": false,
+    "sw": 375,
+    "iw": 375,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 211x32",
+     "Publicação da comunidade 232.5x21",
+     "Bruno Lima 70.1x16",
+     "Ver publicação 132.1x40"
+    ]
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 375,
+    "iw": 375,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 211x32",
+     "Ver perfil de Bruno Lima 101.5x40",
+     "Ver perfil de Carla Mendes 101.5x40",
+     "Ver perfil de Diego Rocha 101.5x40",
+     "Ver perfil de Elisa Tavares 101.5x40",
+     "Ver perfil de Felipe Nunes 101.5x40"
+    ]
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 375,
+    "iw": 375,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 211x32",
+     "Editar perfil 343x40"
+    ]
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 375,
+    "iw": 375,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 211x32"
+    ]
+   }
+  },
+  "390": {
+   "#/feed": {
+    "over": false,
+    "sw": 390,
+    "iw": 390,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 226x32",
+     "Publicação da comunidade 232.5x21",
+     "Bruno Lima 70.1x16",
+     "Ver publicação 132.1x40"
+    ]
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 390,
+    "iw": 390,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 226x32",
+     "Ver perfil de Bruno Lima 101.5x40",
+     "Ver perfil de Carla Mendes 101.5x40",
+     "Ver perfil de Diego Rocha 101.5x40",
+     "Ver perfil de Elisa Tavares 101.5x40",
+     "Ver perfil de Felipe Nunes 101.5x40"
+    ]
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 390,
+    "iw": 390,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 226x32",
+     "Editar perfil 358x40"
+    ]
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 390,
+    "iw": 390,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 226x32"
+    ]
+   }
+  },
+  "412": {
+   "#/feed": {
+    "over": false,
+    "sw": 412,
+    "iw": 412,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 248x32",
+     "Publicação da comunidade 232.5x21",
+     "Bruno Lima 70.1x16",
+     "Ver publicação 132.1x40"
+    ]
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 412,
+    "iw": 412,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 248x32",
+     "Ver perfil de Bruno Lima 101.5x40",
+     "Ver perfil de Carla Mendes 101.5x40",
+     "Ver perfil de Diego Rocha 101.5x40",
+     "Ver perfil de Elisa Tavares 101.5x40",
+     "Ver perfil de Felipe Nunes 101.5x40"
+    ]
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 412,
+    "iw": 412,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 248x32",
+     "Editar perfil 380x40"
+    ]
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 412,
+    "iw": 412,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 248x32"
+    ]
+   }
+  },
+  "430": {
+   "#/feed": {
+    "over": false,
+    "sw": 430,
+    "iw": 430,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 266x32",
+     "Publicação da comunidade 232.5x21",
+     "Bruno Lima 70.1x16",
+     "Ver publicação 132.1x40"
+    ]
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 430,
+    "iw": 430,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 266x32",
+     "Ver perfil de Bruno Lima 101.5x40",
+     "Ver perfil de Carla Mendes 101.5x40",
+     "Ver perfil de Diego Rocha 101.5x40",
+     "Ver perfil de Elisa Tavares 101.5x40",
+     "Ver perfil de Felipe Nunes 101.5x40"
+    ]
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 430,
+    "iw": 430,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 266x32",
+     "Editar perfil 398x40"
+    ]
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 430,
+    "iw": 430,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 266x32"
+    ]
+   }
+  },
+  "480": {
+   "#/feed": {
+    "over": false,
+    "sw": 480,
+    "iw": 480,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 316x32",
+     "Publicação da comunidade 232.5x21",
+     "Bruno Lima 70.1x16",
+     "Ver publicação 132.1x40"
+    ]
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 480,
+    "iw": 480,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 316x32",
+     "Ver perfil de Bruno Lima 101.5x40",
+     "Ver perfil de Carla Mendes 101.5x40",
+     "Ver perfil de Diego Rocha 101.5x40",
+     "Ver perfil de Elisa Tavares 101.5x40",
+     "Ver perfil de Felipe Nunes 101.5x40"
+    ]
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 480,
+    "iw": 480,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 316x32",
+     "Editar perfil 448x40"
+    ]
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 480,
+    "iw": 480,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 316x32"
+    ]
+   }
+  },
+  "600": {
+   "#/feed": {
+    "over": false,
+    "sw": 600,
+    "iw": 600,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 436x32",
+     "Publicação da comunidade 232.5x21",
+     "Bruno Lima 70.1x16",
+     "Ver publicação 132.1x40",
+     "Publicação da comunidade 232.5x21",
+     "Carla Mendes 86.3x16",
+     "Ver publicação 132.1x40"
+    ]
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 600,
+    "iw": 600,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 436x32",
+     "Ver perfil de Bruno Lima 101.5x40",
+     "Ver perfil de Carla Mendes 101.5x40",
+     "Ver perfil de Diego Rocha 101.5x40",
+     "Ver perfil de Elisa Tavares 101.5x40",
+     "Ver perfil de Felipe Nunes 101.5x40"
+    ]
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 600,
+    "iw": 600,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 436x32",
+     "Editar perfil 568x40"
+    ]
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 600,
+    "iw": 600,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 436x32"
+    ]
+   }
+  },
+  "767": {
+   "#/feed": {
+    "over": false,
+    "sw": 767,
+    "iw": 767,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 603x32",
+     "Publicação da comunidade 232.5x21",
+     "Bruno Lima 70.1x16",
+     "Ver publicação 132.1x40",
+     "Publicação da comunidade 232.5x21",
+     "Carla Mendes 86.3x16",
+     "Ver publicação 132.1x40"
+    ]
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 767,
+    "iw": 767,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 603x32",
+     "Ver perfil de Bruno Lima 101.5x40",
+     "Ver perfil de Carla Mendes 101.5x40",
+     "Ver perfil de Diego Rocha 101.5x40",
+     "Ver perfil de Elisa Tavares 101.5x40",
+     "Ver perfil de Felipe Nunes 101.5x40"
+    ]
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 767,
+    "iw": 767,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 603x32",
+     "Editar perfil 735x40"
+    ]
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 767,
+    "iw": 767,
+    "culprits": [],
+    "dock": true,
+    "menuBtn": true,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": [
+     "Conecta, início 603x32"
+    ]
+   }
+  },
+  "768": {
+   "#/feed": {
+    "over": false,
+    "sw": 768,
+    "iw": 768,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 768,
+    "iw": 768,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 768,
+    "iw": 768,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 768,
+    "iw": 768,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   }
+  },
+  "820": {
+   "#/feed": {
+    "over": false,
+    "sw": 820,
+    "iw": 820,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 820,
+    "iw": 820,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 820,
+    "iw": 820,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 820,
+    "iw": 820,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 0,
+    "cortados": [],
+    "pequenos": []
+   }
+  },
+  "1024": {
+   "#/feed": {
+    "over": false,
+    "sw": 1024,
+    "iw": 1024,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 1024,
+    "iw": 1024,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 1024,
+    "iw": 1024,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 1024,
+    "iw": 1024,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   }
+  },
+  "1280": {
+   "#/feed": {
+    "over": false,
+    "sw": 1280,
+    "iw": 1280,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 1280,
+    "iw": 1280,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 1280,
+    "iw": 1280,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 1280,
+    "iw": 1280,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   }
+  },
+  "1440": {
+   "#/feed": {
+    "over": false,
+    "sw": 1440,
+    "iw": 1440,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 1440,
+    "iw": 1440,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 1440,
+    "iw": 1440,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 1440,
+    "iw": 1440,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   }
+  },
+  "1920": {
+   "#/feed": {
+    "over": false,
+    "sw": 1920,
+    "iw": 1920,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/explorar": {
+    "over": false,
+    "sw": 1920,
+    "iw": 1920,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/perfil": {
+    "over": false,
+    "sw": 1920,
+    "iw": 1920,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   },
+   "#/mensagens": {
+    "over": false,
+    "sw": 1920,
+    "iw": 1920,
+    "culprits": [],
+    "dock": false,
+    "menuBtn": false,
+    "navLinks": 4,
+    "cortados": [],
+    "pequenos": []
+   }
+  }
+ }
+}
