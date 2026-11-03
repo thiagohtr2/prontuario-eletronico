@@ -1,0 +1,60 @@
+{
+  "dev-1": {
+    "desk": {
+      "hash": "#/projetos/site-institucional/pagina-inicial",
+      "crumbs": [
+        "Projetos Site institucional Página inicial"
+      ],
+      "dialog": false
+    },
+    "cel": {
+      "hash": "#/projetos/site-institucional/pagina-inicial",
+      "crumbs": [
+        "Site institucional"
+      ],
+      "dialog": false
+    },
+    "trap": {
+      "tabsOutside": 0,
+      "focusBack": "Expandir menu"
+    }
+  },
+  "dev-2": {
+    "desk": {
+      "hash": "#/projetos/site-institucional/pagina-inicial",
+      "crumbs": [
+        "Projetos Site institucional Página inicial"
+      ],
+      "dialog": false
+    },
+    "cel": {
+      "hash": "#/projetos/site-institucional/pagina-inicial",
+      "crumbs": [
+        "Site institucional"
+      ],
+      "dialog": false
+    },
+    "trap": {
+      "tabsOutside": 0,
+      "focusBack": "Expandir menu"
+    }
+  },
+  "dev-3": {
+    "desk": {
+      "hash": "#/app/projetos",
+      "crumbs": [
+        "Geral Projetos"
+      ],
+      "dialog": true
+    },
+    "cel": {
+      "hash": "#/app/projetos",
+      "crumbs": [],
+      "dialog": true
+    },
+    "trap": {
+      "tabsOutside": 0,
+      "focusBack": "Abrir menu"
+    }
+  }
+}

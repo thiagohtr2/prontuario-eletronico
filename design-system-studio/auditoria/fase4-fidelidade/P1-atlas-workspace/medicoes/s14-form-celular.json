@@ -1,0 +1,37 @@
+{
+  "dev-1": {
+    "fs": [
+      "16px"
+    ],
+    "xs": [
+      16
+    ],
+    "btnW": 358
+  },
+  "dev-2": {
+    "fs": [
+      "16px"
+    ],
+    "xs": [
+      16
+    ],
+    "btnW": 358
+  },
+  "dev-3": {
+    "fs": [
+      "16px"
+    ],
+    "xs": [
+      37
+    ],
+    "btnW": 316,
+    "filterOpts": [
+      "Todos",
+      "Pago",
+      "Pendente",
+      "Cancelado",
+      "Em análise"
+    ],
+    "erro": " 02 — PEDIDOS Pedidos recentes STATUS Todos Pago Pendente Cancelado Em análise 0 SELECIONADOS Não foi possível carregar os pedidos."
+  }
+}

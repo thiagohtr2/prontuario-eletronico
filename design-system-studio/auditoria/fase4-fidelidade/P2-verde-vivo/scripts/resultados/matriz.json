@@ -1,0 +1,1900 @@
+{
+ "linhas": [
+  {
+   "id": "ARQ-01",
+   "dim": "ARQ",
+   "req": "Sem login / sem área restrita",
+   "esc": "“Landing page sem login”",
+   "ins": "L17–18 (contradito por L167/L191: avatar com “Sair”)",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Sem login; avatar com perfil fictício marcado como demonstração",
+     100,
+     "E"
+    ],
+    "dev-2": [
+     "Sem login; menu de conta fictício, itens só avisam",
+     100,
+     "E"
+    ],
+    "dev-3": [
+     "Sem login; popover “Visitante · modo demonstração”",
+     100,
+     "E"
+    ]
+   }
+  },
+  {
+   "id": "ARQ-02",
+   "dim": "ARQ",
+   "req": "Ordem das 7 seções da Folha Viva",
+   "esc": "Folha Viva (Composição assimétrica)",
+   "ins": "L28/L41: ordem explícita",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Header → hero → cartões → citação → texto+imagem → chamada → rodapé (7/7)",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "7/7 na ordem",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "7/7 na ordem",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "ARQ-03",
+   "dim": "ARQ",
+   "req": "Layout desktop de 2 linhas, sem sidebar",
+   "esc": "Navegação superior de duas linhas",
+   "ins": "L19, L71–85 × L29 (header leve da landing)",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "2 linhas em todas as páginas",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "2 linhas em todas as páginas",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Catálogo com 2 linhas; landing com header leve de 1 linha (“Folha Viva”)",
+     50,
+     "B"
+    ]
+   }
+  },
+  {
+   "id": "ARQ-04",
+   "dim": "ARQ",
+   "req": "Arquitetura mobile: header+busca, faixa, dock",
+   "esc": "Header fixo com busca e menu inferior flutuante",
+   "ins": "L19, L112–118, L149 × L58 (hambúrguer da landing)",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Presente na landing e no catálogo",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Presente na landing e no catálogo",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Presente só no catálogo; landing só com hambúrguer, sem busca, faixa nem dock",
+     50,
+     "B"
+    ]
+   }
+  },
+  {
+   "id": "ARQ-05",
+   "dim": "ARQ",
+   "req": "Troca de arquitetura em 768 px",
+   "esc": "Desktop e mobile independentes",
+   "ins": "L102, L141 (L150 abre exceção 600–1023)",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Mobile até 767, desktop a partir de 768",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Idem",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Idem (no catálogo)",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "ARQ-06",
+   "dim": "ARQ",
+   "req": "Catálogo com cards, busca e filtros",
+   "esc": "Tipo “Loja ou catálogo” + template de vitrine",
+   "ins": "L11–12 (lista de funcionalidades)",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Rota #/catalogo, 30 produtos, busca e filtros ligados",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Rota #/catalogo, 22 produtos",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Rota #/catalogo, 16 produtos",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "ARQ-07",
+   "dim": "ARQ",
+   "req": "Partes ★ do template: Categorias (4 blocos) e Vitrine (4 col., selo, preço, parcelamento, filtrar/ordenar)",
+   "esc": "Template “E-commerce de moda”, partes Cabeçalho/Categorias/Vitrine",
+   "ins": "L629–642, L635 × L28 (ordem fechada da landing) × L390 (3→2→1)",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Sem blocos de categoria; 3 colunas; selo, preço, parcelamento e filtrar/ordenar OK (4/6)",
+     67,
+     "B"
+    ],
+    "dev-2": [
+     "Sem blocos de categoria; 3 colunas; demais OK (4/6)",
+     67,
+     "B"
+    ],
+    "dev-3": [
+     "6 blocos em 4 colunas, vitrine em 4 colunas, filtrar/ordenar OK; sem parcelamento; selo só em “Novo” (4,5/6)",
+     75,
+     "C"
+    ]
+   }
+  },
+  {
+   "id": "ARQ-08",
+   "dim": "ARQ",
+   "req": "Conteúdo fictício substituído",
+   "esc": "Marcas de exemplo da landing, do header e do template",
+   "ins": "L64, L164, L702 (“substitua”) × L29 (logotipo “Folha Viva”)",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Nenhuma marca ou item de exemplo",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Nenhuma marca ou item de exemplo",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Landing e rodapé com a marca de exemplo “Folha Viva” (3 ocorrências)",
+     75,
+     "C"
+    ]
+   }
+  },
+  {
+   "id": "ARQ-09",
+   "dim": "ARQ",
+   "req": "Marca “Verde Vivo” no logo e no rodapé",
+   "esc": "Nome do projeto “Verde Vivo”",
+   "ins": "L8, L64",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Em todas as páginas",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Em todas as páginas",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Só no catálogo; a landing se chama “Folha Viva”",
+     50,
+     "C"
+    ]
+   }
+  },
+  {
+   "id": "ARQ-10",
+   "dim": "ARQ",
+   "req": "Inspiração botânica (Verdant): editorial, serifa, vetores, respiro",
+   "esc": "Verdant Atelier, paleta global prevalece",
+   "ins": "L552–620, L759",
+   "j": true,
+   "s": {
+    "dev-1": [
+     "Ilustrações SVG variadas por espécie, arco no hero, serifa grande",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Idem, com legenda “Fig. 01” e rodapé invertido",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Uma única ilustração genérica repetida nos cards, título do hero pequeno e vão de ~400 px no hero",
+     50,
+     "C"
+    ]
+   }
+  },
+  {
+   "id": "DSK-01",
+   "dim": "DSK",
+   "req": "Hero assimétrico (título col. 1–8, itálico accent, imagem alta 440/+80, imagem sobreposta, CTA link)",
+   "esc": "Prévia Folha Viva",
+   "ins": "L30–35, L45–46",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Título de 803 px e 80 px; itálico #b07d4f; imagem 440 px, mas começa 44 px abaixo do título (pede ≈80) (4,5/5)",
+     90,
+     "C"
+    ],
+    "dev-2": [
+     "Título de 845 px; imagem 468 px a +80 px; sobreposta; CTA link (5/5)",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Título só em ~4 colunas (376 px, 39 px de corpo); imagem 440/+80 OK (4,5/5)",
+     90,
+     "C"
+    ]
+   }
+  },
+  {
+   "id": "DSK-02",
+   "dim": "DSK",
+   "req": "Cartões escalonados 0/48/96 px",
+   "esc": "Prévia Folha Viva",
+   "ins": "L35, L47",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "0/48/96",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "0/48/96",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "0/48/96",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "DSK-03",
+   "dim": "DSK",
+   "req": "Citação recuada ≈25%, autor à direita",
+   "esc": "Prévia Folha Viva",
+   "ins": "L36",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Recuo de 25%, autor à direita",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "25%, autor à direita",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "25%, autor à direita",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "DSK-04",
+   "dim": "DSK",
+   "req": "Imagem sangrando até a borda direita",
+   "esc": "Prévia Folha Viva",
+   "ins": "L37",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Borda direita = 1440",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Borda direita = 1425 (área útil, com reserva da barra de rolagem)",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Borda direita = 1440",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "DSK-05",
+   "dim": "DSK",
+   "req": "Chamada final alinhada à esquerda",
+   "esc": "Prévia Folha Viva",
+   "ins": "L28",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "À esquerda",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "À esquerda",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "À esquerda",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "DSK-06",
+   "dim": "DSK",
+   "req": "Faixa de anúncio de 36 px (primary/onPrimary, link, ✕)",
+   "esc": "Mega Empório",
+   "ins": "L168, L183",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "36 px, #2d6a4f/#fff, link e ✕",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Idem",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Idem no catálogo; ausente na landing",
+     50,
+     "B"
+    ]
+   }
+  },
+  {
+   "id": "DSK-07",
+   "dim": "DSK",
+   "req": "Linha 1: 64 px, logo 28 px, busca larga 42 px, endereço, avatar, carrinho",
+   "esc": "Mega Empório, composição A",
+   "ins": "L74–75, L162–167",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "64 px; logo 28 px #2d6a4f + nome em 700; busca 560×42; endereço com CEP; avatar; carrinho (6/6)",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "64 px; busca 640×42; todos os itens (6/6)",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Catálogo: sem endereço; “Conta” em vez de avatar (4,5/6). Landing: nenhum item",
+     38,
+     "B+C"
+    ]
+   }
+  },
+  {
+   "id": "DSK-08",
+   "dim": "DSK",
+   "req": "Linha 2: 44 px, “Departamentos” + atalhos à esquerda, ativo em text/600",
+   "esc": "Mega Empório, composição A",
+   "ins": "L76, L165, L174 × L211",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "44 px; Departamentos; à esquerda; ativo em #1b2e24 peso 600 com aria-current",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "44 px; Departamentos; ativo em navActive + 600 + sublinhado (L211)",
+     100,
+     "E"
+    ],
+    "dev-3": [
+     "Catálogo: sem “Departamentos”, categorias espalhadas na largura toda, ativo em pílula (2/4). Landing: sem linha 2",
+     25,
+     "B+C"
+    ]
+   }
+  },
+  {
+   "id": "DSK-09",
+   "dim": "DSK",
+   "req": "Header sticky (z 40) com sombra após 8 px",
+   "esc": "Mega Empório",
+   "ins": "L189",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Sticky, z 40, sombra ao rolar",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Idem",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Catálogo OK; header leve da landing sem sombra",
+     75,
+     "B"
+    ]
+   }
+  },
+  {
+   "id": "DSK-10",
+   "dim": "DSK",
+   "req": "Conteúdo com largura máx. ≈1280 (ou 1120)",
+   "esc": "Layout de duas linhas",
+   "ins": "L74/L91 × L630",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "1280 (1216 úteis)",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "1280",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "1280 (1232 úteis)",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "DSK-11",
+   "dim": "DSK",
+   "req": "1024–1279: excedentes em “Mais”",
+   "esc": "Layout + Mega Empório",
+   "ins": "L100 × L196",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "“Mais ▾” em 1024",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "“Mais categorias” em 1024",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "“Mais categorias” em 1024",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "DSK-12",
+   "dim": "DSK",
+   "req": "768–1023: desktop compactado sem overflow",
+   "esc": "Layout + Mega Empório",
+   "ins": "L101 × L197 × L150 (3 instruções diferentes)",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "5 itens cabem; sem ☰",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Faixa rolável com esmaecimento",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "7 categorias cabem; sem overflow",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "DSK-13",
+   "dim": "DSK",
+   "req": "Vitrine em 4 colunas no desktop",
+   "esc": "Template, parte Vitrine",
+   "ins": "L635 × L390 (card 3→2→1)",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "3 colunas",
+     75,
+     "B"
+    ],
+    "dev-2": [
+     "3 colunas",
+     75,
+     "B"
+    ],
+    "dev-3": [
+     "4 colunas",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "MOB-01",
+   "dim": "MOB",
+   "req": "Header fixo ≈104 px (marca + busca em largura total) com safe-area",
+   "esc": "Header fixo com busca…",
+   "ins": "L115 (× L198/L202, 56+48)",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Sticky 56+48 = 104 px; busca 358 px; safe-area-inset-top",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Idem",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Catálogo: fixo de 52+44 px, busca 358 px. Landing: header leve de 65 px sem busca",
+     50,
+     "B"
+    ]
+   }
+  },
+  {
+   "id": "MOB-02",
+   "dim": "MOB",
+   "req": "Busca com fonte de 16 px que abre a tela de sugestões",
+   "esc": "Header fixo com busca…",
+   "ins": "L134, L469, L721",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "16 px; abre busca em tela cheia com Recentes/Sugestões",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Abre em tela cheia, mas o campo tem 15 px (zoom no iOS) (2/3)",
+     67,
+     "C"
+    ],
+    "dev-3": [
+     "16 px; painel abaixo do header",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "MOB-03",
+   "dim": "MOB",
+   "req": "Faixa de categorias ≈52 px (pílulas com ícone, scroll-snap, ativa)",
+   "esc": "Header fixo com busca…",
+   "ins": "L116",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "52 px, snap por proximidade, ícone + rótulo, ativa em primarySoft",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "52 px, snap, ativa preenchida em primary",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "52 px, snap, ativa com ponto e ícone preenchido",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "MOB-04",
+   "dim": "MOB",
+   "req": "Dock flutuante: 64 px, margens de 16, raio 22, 4 destinos, safe-area",
+   "esc": "Header fixo com busca…",
+   "ins": "L117, L725",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "64 px, 16/16/16, 22 px, 4 itens",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Idem",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Idem (só no catálogo)",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "MOB-05",
+   "dim": "MOB",
+   "req": "Item ativo do dock: cor + indicador + ícone preenchido + aria-current",
+   "esc": "Header fixo com busca…",
+   "ins": "L136",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "4/4",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "4/4 (ponto + preenchimento)",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "4/4",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "MOB-06",
+   "dim": "MOB",
+   "req": "Nada escondido atrás do dock",
+   "esc": "Header fixo com busca…",
+   "ins": "L118",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Último texto 38 px acima do dock",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Idem (40 px)",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Idem (34 px)",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "MOB-07",
+   "dim": "MOB",
+   "req": "Não trocar a navegação por drawer ou hambúrguer",
+   "esc": "Arquitetura mobile escolhida",
+   "ins": "L102, L733 × L58, L198",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Dock como navegação principal + ☰ complementar (pedido em L198)",
+     100,
+     "E"
+    ],
+    "dev-2": [
+     "Só dock, faixa e busca",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Catálogo OK; na landing o ☰ substitui o dock",
+     50,
+     "B"
+    ]
+   }
+  },
+  {
+   "id": "MOB-08",
+   "dim": "MOB",
+   "req": "Faixa de anúncio no celular: 32 px, 1 linha, ✕ de 44",
+   "esc": "Mega Empório",
+   "ins": "L201",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "32 px, reticências, ✕ 44×44",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Idem",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Ausente no celular (decisão do desenvolvedor)",
+     0,
+     "C"
+    ]
+   }
+  },
+  {
+   "id": "MOB-09",
+   "dim": "MOB",
+   "req": "Filtros em bottom sheet (≤ 90dvh, com alça)",
+   "esc": "Drawer Soft Pill + template",
+   "ins": "L543, L687",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Sheet de 760 px (90dvh) com alça",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Idem",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Idem",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "MOB-10",
+   "dim": "MOB",
+   "req": "Vitrine com 2 colunas no celular",
+   "esc": "Template, parte Vitrine",
+   "ins": "L687 × L390",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "1 coluna",
+     75,
+     "B"
+    ],
+    "dev-2": [
+     "1 coluna",
+     75,
+     "B"
+    ],
+    "dev-3": [
+     "2 colunas",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "MOB-11",
+   "dim": "MOB",
+   "req": "Hero no celular: 1 coluna assimétrica, imagem com recuo de 40, imagem menor abaixo",
+   "esc": "Prévia Folha Viva (celular)",
+   "ins": "L54–57",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "3/3",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "3/3",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "3/3",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "MOB-12",
+   "dim": "MOB",
+   "req": "Escalonamento dos cartões removido abaixo de 768",
+   "esc": "Folha Viva",
+   "ins": "L56",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Removido, com recuos alternados",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Idem",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Idem",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "MOB-13",
+   "dim": "MOB",
+   "req": "Alvos de toque ≥ 44×44",
+   "esc": "Regras do Studio",
+   "ins": "L146, L720",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "16/44 (landing) e 15/100 (catálogo) abaixo de 44: links do rodapé com 36 px, links inline",
+     74,
+     "C"
+    ],
+    "dev-2": [
+     "10/37 e 11/102: links do rodapé com 36 px",
+     81,
+     "C"
+    ],
+    "dev-3": [
+     "7/12 e 11/56: botões de 42 px, links de 36 e 28 px",
+     61,
+     "C"
+    ]
+   }
+  },
+  {
+   "id": "PAL-01",
+   "dim": "PAL",
+   "req": "Fundo = bg #f6faf6",
+   "esc": "Paleta Floresta",
+   "ins": "L230",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "#f6faf6",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "#f6faf6",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "#f6faf6",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "PAL-02",
+   "dim": "PAL",
+   "req": "Texto = #1b2e24",
+   "esc": "Paleta Floresta",
+   "ins": "L234",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "#1b2e24",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "#1b2e24",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "#1b2e24",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "PAL-03",
+   "dim": "PAL",
+   "req": "Primária #2d6a4f (botões, faixa, “Aplicar”)",
+   "esc": "Paleta Floresta",
+   "ins": "L221",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Idêntica",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Idêntica",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Idêntica",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "PAL-04",
+   "dim": "PAL",
+   "req": "Destaque #b07d4f (itálico do hero, contador)",
+   "esc": "Paleta Floresta",
+   "ins": "L228, L192",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Idêntico nos 2 pontos",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Idêntico",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Idêntico",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "PAL-05",
+   "dim": "PAL",
+   "req": "Tokens centralizados com valores exportados; sem cores fixas",
+   "esc": "Tokens exportados",
+   "ins": "L208, L753",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "44/44 tokens; só #000 como alfa de máscara",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "44/44; zero literais",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "44/44; 7 rgba fixos em sombras",
+     85,
+     "C"
+    ]
+   }
+  },
+  {
+   "id": "PAL-06",
+   "dim": "PAL",
+   "req": "Fraunces 650 nos títulos, Inter 400 no corpo, base 15 px",
+   "esc": "Tipografia Fraunces + Inter",
+   "ins": "L270–282",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "4/4 (Google Fonts)",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "4/4 (fontes locais)",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "4/4 (Google Fonts)",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "PAL-07",
+   "dim": "PAL",
+   "req": "Nada < 12 px; botões e filtros ≥ 14 px",
+   "esc": "Tipografia",
+   "ins": "L275",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "0 violações",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "4 botões de demonstração com 13 px",
+     90,
+     "C"
+    ],
+    "dev-3": [
+     "Rótulos do dock (botões) com 12 px",
+     90,
+     "C"
+    ]
+   }
+  },
+  {
+   "id": "PAL-08",
+   "dim": "PAL",
+   "req": "Geometria global fora dos componentes: 6/8/12, contornada, sem sombra",
+   "esc": "Formas: Médios, Contornada, Sem sombra",
+   "ins": "L292–308, L748",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "3/3",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "3/3",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Raio 22 em seções e CTAs em pílula fora dos componentes (2/3)",
+     67,
+     "C"
+    ]
+   }
+  },
+  {
+   "id": "PAL-09",
+   "dim": "PAL",
+   "req": "Cores da inspiração não usadas",
+   "esc": "Decisão: paleta global prevalece",
+   "ins": "L759",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "0",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "0",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "0",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "PAL-10",
+   "dim": "PAL",
+   "req": "Foco visível 2–3 px em focusRing",
+   "esc": "Estados visuais",
+   "ins": "L315",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "2 px #2d6a4f (+ halo nos componentes)",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "2 px + halo de 35%",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "2 px #2d6a4f",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "CMP-01",
+   "dim": "CMP",
+   "req": "Estrutura do card: mídia 16/9 → etiqueta → título → texto → rodapé “Ver produto”; ícone Folha",
+   "esc": "Card Soft Pill personalizado",
+   "ins": "L330, L341–348 (× L635 4:5)",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "6/6 (etiqueta com ícone de folha)",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Sem ícone de folha (5/6)",
+     83,
+     "C"
+    ],
+    "dev-3": [
+     "Etiqueta só nos itens “Novo” (5,5/6)",
+     92,
+     "B"
+    ]
+   }
+  },
+  {
+   "id": "CMP-02",
+   "dim": "CMP",
+   "req": "Visual Soft Pill do card: raio 22, botão pílula, sem borda, sombra difusa, #fff, primária, título Inter",
+   "esc": "Card Soft Pill",
+   "ins": "L349–359 (× L292–306)",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "7/7",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "7/7",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "7/7",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "CMP-03",
+   "dim": "CMP",
+   "req": "Estados do card: hover, active 0,98, foco, 160 ms",
+   "esc": "Card Soft Pill",
+   "ins": "L380–387",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "4/4",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Sem scale 0,98 no card (3,5/4)",
+     88,
+     "C"
+    ],
+    "dev-3": [
+     "4/4",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "CMP-04",
+   "dim": "CMP",
+   "req": "Busca Soft Pill: lupa, “Buscar plantas…”, ⌘K, 42 px, pílula, tonal, Recentes/Sugestões, combobox",
+   "esc": "Busca Soft Pill personalizada",
+   "ins": "L405–438",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "8/8",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "8/8",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Sem o grupo “Recentes” (7/8)",
+     88,
+     "C"
+    ]
+   }
+  },
+  {
+   "id": "CMP-05",
+   "dim": "CMP",
+   "req": "Drawer Soft Pill: overlay, à direita, 360–420 px, dialog modal, “Filtros”, rodapé “Aplicar filtros”, raio 22",
+   "esc": "Drawer Soft Pill (“Painel de filtros”)",
+   "ins": "L485–531",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "7/7 (400 px)",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "7/7 (400 px)",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "7/7 (400 px)",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "CMP-06",
+   "dim": "CMP",
+   "req": "Critérios de filtro adequados a plantas",
+   "esc": "(Studio só tinha critérios genéricos)",
+   "ins": "Ausente no MP (lacuna A)",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Luz, rega, porte, preço, características",
+     100,
+     "E"
+    ],
+    "dev-2": [
+     "Categoria, luz, porte, cuidado, extras",
+     100,
+     "E"
+    ],
+    "dev-3": [
+     "Categoria, luz, porte, cuidado, preço",
+     100,
+     "E"
+    ]
+   }
+  },
+  {
+   "id": "CMP-07",
+   "dim": "CMP",
+   "req": "Estados de vazio e carregando",
+   "esc": "Regras de implementação",
+   "ins": "L752, L459 × L424",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Vazio, esqueleto e spinner na busca",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Idem",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Vazio e esqueleto; sem spinner na busca (“Buscando: não”)",
+     80,
+     "B"
+    ]
+   }
+  },
+  {
+   "id": "INT-01",
+   "dim": "INT",
+   "req": "Mega menu: clique, ≤ 760 px, 3 col. + destaque, caixa alta, foco no 1º link, Esc, clique fora",
+   "esc": "Mega Empório (prévia com mega menu)",
+   "ins": "L96, L184, L187 × L76 (largura total)",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "7/7 (760 px; hover de 150 ms também)",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "7/7",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Painel em largura total (1440), aberto por categoria (6/7)",
+     86,
+     "B"
+    ]
+   }
+  },
+  {
+   "id": "INT-02",
+   "dim": "INT",
+   "req": "Busca do header: painel ao focar com a mesma largura, Ctrl+K, setas, Esc",
+   "esc": "Mega Empório + Busca Soft Pill",
+   "ins": "L190, L458",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "5/5",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "5/5",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "5/5",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "INT-03",
+   "dim": "INT",
+   "req": "Busca filtra os produtos",
+   "esc": "Busca",
+   "ins": "briefing",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "“Costel” → 1 resultado; vazio tratado",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Idem",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Idem (filtro ao vivo)",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "INT-04",
+   "dim": "INT",
+   "req": "Filtros aplicam e ordenação funciona",
+   "esc": "Drawer de filtros + template",
+   "ins": "L635",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "30→4; menor preço OK",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "22→7; OK",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "16→5; OK",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "INT-05",
+   "dim": "INT",
+   "req": "Drawer: Esc, overlay, botão, foco preso e devolvido",
+   "esc": "Drawer Soft Pill",
+   "ins": "L533, L213",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "5/5",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "5/5",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "5/5",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "INT-06",
+   "dim": "INT",
+   "req": "Linha 2 recolhe ao descer e volta ao subir",
+   "esc": "Layout de duas linhas",
+   "ins": "L95",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Recolhe e volta",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Recolhe e volta",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Entra em laço: altura de 24–42 px e scrollY oscilando sem parar depois de uma única rolagem",
+     0,
+     "C"
+    ]
+   }
+  },
+  {
+   "id": "INT-07",
+   "dim": "INT",
+   "req": "Faixa de anúncio dispensável",
+   "esc": "Mega Empório",
+   "ins": "L168",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "OK",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "OK",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "OK (catálogo)",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "INT-08",
+   "dim": "INT",
+   "req": "Carrinho: contador accent, incrementa, abre a sacola",
+   "esc": "Mega Empório + template",
+   "ins": "L192, L675",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "3/3",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "3/3",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "3/3",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "INT-09",
+   "dim": "INT",
+   "req": "Menu do avatar (nome/e-mail, Meu perfil… Sair)",
+   "esc": "Mega Empório",
+   "ins": "L191 × L17",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Completo, com aviso de perfil fictício",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Completo",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Itens presentes; “Visitante” no lugar de nome e e-mail",
+     75,
+     "D"
+    ]
+   }
+  },
+  {
+   "id": "INT-10",
+   "dim": "INT",
+   "req": "Toque em categoria filtra sem mover a faixa",
+   "esc": "Header fixo com busca…",
+   "ins": "L135",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "3/3 (scrollLeft 99→99)",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "3/3 (101→101)",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Filtra, mas a faixa se desloca 14 px (2/3)",
+     67,
+     "C"
+    ]
+   }
+  },
+  {
+   "id": "INT-11",
+   "dim": "INT",
+   "req": "Dock responde e atualiza o ativo",
+   "esc": "Header fixo com busca…",
+   "ins": "L117, L136",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Rotas com aria-current",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Rotas ou rolagem até a seção",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Início, Catálogo, Buscar (foca o campo), Sacola (drawer)",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "INT-12",
+   "dim": "INT",
+   "req": "prefers-reduced-motion",
+   "esc": "Regras gerais",
+   "ins": "L729",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Sim",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Sim",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Sim",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "RSP-01",
+   "dim": "RSP",
+   "req": "Sem overflow horizontal (320–1920)",
+   "esc": "Regras gerais",
+   "ins": "L717",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "0/15 larguras",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "0/15",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "0/15",
+     100,
+     "—"
+    ]
+   }
+  },
+  {
+   "id": "RSP-02",
+   "dim": "RSP",
+   "req": "Sem texto cortado, sobreposição ou instabilidade",
+   "esc": "Regras gerais",
+   "ins": "L718–719",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Nada encontrado",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Nada visível (o rótulo “Adicionar à sacola” fica oculto de propósito)",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "Página “treme” por causa do laço do header (INT-06); vão no hero",
+     50,
+     "C"
+    ]
+   }
+  },
+  {
+   "id": "RSP-03",
+   "dim": "RSP",
+   "req": "Inputs com ≥ 16 px no celular",
+   "esc": "Regras gerais",
+   "ins": "L721",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "Todos com 16",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "Busca com 15 e ordenação com 14 (1/3)",
+     33,
+     "C"
+    ],
+    "dev-3": [
+     "Newsletter com 14 (2/3)",
+     67,
+     "C"
+    ]
+   }
+  },
+  {
+   "id": "RSP-04",
+   "dim": "RSP",
+   "req": "Celular na horizontal: barras ≤ 25% da altura",
+   "esc": "Header fixo com busca…",
+   "ins": "L140, L726 (104+52+64 px não cabem em 25% de 375 px)",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "27% lendo; 42% no topo",
+     50,
+     "D"
+    ],
+    "dev-2": [
+     "17% (header deixa de ser fixo)",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "46% lendo; 54% no topo",
+     0,
+     "D"
+    ]
+   }
+  },
+  {
+   "id": "RSP-05",
+   "dim": "RSP",
+   "req": "Tablet 768×1024 coerente",
+   "esc": "Layout desktop compactado",
+   "ins": "L150",
+   "j": false,
+   "s": {
+    "dev-1": [
+     "OK",
+     100,
+     "—"
+    ],
+    "dev-2": [
+     "OK",
+     100,
+     "—"
+    ],
+    "dev-3": [
+     "OK",
+     100,
+     "—"
+    ]
+   }
+  }
+ ],
+ "notas": {
+  "dev-1": {
+   "DSK": [
+    97.3,
+    13
+   ],
+   "MOB": [
+    96.1,
+    13
+   ],
+   "PAL": [
+    100,
+    10
+   ],
+   "CMP": [
+    100,
+    7
+   ],
+   "INT": [
+    100,
+    12
+   ],
+   "ARQ": [
+    96.7,
+    10
+   ],
+   "RSP": [
+    90,
+    5
+   ],
+   "GERAL": [
+    97.6,
+    70
+   ],
+   "ADERENCIA": [
+    99.5,
+    66
+   ],
+   "ORIGENS": {
+    "A": 0,
+    "B": 3,
+    "C": 2,
+    "D": 1,
+    "E": 3
+   },
+   "J": [
+    "ARQ-10"
+   ]
+  },
+  "dev-2": {
+   "DSK": [
+    98.1,
+    13
+   ],
+   "MOB": [
+    94.1,
+    13
+   ],
+   "PAL": [
+    99,
+    10
+   ],
+   "CMP": [
+    95.9,
+    7
+   ],
+   "INT": [
+    100,
+    12
+   ],
+   "ARQ": [
+    96.7,
+    10
+   ],
+   "RSP": [
+    86.6,
+    5
+   ],
+   "GERAL": [
+    96.6,
+    70
+   ],
+   "ADERENCIA": [
+    97.6,
+    67
+   ],
+   "ORIGENS": {
+    "A": 0,
+    "B": 3,
+    "C": 6,
+    "D": 0,
+    "E": 3
+   },
+   "J": [
+    "ARQ-10"
+   ]
+  },
+  "dev-3": {
+   "DSK": [
+    82.9,
+    13
+   ],
+   "MOB": [
+    81.6,
+    13
+   ],
+   "PAL": [
+    94.2,
+    10
+   ],
+   "CMP": [
+    94.3,
+    7
+   ],
+   "INT": [
+    85.7,
+    12
+   ],
+   "ARQ": [
+    75,
+    10
+   ],
+   "RSP": [
+    63.4,
+    5
+   ],
+   "GERAL": [
+    83.4,
+    70
+   ],
+   "ADERENCIA": [
+    89.7,
+    57
+   ],
+   "ORIGENS": {
+    "A": 0,
+    "B": 11,
+    "C": 17,
+    "D": 2,
+    "E": 2
+   },
+   "J": [
+    "ARQ-10"
+   ]
+  }
+ }
+}
