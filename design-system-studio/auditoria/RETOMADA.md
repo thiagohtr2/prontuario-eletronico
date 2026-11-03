@@ -1,3 +1,6 @@
+> **Atualização (2026-11-03): auditoria concluída.** Todas as etapas foram retomadas e terminadas. O resultado
+> está em [`RELATORIO-FINAL.md`](RELATORIO-FINAL.md). Este arquivo fica como registro da pausa.
+
 # Retomada da auditoria — ponto exato de parada
 
 Pausada a pedido do dono em 2026-11-02 ~19:00 UTC (créditos em 92%). Todos os agentes foram parados

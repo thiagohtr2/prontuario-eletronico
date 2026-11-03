@@ -22,11 +22,11 @@ está a um ciclo de correções estruturais de distância de ser confiável.
 ### O que a auditoria provou (com números)
 
 1. **A arquitetura é transmitida com altíssima fidelidade.** Em 15 sites construídos só a partir do
-   Master Prompt, a dimensão "arquitetura" ficou entre 75% e 100% e, em 13 dos 15 sites, acima de 93%.
+   Master Prompt, a dimensão "arquitetura" ficou entre 75% e 100% e, em 13 dos 15 sites, igual ou acima de 93%.
    Sidebar integral, header só sobre o conteúdo, One Screen, dock flutuante com stories e drawer —
    tudo apareceu como escolhido. Nenhum desenvolvedor trocou a navegação móvel escolhida por outra.
 2. **Os desenvolvedores seguiram o prompt com disciplina.** Fidelidade geral ao que foi exportado:
-   93–99,9% para 13 dos 15 sites (P2/dev-3: 83,4%). Quando algo saiu diferente, na maioria das vezes a
+   93,3–99,9% em 14 dos 15 sites (P2/dev-3: 83,4%). Quando algo saiu diferente, na maioria das vezes a
    causa foi o próprio prompt (tipos A, B e D), não a IA.
 3. **O prompt se contradiz em todos os projetos.** A tela do Studio mostrou "0 contradições" nos
    cinco projetos; os auditores encontraram de 4 a 25 contradições ou lacunas por prompt (altura do
@@ -176,17 +176,17 @@ os sites, matriz requisito a requisito, composições lado a lado e redação co
 
 | Projeto | Req. por site | dev-1 | dev-2 | dev-3 |
 | --- | ---: | ---: | ---: | ---: |
-| P1 Atlas Workspace | __P1_N__ | __P1_D1__ | __P1_D2__ | __P1_D3__ |
+| P1 Atlas Workspace | 96 | 97,4 | 96,7 | 94,2 |
 | P2 Verde Vivo | 70 | 97,6 | 96,6 | 83,4 |
 | P3 Nexo Capital | 87 | 99,9 | 98,6 | 95,7 |
 | P4 Centro Operacional | 71 | 97,9 | 98,0 | 93,3 |
 | P5 Conecta | 74 | 99,1 | 99,1 | 95,7 |
 
-Por dimensão (P2–P5; P1 no relatório do projeto):
+Por dimensão (15 sites):
 
 | Dimensão | Faixa observada | Observação |
 | --- | --- | --- |
-| Arquitetura | 75–100 | 100 em 8 de 12 sites; o 75 é P2/dev-3, que seguiu o header do modelo de landing por causa de instrução contraditória |
+| Arquitetura | 75–100 | 100 em 7 de 15 sites e ≥ 93 em 13; o 75 é P2/dev-3, que seguiu o header do modelo de landing por causa de instrução contraditória |
 | Desktop | 82,9–100 | |
 | Celular | 81,6–100 | nenhuma troca da navegação móvel escolhida |
 | Paleta | 81,9–100 | P4/dev-3 não aplicou a fonte (Times New Roman) |
@@ -194,14 +194,15 @@ Por dimensão (P2–P5; P1 no relatório do projeto):
 | Interações | 85,7–100 | |
 
 **Importante:** essas notas medem a fidelidade **ao prompt**. A semelhança com a **prévia aprovada no
-Studio** foi baixa em P4 e P5 por falha do Studio (a prévia não corresponde ao prompt) — registrada como
+Studio** foi baixa em P1, P4 e P5 por falha do Studio (a prévia não corresponde ao prompt: em P1 ela
+mostrava cartões arredondados e destinos de navegação que nunca foram exportados) — registrada como
 julgamento de design, fora das notas.
 
 ### F.2 Origem das falhas
 
 | Projeto | A — Studio | B — Master Prompt | C — desenvolvedor | D — conflito | E — aceitável |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| P1 | __P1_A__ | __P1_B__ | __P1_C__ | __P1_DD__ | __P1_E__ |
+| P1 | 8 | 2 + 14 de redação (sem perda de nota) | 15 | 7 | 2 |
 | P2 | 6 lacunas (à parte) | 17 | 25 | 3 | 8 |
 | P3 | 1 nos sites + 8 na cadeia | 3 nos sites + 25 B/D na cadeia | 8 | 4 | 77 (contradições do prompt resolvidas de forma aceitável) |
 | P4 | 4 | 12 | 8 | 7 | 9 |
@@ -220,8 +221,10 @@ repetem nos cinco projetos e são do Studio.
 4. **Família visual × identidade global** — raio 0/4/6/10/20 contra o raio escolhido; "fonte do sistema"
    contra a fonte escolhida; cor de destaque fora da paleta.
 5. **Conteúdo de exemplo × domínio do projeto** — marcas, menus, KPIs e títulos de demonstração.
-6. **Escopo e destinos** — em que telas aparecem os stories; destinos do header × do dock; onde fica o
-   seletor de período (P3 pede em três lugares).
+6. **Escopo e destinos** — em que telas aparecem os stories; destinos do header × do dock; destinos da
+   navegação inferior que a prévia mostrava mas não foram exportados (P1: três conjuntos diferentes nos
+   três sites); página inicial do app não exportada (P1); onde fica o seletor de período (P3 pede em
+   três lugares).
 7. **Regras inalcançáveis** — "barras ≤ 25% da altura em paisagem" quando as medidas obrigatórias já
    ocupam 59%; anéis de foco e textos semânticos em cores que não passam no WCAG (os desenvolvedores
    desviaram de propósito para cumprir acessibilidade).
@@ -230,7 +233,7 @@ repetem nos cinco projetos e são do Studio.
 
 **dev-1 = Claude Opus 5.5 · dev-2 = Claude Sonnet 5.5 · dev-3 = Claude Haiku 5.5.**
 
-- Opus e Sonnet: 96,6–99,9% em todos os projetos medidos; diferenças entre eles dentro do ruído.
+- Opus e Sonnet: 96,6–99,9% nos cinco projetos; diferenças entre eles dentro do ruído.
 - Haiku: o menor resultado nos cinco projetos (83,4–95,7%) e a maioria das falhas tipo C (fonte não
   aplicada, página tremendo, nome do projeto invisível, regras de paisagem não cumpridas).
 - Os três registraram as mesmas contradições do prompt, o que confirma que elas estão no texto, não na
@@ -287,7 +290,8 @@ UX (design), REG (regressão), A1–A6 / P1–P5 (agentes). Esforço: baixo / m�
   REG-11 passando; teste unitário para cada regra de precedência.
 
 **B-02 · Conteúdo do projeto como fonte única; conteúdo de exemplo fora do prompt**
-- *Evidência:* TE-03; A1, A2, A3, A5, A6; P1–P5; falhas A em P2–P5 (menus "Contratos, Compras, Folha"
+- *Evidência:* TE-03; A1, A2, A3, A5, A6; P1–P5; falhas A em P1–P5 (em P1, os destinos da navegação
+  inferior mostrados na prévia não foram exportados e cada site inventou os seus) (menus "Contratos, Compras, Folha"
   em app financeiro, "Receita mensal" em painel operacional, "Agendar test drive" na barbearia).
 - *Esperado:* menu, módulos, marca e principais dados vêm do que o usuário informou; exemplos de modelo
   nunca aparecem como decisão.
@@ -411,13 +415,15 @@ Nota de fidelidade de cada site construído: seção F.1.
 5. **As prévias representam fielmente o que se escolhe?** As prévias de cada galeria, sim. A prévia
    integrada, não: conteúdo genérico, marcas trocadas, regiões cortadas; em P4 e P5 os sites se pareceram
    com o prompt e não com a prévia.
-6. **Todas as decisões são registradas?** Quase: densidade do componente não chega ao prompt (REG-11),
-   composição B sai com medidas da A (TE-04), observação na paleta some (TE-09); login antigo permanece
-   após trocar o fluxo (REG-20).
+6. **Todas as decisões são registradas?** Não todas: densidade do componente não chega ao prompt
+   (REG-11), composição B sai com medidas da A (TE-04), observação na paleta some (TE-09), destinos da
+   navegação inferior e página inicial mostrados na prévia não são exportados (fidelidade P1), login
+   antigo permanece após trocar o fluxo (REG-20).
 7. **O Master Prompt comunica sem ambiguidade?** Não. É muito preciso em cores, tokens, arquitetura e
    regras de responsividade, mas se contradiz em medidas, breakpoints e navegação móvel, e mistura
    conteúdo de exemplo.
-8. **IAs diferentes constroem sites semelhantes?** Na estrutura, sim — muito semelhantes. Nos pontos
+8. **IAs diferentes constroem sites semelhantes?** Na estrutura, sim — muito semelhantes (P1: os três
+   reproduziram sidebar integral de 252 px, header de 64 px só sobre o conteúdo e bottom nav sem drawer). Nos pontos
    ambíguos, cada uma decide de um jeito (escopo dos stories, abas do celular, seletor de período, cor
    dos selos). Testado apenas entre modelos Claude.
 9. **O que os modelos mais interpretam de forma diferente?** Seção F.3: breakpoints, medidas de header e

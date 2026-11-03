@@ -63,4 +63,5 @@ entregue (seria "acesso ao estado interno"). Nos cinco projetos, o construtor in
 
 ## Mapeamento dos desenvolvedores (revelado só no relatório final)
 
-Mantido fora das pastas lidas pelos auditores até a consolidação.
+dev-1 = Claude Opus 5.5 · dev-2 = Claude Sonnet 5.5 · dev-3 = Claude Haiku 5.5 (revelado após o fim das
+auditorias de fidelidade; ver `RELATORIO-FINAL.md`, seção F.4).
