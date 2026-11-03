@@ -1,0 +1,1 @@
+dev-1 ok [ 'INT8: page.click: Timeout 30000ms exceeded.' ]

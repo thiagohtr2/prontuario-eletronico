@@ -1,0 +1,37 @@
+[
+  {
+    "name": "chip",
+    "el": "ui-chip",
+    "outline": "none 3px",
+    "shadow": "none",
+    "forced": true
+  },
+  {
+    "name": "cartao",
+    "el": "ui-option__hit",
+    "outline": "none 3px",
+    "shadow": "none",
+    "forced": true
+  },
+  {
+    "name": "aba",
+    "el": "ui-tab",
+    "outline": "none 3px",
+    "shadow": "none",
+    "forced": true
+  },
+  {
+    "name": "botao-primario",
+    "el": "ui-btn",
+    "outline": "none 3px",
+    "shadow": "none",
+    "forced": true
+  },
+  {
+    "name": "link-menu",
+    "el": "shell-link",
+    "outline": "solid 2px",
+    "shadow": "none",
+    "forced": true
+  }
+]

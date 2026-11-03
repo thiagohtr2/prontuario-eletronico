@@ -221,7 +221,7 @@
   box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--focus-ring);
 }
 
-.hdr-menu { display: none; }
+.app-header .hdr-menu { display: none; }
 .hdr-brand { display: none; color: var(--nav-active-text); }
 .hdr-brand:hover { color: var(--nav-active-text); }
 
@@ -464,6 +464,11 @@
   .content { padding: var(--s-6); }
   .hdr-export-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .hdr-export { padding: 0; width: 36px; }
+  .hdr-actions { gap: var(--s-2); }
+  .hdr-tab { padding: 0 10px; }
+  .sb-footer { padding: var(--s-2); }
+  .profile-btn { gap: var(--s-2); padding: 6px; }
+  .profile-btn > .ic { width: 16px; height: 16px; }
 }
 
 /* ≥ 1440: busca visível como campo */
@@ -521,7 +526,7 @@
     padding: env(safe-area-inset-top) max(var(--s-4), env(safe-area-inset-right)) 0 max(var(--s-4), env(safe-area-inset-left));
     gap: var(--s-2);
   }
-  .hdr-menu { display: inline-grid; width: 44px; height: 44px; margin-left: -6px; }
+  .app-header .hdr-menu { display: inline-grid; width: 44px; height: 44px; margin-left: -6px; }
   .hdr-brand { display: inline-flex; }
   .hdr-tabs, .hdr-crumbs, .hdr-search, .hdr-period, .hdr-export, .hdr-bell { display: none !important; }
   .hdr-avatar { width: 44px; height: 44px; margin-right: -6px; }

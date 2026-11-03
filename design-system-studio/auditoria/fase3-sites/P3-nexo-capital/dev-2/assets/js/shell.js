@@ -204,7 +204,7 @@
   function setUnit(i) {
     unit = i;
     $('#ws-unit').textContent = NX.units[i];
-    $('#ws-btn').setAttribute('aria-label', 'Nexo Capital, unidade ' + NX.units[i].replace('·', '') + '. Trocar de unidade');
+    $('#ws-btn').setAttribute('aria-label', 'Nexo Capital ' + NX.units[i] + '. Trocar de unidade');
     ui.toast('Unidade alterada: ' + NX.units[i] + '.', 'check');
     cfg.onUnit();
   }

@@ -431,11 +431,11 @@ input[type="checkbox"] {
   color: var(--text-muted);
 }
 
-.state .icon {
+.state > .icon {
   color: var(--icon);
 }
 
-.state--error .icon {
+.state--error > .icon {
   color: var(--error-fg);
 }
 

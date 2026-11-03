@@ -939,10 +939,10 @@ test.describe('REG-18 · Desktop e celular compatíveis', () => {
     expect([...cuts], 'larguras de troca citadas no prompt').toHaveLength(1)
   })
 
-  test('as mesmas escolhas feitas no desktop e no celular geram o mesmo projeto e o mesmo prompt', async ({ browser }) => {
+  test('as mesmas escolhas feitas no desktop e no celular geram o mesmo projeto e o mesmo prompt', async ({ browser, baseURL }) => {
     test.setTimeout(150_000)
     const build = async (opts: Parameters<typeof browser.newContext>[0]) => {
-      const ctx = await browser.newContext({ baseURL: 'http://127.0.0.1:4300', ...opts })
+      const ctx = await browser.newContext({ baseURL, ...opts })
       const page = await ctx.newPage()
       await freshStart(page)
       await go(page, '/guiado/objetivo')

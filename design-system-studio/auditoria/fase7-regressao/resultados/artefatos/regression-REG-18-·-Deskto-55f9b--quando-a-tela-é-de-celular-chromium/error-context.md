@@ -305,10 +305,10 @@ Call log:
   939  |     expect([...cuts], 'larguras de troca citadas no prompt').toHaveLength(1)
   940  |   })
   941  | 
-  942  |   test('as mesmas escolhas feitas no desktop e no celular geram o mesmo projeto e o mesmo prompt', async ({ browser }) => {
+  942  |   test('as mesmas escolhas feitas no desktop e no celular geram o mesmo projeto e o mesmo prompt', async ({ browser, baseURL }) => {
   943  |     test.setTimeout(150_000)
   944  |     const build = async (opts: Parameters<typeof browser.newContext>[0]) => {
-  945  |       const ctx = await browser.newContext({ baseURL: 'http://127.0.0.1:4300', ...opts })
+  945  |       const ctx = await browser.newContext({ baseURL, ...opts })
   946  |       const page = await ctx.newPage()
   947  |       await freshStart(page)
   948  |       await go(page, '/guiado/objetivo')

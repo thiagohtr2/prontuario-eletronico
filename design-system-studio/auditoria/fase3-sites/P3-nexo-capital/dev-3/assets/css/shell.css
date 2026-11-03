@@ -37,7 +37,7 @@
 .sidebar.is-open {
   transform: none;
   visibility: visible;
-  transition: transform 240ms ease-out, visibility 240ms;
+  transition: transform 240ms ease-out;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25);
 }
 .scrim {
@@ -179,9 +179,11 @@
 /* Rail (tablet, 768-1023 px) fechado: só ícones; rótulos ficam para leitores de tela e tooltip. */
 @media (min-width: 768px) and (max-width: 1023px) {
   .sidebar:not(.is-open) .sb-top {
-    flex-direction: column; justify-content: center; gap: 0;
+    flex-direction: column; align-items: center; justify-content: center; gap: 0;
     height: 64px; padding: 0 8px;
   }
+  .sidebar:not(.is-open) .sb-top .brand { justify-content: center; }
+  .sidebar:not(.is-open) .sb-top .rail-toggle { width: 40px; height: 36px; }
   .sidebar:not(.is-open) .brand-name,
   .sidebar:not(.is-open) .nav-label,
   .sidebar:not(.is-open) .profile-text {
@@ -366,5 +368,5 @@
     opacity: 0;
     transition: opacity 200ms, visibility 200ms;
   }
-  .sidebar.is-open { opacity: 1; transition: opacity 200ms, visibility 200ms; }
+  .sidebar.is-open { opacity: 1; transition: opacity 200ms; }
 }

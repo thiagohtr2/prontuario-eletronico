@@ -146,6 +146,22 @@
   font-weight: var(--fw-medium);
 }
 
+@media (max-width: 767.98px) {
+  .field__row .link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  .field__row {
+    align-items: center;
+  }
+
+  .login__bar .brand {
+    min-height: 44px;
+  }
+}
+
 .link--block {
   display: inline-flex;
   align-items: center;
@@ -158,21 +174,20 @@
 }
 
 .input--pw {
-  padding-right: 48px;
+  padding-right: 52px;
 }
 
 .input-btn {
   position: absolute;
-  top: 50%;
-  right: 2px;
-  transform: translateY(-50%);
+  top: 0;
+  right: 0;
+  bottom: 0;
   display: grid;
   place-items: center;
-  width: 40px;
-  height: calc(var(--control-h) - 4px);
+  width: 44px;
   padding: 0;
   border: 0;
-  border-radius: calc(var(--r-control) - 2px);
+  border-radius: 0 var(--r-control) var(--r-control) 0;
   background: transparent;
   color: var(--icon);
 }

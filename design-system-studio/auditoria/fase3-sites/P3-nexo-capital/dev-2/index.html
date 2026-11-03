@@ -22,7 +22,7 @@
     </symbol>
   </svg>
 
-  <a class="skip-link" id="skip-link" href="#/">Ir para o conteúdo</a>
+  <nav aria-label="Atalhos"><a class="skip-link" id="skip-link" href="#/">Ir para o conteúdo</a></nav>
   <noscript><p style="padding:24px">Esta demonstração precisa de JavaScript habilitado.</p></noscript>
 
   <!-- =====================================================================
@@ -133,7 +133,7 @@
       <aside class="sidebar" id="sidebar" aria-label="Barra lateral">
         <div class="sidebar__top">
           <button type="button" class="ws-btn" id="ws-btn" aria-haspopup="menu" aria-expanded="false"
-                  aria-label="Nexo Capital, unidade Matriz São Paulo. Trocar de unidade">
+                  aria-label="Nexo Capital Matriz · São Paulo. Trocar de unidade">
             <svg class="brand__mark" width="28" height="28" aria-hidden="true"><use href="#logo-mark"/></svg>
             <span class="ws-text">
               <span class="ws-name">Nexo Capital</span>
@@ -192,7 +192,7 @@
             <span class="js-icon" data-icon="bell" data-size="18"></span>
             <span class="notif-dot" id="notif-dot" aria-hidden="true"></span>
           </button>
-          <button type="button" class="avatar-btn" id="btn-avatar" aria-haspopup="menu" aria-expanded="false" aria-label="Menu do perfil de Ana Souza">AS</button>
+          <button type="button" class="avatar-btn" id="btn-avatar" aria-haspopup="menu" aria-expanded="false" aria-label="Menu do perfil de Ana Souza"><span class="avatar" data-initials="AS" aria-hidden="true"></span></button>
         </div>
       </header>
 
@@ -204,7 +204,7 @@
     <!-- Drawer pela esquerda (celular) -->
     <div class="drawer-root" id="drawer-root">
       <div class="scrim" id="drawer-scrim"></div>
-      <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+      <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu de navegação">
         <div class="drawer__head">
           <span class="avatar" aria-hidden="true">AS</span>
           <span class="profile__text">
@@ -222,7 +222,7 @@
             <span class="nav-item__label">Sair</span>
           </button>
         </div>
-      </aside>
+      </div>
     </div>
   </div>
 

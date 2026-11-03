@@ -93,22 +93,19 @@
       if (pm) list.push({ id: 'login-pass', label: 'Senha', msg: pm });
       return list;
     }
-    function refreshSummary() {
-      if (!submitted) return;
-      var list = currentErrors();
-      summary.innerHTML = list.length ? summaryHTML(list) : '';
+    /* Ao sair do campo valida e mostra a mensagem abaixo dele. O resumo só é refeito no envio:
+       alterá-lo no blur deslocaria o botão entre o mousedown e o mouseup e engoliria o clique. */
+    function toAction(ev) {
+      return ev.relatedTarget && ev.relatedTarget.closest && ev.relatedTarget.closest('#btn-login, #btn-sso, #btn-toggle-pass, .link');
     }
-
-    email.addEventListener('blur', function () {
-      if (busy) return;
+    email.addEventListener('blur', function (ev) {
+      if (busy || toAction(ev)) return;
       setError(email, eErr, validateEmail(email.value));
-      refreshSummary();
     });
-    pass.addEventListener('blur', function () {
-      if (busy) return;
+    pass.addEventListener('blur', function (ev) {
+      if (busy || toAction(ev)) return;
       if (!submitted && !pass.value) { setError(pass, pErr, ''); return; }
       setError(pass, pErr, validatePass(pass.value));
-      refreshSummary();
     });
     email.addEventListener('input', function () {
       if (email.getAttribute('aria-invalid') === 'true') setError(email, eErr, validateEmail(email.value));
@@ -175,8 +172,8 @@
     var fForm = $('#forgot-form'), fEmail = $('#forgot-email'), fErr = $('#forgot-email-err');
     var fSummary = $('#forgot-summary'), fResult = $('#forgot-result'), fBtn = $('#btn-forgot');
     bindSummaryLinks(fSummary);
-    fEmail.addEventListener('blur', function () {
-      if (busy) return;
+    fEmail.addEventListener('blur', function (ev) {
+      if (busy || (ev.relatedTarget && ev.relatedTarget.closest && ev.relatedTarget.closest('#btn-forgot, .link--block'))) return;
       if (!forgotSubmitted && !fEmail.value) return;
       setError(fEmail, fErr, validateEmail(fEmail.value));
     });

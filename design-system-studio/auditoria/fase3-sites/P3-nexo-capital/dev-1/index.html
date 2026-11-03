@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Entrar · Nexo Capital</title>
+  <meta name="description" content="Nexo Capital — plataforma financeira: login corporativo, dashboard, tabelas e gráficos (demonstração de interface com dados fictícios).">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&amp;display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/shell.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <noscript><p style="padding:16px">Esta demonstração precisa de JavaScript habilitado.</p></noscript>
+
+  <!-- ===================== Login: Acesso corporativo ===================== -->
+  <div id="view-login" class="login" hidden>
+    <header class="login-header">
+      <a class="brand" href="#/entrar" aria-label="Nexo Capital">
+        <span data-brand-mark></span><span class="brand-name">Nexo Capital</span>
+      </a>
+      <a class="login-support" href="mailto:suporte.ti@nexocapital.com.br?subject=Acesso%20%C3%A0%20Nexo%20Capital">
+        <span data-icon="lifeBuoy" data-size="18"></span>Suporte de TI
+      </a>
+    </header>
+
+    <main class="login-main" id="login-main">
+      <section class="login-card" aria-labelledby="login-title">
+        <!-- Entrar -->
+        <div id="panel-login">
+          <h1 class="login-title" id="login-title" tabindex="-1">Acesso corporativo</h1>
+          <p class="login-sub">Entre com a conta da sua organização.</p>
+
+          <div class="form-summary" id="login-summary" role="alert" tabindex="-1" hidden></div>
+
+          <button type="button" class="btn btn--lg btn--primary btn--block login-sso" id="btn-sso">
+            <span data-icon="building" data-size="18"></span><span>Entrar com SSO da empresa</span>
+          </button>
+
+          <p class="divider">ou</p>
+
+          <form class="login-form" id="form-login" novalidate>
+            <div class="field">
+              <label class="field-label" for="login-email">E-mail corporativo</label>
+              <input class="input" id="login-email" name="email" type="email" inputmode="email" autocomplete="username" autocapitalize="none" spellcheck="false" placeholder="nome@empresa.com.br" required>
+              <p class="field-error" id="login-email-error" hidden></p>
+            </div>
+            <div class="field">
+              <label class="field-label" for="login-password">Senha</label>
+              <div class="input-wrap">
+                <input class="input" id="login-password" name="password" type="password" autocomplete="current-password" required>
+                <button type="button" class="icon-btn input-toggle" id="toggle-password" aria-label="Mostrar senha" aria-pressed="false" aria-controls="login-password"><span data-icon="eye"></span></button>
+              </div>
+              <p class="field-error" id="login-password-error" hidden></p>
+              <div class="field-aside"><a class="link-sm" href="#/recuperar-senha">Esqueci minha senha</a></div>
+            </div>
+            <button type="submit" class="btn btn--lg btn--outline btn--block login-submit" id="btn-login">Entrar</button>
+          </form>
+
+          <p class="login-demo">Demonstração: use <strong>ana.ribeiro@nexocapital.com.br</strong> e a senha <strong>Nexo@2026</strong>, ou o botão de SSO.</p>
+        </div>
+
+        <!-- Recuperação de senha -->
+        <div id="panel-recover" hidden>
+          <h1 class="login-title" id="recover-title" tabindex="-1">Recuperar senha</h1>
+          <p class="login-sub">Informe seu e-mail corporativo para receber um link de redefinição.</p>
+          <div class="form-summary" id="recover-summary" role="alert" tabindex="-1" hidden></div>
+          <form class="login-form" id="form-recover" novalidate style="margin-top:24px">
+            <div class="field">
+              <label class="field-label" for="recover-email">E-mail corporativo</label>
+              <input class="input" id="recover-email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="none" spellcheck="false" placeholder="nome@empresa.com.br" required>
+              <p class="field-error" id="recover-email-error" hidden></p>
+            </div>
+            <button type="submit" class="btn btn--lg btn--primary btn--block login-submit" id="btn-recover">Enviar link</button>
+          </form>
+          <div class="notice notice--success" id="recover-done" role="status" tabindex="-1" hidden>
+            <span data-icon="mail" data-size="18"></span>
+            <p>Se o e-mail existir, enviaremos um link para redefinir a senha. Verifique também a caixa de spam.</p>
+          </div>
+          <a class="login-back link-sm" href="#/entrar"><span data-icon="arrowLeft" data-size="16"></span>Voltar para o login</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="login-footer">
+      <p><span data-icon="shield" data-size="16"></span>Acesso monitorado. Uso restrito a colaboradores autorizados.</p>
+    </footer>
+  </div>
+
+  <!-- ===================== Aplicação: sidebar integral + header + conteúdo ===================== -->
+  <div id="view-app" class="app" hidden>
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+    <aside class="sidebar" id="sidebar"></aside>
+    <div class="app-main">
+      <header class="app-header" id="app-header"></header>
+      <main class="content" id="main" tabindex="-1"></main>
+    </div>
+    <div class="scrim" id="scrim"></div>
+    <div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menu de navegação"></div>
+  </div>
+
+  <div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+
+  <script src="js/icons.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/chart.js"></script>
+  <script src="js/table.js"></script>
+  <script src="js/login.js"></script>
+  <script src="js/shell.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

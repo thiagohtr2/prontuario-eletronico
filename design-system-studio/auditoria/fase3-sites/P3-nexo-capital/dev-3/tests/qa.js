@@ -5,7 +5,7 @@ const path = require('path');
 const fs = require('fs');
 
 const ROOT = path.resolve(__dirname, '..');
-const INDEX = 'file://' + path.join(ROOT, 'index.html');
+const INDEX = process.env.NEXO_URL || ('file://' + path.join(ROOT, 'index.html'));
 const SHOTS = path.join(__dirname, 'shots');
 fs.mkdirSync(SHOTS, { recursive: true });
 

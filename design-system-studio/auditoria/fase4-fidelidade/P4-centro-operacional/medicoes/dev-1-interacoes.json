@@ -1,0 +1,488 @@
+{
+ "errors": [
+  "INT8: page.click: Timeout 30000ms exceeded."
+ ],
+ "kpiDeltaColors": [
+  {
+   "t": "Alta de +12,4%",
+   "color": "#117e39"
+  },
+  {
+   "t": "Alta de +8,1%",
+   "color": "#117e39"
+  },
+  {
+   "t": "Queda de −2,7%",
+   "color": "#dc2626"
+  },
+  {
+   "t": "Estável: 0,0%",
+   "color": "#707072"
+  }
+ ],
+ "INT1": {
+  "indeterminateAfterOne": {
+   "ind": true,
+   "checked": false,
+   "aria": null
+  },
+  "allAfterHeader": [
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ "INT2": {
+  "Valor": {
+   "clickable": true,
+   "before": {
+    "aria": null,
+    "vals": [
+     "R$ 1.240,90",
+     "R$ 386,00",
+     "R$ 92,50",
+     "R$ 2.115,30"
+    ]
+   },
+   "a1": {
+    "aria": "descending",
+    "vals": [
+     "R$ 2.115,30",
+     "R$ 1.240,90",
+     "R$ 386,00",
+     "R$ 92,50"
+    ]
+   },
+   "a2": {
+    "aria": "ascending",
+    "vals": [
+     "R$ 92,50",
+     "R$ 386,00",
+     "R$ 1.240,90",
+     "R$ 2.115,30"
+    ]
+   }
+  },
+  "Cliente": {
+   "clickable": true,
+   "before": {
+    "aria": null,
+    "vals": [
+     "Padaria Trigo Fino",
+     "Farmácia Bom Pastor",
+     "Mercado Aurora",
+     "Loja Vértice"
+    ]
+   },
+   "a1": {
+    "aria": "ascending",
+    "vals": [
+     "Farmácia Bom Pastor",
+     "Loja Vértice",
+     "Mercado Aurora",
+     "Padaria Trigo Fino"
+    ]
+   },
+   "a2": {
+    "aria": "descending",
+    "vals": [
+     "Padaria Trigo Fino",
+     "Mercado Aurora",
+     "Loja Vértice",
+     "Farmácia Bom Pastor"
+    ]
+   }
+  },
+  "Status": {
+   "clickable": true,
+   "before": {
+    "aria": null,
+    "vals": [
+     "Concluído",
+     "Em separação",
+     "Atrasado",
+     "Pendente"
+    ]
+   },
+   "a1": {
+    "aria": "ascending",
+    "vals": [
+     "Atrasado",
+     "Pendente",
+     "Em separação",
+     "Concluído"
+    ]
+   },
+   "a2": {
+    "aria": "descending",
+    "vals": [
+     "Concluído",
+     "Em separação",
+     "Pendente",
+     "Atrasado"
+    ]
+   }
+  }
+ },
+ "INT3": {
+  "before": [
+   "transparent",
+   "transparent"
+  ],
+  "after": [
+   "#f4f4f4",
+   "transparent"
+  ]
+ },
+ "INT12": {
+  "primary": {
+   "before": "#18181b",
+   "after": "#161618"
+  },
+  "secondary": {
+   "before": "#ffffff",
+   "after": "#f4f4f4"
+  }
+ },
+ "INT6": {
+  "tip": "jul/26 · R$ 41,0 mil"
+ },
+ "INT7_openedByCardClick": true,
+ "INT7": {
+  "opened": {
+   "title": "Receita mensal",
+   "txt": "Receita mensal\n\nRelatório detalhado · últimos 12 meses\n\nR$ 48,2 mil\n\nAlta de\n+12,4%\nvs. mês anterior\nMínimo\nR$ 31,2 mil\nMáximo\nR$ 48,2 mil\nMédia\nR$ 38,1 mil\nR$ 49,9 mil\nR$ 39,7 mil\nR$ 29,5 mil\nnov/25\n"
+  },
+  "after": {
+   "open": false,
+   "focus": "kpi|Receita mensalR$ 48,2 milAlta "
+  }
+ },
+ "INT5": {
+  "label": "Ações do pedido de Padaria Trigo Fino",
+  "opened": {
+   "menu": "Ver detalhes Marcar como concluído Cancelar pedido",
+   "dialog": null
+  },
+  "after": {
+   "menuOpen": false,
+   "dialogOpen": false,
+   "focusLabel": "Ações do pedido de Padaria Trigo Fino"
+  },
+  "closesOnOutsideClick": true
+ },
+ "INT9": {
+  "t1": "Conexão: Conectado Última atualização: 00:00:26 Horário atual: 00:00:26",
+  "t2": "Conexão: Conectado Última atualização: 00:00:26 Horário atual: 00:00:28",
+  "changed": true
+ },
+ "alertsScroll": [
+  {
+   "cls": "alert-list",
+   "oy": "visible",
+   "ob": "auto",
+   "sh": 830,
+   "ch": 830,
+   "mask": "none"
+  },
+  {
+   "cls": "alerts-body",
+   "oy": "auto",
+   "ob": "contain",
+   "sh": 830,
+   "ch": 704,
+   "mask": "linear-gradient(to top, rgba(0, 0, 0, 0) 0px, rgb("
+  },
+  {
+   "cls": "alerts-scrollwrap",
+   "oy": "visible",
+   "ob": "auto",
+   "sh": 704,
+   "ch": 704,
+   "mask": "none"
+  },
+  {
+   "cls": "alerts-frame",
+   "oy": "visible",
+   "ob": "auto",
+   "sh": 704,
+   "ch": 704,
+   "mask": "none"
+  },
+  {
+   "cls": "alerts",
+   "oy": "visible",
+   "ob": "auto",
+   "sh": 816,
+   "ch": 816,
+   "mask": "none"
+  }
+ ],
+ "INT8": null,
+ "INT10": [
+  {
+   "el": "BUTTON Ticket médioR$ 37,54",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "none"
+  },
+  {
+   "el": "INPUT ",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "none"
+  },
+  {
+   "el": "BUTTON Concluir selecionado",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "none"
+  },
+  {
+   "el": "INPUT Selecionar todos os ",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "none"
+  },
+  {
+   "el": "BUTTON Cliente",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "none"
+  },
+  {
+   "el": "BUTTON Status",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "none"
+  },
+  {
+   "el": "BUTTON Valor",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "none"
+  },
+  {
+   "el": "BUTTON Data",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "none"
+  },
+  {
+   "el": "INPUT Selecionar pedido de",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "none"
+  }
+ ],
+ "DSK10": {
+  "1024": {
+   "before": {
+    "panel": false,
+    "content": true
+   },
+   "afterAlertTab": {
+    "panel": true,
+    "panelW": 1024,
+    "content": false,
+    "sel": [
+     "false",
+     "true"
+    ],
+    "docV": 0
+   }
+  },
+  "1180": {
+   "before": {
+    "panel": false,
+    "content": true
+   },
+   "afterAlertTab": {
+    "panel": true,
+    "panelW": 1180,
+    "content": false,
+    "sel": [
+     "false",
+     "true"
+    ],
+    "docV": 0
+   }
+  }
+ },
+ "consoleErrors": [],
+ "INT4": {
+  "carregando": {
+   "skeletons": 52,
+   "states": []
+  },
+  "vazio": {
+   "skeletons": 0,
+   "states": [
+    "Nenhum pedido recente. Novos pedidos aparecem aqui automaticamente. Restaurar da",
+    "Nenhum pedido recente."
+   ]
+  },
+  "erro": {
+   "skeletons": 52,
+   "states": []
+  }
+ },
+ "INT11": {
+  "hasRule": true,
+  "btnTransition": "1e-05s"
+ },
+ "MOB": {
+  "tabs": [
+   {
+    "sel": [
+     "true",
+     "false",
+     "false",
+     "false"
+    ],
+    "panels": [
+     "sec-indicadores"
+    ],
+    "shellH": 844,
+    "docV": 0,
+    "docH": 0,
+    "tableVisible": false,
+    "tableInfo": null,
+    "cardLike": 0,
+    "text": "Indicadores\nReceita mensal\nR$ 48,2 mil\nAlta de\n+12,4%\nvs. mê",
+    "defects": {
+     "cut": [],
+     "overlap": [],
+     "small": [],
+     "fixed": [],
+     "total": 10
+    },
+    "name": "Indicadores"
+   },
+   {
+    "sel": [
+     "false",
+     "true",
+     "false",
+     "false"
+    ],
+    "panels": [
+     "sec-operacao"
+    ],
+    "shellH": 844,
+    "docV": 0,
+    "docH": 0,
+    "tableVisible": false,
+    "tableInfo": null,
+    "cardLike": 0,
+    "text": "Operação\nSituação geral\nCrítico\n3 críticos · 3 em atenção · ",
+    "defects": {
+     "cut": [],
+     "overlap": [],
+     "small": [],
+     "fixed": [],
+     "total": 6
+    },
+    "name": "Operação"
+   },
+   {
+    "sel": [
+     "false",
+     "false",
+     "true",
+     "false"
+    ],
+    "panels": [
+     "sec-pedidos"
+    ],
+    "shellH": 844,
+    "docV": 0,
+    "docH": 0,
+    "tableVisible": false,
+    "tableInfo": null,
+    "cardLike": 17,
+    "text": "Pedidos recentes\n\n4 pedidos\nvalor total\nR$ 3.834,70\n·\n1 atra",
+    "defects": {
+     "cut": [],
+     "overlap": [],
+     "small": [],
+     "fixed": [],
+     "total": 18
+    },
+    "name": "Pedidos"
+   },
+   {
+    "sel": [
+     "false",
+     "false",
+     "false",
+     "true"
+    ],
+    "panels": [
+     "panel"
+    ],
+    "shellH": 844,
+    "docV": 0,
+    "docH": 0,
+    "tableVisible": false,
+    "tableInfo": null,
+    "cardLike": 0,
+    "text": "\n      \n\n        \n        \n          Indicadores\n          \n",
+    "defects": {
+     "cut": [],
+     "overlap": [],
+     "small": [],
+     "fixed": [],
+     "total": 6
+    },
+    "name": "Alertas 10"
+   }
+  ],
+  "safeArea": [
+   ".app-header",
+   "@media (max-width: 47.999em) {\n  .btn, .btn--cp { min-height"
+  ],
+  "dvh": [
+   ".menu {|}",
+   ".app {100dvh|}",
+   ".app {auto|100dvh}",
+   " {}",
+   ".app {auto|100dvh}",
+   " {}"
+  ],
+  "arrowRight": {
+   "sel": [
+    "false",
+    "true",
+    "false",
+    "false"
+   ],
+   "focus": "Operação"
+  },
+  "arrowLeft": {
+   "sel": [
+    "true",
+    "false",
+    "false",
+    "false"
+   ],
+   "focus": "Indicadores"
+  },
+  "aria": {
+   "role": "tablist",
+   "tabsRole": [
+    "tab",
+    "tab",
+    "tab",
+    "tab"
+   ],
+   "controls": [
+    "sec-indicadores",
+    "sec-operacao",
+    "sec-pedidos",
+    "panel"
+   ]
+  }
+ }
+}

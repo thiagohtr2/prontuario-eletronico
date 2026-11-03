@@ -1,0 +1,494 @@
+{
+ "errors": [],
+ "kpiDeltaColors": [
+  {
+   "t": "+12,4% (alta)",
+   "color": "#117e39"
+  },
+  {
+   "t": "+6,3% (alta)",
+   "color": "#117e39"
+  },
+  {
+   "t": "−1,9% (queda)",
+   "color": "#dc2626"
+  },
+  {
+   "t": "0,0% (sem variação)",
+   "color": "#707072"
+  }
+ ],
+ "INT1": {
+  "indeterminateAfterOne": {
+   "ind": true,
+   "checked": false,
+   "aria": null
+  },
+  "allAfterHeader": [
+   true,
+   true,
+   true,
+   true
+  ]
+ },
+ "INT2": {
+  "Valor": {
+   "clickable": true,
+   "before": {
+    "aria": "none",
+    "vals": [
+     "R$ 1.248,90",
+     "R$ 3.590,00",
+     "R$ 412,50",
+     "R$ 87,00"
+    ]
+   },
+   "a1": {
+    "aria": "ascending",
+    "vals": [
+     "R$ 87,00",
+     "R$ 412,50",
+     "R$ 1.248,90",
+     "R$ 3.590,00"
+    ]
+   },
+   "a2": {
+    "aria": "descending",
+    "vals": [
+     "R$ 3.590,00",
+     "R$ 1.248,90",
+     "R$ 412,50",
+     "R$ 87,00"
+    ]
+   }
+  },
+  "Cliente": {
+   "clickable": true,
+   "before": {
+    "aria": "none",
+    "vals": [
+     "Transportes Rio Verde #1041",
+     "Loja Alfa Comércio #1042",
+     "Padaria Bela Vista #1039",
+     "Clínica Vida Plena #1036"
+    ]
+   },
+   "a1": {
+    "aria": "ascending",
+    "vals": [
+     "Clínica Vida Plena #1036",
+     "Loja Alfa Comércio #1042",
+     "Padaria Bela Vista #1039",
+     "Transportes Rio Verde #1041"
+    ]
+   },
+   "a2": {
+    "aria": "descending",
+    "vals": [
+     "Transportes Rio Verde #1041",
+     "Padaria Bela Vista #1039",
+     "Loja Alfa Comércio #1042",
+     "Clínica Vida Plena #1036"
+    ]
+   }
+  },
+  "Status": {
+   "clickable": false,
+   "before": {
+    "aria": null,
+    "vals": [
+     "Em andamento",
+     "Pendente",
+     "Concluído",
+     "Cancelado"
+    ]
+   },
+   "a1": {
+    "aria": null,
+    "vals": [
+     "Em andamento",
+     "Pendente",
+     "Concluído",
+     "Cancelado"
+    ]
+   },
+   "a2": {
+    "aria": null,
+    "vals": [
+     "Em andamento",
+     "Pendente",
+     "Concluído",
+     "Cancelado"
+    ]
+   }
+  }
+ },
+ "INT3": {
+  "before": [
+   "transparent",
+   "transparent"
+  ],
+  "after": [
+   "#f4f4f4",
+   "transparent"
+  ]
+ },
+ "INT12": {
+  "primary": {
+   "before": "#18181b",
+   "after": "#161618"
+  },
+  "secondary": {
+   "before": "#ffffff",
+   "after": "#f4f4f4"
+  }
+ },
+ "INT6": {
+  "tip": "29/10: R$ 45,1 mil"
+ },
+ "INT7_openedByCardClick": false,
+ "INT7": {
+  "opened": {
+   "title": "Relatório: Receita mensal",
+   "txt": "Relatório: Receita mensal\nIndicador\nReceita mensal\nValor atual\nR$ 48,2 mil\nVariação\n+12,4% vs. mês anterior\nPeríodo\n20/10 a 02/11/2026 (14 dias)\n02/11\nR$ 48,2 mil\n01/11\nR$ 47,2 mil\n31/10\nR$ 46,3 mil\n3"
+  },
+  "after": {
+   "open": false,
+   "focus": "btn btn-link|Ver relatório"
+  }
+ },
+ "INT5": {
+  "label": "Ver detalhes do pedido 1041",
+  "opened": {
+   "menu": null,
+   "dialog": "Pedido #1041 Cliente Transportes Rio Verde Status Em andamento Valor R$ 3.590,00 Data 01/11/2026 Fechar"
+  },
+  "after": {
+   "menuOpen": false,
+   "dialogOpen": false,
+   "focusLabel": "Ver detalhes do pedido 1041"
+  },
+  "closesOnOutsideClick": null
+ },
+ "INT9": {
+  "t1": "Conectado Hora 00:00:26 Última atualização 00:00:25",
+  "t2": "Conectado Hora 00:00:28 Última atualização 00:00:25",
+  "changed": true
+ },
+ "alertsScroll": [
+  {
+   "cls": "alert-list",
+   "oy": "auto",
+   "ob": "contain",
+   "sh": 1531,
+   "ch": 772,
+   "mask": "none"
+  },
+  {
+   "cls": "scroll-wrap has-more",
+   "oy": "visible",
+   "ob": "auto",
+   "sh": 772,
+   "ch": 772,
+   "mask": "none"
+  },
+  {
+   "cls": "painel-alertas",
+   "oy": "visible",
+   "ob": "auto",
+   "sh": 816,
+   "ch": 816,
+   "mask": "none"
+  },
+  {
+   "cls": "app",
+   "oy": "visible",
+   "ob": "auto",
+   "sh": 900,
+   "ch": 900,
+   "mask": "none"
+  },
+  {
+   "cls": "",
+   "oy": "hidden",
+   "ob": "auto",
+   "sh": 900,
+   "ch": 900,
+   "mask": "none"
+  }
+ ],
+ "INT8": {
+  "before": {
+   "n": 25,
+   "first": "Atenção Latência alta no serviço de pagamentos 00:00:25",
+   "firstCls": "alert",
+   "anim": "none 0s",
+   "live": "polite",
+   "shell": [
+    1440,
+    900
+   ],
+   "docV": 0,
+   "panelW": 304
+  },
+  "after": {
+   "n": 26,
+   "first": "Informação Relatório diário gerado 00:00:34",
+   "firstCls": "alert is-new",
+   "anim": "alert-in 0.3s",
+   "live": "polite",
+   "shell": [
+    1440,
+    900
+   ],
+   "docV": 0,
+   "panelW": 304
+  },
+  "waitedMs": 6062
+ },
+ "INT10": [
+  {
+   "el": "BUTTON Pausar atualizações",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "rgba(24, 24, 27, 0.35) 0px 0px 0px 3px"
+  },
+  {
+   "el": "BUTTON Atualizar",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "rgba(24, 24, 27, 0.35) 0px 0px 0px 3px"
+  },
+  {
+   "el": "DIV Tendência dos último",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "rgba(24, 24, 27, 0.35) 0px 0px 0px 3px"
+  },
+  {
+   "el": "BUTTON Ver relatório",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "rgba(24, 24, 27, 0.35) 0px 0px 0px 3px"
+  },
+  {
+   "el": "DIV Tendência dos último",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "rgba(24, 24, 27, 0.35) 0px 0px 0px 3px"
+  },
+  {
+   "el": "BUTTON Ver relatório",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "rgba(24, 24, 27, 0.35) 0px 0px 0px 3px"
+  },
+  {
+   "el": "DIV Tendência dos último",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "rgba(24, 24, 27, 0.35) 0px 0px 0px 3px"
+  },
+  {
+   "el": "BUTTON Ver relatório",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "rgba(24, 24, 27, 0.35) 0px 0px 0px 3px"
+  },
+  {
+   "el": "DIV Tendência dos último",
+   "outline": "solid 2px rgb(24, 24, 27)",
+   "offset": "2px",
+   "shadow": "rgba(24, 24, 27, 0.35) 0px 0px 0px 3px"
+  }
+ ],
+ "DSK10": {
+  "1024": {
+   "before": {
+    "panel": false,
+    "content": true
+   },
+   "afterAlertTab": {
+    "panel": true,
+    "panelW": 1024,
+    "content": false,
+    "sel": [
+     "false",
+     "true"
+    ],
+    "docV": 0
+   }
+  },
+  "1180": {
+   "before": {
+    "panel": false,
+    "content": true
+   },
+   "afterAlertTab": {
+    "panel": true,
+    "panelW": 1180,
+    "content": false,
+    "sel": [
+     "false",
+     "true"
+    ],
+    "docV": 0
+   }
+  }
+ },
+ "consoleErrors": [],
+ "INT4": {
+  "carregando": {
+   "skeletons": 32,
+   "states": []
+  },
+  "vazio": {
+   "skeletons": 0,
+   "states": [
+    "Nenhum pedido recente no momento.",
+    "Nenhum pedido recente no momento."
+   ]
+  },
+  "erro": {
+   "skeletons": 0,
+   "states": [
+    "Não foi possível carregar os pedidos. Tentar novamente",
+    "Não foi possível carregar os pedidos."
+   ]
+  }
+ },
+ "INT11": {
+  "hasRule": true,
+  "btnTransition": "0s"
+ },
+ "MOB": {
+  "tabs": [
+   {
+    "sel": [
+     "true",
+     "false",
+     "false"
+    ],
+    "panels": [],
+    "shellH": 844,
+    "docV": 0,
+    "docH": 0,
+    "tableVisible": false,
+    "tableInfo": null,
+    "cardLike": 0,
+    "text": "Indicadores\nReceita mensal\n\nR$ 48,2 mil\n\n+12,4%\n(alta)\nvs. m",
+    "defects": {
+     "cut": [],
+     "overlap": [],
+     "small": [],
+     "fixed": [],
+     "total": 9
+    },
+    "name": "Indicadores"
+   },
+   {
+    "sel": [
+     "false",
+     "true",
+     "false"
+    ],
+    "panels": [],
+    "shellH": 844,
+    "docV": 0,
+    "docH": 0,
+    "tableVisible": true,
+    "tableInfo": {
+     "scrollerOX": "auto",
+     "scrollW": 604,
+     "clientW": 356,
+     "thPos": "sticky",
+     "tdPos": "sticky",
+     "tdLeft": "44px"
+    },
+    "cardLike": 0,
+    "text": "Total de pedidos recentes\n4 pedidos · R$ 5.338,40\nPedidos re",
+    "defects": {
+     "cut": [],
+     "overlap": [],
+     "small": [
+      "Valor 40x44",
+      "Data ↓ 37x44"
+     ],
+     "fixed": [],
+     "total": 19
+    },
+    "name": "Dados"
+   },
+   {
+    "sel": [
+     "false",
+     "false",
+     "true"
+    ],
+    "panels": [],
+    "shellH": 844,
+    "docV": 0,
+    "docH": 0,
+    "tableVisible": false,
+    "tableInfo": null,
+    "cardLike": 0,
+    "text": "\n      \n        Indicadores\n        \n          \n            ",
+    "defects": {
+     "cut": [],
+     "overlap": [],
+     "small": [],
+     "fixed": [],
+     "total": 5
+    },
+    "name": "Alertas"
+   }
+  ],
+  "safeArea": [
+   ".app",
+   ".topbar",
+   "@media (max-width: 767.98px) and (min-height: 560px) {\n  htm",
+   ".app",
+   "@media (max-width: 767.98px) and (min-height: 560px) and (or",
+   ".topbar",
+   ".tabs-mobile",
+   "@media (max-width: 767.98px) and (max-height: 559.98px) {\n  "
+  ],
+  "dvh": [
+   ".app {|100dvh}",
+   ".app {100dvh|0px}",
+   " {}",
+   ".app {100dvh|0px}",
+   " {}",
+   ".app {100dvh|0px}"
+  ],
+  "arrowRight": {
+   "sel": [
+    "false",
+    "true",
+    "false"
+   ],
+   "focus": "Dados"
+  },
+  "arrowLeft": {
+   "sel": [
+    "true",
+    "false",
+    "false"
+   ],
+   "focus": "Indicadores"
+  },
+  "aria": {
+   "role": "tablist",
+   "tabsRole": [
+    "tab",
+    "tab",
+    "tab"
+   ],
+   "controls": [
+    "sec-indicadores",
+    "sec-dados",
+    "painel-alertas"
+   ]
+  }
+ }
+}

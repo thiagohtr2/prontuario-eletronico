@@ -344,6 +344,12 @@
   display: none;
 }
 
+.brand--topbar {
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
 .brand--topbar .brand__mark {
   width: 28px;
   height: 28px;
@@ -505,29 +511,26 @@
 }
 
 .avatar-btn {
-  position: relative;
   display: grid;
   place-items: center;
   flex: none;
-  width: 32px;
-  height: 32px;
+  width: max(var(--control-h), 32px);
+  height: max(var(--control-h), 32px);
   padding: 0;
   border: 0;
   border-radius: 50%;
-  background: var(--primary-soft);
-  color: var(--primary);
-  font-size: var(--fs-12);
-  font-weight: var(--fw-title);
-  letter-spacing: 0.02em;
+  background: transparent;
 }
 
-.avatar-btn::after {
-  content: "";
-  position: absolute;
-  inset: -6px;
+.avatar[data-initials]::before {
+  content: attr(data-initials);
 }
 
-.avatar-btn:hover {
+.avatar-btn .avatar {
+  transition: background-color var(--t-hover) ease;
+}
+
+.avatar-btn:hover .avatar {
   background: var(--surface);
 }
 
@@ -831,14 +834,6 @@
     flex: 2 1 176px;
   }
 
-  .avatar-btn {
-    width: 32px;
-    height: 32px;
-  }
-
-  .avatar-btn::after {
-    inset: -6px;
-  }
 }
 
 /* Celular na horizontal: barras fixas <= 25% da altura */
