@@ -157,6 +157,23 @@ export function ProjectGoalForm({ guided = false }: { guided?: boolean }) {
         )}
       </Section>
 
+      <Section
+        id="menu"
+        title="Itens do menu principal"
+        description="Os destinos da navegação, na ordem em que devem aparecer. Header, sidebar, menu do celular, prévia e Master Prompt usam exatamente estes itens — os menus dos modelos são só exemplo."
+      >
+        <Field label="Itens do menu (um por linha)" htmlFor="p-nav" help={meta.navItems.some((s) => s.trim()) ? `${meta.navItems.filter((s) => s.trim()).length} item(ns). No celular com navegação inferior, os 4–5 primeiros viram atalhos e o restante vai para “Mais”.` : 'Ex.: Início, Projetos, Tarefas, Relatórios, Configurações.'}>
+          <Textarea id="p-nav" rows={5} value={meta.navItems.join('\n')} placeholder={'Início\nProjetos\nTarefas\nRelatórios\nConfigurações'} onChange={(e) => updateMeta({ navItems: e.target.value.split('\n') })} />
+        </Field>
+        {meta.features.length > 0 && !meta.navItems.some((s) => s.trim()) && (
+          <div>
+            <Button variant="ghost" icon={<Plus />} onClick={() => updateMeta({ navItems: [...meta.features] })}>
+              Usar as funcionalidades como itens do menu
+            </Button>
+          </div>
+        )}
+      </Section>
+
       <Section id="tecnologia" title="Tecnologia desejada (opcional)" description="Se você já sabe com o que a IA deve construir, informe aqui.">
         <Field label="Tecnologia" htmlFor="p-tech">
           <Input id="p-tech" value={meta.tech} placeholder="Ex.: React + TypeScript + Tailwind" onChange={(e) => updateMeta({ tech: e.target.value })} />

@@ -282,7 +282,7 @@ test.describe('REG-03 · Controles da identidade e dos componentes alteram a pr�
   })
 
   test('densidade da tabela mostrada no editor ("Padrão") é a mesma do Master Prompt', async ({ page }) => {
-    test.fail(true, `REG-03: o editor mostra "Densidade: Padrão", mas o prompt escreve a densidade da família ("confortável"/"compacta") ${VER}`)
+    // Corrigido no P0 (v4.20): `REG-03: o editor mostra "Densidade: Padrão", mas o prompt escreve a densidade da família ("confortável"/"compacta") ${VER}`)
     await freshStart(page)
     await go(page, '/modulos/componentes')
     await page.getByTestId('component-category-tabelas').click()
@@ -631,7 +631,7 @@ test.describe('REG-11 · Decisões chegam ao Master Prompt', () => {
   })
 
   test('propriedade escolhida no componente (Densidade = Compacta) chega ao prompt', async ({ page }) => {
-    test.fail(true, `REG-11: a densidade escolhida pelo usuário é sobrescrita pela densidade da família no prompt ${VER}`)
+    // Corrigido no P0 (v4.20): `REG-11: a densidade escolhida pelo usuário é sobrescrita pela densidade da família no prompt ${VER}`)
     await freshStart(page)
     await go(page, '/modulos/componentes')
     await page.getByTestId('component-category-tabelas').click()
@@ -641,7 +641,7 @@ test.describe('REG-11 · Decisões chegam ao Master Prompt', () => {
     await expect.poll(async () => (await savedProject(page)).components[0].props.densidade).toBe('compacta')
     await page.keyboard.press('Escape')
     const prompt = await masterPrompt(page)
-    expect(prompt.match(/Densidade: ([^\n·;]+)/)?.[1]?.trim()).toBe('compacta')
+    expect(prompt.match(/Densidade: ([^\n·;]+)/)?.[1]?.trim().toLowerCase()).toBe('compacta')
   })
 })
 
@@ -668,7 +668,7 @@ test.describe('REG-12 · Mudanças na paleta se propagam', () => {
   })
 
   test('troca manual da cor primária recalcula hover, active, foco e link', async ({ page }) => {
-    test.fail(true, `REG-12: a primária manual não recalcula os tokens derivados (hover/active/foco/link ficam na cor antiga) ${VER}`)
+    // Corrigido no P0 (v4.20): `REG-12: a primária manual não recalcula os tokens derivados (hover/active/foco/link ficam na cor antiga) ${VER}`)
     await freshStart(page)
     await go(page, '/modulos/cores')
     await page.getByRole('tab', { name: 'Tokens e cores' }).click()
@@ -929,7 +929,7 @@ test.describe('REG-17 · Sem overflow nas galerias de layouts', () => {
 
 test.describe('REG-18 · Desktop e celular compatíveis', () => {
   test('Master Prompt define um único ponto de troca entre arquitetura mobile e desktop', async ({ page }) => {
-    test.fail(true, `REG-18: o prompt manda trocar para desktop a partir de 768 px e, em outra seção, usar desktop compactado a partir de 600 px ${VER}`)
+    // Corrigido no P0 (v4.20): `REG-18: o prompt manda trocar para desktop a partir de 768 px e, em outra seção, usar desktop compactado a partir de 600 px ${VER}`)
     await seed(page, { layout: { desktopId: 'sidebar-integral-classica', mobileId: 'bottom-nav-classica' } })
     const prompt = await masterPrompt(page)
     const cuts = new Set<number>()

@@ -60,15 +60,19 @@ function AppFrame({ layout, theme, name, w, h }: { layout: DesktopLayout; theme:
   // Se há um header acima da sidebar, a marca fica no header (não repetimos o logo).
   const touchesTop = (id: string) => (layout.grid.areas[0] ?? '').split(/\s+/).includes(id)
 
+  const navItems = useProject((p) => p.meta.navItems)
+  const nav = navItems.map((s) => s.trim()).filter(Boolean)
+  const content = { brand: name, nav }
+
   const renderRegion = (region: LayoutRegion): ReactNode => {
     const hideBrand = hasHeader && !touchesTop(region.id)
     switch (region.kind) {
       case 'header':
-        return headerModel && header ? <HeaderPreview model={headerModel} variant={header.variant} theme={theme} interactive /> : <DefaultHeader theme={theme} name={name} />
+        return headerModel && header ? <HeaderPreview model={headerModel} variant={header.variant} theme={theme} interactive content={content} /> : <DefaultHeader theme={theme} name={name} nav={nav} />
       case 'sidebar':
-        return sidebarModel && sidebar ? <SidebarPreview model={sidebarModel} variant={sidebar.variant} theme={theme} interactive hideBrand={hideBrand} /> : <DefaultSidebar theme={theme} name={name} floating={region.floating} hideBrand={hideBrand} />
+        return sidebarModel && sidebar ? <SidebarPreview model={sidebarModel} variant={sidebar.variant} theme={theme} interactive hideBrand={hideBrand} content={content} /> : <DefaultSidebar theme={theme} name={name} floating={region.floating} hideBrand={hideBrand} nav={nav} />
       case 'rail':
-        return <Rail theme={theme} />
+        return <Rail theme={theme} nav={nav} />
       case 'submenu':
         return <Submenu theme={theme} />
       case 'panel':

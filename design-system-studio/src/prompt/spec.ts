@@ -4,7 +4,8 @@ import { fontName } from '@/core/tokens'
 import type { ThemeTokens } from '@/core/types'
 import { paletteById } from '@/modules/color/catalog'
 import { detectConflicts, detectPending, type Conflict, type Pending } from './conflicts'
-import { collectPromptItems, projectTypeLabel, type PromptItem } from './items'
+import { collectPromptData, projectTypeLabel, type PromptItem } from './items'
+import { mobileNavSummary, type AutoResolution } from './resolve'
 import { BREAKPOINTS, COMPONENT_RESPONSIVE_RULES, GLOBAL_RESPONSIVE_RULES, IMPLEMENTATION_RULES, REFERENCE_WIDTHS } from './responsive'
 
 /**
@@ -25,6 +26,13 @@ export interface ProjectSpec {
     purpose: string
     features: string[]
     tech: string
+  }
+  /** Conteúdo real do projeto: substitui o conteúdo de exemplo dos modelos. */
+  content: {
+    brand: string
+    navItems: string[]
+    mobileNav: string
+    rules: string[]
   }
   architecture: {
     entryFlow: { id: string; name: string; description: string } | null
@@ -60,6 +68,8 @@ export interface ProjectSpec {
   }
   implementationRules: string[]
   conflicts: Conflict[]
+  /** Decisões aplicadas automaticamente pelo modelo de fatos único (precedência fixa). */
+  resolutions: AutoResolution[]
   pending: Pending[]
   /** Registro plano de todos os itens, inclusive os retirados do prompt (`included: false`). */
   items: PromptItem[]
@@ -68,7 +78,8 @@ export interface ProjectSpec {
 }
 
 export function buildProjectSpec(project: Project): ProjectSpec {
-  const items = collectPromptItems(project)
+  const { items, resolutions } = collectPromptData(project)
+  const navItems = project.meta.navItems.map((s) => s.trim()).filter(Boolean)
   const pick = (key: string) => items.find((i) => i.key === key && i.included) ?? null
   const theme = projectTheme(project)
   const palette = paletteById(project.identity.paletteId)
@@ -90,6 +101,17 @@ export function buildProjectSpec(project: Project): ProjectSpec {
       purpose: project.meta.purpose,
       features: project.meta.features,
       tech: project.meta.tech,
+    },
+    content: {
+      brand: project.meta.name.trim(),
+      navItems,
+      mobileNav: mobileNavSummary(project),
+      rules: [
+        'Os modelos escolhidos no Studio definem estrutura e aparência. Marcas, menus, textos, números e pessoas que aparecem nas prévias são exemplos e não entram no produto.',
+        navItems.length
+          ? 'Header, sidebar e navegação móvel usam exatamente estes itens de menu, nesta ordem.'
+          : 'Os itens do menu ainda não foram definidos: pergunte ao usuário antes de criar a navegação.',
+      ],
     },
     architecture: {
       entryFlow: flow ? { id: flow.id, name: flow.name, description: flow.description } : null,
@@ -131,6 +153,7 @@ export function buildProjectSpec(project: Project): ProjectSpec {
     },
     implementationRules: IMPLEMENTATION_RULES,
     conflicts: detectConflicts(project),
+    resolutions,
     pending: detectPending(project),
     items,
     source: project,

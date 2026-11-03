@@ -37,6 +37,11 @@ export interface ProjectMeta {
   projectType: ProjectType | null
   projectTypeOther: string
   features: string[]
+  /**
+   * Itens do menu principal, na ordem, definidos pelo usuário. São a fonte única dos destinos de
+   * navegação: prévias e Master Prompt usam estes itens no lugar dos menus de exemplo dos modelos.
+   */
+  navItems: string[]
   tech: string
 }
 
@@ -214,6 +219,7 @@ export function createProject(): Project {
       projectType: null,
       projectTypeOther: '',
       features: [],
+      navItems: [],
       tech: '',
     },
     mode: 'guided',

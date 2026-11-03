@@ -429,7 +429,7 @@ export function buildSpec(sections: TemplateSection[], input: SpecInput, layout:
     structure: [...base, ...sections.map(sectionLayoutLine)],
     behavior: [...(input.behavior ?? []), ...kindBehaviors.values()],
     responsive: [
-      'Breakpoints sugeridos: ≤ 599 px (celular, uma coluna), 600–1023 px (tablet, 2 colunas onde houver grade) e ≥ 1024 px (desktop).',
+      'Breakpoints sugeridos: ≤ 767 px (celular, uma coluna), 768–1023 px (tablet, 2 colunas onde houver grade) e ≥ 1024 px (desktop).',
       ...sections.map(sectionMobileLine),
       ...(input.responsive ?? []),
       'Nenhuma seção pode causar rolagem horizontal da página entre 320 e 1920 px; áreas de toque com no mínimo 44 × 44 px.',

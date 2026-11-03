@@ -63,6 +63,25 @@ function formatValue(param: ParamDef, value: PropValue): PropValue {
   }
 }
 
+/**
+ * Remove das descrições da família visual as frases sobre raio, fontes e pesos tipográficos:
+ * esses valores vêm da identidade global e não podem aparecer com dois valores no prompt.
+ */
+const IDENTITY_SENTENCE = /\braios?\b|radius|\bfontes?\b|serifa|\bpeso \d{3}|\(\d{3}\)/i
+function stripIdentity(text: string): string {
+  return text
+    .split(/(?<=\.)\s+/)
+    .map((sentence) =>
+      sentence
+        .split(/;\s*/)
+        .filter((part) => !IDENTITY_SENTENCE.test(part))
+        .join('; '),
+    )
+    .filter((sentence) => sentence.trim() && sentence.trim() !== '.')
+    .map((sentence) => (/[.!?]$/.test(sentence.trim()) ? sentence.trim() : `${sentence.trim()}.`))
+    .join(' ')
+}
+
 /** Descreve uma instância de componente para o motor de prompts (função pura, sem JSX). */
 export function describeComponent(instance: ComponentInstance, theme: ResolvedTheme): ItemDescription {
   const category = categoryById(instance.categoryId)
@@ -76,24 +95,31 @@ export function describeComponent(instance: ComponentInstance, theme: ResolvedTh
   const properties: Record<string, PropValue> = { 'Família visual': `${family.number}. ${family.name}` }
   for (const p of category?.params ?? []) {
     const changed = Object.prototype.hasOwnProperty.call(instance.props, p.key)
-    properties[p.label] = changed ? formatValue(p, values[p.key]) : formatValue(p, p.default)
+    const v = changed ? formatValue(p, values[p.key]) : formatValue(p, p.default)
+    // Textos que o usuário não escreveu são só exemplo do modelo.
+    properties[p.label] = !changed && (p.type === 'text' || p.type === 'textarea') && String(v) ? `${v} (texto de exemplo)` : v
   }
-  Object.assign(properties, {
-    'Raio dos controles': s.radius >= 999 ? 'pílula (999 px)' : `${s.radius} px`,
-    'Raio dos contêineres': `${s.radiusCard} px`,
+  // Raio, fontes e tamanho base vêm da identidade global (precedência fixa do Master Prompt).
+  const m = theme.metrics
+  const t = theme.typography
+  // Valores da família visual; uma propriedade escolhida no editor (mesmo rótulo) prevalece.
+  const familyProps: Record<string, PropValue> = {
+    'Raio dos controles': `${m.radiusSm} px (raio pequeno da identidade global)`,
+    'Raio dos contêineres': `${m.radiusLg} px (raio grande da identidade global)`,
     Borda: s.borderWidth > 0 && s.borderStyle !== 'none' ? `${s.borderWidth} px ${s.borderStyle === 'dashed' ? 'tracejada' : 'sólida'} (${s.borderTone === 'ink' ? 'cor do texto' : s.borderTone === 'accent' ? 'destaque translúcido' : s.borderTone === 'light' ? 'branca translúcida' : s.borderTone === 'strong' ? 'borderStrong' : 'border'})` : 'sem borda',
     Sombra: SHADOW_TEXT[s.shadow],
     Superfície: SURFACE_TEXT[s.surface],
     'Ação principal': FILL_TEXT[s.fill],
-    'Fonte de títulos': `${fontName(s.headingFont)} ${s.headingWeight}`,
-    'Fonte de texto': fontName(s.font),
+    'Fonte de títulos': `${fontName(t.heading)} ${t.headingWeight} (identidade global)`,
+    'Fonte de texto': `${fontName(t.body)} (identidade global)`,
     'Caixa de rótulos e botões': s.textCase === 'uppercase' ? `caixa alta, espaçamento ${s.tracking} em` : 'normal (sentence case)',
-    'Tamanho base': `${s.fontSize} px`,
+    'Tamanho base': `${t.baseSize} px (identidade global)`,
     'Altura de controles': `${s.controlHeight} px (mínimo 44 px de área de toque no celular)`,
     Densidade: s.density < 0.9 ? 'compacta' : s.density > 1.1 ? 'espaçosa' : 'confortável',
     Ícones: `lucide, traço ${s.iconStroke} px, tratamento ${s.iconTreatment}`,
     'Indicador de ativo': s.indicator,
-  })
+  }
+  for (const [k, v] of Object.entries(familyProps)) if (!(k in properties)) properties[k] = v
 
   const colors: Record<string, string> = {}
   const add = (label: string, value: string) => {
@@ -124,16 +150,20 @@ export function describeComponent(instance: ComponentInstance, theme: ResolvedTh
   return {
     name: instance.label || category?.name || instance.categoryId,
     variant: family.name,
-    summary: `${category?.name ?? instance.categoryId} na família visual ${family.name}. ${category?.spec.summary ?? ''} Estilo: ${family.spec.summary}`.trim(),
+    summary: `${category?.name ?? instance.categoryId} na família visual ${family.name}. ${category?.spec.summary ?? ''} Estilo: ${stripIdentity(family.spec.summary)}`.trim(),
     properties,
     colors,
-    structure: [...(category?.spec.structure ?? []), ...family.spec.structure],
+    structure: [
+      ...(category?.spec.structure ?? []),
+      `Raio e tipografia herdados da identidade global: ${m.radiusSm} px nos controles, ${m.radiusLg} px nos contêineres; títulos em ${fontName(t.heading)}, textos em ${fontName(t.body)}, base ${t.baseSize} px.`,
+      ...family.spec.structure.map(stripIdentity).filter(Boolean),
+    ],
     behavior,
     responsive: [...(category?.spec.responsive ?? ['Adapte o componente a telas a partir de 320 px sem overflow horizontal.']), ...family.spec.responsive],
     measurements: {
       ...(category?.spec.measurements ?? {}),
       alturaDeControle: `${s.controlHeight} px`,
-      raio: s.radius >= 999 ? 'pílula' : `${s.radius} px / ${s.radiusCard} px`,
+      raio: `${m.radiusSm} px / ${m.radiusLg} px (identidade global)`,
       paddingInterno: `${Math.round(14 * s.density)} px`,
     },
     exceptions,

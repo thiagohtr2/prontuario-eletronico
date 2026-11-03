@@ -2764,3 +2764,30 @@ export function headerLookFor(model: HeaderModel, variant: 0 | 1): HeaderLook {
 export function sidebarLookFor(model: SidebarModel, variant: 0 | 1): SidebarLook {
   return { ...model.look, ...(model.compositions[variant].arrangement.patch ?? {}) }
 }
+
+/** Conteúdo real do projeto aplicado às prévias (no lugar da marca e do menu de exemplo). */
+export interface NavContent {
+  brand?: string
+  nav?: string[]
+}
+
+export function withHeaderContent(look: HeaderLook, content?: NavContent): HeaderLook {
+  if (!content) return look
+  const nav = (content.nav ?? []).map((s) => s.trim()).filter(Boolean)
+  return {
+    ...look,
+    brand: content.brand?.trim() || look.brand,
+    nav: nav.length && look.nav.length ? nav.slice(0, Math.max(look.nav.length, 4)).map((label, i) => ({ ...(look.nav[i] ?? { label }), label })) : look.nav,
+  }
+}
+
+export function withSidebarContent(look: SidebarLook, content?: NavContent): SidebarLook {
+  if (!content) return look
+  const nav = (content.nav ?? []).map((s) => s.trim()).filter(Boolean)
+  const icons = look.groups.flatMap((g) => g.items.map((i) => i.icon))
+  return {
+    ...look,
+    brand: content.brand?.trim() || look.brand,
+    groups: nav.length && icons.length ? [{ title: look.groups[0]?.title, items: nav.map((label, i) => ({ label, icon: icons[i % icons.length] })) }] : look.groups,
+  }
+}

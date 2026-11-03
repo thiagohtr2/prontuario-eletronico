@@ -25,7 +25,7 @@ import {
 import { cx } from '@/ui'
 import { fontStack } from '@/core/tokens'
 import type { ResolvedTheme } from '@/core/types'
-import { headerLookFor } from './catalog'
+import { headerLookFor, withHeaderContent, type NavContent } from './catalog'
 import { NavIconView } from './icons'
 import { Popover, useInert, useMenus, useWidth, type MenuApi } from './menu'
 import { headerColors, heroColors, navVars, type NavColors } from './palette'
@@ -44,6 +44,8 @@ export interface HeaderPreviewProps {
   scrolled?: boolean
   /** Avisado quando a pessoa clica em um item de navegação. */
   onNavigate?: (label: string) => void
+  /** Marca e itens de menu reais do projeto (prévia integrada). */
+  content?: NavContent
   className?: string
 }
 
@@ -998,9 +1000,9 @@ function Announcement({ look, compact, onClose }: { look: HeaderLook; compact: b
  * disponível; a altura vem do modelo. Menus e popovers ficam dentro da moldura mais próxima
  * marcada com `data-nv-frame` (ou dentro da janela).
  */
-export function HeaderPreview({ model, variant, theme, interactive = true, compact, scrolled = false, onNavigate, className }: HeaderPreviewProps) {
+export function HeaderPreview({ model, variant, theme, interactive = true, compact, scrolled = false, onNavigate, content, className }: HeaderPreviewProps) {
   const comp = model.compositions[variant]
-  const look = headerLookFor(model, variant)
+  const look = withHeaderContent(headerLookFor(model, variant), content)
   const rootRef = useRef<HTMLDivElement>(null)
   const width = useWidth(rootRef)
   const isCompact = compact ?? (width > 0 && width < 640)

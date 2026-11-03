@@ -2,12 +2,15 @@
 
 export const REFERENCE_WIDTHS = [320, 344, 360, 375, 390, 412, 430, 480, 600, 768, 820, 1024, 1280, 1440, 1920]
 
+/**
+ * Breakpoints únicos do projeto. Todos os textos do prompt usam estes limites: celular até 767 px
+ * (layout mobile), tablet de 768 a 1023 px (desktop compactado), desktop a partir de 1024 px.
+ */
 export const BREAKPOINTS = [
-  { name: 'xs', min: 0, max: 359, description: 'Celulares pequenos (320–359 px)' },
-  { name: 'sm', min: 360, max: 599, description: 'Celulares (360–599 px)' },
-  { name: 'md', min: 600, max: 1023, description: 'Tablets e celulares na horizontal (600–1023 px)' },
-  { name: 'lg', min: 1024, max: 1439, description: 'Notebooks (1024–1439 px)' },
-  { name: 'xl', min: 1440, max: null, description: 'Monitores grandes (1440 px ou mais)' },
+  { name: 'mobile', min: 0, max: 767, description: 'Celulares (até 767 px): layout mobile escolhido. Teste também 320–359 px.' },
+  { name: 'tablet', min: 768, max: 1023, description: 'Tablets (768–1023 px): layout desktop compactado (sidebar em trilho, menus recolhidos em “Mais”).' },
+  { name: 'desktop', min: 1024, max: 1439, description: 'Notebooks (1024–1439 px): layout desktop completo.' },
+  { name: 'wide', min: 1440, max: null, description: 'Monitores grandes (1440 px ou mais): layout desktop com largura máxima de conteúdo.' },
 ]
 
 export const GLOBAL_RESPONSIVE_RULES: string[] = [
@@ -20,7 +23,7 @@ export const GLOBAL_RESPONSIVE_RULES: string[] = [
   'Grids adaptáveis: reduza colunas progressivamente; nunca comprima cartões abaixo de uma largura legível.',
   'Suporte a zoom de até 200% e a fonte ampliada do sistema sem perda de conteúdo ou funcionalidade.',
   'Respeite as safe areas (`env(safe-area-inset-*)`) em barras fixas, docks e menus inferiores.',
-  'Funcione na orientação horizontal do celular: barras fixas não podem ocupar mais de 25% da altura.',
+  'Funcione na orientação horizontal do celular: barras fixas devem ocupar o mínimo da altura (referência: até ~25% somadas); se não couber, esconda-as ao rolar.',
   'Use `100dvh` (com fallback) em vez de `100vh` para alturas de tela cheia.',
   'Menus acessíveis por mouse, toque e teclado (Tab, Enter, Espaço, Esc), com foco visível.',
   'Respeite `prefers-reduced-motion` reduzindo animações.',

@@ -21,7 +21,7 @@ import {
 } from 'lucide-react'
 import { cx } from '@/ui'
 import type { ResolvedTheme } from '@/core/types'
-import { sidebarLookFor } from './catalog'
+import { sidebarLookFor, withSidebarContent, type NavContent } from './catalog'
 import { NavIconView } from './icons'
 import { Popover, useInert, useMenus, type MenuApi } from './menu'
 import { navVars, sidebarColors, type NavColors } from './palette'
@@ -45,6 +45,8 @@ export interface SidebarPreviewProps {
   hideBrand?: boolean
   /** Avisado quando a pessoa escolhe um item. */
   onNavigate?: (label: string) => void
+  /** Marca e itens de menu reais do projeto (prévia integrada). */
+  content?: NavContent
   className?: string
 }
 
@@ -675,10 +677,11 @@ export function SidebarPreview({
   onClose,
   hideBrand,
   onNavigate,
+  content,
   className,
 }: SidebarPreviewProps) {
   const arr = model.compositions[variant].arrangement
-  const look = sidebarLookFor(model, variant)
+  const look = withSidebarContent(sidebarLookFor(model, variant), content)
   const colors = sidebarColors(theme, look.surface)
   const rootRef = useRef<HTMLDivElement>(null)
   const menus = useMenus(interactive)

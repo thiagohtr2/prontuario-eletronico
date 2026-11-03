@@ -27,6 +27,7 @@ export const projectSchema = z.object({
     projectType: z.enum(['saas', 'dashboard', 'loja', 'landing', 'portfolio', 'one-screen', 'outro']).nullable(),
     projectTypeOther: z.string(),
     features: z.array(z.string()),
+    navItems: z.array(z.string()),
     tech: z.string(),
   }),
   mode: z.enum(['guided', 'free']),

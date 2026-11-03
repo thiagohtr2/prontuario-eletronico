@@ -140,7 +140,7 @@ export function PromptWorkspace() {
         tabs={[
           { value: 'master', label: 'Master Prompt' },
           { value: 'itens', label: `Itens (${spec.items.length})` },
-          { value: 'conflitos', label: `Contradições (${spec.conflicts.length})` },
+          { value: 'conflitos', label: `Contradições (${spec.conflicts.length + spec.resolutions.length})` },
           { value: 'json', label: 'Especificação JSON' },
         ]}
       />
@@ -178,8 +178,27 @@ export function PromptWorkspace() {
 
       {tab === 'conflitos' && (
         <div>
+          {spec.resolutions.length > 0 && (
+            <div className="pc-conflict" data-resolved="true" data-testid="auto-resolutions">
+              <div className="u-row" style={{ justifyContent: 'space-between' }}>
+                <strong>Resolvidas automaticamente pela precedência do Studio</strong>
+                <Badge tone="success">{spec.resolutions.length} resolvida(s)</Badge>
+              </div>
+              <p className="u-muted">
+                Modelos diferentes descreviam o mesmo fato com valores diferentes. Vale sempre: o layout desktop define estrutura e medidas; header e sidebar, só a aparência interna; o layout mobile, a
+                navegação no celular; a identidade global, cores, fontes e raios; o conteúdo do projeto substitui o conteúdo de exemplo.
+              </p>
+              <ul className="pc-pending">
+                {spec.resolutions.map((r) => (
+                  <li key={r.id} data-testid={`resolution-${r.id}`}>
+                    <strong>{r.title}:</strong> {r.instruction}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
           {spec.conflicts.length === 0 ? (
-            <EmptyState title="Nenhuma contradição encontrada">As escolhas atuais são compatíveis entre si.</EmptyState>
+            <EmptyState title="Nenhuma contradição a decidir">As escolhas atuais são compatíveis entre si{spec.resolutions.length ? ' (as diferenças de medida e conteúdo acima já foram resolvidas)' : ''}.</EmptyState>
           ) : (
             spec.conflicts.map((c) => (
               <div key={c.id} className="pc-conflict" data-resolved={Boolean(c.resolution)} data-testid={`conflict-${c.id}`}>

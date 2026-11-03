@@ -2821,7 +2821,7 @@ export const templates: TemplateModel[] = [
         'Tabela com ordenação por coluna, filtro por status e paginação; linhas clicáveis abrem o detalhe em painel lateral.',
         'Estados de carregamento (skeleton) e vazio para cada cartão.',
       ],
-      responsive: ['Em tablets (600–1023 px) a sidebar recolhe para um trilho de ícones (≈72 px) com tooltips.'],
+      responsive: ['Em tablets (768–1023 px) a sidebar recolhe para um trilho de ícones (≈72 px) com tooltips.'],
       notes: ['Números com formatação pt-BR (R$ 1.234,56) e variações com cor + ícone de seta (não só cor).'],
       measurements: { sidebar: '≈240 px', barraSuperior: '≈64 px', cartaoKpi: '≈120 px de altura' },
     },

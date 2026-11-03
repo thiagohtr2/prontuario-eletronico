@@ -177,7 +177,7 @@ const ARCH_SPEC: Record<LandingArchitecture, ArchSpec> = {
       'Conteúdo interno dos cartões não rola; textos longos são cortados com reticências.',
     ],
     responsive: [
-      'Entre 600 e 1023 px a grade passa para 2 colunas; o cartão de destaque ocupa as 2.',
+      'Entre 768 e 1023 px a grade passa para 2 colunas; o cartão de destaque ocupa as 2.',
       'No celular: cartões 1×1 lado a lado em 2 colunas e os demais em largura total; o cartão vertical vira horizontal.',
       'Navegação em hambúrguer abaixo de 768 px; CTAs do hero em largura total.',
     ],

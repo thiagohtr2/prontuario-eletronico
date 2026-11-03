@@ -1,4 +1,5 @@
-import { ENTRY_FLOWS, type Project } from '@/core/project'
+import { DEFAULT_GEOMETRY, DEFAULT_TYPOGRAPHY } from '@/core/tokens'
+import { DEFAULT_PALETTE_ID, ENTRY_FLOWS, type Project } from '@/core/project'
 import { paletteById } from '@/modules/color/catalog'
 import { siteById } from '@/modules/inspiration/catalog'
 import { desktopById, mobileById } from '@/modules/layouts/catalog'
@@ -175,5 +176,16 @@ export function detectPending(project: Project): Pending[] {
   if (flow?.needsLogin && !project.entry.signupId) out.push({ id: 'cadastro', message: 'Escolha um fluxo de cadastro (ou confirme que não haverá cadastro).', route: '/modulos/cadastro' })
   if (!project.layout.desktopId) out.push({ id: 'desktop', message: 'Escolha a arquitetura do computador.', route: '/modulos/desktop' })
   if (!project.layout.mobileId) out.push({ id: 'mobile', message: 'Escolha a arquitetura do celular.', route: '/modulos/mobile' })
+  const hasNav = Boolean(project.layout.desktopId || project.layout.mobileId || project.navigation.header || project.navigation.sidebar)
+  if (hasNav && !project.meta.navItems.some((s) => s.trim()))
+    out.push({ id: 'menu', message: 'Defina os itens do menu principal (os menus dos modelos são só exemplo).', route: '/guiado/objetivo' })
+  const same = (a: object, b: object) => JSON.stringify(Object.entries(a).sort()) === JSON.stringify(Object.entries(b).sort())
+  const identityUntouched =
+    project.identity.paletteId === DEFAULT_PALETTE_ID &&
+    Object.keys(project.identity.overrides).length === 0 &&
+    same(project.identity.typography, DEFAULT_TYPOGRAPHY) &&
+    same(project.identity.geometry, DEFAULT_GEOMETRY)
+  if (identityUntouched && (project.guided.skeletonApproved || project.mode === 'free'))
+    out.push({ id: 'identidade', message: 'Revise a identidade visual: cores, fontes e cantos ainda são o padrão do Studio.', route: '/modulos/cores' })
   return out
 }

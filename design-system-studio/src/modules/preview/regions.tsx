@@ -34,6 +34,12 @@ const NAV = [
   { icon: Settings, label: 'Configurações' },
 ]
 
+/** Itens do menu do projeto com ícones genéricos; sem itens definidos, usa o menu de exemplo. */
+function navList(nav?: string[]) {
+  if (!nav?.length) return NAV
+  return nav.map((label, i) => ({ icon: NAV[i % NAV.length].icon, label }))
+}
+
 const fill: CSSProperties = { width: '100%', height: '100%', minWidth: 0, minHeight: 0, overflow: 'hidden' }
 
 export function Brand({ theme, name, size = 15 }: { theme: ResolvedTheme; name: string; size?: number }) {
@@ -46,14 +52,14 @@ export function Brand({ theme, name, size = 15 }: { theme: ResolvedTheme; name: 
   )
 }
 
-export function DefaultHeader({ theme, name }: { theme: ResolvedTheme; name: string }) {
+export function DefaultHeader({ theme, name, nav }: { theme: ResolvedTheme; name: string; nav?: string[] }) {
   const t = theme.tokens
   const m = theme.metrics
   return (
     <div style={{ ...fill, display: 'flex', alignItems: 'center', gap: 16, padding: '0 20px', background: t.surface, color: t.text, borderBottom: `1px solid ${t.border}`, fontFamily: m.bodyFont }}>
       <Brand theme={theme} name={name} />
       <nav style={{ display: 'flex', gap: 4, marginLeft: 12 }}>
-        {['Visão geral', 'Projetos', 'Equipe'].map((l, i) => (
+        {(nav?.length ? nav.slice(0, 4) : ['Visão geral', 'Projetos', 'Equipe']).map((l, i) => (
           <span key={l} style={{ padding: '6px 10px', borderRadius: m.radiusMd, fontSize: 13.5, fontWeight: i === 0 ? 600 : 500, background: i === 0 ? t.selected : 'transparent', color: i === 0 ? t.selectedText : t.textMuted }}>
             {l}
           </span>
@@ -69,7 +75,7 @@ export function DefaultHeader({ theme, name }: { theme: ResolvedTheme; name: str
   )
 }
 
-export function DefaultSidebar({ theme, name, floating, hideBrand }: { theme: ResolvedTheme; name: string; floating?: boolean; hideBrand?: boolean }) {
+export function DefaultSidebar({ theme, name, floating, hideBrand, nav }: { theme: ResolvedTheme; name: string; floating?: boolean; hideBrand?: boolean; nav?: string[] }) {
   const t = theme.tokens
   const m = theme.metrics
   return (
@@ -79,7 +85,7 @@ export function DefaultSidebar({ theme, name, floating, hideBrand }: { theme: Re
           <Brand theme={theme} name={name} />
         </div>
       )}
-      {NAV.map(({ icon: Icon, label }, i) => (
+      {navList(nav).map(({ icon: Icon, label }, i) => (
         <span key={label} style={{ display: 'flex', alignItems: 'center', gap: 10, height: 38, padding: '0 10px', borderRadius: m.radiusMd, background: i === 0 ? t.navActive : 'transparent', color: i === 0 ? t.navActiveText : t.navText, fontSize: 14, fontWeight: i === 0 ? 600 : 500 }}>
           <Icon size={17} />
           {label}
@@ -94,12 +100,12 @@ export function DefaultSidebar({ theme, name, floating, hideBrand }: { theme: Re
   )
 }
 
-export function Rail({ theme }: { theme: ResolvedTheme }) {
+export function Rail({ theme, nav }: { theme: ResolvedTheme; nav?: string[] }) {
   const t = theme.tokens
   return (
     <div style={{ ...fill, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6, padding: '14px 0', background: t.navBg, color: t.navText, borderRight: `1px solid ${t.border}` }}>
       <span style={{ width: 30, height: 30, borderRadius: theme.metrics.radiusMd, background: t.primary, marginBottom: 10 }} />
-      {NAV.slice(0, 5).map(({ icon: Icon, label }, i) => (
+      {navList(nav).slice(0, 5).map(({ icon: Icon, label }, i) => (
         <span key={label} title={label} style={{ width: 42, height: 42, display: 'grid', placeItems: 'center', borderRadius: theme.metrics.radiusMd, background: i === 0 ? t.navActive : 'transparent', color: i === 0 ? t.navActiveText : t.navText }}>
           <Icon size={19} />
         </span>

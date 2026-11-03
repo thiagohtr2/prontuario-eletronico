@@ -1,7 +1,7 @@
 import { describeCatalogItem, type ItemDescription } from '@/core/describe'
-import { ENTRY_FLOWS, PROJECT_TYPES, type Project, type PropValue } from '@/core/project'
+import { DEFAULT_PALETTE_ID, ENTRY_FLOWS, PROJECT_TYPES, type Project, type PropValue } from '@/core/project'
 import { projectTheme } from '@/core/theme'
-import { DENSITY_SPACING, fontName, RADIUS_VALUES, SHADOW_VALUES, SURFACE_LABEL, TOKEN_LABEL } from '@/core/tokens'
+import { DEFAULT_GEOMETRY, DEFAULT_TYPOGRAPHY, DENSITY_SPACING, deriveTokens, fontName, RADIUS_VALUES, SHADOW_VALUES, SURFACE_LABEL, TOKEN_LABEL } from '@/core/tokens'
 import type { ResolvedTheme, TokenKey } from '@/core/types'
 import { categoryById, familyById } from '@/modules/components/catalog'
 import { describeComponent } from '@/modules/components/describe'
@@ -14,6 +14,7 @@ import { DESKTOP_FAMILIES, MOBILE_GROUPS } from '@/modules/layouts/types'
 import { headerById, sidebarById } from '@/modules/navigation/catalog'
 import { describeTemplate } from '@/modules/templates/describe'
 import { templateById } from '@/modules/templates/catalog'
+import { resolvePromptItems, type AutoResolution } from './resolve'
 import { rulesFor } from './responsive'
 
 export type PromptKind =
@@ -54,6 +55,8 @@ export interface PromptItem {
   exceptions: string[]
   notes: string[]
   included: boolean
+  /** Valor padrão do Studio que o usuário não alterou (não deve ser tratado como decisão aprovada). */
+  isDefault?: boolean
 }
 
 export const KIND_LABEL: Record<PromptKind, string> = {
@@ -144,13 +147,26 @@ export function describePalette(project: Project, theme: ResolvedTheme): ItemDes
   const overrides = Object.entries(project.identity.overrides) as [TokenKey, string][]
   const colors: Record<string, string> = {}
   for (const [k, label] of Object.entries(TOKEN_LABEL)) colors[label] = String(theme.tokens[k as TokenKey])
+  // O texto do catálogo cita as cores originais da paleta; com alterações do usuário, cada cor
+  // original (base e derivadas) é trocada pelo valor efetivo recalculado.
+  let effective = (l: string) => l
+  if (palette && overrides.length) {
+    const original = deriveTokens(palette.base) as unknown as Record<string, unknown>
+    const swaps: [RegExp, string][] = []
+    for (const [k, v] of Object.entries(theme.tokens as unknown as Record<string, unknown>)) {
+      const o = original[k]
+      if (typeof o === 'string' && typeof v === 'string' && /^#[0-9a-f]{6}$/i.test(o) && o.toLowerCase() !== v.toLowerCase())
+        swaps.push([new RegExp(o.replace('#', '#?'), 'gi'), v])
+    }
+    effective = (l: string) => swaps.reduce((acc, [re, v]) => acc.replace(re, v), l)
+  }
   return {
     name: palette?.name ?? project.identity.paletteId,
     variant: PALETTE_CATEGORIES.find((c) => c.id === palette?.category)?.name,
-    summary: `${palette?.spec.summary ?? 'Paleta personalizada.'} Todos os componentes herdam estes tokens por padrão.`,
+    summary: `${effective(palette?.spec.summary ?? 'Paleta personalizada.')} Todos os componentes herdam estes tokens por padrão.`,
     colors,
-    structure: palette?.spec.structure ?? [],
-    behavior: palette?.spec.behavior ?? [],
+    structure: (palette?.spec.structure ?? []).map(effective),
+    behavior: (palette?.spec.behavior ?? []).map(effective),
     responsive: ['A identidade é a mesma em todas as larguras de tela.'],
     exceptions: overrides.map(([k, v]) => `Token alterado pelo usuário: ${TOKEN_LABEL[k]} = ${v}.`),
   }
@@ -201,8 +217,11 @@ export function describeGeometry(project: Project): ItemDescription {
   }
 }
 
-/** Monta a lista completa de itens a partir do estado do projeto (fonte única da verdade). */
-export function collectPromptItems(project: Project): PromptItem[] {
+/**
+ * Monta os itens a partir do estado do projeto (fonte única da verdade) e aplica o modelo de
+ * fatos único (`resolvePromptItems`), devolvendo também as decisões automáticas de prioridade.
+ */
+export function collectPromptData(project: Project): { items: PromptItem[]; resolutions: AutoResolution[] } {
   const theme = projectTheme(project)
   const items: PromptItem[] = []
 
@@ -316,9 +335,13 @@ export function collectPromptItems(project: Project): PromptItem[] {
     items.push(toItem('navigation.sidebar', 'sidebar', 'navigation', 'navegacao', sidebar.id, d, project, ['sidebar', 'navigation']))
   }
 
-  items.push(toItem('identity.palette', 'palette', 'identity', 'cores', project.identity.paletteId, describePalette(project, theme), project))
-  items.push(toItem('identity.typography', 'typography', 'identity', 'cores', null, describeTypography(project), project))
-  items.push(toItem('identity.geometry', 'geometry', 'identity', 'cores', null, describeGeometry(project), project))
+  const palItem = toItem('identity.palette', 'palette', 'identity', 'cores', project.identity.paletteId, describePalette(project, theme), project)
+  palItem.isDefault = isDefaultPalette(project)
+  const typoItem = toItem('identity.typography', 'typography', 'identity', 'cores', null, describeTypography(project), project)
+  typoItem.isDefault = isDefaultTypography(project)
+  const geoItem = toItem('identity.geometry', 'geometry', 'identity', 'cores', null, describeGeometry(project), project)
+  geoItem.isDefault = isDefaultGeometry(project)
+  items.push(palItem, typoItem, geoItem)
 
   for (const instance of project.components) {
     const d = describeComponent(instance, theme)
@@ -336,8 +359,21 @@ export function collectPromptItems(project: Project): PromptItem[] {
     if (d) items.push(toItem('template', 'template', 'references', 'templates', project.template.id, d, project))
   }
 
-  return items
+  return { items, resolutions: resolvePromptItems(items, project) }
 }
+
+/** Monta a lista completa de itens a partir do estado do projeto (fonte única da verdade). */
+export function collectPromptItems(project: Project): PromptItem[] {
+  return collectPromptData(project).items
+}
+
+const sameObject = (a: object, b: object) => JSON.stringify(Object.entries(a).sort()) === JSON.stringify(Object.entries(b).sort())
+
+/** A identidade ainda é a do Studio, sem nenhuma alteração do usuário. */
+export const isDefaultPalette = (p: Project) => p.identity.paletteId === DEFAULT_PALETTE_ID && Object.keys(p.identity.overrides).length === 0
+export const isDefaultTypography = (p: Project) => sameObject(p.identity.typography, DEFAULT_TYPOGRAPHY)
+export const isDefaultGeometry = (p: Project) => sameObject(p.identity.geometry, DEFAULT_GEOMETRY)
+export const isDefaultIdentity = (p: Project) => isDefaultPalette(p) && isDefaultTypography(p) && isDefaultGeometry(p)
 
 /* -------------------------------------------------------------------------- */
 /* Alvos de prompt individual                                                  */

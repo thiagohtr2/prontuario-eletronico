@@ -15,8 +15,9 @@ function formatValue(v: unknown): string {
 /** Bloco Markdown completo de um item. */
 export function renderItem(item: PromptItem, heading = '###'): string {
   const parts: string[] = []
-  parts.push(`${heading} ${KIND_LABEL[item.kind]}: ${item.name}${item.variant ? ` — ${item.variant}` : ''}`)
+  parts.push(`${heading} ${KIND_LABEL[item.kind]}: ${item.name}${item.variant ? ` — ${item.variant}` : ''}${item.isDefault ? ' (padrão do Studio — não revisado)' : ''}`)
   parts.push(`\`id: ${item.catalogId ?? item.key}\` · origem: módulo “${item.source}”`)
+  if (item.isDefault) parts.push('_Valor padrão do Studio que o usuário não alterou: trate como sugestão neutra, não como decisão aprovada._')
   parts.push(item.summary)
   if (item.structure.length) parts.push(`**Estrutura**\n${bullet(item.structure)}`)
   const props = Object.entries(item.properties).filter(([, v]) => v !== '' && v !== undefined)
@@ -45,7 +46,7 @@ export function renderMasterPrompt(spec: ProjectSpec): string {
 
   out.push(`# Master Prompt — ${p.name}`)
   out.push(
-    `> Especificação gerada pelo Atelier UI (Design System Studio) em ${new Date(spec.generatedAt).toLocaleString('pt-BR')}.\n> Todas as decisões abaixo foram visualizadas e aprovadas pelo usuário. Implemente exatamente o que está descrito; quando algo não estiver especificado, escolha a opção mais simples e consistente com o restante, sem adicionar decoração.`,
+    `> Especificação gerada pelo Atelier UI (Design System Studio) em ${new Date(spec.generatedAt).toLocaleString('pt-BR')}.\n> As decisões abaixo foram escolhidas pelo usuário no Studio, exceto as marcadas como “padrão do Studio (não revisado)”, que são sugestões neutras. Implemente exatamente o que está descrito; quando algo não estiver especificado, escolha a opção mais simples e consistente com o restante, sem adicionar decoração. Em caso de dúvida entre dois textos, valem as “Decisões de prioridade”.`,
   )
 
   out.push('## A. Informações do projeto')
@@ -62,6 +63,16 @@ export function renderMasterPrompt(spec: ProjectSpec): string {
     ].filter(Boolean) as string[]),
   )
 
+  const c = spec.content
+  out.push(
+    `### Conteúdo do projeto\n${bullet([
+      `Marca: ${c.brand ? `“${c.brand}”` : 'ainda não definida (pergunte ao usuário)'}.`,
+      c.navItems.length ? `Itens do menu principal, nesta ordem: ${c.navItems.join(' · ')}.` : 'Itens do menu principal: ainda não definidos.',
+      c.mobileNav,
+      ...c.rules,
+    ])}`,
+  )
+
   out.push('## B. Arquitetura geral')
   out.push(
     bullet([
@@ -76,7 +87,7 @@ export function renderMasterPrompt(spec: ProjectSpec): string {
     out.push(
       `### Relação entre desktop e celular\n${bullet([
         `No computador, use “${a.desktop.name}”. No celular, use “${a.mobile.name}”. São decisões independentes: não derive uma da outra.`,
-        'Entre 600 e 1023 px (tablet), use a estrutura desktop compactada quando couber (sidebar recolhida em rail ou menus colapsados); caso contrário, use a estrutura mobile.',
+        'Entre 768 e 1023 px (tablet), use a estrutura desktop compactada (sidebar recolhida em trilho de ícones, menus excedentes em “Mais”). Abaixo de 768 px vale somente o layout mobile.',
         'As regiões (header, sidebar, conteúdo, painéis) mantêm a mesma hierarquia e os mesmos destinos de navegação nas duas versões.',
       ])}`,
     )
@@ -98,7 +109,7 @@ export function renderMasterPrompt(spec: ProjectSpec): string {
 
   out.push('## D. Identidade visual')
   out.push(
-    `Paleta global: **${spec.identity.palette?.name ?? 'personalizada'}**. Todos os componentes (botões, inputs, headers, sidebars, cards, tabelas, modais, menus, login, landing e templates) herdam estes tokens por padrão. Exceções só onde estiverem explicitamente listadas.`,
+    `Paleta global: **${spec.identity.palette?.name ?? 'personalizada'}**${spec.identity.items.find((i) => i.kind === 'palette')?.isDefault ? ' (padrão do Studio — não revisado)' : ''}. Todos os componentes (botões, inputs, headers, sidebars, cards, tabelas, modais, menus, login, landing e templates) herdam estes tokens por padrão. Exceções só onde estiverem explicitamente listadas.`,
   )
   out.push(renderTokensTable(spec.identity.tokens))
   const overrides = Object.entries(spec.identity.overrides)
@@ -139,8 +150,12 @@ export function renderMasterPrompt(spec: ProjectSpec): string {
 
   const resolved = spec.conflicts.filter((c) => c.resolution)
   const open = spec.conflicts.filter((c) => !c.resolution)
-  if (resolved.length || open.length) {
+  if (resolved.length || open.length || spec.resolutions.length) {
     out.push('## Decisões de prioridade')
+    out.push(
+      'Precedência fixa: o layout desktop define estrutura e medidas; header e sidebar definem só a aparência interna; o layout mobile define a navegação no celular; a identidade global define cores, fontes e raios, salvo exceção listada; o conteúdo do projeto substitui o conteúdo de exemplo.',
+    )
+    if (spec.resolutions.length) out.push(bullet(spec.resolutions.map((r) => `${r.title}: ${r.instruction}`)))
     if (resolved.length) out.push(bullet(resolved.map((c) => `${c.title}: ${c.resolution!.instruction}`)))
     if (open.length)
       out.push(
