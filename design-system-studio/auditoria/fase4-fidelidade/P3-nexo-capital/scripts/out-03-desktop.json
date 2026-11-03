@@ -1,0 +1,2659 @@
+{
+ "dev-1": {
+  "m1440": {
+   "sidebar": {
+    "rect": {
+     "x": 0,
+     "y": 0,
+     "w": 252,
+     "h": 900,
+     "r": 252,
+     "b": 900
+    },
+    "radius": "0px",
+    "shadow": "none",
+    "margin": "0px",
+    "position": "sticky",
+    "overflowY": "visible",
+    "bg": "#eff1f3"
+   },
+   "sidebarScrollers": [
+    "NAV.sb-nav"
+   ],
+   "header": {
+    "rect": {
+     "x": 252,
+     "y": 0,
+     "w": 1188,
+     "h": 64,
+     "r": 1440,
+     "b": 64
+    },
+    "bg": "#0f1f4d",
+    "borderBottom": "0px #caced8",
+    "shadow": "rgb(230, 230, 230) 0px -1px 0px 0px inset",
+    "position": "sticky"
+   },
+   "sidebarTop": {
+    "rect": {
+     "x": 0,
+     "y": 0,
+     "w": 251,
+     "h": 64,
+     "r": 251,
+     "b": 64
+    },
+    "text": "Nexo CapitalMatriz — São Paulo",
+    "children": [
+     "DIV.sb-top h=64",
+     "NAV.sb-nav h=750",
+     "DIV.sb-footer h=86"
+    ]
+   },
+   "headerItems": [
+    {
+     "t": "Visão geral",
+     "aria": null,
+     "cur": "page",
+     "w": 102,
+     "h": 44
+    },
+    {
+     "t": "Aquisição",
+     "aria": null,
+     "cur": null,
+     "w": 92,
+     "h": 44
+    },
+    {
+     "t": "Retenção",
+     "aria": null,
+     "cur": null,
+     "w": 89,
+     "h": 44
+    },
+    {
+     "t": "Receita",
+     "aria": null,
+     "cur": null,
+     "w": 76,
+     "h": 44
+    },
+    {
+     "t": "Buscar…/",
+     "aria": "Buscar",
+     "cur": null,
+     "w": 220,
+     "h": 36
+    },
+    {
+     "t": "Período: Últimos 30 dias",
+     "aria": null,
+     "cur": null,
+     "w": 151,
+     "h": 36
+    },
+    {
+     "t": "Exportar",
+     "aria": null,
+     "cur": null,
+     "w": 107,
+     "h": 36
+    },
+    {
+     "t": "3",
+     "aria": "Notificações, 3 não lidas",
+     "cur": null,
+     "w": 36,
+     "h": 36
+    },
+    {
+     "t": "AR",
+     "aria": "Menu do perfil de Ana Ribeiro",
+     "cur": null,
+     "w": 36,
+     "h": 36
+    }
+   ],
+   "tabs": [
+    {
+     "text": "Visão geral",
+     "cur": "page",
+     "sel": null,
+     "bg": "#f8fafc",
+     "color": "#0f172a",
+     "bl": "1px #e6e6e6",
+     "bt": "1px",
+     "radius": "6px",
+     "rect": {
+      "x": 286,
+      "y": 20,
+      "w": 102,
+      "h": 44,
+      "r": 388,
+      "b": 64
+     }
+    },
+    {
+     "text": "Aquisição",
+     "cur": null,
+     "sel": null,
+     "bg": "transparent",
+     "color": "#caced8",
+     "bl": "1px transparent",
+     "bt": "1px",
+     "radius": "6px",
+     "rect": {
+      "x": 408,
+      "y": 20,
+      "w": 92,
+      "h": 44,
+      "r": 500,
+      "b": 64
+     }
+    },
+    {
+     "text": "Retenção",
+     "cur": null,
+     "sel": null,
+     "bg": "transparent",
+     "color": "#caced8",
+     "bl": "1px transparent",
+     "bt": "1px",
+     "radius": "6px",
+     "rect": {
+      "x": 520,
+      "y": 20,
+      "w": 89,
+      "h": 44,
+      "r": 609,
+      "b": 64
+     }
+    },
+    {
+     "text": "Receita",
+     "cur": null,
+     "sel": null,
+     "bg": "transparent",
+     "color": "#caced8",
+     "bl": "1px transparent",
+     "bt": "1px",
+     "radius": "6px",
+     "rect": {
+      "x": 629,
+      "y": 20,
+      "w": 76,
+      "h": 44,
+      "r": 705,
+      "b": 64
+     }
+    }
+   ],
+   "avatar": {
+    "rect": {
+     "x": 1372,
+     "y": 14,
+     "w": 36,
+     "h": 36,
+     "r": 1408,
+     "b": 50
+    },
+    "aria": "Menu do perfil de Ana Ribeiro",
+    "inner": {
+     "x": 1374,
+     "y": 16,
+     "w": 32,
+     "h": 32,
+     "r": 1406,
+     "b": 48
+    }
+   },
+   "groupTitle": {
+    "text": "Gestão",
+    "fs": "12px",
+    "tt": "none",
+    "fw": "650",
+    "ls": "normal",
+    "color": "#0f172a"
+   },
+   "navItems": [
+    {
+     "text": "Gestão",
+     "h": 32,
+     "icon": 16,
+     "cur": null,
+     "exp": "true"
+    },
+    {
+     "text": "Painel",
+     "h": 40,
+     "icon": 20,
+     "cur": "page",
+     "exp": null
+    },
+    {
+     "text": "Contratos",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "Fornecedores",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "Compras",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "Pessoas",
+     "h": 32,
+     "icon": 16,
+     "cur": null,
+     "exp": "true"
+    },
+    {
+     "text": "Colaboradores",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "Folha",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "Administração",
+     "h": 32,
+     "icon": 16,
+     "cur": null,
+     "exp": "true"
+    },
+    {
+     "text": "Auditoria",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "Permissões",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    }
+   ],
+   "activeItem": {
+    "text": "Painel",
+    "bg": "#e4eafa",
+    "color": "#1d4ed8",
+    "borderLeft": "0px #1d4ed8",
+    "shadow": "none",
+    "before": {
+     "w": "3px",
+     "h": "40px",
+     "bg": "#1d4ed8",
+     "left": "-12px",
+     "pos": "absolute"
+    },
+    "after": null,
+    "rect": {
+     "x": 12,
+     "y": 110,
+     "w": 227,
+     "h": 40,
+     "r": 239,
+     "b": 150
+    }
+   },
+   "nonActive": {
+    "bg": "transparent",
+    "color": "#0f172a"
+   },
+   "navLabels": [
+    "Gestão",
+    "Painel",
+    "Visão geral",
+    "Aquisição",
+    "Retenção",
+    "Receita",
+    "Contratos",
+    "Fornecedores",
+    "Compras",
+    "Pessoas",
+    "Colaboradores",
+    "Folha",
+    "Administração",
+    "Auditoria",
+    "Permissões"
+   ],
+   "sidebarFoot": {
+    "text": "ARAna RibeiroController financeira",
+    "rect": {
+     "x": 0,
+     "y": 814,
+     "w": 251,
+     "h": 86,
+     "r": 251,
+     "b": 900
+    },
+    "buttons": [
+     "Perfil de Ana Ribeiro, Controller financeira. Abrir menu",
+     "Configurações"
+    ]
+   },
+   "unitSelector": [
+    {
+     "aria": "Unidade: Matriz — São Paulo. Trocar unidade",
+     "text": "Nexo CapitalMatriz — São Paulo",
+     "rect": {
+      "x": 12,
+      "y": 8,
+      "w": 227,
+      "h": 48,
+      "r": 239,
+      "b": 56
+     }
+    },
+    {
+     "aria": "Perfil de Ana Ribeiro, Controller financeira. Abrir menu",
+     "text": "ARAna RibeiroController financeira",
+     "rect": {
+      "x": 12,
+      "y": 827,
+      "w": 187,
+      "h": 61,
+      "r": 199,
+      "b": 888
+     }
+    }
+   ],
+   "h1": {
+    "text": "Visão geral",
+    "rect": {
+     "x": 284,
+     "y": 96,
+     "w": 967,
+     "h": 29,
+     "r": 1251,
+     "b": 125
+    },
+    "fs": "23px",
+    "fw": "650",
+    "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+    "color": "#0f172a"
+   },
+   "main": {
+    "rect": {
+     "x": 252,
+     "y": 64,
+     "w": 1188,
+     "h": 1001,
+     "r": 1440,
+     "b": 1065
+    },
+    "bg": "transparent",
+    "padding": "32px"
+   },
+   "body": {
+    "bg": "#f8fafc",
+    "color": "#0f172a",
+    "fs": "15px",
+    "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+   },
+   "contentPadding": {
+    "el": "MAIN.content",
+    "padding": "32px"
+   },
+   "kpis": [
+    {
+     "rect": {
+      "x": 284,
+      "y": 164,
+      "w": 364,
+      "h": 104,
+      "r": 648,
+      "b": 268
+     },
+     "bg": "#ffffff",
+     "border": "1px solid #e6e6e6",
+     "radius": "6px",
+     "shadow": "none",
+     "label": {
+      "t": "Receita líquida",
+      "color": "#686d7a",
+      "fs": "12px"
+     },
+     "value": {
+      "t": "R$ 1.595.789",
+      "fs": "23px",
+      "fw": "640",
+      "color": "#0f172a",
+      "fvn": "tabular-nums"
+     },
+     "delta": {
+      "t": "Queda de −6,4%vs. período anterior (R$ 1.705.500)",
+      "html": [
+       "#dc2626",
+       "#dc2626",
+       "#dc2626",
+       "#dc2626",
+       "#dc2626",
+       "#686d7a",
+       "#686d7a"
+      ]
+     }
+    },
+    {
+     "rect": {
+      "x": 664,
+      "y": 164,
+      "w": 364,
+      "h": 104,
+      "r": 1028,
+      "b": 268
+     },
+     "bg": "#ffffff",
+     "border": "1px solid #e6e6e6",
+     "radius": "6px",
+     "shadow": "none",
+     "label": {
+      "t": "Despesas operacionais",
+      "color": "#686d7a",
+      "fs": "12px"
+     },
+     "value": {
+      "t": "R$ 1.041.610",
+      "fs": "23px",
+      "fw": "640",
+      "color": "#0f172a",
+      "fvn": "tabular-nums"
+     },
+     "delta": {
+      "t": "Queda de −1,7%vs. período anterior (R$ 1.059.998)",
+      "html": [
+       "#117e39",
+       "#117e39",
+       "#117e39",
+       "#117e39",
+       "#117e39",
+       "#686d7a",
+       "#686d7a"
+      ]
+     }
+    },
+    {
+     "rect": {
+      "x": 1044,
+      "y": 164,
+      "w": 364,
+      "h": 104,
+      "r": 1408,
+      "b": 268
+     },
+     "bg": "#ffffff",
+     "border": "1px solid #e6e6e6",
+     "radius": "6px",
+     "shadow": "none",
+     "label": {
+      "t": "Resultado líquido",
+      "color": "#686d7a",
+      "fs": "12px"
+     },
+     "value": {
+      "t": "R$ 554.179",
+      "fs": "23px",
+      "fw": "640",
+      "color": "#0f172a",
+      "fvn": "tabular-nums"
+     },
+     "delta": {
+      "t": "Queda de −14,1%vs. período anterior (R$ 645.502)",
+      "html": [
+       "#dc2626",
+       "#dc2626",
+       "#dc2626",
+       "#dc2626",
+       "#dc2626",
+       "#686d7a",
+       "#686d7a"
+      ]
+     }
+    }
+   ],
+   "chartCard": {
+    "rect": {
+     "x": 284,
+     "y": 284,
+     "w": 739,
+     "h": 406,
+     "r": 1023,
+     "b": 690
+    },
+    "title": "Vendas por mês",
+    "radius": "6px",
+    "shadow": "none"
+   },
+   "actCard": {
+    "rect": {
+     "x": 1039,
+     "y": 284,
+     "w": 369,
+     "h": 406,
+     "r": 1408,
+     "b": 690
+    },
+    "title": "Atividades recentes"
+   },
+   "chartRatio": 0.667,
+   "chart": {
+    "rect": {
+     "x": 297,
+     "y": 349,
+     "w": 713,
+     "h": 260,
+     "r": 1010,
+     "b": 609
+    },
+    "role": null,
+    "aria": null,
+    "parentRole": "group",
+    "parentAria": "Vendas por mês, Nov/25 a Out/26. Vendas: total R$ 17.589.255, maior valor em Set/26 (R$ 1.891.170); Meta: total R$ 17.570.000, maior valor em Out/26 (R$ 1.610.000).",
+    "fills": {
+     "#e4eafa": 1,
+     "#1d4ed8": 12,
+     "#0c91cd": 12,
+     "transparent": 12
+    },
+    "lines": [
+     "#c7c7c7",
+     "#e6e6e6"
+    ],
+    "texts": [
+     "R$ 0",
+     "R$ 500 mil",
+     "R$ 1 mi",
+     "R$ 1,5 mi",
+     "R$ 2 mi",
+     "Nov/25",
+     "Dez/25",
+     "Jan/26",
+     "Fev/26",
+     "Mar/26",
+     "Abr/26",
+     "Mai/26",
+     "Jun/26",
+     "Jul/26",
+     "Ago/26",
+     "Set/26",
+     "Out/26"
+    ],
+    "valueLabels": 5
+   },
+   "legend": {
+    "rect": {
+     "x": 297,
+     "y": 617,
+     "w": 713,
+     "h": 30,
+     "r": 1010,
+     "b": 647
+    },
+    "text": "VendasMetaMeses do período selecionado",
+    "buttons": 2,
+    "below": true
+   },
+   "chartAlt": true,
+   "chartPeriodControl": [
+    "Vendas",
+    "Meta"
+   ],
+   "activityItems": 6,
+   "table": {
+    "rect": {
+     "x": 285,
+     "y": 801,
+     "w": 1122,
+     "h": 184,
+     "r": 1407,
+     "b": 985
+    },
+    "thead": true,
+    "scopeCol": 6,
+    "ths": [
+     "Selecionar todos|",
+     "Cliente|",
+     "Status|",
+     "Valor|",
+     "Data|descending",
+     "Ações|"
+    ],
+    "theadBg": "#f5f5f5 / transparent",
+    "thFs": "12px 600 #0f172a",
+    "rowH": [
+     38,
+     39,
+     39,
+     38
+    ],
+    "rowCount": 4,
+    "rowBgs": [
+     "transparent/transparent",
+     "transparent/transparent",
+     "transparent/transparent",
+     "transparent/transparent"
+    ],
+    "tdFs": "13px",
+    "valAlign": "right",
+    "valFvn": "tabular-nums",
+    "badges": [
+     "Pago|#e3f4e9|#0f172a|r=4px",
+     "Pago|#e3f4e9|#0f172a|r=4px",
+     "Pendente|#faefe1|#0f172a|r=4px",
+     "Pago|#e3f4e9|#0f172a|r=4px"
+    ],
+    "checkboxes": 5,
+    "rowActions": 4,
+    "card": {
+     "radius": "6px",
+     "border": "1px #e6e6e6",
+     "shadow": "none",
+     "bg": "#ffffff"
+    },
+    "title": "Pedidos recentes",
+    "toolbarButtons": [
+     "Novo pedido h=30 r=4px",
+     "Todos h=30 r=4px",
+     "Pago h=30 r=4px",
+     "Pendente h=30 r=4px",
+     "Atrasado h=30 r=4px",
+     "Em análise h=30 r=4px",
+     " h=30 r=4px",
+     " h=30 r=4px"
+    ]
+   },
+   "primaryBtn": {
+    "text": "Exportar",
+    "bg": "#1d4ed8",
+    "color": "#ffffff",
+    "radius": "8px",
+    "h": 36,
+    "fs": "14px"
+   },
+   "input": {
+    "radius": "4px",
+    "h": 30,
+    "border": "1px #c7c7c7",
+    "fs": "14px"
+   },
+   "contentShadows": [
+    "BUTTON.tbl-tab rgb(29, 78, 216) 0px -2px 0px 0px inset",
+    "BUTTON.tbl-tab rgba(0, 0, 0, 0) 0px -2px 0px 0px inset",
+    "BUTTON.tbl-tab rgba(0, 0, 0, 0) 0px -2px 0px 0px inset",
+    "BUTTON.tbl-tab rgba(0, 0, 0, 0) 0px -2px 0px 0px inset",
+    "BUTTON.tbl-tab rgba(0, 0, 0, 0) 0px -2px 0px 0px inset",
+    "BUTTON.tbl-sort rgb(29, 78, 216) 0px -2px 0px 0px inset"
+   ],
+   "muted": {
+    "t": "Últimos 30 dias · 04/10/2026 a 02/11/2026 · Matriz",
+    "color": "#686d7a",
+    "fs": "13px"
+   },
+   "fontsInter": true,
+   "docScroll": {
+    "sw": 1440,
+    "cw": 1440
+   }
+  },
+  "afterScroll": {
+   "winY": 165,
+   "sidebar": {
+    "y": 0,
+    "h": 900
+   },
+   "header": {
+    "y": 0,
+    "h": 64
+   },
+   "headerShadow": "rgb(230, 230, 230) 0px -1px 0px 0px inset, color(srgb 0.0588235 0.0901961 0.164706 / 0.18) 0px 2px 8px 0px",
+   "scrolled": [
+    "HTML#.:165"
+   ]
+  },
+  "sidebarWidths": {
+   "600": {
+    "x": 0,
+    "w": 0,
+    "h": 0,
+    "display": "none",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header x=0 w=600 h=56"
+    ],
+    "kpiW": [
+     568,
+     568,
+     568
+    ],
+    "chartActSideBySide": false,
+    "chartW": 568
+   },
+   "767": {
+    "x": 0,
+    "w": 0,
+    "h": 0,
+    "display": "none",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header x=0 w=767 h=56"
+    ],
+    "kpiW": [
+     360,
+     360,
+     735
+    ],
+    "chartActSideBySide": false,
+    "chartW": 735
+   },
+   "768": {
+    "x": 0,
+    "w": 72,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header x=72 w=696 h=64"
+    ],
+    "kpiW": [
+     316,
+     316,
+     648
+    ],
+    "chartActSideBySide": false,
+    "chartW": 648
+   },
+   "820": {
+    "x": 0,
+    "w": 72,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header x=72 w=748 h=64"
+    ],
+    "kpiW": [
+     342,
+     342,
+     700
+    ],
+    "chartActSideBySide": false,
+    "chartW": 700
+   },
+   "1000": {
+    "x": 0,
+    "w": 72,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header x=72 w=928 h=64"
+    ],
+    "kpiW": [
+     283,
+     283,
+     283
+    ],
+    "chartActSideBySide": false,
+    "chartW": 880
+   },
+   "1023": {
+    "x": 0,
+    "w": 72,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header x=72 w=951 h=64"
+    ],
+    "kpiW": [
+     290,
+     290,
+     290
+    ],
+    "chartActSideBySide": true,
+    "chartW": 591
+   },
+   "1024": {
+    "x": 0,
+    "w": 220,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header x=220 w=804 h=64"
+    ],
+    "kpiW": [
+     370,
+     370,
+     756
+    ],
+    "chartActSideBySide": false,
+    "chartW": 756
+   },
+   "1279": {
+    "x": 0,
+    "w": 220,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header x=220 w=1059 h=64"
+    ],
+    "kpiW": [
+     326,
+     326,
+     326
+    ],
+    "chartActSideBySide": true,
+    "chartW": 663
+   },
+   "1280": {
+    "x": 0,
+    "w": 252,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header x=252 w=1028 h=64"
+    ],
+    "kpiW": [
+     311,
+     311,
+     311
+    ],
+    "chartActSideBySide": true,
+    "chartW": 632
+   },
+   "1920": {
+    "x": 0,
+    "w": 252,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header x=252 w=1668 h=64"
+    ],
+    "kpiW": [
+     524,
+     524,
+     524
+    ],
+    "chartActSideBySide": true,
+    "chartW": 1059
+   }
+  }
+ },
+ "dev-2": {
+  "m1440": {
+   "sidebar": {
+    "rect": {
+     "x": 0,
+     "y": 0,
+     "w": 252,
+     "h": 900,
+     "r": 252,
+     "b": 900
+    },
+    "radius": "0px",
+    "shadow": "none",
+    "margin": "0px",
+    "position": "sticky",
+    "overflowY": "visible",
+    "bg": "#eff1f3"
+   },
+   "sidebarScrollers": [
+    "NAV.sidebar__nav"
+   ],
+   "header": {
+    "rect": {
+     "x": 252,
+     "y": 0,
+     "w": 1188,
+     "h": 64,
+     "r": 1440,
+     "b": 64
+    },
+    "bg": "#0f1f4d",
+    "borderBottom": "1px #e6e6e6",
+    "shadow": "none",
+    "position": "sticky"
+   },
+   "sidebarTop": {
+    "rect": {
+     "x": 0,
+     "y": 0,
+     "w": 251,
+     "h": 64,
+     "r": 251,
+     "b": 64
+    },
+    "text": "Nexo Capital Matriz · São Paulo",
+    "children": [
+     "DIV.sidebar__top h=64",
+     "NAV.sidebar__nav h=777",
+     "DIV.sidebar__foot h=59"
+    ]
+   },
+   "headerItems": [
+    {
+     "t": "Visão geral",
+     "aria": null,
+     "cur": "page",
+     "w": 108,
+     "h": 44
+    },
+    {
+     "t": "Aquisição",
+     "aria": null,
+     "cur": null,
+     "w": 97,
+     "h": 44
+    },
+    {
+     "t": "Retenção",
+     "aria": null,
+     "cur": null,
+     "w": 94,
+     "h": 44
+    },
+    {
+     "t": "Receita",
+     "aria": null,
+     "cur": null,
+     "w": 79,
+     "h": 44
+    },
+    {
+     "t": "Últimos 30 dias",
+     "aria": "Período: Últimos 30 dias. Alterar período",
+     "cur": null,
+     "w": 162,
+     "h": 30
+    },
+    {
+     "t": "Exportar",
+     "aria": null,
+     "cur": null,
+     "w": 115,
+     "h": 30
+    },
+    {
+     "t": "",
+     "aria": "Buscar",
+     "cur": null,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "t": "",
+     "aria": "Notificações, 3 não lidas",
+     "cur": null,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "t": "Menu do perfil de Ana Souza",
+     "aria": "Menu do perfil de Ana Souza",
+     "cur": null,
+     "w": 32,
+     "h": 32
+    }
+   ],
+   "tabs": [
+    {
+     "text": "Visão geral",
+     "cur": "page",
+     "sel": null,
+     "bg": "#f8fafc",
+     "color": "#0f172a",
+     "bl": "1px #e6e6e6",
+     "bt": "1px",
+     "radius": "6px",
+     "rect": {
+      "x": 276,
+      "y": 20,
+      "w": 108,
+      "h": 44,
+      "r": 384,
+      "b": 64
+     }
+    },
+    {
+     "text": "Aquisição",
+     "cur": null,
+     "sel": null,
+     "bg": "transparent",
+     "color": "#caced8",
+     "bl": "1px transparent",
+     "bt": "1px",
+     "radius": "6px",
+     "rect": {
+      "x": 384,
+      "y": 20,
+      "w": 97,
+      "h": 44,
+      "r": 481,
+      "b": 64
+     }
+    },
+    {
+     "text": "Retenção",
+     "cur": null,
+     "sel": null,
+     "bg": "transparent",
+     "color": "#caced8",
+     "bl": "1px transparent",
+     "bt": "1px",
+     "radius": "6px",
+     "rect": {
+      "x": 481,
+      "y": 20,
+      "w": 94,
+      "h": 44,
+      "r": 574,
+      "b": 64
+     }
+    },
+    {
+     "text": "Receita",
+     "cur": null,
+     "sel": null,
+     "bg": "transparent",
+     "color": "#caced8",
+     "bl": "1px transparent",
+     "bt": "1px",
+     "radius": "6px",
+     "rect": {
+      "x": 574,
+      "y": 20,
+      "w": 79,
+      "h": 44,
+      "r": 653,
+      "b": 64
+     }
+    }
+   ],
+   "avatar": {
+    "rect": {
+     "x": 1384,
+     "y": 16,
+     "w": 32,
+     "h": 32,
+     "r": 1416,
+     "b": 48
+    },
+    "aria": "Menu do perfil de Ana Souza",
+    "inner": {
+     "x": 1384,
+     "y": 16,
+     "w": 32,
+     "h": 32,
+     "r": 1416,
+     "b": 48
+    }
+   },
+   "groupTitle": {
+    "text": "Gestão",
+    "fs": "12px",
+    "tt": "uppercase",
+    "fw": "650",
+    "ls": "0.96px",
+    "color": "#686d7a"
+   },
+   "navItems": [
+    {
+     "text": "Gestão",
+     "h": 32,
+     "icon": 14,
+     "cur": null,
+     "exp": "true"
+    },
+    {
+     "text": "Painel",
+     "h": 40,
+     "icon": 20,
+     "cur": "page",
+     "exp": null
+    },
+    {
+     "text": "Contratos",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "Fornecedores",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "Compras",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "Pessoas",
+     "h": 32,
+     "icon": 14,
+     "cur": null,
+     "exp": "true"
+    },
+    {
+     "text": "Colaboradores",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "Folha",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "Administração",
+     "h": 32,
+     "icon": 14,
+     "cur": null,
+     "exp": "true"
+    },
+    {
+     "text": "Auditoria",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "Permissões",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    }
+   ],
+   "activeItem": {
+    "text": "Painel",
+    "bg": "#e4eafa",
+    "color": "#1d4ed8",
+    "borderLeft": "0px #1d4ed8",
+    "shadow": "none",
+    "before": {
+     "w": "3px",
+     "h": "28px",
+     "bg": "#1d4ed8",
+     "left": "0px",
+     "pos": "absolute"
+    },
+    "after": null,
+    "rect": {
+     "x": 12,
+     "y": 110,
+     "w": 227,
+     "h": 40,
+     "r": 239,
+     "b": 150
+    }
+   },
+   "nonActive": {
+    "bg": "transparent",
+    "color": "#0f172a"
+   },
+   "navLabels": [
+    "Gestão",
+    "Painel",
+    "Visão geral",
+    "Aquisição",
+    "Retenção",
+    "Receita",
+    "Contratos",
+    "Fornecedores",
+    "Compras",
+    "Pessoas",
+    "Colaboradores",
+    "Folha",
+    "Administração",
+    "Auditoria",
+    "Permissões"
+   ],
+   "sidebarFoot": {
+    "text": "AS Ana Souza Analista financeira",
+    "rect": {
+     "x": 0,
+     "y": 841,
+     "w": 251,
+     "h": 59,
+     "r": 251,
+     "b": 900
+    },
+    "buttons": [
+     "Configurações",
+     "Menu do perfil"
+    ]
+   },
+   "unitSelector": [
+    {
+     "aria": "Nexo Capital Matriz · São Paulo. Trocar de unidade",
+     "text": "Nexo Capital Matriz · São Paulo",
+     "rect": {
+      "x": 12,
+      "y": 9,
+      "w": 227,
+      "h": 46,
+      "r": 239,
+      "b": 54
+     }
+    },
+    {
+     "aria": "Menu do perfil",
+     "text": "",
+     "rect": {
+      "x": 207,
+      "y": 855,
+      "w": 32,
+      "h": 32,
+      "r": 239,
+      "b": 887
+     }
+    }
+   ],
+   "h1": {
+    "text": "Visão geral",
+    "rect": {
+     "x": 284,
+     "y": 96,
+     "w": 269,
+     "h": 38,
+     "r": 553,
+     "b": 134
+    },
+    "fs": "30px",
+    "fw": "650",
+    "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+    "color": "#0f172a"
+   },
+   "main": {
+    "rect": {
+     "x": 252,
+     "y": 64,
+     "w": 1188,
+     "h": 1008,
+     "r": 1440,
+     "b": 1072
+    },
+    "bg": "transparent",
+    "padding": "32px"
+   },
+   "body": {
+    "bg": "#f8fafc",
+    "color": "#0f172a",
+    "fs": "15px",
+    "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+   },
+   "contentPadding": {
+    "el": "MAIN.main",
+    "padding": "32px"
+   },
+   "kpis": [
+    {
+     "rect": {
+      "x": 284,
+      "y": 181,
+      "w": 364,
+      "h": 102,
+      "r": 648,
+      "b": 283
+     },
+     "bg": "#ffffff",
+     "border": "1px solid #e6e6e6",
+     "radius": "6px",
+     "shadow": "none",
+     "label": {
+      "t": "Receita líquida",
+      "color": "#686d7a",
+      "fs": "12px"
+     },
+     "value": {
+      "t": "R$ 1.284.560,00",
+      "fs": "23px",
+      "fw": "650",
+      "color": "#0f172a",
+      "fvn": "tabular-nums"
+     },
+     "delta": {
+      "t": "+9,9%vs. período anterior, favorável",
+      "html": [
+       "color(srgb 0.0654902 0.433529 0.214706)",
+       "color(srgb 0.0654902 0.433529 0.214706)",
+       "color(srgb 0.0654902 0.433529 0.214706)",
+       "color(srgb 0.0654902 0.433529 0.214706)",
+       "#686d7a",
+       "#686d7a",
+       "#686d7a"
+      ]
+     }
+    },
+    {
+     "rect": {
+      "x": 664,
+      "y": 181,
+      "w": 364,
+      "h": 102,
+      "r": 1028,
+      "b": 283
+     },
+     "bg": "#ffffff",
+     "border": "1px solid #e6e6e6",
+     "radius": "6px",
+     "shadow": "none",
+     "label": {
+      "t": "Despesas operacionais",
+      "color": "#686d7a",
+      "fs": "12px"
+     },
+     "value": {
+      "t": "R$ 742.310,00",
+      "fs": "23px",
+      "fw": "650",
+      "color": "#0f172a",
+      "fvn": "tabular-nums"
+     },
+     "delta": {
+      "t": "−1,2%vs. período anterior, favorável",
+      "html": [
+       "color(srgb 0.0654902 0.433529 0.214706)",
+       "color(srgb 0.0654902 0.433529 0.214706)",
+       "color(srgb 0.0654902 0.433529 0.214706)",
+       "color(srgb 0.0654902 0.433529 0.214706)",
+       "#686d7a",
+       "#686d7a",
+       "#686d7a"
+      ]
+     }
+    },
+    {
+     "rect": {
+      "x": 1044,
+      "y": 181,
+      "w": 364,
+      "h": 102,
+      "r": 1408,
+      "b": 283
+     },
+     "bg": "#ffffff",
+     "border": "1px solid #e6e6e6",
+     "radius": "6px",
+     "shadow": "none",
+     "label": {
+      "t": "Saldo em caixa",
+      "color": "#686d7a",
+      "fs": "12px"
+     },
+     "value": {
+      "t": "R$ 4.021.118,36",
+      "fs": "23px",
+      "fw": "650",
+      "color": "#0f172a",
+      "fvn": "tabular-nums"
+     },
+     "delta": {
+      "t": "+4,1%vs. período anterior, favorável",
+      "html": [
+       "color(srgb 0.0654902 0.433529 0.214706)",
+       "color(srgb 0.0654902 0.433529 0.214706)",
+       "color(srgb 0.0654902 0.433529 0.214706)",
+       "color(srgb 0.0654902 0.433529 0.214706)",
+       "#686d7a",
+       "#686d7a",
+       "#686d7a"
+      ]
+     }
+    }
+   ],
+   "chartCard": {
+    "rect": {
+     "x": 284,
+     "y": 299,
+     "w": 739,
+     "h": 406,
+     "r": 1023,
+     "b": 705
+    },
+    "title": "Vendas por mês",
+    "radius": "6px",
+    "shadow": "none"
+   },
+   "actCard": {
+    "rect": {
+     "x": 1039,
+     "y": 299,
+     "w": 369,
+     "h": 406,
+     "r": 1408,
+     "b": 705
+    },
+    "title": "Atividades recentes"
+   },
+   "chartRatio": 0.667,
+   "chart": {
+    "rect": {
+     "x": 301,
+     "y": 362,
+     "w": 705,
+     "h": 288,
+     "r": 1006,
+     "b": 650
+    },
+    "role": null,
+    "aria": null,
+    "parentRole": "group",
+    "parentAria": "Gráfico de barras agrupadas, Vendas por mês, em R$ mil, de Junho de 2026 a Novembro de 2026. Vendas: máximo de R$ 584 mil em Novembro de 2026; Meta: máximo de R$ 540 mil em Novembro de 2026. Use as setas para percorrer os meses.",
+    "fills": {
+     "#f4f4f4": 6,
+     "#1d4ed8": 6,
+     "#0c91cd": 6
+    },
+    "lines": [
+     "color(srgb 0.901961 0.901961 0.901961 / 0.5)",
+     "#c7c7c7"
+    ],
+    "texts": [
+     "0",
+     "200",
+     "400",
+     "600",
+     "jun",
+     "jul",
+     "ago",
+     "set",
+     "out",
+     "nov"
+    ],
+    "valueLabels": 0
+   },
+   "legend": {
+    "rect": {
+     "x": 301,
+     "y": 658,
+     "w": 705,
+     "h": 30,
+     "r": 1006,
+     "b": 688
+    },
+    "text": "VendasMeta",
+    "buttons": 2,
+    "below": true
+   },
+   "chartAlt": true,
+   "chartPeriodControl": [
+    "Vendas",
+    "Meta"
+   ],
+   "activityItems": 5,
+   "table": {
+    "rect": {
+     "x": 302,
+     "y": 827,
+     "w": 1088,
+     "h": 187,
+     "r": 1390,
+     "b": 1014
+    },
+    "thead": true,
+    "scopeCol": 6,
+    "ths": [
+     "Selecionar todos|",
+     "Cliente|none",
+     "Status|none",
+     "Valor|none",
+     "Data|none",
+     "Ações|"
+    ],
+    "theadBg": "#f5f5f5 / transparent",
+    "thFs": "12px 500 #0f172a",
+    "rowH": [
+     38,
+     38,
+     38,
+     38
+    ],
+    "rowCount": 4,
+    "rowBgs": [
+     "transparent/transparent",
+     "transparent/transparent",
+     "transparent/transparent",
+     "transparent/transparent"
+    ],
+    "tdFs": "13px",
+    "valAlign": "right",
+    "valFvn": "tabular-nums",
+    "badges": [
+     "Em análise|#e5ecfd|color(srgb 0.132157 0.343529 0.808039)|r=4px",
+     "Pago|#e3f4e9|color(srgb 0.0654902 0.433529 0.214706)|r=4px",
+     "Pendente|#faefe1|color(srgb 0.568824 0.320196 0.0380392)|r=4px",
+     "Atrasado|#fbe5e5|color(srgb 0.742157 0.140196 0.151373)|r=4px"
+    ],
+    "checkboxes": 5,
+    "rowActions": 4,
+    "card": {
+     "radius": "6px",
+     "border": "1px #e6e6e6",
+     "shadow": "none",
+     "bg": "#ffffff"
+    },
+    "title": "Pedidos recentes",
+    "toolbarButtons": []
+   },
+   "primaryBtn": {
+    "text": "Exportar",
+    "bg": "#1d4ed8",
+    "color": "#ffffff",
+    "radius": "4px",
+    "h": 30,
+    "fs": "14px"
+   },
+   "input": {
+    "radius": "4px",
+    "h": 30,
+    "border": "1px #c7c7c7",
+    "fs": "14px"
+   },
+   "contentShadows": [],
+   "muted": {
+    "t": "Resumo financeiro consolidado da unidade.",
+    "color": "#686d7a",
+    "fs": "13px"
+   },
+   "fontsInter": true,
+   "docScroll": {
+    "sw": 1440,
+    "cw": 1440
+   }
+  },
+  "afterScroll": {
+   "winY": 172,
+   "sidebar": {
+    "y": 0,
+    "h": 900
+   },
+   "header": {
+    "y": 0,
+    "h": 64
+   },
+   "headerShadow": "color(srgb 0.0588235 0.0901961 0.164706 / 0.18) 0px 1px 4px 0px",
+   "scrolled": [
+    "HTML#.:172"
+   ]
+  },
+  "sidebarWidths": {
+   "600": {
+    "x": 0,
+    "w": 0,
+    "h": 0,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header on-dark x=0 w=600 h=56"
+    ],
+    "kpiW": [
+     568,
+     568,
+     568
+    ],
+    "chartActSideBySide": false,
+    "chartW": 568
+   },
+   "767": {
+    "x": 0,
+    "w": 0,
+    "h": 0,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header on-dark x=0 w=767 h=56"
+    ],
+    "kpiW": [
+     360,
+     360,
+     735
+    ],
+    "chartActSideBySide": false,
+    "chartW": 735
+   },
+   "768": {
+    "x": 0,
+    "w": 72,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header on-dark x=72 w=696 h=64"
+    ],
+    "kpiW": [
+     316,
+     316,
+     648
+    ],
+    "chartActSideBySide": false,
+    "chartW": 648
+   },
+   "820": {
+    "x": 0,
+    "w": 72,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header on-dark x=72 w=748 h=64"
+    ],
+    "kpiW": [
+     342,
+     342,
+     700
+    ],
+    "chartActSideBySide": false,
+    "chartW": 700
+   },
+   "1000": {
+    "x": 0,
+    "w": 72,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header on-dark x=72 w=928 h=64"
+    ],
+    "kpiW": [
+     283,
+     283,
+     283
+    ],
+    "chartActSideBySide": false,
+    "chartW": 880
+   },
+   "1023": {
+    "x": 0,
+    "w": 72,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header on-dark x=72 w=951 h=64"
+    ],
+    "kpiW": [
+     290,
+     290,
+     290
+    ],
+    "chartActSideBySide": true,
+    "chartW": 591
+   },
+   "1024": {
+    "x": 0,
+    "w": 220,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header on-dark x=220 w=804 h=64"
+    ],
+    "kpiW": [
+     370,
+     370,
+     756
+    ],
+    "chartActSideBySide": false,
+    "chartW": 756
+   },
+   "1279": {
+    "x": 0,
+    "w": 220,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header on-dark x=220 w=1059 h=64"
+    ],
+    "kpiW": [
+     326,
+     326,
+     326
+    ],
+    "chartActSideBySide": true,
+    "chartW": 663
+   },
+   "1280": {
+    "x": 0,
+    "w": 252,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header on-dark x=252 w=1028 h=64"
+    ],
+    "kpiW": [
+     311,
+     311,
+     311
+    ],
+    "chartActSideBySide": true,
+    "chartW": 632
+   },
+   "1920": {
+    "x": 0,
+    "w": 252,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header on-dark x=252 w=1668 h=64"
+    ],
+    "kpiW": [
+     524,
+     524,
+     524
+    ],
+    "chartActSideBySide": true,
+    "chartW": 1059
+   }
+  }
+ },
+ "dev-3": {
+  "m1440": {
+   "sidebar": {
+    "rect": {
+     "x": 0,
+     "y": 0,
+     "w": 252,
+     "h": 900,
+     "r": 252,
+     "b": 900
+    },
+    "radius": "0px",
+    "shadow": "none",
+    "margin": "0px",
+    "position": "relative",
+    "overflowY": "visible",
+    "bg": "#0f1f4d"
+   },
+   "sidebarScrollers": [],
+   "header": {
+    "rect": {
+     "x": 252,
+     "y": 0,
+     "w": 1188,
+     "h": 64,
+     "r": 1440,
+     "b": 64
+    },
+    "bg": "#0f1f4d",
+    "borderBottom": "1px #313e66",
+    "shadow": "none",
+    "position": "relative"
+   },
+   "sidebarTop": {
+    "rect": {
+     "x": 0,
+     "y": 0,
+     "w": 0,
+     "h": 0,
+     "r": 0,
+     "b": 0
+    },
+    "text": "CRCamila RibeiroGerente de Controladoria",
+    "children": [
+     "DIV.drawer-head only-mobile h=0",
+     "DIV.sb-top only-desktop h=64",
+     "DIV.sb-unit only-desktop h=59",
+     "NAV.sb-nav h=665"
+    ]
+   },
+   "headerItems": [
+    {
+     "t": "Visão geral",
+     "aria": null,
+     "cur": "page",
+     "w": 102,
+     "h": 40
+    },
+    {
+     "t": "Aquisição",
+     "aria": null,
+     "cur": null,
+     "w": 92,
+     "h": 40
+    },
+    {
+     "t": "Retenção",
+     "aria": null,
+     "cur": null,
+     "w": 89,
+     "h": 40
+    },
+    {
+     "t": "Receita",
+     "aria": null,
+     "cur": null,
+     "w": 76,
+     "h": 40
+    },
+    {
+     "t": "Notificações",
+     "aria": "Notificações",
+     "cur": null,
+     "w": 32,
+     "h": 32
+    },
+    {
+     "t": "CR",
+     "aria": "Menu do perfil: Camila Ribeiro",
+     "cur": null,
+     "w": 32,
+     "h": 32
+    }
+   ],
+   "tabs": [
+    {
+     "text": "Visão geral",
+     "cur": "page",
+     "sel": null,
+     "bg": "#f8fafc",
+     "color": "#0f172a",
+     "bl": "1px #e6e6e6",
+     "bt": "1px",
+     "radius": "6px",
+     "rect": {
+      "x": 276,
+      "y": 24,
+      "w": 102,
+      "h": 40,
+      "r": 378,
+      "b": 64
+     }
+    },
+    {
+     "text": "Aquisição",
+     "cur": null,
+     "sel": null,
+     "bg": "transparent",
+     "color": "#caced8",
+     "bl": "1px transparent",
+     "bt": "1px",
+     "radius": "6px",
+     "rect": {
+      "x": 402,
+      "y": 24,
+      "w": 92,
+      "h": 40,
+      "r": 494,
+      "b": 64
+     }
+    },
+    {
+     "text": "Retenção",
+     "cur": null,
+     "sel": null,
+     "bg": "transparent",
+     "color": "#caced8",
+     "bl": "1px transparent",
+     "bt": "1px",
+     "radius": "6px",
+     "rect": {
+      "x": 518,
+      "y": 24,
+      "w": 89,
+      "h": 40,
+      "r": 607,
+      "b": 64
+     }
+    },
+    {
+     "text": "Receita",
+     "cur": null,
+     "sel": null,
+     "bg": "transparent",
+     "color": "#caced8",
+     "bl": "1px transparent",
+     "bt": "1px",
+     "radius": "6px",
+     "rect": {
+      "x": 631,
+      "y": 24,
+      "w": 76,
+      "h": 40,
+      "r": 707,
+      "b": 64
+     }
+    }
+   ],
+   "avatar": {
+    "rect": {
+     "x": 1384,
+     "y": 16,
+     "w": 32,
+     "h": 32,
+     "r": 1416,
+     "b": 48
+    },
+    "aria": "Menu do perfil: Camila Ribeiro",
+    "inner": {
+     "x": 1384,
+     "y": 16,
+     "w": 32,
+     "h": 32,
+     "r": 1416,
+     "b": 48
+    }
+   },
+   "groupTitle": {
+    "text": "Gestão",
+    "fs": "11px",
+    "tt": "uppercase",
+    "fw": "650",
+    "ls": "0.88px",
+    "color": "#caced8"
+   },
+   "navItems": [
+    {
+     "text": "Gestão",
+     "h": 41,
+     "icon": 14,
+     "cur": null,
+     "exp": "true"
+    },
+    {
+     "text": "PainelPainel",
+     "h": 40,
+     "icon": 20,
+     "cur": "page",
+     "exp": null
+    },
+    {
+     "text": "ContratosContratos",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "FornecedoresFornecedores",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "ComprasCompras",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "Pessoas",
+     "h": 41,
+     "icon": 14,
+     "cur": null,
+     "exp": "true"
+    },
+    {
+     "text": "ColaboradoresColaboradores",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "FolhaFolha",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "Administração",
+     "h": 41,
+     "icon": 14,
+     "cur": null,
+     "exp": "true"
+    },
+    {
+     "text": "AuditoriaAuditoria",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    },
+    {
+     "text": "PermissõesPermissões",
+     "h": 40,
+     "icon": 20,
+     "cur": null,
+     "exp": null
+    }
+   ],
+   "activeItem": {
+    "text": "PainelPainel",
+    "bg": "#313e66",
+    "color": "#ffffff",
+    "borderLeft": "0px #ffffff",
+    "shadow": "none",
+    "before": {
+     "w": "3px",
+     "h": "24px",
+     "bg": "#0ea5e9",
+     "left": "0px",
+     "pos": "absolute"
+    },
+    "after": null,
+    "rect": {
+     "x": 12,
+     "y": 172,
+     "w": 228,
+     "h": 40,
+     "r": 240,
+     "b": 212
+    }
+   },
+   "nonActive": {
+    "bg": "transparent",
+    "color": "#caced8"
+   },
+   "navLabels": [
+    "Gestão",
+    "PainelPainel",
+    "ContratosContratos",
+    "FornecedoresFornecedores",
+    "ComprasCompras",
+    "Pessoas",
+    "ColaboradoresColaboradores",
+    "FolhaFolha",
+    "Administração",
+    "AuditoriaAuditoria",
+    "PermissõesPermissões",
+    "Visão geral",
+    "Aquisição",
+    "Retenção",
+    "Receita"
+   ],
+   "sidebarFoot": {
+    "text": "CRCamila RibeiroGerente de ControladoriaConfiguraçõesConfiguraçõesAjudaSair",
+    "rect": {
+     "x": 0,
+     "y": 788,
+     "w": 252,
+     "h": 113,
+     "r": 252,
+     "b": 900
+    },
+    "buttons": [
+     "Opções do perfil",
+     "Configurações",
+     "Configurações",
+     "Ajuda",
+     "Sair"
+    ]
+   },
+   "unitSelector": [
+    {
+     "aria": null,
+     "text": "Matriz · São Paulo",
+     "rect": {
+      "x": 12,
+      "y": 76,
+      "w": 228,
+      "h": 34,
+      "r": 240,
+      "b": 110
+     }
+    },
+    {
+     "aria": "Opções do perfil",
+     "text": "",
+     "rect": {
+      "x": 200,
+      "y": 805,
+      "w": 36,
+      "h": 36,
+      "r": 236,
+      "b": 841
+     }
+    }
+   ],
+   "h1": {
+    "text": "Visão geral",
+    "rect": {
+     "x": 284,
+     "y": 96,
+     "w": 830,
+     "h": 29,
+     "r": 1114,
+     "b": 125
+    },
+    "fs": "23px",
+    "fw": "650",
+    "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+    "color": "#0f172a"
+   },
+   "main": {
+    "rect": {
+     "x": 252,
+     "y": 64,
+     "w": 1188,
+     "h": 836,
+     "r": 1440,
+     "b": 900
+    },
+    "bg": "transparent",
+    "padding": "32px"
+   },
+   "body": {
+    "bg": "#f8fafc",
+    "color": "#0f172a",
+    "fs": "15px",
+    "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif"
+   },
+   "contentPadding": {
+    "el": "MAIN.content",
+    "padding": "32px"
+   },
+   "kpis": [
+    {
+     "rect": {
+      "x": 284,
+      "y": 162,
+      "w": 364,
+      "h": 107,
+      "r": 648,
+      "b": 269
+     },
+     "bg": "#ffffff",
+     "border": "1px solid #e6e6e6",
+     "radius": "6px",
+     "shadow": "none",
+     "label": {
+      "t": "Receita líquida",
+      "color": "#686d7a",
+      "fs": "13px"
+     },
+     "value": {
+      "t": "R$ 4.820.000",
+      "fs": "23px",
+      "fw": "650",
+      "color": "#0f172a",
+      "fvn": "tabular-nums"
+     },
+     "delta": {
+      "t": "+6,4% vs. período anterior",
+      "html": [
+       "#686d7a"
+      ]
+     }
+    },
+    {
+     "rect": {
+      "x": 664,
+      "y": 162,
+      "w": 364,
+      "h": 107,
+      "r": 1028,
+      "b": 269
+     },
+     "bg": "#ffffff",
+     "border": "1px solid #e6e6e6",
+     "radius": "6px",
+     "shadow": "none",
+     "label": {
+      "t": "Clientes ativos",
+      "color": "#686d7a",
+      "fs": "13px"
+     },
+     "value": {
+      "t": "12.480",
+      "fs": "23px",
+      "fw": "650",
+      "color": "#0f172a",
+      "fvn": "tabular-nums"
+     },
+     "delta": {
+      "t": "+2,1% vs. período anterior",
+      "html": [
+       "#686d7a"
+      ]
+     }
+    },
+    {
+     "rect": {
+      "x": 1044,
+      "y": 162,
+      "w": 364,
+      "h": 107,
+      "r": 1408,
+      "b": 269
+     },
+     "bg": "#ffffff",
+     "border": "1px solid #e6e6e6",
+     "radius": "6px",
+     "shadow": "none",
+     "label": {
+      "t": "Ticket médio",
+      "color": "#686d7a",
+      "fs": "13px"
+     },
+     "value": {
+      "t": "R$ 386",
+      "fs": "23px",
+      "fw": "650",
+      "color": "#0f172a",
+      "fvn": "tabular-nums"
+     },
+     "delta": {
+      "t": "−1,3% vs. período anterior",
+      "html": [
+       "#686d7a"
+      ]
+     }
+    }
+   ],
+   "chartCard": {
+    "rect": {
+     "x": 284,
+     "y": 285,
+     "w": 739,
+     "h": 402,
+     "r": 1023,
+     "b": 688
+    },
+    "title": "Vendas por mês",
+    "radius": "6px",
+    "shadow": "none"
+   },
+   "actCard": {
+    "rect": {
+     "x": 1039,
+     "y": 285,
+     "w": 369,
+     "h": 402,
+     "r": 1408,
+     "b": 688
+    },
+    "title": "Atividades recentes"
+   },
+   "chartRatio": 0.667,
+   "chart": {
+    "rect": {
+     "x": 293,
+     "y": 342,
+     "w": 721,
+     "h": 293,
+     "r": 1014,
+     "b": 636
+    },
+    "role": "img",
+    "aria": "Vendas por mês. Gráfico de barras com 2 série(s): 2026, 2025.",
+    "parentRole": null,
+    "parentAria": null,
+    "fills": {
+     "transparent": 6,
+     "#1d4ed8": 6,
+     "#0c91cd": 6
+    },
+    "lines": [
+     "#e6e6e6",
+     "#c7c7c7"
+    ],
+    "texts": [
+     "0",
+     "200 mil",
+     "400 mil",
+     "600 mil",
+     "800 mil",
+     "Mai",
+     "Jun",
+     "Jul",
+     "Ago",
+     "Set",
+     "Out"
+    ],
+    "valueLabels": 0
+   },
+   "legend": {
+    "rect": {
+     "x": 285,
+     "y": 636,
+     "w": 737,
+     "h": 51,
+     "r": 1022,
+     "b": 687
+    },
+    "text": "20262025",
+    "buttons": 2,
+    "below": true
+   },
+   "chartAlt": true,
+   "chartPeriodControl": [
+    "2026",
+    "2025"
+   ],
+   "activityItems": 5,
+   "table": {
+    "rect": {
+     "x": 285,
+     "y": 752,
+     "w": 1122,
+     "h": 189,
+     "r": 1407,
+     "b": 940
+    },
+    "thead": true,
+    "scopeCol": 6,
+    "ths": [
+     "|",
+     "Cliente|none",
+     "Status|none",
+     "Valor|none",
+     "Data|none",
+     "Ações|"
+    ],
+    "theadBg": "#f5f5f5 / transparent",
+    "thFs": "12px 600 #0f172a",
+    "rowH": [
+     39,
+     39,
+     39,
+     39
+    ],
+    "rowCount": 4,
+    "rowBgs": [
+     "transparent/transparent",
+     "transparent/transparent",
+     "transparent/transparent",
+     "transparent/transparent"
+    ],
+    "tdFs": "13px",
+    "valAlign": "right",
+    "valFvn": "tabular-nums",
+    "badges": [
+     "Aprovado|#e3f4e9|#0f6a30|r=4px",
+     "Em análise|#e5ecfd|#1e40af|r=4px",
+     "Pendente|#faefe1|#a85c04|r=4px",
+     "Aprovado|#e3f4e9|#0f6a30|r=4px"
+    ],
+    "checkboxes": 5,
+    "rowActions": 4,
+    "card": {
+     "radius": "6px",
+     "border": "1px #e6e6e6",
+     "shadow": "none",
+     "bg": "#ffffff"
+    },
+    "title": "Pedidos recentes",
+    "toolbarButtons": []
+   },
+   "primaryBtn": null,
+   "input": {
+    "radius": "4px",
+    "h": 30,
+    "border": "1px #313e66",
+    "fs": "14px"
+   },
+   "contentShadows": [],
+   "muted": {
+    "t": "Indicadores e movimentação do período selecionado.",
+    "color": "#686d7a",
+    "fs": "13px"
+   },
+   "fontsInter": true,
+   "docScroll": {
+    "sw": 1440,
+    "cw": 1440
+   }
+  },
+  "afterScroll": {
+   "winY": 0,
+   "sidebar": {
+    "y": 0,
+    "h": 900
+   },
+   "header": {
+    "y": 0,
+    "h": 64
+   },
+   "headerShadow": "rgba(15, 23, 42, 0.18) 0px 2px 8px 0px",
+   "scrolled": [
+    "MAIN#conteudo-app.content:108"
+   ]
+  },
+  "sidebarWidths": {
+   "600": {
+    "x": -280,
+    "w": 280,
+    "h": 900,
+    "display": "flex",
+    "vis": "hidden",
+    "transform": "matrix(1, 0, 0, 1, -280, 0)",
+    "headers": [
+     "topbar only-mobile x=0 w=600 h=56"
+    ],
+    "kpiW": [
+     568,
+     568,
+     568
+    ],
+    "chartActSideBySide": false,
+    "chartW": 568
+   },
+   "767": {
+    "x": -280,
+    "w": 280,
+    "h": 900,
+    "display": "flex",
+    "vis": "hidden",
+    "transform": "matrix(1, 0, 0, 1, -280, 0)",
+    "headers": [
+     "topbar only-mobile x=0 w=767 h=56"
+    ],
+    "kpiW": [
+     360,
+     360,
+     735
+    ],
+    "chartActSideBySide": false,
+    "chartW": 735
+   },
+   "768": {
+    "x": 0,
+    "w": 72,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header only-desktop x=72 w=696 h=64"
+    ],
+    "kpiW": [
+     316,
+     316,
+     648
+    ],
+    "chartActSideBySide": false,
+    "chartW": 648
+   },
+   "820": {
+    "x": 0,
+    "w": 72,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header only-desktop x=72 w=748 h=64"
+    ],
+    "kpiW": [
+     342,
+     342,
+     700
+    ],
+    "chartActSideBySide": false,
+    "chartW": 700
+   },
+   "1000": {
+    "x": 0,
+    "w": 72,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header only-desktop x=72 w=928 h=64"
+    ],
+    "kpiW": [
+     432,
+     432,
+     880
+    ],
+    "chartActSideBySide": false,
+    "chartW": 880
+   },
+   "1023": {
+    "x": 0,
+    "w": 72,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header only-desktop x=72 w=951 h=64"
+    ],
+    "kpiW": [
+     444,
+     444,
+     903
+    ],
+    "chartActSideBySide": false,
+    "chartW": 903
+   },
+   "1024": {
+    "x": 0,
+    "w": 220,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header only-desktop x=220 w=804 h=64"
+    ],
+    "kpiW": [
+     370,
+     370,
+     756
+    ],
+    "chartActSideBySide": false,
+    "chartW": 756
+   },
+   "1279": {
+    "x": 0,
+    "w": 220,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header only-desktop x=220 w=1059 h=64"
+    ],
+    "kpiW": [
+     498,
+     498,
+     1011
+    ],
+    "chartActSideBySide": false,
+    "chartW": 1011
+   },
+   "1280": {
+    "x": 0,
+    "w": 252,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header only-desktop x=252 w=1028 h=64"
+    ],
+    "kpiW": [
+     311,
+     311,
+     311
+    ],
+    "chartActSideBySide": true,
+    "chartW": 632
+   },
+   "1920": {
+    "x": 0,
+    "w": 252,
+    "h": 900,
+    "display": "flex",
+    "vis": "visible",
+    "transform": "none",
+    "headers": [
+     "app-header only-desktop x=252 w=1668 h=64"
+    ],
+    "kpiW": [
+     524,
+     524,
+     524
+    ],
+    "chartActSideBySide": true,
+    "chartW": 1059
+   }
+  }
+ }
+}

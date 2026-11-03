@@ -1,0 +1,194 @@
+{
+ "site": "dev-2",
+ "primeiraTela": {
+  "url": "http://127.0.0.1:4552/index.html",
+  "h1": [
+   "Entrar"
+  ],
+  "sub": "Escolha como prefere acessar.",
+  "tablist": [
+   {
+    "label": "Acesso",
+    "tabs": [
+     {
+      "t": "Entrar",
+      "sel": "true",
+      "w": 179,
+      "h": 48,
+      "borderB": "0px rgb(188, 45, 95)",
+      "after": "rgb(214, 51, 108) 2px",
+      "shadow": "none",
+      "color": "rgb(188, 45, 95)"
+     },
+     {
+      "t": "Criar conta",
+      "sel": "false",
+      "w": 179,
+      "h": 48,
+      "borderB": "0px rgb(77, 77, 80)",
+      "after": "rgba(0, 0, 0, 0) 2px",
+      "shadow": "none",
+      "color": "rgb(77, 77, 80)"
+     }
+    ]
+   }
+  ],
+  "seg": [
+   {
+    "type": "radio",
+    "role": null,
+    "label": "E-mail",
+    "checked": true
+   },
+   {
+    "type": "radio",
+    "role": null,
+    "label": "Telefone",
+    "checked": null
+   }
+  ],
+  "email": {
+   "label": "E-mail",
+   "type": "email",
+   "inputmode": "email",
+   "ac": "username",
+   "h": 56,
+   "fs": "16px",
+   "radius": "8px",
+   "border": "1px rgb(199, 199, 199)"
+  },
+  "pass": {
+   "label": "Senha",
+   "type": "password",
+   "ac": "current-password",
+   "h": 56,
+   "fs": "16px"
+  },
+  "forgot": {
+   "t": "Esqueci minha senha",
+   "dyToPass": 12,
+   "dyAbove": -112
+  },
+  "submit": {
+   "t": "Entrar",
+   "top": 772,
+   "bottom": 828,
+   "h": 56,
+   "gapBottom": 16,
+   "pos": "static",
+   "parentPos": "sticky",
+   "bg": "rgb(214, 51, 108)",
+   "radius": "8px"
+  },
+  "landing": false,
+  "safeAreaCss": true
+ },
+ "enviarVazio": {
+  "ariaInvalid": "true",
+  "describedby": "login-email-err",
+  "descText": "Informe seu e-mail",
+  "resumoVisivel": true,
+  "resumoRole": "alert",
+  "resumoTexto": "Corrija 2 campos para continuar Informe seu e-mail Informe sua senha",
+  "focado": "login-email"
+ },
+ "blurInvalido": {
+  "ariaInvalid": "true",
+  "descText": "Digite um e-mail válido, como nome@exemplo.com"
+ },
+ "toggleSenha": {
+  "before": {
+   "type": "password",
+   "pressed": "false",
+   "label": "Mostrar senha"
+  },
+  "after": {
+   "type": "text",
+   "pressed": "true",
+   "label": "Ocultar senha"
+  }
+ },
+ "credErradas": {
+  "resumo": "E-mail ou senha incorretos Confira os dados e tente novamente.",
+  "generico": true,
+  "senhaMantida": true,
+  "emailMantido": "ana@conecta.demo",
+  "duranteEnvio": {
+   "t": "Entrando…",
+   "disabled": true,
+   "busy": "true"
+  }
+ },
+ "esqueci": {
+  "url": "http://127.0.0.1:4552/index.html?aba=recuperar",
+  "neutra": true
+ },
+ "cadastro": {
+  "url": "?aba=cadastro",
+  "emailNoCadastro": "teste@exemplo.com",
+  "ordem": [
+   "Nome",
+   "E-mail",
+   "Senha"
+  ],
+  "ac": [
+   "name",
+   "email",
+   "new-password"
+  ],
+  "alturas": [
+   48,
+   48,
+   48
+  ],
+  "termos": {
+   "t": "Criar conta Ao criar uma conta, você concorda com os Termos de uso e a Política de privacidade.",
+   "links": 3
+  },
+  "botao": {
+   "t": "Criar conta",
+   "pos": "static",
+   "below": 140
+  },
+  "checklistParcial": [
+   "Pelo menos 8 caracteres (pendente)= ",
+   "Uma letra maiúscula (pendente)= ",
+   "Uma letra minúscula (cumprido)= ",
+   "Um número (pendente)= "
+  ],
+  "checklistCompleto": [
+   "Pelo menos 8 caracteres (cumprido)= ",
+   "Uma letra maiúscula (cumprido)= ",
+   "Uma letra minúscula (cumprido)= ",
+   "Um número (cumprido)= "
+  ],
+  "erroVazio": {
+   "alert": [
+    "Corrija 2 campos para continuar Informe seu nome Crie uma senha"
+   ],
+   "invalid": 2
+  },
+  "voltaEntrar": {
+   "url": "",
+   "email": "teste@exemplo.com"
+  }
+ },
+ "linkDireto": {
+  "cadastroVisivel": true
+ },
+ "entrando": {
+  "t": "Entrando…",
+  "disabled": true,
+  "entrou": true
+ },
+ "sair": {
+  "loginVisivel": true,
+  "url": "http://127.0.0.1:4552/index.html"
+ },
+ "telefone": {
+  "type": "tel",
+  "inputmode": "tel",
+  "ac": "tel",
+  "h": 56
+ }
+}

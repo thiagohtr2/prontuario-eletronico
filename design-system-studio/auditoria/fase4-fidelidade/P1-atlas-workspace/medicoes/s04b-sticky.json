@@ -1,0 +1,263 @@
+{
+  "dev-1": [
+    {
+      "route": "#/painel",
+      "scrollY": 622,
+      "docH": 1522,
+      "shellBottomAbs": 1522,
+      "shellCls": "sidebar-slot",
+      "sbTop": 0,
+      "sbBottom": 900,
+      "topVisible": 0,
+      "bodyKids": [
+        {
+          "tag": "A",
+          "id": "",
+          "cls": "skip-link",
+          "h": 38.5,
+          "pos": "fixed"
+        },
+        {
+          "tag": "DIV",
+          "id": "root",
+          "cls": "",
+          "h": 1522.109375,
+          "pos": "static"
+        }
+      ]
+    },
+    {
+      "route": "#/projetos",
+      "scrollY": 1293,
+      "docH": 2193,
+      "shellBottomAbs": 2193,
+      "shellCls": "sidebar-slot",
+      "sbTop": 0,
+      "sbBottom": 900,
+      "topVisible": 0,
+      "bodyKids": [
+        {
+          "tag": "A",
+          "id": "",
+          "cls": "skip-link",
+          "h": 38.5,
+          "pos": "fixed"
+        },
+        {
+          "tag": "DIV",
+          "id": "root",
+          "cls": "",
+          "h": 2192.625,
+          "pos": "static"
+        }
+      ]
+    },
+    {
+      "route": "#/pessoas",
+      "scrollY": 112,
+      "docH": 1012,
+      "shellBottomAbs": 1012,
+      "shellCls": "sidebar-slot",
+      "sbTop": 0,
+      "sbBottom": 900,
+      "topVisible": 0,
+      "bodyKids": [
+        {
+          "tag": "A",
+          "id": "",
+          "cls": "skip-link",
+          "h": 38.5,
+          "pos": "fixed"
+        },
+        {
+          "tag": "DIV",
+          "id": "root",
+          "cls": "",
+          "h": 1011.890625,
+          "pos": "static"
+        }
+      ]
+    }
+  ],
+  "dev-2": [
+    {
+      "route": "#/painel",
+      "scrollY": 250,
+      "docH": 1150,
+      "shellBottomAbs": 1030,
+      "shellCls": "sidebar-slot",
+      "sbTop": -120,
+      "sbBottom": 780,
+      "topVisible": -120,
+      "bodyKids": [
+        {
+          "tag": "A",
+          "id": "",
+          "cls": "skip-link",
+          "h": 46.5,
+          "pos": "fixed"
+        },
+        {
+          "tag": "DIV",
+          "id": "root",
+          "cls": "",
+          "h": 1030.3125,
+          "pos": "static"
+        },
+        {
+          "tag": "DIV",
+          "id": "announcer",
+          "cls": "sr-only",
+          "h": 1,
+          "pos": "absolute"
+        }
+      ]
+    },
+    {
+      "route": "#/projetos",
+      "scrollY": 1084,
+      "docH": 1984,
+      "shellBottomAbs": 1984,
+      "shellCls": "sidebar-slot",
+      "sbTop": 0,
+      "sbBottom": 900,
+      "topVisible": 0,
+      "bodyKids": [
+        {
+          "tag": "A",
+          "id": "",
+          "cls": "skip-link",
+          "h": 46.5,
+          "pos": "fixed"
+        },
+        {
+          "tag": "DIV",
+          "id": "root",
+          "cls": "",
+          "h": 1983.796875,
+          "pos": "static"
+        },
+        {
+          "tag": "DIV",
+          "id": "announcer",
+          "cls": "sr-only",
+          "h": 1,
+          "pos": "absolute"
+        }
+      ]
+    },
+    {
+      "route": "#/tarefas",
+      "scrollY": 0,
+      "docH": 900,
+      "shellBottomAbs": 900,
+      "shellCls": "sidebar-slot",
+      "sbTop": 0,
+      "sbBottom": 900,
+      "topVisible": 0,
+      "bodyKids": [
+        {
+          "tag": "A",
+          "id": "",
+          "cls": "skip-link",
+          "h": 46.5,
+          "pos": "fixed"
+        },
+        {
+          "tag": "DIV",
+          "id": "root",
+          "cls": "",
+          "h": 900,
+          "pos": "static"
+        },
+        {
+          "tag": "DIV",
+          "id": "announcer",
+          "cls": "sr-only",
+          "h": 1,
+          "pos": "absolute"
+        }
+      ]
+    }
+  ],
+  "dev-3": [
+    {
+      "route": "#/app/painel",
+      "scrollY": 213,
+      "docH": 1113,
+      "shellBottomAbs": 961,
+      "shellCls": "shell",
+      "sbTop": -152,
+      "sbBottom": 748,
+      "topVisible": -152,
+      "bodyKids": [
+        {
+          "tag": "DIV",
+          "id": "app",
+          "cls": "",
+          "h": 961.15625,
+          "pos": "static"
+        },
+        {
+          "tag": "DIV",
+          "id": "live",
+          "cls": "sr-only",
+          "h": 1,
+          "pos": "absolute"
+        }
+      ]
+    },
+    {
+      "route": "#/app/projetos",
+      "scrollY": 237,
+      "docH": 1137,
+      "shellBottomAbs": 1137,
+      "shellCls": "shell",
+      "sbTop": 0,
+      "sbBottom": 900,
+      "topVisible": 0,
+      "bodyKids": [
+        {
+          "tag": "DIV",
+          "id": "app",
+          "cls": "",
+          "h": 1136.625,
+          "pos": "static"
+        },
+        {
+          "tag": "DIV",
+          "id": "live",
+          "cls": "sr-only",
+          "h": 1,
+          "pos": "absolute"
+        }
+      ]
+    },
+    {
+      "route": "#/app/relatorios",
+      "scrollY": 0,
+      "docH": 900,
+      "shellBottomAbs": 900,
+      "shellCls": "shell",
+      "sbTop": 0,
+      "sbBottom": 900,
+      "topVisible": 0,
+      "bodyKids": [
+        {
+          "tag": "DIV",
+          "id": "app",
+          "cls": "",
+          "h": 900,
+          "pos": "static"
+        },
+        {
+          "tag": "DIV",
+          "id": "live",
+          "cls": "sr-only",
+          "h": 1,
+          "pos": "absolute"
+        }
+      ]
+    }
+  ]
+}

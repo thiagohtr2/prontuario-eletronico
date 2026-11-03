@@ -1,0 +1,2042 @@
+{
+ "dev-1": {
+  "login390": {
+   "header": {
+    "h": 56,
+    "bg": "rgb(255, 255, 255)"
+   },
+   "card": {
+    "x": 16,
+    "w": 358,
+    "border": "1px",
+    "radius": "12px"
+   },
+   "inputs": [
+    {
+     "type": "email",
+     "fs": "16px",
+     "h": 48
+    },
+    {
+     "type": "password",
+     "fs": "16px",
+     "h": 48
+    }
+   ],
+   "vw": 390,
+   "sw": 390
+  },
+  "loginTargets": [
+   {
+    "t": "Nexo Capital",
+    "tag": "a",
+    "w": 129,
+    "h": 28,
+    "ok": false,
+    "okH": false
+   },
+   {
+    "t": "Suporte de TI",
+    "tag": "a",
+    "w": 122,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Entrar com SSO da empresa",
+    "tag": "button",
+    "w": 324,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "email",
+    "tag": "input",
+    "w": 324,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "password",
+    "tag": "input",
+    "w": 324,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Mostrar senha",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Esqueci minha senha",
+    "tag": "a",
+    "w": 142,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Entrar",
+    "tag": "button",
+    "w": 324,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   }
+  ],
+  "topbar": {
+   "h": 56,
+   "y": 0,
+   "bg": "rgb(15, 31, 77)",
+   "position": "sticky",
+   "menuBtn": {
+    "x": 10,
+    "w": 44,
+    "h": 44
+   },
+   "text": "Nexo CapitalVisão geralAquisiçãoRetençãoReceitaBuscar…/Perío",
+   "items": [
+    "Abrir menu 44x44",
+    "Nexo Capital — Painel 129x28",
+    "Menu do perfil de Ana Rib 44x44"
+   ]
+  },
+  "bottomNav": [],
+  "content": {
+   "kpis": [
+    {
+     "x": 16,
+     "w": 358
+    },
+    {
+     "x": 16,
+     "w": 358
+    },
+    {
+     "x": 16,
+     "w": 358
+    }
+   ],
+   "kpiCols": 1,
+   "chartActStacked": true,
+   "chart": {
+    "w": 332,
+    "h": 220,
+    "xlabels": [
+     "R$ 0",
+     "Jan/26",
+     "Abr/26",
+     "Jul/26",
+     "Out/26"
+    ],
+    "cut": [
+     "Out/26"
+    ],
+    "cardW": 358
+   },
+   "legendBelow": true,
+   "table": {
+    "w": 356,
+    "display": "block",
+    "rowDisplay": "grid",
+    "rowH": 159,
+    "scroller": {
+     "cls": "tbl-wrap",
+     "sw": 356,
+     "cw": 356
+    },
+    "theadVisible": true,
+    "cardLabels": 3
+   },
+   "doc": {
+    "sw": 390,
+    "vw": 390
+   }
+  },
+  "appTargets": [
+   {
+    "t": "Pular para o conteúdo",
+    "tag": "a",
+    "w": 185,
+    "h": 41,
+    "ok": false,
+    "okH": false
+   },
+   {
+    "t": "Abrir menu",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Nexo Capital — Painel",
+    "tag": "a",
+    "w": 129,
+    "h": 28,
+    "ok": false,
+    "okH": false
+   },
+   {
+    "t": "Menu do perfil de Ana Ribeiro",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Período: Últimos 30 dias",
+    "tag": "button",
+    "w": 210,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Exportar",
+    "tag": "button",
+    "w": 140,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "AtualizarR",
+    "tag": "button",
+    "w": 358,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Vendas por mês, Nov/25 a Out/2",
+    "tag": "div",
+    "w": 332,
+    "h": 220,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Vendas",
+    "tag": "button",
+    "w": 85,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Meta",
+    "tag": "button",
+    "w": 69,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "search",
+    "tag": "input",
+    "w": 332,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Novo pedido",
+    "tag": "button",
+    "w": 332,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Todos",
+    "tag": "button",
+    "w": 58,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Pago",
+    "tag": "button",
+    "w": 50,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Pendente",
+    "tag": "button",
+    "w": 79,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Atrasado",
+    "tag": "button",
+    "w": 75,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Em análise",
+    "tag": "button",
+    "w": 87,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "on",
+    "tag": "input",
+    "w": 128,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Cliente",
+    "tag": "button",
+    "w": 88,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Status",
+    "tag": "button",
+    "w": 84,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Valor",
+    "tag": "button",
+    "w": 77,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Data",
+    "tag": "button",
+    "w": 73,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Selecionar Rede Mercado Bom",
+    "tag": "input",
+    "w": 28,
+    "h": 44,
+    "ok": false,
+    "okH": true
+   },
+   {
+    "t": "Ações para Rede Mercado Bom",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Selecionar Agro Cerrado S.A.",
+    "tag": "input",
+    "w": 28,
+    "h": 44,
+    "ok": false,
+    "okH": true
+   },
+   {
+    "t": "Ações para Agro Cerrado S.A.",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Selecionar Vinícola Vale Alto",
+    "tag": "input",
+    "w": 28,
+    "h": 44,
+    "ok": false,
+    "okH": true
+   },
+   {
+    "t": "Ações para Vinícola Vale Alto",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Selecionar Óticas Visão Clara",
+    "tag": "input",
+    "w": 28,
+    "h": 44,
+    "ok": false,
+    "okH": true
+   },
+   {
+    "t": "Ações para Óticas Visão Clara",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Página anterior",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Próxima página",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   }
+  ],
+  "drawer": {
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 280,
+    "h": 844
+   },
+   "bg": "rgb(239, 241, 243)",
+   "transition": "0.22s, 0s transform, visibility ease-out, ease",
+   "scrim": {
+    "bg": "color(srgb 0.0588235 0.0901961 0.164706 / 0.55)",
+    "w": 390
+   },
+   "mainXBefore": 0,
+   "mainXAfter": 0,
+   "focus": "Fechar menu inDrawer=true",
+   "bodyOv": "hidden/visible",
+   "inertBg": true,
+   "text": "ARAna RibeiroController financeiraNexo CapitalMatriz — São PauloGestãoPainelVisão geralAquisiçãoRetençãoReceitaContratosFornecedoresComprasPessoasColaboradoresFolhaAdministraçãoAuditoriaPermissõesConfiguraçõesAjudaSair",
+   "items": [
+    {
+     "t": "Fechar menu",
+     "h": 44,
+     "w": 44,
+     "icon": true
+    },
+    {
+     "t": "Unidade: Matriz — São Paulo. T",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Painel",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Visão geral",
+     "h": 48,
+     "w": 256,
+     "icon": false
+    },
+    {
+     "t": "Aquisição",
+     "h": 48,
+     "w": 256,
+     "icon": false
+    },
+    {
+     "t": "Retenção",
+     "h": 48,
+     "w": 256,
+     "icon": false
+    },
+    {
+     "t": "Receita",
+     "h": 48,
+     "w": 256,
+     "icon": false
+    },
+    {
+     "t": "Contratos",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Fornecedores",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Compras",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Colaboradores",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Folha",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Auditoria",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Permissões",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Configurações",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Ajuda",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Sair",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    }
+   ],
+   "vh": 844
+  },
+  "drawerTargets": [
+   {
+    "t": "Fechar menu",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Unidade: Matriz — São Paulo. T",
+    "tag": "button",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Painel",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Visão geral",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Aquisição",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Retenção",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Receita",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Contratos",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Fornecedores",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Compras",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Colaboradores",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Folha",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Auditoria",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Permissões",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Configurações",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Ajuda",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Sair",
+    "tag": "button",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   }
+  ],
+  "drawerTrapOutside": 0,
+  "escClose": {
+   "drawerX": -280,
+   "drawerVisible": false,
+   "focus": "Abrir menu"
+  },
+  "scrimClose": {
+   "drawerVisible": false,
+   "focus": "Abrir menu"
+  },
+  "hasCloseBtn": 1,
+  "xClose": {
+   "drawerVisible": false,
+   "focus": "Abrir menu"
+  },
+  "destCount": 1,
+  "destNav": {
+   "url": "#/contratos",
+   "drawerVisible": false,
+   "h1": "Acesso corporativo",
+   "focus": "Contratos"
+  },
+  "drawer320": {
+   "x": 0,
+   "w": 272,
+   "h": 700
+  },
+  "landscapeMenu": 0,
+  "landscape": {
+   "sidebarW": 72,
+   "sidebarX": 0,
+   "headers": [
+    64
+   ],
+   "sw": 844
+  }
+ },
+ "dev-2": {
+  "login390": {
+   "header": {
+    "h": 56,
+    "bg": "rgb(255, 255, 255)"
+   },
+   "card": {
+    "x": 0,
+    "w": 390,
+    "border": "0px",
+    "radius": "0px"
+   },
+   "inputs": [
+    {
+     "type": "email",
+     "fs": "16px",
+     "h": 48
+    },
+    {
+     "type": "password",
+     "fs": "16px",
+     "h": 48
+    }
+   ],
+   "vw": 390,
+   "sw": 390
+  },
+  "loginTargets": [
+   {
+    "t": "Ir para o conteúdo",
+    "tag": "a",
+    "w": 163,
+    "h": 43,
+    "ok": false,
+    "okH": false
+   },
+   {
+    "t": "Nexo Capital — início",
+    "tag": "a",
+    "w": 147,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Suporte de TI",
+    "tag": "a",
+    "w": 106,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Entrar com SSO da empresa",
+    "tag": "button",
+    "w": 358,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "email",
+    "tag": "input",
+    "w": 358,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Esqueci minha senha",
+    "tag": "a",
+    "w": 142,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "password",
+    "tag": "input",
+    "w": 358,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Mostrar senha",
+    "tag": "button",
+    "w": 44,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Entrar",
+    "tag": "button",
+    "w": 358,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Credenciais da demonstração",
+    "tag": "summary",
+    "w": 358,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   }
+  ],
+  "topbar": {
+   "h": 56,
+   "y": 0,
+   "bg": "rgb(15, 31, 77)",
+   "position": "sticky",
+   "menuBtn": {
+    "x": 8,
+    "w": 44,
+    "h": 44
+   },
+   "text": "Visão geral PainelVisão geral Visão geralAquisiçãoRetençãoRe",
+   "items": [
+    "Abrir menu 44x44",
+    "Nexo Capital — Painel 44x44",
+    "Notificações, 3 não lidas 44x44",
+    "Menu do perfil de Ana Sou 44x44"
+   ]
+  },
+  "bottomNav": [],
+  "content": {
+   "kpis": [
+    {
+     "x": 16,
+     "w": 358
+    },
+    {
+     "x": 16,
+     "w": 358
+    },
+    {
+     "x": 16,
+     "w": 358
+    }
+   ],
+   "kpiCols": 1,
+   "chartActStacked": true,
+   "chart": {
+    "w": 332,
+    "h": 224,
+    "xlabels": [
+     "0",
+     "jun",
+     "jul",
+     "ago",
+     "set",
+     "out",
+     "nov"
+    ],
+    "cut": [],
+    "cardW": 358
+   },
+   "legendBelow": true,
+   "table": {
+    "w": 332,
+    "display": "block",
+    "rowDisplay": "grid",
+    "rowH": 142,
+    "scroller": null,
+    "theadVisible": true,
+    "cardLabels": 4
+   },
+   "doc": {
+    "sw": 390,
+    "vw": 390
+   }
+  },
+  "appTargets": [
+   {
+    "t": "Ir para o conteúdo",
+    "tag": "a",
+    "w": 163,
+    "h": 43,
+    "ok": false,
+    "okH": false
+   },
+   {
+    "t": "Abrir menu",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Nexo Capital — Painel",
+    "tag": "a",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Notificações, 3 não lidas",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Menu do perfil de Ana Souza",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Período: Últimos 30 dias. Alte",
+    "tag": "button",
+    "w": 212,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Exportar",
+    "tag": "button",
+    "w": 138,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Gráfico de barras agrupadas, V",
+    "tag": "div",
+    "w": 332,
+    "h": 224,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Vendas",
+    "tag": "button",
+    "w": 85,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Meta",
+    "tag": "button",
+    "w": 69,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "search",
+    "tag": "input",
+    "w": 332,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Ordem padrãoCliente (A–Z)Clien",
+    "tag": "select",
+    "w": 332,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Selecionar todos os registros",
+    "tag": "input",
+    "w": 152,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Selecionar Padaria Sol Nascent",
+    "tag": "input",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Ações de Padaria Sol Nascente",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Selecionar Clínica Bem Viver",
+    "tag": "input",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Ações de Clínica Bem Viver",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Selecionar Studio Aurora Desig",
+    "tag": "input",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Ações de Studio Aurora Design",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Selecionar Fênix Educação",
+    "tag": "input",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Ações de Fênix Educação",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   }
+  ],
+  "drawer": {
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 280,
+    "h": 844
+   },
+   "bg": "rgb(239, 241, 243)",
+   "transition": "0.23s transform ease-out",
+   "scrim": {
+    "bg": "color(srgb 0.0588235 0.0901961 0.164706 / 0.55)",
+    "w": 390
+   },
+   "mainXBefore": 0,
+   "mainXAfter": 0,
+   "focus": "Fechar menu inDrawer=true",
+   "bodyOv": "visible/hidden",
+   "inertBg": true,
+   "text": "AS Ana Souza ana.souza@nexocapital.com.br Gestão Painel Visão geral Aquisição Retenção Receita Contratos Fornecedores ComprasPessoas Colaboradores FolhaAdministração Auditoria Permissões Configurações Ajuda Sair",
+   "items": [
+    {
+     "t": "Fechar menu",
+     "h": 44,
+     "w": 44,
+     "icon": true
+    },
+    {
+     "t": "Painel",
+     "h": 48,
+     "w": 255,
+     "icon": true
+    },
+    {
+     "t": "Visão geral",
+     "h": 48,
+     "w": 225,
+     "icon": true
+    },
+    {
+     "t": "Aquisição",
+     "h": 48,
+     "w": 225,
+     "icon": true
+    },
+    {
+     "t": "Retenção",
+     "h": 48,
+     "w": 225,
+     "icon": true
+    },
+    {
+     "t": "Receita",
+     "h": 48,
+     "w": 225,
+     "icon": true
+    },
+    {
+     "t": "Contratos",
+     "h": 48,
+     "w": 255,
+     "icon": true
+    },
+    {
+     "t": "Fornecedores",
+     "h": 48,
+     "w": 255,
+     "icon": true
+    },
+    {
+     "t": "Compras",
+     "h": 48,
+     "w": 255,
+     "icon": true
+    },
+    {
+     "t": "Colaboradores",
+     "h": 48,
+     "w": 255,
+     "icon": true
+    },
+    {
+     "t": "Folha",
+     "h": 48,
+     "w": 255,
+     "icon": true
+    },
+    {
+     "t": "Auditoria",
+     "h": 48,
+     "w": 255,
+     "icon": true
+    },
+    {
+     "t": "Permissões",
+     "h": 48,
+     "w": 255,
+     "icon": true
+    },
+    {
+     "t": "Configurações",
+     "h": 48,
+     "w": 255,
+     "icon": true
+    },
+    {
+     "t": "Ajuda",
+     "h": 48,
+     "w": 255,
+     "icon": true
+    },
+    {
+     "t": "Sair",
+     "h": 48,
+     "w": 255,
+     "icon": true
+    }
+   ],
+   "vh": 844
+  },
+  "drawerTargets": [
+   {
+    "t": "Fechar menu",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Painel",
+    "tag": "a",
+    "w": 255,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Visão geral",
+    "tag": "a",
+    "w": 225,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Aquisição",
+    "tag": "a",
+    "w": 225,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Retenção",
+    "tag": "a",
+    "w": 225,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Receita",
+    "tag": "a",
+    "w": 225,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Contratos",
+    "tag": "a",
+    "w": 255,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Fornecedores",
+    "tag": "a",
+    "w": 255,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Compras",
+    "tag": "a",
+    "w": 255,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Colaboradores",
+    "tag": "a",
+    "w": 255,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Folha",
+    "tag": "a",
+    "w": 255,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Auditoria",
+    "tag": "a",
+    "w": 255,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Permissões",
+    "tag": "a",
+    "w": 255,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Configurações",
+    "tag": "a",
+    "w": 255,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Ajuda",
+    "tag": "a",
+    "w": 255,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Sair",
+    "tag": "button",
+    "w": 255,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   }
+  ],
+  "drawerTrapOutside": 0,
+  "escClose": {
+   "drawerX": -280,
+   "drawerVisible": false,
+   "focus": "Abrir menu"
+  },
+  "scrimClose": {
+   "drawerVisible": false,
+   "focus": "Abrir menu"
+  },
+  "hasCloseBtn": 1,
+  "xClose": {
+   "drawerVisible": false,
+   "focus": "Abrir menu"
+  },
+  "destCount": 1,
+  "destNav": {
+   "url": "#/contratos",
+   "drawerVisible": false,
+   "h1": "Acesso corporativo",
+   "focus": "Abrir menu"
+  },
+  "drawer320": {
+   "x": 0,
+   "w": 272,
+   "h": 700
+  },
+  "landscapeMenu": 1,
+  "landscape": {
+   "sidebarW": 72,
+   "sidebarX": 0,
+   "headers": [
+    64
+   ],
+   "sw": 844
+  }
+ },
+ "dev-3": {
+  "login390": {
+   "header": {
+    "h": 56,
+    "bg": "rgb(255, 255, 255)"
+   },
+   "card": {
+    "x": 16,
+    "w": 358,
+    "border": "1px",
+    "radius": "8px"
+   },
+   "inputs": [
+    {
+     "type": "email",
+     "fs": "16px",
+     "h": 48
+    },
+    {
+     "type": "password",
+     "fs": "16px",
+     "h": 48
+    }
+   ],
+   "vw": 390,
+   "sw": 390
+  },
+  "loginTargets": [
+   {
+    "t": "Suporte de TI",
+    "tag": "a",
+    "w": 90,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Entrar com SSO da empresa",
+    "tag": "button",
+    "w": 324,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "email",
+    "tag": "input",
+    "w": 324,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Esqueci minha senha",
+    "tag": "a",
+    "w": 140,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "password",
+    "tag": "input",
+    "w": 324,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Mostrar senha",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Entrar",
+    "tag": "button",
+    "w": 324,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   }
+  ],
+  "topbar": {
+   "h": 56,
+   "y": 0,
+   "bg": "rgb(15, 31, 77)",
+   "position": "sticky",
+   "menuBtn": {
+    "x": 8,
+    "w": 44,
+    "h": 44
+   },
+   "text": "NVisão geralCR",
+   "items": [
+    "Abrir menu 44x44",
+    "Menu do perfil: Camila Ri 32x32"
+   ]
+  },
+  "bottomNav": [],
+  "content": {
+   "kpis": [
+    {
+     "x": 16,
+     "w": 358
+    },
+    {
+     "x": 16,
+     "w": 358
+    },
+    {
+     "x": 16,
+     "w": 358
+    }
+   ],
+   "kpiCols": 1,
+   "chartActStacked": true,
+   "chart": {
+    "w": 340,
+    "h": 191,
+    "xlabels": [
+     "0",
+     "Mai",
+     "Jul",
+     "Set"
+    ],
+    "cut": [
+     "200 mil",
+     "400 mil",
+     "600 mil",
+     "800 mil"
+    ],
+    "cardW": 358
+   },
+   "legendBelow": true,
+   "table": {
+    "w": 356,
+    "display": "block",
+    "rowDisplay": "block",
+    "rowH": 193,
+    "scroller": {
+     "cls": "table-scroll",
+     "sw": 356,
+     "cw": 356
+    },
+    "theadVisible": false,
+    "cardLabels": 5
+   },
+   "doc": {
+    "sw": 390,
+    "vw": 390
+   }
+  },
+  "appTargets": [
+   {
+    "t": "Pular para o conteúdo",
+    "tag": "a",
+    "w": 162,
+    "h": 38,
+    "ok": false,
+    "okH": false
+   },
+   {
+    "t": "Abrir menu",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Menu do perfil: Camila Ribeiro",
+    "tag": "button",
+    "w": 32,
+    "h": 32,
+    "ok": false,
+    "okH": false
+   },
+   {
+    "t": "Período do painel",
+    "tag": "select",
+    "w": 358,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Exportar",
+    "tag": "button",
+    "w": 358,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Mai: 2026 R$ 412.000, 2025 R$ ",
+    "tag": "g",
+    "w": 48,
+    "h": 153,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Jun: 2026 R$ 438.000, 2025 R$ ",
+    "tag": "g",
+    "w": 48,
+    "h": 153,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Jul: 2026 R$ 396.000, 2025 R$ ",
+    "tag": "g",
+    "w": 48,
+    "h": 153,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Ago: 2026 R$ 471.000, 2025 R$ ",
+    "tag": "g",
+    "w": 48,
+    "h": 153,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Set: 2026 R$ 503.000, 2025 R$ ",
+    "tag": "g",
+    "w": 48,
+    "h": 153,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Out: 2026 R$ 528.000, 2025 R$ ",
+    "tag": "g",
+    "w": 48,
+    "h": 153,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "2026",
+    "tag": "button",
+    "w": 69,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "2025",
+    "tag": "button",
+    "w": 68,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "search",
+    "tag": "input",
+    "w": 324,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Selecionar Construtora Alvorad",
+    "tag": "input",
+    "w": 20,
+    "h": 20,
+    "ok": false,
+    "okH": false
+   },
+   {
+    "t": "Ações para Construtora Alvorad",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Selecionar Grupo Meridiano S.A",
+    "tag": "input",
+    "w": 20,
+    "h": 20,
+    "ok": false,
+    "okH": false
+   },
+   {
+    "t": "Ações para Grupo Meridiano S.A",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Selecionar Farmácias Vitália",
+    "tag": "input",
+    "w": 20,
+    "h": 20,
+    "ok": false,
+    "okH": false
+   },
+   {
+    "t": "Ações para Farmácias Vitália",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Selecionar Transportes Aurora",
+    "tag": "input",
+    "w": 20,
+    "h": 20,
+    "ok": false,
+    "okH": false
+   },
+   {
+    "t": "Ações para Transportes Aurora",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   }
+  ],
+  "drawer": {
+   "rect": {
+    "x": 0,
+    "y": 0,
+    "w": 280,
+    "h": 844
+   },
+   "bg": "rgb(15, 31, 77)",
+   "transition": "0.24s transform ease-out",
+   "scrim": {
+    "bg": "rgba(15, 23, 42, 0.5)",
+    "w": 390
+   },
+   "mainXBefore": 0,
+   "mainXAfter": 0,
+   "focus": "Fechar menu inDrawer=true",
+   "bodyOv": "hidden/visible",
+   "inertBg": true,
+   "text": "CRCamila RibeiroGerente de ControladoriaNNexo CapitalMatriz · São PauloGestãoPainelPainelContratosContratosFornecedoresFornecedoresComprasComprasPessoasColaboradoresColaboradoresFolhaFolhaAdministraçãoAuditoriaAuditoriaPermissõesPermissõesPainel analíticoVisão geralAquisiçãoRetençãoReceitaCRCamila R",
+   "items": [
+    {
+     "t": "Fechar menu",
+     "h": 44,
+     "w": 44,
+     "icon": true
+    },
+    {
+     "t": "Gestão",
+     "h": 41,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "PainelPainel",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "ContratosContratos",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "FornecedoresFornecedores",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "ComprasCompras",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Pessoas",
+     "h": 41,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "ColaboradoresColaboradores",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "FolhaFolha",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Administração",
+     "h": 41,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "AuditoriaAuditoria",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "PermissõesPermissões",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Visão geral",
+     "h": 48,
+     "w": 256,
+     "icon": false
+    },
+    {
+     "t": "Aquisição",
+     "h": 48,
+     "w": 256,
+     "icon": false
+    },
+    {
+     "t": "Retenção",
+     "h": 48,
+     "w": 256,
+     "icon": false
+    },
+    {
+     "t": "Receita",
+     "h": 48,
+     "w": 256,
+     "icon": false
+    },
+    {
+     "t": "Opções do perfil",
+     "h": 36,
+     "w": 36,
+     "icon": true
+    },
+    {
+     "t": "Configurações",
+     "h": 40,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Configurações",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Ajuda",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    },
+    {
+     "t": "Sair",
+     "h": 48,
+     "w": 256,
+     "icon": true
+    }
+   ],
+   "vh": 844
+  },
+  "drawerTargets": [
+   {
+    "t": "Fechar menu",
+    "tag": "button",
+    "w": 44,
+    "h": 44,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Gestão",
+    "tag": "button",
+    "w": 256,
+    "h": 41,
+    "ok": false,
+    "okH": false
+   },
+   {
+    "t": "PainelPainel",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "ContratosContratos",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "FornecedoresFornecedores",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "ComprasCompras",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Pessoas",
+    "tag": "button",
+    "w": 256,
+    "h": 41,
+    "ok": false,
+    "okH": false
+   },
+   {
+    "t": "ColaboradoresColaboradores",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "FolhaFolha",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Administração",
+    "tag": "button",
+    "w": 256,
+    "h": 41,
+    "ok": false,
+    "okH": false
+   },
+   {
+    "t": "AuditoriaAuditoria",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "PermissõesPermissões",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Visão geral",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Aquisição",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Retenção",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Receita",
+    "tag": "a",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Opções do perfil",
+    "tag": "button",
+    "w": 36,
+    "h": 36,
+    "ok": false,
+    "okH": false
+   },
+   {
+    "t": "Configurações",
+    "tag": "button",
+    "w": 256,
+    "h": 40,
+    "ok": false,
+    "okH": false
+   },
+   {
+    "t": "Configurações",
+    "tag": "button",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Ajuda",
+    "tag": "button",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   },
+   {
+    "t": "Sair",
+    "tag": "button",
+    "w": 256,
+    "h": 48,
+    "ok": true,
+    "okH": true
+   }
+  ],
+  "drawerTrapOutside": 0,
+  "escClose": {
+   "drawerX": -280,
+   "drawerVisible": false,
+   "focus": "Abrir menu"
+  },
+  "scrimClose": {
+   "drawerVisible": false,
+   "focus": "Abrir menu"
+  },
+  "hasCloseBtn": 1,
+  "xClose": {
+   "drawerVisible": false,
+   "focus": "Abrir menu"
+  },
+  "destCount": 1,
+  "destNav": {
+   "url": "#/app/contratos",
+   "drawerVisible": false,
+   "h1": "Contratos",
+   "focus": "ContratosExportarNovo registro"
+  },
+  "drawer320": {
+   "x": 0,
+   "w": 272,
+   "h": 700
+  },
+  "landscapeMenu": 0,
+  "landscape": {
+   "sidebarW": 72,
+   "sidebarX": 0,
+   "headers": [
+    64
+   ],
+   "sw": 844
+  }
+ }
+}

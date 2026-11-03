@@ -1,0 +1,1795 @@
+{
+ "dev-1": {
+  "landing": {
+   "vw": 1440,
+   "body": {
+    "background-color": "#f6faf6",
+    "color": "#1b2e24",
+    "font-family": "Inter, \"Inter Variable\", system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+    "font-size": "15px",
+    "font-weight": "400"
+   },
+   "htmlBg": {
+    "background-color": "#000000@0"
+   },
+   "mainBg": {
+    "background-color": "#000000@0"
+   },
+   "announce": {
+    "r": {
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 36,
+     "right": 1440,
+     "vy": 0
+    },
+    "st": {
+     "background-color": "#2d6a4f",
+     "color": "#ffffff"
+    },
+    "link": true,
+    "close": {
+     "x": 1308,
+     "y": -4,
+     "w": 44,
+     "h": 44,
+     "right": 1352,
+     "vy": -4
+    }
+   },
+   "headerUsed": "header",
+   "header": {
+    "r": {
+     "x": 0,
+     "y": 36,
+     "w": 1440,
+     "h": 108,
+     "right": 1440,
+     "vy": 36
+    },
+    "st": {
+     "position": "sticky",
+     "top": "0px",
+     "z-index": "40",
+     "background-color": "#000000@0",
+     "box-shadow": "none",
+     "border-bottom-width": "0px"
+    }
+   },
+   "row1": {
+    "x": 0,
+    "y": 36,
+    "w": 1440,
+    "h": 64,
+    "right": 1440,
+    "vy": 36
+   },
+   "row2": {
+    "x": 0,
+    "y": 100,
+    "w": 1440,
+    "h": 44,
+    "right": 1440,
+    "vy": 100
+   },
+   "logoMark": {
+    "r": {
+     "x": 112,
+     "y": 54,
+     "w": 28,
+     "h": 28,
+     "right": 140,
+     "vy": 54
+    },
+    "st": {
+     "background-color": "#2d6a4f",
+     "border-radius": "6px"
+    }
+   },
+   "logoName": {
+    "text": "Verde Vivo",
+    "st": {
+     "font-family": "Fraunces, \"Fraunces Variable\", Georgia, \"Times New Roman\", serif",
+     "font-weight": "700",
+     "font-size": "20px"
+    }
+   },
+   "brandFolhaViva": 0,
+   "brandVerdeVivo": 5,
+   "search": {
+    "r": {
+     "x": 340,
+     "y": 47,
+     "w": 560,
+     "h": 42,
+     "right": 900,
+     "vy": 47
+    },
+    "st": {
+     "background-color": "#f5f5f5",
+     "border-top-width": "0px",
+     "border-top-color": "#1b2e24",
+     "border-radius": "999px",
+     "font-size": "14px"
+    },
+    "placeholder": "Buscar plantas…",
+    "icon": {
+     "x": 343,
+     "y": 50,
+     "w": 36,
+     "h": 36,
+     "right": 379,
+     "vy": 50
+    },
+    "kbd": "Ctrl K"
+   },
+   "addr": true,
+   "avatar": true,
+   "fav": true,
+   "cart": true,
+   "nav": [
+    {
+     "t": "Departamentos",
+     "x": 112,
+     "cur": "false",
+     "color": "#4d5c54",
+     "fw": "500"
+    },
+    {
+     "t": "Plantas",
+     "x": 265,
+     "cur": null,
+     "color": "#4d5c54",
+     "fw": "500"
+    },
+    {
+     "t": "Vasos",
+     "x": 342,
+     "cur": null,
+     "color": "#4d5c54",
+     "fw": "500"
+    },
+    {
+     "t": "Cuidados",
+     "x": 411,
+     "cur": null,
+     "color": "#4d5c54",
+     "fw": "500"
+    },
+    {
+     "t": "Ateliê",
+     "x": 503,
+     "cur": null,
+     "color": "#4d5c54",
+     "fw": "500"
+    }
+   ],
+   "hero": {
+    "sec": {
+     "x": 80,
+     "y": 144,
+     "w": 1280,
+     "h": 576,
+     "right": 1360,
+     "vy": 144
+    },
+    "title": {
+     "x": 112,
+     "y": 236,
+     "w": 803,
+     "h": 166,
+     "right": 915,
+     "vy": 236
+    },
+    "titleSt": {
+     "font-family": "Fraunces, \"Fraunces Variable\", Georgia, \"Times New Roman\", serif",
+     "font-weight": "650",
+     "font-size": "80px",
+     "line-height": "83.2px"
+    },
+    "em": {
+     "color": "#b07d4f",
+     "font-style": "italic",
+     "font-family": "Fraunces, \"Fraunces Variable\", Georgia, \"Times New Roman\", serif"
+    },
+    "tall": {
+     "x": 939,
+     "y": 280,
+     "w": 389,
+     "h": 440,
+     "right": 1328,
+     "vy": 280
+    },
+    "tallSt": {
+     "border-radius": "999px 999px 12px 12px",
+     "border-top-left-radius": "999px"
+    },
+    "small": {
+     "x": 732,
+     "y": 577,
+     "w": 286,
+     "h": 200,
+     "right": 1018,
+     "vy": 577
+    },
+    "cta": {
+     "x": 215,
+     "y": 565,
+     "w": 493,
+     "h": 44,
+     "right": 708,
+     "vy": 565
+    },
+    "ctaSt": {
+     "background-color": "#000000@0",
+     "color": "#2d6a4f",
+     "border-top-width": "0px",
+     "text-decoration-line": "none"
+    },
+    "ctaText": "Escolher minha planta",
+    "ctaHasSvg": true
+   },
+   "stagger": [
+    {
+     "x": 112,
+     "y": 1036,
+     "w": 389,
+     "h": 493,
+     "right": 501,
+     "vy": 1036
+    },
+    {
+     "x": 525,
+     "y": 1084,
+     "w": 389,
+     "h": 493,
+     "right": 915,
+     "vy": 1084
+    },
+    {
+     "x": 939,
+     "y": 1132,
+     "w": 389,
+     "h": 493,
+     "right": 1328,
+     "vy": 1132
+    }
+   ],
+   "staggerSt": {
+    "border-radius": "0px",
+    "border-top-width": "0px",
+    "border-top-color": "#1b2e24",
+    "box-shadow": "none",
+    "background-color": "#000000@0"
+   },
+   "quote": {
+    "text": {
+     "x": 416,
+     "y": 1721,
+     "w": 912,
+     "h": 94,
+     "right": 1328,
+     "vy": 1721
+    },
+    "author": {
+     "x": 416,
+     "y": 1839,
+     "w": 912,
+     "h": 23,
+     "right": 1328,
+     "vy": 1839
+    },
+    "authorSt": {
+     "text-align": "right"
+    },
+    "textSt": {
+     "font-family": "Inter, \"Inter Variable\", system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "font-style": "normal"
+    }
+   },
+   "bleed": {
+    "x": 576,
+    "y": 1963,
+    "w": 864,
+    "h": 440,
+    "right": 1440,
+    "vy": 1963
+   },
+   "final": {
+    "r": {
+     "x": 112,
+     "y": 2506,
+     "w": 680,
+     "h": 227,
+     "right": 792,
+     "vy": 2506
+    },
+    "st": {
+     "text-align": "start"
+    },
+    "h": {
+     "text-align": "start",
+     "font-family": "Fraunces, \"Fraunces Variable\", Georgia, \"Times New Roman\", serif"
+    }
+   },
+   "h2": {
+    "font-family": "Fraunces, \"Fraunces Variable\", Georgia, \"Times New Roman\", serif",
+    "font-weight": "650",
+    "font-size": "38.08px"
+   },
+   "h3": {
+    "font-family": "Fraunces, \"Fraunces Variable\", Georgia, \"Times New Roman\", serif",
+    "font-weight": "650",
+    "font-size": "23px"
+   },
+   "p": {
+    "font-family": "Inter, \"Inter Variable\", system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+    "font-size": "13px",
+    "color": "#2d6a4f"
+   },
+   "sections": [
+    "SECTION.hero y=144 h=576",
+    "SECTION.stagger y=720 h=905",
+    "SECTION.l-section y=1625 h=332",
+    "SECTION.bleed y=1957 h=549",
+    "SECTION.container y=2506 h=323"
+   ],
+   "footer": {
+    "r": {
+     "x": 0,
+     "y": 2829,
+     "w": 1440,
+     "h": 376,
+     "right": 1440,
+     "vy": 2829
+    },
+    "st": {
+     "background-color": "#edf1ed",
+     "color": "#1b2e24"
+    },
+    "text": "Verde Vivo\n\nViveiro e ateliê de plantas em São Paulo. Loja fictícia criada para demonstração: marca, textos e preços não são reais.\n\nLoja\nPlantas\nVasos\nCuidados"
+   },
+   "password": 0,
+   "ficticios": [
+    [
+     "Empório Murici",
+     0
+    ],
+    [
+     "Linho & Cia",
+     0
+    ],
+    [
+     "Orla",
+     0
+    ],
+    [
+     "Eletrônicos",
+     0
+    ],
+    [
+     "Mercado",
+     0
+    ],
+    [
+     "Feminino",
+     0
+    ],
+    [
+     "Masculino",
+     0
+    ],
+    [
+     "Folha Viva",
+     0
+    ]
+   ],
+   "scroll": {
+    "shadowTop": "none",
+    "shadowAt20": "none",
+    "down": {
+     "hdrTop": 0,
+     "hdrH": 108,
+     "row2H": 44,
+     "row2Bottom": 64,
+     "row2Vis": "hidden",
+     "row2Op": "1",
+     "row2Tr": "matrix(1, 0, 0, 1, 0, -44)"
+    },
+    "up": {
+     "hdrTop": 0,
+     "hdrH": 108,
+     "row2H": 44,
+     "row2Bottom": 108,
+     "row2Vis": "visible",
+     "row2Op": "1",
+     "row2Tr": "none"
+    }
+   }
+  },
+  "catalog": {
+   "header": {
+    "r": {
+     "x": 0,
+     "y": 36,
+     "w": 1440,
+     "h": 108,
+     "right": 1440,
+     "vy": 36
+    },
+    "row1": {
+     "x": 0,
+     "y": 36,
+     "w": 1440,
+     "h": 64,
+     "right": 1440,
+     "vy": 36
+    },
+    "row2": {
+     "x": 0,
+     "y": 100,
+     "w": 1440,
+     "h": 44,
+     "right": 1440,
+     "vy": 100
+    }
+   },
+   "search": {
+    "r": {
+     "x": 340,
+     "y": 47,
+     "w": 560,
+     "h": 42,
+     "right": 900,
+     "vy": 47
+    },
+    "st": {
+     "background-color": "#f5f5f5",
+     "border-top-width": "0px",
+     "border-radius": "999px",
+     "font-size": "14px",
+     "height": "42px"
+    },
+    "wrapSt": {
+     "background-color": "#000000@0",
+     "border-top-width": "0px",
+     "border-radius": "0px"
+    },
+    "placeholder": "Buscar plantas…",
+    "icon": {
+     "x": 343,
+     "y": 50,
+     "w": 36,
+     "h": 36,
+     "right": 379,
+     "vy": 50
+    },
+    "kbd": "Ctrl K",
+    "role": "combobox",
+    "exp": "false"
+   },
+   "nCards": 30,
+   "cols": 3,
+   "card": {
+    "r": {
+     "x": 112,
+     "y": 383,
+     "w": 389,
+     "h": 432,
+     "right": 501,
+     "vy": 383
+    },
+    "st": {
+     "border-radius": "22px",
+     "border-top-width": "0px",
+     "border-top-style": "none",
+     "border-top-color": "#1b2e24",
+     "box-shadow": "color(srgb 0.105882 0.180392 0.141176 / 0.06) 0px 1px 2px 0px, color(srgb 0.105882 0.180392 0.141176 / 0.07) 0px 6px 18px 0px",
+     "background-color": "#ffffff",
+     "transition-duration": "0.16s, 0.16s",
+     "transition-property": "box-shadow, transform"
+    },
+    "media": {
+     "w": 389,
+     "h": 219,
+     "ratio": 1.778
+    },
+    "order": [
+     "Costela-de-adão",
+     "Folhas recortadas e porte gran",
+     "R$ 139,90",
+     "ou 6x de R$ 23,32 sem juros",
+     "Ver produto"
+    ],
+    "tag": "Mais vendida",
+    "title": {
+     "font-family": "Inter, \"Inter Variable\", system-ui, -apple-system, \"Segoe UI\", Roboto, sans-serif",
+     "font-weight": "650",
+     "font-size": "16px"
+    },
+    "text": "Folhas recortadas e porte grande. Pede luz indireta e rega semanal; cresce rápid",
+    "textLines": {
+     "h": 42,
+     "lh": "21px",
+     "clamp": "3"
+    },
+    "price": "R$ 139,90",
+    "html": "Mais vendida | Costela-de-adão | Folhas recortadas e porte grande. Pede luz indireta e rega semanal; cresce rápido em vasos de 30 cm. | R$ 139,90 | ou 6x de R$ 23,32 sem juros | Ver produto",
+    "btn": {
+     "text": "Ver produto",
+     "r": {
+      "x": 370,
+      "y": 757,
+      "w": 116,
+      "h": 42,
+      "right": 486,
+      "vy": 757
+     },
+     "st": {
+      "background-color": "#2d6a4f",
+      "color": "#ffffff",
+      "border-radius": "999px",
+      "height": "42px",
+      "font-size": "14px"
+     }
+    },
+    "nested": 0,
+    "interactives": [
+     "A:Costela-de-adão",
+     "BUTTON:Favoritar Costela-de-adão"
+    ],
+    "svgs": 3,
+    "leafIcon": true
+   },
+   "catTiles": 0,
+   "sectionsCatalog": [],
+   "filterBtn": {
+    "r": {
+     "x": 112,
+     "y": 325,
+     "w": 102,
+     "h": 42,
+     "right": 214,
+     "vy": 325
+    },
+    "text": "Filtrar"
+   },
+   "sort": true,
+   "toolbarY": 325,
+   "gridY": 383,
+   "badges": [
+    "Mais vendida",
+    "Mais vendida",
+    "Mais vendida",
+    "Folhagens",
+    "Oferta",
+    "Novo",
+    "Segura para pets",
+    "Mais vendida",
+    "Suculentas",
+    "Suculentas",
+    "Novo",
+    "Segura para pets",
+    "Floríferas",
+    "Esgotado",
+    "Segura para pets",
+    "Novo",
+    "Segura para pets",
+    "Novo",
+    "Segura para pets",
+    "Mais vendida",
+    "Novo",
+    "Oferta",
+    "Vasos",
+    "Adubos",
+    "Mais vendida",
+    "Regadores",
+    "Esgotado",
+    "Novo",
+    "Ateliê Verde Vivo",
+    "Segura para pets"
+   ],
+   "parcel": 25,
+   "primaryButtons": [
+    {
+     "t": "Assinar",
+     "st": {
+      "background-color": "#2d6a4f",
+      "color": "#ffffff",
+      "border-radius": "8px"
+     }
+    }
+   ],
+   "containerW": 1216
+  }
+ },
+ "dev-2": {
+  "landing": {
+   "vw": 1440,
+   "body": {
+    "background-color": "#f6faf6",
+    "color": "#1b2e24",
+    "font-family": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+    "font-size": "15px",
+    "font-weight": "400"
+   },
+   "htmlBg": {
+    "background-color": "#000000@0"
+   },
+   "mainBg": {
+    "background-color": "#000000@0"
+   },
+   "announce": {
+    "r": {
+     "x": 0,
+     "y": 0,
+     "w": 1425,
+     "h": 36,
+     "right": 1425,
+     "vy": 0
+    },
+    "st": {
+     "background-color": "#2d6a4f",
+     "color": "#ffffff"
+    },
+    "link": true,
+    "close": {
+     "x": 1371,
+     "y": 0,
+     "w": 36,
+     "h": 36,
+     "right": 1407,
+     "vy": 0
+    }
+   },
+   "headerUsed": "header",
+   "header": {
+    "r": {
+     "x": 0,
+     "y": 36,
+     "w": 1425,
+     "h": 108,
+     "right": 1425,
+     "vy": 36
+    },
+    "st": {
+     "position": "sticky",
+     "top": "0px",
+     "z-index": "40",
+     "background-color": "#000000@0",
+     "box-shadow": "none",
+     "border-bottom-width": "0px"
+    }
+   },
+   "row1": {
+    "x": 0,
+    "y": 36,
+    "w": 1425,
+    "h": 64,
+    "right": 1425,
+    "vy": 36
+   },
+   "row2": {
+    "x": 0,
+    "y": 100,
+    "w": 1425,
+    "h": 44,
+    "right": 1425,
+    "vy": 100
+   },
+   "logoMark": {
+    "r": {
+     "x": 73,
+     "y": 54,
+     "w": 28,
+     "h": 28,
+     "right": 101,
+     "vy": 54
+    },
+    "st": {
+     "background-color": "#2d6a4f",
+     "border-radius": "8px"
+    }
+   },
+   "logoName": {
+    "text": "Verde Vivo",
+    "st": {
+     "font-family": "Fraunces, \"Iowan Old Style\", Georgia, \"Times New Roman\", serif",
+     "font-weight": "700",
+     "font-size": "18px"
+    }
+   },
+   "brandFolhaViva": 0,
+   "brandVerdeVivo": 3,
+   "search": {
+    "r": {
+     "x": 356,
+     "y": 47,
+     "w": 523,
+     "h": 42,
+     "right": 878,
+     "vy": 47
+    },
+    "st": {
+     "background-color": "#000000@0",
+     "border-top-width": "0px",
+     "border-top-color": "#1b2e24",
+     "border-radius": "999px",
+     "font-size": "15px"
+    },
+    "placeholder": "Buscar plantas…",
+    "icon": {
+     "x": 316,
+     "y": 52,
+     "w": 32,
+     "h": 32,
+     "right": 348,
+     "vy": 52
+    },
+    "kbd": "Ctrl K"
+   },
+   "addr": true,
+   "avatar": true,
+   "fav": true,
+   "cart": true,
+   "nav": [
+    {
+     "t": "Departamentos",
+     "x": 73,
+     "cur": "false",
+     "color": "#4d5c54",
+     "fw": "500"
+    },
+    {
+     "t": "Plantas",
+     "x": 216,
+     "cur": null,
+     "color": "#4d5c54",
+     "fw": "500"
+    },
+    {
+     "t": "Vasos",
+     "x": 285,
+     "cur": null,
+     "color": "#4d5c54",
+     "fw": "500"
+    },
+    {
+     "t": "Cuidados",
+     "x": 345,
+     "cur": null,
+     "color": "#4d5c54",
+     "fw": "500"
+    },
+    {
+     "t": "Ateliê",
+     "x": 429,
+     "cur": null,
+     "color": "#4d5c54",
+     "fw": "500"
+    },
+    {
+     "t": "",
+     "x": 487,
+     "cur": null,
+     "color": null,
+     "fw": null
+    },
+    {
+     "t": "Folhagens",
+     "x": 504,
+     "cur": null,
+     "color": "#4d5c54",
+     "fw": "500"
+    },
+    {
+     "t": "Suculentas",
+     "x": 592,
+     "cur": null,
+     "color": "#4d5c54",
+     "fw": "500"
+    },
+    {
+     "t": "Floríferas",
+     "x": 687,
+     "cur": null,
+     "color": "#4d5c54",
+     "fw": "500"
+    },
+    {
+     "t": "Ervas",
+     "x": 770,
+     "cur": null,
+     "color": "#4d5c54",
+     "fw": "500"
+    },
+    {
+     "t": "Kits",
+     "x": 828,
+     "cur": null,
+     "color": "#4d5c54",
+     "fw": "500"
+    }
+   ],
+   "hero": {
+    "sec": {
+     "x": 41,
+     "y": 144,
+     "w": 1344,
+     "h": 623,
+     "right": 1385,
+     "vy": 144
+    },
+    "title": {
+     "x": 73,
+     "y": 220,
+     "w": 845,
+     "h": 243,
+     "right": 918,
+     "vy": 220
+    },
+    "titleSt": {
+     "font-family": "Fraunces, \"Iowan Old Style\", Georgia, \"Times New Roman\", serif",
+     "font-weight": "650",
+     "font-size": "78px",
+     "line-height": "81.12px"
+    },
+    "em": {
+     "color": "#b07d4f",
+     "font-style": "italic",
+     "font-family": "Fraunces, \"Iowan Old Style\", Georgia, \"Times New Roman\", serif"
+    },
+    "tall": {
+     "x": 942,
+     "y": 300,
+     "w": 411,
+     "h": 468,
+     "right": 1352,
+     "vy": 300
+    },
+    "tallSt": {
+     "border-radius": "0px",
+     "border-top-left-radius": "0px"
+    },
+    "small": {
+     "x": 724,
+     "y": 597,
+     "w": 302,
+     "h": 227,
+     "right": 1026,
+     "vy": 597
+    },
+    "cta": {
+     "x": 181,
+     "y": 607,
+     "w": 186,
+     "h": 44,
+     "right": 367,
+     "vy": 607
+    },
+    "ctaSt": {
+     "background-color": "#000000@0",
+     "color": "#2d6a4f",
+     "border-top-width": "0px",
+     "text-decoration-line": "underline"
+    },
+    "ctaText": "Escolher minha planta",
+    "ctaHasSvg": true
+   },
+   "stagger": [
+    {
+     "x": 73,
+     "y": 1120,
+     "w": 411,
+     "h": 481,
+     "right": 483,
+     "vy": 1120
+    },
+    {
+     "x": 507,
+     "y": 1168,
+     "w": 411,
+     "h": 481,
+     "right": 918,
+     "vy": 1168
+    },
+    {
+     "x": 942,
+     "y": 1216,
+     "w": 411,
+     "h": 481,
+     "right": 1352,
+     "vy": 1216
+    }
+   ],
+   "staggerSt": {
+    "border-radius": "12px",
+    "border-top-width": "1px",
+    "border-top-color": "#e6e6e6",
+    "box-shadow": "none",
+    "background-color": "#ffffff"
+   },
+   "quote": {
+    "text": {
+     "x": 393,
+     "y": 1809,
+     "w": 960,
+     "h": 97,
+     "right": 1353,
+     "vy": 1809
+    },
+    "author": {
+     "x": 393,
+     "y": 1930,
+     "w": 960,
+     "h": 21,
+     "right": 1353,
+     "vy": 1930
+    },
+    "authorSt": {
+     "text-align": "right"
+    },
+    "textSt": {
+     "font-family": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+     "font-style": "normal"
+    }
+   },
+   "bleed": {
+    "x": 664,
+    "y": 2063,
+    "w": 761,
+    "h": 520,
+    "right": 1425,
+    "vy": 2063
+   },
+   "final": {
+    "r": {
+     "x": 41,
+     "y": 2695,
+     "w": 1344,
+     "h": 329,
+     "right": 1385,
+     "vy": 2695
+    },
+    "st": {
+     "text-align": "start"
+    },
+    "h": {
+     "text-align": "start",
+     "font-family": "Fraunces, \"Iowan Old Style\", Georgia, \"Times New Roman\", serif"
+    }
+   },
+   "h2": {
+    "font-family": "Fraunces, \"Iowan Old Style\", Georgia, \"Times New Roman\", serif",
+    "font-weight": "650",
+    "font-size": "30px"
+   },
+   "h3": {
+    "font-family": "Fraunces, \"Iowan Old Style\", Georgia, \"Times New Roman\", serif",
+    "font-weight": "650",
+    "font-size": "22.9995px"
+   },
+   "p": {
+    "font-family": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+    "font-size": "13.0005px",
+    "color": "#616d66"
+   },
+   "sections": [
+    "SECTION.hero y=144 h=623",
+    "SECTION.care y=903 h=794",
+    "SECTION.quote y=1809 h=142",
+    "SECTION.bleed y=2063 h=520",
+    "SECTION.final y=2695 h=329"
+   ],
+   "footer": {
+    "r": {
+     "x": 0,
+     "y": 3136,
+     "w": 1425,
+     "h": 357,
+     "right": 1425,
+     "vy": 3136
+    },
+    "st": {
+     "background-color": "#1b2e24",
+     "color": "#f6faf6"
+    },
+    "text": "Verde Vivo\n\nFloricultura online e ateliê de plantas. Entregamos com carinho em todo o Brasil.\n\nReceba dicas de cuidado por e-mail\nAssinar\nLOJA\nTodas as plantas\n"
+   },
+   "password": 0,
+   "ficticios": [
+    [
+     "Empório Murici",
+     0
+    ],
+    [
+     "Linho & Cia",
+     0
+    ],
+    [
+     "Orla",
+     0
+    ],
+    [
+     "Eletrônicos",
+     0
+    ],
+    [
+     "Mercado",
+     0
+    ],
+    [
+     "Feminino",
+     0
+    ],
+    [
+     "Masculino",
+     0
+    ],
+    [
+     "Folha Viva",
+     0
+    ]
+   ],
+   "scroll": {
+    "shadowTop": "none",
+    "shadowAt20": "none",
+    "down": {
+     "hdrTop": 0,
+     "hdrH": 108,
+     "row2H": 44,
+     "row2Bottom": 63,
+     "row2Vis": "hidden",
+     "row2Op": "1",
+     "row2Tr": "matrix(1, 0, 0, 1, 0, -45)"
+    },
+    "up": {
+     "hdrTop": 0,
+     "hdrH": 108,
+     "row2H": 44,
+     "row2Bottom": 108,
+     "row2Vis": "visible",
+     "row2Op": "1",
+     "row2Tr": "none"
+    }
+   }
+  },
+  "catalog": {
+   "header": {
+    "r": {
+     "x": 0,
+     "y": 36,
+     "w": 1425,
+     "h": 108,
+     "right": 1425,
+     "vy": 36
+    },
+    "row1": {
+     "x": 0,
+     "y": 36,
+     "w": 1425,
+     "h": 64,
+     "right": 1425,
+     "vy": 36
+    },
+    "row2": {
+     "x": 0,
+     "y": 100,
+     "w": 1425,
+     "h": 44,
+     "right": 1425,
+     "vy": 100
+    }
+   },
+   "search": {
+    "r": {
+     "x": 356,
+     "y": 47,
+     "w": 523,
+     "h": 42,
+     "right": 878,
+     "vy": 47
+    },
+    "st": {
+     "background-color": "#000000@0",
+     "border-top-width": "0px",
+     "border-radius": "999px",
+     "font-size": "15px",
+     "height": "42px"
+    },
+    "wrapSt": {
+     "background-color": "#f5f5f5",
+     "border-top-width": "0px",
+     "border-radius": "999px"
+    },
+    "placeholder": "Buscar plantas…",
+    "icon": {
+     "x": 316,
+     "y": 52,
+     "w": 32,
+     "h": 32,
+     "right": 348,
+     "vy": 52
+    },
+    "kbd": "Ctrl K",
+    "role": "combobox",
+    "exp": "false"
+   },
+   "nCards": 22,
+   "cols": 3,
+   "card": {
+    "r": {
+     "x": 73,
+     "y": 372,
+     "w": 411,
+     "h": 449,
+     "right": 483,
+     "vy": 372
+    },
+    "st": {
+     "border-radius": "22px",
+     "border-top-width": "0px",
+     "border-top-style": "none",
+     "border-top-color": "#1b2e24",
+     "box-shadow": "color(srgb 0.105882 0.180392 0.141176 / 0.09) 0px 6px 24px 0px",
+     "background-color": "#ffffff",
+     "transition-duration": "0.16s, 0.16s",
+     "transition-property": "transform, box-shadow"
+    },
+    "media": {
+     "w": 411,
+     "h": 231,
+     "ratio": 1.778
+    },
+    "order": [
+     "Adicionar à sacola",
+     "Mais vendida",
+     "Costela-de-adão",
+     "Monstera deliciosa",
+     "Folhas grandes e recortadas qu",
+     "R$ 129,90",
+     "10x de R$ 12,99",
+     "Ver produto"
+    ],
+    "tag": "Mais vendida",
+    "title": {
+     "font-family": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+     "font-weight": "650",
+     "font-size": "18px"
+    },
+    "text": "Folhas grandes e recortadas que enchem a sala. Porte grande, luz difusa e rega s",
+    "textLines": {
+     "h": 42,
+     "lh": "20.9993px",
+     "clamp": "3"
+    },
+    "price": "R$ 129,90",
+    "html": "Adicionar à sacola | Mais vendida | Costela-de-adão | Monstera deliciosa | Folhas grandes e recortadas que enchem a sala. Porte grande, luz difusa e rega semanal. | R$ 129,90 | 10x de R$ 12,99 | Ver p",
+    "btn": {
+     "text": "Ver produto",
+     "r": {
+      "x": 345,
+      "y": 763,
+      "w": 122,
+      "h": 42,
+      "right": 467,
+      "vy": 763
+     },
+     "st": {
+      "background-color": "#2d6a4f",
+      "color": "#ffffff",
+      "border-radius": "999px",
+      "height": "42px",
+      "font-size": "13.9995px"
+     }
+    },
+    "nested": 0,
+    "interactives": [
+     "BUTTON:Favoritar Costela-de-adão",
+     "BUTTON:Adicionar Costela-de-adão à sa",
+     "A:Ver produto: Costela-de-adão"
+    ],
+    "svgs": 4,
+    "leafIcon": false
+   },
+   "catTiles": 0,
+   "sectionsCatalog": [
+    "hero:Plantas que transformam a casa",
+    "care:Cuidar é um gesto simples",
+    "quote:",
+    "bleed:Feito à mão, planta por planta",
+    "final:Qual planta combina com o seu ",
+    "catalog:Todas as plantas"
+   ],
+   "filterBtn": {
+    "r": {
+     "x": 73,
+     "y": 314,
+     "w": 110,
+     "h": 42,
+     "right": 183,
+     "vy": 314
+    },
+    "text": "Filtros"
+   },
+   "sort": true,
+   "toolbarY": 314,
+   "gridY": 372,
+   "badges": [
+    "Mais vendida",
+    "Fácil cuidado",
+    "Fácil cuidado",
+    "Pet friendly",
+    "Novo",
+    "Esgotado",
+    "Pet friendly",
+    "Novo",
+    "Pet friendly",
+    "Fácil cuidado",
+    "Mais vendida",
+    "Novo",
+    "Pet friendly",
+    "Últimas unidades",
+    "Fácil cuidado",
+    "Novo",
+    "Pet friendly",
+    "Mais vendida",
+    "Novo",
+    "Pet friendly",
+    "Novo",
+    "Pet friendly"
+   ],
+   "parcel": 22,
+   "primaryButtons": [
+    {
+     "t": "Ver produto",
+     "st": {
+      "background-color": "#2d6a4f",
+      "color": "#ffffff",
+      "border-radius": "999px"
+     }
+    },
+    {
+     "t": "Ver produto",
+     "st": {
+      "background-color": "#2d6a4f",
+      "color": "#ffffff",
+      "border-radius": "999px"
+     }
+    },
+    {
+     "t": "Ver produto",
+     "st": {
+      "background-color": "#2d6a4f",
+      "color": "#ffffff",
+      "border-radius": "999px"
+     }
+    },
+    {
+     "t": "Ver produto",
+     "st": {
+      "background-color": "#2d6a4f",
+      "color": "#ffffff",
+      "border-radius": "999px"
+     }
+    },
+    {
+     "t": "Ver produto",
+     "st": {
+      "background-color": "#2d6a4f",
+      "color": "#ffffff",
+      "border-radius": "999px"
+     }
+    }
+   ],
+   "containerW": 1280
+  }
+ },
+ "dev-3": {
+  "landing": {
+   "vw": 1440,
+   "body": {
+    "background-color": "#f6faf6",
+    "color": "#1b2e24",
+    "font-family": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+    "font-size": "15px",
+    "font-weight": "400"
+   },
+   "htmlBg": {
+    "background-color": "#000000@0"
+   },
+   "mainBg": {
+    "background-color": "#000000@0"
+   },
+   "announce": {
+    "r": null,
+    "st": null,
+    "link": false,
+    "close": null
+   },
+   "headerUsed": "landingHeader",
+   "header": {
+    "r": {
+     "x": 0,
+     "y": 0,
+     "w": 1440,
+     "h": 73,
+     "right": 1440,
+     "vy": 0
+    },
+    "st": {
+     "position": "sticky",
+     "top": "0px",
+     "z-index": "30",
+     "background-color": "#f6faf6",
+     "box-shadow": "none",
+     "border-bottom-width": "1px"
+    }
+   },
+   "row1": null,
+   "row2": null,
+   "logoMark": {
+    "r": null,
+    "st": null
+   },
+   "logoName": {
+    "text": null,
+    "st": null
+   },
+   "brandFolhaViva": 3,
+   "brandVerdeVivo": 0,
+   "search": {
+    "r": null,
+    "st": null,
+    "placeholder": null,
+    "icon": null,
+    "kbd": null
+   },
+   "addr": false,
+   "avatar": false,
+   "fav": false,
+   "cart": false,
+   "nav": [],
+   "hero": {
+    "sec": {
+     "x": 80,
+     "y": 73,
+     "w": 1280,
+     "h": 837,
+     "right": 1360,
+     "vy": 73
+    },
+    "title": {
+     "x": 104,
+     "y": 113,
+     "w": 376,
+     "h": 140,
+     "right": 480,
+     "vy": 113
+    },
+    "titleSt": {
+     "font-family": "Fraunces, Georgia, \"Times New Roman\", serif",
+     "font-weight": "650",
+     "font-size": "39px",
+     "line-height": "46.8px"
+    },
+    "em": {
+     "color": "#b07d4f",
+     "font-style": "italic",
+     "font-family": "Fraunces, Georgia, \"Times New Roman\", serif"
+    },
+    "tall": {
+     "x": 941,
+     "y": 193,
+     "w": 395,
+     "h": 440,
+     "right": 1336,
+     "vy": 193
+    },
+    "tallSt": {
+     "border-radius": "0px",
+     "border-top-left-radius": "0px"
+    },
+    "small": {
+     "x": 732,
+     "y": 485,
+     "w": 290,
+     "h": 220,
+     "right": 1022,
+     "vy": 485
+    },
+    "cta": {
+     "x": 209,
+     "y": 770,
+     "w": 188,
+     "h": 44,
+     "right": 397,
+     "vy": 770
+    },
+    "ctaSt": {
+     "background-color": "#000000@0",
+     "color": "#2d6a4f",
+     "border-top-width": "0px",
+     "text-decoration-line": "underline"
+    },
+    "ctaText": "Escolher minha planta",
+    "ctaHasSvg": true
+   },
+   "stagger": [
+    {
+     "x": 104,
+     "y": 1026,
+     "w": 395,
+     "h": 259,
+     "right": 499,
+     "vy": 1026
+    },
+    {
+     "x": 523,
+     "y": 1074,
+     "w": 395,
+     "h": 259,
+     "right": 917,
+     "vy": 1074
+    },
+    {
+     "x": 941,
+     "y": 1122,
+     "w": 395,
+     "h": 259,
+     "right": 1336,
+     "vy": 1122
+    }
+   ],
+   "staggerSt": {
+    "border-radius": "8px",
+    "border-top-width": "1px",
+    "border-top-color": "#e6e6e6",
+    "box-shadow": "none",
+    "background-color": "#ffffff"
+   },
+   "quote": {
+    "text": {
+     "x": 412,
+     "y": 1492,
+     "w": 379,
+     "h": 195,
+     "right": 791,
+     "vy": 1492
+    },
+    "author": {
+     "x": 104,
+     "y": 1703,
+     "w": 1232,
+     "h": 21,
+     "right": 1336,
+     "vy": 1703
+    },
+    "authorSt": {
+     "text-align": "right"
+    },
+    "textSt": {
+     "font-family": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+     "font-style": "normal"
+    }
+   },
+   "bleed": {
+    "x": 629,
+    "y": 1931,
+    "w": 811,
+    "h": 480,
+    "right": 1440,
+    "vy": 1931
+   },
+   "final": {
+    "r": {
+     "x": 80,
+     "y": 2507,
+     "w": 1280,
+     "h": 396,
+     "right": 1360,
+     "vy": 2507
+    },
+    "st": {
+     "text-align": "left"
+    },
+    "h": {
+     "text-align": "left",
+     "font-family": "Fraunces, Georgia, \"Times New Roman\", serif"
+    }
+   },
+   "h2": {
+    "font-family": "Fraunces, Georgia, \"Times New Roman\", serif",
+    "font-weight": "650",
+    "font-size": "30px"
+   },
+   "h3": {
+    "font-family": "Fraunces, Georgia, \"Times New Roman\", serif",
+    "font-weight": "650",
+    "font-size": "18px"
+   },
+   "p": {
+    "font-family": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+    "font-size": "18px",
+    "color": "#616d66"
+   },
+   "sections": [
+    "SECTION.hero y=73 h=837",
+    "SECTION.cards-stagger y=910 h=567",
+    "FIGURE.quote y=1492 h=328",
+    "SECTION.bleed y=1835 h=672",
+    "SECTION.final-cta y=2507 h=396"
+   ],
+   "footer": {
+    "r": {
+     "x": 0,
+     "y": 2903,
+     "w": 1440,
+     "h": 229,
+     "right": 1440,
+     "vy": 2903
+    },
+    "st": {
+     "background-color": "#ffffff",
+     "color": "#1b2e24"
+    },
+    "text": "Folha Viva\n\nPlantas e cuidados para casas e varandas. Marca fictícia de demonstração.\n\nPlantas\nVasos\nCuidados\nAteliê\n\n© 2026 Folha Viva. Dados e marca fictícios"
+   },
+   "password": 0,
+   "ficticios": [
+    [
+     "Empório Murici",
+     0
+    ],
+    [
+     "Linho & Cia",
+     0
+    ],
+    [
+     "Orla",
+     0
+    ],
+    [
+     "Eletrônicos",
+     0
+    ],
+    [
+     "Mercado",
+     0
+    ],
+    [
+     "Feminino",
+     0
+    ],
+    [
+     "Masculino",
+     0
+    ],
+    [
+     "Folha Viva",
+     3
+    ]
+   ],
+   "scroll": {
+    "shadowTop": "none",
+    "shadowAt20": "none",
+    "down": {
+     "hdrTop": 0,
+     "hdrH": 73,
+     "row2H": null,
+     "row2Bottom": null,
+     "row2Vis": null,
+     "row2Op": null,
+     "row2Tr": null
+    },
+    "up": {
+     "hdrTop": 0,
+     "hdrH": 73,
+     "row2H": null,
+     "row2Bottom": null,
+     "row2Vis": null,
+     "row2Op": null,
+     "row2Tr": null
+    }
+   }
+  },
+  "catalog": {
+   "header": {
+    "r": {
+     "x": 0,
+     "y": 36,
+     "w": 1440,
+     "h": 109,
+     "right": 1440,
+     "vy": 36
+    },
+    "row1": {
+     "x": 80,
+     "y": 36,
+     "w": 1280,
+     "h": 64,
+     "right": 1360,
+     "vy": 36
+    },
+    "row2": {
+     "x": 80,
+     "y": 100,
+     "w": 1280,
+     "h": 44,
+     "right": 1360,
+     "vy": 100
+    }
+   },
+   "search": {
+    "r": {
+     "x": 262,
+     "y": 47,
+     "w": 640,
+     "h": 42,
+     "right": 902,
+     "vy": 47
+    },
+    "st": {
+     "background-color": "#f5f5f5",
+     "border-top-width": "0px",
+     "border-radius": "999px",
+     "font-size": "14px",
+     "height": "42px"
+    },
+    "wrapSt": {
+     "background-color": "#000000@0",
+     "border-top-width": "0px",
+     "border-radius": "0px"
+    },
+    "placeholder": "Buscar plantas…",
+    "icon": {
+     "x": 277,
+     "y": 58,
+     "w": 20,
+     "h": 20,
+     "right": 297,
+     "vy": 58
+    },
+    "kbd": "⌘K",
+    "role": "combobox",
+    "exp": "false"
+   },
+   "nCards": 16,
+   "cols": 4,
+   "card": {
+    "r": {
+     "x": 104,
+     "y": 2026,
+     "w": 290,
+     "h": 391,
+     "right": 394,
+     "vy": 2026
+    },
+    "st": {
+     "border-radius": "22px",
+     "border-top-width": "0px",
+     "border-top-style": "none",
+     "border-top-color": "#1b2e24",
+     "box-shadow": "rgba(27, 46, 36, 0.08) 0px 6px 20px 0px",
+     "background-color": "#ffffff",
+     "transition-duration": "0.16s, 0.16s",
+     "transition-property": "transform, box-shadow"
+    },
+    "media": {
+     "w": 290,
+     "h": 163,
+     "ratio": 1.778
+    },
+    "order": [
+     "Echeveria lilás",
+     "Roseta compacta em tons lilás.",
+     "R$ 29,90",
+     "Ver produto"
+    ],
+    "title": {
+     "font-family": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+     "font-weight": "650",
+     "font-size": "15px"
+    },
+    "text": "Roseta compacta em tons lilás. Sol pleno e rega a cada 15 dias.",
+    "textLines": {
+     "h": 42,
+     "lh": "21px",
+     "clamp": "3"
+    },
+    "price": "R$ 29,90",
+    "html": "Echeveria lilás | Roseta compacta em tons lilás. Sol pleno e rega a cada 15 dias. | R$ 29,90 | Rega a cada 15 dias | Ver produto",
+    "btn": {
+     "text": "Ver produto",
+     "r": {
+      "x": 120,
+      "y": 2359,
+      "w": 112,
+      "h": 42,
+      "right": 232,
+      "vy": 2359
+     },
+     "st": {
+      "background-color": "#2d6a4f",
+      "color": "#ffffff",
+      "border-radius": "999px",
+      "height": "42px",
+      "font-size": "14px"
+     }
+    },
+    "nested": 0,
+    "interactives": [
+     "A:Echeveria lilás"
+    ],
+    "svgs": 2,
+    "leafIcon": true
+   },
+   "catTiles": 25,
+   "sectionsCatalog": [
+    "hero:Plantas que transformam a sua ",
+    "cards-stagger:Três jeitos de começar",
+    "bleed:Um ateliê de cultivo",
+    "final-cta:Pronto para trazer o verde par"
+   ],
+   "filterBtn": {
+    "r": {
+     "x": 946,
+     "y": 1960,
+     "w": 110,
+     "h": 42,
+     "right": 1056,
+     "vy": 1960
+    },
+    "text": "Filtros"
+   },
+   "sort": true,
+   "toolbarY": 1960,
+   "gridY": 2026,
+   "badges": [
+    "Novo",
+    "Novo",
+    "Novo",
+    "Novo",
+    "Novo",
+    "Novo"
+   ],
+   "parcel": 0,
+   "primaryButtons": [
+    {
+     "t": "Ver plantas",
+     "st": {
+      "background-color": "#2d6a4f",
+      "color": "#ffffff",
+      "border-radius": "999px"
+     }
+    },
+    {
+     "t": "Quero receber",
+     "st": {
+      "background-color": "#2d6a4f",
+      "color": "#ffffff",
+      "border-radius": "8px"
+     }
+    },
+    {
+     "t": "Aplicar filtros",
+     "st": {
+      "background-color": "#2d6a4f",
+      "color": "#ffffff",
+      "border-radius": "999px"
+     }
+    },
+    {
+     "t": "Finalizar compra",
+     "st": {
+      "background-color": "#f0f0f0",
+      "color": "#98a19c",
+      "border-radius": "999px"
+     }
+    }
+   ],
+   "containerW": 1232
+  }
+ }
+}

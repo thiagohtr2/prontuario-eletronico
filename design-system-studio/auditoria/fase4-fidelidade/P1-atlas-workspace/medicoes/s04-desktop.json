@@ -1,0 +1,1033 @@
+{
+  "dev-1": {
+    "d1440": {
+      "sidebar": {
+        "r": {
+          "x": 0,
+          "y": 0,
+          "w": 252,
+          "h": 900
+        },
+        "vis": true,
+        "radius": "0px",
+        "shadow": "none",
+        "margin": "0px",
+        "borderRight": "1px solid #e6e6e6",
+        "bg": "#ffffff",
+        "position": "sticky",
+        "top": "0px"
+      },
+      "header": {
+        "r": {
+          "x": 252,
+          "y": 0,
+          "w": 1188,
+          "h": 64
+        },
+        "cls": "topbar",
+        "position": "sticky",
+        "borderBottom": "1px solid #e6e6e6",
+        "bg": "#ffffff",
+        "shadow": "none",
+        "z": "40"
+      },
+      "sidebarTop": {
+        "r": {
+          "x": 0,
+          "y": 0,
+          "w": 251,
+          "h": 64
+        },
+        "borderBottom": "1px #e6e6e6",
+        "brand": "Atlas Workspace"
+      },
+      "groupTitles": [
+        {
+          "name": "Geral",
+          "text": "GERAL",
+          "fs": "12px",
+          "fw": "650",
+          "ls": "0.96px",
+          "tt": "uppercase",
+          "color": "#707072"
+        },
+        {
+          "name": "Equipe",
+          "text": "EQUIPE",
+          "fs": "12px",
+          "fw": "650",
+          "ls": "0.96px",
+          "tt": "uppercase",
+          "color": "#707072"
+        },
+        {
+          "name": "Conta",
+          "text": "CONTA",
+          "fs": "12px",
+          "fw": "650",
+          "ls": "0.96px",
+          "tt": "uppercase",
+          "color": "#707072"
+        }
+      ],
+      "items": [
+        {
+          "text": "Início",
+          "h": 40,
+          "cur": null
+        },
+        {
+          "text": "Painel",
+          "h": 40,
+          "cur": "page"
+        },
+        {
+          "text": "Projetos 12",
+          "h": 40,
+          "cur": null
+        },
+        {
+          "text": "Tarefas",
+          "h": 40,
+          "cur": null
+        },
+        {
+          "text": "Calendário",
+          "h": 40,
+          "cur": null
+        },
+        {
+          "text": "Pessoas",
+          "h": 40,
+          "cur": null
+        },
+        {
+          "text": "Mensagens 3",
+          "h": 40,
+          "cur": null
+        },
+        {
+          "text": "Relatórios",
+          "h": 40,
+          "cur": null
+        },
+        {
+          "text": "Configurações",
+          "h": 40,
+          "cur": null
+        },
+        {
+          "text": "Ajuda",
+          "h": 40,
+          "cur": null
+        }
+      ],
+      "itemIcon": {
+        "w": 20,
+        "h": 20,
+        "stroke": "1.5",
+        "fill": "none"
+      },
+      "active": {
+        "text": "Painel",
+        "bg": "#e3e3e4",
+        "color": "#18181b",
+        "radius": "8px",
+        "fw": "600",
+        "shadow": "none",
+        "borderLeft": "0px #18181b",
+        "before": {
+          "content": "\"\"",
+          "w": "3px",
+          "h": "24px",
+          "bg": "#18181b",
+          "left": "-12px",
+          "pos": "absolute"
+        },
+        "after": null,
+        "liBefore": null
+      },
+      "foot": {
+        "r": {
+          "x": 0,
+          "y": 825.6,
+          "w": 251,
+          "h": 74.4
+        },
+        "cls": "sidebar__footer",
+        "text": "MC Marina Costa Gerente de produto",
+        "borderTop": "1px #e6e6e6",
+        "buttons": [
+          "Menu do perfil",
+          "Configurações",
+          "Mais opções do perfil"
+        ]
+      },
+      "crumbs": {
+        "text": "Painel",
+        "lastText": "Painel",
+        "lastFw": "600",
+        "vis": true
+      },
+      "headerControls": [
+        {
+          "tag": "INPUT",
+          "label": "Buscar…",
+          "r": {
+            "x": 1012,
+            "y": 11.5,
+            "w": 300,
+            "h": 40
+          },
+          "radius": "8px"
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Notificações, 3 não lidas",
+          "r": {
+            "x": 1320,
+            "y": 11.5,
+            "w": 40,
+            "h": 40
+          },
+          "radius": "8px"
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Menu do perfil",
+          "r": {
+            "x": 1368,
+            "y": 11.5,
+            "w": 40,
+            "h": 40
+          },
+          "radius": "50%"
+        }
+      ],
+      "headerHasHamburger": false,
+      "main": {
+        "r": {
+          "x": 252,
+          "y": 64,
+          "w": 1188,
+          "h": 1458.1
+        },
+        "padding": "32px"
+      },
+      "body": {
+        "fs": "15px",
+        "color": "#18181b",
+        "ff": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "bg": "#ffffff"
+      },
+      "h1": {
+        "text": "Visão geral",
+        "fs": "39px",
+        "fw": "760",
+        "ls": "-1.17px",
+        "ff": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "x": 284
+      },
+      "fontsInter": [
+        "Inter 400 800 unloaded",
+        "Inter 400 800 unloaded",
+        "Inter 400 800 unloaded",
+        "Inter 400 800 unloaded",
+        "Inter 400 800 unloaded",
+        "Inter 400 800 unloaded"
+      ],
+      "interCheck": true,
+      "scroll": {
+        "sw": 1440,
+        "cw": 1440,
+        "sh": 1522
+      }
+    },
+    "d1440scroll": {
+      "scrollY": 600,
+      "sbTop": 0,
+      "sbH": 900,
+      "hdTop": 0,
+      "hdShadow": "color(srgb 0.0941176 0.0941176 0.105882 / 0.08) 0px 2px 6px 0px",
+      "foot": 900,
+      "sbNavOverflow": "auto"
+    },
+    "hdShadow20": "color(srgb 0.0941176 0.0941176 0.105882 / 0.08) 0px 2px 6px 0px",
+    "widths": {
+      "767": {
+        "sbVis": false,
+        "sbW": 0,
+        "sbH": 0,
+        "labelVis": false,
+        "bnVis": true,
+        "hdX": 0,
+        "hdH": 56,
+        "overflow": 0
+      },
+      "768": {
+        "sbVis": true,
+        "sbW": 72,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 72,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "900": {
+        "sbVis": true,
+        "sbW": 72,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 72,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1000": {
+        "sbVis": true,
+        "sbW": 72,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 72,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1023": {
+        "sbVis": true,
+        "sbW": 72,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 72,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1024": {
+        "sbVis": true,
+        "sbW": 220,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 220,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1279": {
+        "sbVis": true,
+        "sbW": 220,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 220,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1280": {
+        "sbVis": true,
+        "sbW": 252,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 252,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1920": {
+        "sbVis": true,
+        "sbW": 252,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 252,
+        "hdH": 64,
+        "overflow": 0
+      }
+    }
+  },
+  "dev-2": {
+    "d1440": {
+      "sidebar": {
+        "r": {
+          "x": 0,
+          "y": 0,
+          "w": 252,
+          "h": 900
+        },
+        "vis": true,
+        "radius": "0px",
+        "shadow": "none",
+        "margin": "0px",
+        "borderRight": "1px solid #e6e6e6",
+        "bg": "#ffffff",
+        "position": "sticky",
+        "top": "0px"
+      },
+      "header": {
+        "r": {
+          "x": 252,
+          "y": 0,
+          "w": 1188,
+          "h": 64
+        },
+        "cls": "app-header",
+        "position": "sticky",
+        "borderBottom": "1px solid #e6e6e6",
+        "bg": "#ffffff",
+        "shadow": "none",
+        "z": "40"
+      },
+      "sidebarTop": {
+        "r": {
+          "x": 0,
+          "y": 0,
+          "w": 251,
+          "h": 64
+        },
+        "borderBottom": "1px #e6e6e6",
+        "brand": "Atlas Workspace"
+      },
+      "groupTitles": [
+        {
+          "name": "Geral",
+          "text": "GERAL",
+          "fs": "12px",
+          "fw": "650",
+          "ls": "0.96px",
+          "tt": "uppercase",
+          "color": "#707072"
+        },
+        {
+          "name": "Equipe",
+          "text": "EQUIPE",
+          "fs": "12px",
+          "fw": "650",
+          "ls": "0.96px",
+          "tt": "uppercase",
+          "color": "#707072"
+        },
+        {
+          "name": "Conta",
+          "text": "CONTA",
+          "fs": "12px",
+          "fw": "650",
+          "ls": "0.96px",
+          "tt": "uppercase",
+          "color": "#707072"
+        }
+      ],
+      "items": [
+        {
+          "text": "Início",
+          "h": 40,
+          "cur": null
+        },
+        {
+          "text": "Painel",
+          "h": 40,
+          "cur": "page"
+        },
+        {
+          "text": "Projetos 12",
+          "h": 40,
+          "cur": null
+        },
+        {
+          "text": "Tarefas",
+          "h": 40,
+          "cur": null
+        },
+        {
+          "text": "Calendário",
+          "h": 40,
+          "cur": null
+        },
+        {
+          "text": "Pessoas",
+          "h": 40,
+          "cur": null
+        },
+        {
+          "text": "Mensagens 3",
+          "h": 40,
+          "cur": null
+        },
+        {
+          "text": "Relatórios",
+          "h": 40,
+          "cur": null
+        },
+        {
+          "text": "Configurações",
+          "h": 40,
+          "cur": null
+        },
+        {
+          "text": "Ajuda",
+          "h": 40,
+          "cur": null
+        }
+      ],
+      "itemIcon": {
+        "w": 20,
+        "h": 20,
+        "stroke": "1.5px",
+        "fill": "none"
+      },
+      "active": {
+        "text": "Painel",
+        "bg": "#e3e3e4",
+        "color": "#18181b",
+        "radius": "8px",
+        "fw": "650",
+        "shadow": "none",
+        "borderLeft": "0px #18181b",
+        "before": {
+          "content": "\"\"",
+          "w": "3px",
+          "h": "24px",
+          "bg": "#18181b",
+          "left": "-12px",
+          "pos": "absolute"
+        },
+        "after": null,
+        "liBefore": null
+      },
+      "foot": {
+        "r": {
+          "x": 0,
+          "y": 834.5,
+          "w": 251,
+          "h": 65.5
+        },
+        "cls": "sidebar__foot",
+        "text": "MA Marina Alves Gerente de produto",
+        "borderTop": "1px #e6e6e6",
+        "buttons": [
+          "Configurações",
+          "Menu do perfil"
+        ]
+      },
+      "crumbs": {
+        "text": "Painel",
+        "lastText": "Painel",
+        "lastFw": "650",
+        "vis": true
+      },
+      "headerControls": [
+        {
+          "tag": "INPUT",
+          "label": "Buscar…",
+          "r": {
+            "x": 1044,
+            "y": 11.5,
+            "w": 280,
+            "h": 40
+          },
+          "radius": "8px"
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Notificações, 4 não lidas",
+          "r": {
+            "x": 1332,
+            "y": 11.5,
+            "w": 40,
+            "h": 40
+          },
+          "radius": "8px"
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Menu do perfil",
+          "r": {
+            "x": 1384,
+            "y": 15.5,
+            "w": 32,
+            "h": 32
+          },
+          "radius": "50%"
+        }
+      ],
+      "headerHasHamburger": false,
+      "main": {
+        "r": {
+          "x": 252,
+          "y": 64,
+          "w": 1188,
+          "h": 966.3
+        },
+        "padding": "24px 32px 48px"
+      },
+      "body": {
+        "fs": "15px",
+        "color": "#18181b",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "bg": "#ffffff"
+      },
+      "h1": {
+        "text": "Visão geral",
+        "fs": "39px",
+        "fw": "760",
+        "ls": "-1.17px",
+        "ff": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "x": 284
+      },
+      "fontsInter": [],
+      "interCheck": true,
+      "scroll": {
+        "sw": 1440,
+        "cw": 1440,
+        "sh": 1150
+      }
+    },
+    "d1440scroll": {
+      "scrollY": 250,
+      "sbTop": -119.6875,
+      "sbH": 900,
+      "hdTop": 0,
+      "hdShadow": "color(srgb 0.0941176 0.0941176 0.105882 / 0.08) 0px 2px 8px 0px",
+      "foot": 780.3125,
+      "sbNavOverflow": "auto"
+    },
+    "hdShadow20": "color(srgb 0.0941176 0.0941176 0.105882 / 0.08) 0px 2px 8px 0px",
+    "widths": {
+      "767": {
+        "sbVis": false,
+        "sbW": 0,
+        "sbH": 0,
+        "labelVis": false,
+        "bnVis": true,
+        "hdX": 0,
+        "hdH": 56,
+        "overflow": 0
+      },
+      "768": {
+        "sbVis": true,
+        "sbW": 72,
+        "sbH": 900,
+        "labelVis": false,
+        "bnVis": false,
+        "hdX": 72,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "900": {
+        "sbVis": true,
+        "sbW": 72,
+        "sbH": 900,
+        "labelVis": false,
+        "bnVis": false,
+        "hdX": 72,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1000": {
+        "sbVis": true,
+        "sbW": 72,
+        "sbH": 900,
+        "labelVis": false,
+        "bnVis": false,
+        "hdX": 72,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1023": {
+        "sbVis": true,
+        "sbW": 72,
+        "sbH": 900,
+        "labelVis": false,
+        "bnVis": false,
+        "hdX": 72,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1024": {
+        "sbVis": true,
+        "sbW": 220,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 220,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1279": {
+        "sbVis": true,
+        "sbW": 220,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 220,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1280": {
+        "sbVis": true,
+        "sbW": 252,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 252,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1920": {
+        "sbVis": true,
+        "sbW": 252,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 252,
+        "hdH": 64,
+        "overflow": 0
+      }
+    }
+  },
+  "dev-3": {
+    "d1440": {
+      "sidebar": {
+        "r": {
+          "x": 0,
+          "y": 0,
+          "w": 252,
+          "h": 900
+        },
+        "vis": true,
+        "radius": "0px",
+        "shadow": "none",
+        "margin": "0px",
+        "borderRight": "1px solid #e6e6e6",
+        "bg": "#ffffff",
+        "position": "sticky",
+        "top": "0px"
+      },
+      "header": {
+        "r": {
+          "x": 252,
+          "y": 0,
+          "w": 1188,
+          "h": 64
+        },
+        "cls": "header",
+        "position": "sticky",
+        "borderBottom": "1px solid #e6e6e6",
+        "bg": "#ffffff",
+        "shadow": "none",
+        "z": "40"
+      },
+      "sidebarTop": {
+        "r": {
+          "x": 0,
+          "y": 0,
+          "w": 251,
+          "h": 64
+        },
+        "borderBottom": "1px #e6e6e6",
+        "brand": "Atlas Workspace"
+      },
+      "groupTitles": [
+        {
+          "name": "Geral",
+          "text": "GERAL",
+          "fs": "22.5px",
+          "fw": "650",
+          "ls": "normal",
+          "tt": "none",
+          "color": "#18181b"
+        },
+        {
+          "name": "Equipe",
+          "text": "EQUIPE",
+          "fs": "22.5px",
+          "fw": "650",
+          "ls": "normal",
+          "tt": "none",
+          "color": "#18181b"
+        },
+        {
+          "name": "Conta",
+          "text": "CONTA",
+          "fs": "22.5px",
+          "fw": "650",
+          "ls": "normal",
+          "tt": "none",
+          "color": "#18181b"
+        }
+      ],
+      "items": [
+        {
+          "text": "Início",
+          "h": 36,
+          "cur": null
+        },
+        {
+          "text": "Painel",
+          "h": 36,
+          "cur": "page"
+        },
+        {
+          "text": "Projetos 12",
+          "h": 36,
+          "cur": null
+        },
+        {
+          "text": "Tarefas",
+          "h": 36,
+          "cur": null
+        },
+        {
+          "text": "Calendário",
+          "h": 36,
+          "cur": null
+        },
+        {
+          "text": "Pessoas",
+          "h": 36,
+          "cur": null
+        },
+        {
+          "text": "Mensagens 3",
+          "h": 36,
+          "cur": null
+        },
+        {
+          "text": "Relatórios",
+          "h": 36,
+          "cur": null
+        },
+        {
+          "text": "Configurações",
+          "h": 36,
+          "cur": null
+        },
+        {
+          "text": "Ajuda",
+          "h": 36,
+          "cur": null
+        }
+      ],
+      "itemIcon": {
+        "w": 20,
+        "h": 20,
+        "stroke": "1.5",
+        "fill": "none"
+      },
+      "active": {
+        "text": "Painel",
+        "bg": "#e3e3e4",
+        "color": "#18181b",
+        "radius": "8px",
+        "fw": "600",
+        "shadow": "none",
+        "borderLeft": "0px #18181b",
+        "before": {
+          "content": "\"\"",
+          "w": "3px",
+          "h": "20px",
+          "bg": "#18181b",
+          "left": "-10px",
+          "pos": "absolute"
+        },
+        "after": null,
+        "liBefore": null
+      },
+      "foot": {
+        "r": {
+          "x": 0,
+          "y": 829.2,
+          "w": 251,
+          "h": 70.8
+        },
+        "cls": "sidebar__foot",
+        "text": "AS Ana Souza Administradora",
+        "borderTop": "1px #e6e6e6",
+        "buttons": [
+          "Perfil de Ana Souza, menu da conta"
+        ]
+      },
+      "crumbs": {
+        "text": "Geral Painel",
+        "lastText": "Painel",
+        "lastFw": "600",
+        "vis": true
+      },
+      "headerControls": [
+        {
+          "tag": "INPUT",
+          "label": "Buscar páginas",
+          "r": {
+            "x": 1100,
+            "y": 13.5,
+            "w": 220,
+            "h": 36
+          },
+          "radius": "8px"
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Notificações, 2 não lidas",
+          "r": {
+            "x": 1328,
+            "y": 11.5,
+            "w": 40,
+            "h": 40
+          },
+          "radius": "8px"
+        },
+        {
+          "tag": "BUTTON",
+          "label": "Menu do perfil de Ana Souza",
+          "r": {
+            "x": 1376,
+            "y": 11.5,
+            "w": 40,
+            "h": 40
+          },
+          "radius": "50%"
+        }
+      ],
+      "headerHasHamburger": false,
+      "main": {
+        "r": {
+          "x": 252,
+          "y": 64,
+          "w": 1188,
+          "h": 897.2
+        },
+        "padding": "32px 32px 64px"
+      },
+      "body": {
+        "fs": "15px",
+        "color": "#18181b",
+        "ff": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "bg": "#ffffff"
+      },
+      "h1": {
+        "text": "Visão geral",
+        "fs": "39px",
+        "fw": "750",
+        "ls": "-1.17px",
+        "ff": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", Roboto, Arial, sans-serif",
+        "x": 284
+      },
+      "fontsInter": [
+        "Inter 400 unloaded",
+        "Inter 400 unloaded",
+        "Inter 400 unloaded",
+        "Inter 400 unloaded",
+        "Inter 400 unloaded",
+        "Inter 400 unloaded"
+      ],
+      "interCheck": true,
+      "scroll": {
+        "sw": 1440,
+        "cw": 1440,
+        "sh": 1113
+      }
+    },
+    "d1440scroll": {
+      "scrollY": 213,
+      "sbTop": -151.84375,
+      "sbH": 900,
+      "hdTop": 0,
+      "hdShadow": "rgba(24, 24, 27, 0.06) 0px 6px 16px 0px",
+      "foot": 748.15625,
+      "sbNavOverflow": "auto"
+    },
+    "hdShadow20": "rgba(24, 24, 27, 0.06) 0px 6px 16px 0px",
+    "widths": {
+      "767": {
+        "sbVis": false,
+        "sbW": 0,
+        "sbH": 0,
+        "labelVis": false,
+        "bnVis": true,
+        "hdX": 0,
+        "hdH": 56,
+        "overflow": 0
+      },
+      "768": {
+        "sbVis": true,
+        "sbW": 72,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 72,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "900": {
+        "sbVis": true,
+        "sbW": 72,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 72,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1000": {
+        "sbVis": true,
+        "sbW": 72,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 72,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1023": {
+        "sbVis": true,
+        "sbW": 72,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 72,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1024": {
+        "sbVis": true,
+        "sbW": 220,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 220,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1279": {
+        "sbVis": true,
+        "sbW": 220,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 220,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1280": {
+        "sbVis": true,
+        "sbW": 252,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 252,
+        "hdH": 64,
+        "overflow": 0
+      },
+      "1920": {
+        "sbVis": true,
+        "sbW": 252,
+        "sbH": 900,
+        "labelVis": true,
+        "bnVis": false,
+        "hdX": 252,
+        "hdH": 64,
+        "overflow": 0
+      }
+    }
+  }
+}

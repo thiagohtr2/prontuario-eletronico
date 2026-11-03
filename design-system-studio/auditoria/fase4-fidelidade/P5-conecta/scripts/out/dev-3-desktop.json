@@ -1,0 +1,1326 @@
+{
+ "site": "dev-3",
+ "login1440": {
+  "card": {
+   "x": 718,
+   "y": 111.8,
+   "w": 400,
+   "h": 676.5,
+   "right": 1118,
+   "bottom": 788.3
+  },
+  "aside": {
+   "x": 232,
+   "y": 350.5,
+   "w": 340,
+   "h": 199,
+   "right": 572,
+   "bottom": 549.5,
+   "text": "C Conecta Como entrar Escolha o e-mail ou o telefone cadastrado. Digite sua senha. Se esqueceu, use “Esqueci minha senha”. Ainda não tem conta? Use a aba “Criar conta”."
+  },
+  "inputH": 56,
+  "submit": {
+   "x": 751,
+   "y": 632.8,
+   "w": 334,
+   "h": 48,
+   "right": 1085,
+   "bottom": 680.8
+  },
+  "submitBg": "rgb(214, 51, 108)",
+  "submitRadius": "20px",
+  "bodyBg": "rgb(255, 255, 255)",
+  "overflow": {
+   "sw": 1440,
+   "iw": 1440,
+   "bodySw": 1440,
+   "over": false
+  }
+ },
+ "d1440": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 65,
+   "right": 1440,
+   "bottom": 65,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 120,
+   "y": 0,
+   "w": 1200,
+   "h": 64,
+   "right": 1320,
+   "bottom": 64
+  },
+  "barStyle": {
+   "maxW": "1200px",
+   "pad": "32px",
+   "grid": "112.75px 540.234px 435.016px"
+  },
+  "navLinks": [
+   {
+    "t": "Feed",
+    "w": 69,
+    "current": "page",
+    "icon": true,
+    "color": "rgb(188, 45, 95)"
+   },
+   {
+    "t": "Grupos",
+    "w": 85,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Eventos",
+    "w": 90,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Mensagens 3",
+    "w": 144,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   }
+  ],
+  "navCenter": 559,
+  "headerCenter": 720,
+  "navBox": {
+   "x": 329,
+   "w": 459
+  },
+  "underline": {
+   "borderBottom": "0px none rgb(188, 45, 95)",
+   "boxShadow": "none",
+   "after": {
+    "h": "2px",
+    "bg": "rgb(214, 51, 108)",
+    "bottom": "0px",
+    "pos": "absolute"
+   },
+   "before": null,
+   "color": "rgb(188, 45, 95)",
+   "activeBottom": 64,
+   "headerBottom": 65
+  },
+  "search": {
+   "x": 894,
+   "y": 15,
+   "w": 166,
+   "h": 34,
+   "right": 1060,
+   "bottom": 49,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "0px",
+   "wrapW": 220,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "20px",
+   "x": 1085,
+   "y": 14,
+   "w": 91,
+   "h": 36,
+   "right": 1176,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 1188,
+   "y": 10,
+   "w": 44,
+   "h": 44,
+   "right": 1232,
+   "bottom": 54
+  },
+  "avatar": {
+   "vis": true,
+   "x": 1244,
+   "y": 10,
+   "w": 44,
+   "h": 44,
+   "right": 1288,
+   "bottom": 54,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta Feed Grupos Eventos Mensagens 3 Novo 3 AS",
+   "x": 120,
+   "y": 0,
+   "w": 1200,
+   "h": 64,
+   "right": 1320,
+   "bottom": 64
+  },
+  "mono": {
+   "x": 152,
+   "y": 16,
+   "w": 32,
+   "h": 32,
+   "right": 184,
+   "bottom": 48,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 120,
+    "y": 65,
+    "w": 1200,
+    "h": 966.8,
+    "right": 1320,
+    "bottom": 1031.8
+   },
+   {
+    "x": 152,
+    "y": 89,
+    "w": 1136,
+    "h": 894.8,
+    "right": 1288,
+    "bottom": 983.8
+   }
+  ],
+  "stories": {
+   "vis": false,
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": false,
+  "overflow": {
+   "sw": 1440,
+   "iw": 1440,
+   "bodySw": 1440,
+   "over": false
+  }
+ },
+ "cardDesktop": {
+  "n": 6,
+  "colunasPrimeiraLinha": 3,
+  "w": 363,
+  "cardBg": "rgb(254, 248, 250)",
+  "cardRadius": "12px",
+  "cardShadow": "none",
+  "cardBorder": "0px rgb(27, 27, 31)"
+ },
+ "sombraRolagem": {
+  "antes": "none",
+  "depois60": {
+   "shadow": "rgba(27, 27, 31, 0.08) 0px 2px 8px 0px",
+   "top": 0
+  },
+  "depois1500": {
+   "top": 0
+  }
+ },
+ "busca": {
+  "antes": {
+   "input": 166,
+   "form": 220,
+   "h": 34
+  },
+  "foco": {
+   "input": 246,
+   "form": 300,
+   "outline": "rgb(27, 27, 31) none 3px",
+   "shadow": "rgba(214, 51, 108, 0.35) 0px 0px 0px 5px",
+   "focusWithinShadow": "rgba(214, 51, 108, 0.35) 0px 0px 0px 3px",
+   "formOutline": "rgb(84, 84, 87) none 3px"
+  },
+  "esc": {
+   "value": "",
+   "focado": false
+  },
+  "enter": {
+   "hash": "#/busca?q=praia"
+  }
+ },
+ "notif": {
+  "aberto": true,
+  "x": 912,
+  "y": 62,
+  "w": 320,
+  "h": 372.5,
+  "right": 1232,
+  "bottom": 434.5,
+  "verTodas": true,
+  "shadow": "rgba(27, 27, 31, 0.14) 0px 8px 24px 0px",
+  "radius": "12px",
+  "overflow": {
+   "sw": 1440,
+   "iw": 1440,
+   "bodySw": 1440,
+   "over": false
+  },
+  "escFechou": true,
+  "focoVoltou": true,
+  "foraFechou": true
+ },
+ "menuPerfil": {
+  "aberto": true,
+  "x": 1048,
+  "y": 62,
+  "w": 240,
+  "h": 261,
+  "right": 1288,
+  "bottom": 323,
+  "texto": "Ana Souza demo@conecta.app Meu perfil Configurações Ajuda Sair",
+  "itens": [
+   "Meu perfil",
+   "Configurações",
+   "Ajuda",
+   "Sair"
+  ],
+  "alinhadoDireita": 152,
+  "escFechou": true,
+  "foraFechou": true
+ },
+ "foco": {
+  "tabs": [
+   {
+    "el": "A Felipe Nunes",
+    "outline": "2px solid rgb(214, 51, 108)",
+    "offset": "2px",
+    "shadow": "rgba(214, 51, 108, 0.35) 0px 0px 0px 5px"
+   },
+   {
+    "el": "BODY Pular para o conteúdo C C",
+    "outline": "3px none rgb(27, 27, 31)",
+    "offset": "0px",
+    "shadow": "none"
+   },
+   {
+    "el": "A Pular para o conteúdo",
+    "outline": "2px solid rgb(214, 51, 108)",
+    "offset": "2px",
+    "shadow": "rgba(214, 51, 108, 0.35) 0px 0px 0px 5px"
+   },
+   {
+    "el": "A Conecta, início",
+    "outline": "2px solid rgb(214, 51, 108)",
+    "offset": "2px",
+    "shadow": "rgba(214, 51, 108, 0.35) 0px 0px 0px 5px"
+   },
+   {
+    "el": "A Feed",
+    "outline": "2px solid rgb(214, 51, 108)",
+    "offset": "2px",
+    "shadow": "rgba(214, 51, 108, 0.35) 0px 0px 0px 5px"
+   },
+   {
+    "el": "A Grupos",
+    "outline": "2px solid rgb(214, 51, 108)",
+    "offset": "2px",
+    "shadow": "rgba(214, 51, 108, 0.35) 0px 0px 0px 5px"
+   }
+  ],
+  "card": {
+   "el": "A Grupos",
+   "outline": "2px solid rgb(214, 51, 108)",
+   "shadow": "rgba(214, 51, 108, 0.35) 0px 0px 0px 5px"
+  }
+ },
+ "destinosDesktop": [
+  "#/feed|C Conecta",
+  "#/feed|Feed",
+  "#/grupos|Grupos",
+  "#/eventos|Eventos",
+  "#/mensagens|Mensagens 3",
+  "#/notificacoes|Ver todas",
+  "#/perfil|Meu perfil",
+  "#/configuracoes|Configurações",
+  "#/ajuda|Ajuda",
+  "#/feed|Feed",
+  "#/grupos|Grupos",
+  "#/eventos|Eventos",
+  "#/mensagens|Mensagens",
+  "#/feed|C Conecta",
+  "#/busca|",
+  "#/perfil/bruno|BLBruno",
+  "#/perfil/carla|CMCarla",
+  "#/perfil/diego|DRDiego",
+  "#/perfil/elisa|ETElisa",
+  "#/perfil/felipe|FNFelipe"
+ ],
+ "perfilDesktop": {
+  "stories": false
+ },
+ "d1920": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 1920,
+   "h": 65,
+   "right": 1920,
+   "bottom": 65,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 360,
+   "y": 0,
+   "w": 1200,
+   "h": 64,
+   "right": 1560,
+   "bottom": 64
+  },
+  "barStyle": {
+   "maxW": "1200px",
+   "pad": "32px",
+   "grid": "112.75px 540.234px 435.016px"
+  },
+  "navLinks": [
+   {
+    "t": "Feed",
+    "w": 69,
+    "current": "page",
+    "icon": true,
+    "color": "rgb(188, 45, 95)"
+   },
+   {
+    "t": "Grupos",
+    "w": 85,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Eventos",
+    "w": 90,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Mensagens 3",
+    "w": 144,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   }
+  ],
+  "navCenter": 799,
+  "headerCenter": 960,
+  "navBox": {
+   "x": 569,
+   "w": 459
+  },
+  "underline": {
+   "borderBottom": "0px none rgb(188, 45, 95)",
+   "boxShadow": "none",
+   "after": {
+    "h": "2px",
+    "bg": "rgb(214, 51, 108)",
+    "bottom": "0px",
+    "pos": "absolute"
+   },
+   "before": null,
+   "color": "rgb(188, 45, 95)",
+   "activeBottom": 64,
+   "headerBottom": 65
+  },
+  "search": {
+   "x": 1134,
+   "y": 15,
+   "w": 166,
+   "h": 34,
+   "right": 1300,
+   "bottom": 49,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "0px",
+   "wrapW": 220,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "20px",
+   "x": 1325,
+   "y": 14,
+   "w": 91,
+   "h": 36,
+   "right": 1416,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 1428,
+   "y": 10,
+   "w": 44,
+   "h": 44,
+   "right": 1472,
+   "bottom": 54
+  },
+  "avatar": {
+   "vis": true,
+   "x": 1484,
+   "y": 10,
+   "w": 44,
+   "h": 44,
+   "right": 1528,
+   "bottom": 54,
+   "radius": "50%"
+  },
+  "logo": null,
+  "mono": null,
+  "sidebars": [],
+  "container": [
+   {
+    "x": 360,
+    "y": 65,
+    "w": 1200,
+    "h": 966.8,
+    "right": 1560,
+    "bottom": 1031.8
+   },
+   {
+    "x": 392,
+    "y": 89,
+    "w": 1136,
+    "h": 894.8,
+    "right": 1528,
+    "bottom": 983.8
+   }
+  ],
+  "stories": {
+   "vis": false,
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": false,
+  "overflow": {
+   "sw": 1920,
+   "iw": 1920,
+   "bodySw": 1920,
+   "over": false
+  }
+ },
+ "d1280": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 1280,
+   "h": 65,
+   "right": 1280,
+   "bottom": 65,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 40,
+   "y": 0,
+   "w": 1200,
+   "h": 64,
+   "right": 1240,
+   "bottom": 64
+  },
+  "barStyle": {
+   "maxW": "1200px",
+   "pad": "32px",
+   "grid": "112.75px 540.234px 435.016px"
+  },
+  "navLinks": [
+   {
+    "t": "Feed",
+    "w": 69,
+    "current": "page",
+    "icon": true,
+    "color": "rgb(188, 45, 95)"
+   },
+   {
+    "t": "Grupos",
+    "w": 85,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Eventos",
+    "w": 90,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Mensagens 3",
+    "w": 144,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   }
+  ],
+  "navCenter": 479,
+  "headerCenter": 640,
+  "navBox": {
+   "x": 249,
+   "w": 459
+  },
+  "underline": {
+   "borderBottom": "0px none rgb(188, 45, 95)",
+   "boxShadow": "none",
+   "after": {
+    "h": "2px",
+    "bg": "rgb(214, 51, 108)",
+    "bottom": "0px",
+    "pos": "absolute"
+   },
+   "before": null,
+   "color": "rgb(188, 45, 95)",
+   "activeBottom": 64,
+   "headerBottom": 65
+  },
+  "search": {
+   "x": 814,
+   "y": 15,
+   "w": 166,
+   "h": 34,
+   "right": 980,
+   "bottom": 49,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "0px",
+   "wrapW": 220,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "20px",
+   "x": 1005,
+   "y": 14,
+   "w": 91,
+   "h": 36,
+   "right": 1096,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 1108,
+   "y": 10,
+   "w": 44,
+   "h": 44,
+   "right": 1152,
+   "bottom": 54
+  },
+  "avatar": {
+   "vis": true,
+   "x": 1164,
+   "y": 10,
+   "w": 44,
+   "h": 44,
+   "right": 1208,
+   "bottom": 54,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta Feed Grupos Eventos Mensagens 3 Novo 3 AS",
+   "x": 40,
+   "y": 0,
+   "w": 1200,
+   "h": 64,
+   "right": 1240,
+   "bottom": 64
+  },
+  "mono": {
+   "x": 72,
+   "y": 16,
+   "w": 32,
+   "h": 32,
+   "right": 104,
+   "bottom": 48,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 40,
+    "y": 65,
+    "w": 1200,
+    "h": 966.8,
+    "right": 1240,
+    "bottom": 1031.8
+   },
+   {
+    "x": 72,
+    "y": 89,
+    "w": 1136,
+    "h": 894.8,
+    "right": 1208,
+    "bottom": 983.8
+   }
+  ],
+  "stories": {
+   "vis": false,
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": false,
+  "overflow": {
+   "sw": 1280,
+   "iw": 1280,
+   "bodySw": 1280,
+   "over": false
+  }
+ },
+ "d1024": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 1024,
+   "h": 65,
+   "right": 1024,
+   "bottom": 65,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 1024,
+   "h": 64,
+   "right": 1024,
+   "bottom": 64
+  },
+  "barStyle": {
+   "maxW": "1200px",
+   "pad": "24px",
+   "grid": "112.75px 420.234px 395.016px"
+  },
+  "navLinks": [
+   {
+    "t": "Feed",
+    "w": 66,
+    "current": "page",
+    "icon": true,
+    "color": "rgb(188, 45, 95)"
+   },
+   {
+    "t": "Grupos",
+    "w": 82,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Eventos",
+    "w": 86,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Mensagens 3",
+    "w": 138,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   }
+  ],
+  "navCenter": 371,
+  "headerCenter": 512,
+  "navBox": {
+   "x": 161,
+   "w": 420
+  },
+  "underline": {
+   "borderBottom": "0px none rgb(188, 45, 95)",
+   "boxShadow": "none",
+   "after": {
+    "h": "2px",
+    "bg": "rgb(214, 51, 108)",
+    "bottom": "0px",
+    "pos": "absolute"
+   },
+   "before": null,
+   "color": "rgb(188, 45, 95)",
+   "activeBottom": 64,
+   "headerBottom": 65
+  },
+  "search": {
+   "x": 646,
+   "y": 15,
+   "w": 126,
+   "h": 34,
+   "right": 772,
+   "bottom": 49,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "0px",
+   "wrapW": 180,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "20px",
+   "x": 797,
+   "y": 14,
+   "w": 91,
+   "h": 36,
+   "right": 888,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 900,
+   "y": 10,
+   "w": 44,
+   "h": 44,
+   "right": 944,
+   "bottom": 54
+  },
+  "avatar": {
+   "vis": true,
+   "x": 956,
+   "y": 10,
+   "w": 44,
+   "h": 44,
+   "right": 1000,
+   "bottom": 54,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta Feed Grupos Eventos Mensagens 3 Novo 3 AS",
+   "x": 0,
+   "y": 0,
+   "w": 1024,
+   "h": 64,
+   "right": 1024,
+   "bottom": 64
+  },
+  "mono": {
+   "x": 24,
+   "y": 16,
+   "w": 32,
+   "h": 32,
+   "right": 56,
+   "bottom": 48,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 0,
+    "y": 65,
+    "w": 1024,
+    "h": 988.8,
+    "right": 1024,
+    "bottom": 1053.8
+   },
+   {
+    "x": 32,
+    "y": 89,
+    "w": 960,
+    "h": 916.8,
+    "right": 992,
+    "bottom": 1005.8
+   }
+  ],
+  "stories": {
+   "vis": false,
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": false,
+  "overflow": {
+   "sw": 1024,
+   "iw": 1024,
+   "bodySw": 1024,
+   "over": false
+  }
+ },
+ "t768": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 768,
+   "h": 65,
+   "right": 768,
+   "bottom": 65,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 768,
+   "h": 64,
+   "right": 768,
+   "bottom": 64
+  },
+  "barStyle": {
+   "maxW": "1200px",
+   "pad": "24px",
+   "grid": "112.75px 591.25px"
+  },
+  "navLinks": [],
+  "navCenter": null,
+  "headerCenter": 384,
+  "navBox": {
+   "x": 0,
+   "w": 0
+  },
+  "underline": null,
+  "search": {
+   "x": 334,
+   "y": 15,
+   "w": 126,
+   "h": 34,
+   "right": 460,
+   "bottom": 49,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "0px",
+   "wrapW": 180,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "20px",
+   "x": 485,
+   "y": 14,
+   "w": 91,
+   "h": 36,
+   "right": 576,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 588,
+   "y": 10,
+   "w": 44,
+   "h": 44,
+   "right": 632,
+   "bottom": 54
+  },
+  "avatar": {
+   "vis": true,
+   "x": 644,
+   "y": 10,
+   "w": 44,
+   "h": 44,
+   "right": 688,
+   "bottom": 54,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta Novo 3 AS",
+   "x": 0,
+   "y": 0,
+   "w": 768,
+   "h": 64,
+   "right": 768,
+   "bottom": 64
+  },
+  "mono": {
+   "x": 24,
+   "y": 16,
+   "w": 32,
+   "h": 32,
+   "right": 56,
+   "bottom": 48,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 0,
+    "y": 65,
+    "w": 768,
+    "h": 1468.7,
+    "right": 768,
+    "bottom": 1533.7
+   },
+   {
+    "x": 32,
+    "y": 89,
+    "w": 704,
+    "h": 1396.7,
+    "right": 736,
+    "bottom": 1485.7
+   }
+  ],
+  "stories": {
+   "vis": false,
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": true,
+  "overflow": {
+   "sw": 768,
+   "iw": 768,
+   "bodySw": 768,
+   "over": false
+  }
+ },
+ "painelTablet": {
+  "aberto": true,
+  "x": 0,
+  "y": 64,
+  "w": 768,
+  "h": 229,
+  "right": 768,
+  "bottom": 293,
+  "headerBottom": 65,
+  "itens": [
+   "Feed",
+   "Grupos",
+   "Eventos",
+   "Mensagens"
+  ],
+  "bodyOverflow": "hidden",
+  "escFechou": true
+ },
+ "t820": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 820,
+   "h": 65,
+   "right": 820,
+   "bottom": 65,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 820,
+   "h": 64,
+   "right": 820,
+   "bottom": 64
+  },
+  "barStyle": {
+   "maxW": "1200px",
+   "pad": "24px",
+   "grid": "112.75px 643.25px"
+  },
+  "navLinks": [],
+  "navCenter": null,
+  "headerCenter": 410,
+  "navBox": {
+   "x": 0,
+   "w": 0
+  },
+  "underline": null,
+  "search": {
+   "x": 386,
+   "y": 15,
+   "w": 126,
+   "h": 34,
+   "right": 512,
+   "bottom": 49,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "0px",
+   "wrapW": 180,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "20px",
+   "x": 537,
+   "y": 14,
+   "w": 91,
+   "h": 36,
+   "right": 628,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 640,
+   "y": 10,
+   "w": 44,
+   "h": 44,
+   "right": 684,
+   "bottom": 54
+  },
+  "avatar": {
+   "vis": true,
+   "x": 696,
+   "y": 10,
+   "w": 44,
+   "h": 44,
+   "right": 740,
+   "bottom": 54,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta Novo 3 AS",
+   "x": 0,
+   "y": 0,
+   "w": 820,
+   "h": 64,
+   "right": 820,
+   "bottom": 64
+  },
+  "mono": {
+   "x": 24,
+   "y": 16,
+   "w": 32,
+   "h": 32,
+   "right": 56,
+   "bottom": 48,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 0,
+    "y": 65,
+    "w": 820,
+    "h": 1380.5,
+    "right": 820,
+    "bottom": 1445.5
+   },
+   {
+    "x": 32,
+    "y": 89,
+    "w": 756,
+    "h": 1308.5,
+    "right": 788,
+    "bottom": 1397.5
+   }
+  ],
+  "stories": {
+   "vis": false,
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": true,
+  "overflow": {
+   "sw": 820,
+   "iw": 820,
+   "bodySw": 820,
+   "over": false
+  }
+ },
+ "t767": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 767,
+   "h": 145,
+   "right": 767,
+   "bottom": 145,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0
+  },
+  "barStyle": {
+   "maxW": "none",
+   "pad": "0px",
+   "grid": "none"
+  },
+  "navLinks": [],
+  "navCenter": null,
+  "headerCenter": 384,
+  "navBox": {
+   "x": 0,
+   "w": 0
+  },
+  "underline": null,
+  "search": {
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0,
+   "placeholder": "Buscar…",
+   "visible": false,
+   "radius": "0px",
+   "wrapW": 0,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo",
+   "vis": false,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "20px",
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0
+  },
+  "bell": {
+   "vis": false,
+   "badge": "3",
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0
+  },
+  "avatar": {
+   "vis": false,
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta",
+   "x": 60,
+   "y": 12,
+   "w": 603,
+   "h": 32,
+   "right": 663,
+   "bottom": 44
+  },
+  "mono": {
+   "x": 60,
+   "y": 12,
+   "w": 32,
+   "h": 32,
+   "right": 92,
+   "bottom": 44,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 0,
+    "y": 145,
+    "w": 767,
+    "h": 1490.8,
+    "right": 767,
+    "bottom": 1635.8
+   },
+   {
+    "x": 16,
+    "y": 161,
+    "w": 735,
+    "h": 1378.8,
+    "right": 751,
+    "bottom": 1539.8
+   }
+  ],
+  "stories": {
+   "vis": true,
+   "x": 0,
+   "y": 56,
+   "w": 767,
+   "h": 88,
+   "right": 767,
+   "bottom": 144
+  },
+  "dockVisible": true,
+  "menuBtnVisible": true,
+  "panelBtnVisible": false,
+  "overflow": {
+   "sw": 767,
+   "iw": 767,
+   "bodySw": 767,
+   "over": false
+  }
+ }
+}

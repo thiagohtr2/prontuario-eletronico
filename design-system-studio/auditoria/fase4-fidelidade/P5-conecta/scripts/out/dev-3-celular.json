@@ -1,0 +1,768 @@
+{
+ "site": "dev-3",
+ "estrutura390": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 145,
+   "right": 390,
+   "bottom": 145,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px rgb(230, 230, 230)"
+  },
+  "topbar": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 56,
+   "right": 390,
+   "bottom": 56
+  },
+  "menuBtn": {
+   "x": 8,
+   "y": 6,
+   "w": 44,
+   "h": 44,
+   "right": 52,
+   "bottom": 50
+  },
+  "topCtrls": [
+   {
+    "label": "Abrir menu",
+    "x": 8,
+    "y": 6,
+    "w": 44,
+    "h": 44,
+    "right": 52,
+    "bottom": 50
+   },
+   {
+    "label": "Conecta, início",
+    "x": 60,
+    "y": 12,
+    "w": 226,
+    "h": 32,
+    "right": 286,
+    "bottom": 44
+   },
+   {
+    "label": "Buscar",
+    "x": 290,
+    "y": 6,
+    "w": 44,
+    "h": 44,
+    "right": 334,
+    "bottom": 50
+   },
+   {
+    "label": "Menu do perfil",
+    "x": 338,
+    "y": 6,
+    "w": 44,
+    "h": 44,
+    "right": 382,
+    "bottom": 50
+   }
+  ],
+  "brand": "C Conecta",
+  "stories": {
+   "x": 0,
+   "y": 56,
+   "w": 390,
+   "h": 88,
+   "right": 390,
+   "bottom": 144,
+   "list": {
+    "x": 0,
+    "y": 56,
+    "w": 390,
+    "h": 88,
+    "right": 390,
+    "bottom": 144
+   },
+   "overflowX": "auto",
+   "sw": 400,
+   "cw": 390,
+   "n": 5,
+   "position": "static",
+   "gapToHeader": 0
+  },
+  "dock": {
+   "nav": {
+    "x": 12,
+    "y": 768,
+    "w": 366,
+    "h": 64,
+    "right": 378,
+    "bottom": 832
+   },
+   "navPos": "fixed",
+   "vis": {
+    "x": 12,
+    "y": 768,
+    "w": 366,
+    "h": 64,
+    "right": 378,
+    "bottom": 832
+   },
+   "visTag": "NAV.dock",
+   "radius": "20px",
+   "bg": "rgb(254, 248, 250)",
+   "shadow": "rgba(27, 27, 31, 0.12) 0px 4px 16px 0px",
+   "border": "0px rgb(27, 27, 31)",
+   "backdrop": "none",
+   "gapL": 12,
+   "gapR": 12,
+   "gapB": 12,
+   "items": [
+    {
+     "label": "Início",
+     "current": "page",
+     "x": 18,
+     "y": 775,
+     "w": 88.5,
+     "h": 50,
+     "right": 106.5,
+     "bottom": 825
+    },
+    {
+     "label": "Explorar",
+     "current": null,
+     "x": 106.5,
+     "y": 775,
+     "w": 88.5,
+     "h": 50,
+     "right": 195,
+     "bottom": 825
+    },
+    {
+     "label": "Salvos",
+     "current": null,
+     "x": 195,
+     "y": 775,
+     "w": 88.5,
+     "h": 50,
+     "right": 283.5,
+     "bottom": 825
+    },
+    {
+     "label": "Perfil",
+     "current": null,
+     "x": 283.5,
+     "y": 775,
+     "w": 88.5,
+     "h": 50,
+     "right": 372,
+     "bottom": 825
+    }
+   ],
+   "active": {
+    "pill": {
+     "tag": "SPAN",
+     "cls": "dock__pilula",
+     "bg": "rgb(250, 231, 237)",
+     "radius": "16px",
+     "x": 34.3,
+     "y": 775,
+     "w": 56,
+     "h": 30,
+     "right": 90.3,
+     "bottom": 805
+    },
+    "labelColor": "rgb(188, 45, 95)",
+    "labelWeight": "500",
+    "iconColor": "rgb(188, 45, 95)"
+   },
+   "activeLabel": "Início",
+   "activeAria": "page",
+   "inactive": {
+    "pill": null,
+    "labelColor": "rgb(77, 77, 80)",
+    "labelWeight": "500",
+    "iconColor": "rgb(77, 77, 80)"
+   }
+  },
+  "fixedOthers": [],
+  "vw": 390,
+  "vh": 844
+ },
+ "cardFeed": {
+  "card": {
+   "x": 16,
+   "y": 236.3,
+   "w": 358,
+   "h": 390.8,
+   "right": 374,
+   "bottom": 627,
+   "tag": "LI",
+   "radius": "0px",
+   "bg": "rgba(0, 0, 0, 0)",
+   "shadow": "none",
+   "border": "0px none rgb(27, 27, 31)"
+  },
+  "media": {
+   "x": 16,
+   "y": 236.3,
+   "w": 358,
+   "h": 201.4,
+   "right": 374,
+   "bottom": 437.6,
+   "ratio": 1.78,
+   "tag": "DIV"
+  },
+  "tag": {
+   "text": "Novo",
+   "bg": "rgb(245, 159, 0)",
+   "color": "rgb(17, 17, 20)"
+  },
+  "title": {
+   "text": "Publicação da comunidade",
+   "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+   "weight": "500",
+   "size": "18px"
+  },
+  "text": {
+   "t": "Foto ou texto compartilhado por um perfil que você segue.",
+   "clamp": "3",
+   "lines": 2,
+   "size": "14px"
+  },
+  "btn": {
+   "text": "Ver publicação",
+   "tag": "A",
+   "bg": "rgb(214, 51, 108)",
+   "color": "rgb(255, 255, 255)",
+   "radius": "20px",
+   "h": 40,
+   "w": 132.125,
+   "afterPos": "static",
+   "afterContent": "none",
+   "afterInset": "auto"
+  },
+  "nestedInteractive": 0,
+  "order": [
+   0,
+   216,
+   246,
+   278,
+   336
+  ],
+  "buttonsInCard": []
+ },
+ "rolagem": {
+  "depois1200": {
+   "top": 0,
+   "bottom": 56,
+   "scrollY": 1200,
+   "visible": true
+  },
+  "aoSubir": {
+   "top": 0,
+   "bottom": 56,
+   "scrollY": 900,
+   "visible": true
+  },
+  "fim": {
+   "contentBottom": 733,
+   "lastEl": "A.btn btn--primary \"Ver publicação\"",
+   "dockTop": 768,
+   "vh": 844,
+   "scrollY": 2001,
+   "mainPadB": "96px",
+   "bodyPadB": "0px"
+  }
+ },
+ "drawer": {
+  "aberto": true,
+  "panel": {
+   "x": 0,
+   "y": 0,
+   "w": 280,
+   "h": 844,
+   "right": 280,
+   "bottom": 844,
+   "bg": "rgb(254, 248, 250)",
+   "radius": "0px",
+   "shadow": "none",
+   "z": "70",
+   "role": "dialog",
+   "ariaModal": "true"
+  },
+  "scrim": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "right": 390,
+   "bottom": 844,
+   "bg": "rgba(27, 27, 31, 0.4)",
+   "opacity": "1"
+  },
+  "sobreTopbar": {
+   "inDrawer": true,
+   "el": "DIV.scrim is-aberto"
+  },
+  "sobreDock": {
+   "inDrawer": true,
+   "el": "DIV.scrim is-aberto"
+  },
+  "sobreDockEsq": {
+   "inDrawer": true,
+   "el": "BUTTON.btn btn--primary btn--bloco"
+  },
+  "focoAoAbrir": {
+   "tag": "BUTTON",
+   "label": "Fechar menu",
+   "inPanel": true
+  },
+  "bodyOverflow": "hidden",
+  "htmlOverflow": "visible",
+  "overscroll": "contain (drawer__corpo)",
+  "overscrollPanel": "auto",
+  "inertInfo": [
+   {
+    "s": "#app",
+    "inert": true,
+    "ariaHidden": "true",
+    "inertAncestor": true
+   },
+   {
+    "s": "#conteudo",
+    "inert": false,
+    "ariaHidden": null,
+    "inertAncestor": true
+   },
+   {
+    "s": "#cabecalho",
+    "inert": false,
+    "ariaHidden": null,
+    "inertAncestor": true
+   },
+   {
+    "s": "#dock",
+    "inert": false,
+    "ariaHidden": null,
+    "inertAncestor": true
+   },
+   {
+    "s": "#conteudo",
+    "inert": false,
+    "ariaHidden": null,
+    "inertAncestor": true
+   }
+  ],
+  "titulo": "Menu",
+  "itens": [
+   "Fechar menu",
+   "Grupos",
+   "Eventos",
+   "Mensagens",
+   "Notificações",
+   "Configurações",
+   "Ajuda",
+   "Conta",
+   "Sair da conta"
+  ],
+  "secoes": [
+   "Menu"
+  ],
+  "footer": {
+   "x": 0,
+   "y": 775,
+   "w": 280,
+   "h": 69,
+   "right": 280,
+   "bottom": 844,
+   "position": "static"
+  },
+  "sair": {
+   "text": "Sair da conta",
+   "bg": "rgb(214, 51, 108)",
+   "radius": "20px",
+   "h": 40
+  },
+  "bodyScrollable": {
+   "overflowY": "auto"
+  },
+  "transition": "transform 0.25s cubic-bezier(0.2, 0, 0, 1), visibility",
+  "scrollY0": 300,
+  "scrollYDepoisAbrir": 0,
+  "focoPreso": true,
+  "focoPresoSeq": "111111111111111111111",
+  "esc": {
+   "fechou": true,
+   "focoVoltou": true
+  },
+  "scrimClick": {
+   "fechou": true,
+   "focoVoltou": true
+  },
+  "scrimTap": {
+   "fechou": true
+  },
+  "botaoX": {
+   "fechou": true,
+   "focoVoltou": true
+  },
+  "bodyOverflowFechado": "visible"
+ },
+ "alvos390": {
+  "pequenos": [
+   {
+    "tag": "A",
+    "label": "Conecta, início",
+    "w": 226,
+    "h": 32,
+    "inline": false
+   },
+   {
+    "tag": "A",
+    "label": "Publicação da comunidade",
+    "w": 232.5,
+    "h": 21,
+    "inline": false
+   },
+   {
+    "tag": "A",
+    "label": "Bruno Lima",
+    "w": 70.1,
+    "h": 16,
+    "inline": false
+   },
+   {
+    "tag": "A",
+    "label": "Ver publicação",
+    "w": 132.1,
+    "h": 40,
+    "inline": false
+   }
+  ],
+  "total": 16,
+  "cortados": []
+ },
+ "alvosDrawer390": [
+  {
+   "tag": "BUTTON",
+   "label": "Sair da conta",
+   "w": 248,
+   "h": 40,
+   "inline": false
+  }
+ ],
+ "dockNav": [
+  {
+   "label": "Início",
+   "hash": "#/feed",
+   "current": "page,,,",
+   "h1": "Início"
+  },
+  {
+   "label": "Explorar",
+   "hash": "#/explorar",
+   "current": ",page,,",
+   "h1": "Explorar"
+  },
+  {
+   "label": "Salvos",
+   "hash": "#/salvos",
+   "current": ",,page,",
+   "h1": "Salvos"
+  },
+  {
+   "label": "Perfil",
+   "hash": "#/perfil",
+   "current": ",,,page",
+   "h1": "Ana Souza"
+  }
+ ],
+ "perfil": {
+  "cover": {
+   "x": 16,
+   "y": 161,
+   "w": 358,
+   "h": 140,
+   "right": 374,
+   "bottom": 301,
+   "bg": "none rgb(250, 231, 237)"
+  },
+  "avatar": {
+   "x": 147,
+   "y": 269,
+   "w": 96,
+   "h": 96,
+   "right": 243,
+   "bottom": 365,
+   "overlapFrac": 0.33,
+   "centerOffset": 0
+  },
+  "name": {
+   "t": "Ana Souza",
+   "centerOffset": 0,
+   "align": "center"
+  },
+  "cargo": "Product Designer",
+  "actions": [
+   {
+    "t": "Editar perfil",
+    "w": 358,
+    "bg": "rgb(214, 51, 108)",
+    "radius": "20px"
+   }
+  ],
+  "stats": [],
+  "tabs": [
+   {
+    "t": "Publicações",
+    "sel": "true",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "0px"
+   },
+   {
+    "t": "Sobre",
+    "sel": "false",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "0px"
+   }
+  ],
+  "container": {
+   "cls": "perfil",
+   "bg": "rgba(0, 0, 0, 0)",
+   "radius": "0px",
+   "shadow": "none",
+   "border": "0px"
+  },
+  "abaTroca": {
+   "url": "mesma",
+   "sel": "true",
+   "conteudoMudou": true
+  }
+ },
+ "storiesInt": {
+  "scrollFunciona": false,
+  "focaveis": 5,
+  "primeiro": "Ver perfil de Bruno Lima",
+  "alvo": {
+   "x": 6,
+   "y": 61,
+   "w": 64,
+   "h": 78,
+   "right": 70,
+   "bottom": 139
+  }
+ },
+ "storyClick": {
+  "dialogo": null,
+  "hash": "#/perfil/carla"
+ },
+ "tipo390": {
+  "bodyFont": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+  "bodySize": "15px",
+  "bodyColor": "rgb(27, 27, 31)",
+  "bodyBg": "rgb(255, 255, 255)",
+  "htmlBg": "rgba(0, 0, 0, 0)",
+  "h1": {
+   "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+   "weight": "650",
+   "size": "23.4px"
+  },
+  "interOk": true
+ },
+ "m360": {
+  "dock": {
+   "w": 336,
+   "h": 64,
+   "gapL": 12,
+   "gapR": 12,
+   "gapB": 12,
+   "radius": "20px"
+  },
+  "topbarH": 56,
+  "storiesH": 88,
+  "overflow": {
+   "sw": 360,
+   "iw": 360,
+   "bodySw": 360,
+   "over": false
+  },
+  "cortados": []
+ },
+ "drawer360": {
+  "x": 0,
+  "y": 0,
+  "w": 280,
+  "h": 800,
+  "right": 280,
+  "bottom": 800
+ },
+ "login320": {
+  "overflow": {
+   "sw": 320,
+   "iw": 320,
+   "bodySw": 320,
+   "over": false
+  },
+  "cortados": []
+ },
+ "m320": {
+  "dock": {
+   "w": 296,
+   "h": 64,
+   "gapL": 12,
+   "gapR": 12,
+   "gapB": 12
+  },
+  "overflow": {
+   "sw": 320,
+   "iw": 320,
+   "bodySw": 320,
+   "over": false
+  },
+  "cortados": [],
+  "pequenos": [
+   {
+    "tag": "A",
+    "label": "Conecta, início",
+    "w": 156,
+    "h": 32,
+    "inline": false
+   },
+   {
+    "tag": "A",
+    "label": "Publicação da comunidade",
+    "w": 232.5,
+    "h": 21,
+    "inline": false
+   },
+   {
+    "tag": "A",
+    "label": "Bruno Lima",
+    "w": 70.1,
+    "h": 16,
+    "inline": false
+   },
+   {
+    "tag": "A",
+    "label": "Ver publicação",
+    "w": 132.1,
+    "h": 40,
+    "inline": false
+   }
+  ]
+ },
+ "drawer320": {
+  "x": 0,
+  "y": 0,
+  "w": 272,
+  "h": 640,
+  "right": 272,
+  "bottom": 640
+ },
+ "paisagem": {
+  "topbar": {
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0,
+   "pos": "sticky",
+   "vis": false
+  },
+  "stories": {
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0,
+   "vis": false,
+   "list": {
+    "x": 0,
+    "y": 0,
+    "w": 0,
+    "h": 0,
+    "right": 0,
+    "bottom": 0
+   }
+  },
+  "dock": {
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0,
+   "vis": false
+  },
+  "vh": 390,
+  "vw": 844,
+  "overflow": {
+   "sw": 844,
+   "iw": 844,
+   "bodySw": 844,
+   "over": false
+  },
+  "aposRolar": {
+   "topbarVisivel": false,
+   "topbarBottom": 0,
+   "dockH": 0
+  }
+ },
+ "paisagem667": {
+  "topbar": {
+   "x": 0,
+   "y": 0,
+   "w": 667,
+   "h": 48,
+   "right": 667,
+   "bottom": 48,
+   "pos": "sticky",
+   "vis": true
+  },
+  "stories": {
+   "x": 0,
+   "y": 48,
+   "w": 667,
+   "h": 88,
+   "right": 667,
+   "bottom": 136,
+   "vis": true,
+   "list": {
+    "x": 0,
+    "y": 48,
+    "w": 667,
+    "h": 88,
+    "right": 667,
+    "bottom": 136
+   }
+  },
+  "dock": {
+   "x": 123.5,
+   "y": 317,
+   "w": 420,
+   "h": 52,
+   "right": 543.5,
+   "bottom": 369,
+   "vis": true,
+   "radius": "20px"
+  },
+  "vh": 375,
+  "vw": 667,
+  "overflow": {
+   "sw": 667,
+   "iw": 667,
+   "bodySw": 667,
+   "over": false
+  },
+  "aposRolar": {
+   "topbarVisivel": true,
+   "topbarBottom": 48,
+   "dockH": 52,
+   "dockTop": 317
+  }
+ }
+}

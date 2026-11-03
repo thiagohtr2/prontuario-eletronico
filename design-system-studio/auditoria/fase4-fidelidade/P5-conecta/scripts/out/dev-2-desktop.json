@@ -1,0 +1,1417 @@
+{
+ "site": "dev-2",
+ "login1440": {
+  "card": {
+   "x": 330.5,
+   "y": 81.8,
+   "w": 400,
+   "h": 736.5,
+   "right": 730.5,
+   "bottom": 818.3
+  },
+  "aside": {
+   "x": 754.5,
+   "y": 81.8,
+   "w": 340,
+   "h": 736.5,
+   "right": 1094.5,
+   "bottom": 818.3,
+   "text": "Bem-vindo ao Conecta Entre com e-mail ou telefone, ou crie sua conta em poucos segundos. Acompanhe os stories e as publicações de quem você segue. Encontre grupos, eventos e novas pessoas na comunidad"
+  },
+  "inputH": 56,
+  "submit": {
+   "x": 355.5,
+   "y": 737.3,
+   "w": 350,
+   "h": 56,
+   "right": 705.5,
+   "bottom": 793.3
+  },
+  "submitBg": "rgb(214, 51, 108)",
+  "submitRadius": "8px",
+  "bodyBg": "rgb(255, 255, 255)",
+  "overflow": {
+   "sw": 1425,
+   "iw": 1440,
+   "bodySw": 1425,
+   "over": false
+  }
+ },
+ "d1440": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 1425,
+   "h": 64,
+   "right": 1425,
+   "bottom": 64,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 1425,
+   "h": 64,
+   "right": 1425,
+   "bottom": 64
+  },
+  "barStyle": {
+   "maxW": "none",
+   "pad": "0px",
+   "grid": "none"
+  },
+  "navLinks": [
+   {
+    "t": "Feed",
+    "w": 87,
+    "current": "page",
+    "icon": true,
+    "color": "rgb(188, 45, 95)"
+   },
+   {
+    "t": "Grupos",
+    "w": 104,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Eventos",
+    "w": 109,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Mensagens 3",
+    "w": 164,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Mais",
+    "w": 82,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   }
+  ],
+  "navCenter": 554,
+  "headerCenter": 720,
+  "navBox": {
+   "x": 275,
+   "w": 558
+  },
+  "underline": {
+   "borderBottom": "0px none rgb(188, 45, 95)",
+   "boxShadow": "none",
+   "after": {
+    "h": "2px",
+    "bg": "rgb(214, 51, 108)",
+    "bottom": "0px",
+    "pos": "absolute"
+   },
+   "before": {
+    "h": "40px",
+    "bg": "rgba(0, 0, 0, 0)",
+    "bottom": "12px"
+   },
+   "color": "rgb(188, 45, 95)",
+   "activeBottom": 64,
+   "headerBottom": 64
+  },
+  "search": {
+   "x": 849,
+   "y": 14,
+   "w": 220,
+   "h": 36,
+   "right": 1069,
+   "bottom": 50,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "8px",
+   "wrapW": 220,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "8px",
+   "x": 1081,
+   "y": 14,
+   "w": 95.5,
+   "h": 36,
+   "right": 1176.5,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 1188.5,
+   "y": 12,
+   "w": 40,
+   "h": 40,
+   "right": 1228.5,
+   "bottom": 52
+  },
+  "avatar": {
+   "vis": true,
+   "x": 1240.5,
+   "y": 12,
+   "w": 40,
+   "h": 40,
+   "right": 1280.5,
+   "bottom": 52,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta",
+   "x": 144.5,
+   "y": 10,
+   "w": 114,
+   "h": 44,
+   "right": 258.5,
+   "bottom": 54
+  },
+  "mono": {
+   "x": 144.5,
+   "y": 16,
+   "w": 32,
+   "h": 32,
+   "right": 176.5,
+   "bottom": 48,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 112.5,
+    "y": 164,
+    "w": 1200,
+    "h": 1960.8,
+    "right": 1312.5,
+    "bottom": 2124.8
+   },
+   {
+    "x": 144.5,
+    "y": 180,
+    "w": 1136,
+    "h": 62.5,
+    "right": 1280.5,
+    "bottom": 242.5
+   },
+   {
+    "x": 144.5,
+    "y": 258.5,
+    "w": 1136,
+    "h": 1826.3,
+    "right": 1280.5,
+    "bottom": 2084.8
+   }
+  ],
+  "stories": {
+   "vis": true,
+   "x": 0,
+   "y": 64,
+   "w": 1425,
+   "h": 100,
+   "right": 1425,
+   "bottom": 164
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": false,
+  "overflow": {
+   "sw": 1425,
+   "iw": 1440,
+   "bodySw": 1425,
+   "over": false
+  }
+ },
+ "cardDesktop": {
+  "n": 12,
+  "colunasPrimeiraLinha": 3,
+  "w": 363,
+  "cardBg": "rgb(254, 248, 250)",
+  "cardRadius": "12px",
+  "cardShadow": "none",
+  "cardBorder": "0px rgb(27, 27, 31)"
+ },
+ "sombraRolagem": {
+  "antes": "none",
+  "depois60": {
+   "shadow": "rgba(27, 27, 31, 0.08) 0px 2px 8px 0px",
+   "top": 0
+  },
+  "depois1500": {
+   "top": 0
+  }
+ },
+ "busca": {
+  "antes": {
+   "input": 220,
+   "form": 220,
+   "h": 36
+  },
+  "foco": {
+   "input": 300,
+   "form": 300,
+   "outline": "rgb(214, 51, 108) solid 2px",
+   "shadow": "none",
+   "focusWithinShadow": "none",
+   "formOutline": "rgb(77, 77, 80) none 3px"
+  },
+  "esc": {
+   "value": "",
+   "focado": false
+  },
+  "enter": {
+   "hash": "#/explorar?q=praia"
+  }
+ },
+ "notif": {
+  "aberto": true,
+  "x": 908.5,
+  "y": 60,
+  "w": 320,
+  "h": 486.5,
+  "right": 1228.5,
+  "bottom": 546.5,
+  "verTodas": true,
+  "shadow": "rgba(27, 27, 31, 0.16) 0px 8px 24px 0px",
+  "radius": "12px",
+  "overflow": {
+   "sw": 1425,
+   "iw": 1440,
+   "bodySw": 1425,
+   "over": false
+  },
+  "escFechou": true,
+  "focoVoltou": true,
+  "foraFechou": true
+ },
+ "menuPerfil": {
+  "aberto": true,
+  "x": 1040.5,
+  "y": 60,
+  "w": 240,
+  "h": 249,
+  "right": 1280.5,
+  "bottom": 309,
+  "texto": "Ana Souza ana@conecta.demo Meu perfil Configurações Ajuda Sair",
+  "itens": [
+   "Meu perfil",
+   "Configurações",
+   "Ajuda",
+   "Sair"
+  ],
+  "alinhadoDireita": 160,
+  "escFechou": true,
+  "foraFechou": true
+ },
+ "foco": {
+  "tabs": [
+   {
+    "el": "A BA Bruno Alves Fotógrafo ",
+    "outline": "2px solid rgb(214, 51, 108)",
+    "offset": "2px",
+    "shadow": "color(srgb 0.839216 0.2 0.423529 / 0.35) 0px 0px 0px 5px"
+   },
+   {
+    "el": "BUTTON 73 curtidas",
+    "outline": "2px solid rgb(214, 51, 108)",
+    "offset": "2px",
+    "shadow": "color(srgb 0.839216 0.2 0.423529 / 0.35) 0px 0px 0px 5px"
+   },
+   {
+    "el": "BUTTON Salvo",
+    "outline": "2px solid rgb(214, 51, 108)",
+    "offset": "2px",
+    "shadow": "color(srgb 0.839216 0.2 0.423529 / 0.35) 0px 0px 0px 5px"
+   },
+   {
+    "el": "BUTTON Compartilhar",
+    "outline": "2px solid rgb(214, 51, 108)",
+    "offset": "2px",
+    "shadow": "color(srgb 0.839216 0.2 0.423529 / 0.35) 0px 0px 0px 5px"
+   },
+   {
+    "el": "INPUT ",
+    "outline": "0px none rgb(27, 27, 31)",
+    "offset": "0px",
+    "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0 0 0 / 0) 0px 0px 0px 0px"
+   },
+   {
+    "el": "BUTTON Comentar",
+    "outline": "2px solid rgb(214, 51, 108)",
+    "offset": "2px",
+    "shadow": "color(srgb 0.839216 0.2 0.423529 / 0.35) 0px 0px 0px 5px"
+   }
+  ],
+  "card": {
+   "el": "BUTTON Comentar",
+   "outline": "2px solid rgb(214, 51, 108)",
+   "shadow": "color(srgb 0.839216 0.2 0.423529 / 0.35) 0px 0px 0px 5px"
+  }
+ },
+ "destinosDesktop": [
+  "#/feed|C Conecta",
+  "#/feed|Feed",
+  "#/grupos|Grupos",
+  "#/eventos|Eventos",
+  "#/mensagens|Mensagens 3",
+  "#/explorar|Explorar",
+  "#/salvos|Salvos",
+  "#/post/p13|Bruno Alves curtiu s",
+  "#/perfil/carla|Carla Mendes começou",
+  "#/eventos|Novo evento no grupo",
+  "#/post/p13|Diego Rocha comentou",
+  "#/post/p1|Elisa Prado menciono",
+  "#/notificacoes|Ver todas",
+  "#/perfil|Meu perfil",
+  "#/configuracoes|Configurações",
+  "#/ajuda|Ajuda"
+ ],
+ "perfilDesktop": {
+  "stories": true
+ },
+ "d1920": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 1905,
+   "h": 64,
+   "right": 1905,
+   "bottom": 64,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 1905,
+   "h": 64,
+   "right": 1905,
+   "bottom": 64
+  },
+  "barStyle": {
+   "maxW": "none",
+   "pad": "0px",
+   "grid": "none"
+  },
+  "navLinks": [
+   {
+    "t": "Feed",
+    "w": 87,
+    "current": "page",
+    "icon": true,
+    "color": "rgb(188, 45, 95)"
+   },
+   {
+    "t": "Grupos",
+    "w": 104,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Eventos",
+    "w": 109,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Mensagens 3",
+    "w": 164,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Mais",
+    "w": 82,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   }
+  ],
+  "navCenter": 794,
+  "headerCenter": 960,
+  "navBox": {
+   "x": 515,
+   "w": 558
+  },
+  "underline": {
+   "borderBottom": "0px none rgb(188, 45, 95)",
+   "boxShadow": "none",
+   "after": {
+    "h": "2px",
+    "bg": "rgb(214, 51, 108)",
+    "bottom": "0px",
+    "pos": "absolute"
+   },
+   "before": {
+    "h": "40px",
+    "bg": "rgba(0, 0, 0, 0)",
+    "bottom": "12px"
+   },
+   "color": "rgb(188, 45, 95)",
+   "activeBottom": 64,
+   "headerBottom": 64
+  },
+  "search": {
+   "x": 1089,
+   "y": 14,
+   "w": 220,
+   "h": 36,
+   "right": 1309,
+   "bottom": 50,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "8px",
+   "wrapW": 220,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "8px",
+   "x": 1321,
+   "y": 14,
+   "w": 95.5,
+   "h": 36,
+   "right": 1416.5,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 1428.5,
+   "y": 12,
+   "w": 40,
+   "h": 40,
+   "right": 1468.5,
+   "bottom": 52
+  },
+  "avatar": {
+   "vis": true,
+   "x": 1480.5,
+   "y": 12,
+   "w": 40,
+   "h": 40,
+   "right": 1520.5,
+   "bottom": 52,
+   "radius": "50%"
+  },
+  "logo": null,
+  "mono": null,
+  "sidebars": [],
+  "container": [
+   {
+    "x": 352.5,
+    "y": 164,
+    "w": 1200,
+    "h": 1960.8,
+    "right": 1552.5,
+    "bottom": 2124.8
+   },
+   {
+    "x": 384.5,
+    "y": 180,
+    "w": 1136,
+    "h": 62.5,
+    "right": 1520.5,
+    "bottom": 242.5
+   },
+   {
+    "x": 384.5,
+    "y": 258.5,
+    "w": 1136,
+    "h": 1826.3,
+    "right": 1520.5,
+    "bottom": 2084.8
+   }
+  ],
+  "stories": {
+   "vis": true,
+   "x": 0,
+   "y": 64,
+   "w": 1905,
+   "h": 100,
+   "right": 1905,
+   "bottom": 164
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": false,
+  "overflow": {
+   "sw": 1905,
+   "iw": 1920,
+   "bodySw": 1905,
+   "over": false
+  }
+ },
+ "d1280": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 1265,
+   "h": 64,
+   "right": 1265,
+   "bottom": 64,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 1265,
+   "h": 64,
+   "right": 1265,
+   "bottom": 64
+  },
+  "barStyle": {
+   "maxW": "none",
+   "pad": "0px",
+   "grid": "none"
+  },
+  "navLinks": [
+   {
+    "t": "Feed",
+    "w": 87,
+    "current": "page",
+    "icon": true,
+    "color": "rgb(188, 45, 95)"
+   },
+   {
+    "t": "Grupos",
+    "w": 104,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Eventos",
+    "w": 109,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Mensagens 3",
+    "w": 164,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Mais",
+    "w": 82,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   }
+  ],
+  "navCenter": 474,
+  "headerCenter": 640,
+  "navBox": {
+   "x": 195,
+   "w": 558
+  },
+  "underline": {
+   "borderBottom": "0px none rgb(188, 45, 95)",
+   "boxShadow": "none",
+   "after": {
+    "h": "2px",
+    "bg": "rgb(214, 51, 108)",
+    "bottom": "0px",
+    "pos": "absolute"
+   },
+   "before": {
+    "h": "40px",
+    "bg": "rgba(0, 0, 0, 0)",
+    "bottom": "12px"
+   },
+   "color": "rgb(188, 45, 95)",
+   "activeBottom": 64,
+   "headerBottom": 64
+  },
+  "search": {
+   "x": 769,
+   "y": 14,
+   "w": 220,
+   "h": 36,
+   "right": 989,
+   "bottom": 50,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "8px",
+   "wrapW": 220,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "8px",
+   "x": 1001,
+   "y": 14,
+   "w": 95.5,
+   "h": 36,
+   "right": 1096.5,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 1108.5,
+   "y": 12,
+   "w": 40,
+   "h": 40,
+   "right": 1148.5,
+   "bottom": 52
+  },
+  "avatar": {
+   "vis": true,
+   "x": 1160.5,
+   "y": 12,
+   "w": 40,
+   "h": 40,
+   "right": 1200.5,
+   "bottom": 52,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta",
+   "x": 64.5,
+   "y": 10,
+   "w": 114,
+   "h": 44,
+   "right": 178.5,
+   "bottom": 54
+  },
+  "mono": {
+   "x": 64.5,
+   "y": 16,
+   "w": 32,
+   "h": 32,
+   "right": 96.5,
+   "bottom": 48,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 32.5,
+    "y": 164,
+    "w": 1200,
+    "h": 1960.8,
+    "right": 1232.5,
+    "bottom": 2124.8
+   },
+   {
+    "x": 64.5,
+    "y": 180,
+    "w": 1136,
+    "h": 62.5,
+    "right": 1200.5,
+    "bottom": 242.5
+   },
+   {
+    "x": 64.5,
+    "y": 258.5,
+    "w": 1136,
+    "h": 1826.3,
+    "right": 1200.5,
+    "bottom": 2084.8
+   }
+  ],
+  "stories": {
+   "vis": true,
+   "x": 0,
+   "y": 64,
+   "w": 1265,
+   "h": 100,
+   "right": 1265,
+   "bottom": 164
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": false,
+  "overflow": {
+   "sw": 1265,
+   "iw": 1280,
+   "bodySw": 1265,
+   "over": false
+  }
+ },
+ "d1024": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 1009,
+   "h": 64,
+   "right": 1009,
+   "bottom": 64,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 1009,
+   "h": 64,
+   "right": 1009,
+   "bottom": 64
+  },
+  "barStyle": {
+   "maxW": "none",
+   "pad": "0px",
+   "grid": "none"
+  },
+  "navLinks": [
+   {
+    "t": "Feed",
+    "w": 77,
+    "current": "page",
+    "icon": true,
+    "color": "rgb(188, 45, 95)"
+   },
+   {
+    "t": "Grupos",
+    "w": 94,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Mensagens 3",
+    "w": 152,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Mais",
+    "w": 72,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   }
+  ],
+  "navCenter": 372,
+  "headerCenter": 512,
+  "navBox": {
+   "x": 162,
+   "w": 419
+  },
+  "underline": {
+   "borderBottom": "0px none rgb(188, 45, 95)",
+   "boxShadow": "none",
+   "after": {
+    "h": "2px",
+    "bg": "rgb(214, 51, 108)",
+    "bottom": "0px",
+    "pos": "absolute"
+   },
+   "before": {
+    "h": "40px",
+    "bg": "rgba(0, 0, 0, 0)",
+    "bottom": "12px"
+   },
+   "color": "rgb(188, 45, 95)",
+   "activeBottom": 64,
+   "headerBottom": 64
+  },
+  "search": {
+   "x": 597.5,
+   "y": 14,
+   "w": 180,
+   "h": 36,
+   "right": 777.5,
+   "bottom": 50,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "8px",
+   "wrapW": 180,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "8px",
+   "x": 785.5,
+   "y": 14,
+   "w": 95.5,
+   "h": 36,
+   "right": 881,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 889,
+   "y": 12,
+   "w": 40,
+   "h": 40,
+   "right": 929,
+   "bottom": 52
+  },
+  "avatar": {
+   "vis": true,
+   "x": 937,
+   "y": 12,
+   "w": 40,
+   "h": 40,
+   "right": 977,
+   "bottom": 52,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta",
+   "x": 32,
+   "y": 10,
+   "w": 114,
+   "h": 44,
+   "right": 146,
+   "bottom": 54
+  },
+  "mono": {
+   "x": 32,
+   "y": 16,
+   "w": 32,
+   "h": 32,
+   "right": 64,
+   "bottom": 48,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 0,
+    "y": 164,
+    "w": 1009,
+    "h": 2047.5,
+    "right": 1009,
+    "bottom": 2211.5
+   },
+   {
+    "x": 32,
+    "y": 180,
+    "w": 945,
+    "h": 62.5,
+    "right": 977,
+    "bottom": 242.5
+   },
+   {
+    "x": 32,
+    "y": 258.5,
+    "w": 945,
+    "h": 1913,
+    "right": 977,
+    "bottom": 2171.5
+   }
+  ],
+  "stories": {
+   "vis": true,
+   "x": 0,
+   "y": 64,
+   "w": 1009,
+   "h": 100,
+   "right": 1009,
+   "bottom": 164
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": false,
+  "overflow": {
+   "sw": 1009,
+   "iw": 1024,
+   "bodySw": 1009,
+   "over": false
+  }
+ },
+ "t768": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 753,
+   "h": 64,
+   "right": 753,
+   "bottom": 64,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 753,
+   "h": 64,
+   "right": 753,
+   "bottom": 64
+  },
+  "barStyle": {
+   "maxW": "none",
+   "pad": "0px",
+   "grid": "none"
+  },
+  "navLinks": [],
+  "navCenter": null,
+  "headerCenter": 384,
+  "navBox": {
+   "x": 0,
+   "w": 0
+  },
+  "underline": null,
+  "search": {
+   "x": 349.5,
+   "y": 14,
+   "w": 180,
+   "h": 36,
+   "right": 529.5,
+   "bottom": 50,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "8px",
+   "wrapW": 180,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "8px",
+   "x": 537.5,
+   "y": 14,
+   "w": 95.5,
+   "h": 36,
+   "right": 633,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 641,
+   "y": 12,
+   "w": 40,
+   "h": 40,
+   "right": 681,
+   "bottom": 52
+  },
+  "avatar": {
+   "vis": true,
+   "x": 689,
+   "y": 12,
+   "w": 40,
+   "h": 40,
+   "right": 729,
+   "bottom": 52,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta",
+   "x": 24,
+   "y": 10,
+   "w": 114,
+   "h": 44,
+   "right": 138,
+   "bottom": 54
+  },
+  "mono": {
+   "x": 24,
+   "y": 16,
+   "w": 32,
+   "h": 32,
+   "right": 56,
+   "bottom": 48,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 0,
+    "y": 164,
+    "w": 753,
+    "h": 2808.1,
+    "right": 753,
+    "bottom": 2972.1
+   },
+   {
+    "x": 24,
+    "y": 180,
+    "w": 705,
+    "h": 62.5,
+    "right": 729,
+    "bottom": 242.5
+   },
+   {
+    "x": 24,
+    "y": 258.5,
+    "w": 705,
+    "h": 2673.6,
+    "right": 729,
+    "bottom": 2932.1
+   }
+  ],
+  "stories": {
+   "vis": true,
+   "x": 0,
+   "y": 64,
+   "w": 753,
+   "h": 100,
+   "right": 753,
+   "bottom": 164
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": true,
+  "overflow": {
+   "sw": 753,
+   "iw": 768,
+   "bodySw": 753,
+   "over": false
+  }
+ },
+ "painelTablet": {
+  "aberto": true,
+  "x": 0,
+  "y": 64,
+  "w": 753,
+  "h": 333,
+  "right": 753,
+  "bottom": 397,
+  "headerBottom": 64,
+  "itens": [
+   "Feed",
+   "Grupos",
+   "Eventos",
+   "Mensagens 3",
+   "Explorar",
+   "Salvos"
+  ],
+  "bodyOverflow": "visible",
+  "escFechou": true
+ },
+ "t820": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 805,
+   "h": 64,
+   "right": 805,
+   "bottom": 64,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 805,
+   "h": 64,
+   "right": 805,
+   "bottom": 64
+  },
+  "barStyle": {
+   "maxW": "none",
+   "pad": "0px",
+   "grid": "none"
+  },
+  "navLinks": [],
+  "navCenter": null,
+  "headerCenter": 410,
+  "navBox": {
+   "x": 0,
+   "w": 0
+  },
+  "underline": null,
+  "search": {
+   "x": 401.5,
+   "y": 14,
+   "w": 180,
+   "h": 36,
+   "right": 581.5,
+   "bottom": 50,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "8px",
+   "wrapW": 180,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "8px",
+   "x": 589.5,
+   "y": 14,
+   "w": 95.5,
+   "h": 36,
+   "right": 685,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 693,
+   "y": 12,
+   "w": 40,
+   "h": 40,
+   "right": 733,
+   "bottom": 52
+  },
+  "avatar": {
+   "vis": true,
+   "x": 741,
+   "y": 12,
+   "w": 40,
+   "h": 40,
+   "right": 781,
+   "bottom": 52,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta",
+   "x": 24,
+   "y": 10,
+   "w": 114,
+   "h": 44,
+   "right": 138,
+   "bottom": 54
+  },
+  "mono": {
+   "x": 24,
+   "y": 16,
+   "w": 32,
+   "h": 32,
+   "right": 56,
+   "bottom": 48,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 0,
+    "y": 164,
+    "w": 805,
+    "h": 2872.5,
+    "right": 805,
+    "bottom": 3036.5
+   },
+   {
+    "x": 24,
+    "y": 180,
+    "w": 757,
+    "h": 62.5,
+    "right": 781,
+    "bottom": 242.5
+   },
+   {
+    "x": 24,
+    "y": 258.5,
+    "w": 757,
+    "h": 2738,
+    "right": 781,
+    "bottom": 2996.5
+   }
+  ],
+  "stories": {
+   "vis": true,
+   "x": 0,
+   "y": 64,
+   "w": 805,
+   "h": 100,
+   "right": 805,
+   "bottom": 164
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": true,
+  "overflow": {
+   "sw": 805,
+   "iw": 820,
+   "bodySw": 805,
+   "over": false
+  }
+ },
+ "t767": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 752,
+   "h": 56,
+   "right": 752,
+   "bottom": 56,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 752,
+   "h": 56,
+   "right": 752,
+   "bottom": 56
+  },
+  "barStyle": {
+   "maxW": "none",
+   "pad": "0px",
+   "grid": "none"
+  },
+  "navLinks": [],
+  "navCenter": null,
+  "headerCenter": 384,
+  "navBox": {
+   "x": 0,
+   "w": 0
+  },
+  "underline": null,
+  "search": {
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0,
+   "placeholder": "Buscar…",
+   "visible": false,
+   "radius": "8px",
+   "wrapW": 0,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "8px",
+   "x": 640,
+   "y": 6,
+   "w": 44,
+   "h": 44,
+   "right": 684,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": false,
+   "badge": "3",
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0
+  },
+  "avatar": {
+   "vis": true,
+   "x": 692,
+   "y": 6,
+   "w": 44,
+   "h": 44,
+   "right": 736,
+   "bottom": 50,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta",
+   "x": 68,
+   "y": 6,
+   "w": 114,
+   "h": 44,
+   "right": 182,
+   "bottom": 50
+  },
+  "mono": {
+   "x": 68,
+   "y": 12,
+   "w": 32,
+   "h": 32,
+   "right": 100,
+   "bottom": 44,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 0,
+    "y": 156,
+    "w": 752,
+    "h": 2894,
+    "right": 752,
+    "bottom": 3050
+   },
+   {
+    "x": 16,
+    "y": 172,
+    "w": 720,
+    "h": 62.5,
+    "right": 736,
+    "bottom": 234.5
+   },
+   {
+    "x": 16,
+    "y": 250.5,
+    "w": 720,
+    "h": 2699.5,
+    "right": 736,
+    "bottom": 2950
+   }
+  ],
+  "stories": {
+   "vis": true,
+   "x": 0,
+   "y": 56,
+   "w": 752,
+   "h": 100,
+   "right": 752,
+   "bottom": 156
+  },
+  "dockVisible": true,
+  "menuBtnVisible": true,
+  "panelBtnVisible": false,
+  "overflow": {
+   "sw": 752,
+   "iw": 767,
+   "bodySw": 752,
+   "over": false
+  }
+ }
+}

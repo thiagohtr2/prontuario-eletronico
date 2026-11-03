@@ -1,0 +1,1328 @@
+{
+ "site": "dev-1",
+ "login1440": {
+  "card": {
+   "x": 294,
+   "y": 179.9,
+   "w": 424,
+   "h": 540.3,
+   "right": 718,
+   "bottom": 720.1
+  },
+  "aside": {
+   "x": 766,
+   "y": 211,
+   "w": 380,
+   "h": 478,
+   "right": 1146,
+   "bottom": 689,
+   "text": "C Conecta Pessoas, stories e conteúdos em um só lugar. Entre com e-mail ou telefone e a sua senha. Novo por aqui? Use a aba “Criar conta”. Esqueceu a senha? Enviamos um link por e-mail. Conta de demon"
+  },
+  "inputH": 56,
+  "submit": {
+   "x": 327,
+   "y": 639.1,
+   "w": 358,
+   "h": 48,
+   "right": 685,
+   "bottom": 687.1
+  },
+  "submitBg": "rgb(214, 51, 108)",
+  "submitRadius": "8px",
+  "bodyBg": "rgb(255, 255, 255)",
+  "overflow": {
+   "sw": 1440,
+   "iw": 1440,
+   "bodySw": 1440,
+   "over": false
+  }
+ },
+ "d1440": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 61,
+   "right": 1440,
+   "bottom": 61,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 1440,
+   "h": 61,
+   "right": 1440,
+   "bottom": 61
+  },
+  "barStyle": {
+   "maxW": "none",
+   "pad": "0px",
+   "grid": "none"
+  },
+  "navLinks": [
+   {
+    "t": "Feed",
+    "w": 67,
+    "current": "page",
+    "icon": true,
+    "color": "rgb(188, 45, 95)"
+   },
+   {
+    "t": "Grupos",
+    "w": 83,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Eventos",
+    "w": 88,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Mensagens 3 , 3 não lidas",
+    "w": 134,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   }
+  ],
+  "navCenter": 663,
+  "headerCenter": 720,
+  "navBox": {
+   "x": 442,
+   "w": 443
+  },
+  "underline": {
+   "borderBottom": "0px none rgb(188, 45, 95)",
+   "boxShadow": "none",
+   "after": {
+    "h": "2px",
+    "bg": "rgb(214, 51, 108)",
+    "bottom": "0px",
+    "pos": "absolute"
+   },
+   "before": null,
+   "color": "rgb(188, 45, 95)",
+   "activeBottom": 60,
+   "headerBottom": 61
+  },
+  "search": {
+   "x": 900.6,
+   "y": 12,
+   "w": 220,
+   "h": 36,
+   "right": 1120.6,
+   "bottom": 48,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "8px",
+   "wrapW": 220,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo : criar publicação",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "8px",
+   "x": 1128.6,
+   "y": 10,
+   "w": 95.4,
+   "h": 40,
+   "right": 1224,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 1232,
+   "y": 10,
+   "w": 40,
+   "h": 40,
+   "right": 1272,
+   "bottom": 50
+  },
+  "avatar": {
+   "vis": true,
+   "x": 1280,
+   "y": 10,
+   "w": 40,
+   "h": 40,
+   "right": 1320,
+   "bottom": 50,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta Feed Grupos Eventos Mensagens 3 , 3 não lidas Buscar no Conecta Novo : criar publicação 3 AS",
+   "x": 88,
+   "y": 0,
+   "w": 1264,
+   "h": 60,
+   "right": 1352,
+   "bottom": 60
+  },
+  "mono": {
+   "x": 120,
+   "y": 14,
+   "w": 32,
+   "h": 32,
+   "right": 152,
+   "bottom": 46,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 0,
+    "y": 61,
+    "w": 1440,
+    "h": 1605.2,
+    "right": 1440,
+    "bottom": 1666.2
+   },
+   {
+    "x": 88,
+    "y": 61,
+    "w": 1264,
+    "h": 1605.2,
+    "right": 1352,
+    "bottom": 1666.2
+   }
+  ],
+  "stories": {
+   "vis": true,
+   "x": 120,
+   "y": 93,
+   "w": 1200,
+   "h": 88,
+   "right": 1320,
+   "bottom": 181
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": false,
+  "overflow": {
+   "sw": 1440,
+   "iw": 1440,
+   "bodySw": 1440,
+   "over": false
+  }
+ },
+ "cardDesktop": {
+  "n": 9,
+  "colunasPrimeiraLinha": 3,
+  "w": 384,
+  "cardBg": "rgb(254, 248, 250)",
+  "cardRadius": "12px",
+  "cardShadow": "none",
+  "cardBorder": "0px rgb(27, 27, 31)"
+ },
+ "sombraRolagem": {
+  "antes": "none",
+  "depois60": {
+   "shadow": "rgba(27, 27, 31, 0.06) 0px 2px 8px 0px",
+   "top": 0
+  },
+  "depois1500": {
+   "top": 0
+  }
+ },
+ "busca": {
+  "antes": {
+   "input": 220,
+   "form": 220,
+   "h": 36
+  },
+  "foco": {
+   "input": 300,
+   "form": 300,
+   "outline": "rgb(214, 51, 108) solid 2px",
+   "shadow": "none",
+   "focusWithinShadow": "none",
+   "formOutline": "rgb(27, 27, 31) none 3px"
+  },
+  "esc": {
+   "value": "",
+   "focado": false
+  },
+  "enter": {
+   "hash": "#/explorar?q=praia"
+  }
+ },
+ "notif": {
+  "aberto": true,
+  "x": 952,
+  "y": 58,
+  "w": 320,
+  "h": 616.5,
+  "right": 1272,
+  "bottom": 674.5,
+  "verTodas": true,
+  "shadow": "rgba(27, 27, 31, 0.14) 0px 8px 24px 0px, rgba(27, 27, 31, 0.08) 0px 1px 3px 0px",
+  "radius": "8px",
+  "overflow": {
+   "sw": 1440,
+   "iw": 1440,
+   "bodySw": 1440,
+   "over": false
+  },
+  "escFechou": true,
+  "focoVoltou": true,
+  "foraFechou": true
+ },
+ "menuPerfil": {
+  "aberto": true,
+  "x": 1060,
+  "y": 58,
+  "w": 260,
+  "h": 306,
+  "right": 1320,
+  "bottom": 364,
+  "texto": "Ana Souza ana@conecta.app Meu perfil Salvos Configurações Ajuda Sair",
+  "itens": [
+   "Meu perfil",
+   "Salvos",
+   "Configurações",
+   "Ajuda",
+   "Sair"
+  ],
+  "alinhadoDireita": 120,
+  "escFechou": true,
+  "foraFechou": true
+ },
+ "foco": {
+  "tabs": [
+   {
+    "el": "A Bruno Lima",
+    "outline": "2px solid rgb(214, 51, 108)",
+    "offset": "2px",
+    "shadow": "none"
+   },
+   {
+    "el": "BUTTON Curtir 182 curtidas",
+    "outline": "1px solid rgb(214, 51, 108)",
+    "offset": "0px",
+    "shadow": "rgba(214, 51, 108, 0.35) 0px 0px 0px 3px"
+   },
+   {
+    "el": "BUTTON Salvo",
+    "outline": "1px solid rgb(214, 51, 108)",
+    "offset": "0px",
+    "shadow": "rgba(214, 51, 108, 0.35) 0px 0px 0px 3px"
+   },
+   {
+    "el": "BUTTON Compartilhar",
+    "outline": "1px solid rgb(214, 51, 108)",
+    "offset": "0px",
+    "shadow": "rgba(214, 51, 108, 0.35) 0px 0px 0px 3px"
+   },
+   {
+    "el": "TEXTAREA ",
+    "outline": "2px solid rgb(214, 51, 108)",
+    "offset": "0px",
+    "shadow": "none"
+   },
+   {
+    "el": "BUTTON Comentar",
+    "outline": "2px solid rgb(214, 51, 108)",
+    "offset": "2px",
+    "shadow": "none"
+   }
+  ],
+  "card": {
+   "el": "BUTTON Comentar",
+   "outline": "2px solid rgb(214, 51, 108)",
+   "shadow": "none"
+  }
+ },
+ "destinosDesktop": [
+  "#/feed|C Conecta",
+  "#/feed|Feed",
+  "#/grupos|Grupos",
+  "#/eventos|Eventos",
+  "#/mensagens|Mensagens 3 , 3 não ",
+  "#/feed|Feed",
+  "#/grupos|Grupos",
+  "#/eventos|Eventos",
+  "#/mensagens|Mensagens3, 3 não li",
+  "#/explorar?busca=1|",
+  "#/post/p10|BL Bruno Lima curtiu",
+  "#/perfil/u3|CM Carla Mendes come",
+  "#/post/p5|GT Gabriela Torres m",
+  "#/eventos|IC Isabela Costa lem",
+  "#/post/p11|EP Elisa Prado comen",
+  "#/notificacoes|Ver todas",
+  "#/perfil|Meu perfil",
+  "#/salvos|Salvos",
+  "#/configuracoes|Configurações",
+  "#/ajuda|Ajuda"
+ ],
+ "perfilDesktop": {
+  "stories": null
+ },
+ "d1920": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 1920,
+   "h": 61,
+   "right": 1920,
+   "bottom": 61,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 1920,
+   "h": 61,
+   "right": 1920,
+   "bottom": 61
+  },
+  "barStyle": {
+   "maxW": "none",
+   "pad": "0px",
+   "grid": "none"
+  },
+  "navLinks": [
+   {
+    "t": "Feed",
+    "w": 67,
+    "current": "page",
+    "icon": true,
+    "color": "rgb(188, 45, 95)"
+   },
+   {
+    "t": "Grupos",
+    "w": 83,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Eventos",
+    "w": 88,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Mensagens 3 , 3 não lidas",
+    "w": 134,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   }
+  ],
+  "navCenter": 903,
+  "headerCenter": 960,
+  "navBox": {
+   "x": 682,
+   "w": 443
+  },
+  "underline": {
+   "borderBottom": "0px none rgb(188, 45, 95)",
+   "boxShadow": "none",
+   "after": {
+    "h": "2px",
+    "bg": "rgb(214, 51, 108)",
+    "bottom": "0px",
+    "pos": "absolute"
+   },
+   "before": null,
+   "color": "rgb(188, 45, 95)",
+   "activeBottom": 60,
+   "headerBottom": 61
+  },
+  "search": {
+   "x": 1140.6,
+   "y": 12,
+   "w": 220,
+   "h": 36,
+   "right": 1360.6,
+   "bottom": 48,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "8px",
+   "wrapW": 220,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo : criar publicação",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "8px",
+   "x": 1368.6,
+   "y": 10,
+   "w": 95.4,
+   "h": 40,
+   "right": 1464,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 1472,
+   "y": 10,
+   "w": 40,
+   "h": 40,
+   "right": 1512,
+   "bottom": 50
+  },
+  "avatar": {
+   "vis": true,
+   "x": 1520,
+   "y": 10,
+   "w": 40,
+   "h": 40,
+   "right": 1560,
+   "bottom": 50,
+   "radius": "50%"
+  },
+  "logo": null,
+  "mono": null,
+  "sidebars": [],
+  "container": [
+   {
+    "x": 0,
+    "y": 61,
+    "w": 1920,
+    "h": 1605.2,
+    "right": 1920,
+    "bottom": 1666.2
+   },
+   {
+    "x": 328,
+    "y": 61,
+    "w": 1264,
+    "h": 1605.2,
+    "right": 1592,
+    "bottom": 1666.2
+   }
+  ],
+  "stories": {
+   "vis": true,
+   "x": 360,
+   "y": 93,
+   "w": 1200,
+   "h": 88,
+   "right": 1560,
+   "bottom": 181
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": false,
+  "overflow": {
+   "sw": 1920,
+   "iw": 1920,
+   "bodySw": 1920,
+   "over": false
+  }
+ },
+ "d1280": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 1280,
+   "h": 61,
+   "right": 1280,
+   "bottom": 61,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 1280,
+   "h": 61,
+   "right": 1280,
+   "bottom": 61
+  },
+  "barStyle": {
+   "maxW": "none",
+   "pad": "0px",
+   "grid": "none"
+  },
+  "navLinks": [
+   {
+    "t": "Feed",
+    "w": 67,
+    "current": "page",
+    "icon": true,
+    "color": "rgb(188, 45, 95)"
+   },
+   {
+    "t": "Grupos",
+    "w": 83,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Eventos",
+    "w": 88,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Mensagens 3 , 3 não lidas",
+    "w": 134,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   }
+  ],
+  "navCenter": 583,
+  "headerCenter": 640,
+  "navBox": {
+   "x": 362,
+   "w": 443
+  },
+  "underline": {
+   "borderBottom": "0px none rgb(188, 45, 95)",
+   "boxShadow": "none",
+   "after": {
+    "h": "2px",
+    "bg": "rgb(214, 51, 108)",
+    "bottom": "0px",
+    "pos": "absolute"
+   },
+   "before": null,
+   "color": "rgb(188, 45, 95)",
+   "activeBottom": 60,
+   "headerBottom": 61
+  },
+  "search": {
+   "x": 820.6,
+   "y": 12,
+   "w": 220,
+   "h": 36,
+   "right": 1040.6,
+   "bottom": 48,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "8px",
+   "wrapW": 220,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo : criar publicação",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "8px",
+   "x": 1048.6,
+   "y": 10,
+   "w": 95.4,
+   "h": 40,
+   "right": 1144,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 1152,
+   "y": 10,
+   "w": 40,
+   "h": 40,
+   "right": 1192,
+   "bottom": 50
+  },
+  "avatar": {
+   "vis": true,
+   "x": 1200,
+   "y": 10,
+   "w": 40,
+   "h": 40,
+   "right": 1240,
+   "bottom": 50,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta Feed Grupos Eventos Mensagens 3 , 3 não lidas Buscar no Conecta Novo : criar publicação 3 AS",
+   "x": 8,
+   "y": 0,
+   "w": 1264,
+   "h": 60,
+   "right": 1272,
+   "bottom": 60
+  },
+  "mono": {
+   "x": 40,
+   "y": 14,
+   "w": 32,
+   "h": 32,
+   "right": 72,
+   "bottom": 46,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 0,
+    "y": 61,
+    "w": 1280,
+    "h": 1605.2,
+    "right": 1280,
+    "bottom": 1666.2
+   },
+   {
+    "x": 8,
+    "y": 61,
+    "w": 1264,
+    "h": 1605.2,
+    "right": 1272,
+    "bottom": 1666.2
+   }
+  ],
+  "stories": {
+   "vis": true,
+   "x": 40,
+   "y": 93,
+   "w": 1200,
+   "h": 88,
+   "right": 1240,
+   "bottom": 181
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": false,
+  "overflow": {
+   "sw": 1280,
+   "iw": 1280,
+   "bodySw": 1280,
+   "over": false
+  }
+ },
+ "d1024": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 1024,
+   "h": 61,
+   "right": 1024,
+   "bottom": 61,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 1024,
+   "h": 61,
+   "right": 1024,
+   "bottom": 61
+  },
+  "barStyle": {
+   "maxW": "none",
+   "pad": "0px",
+   "grid": "none"
+  },
+  "navLinks": [
+   {
+    "t": "Feed",
+    "w": 67,
+    "current": "page",
+    "icon": true,
+    "color": "rgb(188, 45, 95)"
+   },
+   {
+    "t": "Grupos",
+    "w": 83,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Eventos",
+    "w": 88,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   },
+   {
+    "t": "Mensagens 3 , 3 não lidas",
+    "w": 134,
+    "current": null,
+    "icon": true,
+    "color": "rgb(77, 77, 80)"
+   }
+  ],
+  "navCenter": 395,
+  "headerCenter": 512,
+  "navBox": {
+   "x": 186,
+   "w": 419
+  },
+  "underline": {
+   "borderBottom": "0px none rgb(188, 45, 95)",
+   "boxShadow": "none",
+   "after": {
+    "h": "2px",
+    "bg": "rgb(214, 51, 108)",
+    "bottom": "0px",
+    "pos": "absolute"
+   },
+   "before": null,
+   "color": "rgb(188, 45, 95)",
+   "activeBottom": 60,
+   "headerBottom": 61
+  },
+  "search": {
+   "x": 620.6,
+   "y": 12,
+   "w": 180,
+   "h": 36,
+   "right": 800.6,
+   "bottom": 48,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "8px",
+   "wrapW": 180,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo : criar publicação",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "8px",
+   "x": 808.6,
+   "y": 10,
+   "w": 95.4,
+   "h": 40,
+   "right": 904,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 912,
+   "y": 10,
+   "w": 40,
+   "h": 40,
+   "right": 952,
+   "bottom": 50
+  },
+  "avatar": {
+   "vis": true,
+   "x": 960,
+   "y": 10,
+   "w": 40,
+   "h": 40,
+   "right": 1000,
+   "bottom": 50,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta Feed Grupos Eventos Mensagens 3 , 3 não lidas Buscar no Conecta Novo : criar publicação 3 AS",
+   "x": 0,
+   "y": 0,
+   "w": 1024,
+   "h": 60,
+   "right": 1024,
+   "bottom": 60
+  },
+  "mono": {
+   "x": 24,
+   "y": 14,
+   "w": 32,
+   "h": 32,
+   "right": 56,
+   "bottom": 46,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 0,
+    "y": 61,
+    "w": 1024,
+    "h": 1598.5,
+    "right": 1024,
+    "bottom": 1659.5
+   },
+   {
+    "x": 0,
+    "y": 61,
+    "w": 1024,
+    "h": 1598.5,
+    "right": 1024,
+    "bottom": 1659.5
+   }
+  ],
+  "stories": {
+   "vis": true,
+   "x": 24,
+   "y": 93,
+   "w": 976,
+   "h": 88,
+   "right": 1000,
+   "bottom": 181
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": false,
+  "overflow": {
+   "sw": 1024,
+   "iw": 1024,
+   "bodySw": 1024,
+   "over": false
+  }
+ },
+ "t768": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 768,
+   "h": 61,
+   "right": 768,
+   "bottom": 61,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 768,
+   "h": 61,
+   "right": 768,
+   "bottom": 61
+  },
+  "barStyle": {
+   "maxW": "none",
+   "pad": "0px",
+   "grid": "none"
+  },
+  "navLinks": [],
+  "navCenter": null,
+  "headerCenter": 384,
+  "navBox": {
+   "x": 0,
+   "w": 0
+  },
+  "underline": null,
+  "search": {
+   "x": 364.6,
+   "y": 12,
+   "w": 180,
+   "h": 36,
+   "right": 544.6,
+   "bottom": 48,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "8px",
+   "wrapW": 180,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo : criar publicação",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "8px",
+   "x": 552.6,
+   "y": 10,
+   "w": 95.4,
+   "h": 40,
+   "right": 648,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 656,
+   "y": 10,
+   "w": 40,
+   "h": 40,
+   "right": 696,
+   "bottom": 50
+  },
+  "avatar": {
+   "vis": true,
+   "x": 704,
+   "y": 10,
+   "w": 40,
+   "h": 40,
+   "right": 744,
+   "bottom": 50,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta Menu Buscar no Conecta Novo : criar publicação 3 AS",
+   "x": 0,
+   "y": 0,
+   "w": 768,
+   "h": 60,
+   "right": 768,
+   "bottom": 60
+  },
+  "mono": {
+   "x": 24,
+   "y": 14,
+   "w": 32,
+   "h": 32,
+   "right": 56,
+   "bottom": 46,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 0,
+    "y": 61,
+    "w": 768,
+    "h": 2388,
+    "right": 768,
+    "bottom": 2449
+   },
+   {
+    "x": 0,
+    "y": 61,
+    "w": 768,
+    "h": 2388,
+    "right": 768,
+    "bottom": 2449
+   }
+  ],
+  "stories": {
+   "vis": true,
+   "x": 24,
+   "y": 93,
+   "w": 720,
+   "h": 88,
+   "right": 744,
+   "bottom": 181
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": true,
+  "overflow": {
+   "sw": 768,
+   "iw": 768,
+   "bodySw": 768,
+   "over": false
+  }
+ },
+ "painelTablet": {
+  "aberto": true,
+  "x": 0,
+  "y": 60,
+  "w": 768,
+  "h": 185,
+  "right": 768,
+  "bottom": 245,
+  "headerBottom": 61,
+  "itens": [
+   "",
+   "Feed",
+   "Grupos",
+   "Eventos",
+   "Mensagens 3 , 3 não lidas"
+  ],
+  "bodyOverflow": "hidden",
+  "escFechou": true
+ },
+ "t820": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 820,
+   "h": 61,
+   "right": 820,
+   "bottom": 61,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 820,
+   "h": 61,
+   "right": 820,
+   "bottom": 61
+  },
+  "barStyle": {
+   "maxW": "none",
+   "pad": "0px",
+   "grid": "none"
+  },
+  "navLinks": [],
+  "navCenter": null,
+  "headerCenter": 410,
+  "navBox": {
+   "x": 0,
+   "w": 0
+  },
+  "underline": null,
+  "search": {
+   "x": 416.6,
+   "y": 12,
+   "w": 180,
+   "h": 36,
+   "right": 596.6,
+   "bottom": 48,
+   "placeholder": "Buscar…",
+   "visible": true,
+   "radius": "8px",
+   "wrapW": 180,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo : criar publicação",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "8px",
+   "x": 604.6,
+   "y": 10,
+   "w": 95.4,
+   "h": 40,
+   "right": 700,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": true,
+   "badge": "3",
+   "x": 708,
+   "y": 10,
+   "w": 40,
+   "h": 40,
+   "right": 748,
+   "bottom": 50
+  },
+  "avatar": {
+   "vis": true,
+   "x": 756,
+   "y": 10,
+   "w": 40,
+   "h": 40,
+   "right": 796,
+   "bottom": 50,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta Menu Buscar no Conecta Novo : criar publicação 3 AS",
+   "x": 0,
+   "y": 0,
+   "w": 820,
+   "h": 60,
+   "right": 820,
+   "bottom": 60
+  },
+  "mono": {
+   "x": 24,
+   "y": 14,
+   "w": 32,
+   "h": 32,
+   "right": 56,
+   "bottom": 46,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 0,
+    "y": 61,
+    "w": 820,
+    "h": 2461.1,
+    "right": 820,
+    "bottom": 2522.1
+   },
+   {
+    "x": 0,
+    "y": 61,
+    "w": 820,
+    "h": 2461.1,
+    "right": 820,
+    "bottom": 2522.1
+   }
+  ],
+  "stories": {
+   "vis": true,
+   "x": 24,
+   "y": 93,
+   "w": 772,
+   "h": 88,
+   "right": 796,
+   "bottom": 181
+  },
+  "dockVisible": false,
+  "menuBtnVisible": false,
+  "panelBtnVisible": true,
+  "overflow": {
+   "sw": 820,
+   "iw": 820,
+   "bodySw": 820,
+   "over": false
+  }
+ },
+ "t767": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 767,
+   "h": 57,
+   "right": 767,
+   "bottom": 57,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px solid rgb(230, 230, 230)",
+   "shadow": "none"
+  },
+  "bar": {
+   "x": 0,
+   "y": 0,
+   "w": 767,
+   "h": 57,
+   "right": 767,
+   "bottom": 57
+  },
+  "barStyle": {
+   "maxW": "none",
+   "pad": "0px",
+   "grid": "none"
+  },
+  "navLinks": [],
+  "navCenter": null,
+  "headerCenter": 384,
+  "navBox": {
+   "x": 0,
+   "w": 0
+  },
+  "underline": null,
+  "search": {
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0,
+   "placeholder": "Buscar…",
+   "visible": false,
+   "radius": "8px",
+   "wrapW": 0,
+   "lupa": true
+  },
+  "newBtn": {
+   "t": "Novo : criar publicação",
+   "vis": true,
+   "bg": "rgb(214, 51, 108)",
+   "radius": "8px",
+   "x": 655,
+   "y": 6,
+   "w": 44,
+   "h": 44,
+   "right": 699,
+   "bottom": 50
+  },
+  "bell": {
+   "vis": false,
+   "badge": "3",
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0
+  },
+  "avatar": {
+   "vis": true,
+   "x": 707,
+   "y": 6,
+   "w": 44,
+   "h": 44,
+   "right": 751,
+   "bottom": 50,
+   "radius": "50%"
+  },
+  "logo": {
+   "t": "C Conecta Novo : criar publicação AS",
+   "x": 0,
+   "y": 0,
+   "w": 767,
+   "h": 56,
+   "right": 767,
+   "bottom": 56
+  },
+  "mono": {
+   "x": 64,
+   "y": 12,
+   "w": 32,
+   "h": 32,
+   "right": 96,
+   "bottom": 44,
+   "radius": "50%",
+   "bg": "rgb(214, 51, 108)"
+  },
+  "sidebars": [],
+  "container": [
+   {
+    "x": 0,
+    "y": 57,
+    "w": 767,
+    "h": 2450,
+    "right": 767,
+    "bottom": 2507
+   },
+   {
+    "x": 0,
+    "y": 57,
+    "w": 767,
+    "h": 2450,
+    "right": 767,
+    "bottom": 2507
+   }
+  ],
+  "stories": {
+   "vis": true,
+   "x": 0,
+   "y": 57,
+   "w": 767,
+   "h": 89,
+   "right": 767,
+   "bottom": 146
+  },
+  "dockVisible": true,
+  "menuBtnVisible": true,
+  "panelBtnVisible": false,
+  "overflow": {
+   "sw": 767,
+   "iw": 767,
+   "bodySw": 767,
+   "over": false
+  }
+ }
+}

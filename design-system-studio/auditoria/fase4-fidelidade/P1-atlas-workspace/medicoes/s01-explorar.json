@@ -1,0 +1,442 @@
+{
+  "dev-1": {
+    "desk": {
+      "first": {
+        "hash": "#/entrar",
+        "title": "Entrar · Atlas Workspace",
+        "hasEmail": true,
+        "hasPwd": true,
+        "h1": [
+          "Entrar na sua conta"
+        ]
+      },
+      "shell": {
+        "hash": "#/inicio",
+        "title": "Início · Atlas Workspace",
+        "h1": [
+          "Bom dia, Marina"
+        ],
+        "land": [
+          {
+            "d": "aside#sidebar.sidebar",
+            "r": {
+              "x": 0,
+              "y": 0,
+              "w": 252,
+              "h": 900
+            },
+            "label": "Barra lateral",
+            "pos": "sticky"
+          },
+          {
+            "d": "nav.sidebar__nav",
+            "r": {
+              "x": 0,
+              "y": 64,
+              "w": 251,
+              "h": 762
+            },
+            "label": "Menu lateral",
+            "pos": "static"
+          },
+          {
+            "d": "header.topbar",
+            "r": {
+              "x": 252,
+              "y": 0,
+              "w": 1188,
+              "h": 64
+            },
+            "label": null,
+            "pos": "sticky"
+          },
+          {
+            "d": "nav.crumbs",
+            "r": {
+              "x": 284,
+              "y": 22,
+              "w": 708,
+              "h": 18
+            },
+            "label": "Trilha de navegação",
+            "pos": "static"
+          },
+          {
+            "d": "main#main.content",
+            "r": {
+              "x": 252,
+              "y": 64,
+              "w": 1188,
+              "h": 1154
+            },
+            "label": null,
+            "pos": "static"
+          },
+          {
+            "d": "header.page-head",
+            "r": {
+              "x": 284,
+              "y": 96,
+              "w": 1124,
+              "h": 124
+            },
+            "label": null,
+            "pos": "static"
+          }
+        ]
+      },
+      "errs": []
+    },
+    "cel": {
+      "first": {
+        "hash": "#/entrar",
+        "title": "Entrar · Atlas Workspace",
+        "hasEmail": true,
+        "hasPwd": true,
+        "h1": [
+          "Entrar na sua conta"
+        ]
+      },
+      "shell": {
+        "hash": "#/inicio",
+        "title": "Início · Atlas Workspace",
+        "h1": [
+          "Bom dia, Marina"
+        ],
+        "land": [
+          {
+            "d": "header.topbar",
+            "r": {
+              "x": 0,
+              "y": 0,
+              "w": 390,
+              "h": 56
+            },
+            "label": null,
+            "pos": "fixed"
+          },
+          {
+            "d": "main#main.content",
+            "r": {
+              "x": 0,
+              "y": 0,
+              "w": 390,
+              "h": 2542
+            },
+            "label": null,
+            "pos": "static"
+          },
+          {
+            "d": "header.page-head",
+            "r": {
+              "x": 16,
+              "y": 72,
+              "w": 358,
+              "h": 189
+            },
+            "label": null,
+            "pos": "static"
+          },
+          {
+            "d": "nav.bottom-nav",
+            "r": {
+              "x": 0,
+              "y": 779,
+              "w": 390,
+              "h": 65
+            },
+            "label": "Navegação principal",
+            "pos": "fixed"
+          }
+        ]
+      },
+      "errs": []
+    }
+  },
+  "dev-2": {
+    "desk": {
+      "first": {
+        "hash": "",
+        "title": "Entrar — Atlas Workspace",
+        "hasEmail": true,
+        "hasPwd": true,
+        "h1": [
+          "Entrar na sua conta"
+        ]
+      },
+      "shell": {
+        "hash": "#/painel",
+        "title": "Painel — Atlas Workspace",
+        "h1": [
+          "Visão geral"
+        ],
+        "land": [
+          {
+            "d": "aside#sidebar.sidebar",
+            "r": {
+              "x": 0,
+              "y": 0,
+              "w": 252,
+              "h": 900
+            },
+            "label": null,
+            "pos": "sticky"
+          },
+          {
+            "d": "nav#sb-nav.sidebar__nav",
+            "r": {
+              "x": 0,
+              "y": 64,
+              "w": 251,
+              "h": 771
+            },
+            "label": "Menu lateral",
+            "pos": "static"
+          },
+          {
+            "d": "header#app-header.app-header",
+            "r": {
+              "x": 252,
+              "y": 0,
+              "w": 1188,
+              "h": 64
+            },
+            "label": null,
+            "pos": "sticky"
+          },
+          {
+            "d": "nav.crumbs",
+            "r": {
+              "x": 276,
+              "y": 18,
+              "w": 53,
+              "h": 27
+            },
+            "label": "Trilha de navegação",
+            "pos": "static"
+          },
+          {
+            "d": "main#main.page.swiss",
+            "r": {
+              "x": 252,
+              "y": 64,
+              "w": 1188,
+              "h": 966
+            },
+            "label": null,
+            "pos": "static"
+          },
+          {
+            "d": "header.page-head",
+            "r": {
+              "x": 284,
+              "y": 88,
+              "w": 1124,
+              "h": 128
+            },
+            "label": null,
+            "pos": "static"
+          }
+        ]
+      },
+      "errs": []
+    },
+    "cel": {
+      "first": {
+        "hash": "",
+        "title": "Entrar — Atlas Workspace",
+        "hasEmail": true,
+        "hasPwd": true,
+        "h1": [
+          "Entrar na sua conta"
+        ]
+      },
+      "shell": {
+        "hash": "#/painel",
+        "title": "Painel — Atlas Workspace",
+        "h1": [
+          "Visão geral"
+        ],
+        "land": [
+          {
+            "d": "header#app-header.app-header",
+            "r": {
+              "x": 0,
+              "y": 0,
+              "w": 390,
+              "h": 56
+            },
+            "label": null,
+            "pos": "sticky"
+          },
+          {
+            "d": "main#main.page.swiss",
+            "r": {
+              "x": 0,
+              "y": 56,
+              "w": 390,
+              "h": 1850
+            },
+            "label": null,
+            "pos": "static"
+          },
+          {
+            "d": "header.page-head",
+            "r": {
+              "x": 16,
+              "y": 76,
+              "w": 358,
+              "h": 252
+            },
+            "label": null,
+            "pos": "static"
+          },
+          {
+            "d": "nav#bottom-nav.bottom-nav",
+            "r": {
+              "x": 0,
+              "y": 779,
+              "w": 390,
+              "h": 65
+            },
+            "label": "Navegação principal",
+            "pos": "fixed"
+          }
+        ]
+      },
+      "errs": []
+    }
+  },
+  "dev-3": {
+    "desk": {
+      "first": {
+        "hash": "#/entrar",
+        "title": "Entrar · Atlas Workspace",
+        "hasEmail": true,
+        "hasPwd": true,
+        "h1": [
+          "Entrar na sua conta"
+        ]
+      },
+      "shell": {
+        "hash": "#/app/inicio",
+        "title": "Início · Atlas Workspace",
+        "h1": [
+          "Bom dia, Ana"
+        ],
+        "land": [
+          {
+            "d": "aside#sidebar.sidebar",
+            "r": {
+              "x": 0,
+              "y": 0,
+              "w": 252,
+              "h": 900
+            },
+            "label": null,
+            "pos": "sticky"
+          },
+          {
+            "d": "nav#sidebar-nav.sidebar__nav",
+            "r": {
+              "x": 0,
+              "y": 64,
+              "w": 251,
+              "h": 765
+            },
+            "label": "Menu lateral",
+            "pos": "static"
+          },
+          {
+            "d": "header#header.header",
+            "r": {
+              "x": 252,
+              "y": 0,
+              "w": 1188,
+              "h": 64
+            },
+            "label": null,
+            "pos": "sticky"
+          },
+          {
+            "d": "nav.crumbs",
+            "r": {
+              "x": 276,
+              "y": 21,
+              "w": 812,
+              "h": 21
+            },
+            "label": "Trilha de navegação",
+            "pos": "static"
+          },
+          {
+            "d": "main#page.content",
+            "r": {
+              "x": 252,
+              "y": 64,
+              "w": 1188,
+              "h": 644
+            },
+            "label": null,
+            "pos": "static"
+          }
+        ]
+      },
+      "errs": []
+    },
+    "cel": {
+      "first": {
+        "hash": "#/entrar",
+        "title": "Entrar · Atlas Workspace",
+        "hasEmail": true,
+        "hasPwd": true,
+        "h1": [
+          "Entrar na sua conta"
+        ]
+      },
+      "shell": {
+        "hash": "#/app/inicio",
+        "title": "Início · Atlas Workspace",
+        "h1": [
+          "Bom dia, Ana"
+        ],
+        "land": [
+          {
+            "d": "main#page.content",
+            "r": {
+              "x": 0,
+              "y": 56,
+              "w": 390,
+              "h": 815
+            },
+            "label": null,
+            "pos": "static"
+          },
+          {
+            "d": "header.m-topbar",
+            "r": {
+              "x": 0,
+              "y": 0,
+              "w": 390,
+              "h": 56
+            },
+            "label": null,
+            "pos": "fixed"
+          },
+          {
+            "d": "nav#bottom-nav.bottom-nav",
+            "r": {
+              "x": 0,
+              "y": 780,
+              "w": 390,
+              "h": 64
+            },
+            "label": "Principal",
+            "pos": "fixed"
+          }
+        ]
+      },
+      "errs": []
+    }
+  }
+}

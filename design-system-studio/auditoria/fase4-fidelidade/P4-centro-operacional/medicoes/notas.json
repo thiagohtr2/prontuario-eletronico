@@ -1,0 +1,117 @@
+{
+ "dev-1": {
+  "Arquitetura": [
+   100.0,
+   7
+  ],
+  "Desktop": [
+   100.0,
+   15
+  ],
+  "Celular": [
+   95.8,
+   12
+  ],
+  "Paleta/tokens": [
+   92.6,
+   13
+  ],
+  "Componentes": [
+   100.0,
+   12
+  ],
+  "Interações": [
+   100.0,
+   12
+  ],
+  "Geral": [
+   97.9,
+   71
+  ],
+  "abaixo_de_100": [
+   "MOB6",
+   "PAL1",
+   "PAL5",
+   "PAL13"
+  ]
+ },
+ "dev-2": {
+  "Arquitetura": [
+   100.0,
+   7
+  ],
+  "Desktop": [
+   97.8,
+   15
+  ],
+  "Celular": [
+   100.0,
+   12
+  ],
+  "Paleta/tokens": [
+   94.0,
+   13
+  ],
+  "Componentes": [
+   97.2,
+   12
+  ],
+  "Interações": [
+   100.0,
+   12
+  ],
+  "Geral": [
+   98.0,
+   71
+  ],
+  "abaixo_de_100": [
+   "DSK14",
+   "PAL1",
+   "PAL5",
+   "PAL13",
+   "CMP12"
+  ]
+ },
+ "dev-3": {
+  "Arquitetura": [
+   100.0,
+   7
+  ],
+  "Desktop": [
+   92.3,
+   15
+  ],
+  "Celular": [
+   95.3,
+   12
+  ],
+  "Paleta/tokens": [
+   81.9,
+   13
+  ],
+  "Componentes": [
+   95.8,
+   12
+  ],
+  "Interações": [
+   98.3,
+   12
+  ],
+  "Geral": [
+   93.3,
+   71
+  ],
+  "abaixo_de_100": [
+   "DSK7",
+   "DSK13",
+   "MOB6",
+   "MOB9",
+   "PAL2",
+   "PAL7",
+   "PAL8",
+   "PAL13",
+   "CMP9",
+   "INT7"
+  ]
+ }
+}

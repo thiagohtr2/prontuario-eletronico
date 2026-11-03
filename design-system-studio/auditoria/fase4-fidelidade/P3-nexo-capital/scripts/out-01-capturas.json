@@ -1,0 +1,44 @@
+{
+  "dev-1": {
+    "390": {
+      "url": "http://127.0.0.1:4531/#/painel/visao-geral",
+      "errors": []
+    },
+    "768": {
+      "url": "http://127.0.0.1:4531/#/painel/visao-geral",
+      "errors": []
+    },
+    "1440": {
+      "url": "http://127.0.0.1:4531/#/painel/visao-geral",
+      "errors": []
+    }
+  },
+  "dev-2": {
+    "390": {
+      "url": "http://127.0.0.1:4532/#/painel/visao-geral",
+      "errors": []
+    },
+    "768": {
+      "url": "http://127.0.0.1:4532/#/painel/visao-geral",
+      "errors": []
+    },
+    "1440": {
+      "url": "http://127.0.0.1:4532/#/painel/visao-geral",
+      "errors": []
+    }
+  },
+  "dev-3": {
+    "390": {
+      "url": "http://127.0.0.1:4533/#/app/painel/visao-geral",
+      "errors": []
+    },
+    "768": {
+      "url": "http://127.0.0.1:4533/#/app/painel/visao-geral",
+      "errors": []
+    },
+    "1440": {
+      "url": "http://127.0.0.1:4533/#/app/painel/visao-geral",
+      "errors": []
+    }
+  }
+}

@@ -117,4 +117,4 @@ async function login(page, site) {
   await page.waitForTimeout(1500);
 }
 
-module.exports = { chromium, CFG, OUT, CAP, DATA, newCtx, openLogin, login, fs, path };
+module.exports = { MOBILE_UA, chromium, CFG, OUT, CAP, DATA, newCtx, openLogin, login, fs, path };

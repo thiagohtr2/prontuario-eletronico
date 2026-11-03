@@ -1,0 +1,844 @@
+{
+ "site": "dev-1",
+ "estrutura390": {
+  "header": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 57,
+   "right": 390,
+   "bottom": 57,
+   "position": "sticky",
+   "top": "0px",
+   "z": "40",
+   "bg": "rgb(255, 255, 255)",
+   "borderBottom": "1px rgb(230, 230, 230)"
+  },
+  "topbar": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 57,
+   "right": 390,
+   "bottom": 57
+  },
+  "menuBtn": {
+   "x": 16,
+   "y": 6,
+   "w": 44,
+   "h": 44,
+   "right": 60,
+   "bottom": 50
+  },
+  "topCtrls": [
+   {
+    "label": "Abrir menu",
+    "x": 16,
+    "y": 6,
+    "w": 44,
+    "h": 44,
+    "right": 60,
+    "bottom": 50
+   },
+   {
+    "label": "Conecta, ir para o Feed",
+    "x": 64,
+    "y": 6,
+    "w": 118,
+    "h": 44,
+    "right": 182,
+    "bottom": 50
+   },
+   {
+    "label": "Buscar",
+    "x": 226,
+    "y": 6,
+    "w": 44,
+    "h": 44,
+    "right": 270,
+    "bottom": 50
+   },
+   {
+    "label": "Novo : criar publicação",
+    "x": 278,
+    "y": 6,
+    "w": 44,
+    "h": 44,
+    "right": 322,
+    "bottom": 50
+   },
+   {
+    "label": "Menu do perfil: Ana Souza",
+    "x": 330,
+    "y": 6,
+    "w": 44,
+    "h": 44,
+    "right": 374,
+    "bottom": 50
+   }
+  ],
+  "brand": "C Conecta",
+  "stories": {
+   "x": 0,
+   "y": 57,
+   "w": 390,
+   "h": 89,
+   "right": 390,
+   "bottom": 146,
+   "list": {
+    "x": 0,
+    "y": 57,
+    "w": 390,
+    "h": 88,
+    "right": 390,
+    "bottom": 145
+   },
+   "overflowX": "auto",
+   "sw": 740,
+   "cw": 390,
+   "n": 18,
+   "position": "static",
+   "gapToHeader": 0
+  },
+  "dock": {
+   "nav": {
+    "x": 12,
+    "y": 768,
+    "w": 366,
+    "h": 64,
+    "right": 378,
+    "bottom": 832
+   },
+   "navPos": "fixed",
+   "vis": {
+    "x": 12,
+    "y": 768,
+    "w": 366,
+    "h": 64,
+    "right": 378,
+    "bottom": 832
+   },
+   "visTag": "NAV.dock",
+   "radius": "20px",
+   "bg": "rgb(254, 248, 250)",
+   "shadow": "rgba(27, 27, 31, 0.14) 0px 8px 24px 0px, rgba(27, 27, 31, 0.08) 0px 1px 3px 0px",
+   "border": "0px rgb(27, 27, 31)",
+   "backdrop": "none",
+   "gapL": 12,
+   "gapR": 12,
+   "gapB": 12,
+   "items": [
+    {
+     "label": "Início",
+     "current": "page",
+     "x": 20,
+     "y": 768,
+     "w": 81.5,
+     "h": 64,
+     "right": 101.5,
+     "bottom": 832
+    },
+    {
+     "label": "Explorar",
+     "current": null,
+     "x": 109.5,
+     "y": 768,
+     "w": 81.5,
+     "h": 64,
+     "right": 191,
+     "bottom": 832
+    },
+    {
+     "label": "Salvos",
+     "current": null,
+     "x": 199,
+     "y": 768,
+     "w": 81.5,
+     "h": 64,
+     "right": 280.5,
+     "bottom": 832
+    },
+    {
+     "label": "Perfil",
+     "current": null,
+     "x": 288.5,
+     "y": 768,
+     "w": 81.5,
+     "h": 64,
+     "right": 370,
+     "bottom": 832
+    }
+   ],
+   "active": {
+    "pill": {
+     "tag": "SPAN",
+     "cls": "dock-ind",
+     "bg": "rgb(250, 231, 237)",
+     "radius": "15px",
+     "x": 32.8,
+     "y": 776.8,
+     "w": 56,
+     "h": 30,
+     "right": 88.8,
+     "bottom": 806.8
+    },
+    "labelColor": "rgb(188, 45, 95)",
+    "labelWeight": "600",
+    "iconColor": "rgb(188, 45, 95)"
+   },
+   "activeLabel": "Início",
+   "activeAria": "page",
+   "inactive": {
+    "pill": null,
+    "labelColor": "rgb(77, 77, 80)",
+    "labelWeight": "500",
+    "iconColor": "rgb(77, 77, 80)"
+   }
+  },
+  "fixedOthers": [
+   {
+    "tag": "A",
+    "id": "skip-link",
+    "cls": "skip-link",
+    "x": 8,
+    "y": -80,
+    "w": 193.1,
+    "h": 40.5,
+    "right": 201.1,
+    "bottom": -39.5
+   }
+  ],
+  "vw": 390,
+  "vh": 844
+ },
+ "cardFeed": {
+  "card": {
+   "x": 16,
+   "y": 233.3,
+   "w": 358,
+   "h": 396.8,
+   "right": 374,
+   "bottom": 630,
+   "tag": "ARTICLE",
+   "radius": "12px",
+   "bg": "rgb(254, 248, 250)",
+   "shadow": "none",
+   "border": "0px none rgb(27, 27, 31)"
+  },
+  "media": {
+   "x": 16,
+   "y": 233.3,
+   "w": 358,
+   "h": 201.4,
+   "right": 374,
+   "bottom": 434.6,
+   "ratio": 1.78,
+   "tag": "DIV"
+  },
+  "tag": {
+   "text": "Novo",
+   "bg": "rgb(250, 231, 237)",
+   "color": "rgb(188, 45, 95)"
+  },
+  "title": {
+   "text": "Publicação da comunidade",
+   "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+   "weight": "500",
+   "size": "18px"
+  },
+  "text": {
+   "t": "Foto ou texto compartilhado por um perfil que você segue.",
+   "clamp": "3",
+   "lines": 2,
+   "size": "14px"
+  },
+  "btn": {
+   "text": "Ver publicação : Publicação da comunidade",
+   "tag": "A",
+   "bg": "rgb(214, 51, 108)",
+   "color": "rgb(255, 255, 255)",
+   "radius": "20px",
+   "h": 44,
+   "w": 140.125,
+   "afterPos": "absolute",
+   "afterContent": "\"\"",
+   "afterInset": "0px"
+  },
+  "nestedInteractive": 0,
+  "order": [
+   0,
+   216,
+   248,
+   280,
+   338
+  ],
+  "buttonsInCard": []
+ },
+ "rolagem": {
+  "depois1200": {
+   "top": -57,
+   "bottom": 0,
+   "scrollY": 1200,
+   "visible": false
+  },
+  "aoSubir": {
+   "top": 0,
+   "bottom": 57,
+   "scrollY": 900,
+   "visible": true
+  },
+  "fim": {
+   "contentBottom": 721,
+   "lastEl": "A.btn-pill btn-primary post-acti \"Ver publicação : Antes e depoi\"",
+   "dockTop": 768,
+   "vh": 844,
+   "scrollY": 3364,
+   "mainPadB": "0px",
+   "bodyPadB": "0px"
+  }
+ },
+ "drawer": {
+  "aberto": true,
+  "panel": {
+   "x": 0,
+   "y": 0,
+   "w": 280,
+   "h": 844,
+   "right": 280,
+   "bottom": 844,
+   "bg": "rgb(254, 248, 250)",
+   "radius": "0px 12px 12px 0px",
+   "shadow": "none",
+   "z": "auto",
+   "role": "dialog",
+   "ariaModal": "true"
+  },
+  "scrim": {
+   "x": 0,
+   "y": 0,
+   "w": 390,
+   "h": 844,
+   "right": 390,
+   "bottom": 844,
+   "bg": "rgba(27, 27, 31, 0.5)",
+   "opacity": "1"
+  },
+  "sobreTopbar": {
+   "inDrawer": true,
+   "el": "DIV.drawer-scrim"
+  },
+  "sobreDock": {
+   "inDrawer": true,
+   "el": "DIV.drawer-scrim"
+  },
+  "sobreDockEsq": {
+   "inDrawer": true,
+   "el": "BUTTON.btn-pill btn-primary btn-block"
+  },
+  "focoAoAbrir": {
+   "tag": "BUTTON",
+   "label": "Fechar menu",
+   "inPanel": true
+  },
+  "bodyOverflow": "hidden",
+  "htmlOverflow": "visible",
+  "overscroll": "contain (drawer-body)",
+  "overscrollPanel": "auto",
+  "inertInfo": [
+   {
+    "s": "#app",
+    "inert": true,
+    "ariaHidden": "true",
+    "inertAncestor": true
+   },
+   {
+    "s": "#main",
+    "inert": false,
+    "ariaHidden": null,
+    "inertAncestor": true
+   },
+   {
+    "s": "#site-header",
+    "inert": false,
+    "ariaHidden": null,
+    "inertAncestor": true
+   },
+   {
+    "s": "#dock",
+    "inert": false,
+    "ariaHidden": null,
+    "inertAncestor": true
+   }
+  ],
+  "titulo": "Menu",
+  "itens": [
+   "Fechar menu",
+   "AS Ana Souza ana@conecta.app",
+   "Feed",
+   "Grupos",
+   "Eventos",
+   "Mensagens 3 , 3 não lidas",
+   "Notificações 3 , 3 não lidas",
+   "Configurações",
+   "Ajuda",
+   "Sair da conta"
+  ],
+  "secoes": [
+   "Menu",
+   "Navegar",
+   "Conta e ajuda"
+  ],
+  "footer": {
+   "x": 0,
+   "y": 772,
+   "w": 280,
+   "h": 72,
+   "right": 280,
+   "bottom": 844,
+   "position": "static"
+  },
+  "sair": {
+   "text": "Sair da conta",
+   "bg": "rgb(214, 51, 108)",
+   "radius": "20px",
+   "h": 44
+  },
+  "bodyScrollable": {
+   "overflowY": "auto"
+  },
+  "transition": "transform 0.25s cubic-bezier(0.2, 0, 0, 1)",
+  "scrollY0": 300,
+  "scrollYDepoisAbrir": 0,
+  "focoPreso": true,
+  "focoPresoSeq": "111111111111111111111",
+  "esc": {
+   "fechou": true,
+   "focoVoltou": true
+  },
+  "scrimClick": {
+   "fechou": true,
+   "focoVoltou": true
+  },
+  "scrimTap": {
+   "fechou": true
+  },
+  "botaoX": {
+   "fechou": true,
+   "focoVoltou": true
+  },
+  "bodyOverflowFechado": "visible"
+ },
+ "alvos390": {
+  "pequenos": [],
+  "total": 15,
+  "cortados": [
+   {
+    "tag": "SPAN",
+    "cls": "new-btn-label",
+    "t": "Novo",
+    "clamped": false,
+    "sw": 35,
+    "cw": 1,
+    "sh": 18,
+    "ch": 1
+   },
+   {
+    "tag": "SPAN",
+    "cls": "sr-only",
+    "t": ": criar publicação",
+    "clamped": false,
+    "sw": 117,
+    "cw": 1,
+    "sh": 18,
+    "ch": 1
+   },
+   {
+    "tag": "SPAN",
+    "cls": "sr-only",
+    "t": ": Publicação da comunidade",
+    "clamped": false,
+    "sw": 189,
+    "cw": 1,
+    "sh": 18,
+    "ch": 1
+   }
+  ]
+ },
+ "alvosDrawer390": [],
+ "dockNav": [
+  {
+   "label": "Início",
+   "hash": "#/feed",
+   "current": "page,,,",
+   "h1": "Início"
+  },
+  {
+   "label": "Explorar",
+   "hash": "#/explorar",
+   "current": ",page,,",
+   "h1": "Explorar"
+  },
+  {
+   "label": "Salvos",
+   "hash": "#/salvos",
+   "current": ",,page,",
+   "h1": "Salvos"
+  },
+  {
+   "label": "Perfil",
+   "hash": "#/perfil",
+   "current": ",,,page",
+   "h1": "Ana Souza"
+  }
+ ],
+ "perfil": {
+  "cover": {
+   "x": 16,
+   "y": 77,
+   "w": 358,
+   "h": 156.6,
+   "right": 374,
+   "bottom": 233.6,
+   "bg": "none rgb(250, 231, 237)"
+  },
+  "avatar": {
+   "x": 143,
+   "y": 185.6,
+   "w": 104,
+   "h": 104,
+   "right": 247,
+   "bottom": 289.6,
+   "overlapFrac": 0.46,
+   "centerOffset": 0
+  },
+  "name": {
+   "t": "Ana Souza",
+   "centerOffset": 0,
+   "align": "center"
+  },
+  "cargo": "Product Designer",
+  "actions": [
+   {
+    "t": "Editar perfil",
+    "w": 159,
+    "bg": "rgb(214, 51, 108)",
+    "radius": "20px"
+   },
+   {
+    "t": "Compartilhar",
+    "w": 159,
+    "bg": "rgb(250, 231, 237)",
+    "radius": "20px"
+   }
+  ],
+  "stats": [],
+  "tabs": [
+   {
+    "t": "Publicações",
+    "sel": "true",
+    "bg": "rgb(250, 231, 237)",
+    "radius": "20px"
+   },
+   {
+    "t": "Mídia",
+    "sel": "false",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "20px"
+   },
+   {
+    "t": "Sobre",
+    "sel": "false",
+    "bg": "rgba(0, 0, 0, 0)",
+    "radius": "20px"
+   }
+  ],
+  "container": {
+   "cls": "profile tone-a",
+   "bg": "rgb(254, 248, 250)",
+   "radius": "12px",
+   "shadow": "none",
+   "border": "0px"
+  },
+  "abaTroca": {
+   "url": "mesma",
+   "sel": "true",
+   "conteudoMudou": true
+  }
+ },
+ "storiesInt": {
+  "scrollFunciona": true,
+  "focaveis": 9,
+  "primeiro": "Story de Carla Mendes, não visto",
+  "alvo": {
+   "x": 16,
+   "y": 61,
+   "w": 68,
+   "h": 79.6,
+   "right": 84,
+   "bottom": 140.6
+  }
+ },
+ "storyClick": {
+  "dialogo": "modal-1-title",
+  "hash": "#/feed"
+ },
+ "tipo390": {
+  "bodyFont": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+  "bodySize": "15px",
+  "bodyColor": "rgb(27, 27, 31)",
+  "bodyBg": "rgb(255, 255, 255)",
+  "htmlBg": "rgba(0, 0, 0, 0)",
+  "h1": {
+   "font": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+   "weight": "650",
+   "size": "23px"
+  },
+  "interOk": true
+ },
+ "m360": {
+  "dock": {
+   "w": 336,
+   "h": 64,
+   "gapL": 12,
+   "gapR": 12,
+   "gapB": 12,
+   "radius": "20px"
+  },
+  "topbarH": 57,
+  "storiesH": 89,
+  "overflow": {
+   "sw": 360,
+   "iw": 360,
+   "bodySw": 360,
+   "over": false
+  },
+  "cortados": [
+   {
+    "tag": "SPAN",
+    "cls": "new-btn-label",
+    "t": "Novo",
+    "clamped": false,
+    "sw": 35,
+    "cw": 1,
+    "sh": 18,
+    "ch": 1
+   },
+   {
+    "tag": "SPAN",
+    "cls": "sr-only",
+    "t": ": criar publicação",
+    "clamped": false,
+    "sw": 117,
+    "cw": 1,
+    "sh": 18,
+    "ch": 1
+   },
+   {
+    "tag": "SPAN",
+    "cls": "sr-only",
+    "t": ": Publicação da comunidade",
+    "clamped": false,
+    "sw": 189,
+    "cw": 1,
+    "sh": 18,
+    "ch": 1
+   }
+  ]
+ },
+ "drawer360": {
+  "x": 0,
+  "y": 0,
+  "w": 280,
+  "h": 800,
+  "right": 280,
+  "bottom": 800
+ },
+ "login320": {
+  "overflow": {
+   "sw": 320,
+   "iw": 320,
+   "bodySw": 320,
+   "over": false
+  },
+  "cortados": [
+   {
+    "tag": "LEGEND",
+    "cls": "sr-only",
+    "t": "Acessar com",
+    "clamped": false,
+    "sw": 93,
+    "cw": 1,
+    "sh": 23,
+    "ch": 1
+   }
+  ]
+ },
+ "m320": {
+  "dock": {
+   "w": 296,
+   "h": 64,
+   "gapL": 12,
+   "gapR": 12,
+   "gapB": 12
+  },
+  "overflow": {
+   "sw": 320,
+   "iw": 320,
+   "bodySw": 320,
+   "over": false
+  },
+  "cortados": [
+   {
+    "tag": "SPAN",
+    "cls": "new-btn-label",
+    "t": "Novo",
+    "clamped": false,
+    "sw": 35,
+    "cw": 1,
+    "sh": 18,
+    "ch": 1
+   },
+   {
+    "tag": "SPAN",
+    "cls": "sr-only",
+    "t": ": criar publicação",
+    "clamped": false,
+    "sw": 117,
+    "cw": 1,
+    "sh": 18,
+    "ch": 1
+   },
+   {
+    "tag": "SPAN",
+    "cls": "sr-only",
+    "t": ": Publicação da comunidade",
+    "clamped": false,
+    "sw": 189,
+    "cw": 1,
+    "sh": 18,
+    "ch": 1
+   }
+  ],
+  "pequenos": [
+   {
+    "tag": "A",
+    "label": "Conecta, ir para o Feed",
+    "w": 36,
+    "h": 44,
+    "inline": false
+   }
+  ]
+ },
+ "drawer320": {
+  "x": 0,
+  "y": 0,
+  "w": 272,
+  "h": 640,
+  "right": 272,
+  "bottom": 640
+ },
+ "paisagem": {
+  "topbar": {
+   "x": 0,
+   "y": 0,
+   "w": 844,
+   "h": 61,
+   "right": 844,
+   "bottom": 61,
+   "pos": "sticky",
+   "vis": true
+  },
+  "stories": {
+   "x": 24,
+   "y": 93,
+   "w": 796,
+   "h": 88,
+   "right": 820,
+   "bottom": 181,
+   "vis": true,
+   "list": {
+    "x": 24,
+    "y": 93,
+    "w": 796,
+    "h": 88,
+    "right": 820,
+    "bottom": 181
+   }
+  },
+  "dock": {
+   "x": 0,
+   "y": 0,
+   "w": 0,
+   "h": 0,
+   "right": 0,
+   "bottom": 0,
+   "vis": false
+  },
+  "vh": 390,
+  "vw": 844,
+  "overflow": {
+   "sw": 844,
+   "iw": 844,
+   "bodySw": 844,
+   "over": false
+  },
+  "aposRolar": {
+   "topbarVisivel": true,
+   "topbarBottom": 61,
+   "dockH": 0
+  }
+ },
+ "paisagem667": {
+  "topbar": {
+   "x": 0,
+   "y": 0,
+   "w": 667,
+   "h": 57,
+   "right": 667,
+   "bottom": 57,
+   "pos": "relative",
+   "vis": true
+  },
+  "stories": {
+   "x": 0,
+   "y": 57,
+   "w": 667,
+   "h": 65,
+   "right": 667,
+   "bottom": 122,
+   "vis": true,
+   "list": {
+    "x": 0,
+    "y": 57,
+    "w": 667,
+    "h": 64,
+    "right": 667,
+    "bottom": 121
+   }
+  },
+  "dock": {
+   "x": 93.5,
+   "y": 317,
+   "w": 480,
+   "h": 52,
+   "right": 573.5,
+   "bottom": 369,
+   "vis": true,
+   "radius": "20px"
+  },
+  "vh": 375,
+  "vw": 667,
+  "overflow": {
+   "sw": 667,
+   "iw": 667,
+   "bodySw": 667,
+   "over": false
+  },
+  "aposRolar": {
+   "topbarVisivel": false,
+   "topbarBottom": -343,
+   "dockH": 52,
+   "dockTop": 317
+  }
+ }
+}

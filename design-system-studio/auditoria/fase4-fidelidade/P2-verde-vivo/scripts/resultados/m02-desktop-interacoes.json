@@ -1,0 +1,652 @@
+{
+ "dev-1": {
+  "shadow": {
+   "before": [],
+   "after": [
+    "color(srgb 0.105882 0.180392 0.141176 / 0.08) 0px 4px 14px 0px"
+   ],
+   "cls": "site-header is-scrolled"
+  },
+  "mega": {
+   "triggerText": "Departamentos",
+   "open": true,
+   "info": {
+    "x": 112,
+    "y": 145,
+    "w": 760,
+    "h": 347,
+    "headerBottom": 144,
+    "heads": [
+     {
+      "t": "Plantas por tipo",
+      "tt": "uppercase"
+     },
+     {
+      "t": "Por ambiente",
+      "tt": "uppercase"
+     },
+     {
+      "t": "Vasos e cuidados",
+      "tt": "uppercase"
+     }
+    ],
+    "columnsX": [
+     137,
+     315,
+     492
+    ],
+    "nLists": 3,
+    "feature": "DESTAQUE DA ESTAÇÃO / Calatheas e marantas: folhas que parecem pintadas à mão / ",
+    "focusInMega": true,
+    "focusText": "Folhagens",
+    "firstLink": "Folhagens"
+   },
+   "escCloses": true,
+   "focusBack": true,
+   "outsideCloses": true,
+   "hoverOpens": true,
+   "enterOpens": true
+  },
+  "search": {
+   "ctrlK": true,
+   "panelOnFocus": true,
+   "panel": {
+    "panel": {
+     "x": 340,
+     "y": 97,
+     "w": 560,
+     "h": 351
+    },
+    "input": {
+     "x": 340,
+     "w": 560,
+     "bottom": 89
+    },
+    "heads": [
+     "Recentes",
+     "Sugestões"
+    ],
+    "opts": 6,
+    "exp": "true",
+    "listbox": true
+   },
+   "arrow": {
+    "ad": "sg-1-o0",
+    "sel": "true",
+    "txt": "jiboia"
+   },
+   "escCloses": true,
+   "term": "Costel",
+   "typed": {
+    "opts": [
+     "Costela-de-adãoMonstera deliciosaR$ 139,",
+     "Ver todos os resultados para “Costel”"
+    ],
+    "text": "Produtos\nCostela-de-adão\nMonstera deliciosa\nR$ 139,90\nBuscar\nVer todos os resultados para “Costel”"
+   },
+   "afterEnter": {
+    "hash": "#/catalogo?q=Costel",
+    "cards": [
+     "Costela-de-adão"
+    ],
+    "n": 1
+   },
+   "n0": 3,
+   "emptyPanel": "Nenhuma planta encontrada para “xyzqwk”. Tente “suculenta”, “sombra” ou “vaso”.\n\nSugestões\nPlantas para pouca luz\nSombra e meia-sombra\nSeguras para pets\nAtóxica",
+   "emptyState": "Nenhuma planta encontrada"
+  },
+  "drawer": {
+   "info": {
+    "x": 1040,
+    "w": 400,
+    "h": 900,
+    "right": 1440,
+    "vw": 1440,
+    "role": "dialog",
+    "modal": "true",
+    "radius": "22px 0px 0px 22px",
+    "bg": "#ffffff",
+    "shadow": true,
+    "scrim": "color(srgb 0.105882 0.180392 0.141176 / 0.45)",
+    "title": "Filtros",
+    "buttons": [
+     "Fechar filtros",
+     "Sombra",
+     "Meia-sombra",
+     "Luz indireta",
+     "Sol pleno",
+     "Pouca",
+     "Moderada",
+     "Frequente",
+     "Pequeno",
+     "Médio",
+     "Grande",
+     "Até R$ 50",
+     "R$ 50 a R$ 100",
+     "R$ 100 a R$ 200",
+     "Acima de R$ 200",
+     "Segura para pets",
+     "Fácil de cuidar",
+     "Disponível para entrega",
+     "Limpar",
+     "Aplicar filtros"
+    ],
+    "apply": {
+     "t": "Aplicar filtros",
+     "bg": "#2d6a4f",
+     "radius": "999px",
+     "inFoot": true,
+     "footPos": "static"
+    },
+    "groups": [
+     "Luminosidade",
+     "Rega",
+     "Porte",
+     "Preço",
+     "Características"
+    ],
+    "activeIn": true,
+    "bodyOverflow": "visible/hidden"
+   },
+   "trapOk": true,
+   "escCloses": true,
+   "focusBack": true,
+   "overlayCloses": true,
+   "closeBtnCloses": true,
+   "nOptions": 17,
+   "clicked": "Sombra",
+   "applyText": "Aplicar filtros",
+   "afterApply": 4,
+   "n0": 30,
+   "drawerClosedAfterApply": true
+  },
+  "sort": {
+   "opts": [
+    "relevancia|Relevância",
+    "novidades|Novidades",
+    "menor-preco|Menor preço",
+    "maior-preco|Maior preço",
+    "nome|Nome (A–Z)"
+   ],
+   "p0": [
+    139.9,
+    49.9,
+    69.9,
+    89.9,
+    119.9,
+    39.9
+   ],
+   "p1": [
+    24.9,
+    29.9,
+    32.9,
+    34.9,
+    39.9,
+    42.9
+   ]
+  },
+  "cart": {
+   "badge0": {
+    "t": "0",
+    "hidden": true
+   },
+   "via": "produto:#/produto/costela-de-adao",
+   "drawerAfterAdd": [
+    "Sua sacola"
+   ],
+   "badge1": {
+    "t": "1",
+    "hidden": false,
+    "bg": "#b07d4f",
+    "color": "#111114",
+    "radius": "999px"
+   },
+   "afterClick": {
+    "hash": "#/sacola",
+    "dialogs": []
+   }
+  },
+  "profile": {
+   "text": "Marina Costa / marina.costa@exemplo.com / Perfil fictício da demonstração. / Meu perfil / Configurações / Ajuda / Sair"
+  },
+  "announce": {
+   "visible": false,
+   "headerTop": 0
+  },
+  "focus": [
+   {
+    "el": "A.logo",
+    "outline": "solid 2px #2d6a4f",
+    "shadow": "none"
+   },
+   {
+    "el": "INPUT.search__input",
+    "outline": "none 3px #1b2e24",
+    "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, oklab(0 0 0 / 0) 0px 0px 0px 0px"
+   },
+   {
+    "el": "BUTTON.search__icon",
+    "outline": "solid 2px #2d6a4f",
+    "shadow": "none"
+   },
+   {
+    "el": "BUTTON.addr-btn",
+    "outline": "solid 2px #2d6a4f",
+    "shadow": "none"
+   },
+   {
+    "el": "A.icon-btn",
+    "outline": "solid 2px #2d6a4f",
+    "shadow": "none"
+   },
+   {
+    "el": "BUTTON.icon-btn",
+    "outline": "solid 2px #2d6a4f",
+    "shadow": "none"
+   }
+  ]
+ },
+ "dev-2": {
+  "shadow": {
+   "before": [],
+   "after": [
+    "color(srgb 0.105882 0.180392 0.141176 / 0.09) 0px 6px 24px 0px",
+    "color(srgb 0.105882 0.180392 0.141176 / 0.09) 0px 6px 24px 0px"
+   ],
+   "cls": "site-header is-scrolled"
+  },
+  "mega": {
+   "triggerText": "Departamentos",
+   "open": true,
+   "info": {
+    "x": 73,
+    "y": 148,
+    "w": 760,
+    "h": 293,
+    "headerBottom": 144,
+    "heads": [
+     {
+      "t": "Plantas",
+      "tt": "uppercase"
+     },
+     {
+      "t": "Por cuidado",
+      "tt": "uppercase"
+     },
+     {
+      "t": "Vasos e kits",
+      "tt": "uppercase"
+     }
+    ],
+    "columnsX": [
+     97,
+     267,
+     438
+    ],
+    "nLists": 3,
+    "feature": "Kit Primeira Planta / Jiboia, vaso e substrato prontos para presentear. / Ver ki",
+    "focusInMega": true,
+    "focusText": "Todas as plantas",
+    "firstLink": "Todas as plantas"
+   },
+   "escCloses": true,
+   "focusBack": true,
+   "outsideCloses": true,
+   "hoverOpens": true,
+   "enterOpens": true
+  },
+  "search": {
+   "ctrlK": true,
+   "panelOnFocus": true,
+   "panel": {
+    "panel": {
+     "x": 311,
+     "y": 97,
+     "w": 640,
+     "h": 428
+    },
+    "input": {
+     "x": 311,
+     "w": 640,
+     "bottom": 89
+    },
+    "heads": [
+     "RecentesLimpar",
+     "Sugestões"
+    ],
+    "opts": 7,
+    "exp": "true",
+    "listbox": true
+   },
+   "arrow": {
+    "ad": "opt-0",
+    "sel": "true",
+    "txt": "SamambaiaBusca recente"
+   },
+   "escCloses": true,
+   "term": "Costel",
+   "typed": {
+    "opts": [
+     "Costela-de-adãoFolhagens · Monstera deli",
+     "Buscar por “Costel”Ver todos os resultad"
+    ],
+    "text": "Plantas e vasos\nCostela-de-adão\nFolhagens · Monstera deliciosa\nR$ 129,90\nVer tudo\nBuscar por “Costel”\nVer todos os resultados no catálogo\n\n2 sugestões disponíveis"
+   },
+   "afterEnter": {
+    "hash": "#/catalogo?q=Costel",
+    "cards": [
+     "Costela-de-adão"
+    ],
+    "n": 1
+   },
+   "n0": 22,
+   "emptyPanel": "Sem sugestões\nBuscar por “xyzqwk”\nNenhuma sugestão encontrada. Veja o catálogo.\n\n1 sugestão disponível",
+   "emptyState": "Nenhuma planta por aqui"
+  },
+  "drawer": {
+   "info": {
+    "x": 1025,
+    "w": 400,
+    "h": 900,
+    "right": 1425,
+    "vw": 1440,
+    "role": "dialog",
+    "modal": "true",
+    "radius": "22px 0px 0px 22px",
+    "bg": "#ffffff",
+    "shadow": true,
+    "scrim": "color(srgb 0.105882 0.180392 0.141176 / 0.48)",
+    "title": "Filtros",
+    "buttons": [
+     "Fechar filtros",
+     "Todas",
+     "Folhagens",
+     "Suculentas",
+     "Floríferas",
+     "Ervas",
+     "Vasos",
+     "Kits",
+     "Sol pleno",
+     "Luz difusa",
+     "Sombra",
+     "Pequeno",
+     "Médio",
+     "Grande",
+     "Fácil",
+     "Moderado",
+     "Exigente",
+     "Pet friendly",
+     "Somente em estoque",
+     "Favoritos",
+     "Limpar",
+     "Aplicar filtros"
+    ],
+    "apply": {
+     "t": "Aplicar filtros",
+     "bg": "#2d6a4f",
+     "radius": "999px",
+     "inFoot": true,
+     "footPos": "static"
+    },
+    "groups": [
+     "Categoria",
+     "Luz",
+     "Porte",
+     "Nível de cuidado",
+     "Mais opções"
+    ],
+    "activeIn": true,
+    "bodyOverflow": "clip visible/hidden"
+   },
+   "trapOk": true,
+   "escCloses": true,
+   "focusBack": true,
+   "overlayCloses": true,
+   "closeBtnCloses": true,
+   "nOptions": 19,
+   "clicked": "Folhagens",
+   "applyText": "Aplicar filtros",
+   "afterApply": 7,
+   "n0": 22,
+   "drawerClosedAfterApply": true
+  },
+  "sort": {
+   "opts": [
+    "relevancia|Mais relevantes",
+    "preco-asc|Menor preço",
+    "preco-desc|Maior preço",
+    "nome|Nome (A a Z)",
+    "novidades|Novidades"
+   ],
+   "p0": [
+    129.9,
+    89.9,
+    69.9,
+    54.9,
+    44.9,
+    219.9
+   ],
+   "p1": [
+    19.9,
+    24.9,
+    24.9,
+    29.9,
+    34.9,
+    39.9
+   ]
+  },
+  "cart": {
+   "badge0": {
+    "t": "0",
+    "hidden": true
+   },
+   "via": "quick",
+   "drawerAfterAdd": [
+    "Sua sacola"
+   ],
+   "badge1": {
+    "t": "1",
+    "hidden": false,
+    "bg": "#b07d4f",
+    "color": "#111114",
+    "radius": "999px"
+   },
+   "afterClick": {
+    "hash": "#/catalogo",
+    "dialogs": [
+     "Sua sacola"
+    ]
+   }
+  },
+  "profile": {
+   "text": "MT / Marina Tavares / marina.tavares@exemplo.com.br / Meu perfil / Configurações / Ajuda / Sair"
+  },
+  "announce": {
+   "visible": false,
+   "headerTop": 0
+  },
+  "focus": [
+   {
+    "el": "A.brand",
+    "outline": "solid 2px #2d6a4f",
+    "shadow": "none"
+   },
+   {
+    "el": "INPUT.search__input",
+    "outline": "none 3px #1b2e24",
+    "shadow": "none"
+   },
+   {
+    "el": "BUTTON.sg__clear",
+    "outline": "solid 2px #2d6a4f",
+    "shadow": "none"
+   },
+   {
+    "el": "BUTTON.addr-btn",
+    "outline": "solid 2px #2d6a4f",
+    "shadow": "none"
+   },
+   {
+    "el": "A.icon-btn",
+    "outline": "solid 2px #2d6a4f",
+    "shadow": "color(srgb 0.176471 0.415686 0.309804 / 0.35) 0px 0px 0px 5px"
+   },
+   {
+    "el": "BUTTON.icon-btn",
+    "outline": "solid 2px #2d6a4f",
+    "shadow": "color(srgb 0.176471 0.415686 0.309804 / 0.35) 0px 0px 0px 5px"
+   }
+  ]
+ },
+ "dev-3": {
+  "shadow": {
+   "before": [
+    "rgba(27, 46, 36, 0.14) 0px 12px 32px 0px"
+   ],
+   "after": [
+    "rgba(27, 46, 36, 0.08) 0px 2px 12px 0px",
+    "rgba(27, 46, 36, 0.14) 0px 12px 32px 0px"
+   ],
+   "cls": "topbar is-scrolled"
+  },
+  "mega": {
+   "triggerText": "Interior",
+   "open": true,
+   "info": {
+    "x": 0,
+    "y": 144,
+    "w": 1440,
+    "h": 219,
+    "headerBottom": 145,
+    "heads": [
+     {
+      "t": "Por luz",
+      "tt": "uppercase"
+     },
+     {
+      "t": "Por porte",
+      "tt": "uppercase"
+     },
+     {
+      "t": "Para começar",
+      "tt": "uppercase"
+     },
+     {
+      "t": "Plantas para casa",
+      "tt": "none"
+     }
+    ],
+    "columnsX": [
+     104,
+     418,
+     732
+    ],
+    "nLists": 3,
+    "feature": "Plantas para casa / Escolhas que vivem bem com pouca luz e pouca rotina. / Ver i",
+    "focusInMega": true,
+    "focusText": "Sombra",
+    "firstLink": "Sombra"
+   },
+   "escCloses": true,
+   "focusBack": true,
+   "outsideCloses": true,
+   "hoverOpens": true,
+   "enterOpens": true
+  },
+  "search": {
+   "ctrlK": true,
+   "panelOnFocus": true,
+   "panel": {
+    "panel": {
+     "x": 262,
+     "y": 97,
+     "w": 640,
+     "h": 180
+    },
+    "input": {
+     "x": 262,
+     "w": 640,
+     "bottom": 89
+    },
+    "heads": [
+     "Sugestões"
+    ],
+    "opts": 3,
+    "exp": "true",
+    "listbox": true
+   },
+   "arrow": {
+    "ad": "q-d-opt-0",
+    "sel": "true",
+    "txt": "Monstera"
+   },
+   "escCloses": true,
+   "term": "Echeve",
+   "typed": {
+    "opts": [
+     "Buscar por “Echeve”",
+     "Echeveria lilásR$ 29,90"
+    ],
+    "text": "Sugestões\nBuscar por “Echeve”\nEcheveria lilás\nR$ 29,90"
+   },
+   "afterEnter": {
+    "hash": "#/catalogo",
+    "cards": [
+     "Echeveria lilás"
+    ],
+    "n": 1
+   },
+   "n0": 1,
+   "emptyPanel": "Sugestões\nBuscar por “xyzqwk”",
+   "emptyState": null
+  },
+  "drawer": {
+   "err": "locator.scrollIntoViewIfNeeded: Timeout 29992.713000000003ms exceeded.\nCall log:\n\u001b[2m  - attempting scroll into view action\u001b[22m\n\u001b[2m    2 × waiting for element to be stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying scroll into view action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying scroll into view action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    56 × waiting for element to be stable\u001b[22m\n\u001b[2m       - element is not stable\u001b[22m\n\u001b[2m     - retrying scroll into view action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+  },
+  "cart": {
+   "badge0": {
+    "t": "0",
+    "hidden": true
+   },
+   "err": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#view-catalogo .grid .card').first().locator('a').first()\u001b[22m\n"
+  },
+  "profile": {
+   "text": null
+  },
+  "announce": {
+   "err": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#announce-close').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"icon-btn\" id=\"announce-close\" aria-label=\"Dispensar aviso\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not stable\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    56 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not stable\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+  },
+  "focus": [
+   {
+    "el": "A.brand",
+    "outline": "solid 2px #2d6a4f",
+    "shadow": "none"
+   },
+   {
+    "el": "INPUT.field",
+    "outline": "none 3px #1b2e24",
+    "shadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px"
+   },
+   {
+    "el": "BUTTON.icon-btn",
+    "outline": "solid 2px #2d6a4f",
+    "shadow": "none"
+   },
+   {
+    "el": "BUTTON.icon-btn",
+    "outline": "solid 2px #2d6a4f",
+    "shadow": "none"
+   },
+   {
+    "el": "BUTTON.cat-trigger",
+    "outline": "solid 2px #2d6a4f",
+    "shadow": "none"
+   },
+   {
+    "el": "BUTTON.cat-trigger",
+    "outline": "solid 2px #2d6a4f",
+    "shadow": "none"
+   }
+  ]
+ }
+}
