@@ -3,6 +3,17 @@
 Versão auditada: commit `e4c79f3` (congelada; nenhuma linha do produto foi alterada durante a auditoria).
 Período: 2 e 3 de novembro de 2026. Método, ferramentas e limitações: [`00-ambiente-e-metodo.md`](00-ambiente-e-metodo.md).
 
+> **Situação em 03/11/2026 (pós-auditoria).** O plano de evolução da seção J foi executado até a
+> versão 5.0, mais uma rodada 5.1 de refinamentos. Implementado: **todo o P0 e o P1** (B-01 a B-14),
+> **P2** B-15 a B-24 e TE-04 a TE-15, TE-21; os **15 defeitos reproduzidos** pela regressão hoje passam
+> como testes normais. Detalhes, medições e arquivos de cada versão: [`P0-APLICADO.md`](P0-APLICADO.md).
+> **Não implementado** (refatorações grandes ou ajustes estéticos que mudam escolhas já feitas por
+> usuários): TE-16 (isolar o CSS das prévias), TE-17 (kit de prévia único), TE-18 (seletores finos),
+> TE-19 (dividir componentes gigantes), TE-20 (ciclos de importação), RA-16 (tamanhos em `rem`),
+> RA-10/20/21/22/24/26, UX-07, UX-27, UX-28, UX-30 e os refinamentos P3 de tipografia, famílias
+> visuais, modelos de SaaS e paletas. Recomenda-se **uma nova rodada de auditoria** com pessoas reais
+> e os mesmos 5 projetos para medir o ganho.
+
 > **Como ler.** Os "usuários" desta auditoria são personas interpretadas por IA, não pessoas. Os
 > desenvolvedores são três modelos da mesma família (Claude Opus, Sonnet e Haiku). Os testes de
 > navegador rodaram só em Chromium. Cada conclusão abaixo aponta para a evidência que a sustenta.

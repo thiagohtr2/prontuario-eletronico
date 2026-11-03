@@ -3396,21 +3396,16 @@ li[data-state='todo'] .nvs-step__text strong {
   border-bottom: 1px solid var(--s-divider);
 }
 .nvs-card__tag {
-  position: absolute;
-  left: var(--sp-2);
-  bottom: var(--sp-2);
-  z-index: 15;
+  /* Abaixo da prévia, no fluxo (UX-41): o selo não cobre mais botões do header/sidebar. */
+  position: static;
+  align-self: flex-start;
+  margin: var(--sp-2) var(--sp-3) 0;
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  height: 24px;
-  padding: 0 9px;
-  border-radius: var(--r-pill);
-  background: rgba(21, 21, 26, 0.78);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 560;
-  pointer-events: none;
+  color: var(--s-text-3);
+  font-size: 12.5px;
+  font-weight: 500;
 }
 .nvs-card__tag--end {
   left: auto;

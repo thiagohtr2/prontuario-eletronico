@@ -29,7 +29,7 @@ function ErrorPanel({ error, onRetry }: { error: unknown; onRetry?: () => void }
       {error instanceof Error && (
         <details style={{ marginTop: 16 }}>
           <summary className="u-subtle u-small">Detalhes técnicos</summary>
-          <pre className="ui-code" style={{ whiteSpace: 'pre-wrap' }}>{error.message}</pre>
+          <pre className="ui-code" tabIndex={0} style={{ whiteSpace: 'pre-wrap' }}>{error.message}</pre>
         </details>
       )}
     </div>

@@ -216,3 +216,21 @@
   --footer-h: 76px;
   scroll-padding-bottom: 96px;
 }
+
+.gd-step[data-state='skipped'] .gd-step__bar {
+  background: repeating-linear-gradient(90deg, var(--s-border-strong) 0 6px, transparent 6px 10px);
+}
+.gd-step__skip {
+  color: var(--s-text-3);
+  font-weight: 400;
+}
+
+/* Telas baixas (celular deitado): o rodapé do guiado deixa de ser fixo e não ocupa a altura (RA-09). */
+@media (max-height: 520px) {
+  .gd-footer {
+    position: static;
+  }
+  .gd-page {
+    --footer-h: 0px;
+  }
+}

@@ -94,3 +94,29 @@ Playwright 77 testes passando.
 | Projetos nomeados | “Seus projetos”: vários projetos no mesmo navegador, cada um com as próprias versões; “Novo projeto” e “Abrir” guardam o atual automaticamente; “Duplicar o atual” cria uma variação; o backup completo leva também os outros projetos. Com o armazenamento cheio, as versões dos outros projetos são as últimas a sair (os projetos ficam). |
 
 **Verificação:** Vitest 483 testes (novo `tests/unit/v50.test.ts`); Playwright 96 testes (novo `tests/e2e/v50.spec.ts`, que roda o script de fidelidade do executor num site fiel e num site com desvios).
+
+# Versão 5.1 concluída (2026-11-03) — refinamentos P2/P3
+
+| Item | O que mudou |
+| --- | --- |
+| TE-12 Importação | Chaves de tokens desconhecidas recusadas (“token desconhecido”); limites de tamanho em textos (nome ≤ 200, descrições ≤ 5.000 caracteres, listas limitadas); relatório de validação guardado só se for válido; modelos que não existem no Studio (arquivo de outra versão ou editado à mão) viram pendência “escolha outro”. |
+| TE-21 Escape | Nome do projeto seguro em comentários de CSS, JS e TS (`*/` e quebras de linha); textos livres no Master Prompt em uma linha, sem virar título, lista, citação ou HTML. |
+| RA-13 / UX-23 Busca | Campo `combobox` + `listbox` correto (sem botões dentro das opções, `aria-activedescendant`); busca sem acento e sem plural (“botão” encontra “Botões”); índice de modelos, paletas, famílias, componentes, inspirações e templates carregado ao abrir a busca. |
+| RA-14 Abas | Padrão de teclado do WAI-ARIA: só a aba ativa no Tab; setas, Home e End trocam de aba. |
+| RA-04 Menu no celular | Aberto, o menu lateral é `role="dialog"` com o foco dentro dele (Tab não escapa) e devolve o foco ao fechar. |
+| RA-09, RA-12, RA-19, RA-25 | Rodapé do guiado deixa de ser fixo em telas baixas (celular deitado); título da aba do navegador acompanha a tela; blocos de código roláveis acessíveis pelo teclado; erros anunciados com `role="alert"`. |
+| UX-22, UX-29, UX-34, UX-35, UX-37, UX-41, UX-42, UX-43, UX-44 | “Prompt” nos 60 cartões de paleta só no modo Avançado; prévia da identidade com o nome e o menu do projeto; texto da etapa 7 coerente; aviso ao aplicar a sugestão de fluxo; categorias de componente sem número de catálogo (parecia contagem); selo “Prévia interativa” abaixo da prévia; textos sem caixa errada (“SaaS”); `#/livre` ativa o modo livre; etapas opcionais puladas aparecem como “(pulada)”, não como concluídas. |
+
+**Verificação:** Vitest 483 testes; Playwright 101 testes (novo `tests/e2e/v51.spec.ts`).
+
+## O que ficou de fora (e por quê)
+
+- **Refatorações grandes sem efeito visível para quem usa** (TE-16 isolar o CSS das prévias, TE-17 kit
+  de prévia único, TE-18 seletores finos, TE-19 dividir componentes gigantes, TE-20 ciclos de
+  importação): alto esforço e risco; valem uma versão dedicada com testes de comparação visual.
+- **RA-16** (interface inteira em `rem` para respeitar “só aumentar o texto”): mexe em todo o CSS.
+- **Ajustes estéticos P3** (escala tipográfica do Studio, espécime de fontes, diferenciar Soft Pill /
+  Bento Soft / Modern Material, variar os modelos de SaaS, paletas menos dependentes do Tailwind) e
+  **UX-07/27/28/30**: mudam catálogos já escolhidos por usuários; pedem decisão de design antes.
+- **RA-10, RA-20, RA-21, RA-22, RA-24, RA-26**: melhorias menores de modais em paisagem, stepper,
+  galerias longas e landmarks; não bloqueiam o uso.

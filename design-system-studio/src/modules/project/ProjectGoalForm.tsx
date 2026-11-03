@@ -5,7 +5,7 @@ import { useShallow } from 'zustand/react/shallow'
 import { ENTRY_FLOWS, PROJECT_TYPES, SUGGESTIONS, type ProjectType } from '@/core/project'
 import { desktopById, mobileById } from '@/modules/layouts/catalog'
 import { useProject, useStudio } from '@/core/store'
-import { Button, Callout, Field, Input, Section, Textarea, keepScroll } from '@/ui'
+import { Button, Callout, Field, Input, Section, Textarea, keepScroll, toast } from '@/ui'
 import './project.css'
 
 const TYPE_ICON: Record<ProjectType, LucideIcon> = {
@@ -104,7 +104,17 @@ export function ProjectGoalForm({ guided = false }: { guided?: boolean }) {
           <Callout title="Sugestão (opcional):">
             {suggestion.note} Para este tipo de projeto, costuma funcionar o fluxo <strong>“{suggestedFlow.name}”</strong>.{' '}
             {entryFlow !== suggestedFlow.id ? (
-              <Button size="sm" variant="soft" onClick={() => keepScroll(() => setEntryFlow(suggestedFlow.id))} style={{ marginLeft: 4 }}>
+              <Button
+                size="sm"
+                variant="soft"
+                onClick={() =>
+                  keepScroll(() => {
+                    setEntryFlow(suggestedFlow.id)
+                    toast.success(`Aplicado: fluxo “${suggestedFlow.name}”. Você pode mudar na etapa 2.`)
+                  })
+                }
+                style={{ marginLeft: 4 }}
+              >
                 Usar esta sugestão
               </Button>
             ) : (
@@ -114,7 +124,7 @@ export function ProjectGoalForm({ guided = false }: { guided?: boolean }) {
         )}
         {guided && suggestion && suggestedFlow && recDesktop && recMobile && (
           <div className="goal-recommended" data-testid="recommended-block">
-            <strong>Recomendados para {PROJECT_TYPES.find((t) => t.id === meta.projectType)?.name.toLowerCase()}</strong>
+            <strong>Recomendados para “{PROJECT_TYPES.find((t) => t.id === meta.projectType)?.name}”</strong>
             <ul>
               <li>Entrada: {suggestedFlow.name}</li>
               <li>Computador: {recDesktop.name}</li>
@@ -178,7 +188,7 @@ export function ProjectGoalForm({ guided = false }: { guided?: boolean }) {
         )}
         {meta.projectType && FEATURE_SUGGESTIONS[meta.projectType].some((f) => !meta.features.includes(f)) && (
           <div className="u-stack-sm">
-            <span className="u-subtle u-small">Sugestões para {PROJECT_TYPES.find((t) => t.id === meta.projectType)?.name.toLowerCase()}:</span>
+            <span className="u-subtle u-small">Sugestões para “{PROJECT_TYPES.find((t) => t.id === meta.projectType)?.name}”:</span>
             <div className="ui-chips">
               {FEATURE_SUGGESTIONS[meta.projectType]
                 .filter((f) => !meta.features.includes(f))

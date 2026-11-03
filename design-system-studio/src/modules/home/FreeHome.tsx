@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { CheckCircle2, Circle } from 'lucide-react'
 import { useStudio } from '@/core/store'
@@ -8,6 +9,11 @@ import './home.css'
 
 export default function FreeHome() {
   const project = useStudio((s) => s.project)
+  const setMode = useStudio((s) => s.setMode)
+  // Abrir #/livre pela URL também troca o seletor de modo (UX-43).
+  useEffect(() => {
+    if (project.mode !== 'free') setMode('free')
+  }, [project.mode, setMode])
   const status = moduleStatus(project)
   return (
     <div className="ui-page">

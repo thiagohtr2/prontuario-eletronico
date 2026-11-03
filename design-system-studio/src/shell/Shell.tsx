@@ -145,6 +145,35 @@ function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
   // Abaixo de 1024 px o menu fechado fica fora da tela: também sai do Tab e da árvore de acessibilidade (RA-03).
   const isDrawer = useMediaQuery('(max-width: 1023px)')
   const hidden = isDrawer && !open
+  const asideRef = useRef<HTMLElement>(null)
+  // Aberto no celular, o menu é um diálogo (RA-04): o foco entra nele e não escapa com Tab.
+  useEffect(() => {
+    if (!isDrawer || !open) return
+    const el = asideRef.current
+    if (!el) return
+    const opener = document.activeElement as HTMLElement | null
+    const focusables = () => Array.from(el.querySelectorAll<HTMLElement>('a[href], button:not([disabled]), input, [tabindex]:not([tabindex="-1"])')).filter((n) => n.offsetParent !== null)
+    requestAnimationFrame(() => focusables()[0]?.focus())
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return
+      const list = focusables()
+      if (!list.length) return
+      const first = list[0]
+      const last = list[list.length - 1]
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault()
+        last.focus()
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault()
+        first.focus()
+      }
+    }
+    el.addEventListener('keydown', onKey)
+    return () => {
+      el.removeEventListener('keydown', onKey)
+      opener?.focus?.()
+    }
+  }, [isDrawer, open])
   const toggle = (id: string) =>
     setCollapsed((c) => {
       const next = c.includes(id) ? c.filter((x) => x !== id) : [...c, id]
@@ -157,7 +186,16 @@ function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
     })
 
   return (
-    <aside className="shell-sidebar" data-open={open} aria-label="Navegação do Studio" id="studio-sidebar" {...({ inert: hidden ? '' : undefined } as Record<string, string | undefined>)}>
+    <aside
+      ref={asideRef}
+      className="shell-sidebar"
+      data-open={open}
+      aria-label="Navegação do Studio"
+      id="studio-sidebar"
+      role={isDrawer && open ? 'dialog' : undefined}
+      aria-modal={isDrawer && open ? true : undefined}
+      {...({ inert: hidden ? '' : undefined } as Record<string, string | undefined>)}
+    >
       <div className="shell-sidebar__head">
         <span className="shell-brand__name">Menu</span>
         <IconButton label="Fechar menu" onClick={onClose}>
@@ -197,11 +235,29 @@ function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
   )
 }
 
+/** Forma básica de uma palavra: sem acento, minúscula e sem plural (“botões” → “botao”). */
+function stem(word: string): string {
+  return word
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/(oes|aes|ais)$/, (m) => (m === 'ais' ? 'al' : 'ao'))
+    .replace(/(e?s)$/, '')
+}
+const stems = (text: string) => text.split(/[^\p{L}\p{N}]+/u).filter(Boolean).map(stem)
+
 function FeatureSearch({ open, onClose }: { open: boolean; onClose: () => void }) {
   const navigate = useNavigate()
   const [query, setQuery] = useState('')
   const [active, setActive] = useState(0)
+  const [models, setModels] = useState<NavEntry[]>([])
   const inputRef = useRef<HTMLInputElement>(null)
+
+  // Modelos, paletas e componentes entram na busca quando ela abre (carregados sob demanda).
+  useEffect(() => {
+    if (!open || models.length) return
+    import('./searchIndex').then((m) => setModels(m.buildSearchIndex())).catch(() => undefined)
+  }, [open, models.length])
 
   const entries = useMemo<NavEntry[]>(() => {
     const steps: NavEntry[] = ALL_STEPS.map((s) => ({
@@ -213,20 +269,15 @@ function FeatureSearch({ open, onClose }: { open: boolean; onClose: () => void }
       keywords: 'guiado etapa passo',
     }))
     const all = [...ALL_ENTRIES, ...steps]
-    const q = query
-      .normalize('NFD')
-      .replace(/[̀-ͯ]/g, '')
-      .toLowerCase()
-      .trim()
-    if (!q) return all
-    return all.filter((e) =>
-      `${e.label} ${e.description} ${e.keywords}`
-        .normalize('NFD')
-        .replace(/[̀-ͯ]/g, '')
-        .toLowerCase()
-        .includes(q),
-    )
-  }, [query])
+    const q = stems(query)
+    if (!q.length) return all
+    // Cada palavra digitada precisa começar alguma palavra do item (sem acento e sem plural).
+    const match = (e: NavEntry) => {
+      const hay = stems(`${e.label} ${e.description} ${e.keywords}`)
+      return q.every((w) => hay.some((h) => h.startsWith(w)))
+    }
+    return [...all.filter(match), ...models.filter(match)].slice(0, 40)
+  }, [query, models])
 
   useEffect(() => {
     if (open) {
@@ -250,7 +301,12 @@ function FeatureSearch({ open, onClose }: { open: boolean; onClose: () => void }
           ref={inputRef}
           className="ui-input"
           type="search"
-          placeholder="Ex.: drawer, paleta, login, master prompt…"
+          role="combobox"
+          aria-expanded={entries.length > 0}
+          aria-controls="search-results"
+          aria-activedescendant={entries[active] ? `search-opt-${active}` : undefined}
+          aria-autocomplete="list"
+          placeholder="Ex.: drawer, paleta, botão, login, master prompt…"
           aria-label="Buscar funcionalidades"
           value={query}
           onChange={(e) => {
@@ -270,24 +326,27 @@ function FeatureSearch({ open, onClose }: { open: boolean; onClose: () => void }
           }}
         />
       </div>
-      <ul className="search-list" role="listbox" aria-label="Resultados">
+      {/* Listbox do padrão combobox (RA-13): opções sem botões dentro; teclado pelo campo. */}
+      <ul className="search-list" role="listbox" id="search-results" aria-label="Resultados">
         {entries.map((e, i) => {
           const Icon = e.icon
           return (
-            <li key={e.id} role="option" aria-selected={i === active}>
-              <button type="button" className="search-item" data-active={i === active} onMouseEnter={() => setActive(i)} onClick={() => go(e)}>
-                <Icon aria-hidden="true" />
-                <span>
-                  <span className="search-item__label">{e.label}</span>
-                  <br />
-                  <span className="search-item__desc">{e.description}</span>
-                </span>
-              </button>
+            <li key={e.id} id={`search-opt-${i}`} role="option" aria-selected={i === active} className="search-item" data-active={i === active} onMouseEnter={() => setActive(i)} onClick={() => go(e)}>
+              <Icon aria-hidden="true" />
+              <span>
+                <span className="search-item__label">{e.label}</span>
+                <br />
+                <span className="search-item__desc">{e.description}</span>
+              </span>
             </li>
           )
         })}
-        {entries.length === 0 && <li className="u-muted u-small" style={{ padding: 12 }}>Nada encontrado para “{query}”.</li>}
       </ul>
+      {entries.length === 0 && (
+        <p className="u-muted u-small" style={{ padding: 12 }} role="status">
+          Nada encontrado para “{query}”.
+        </p>
+      )}
     </Modal>
   )
 }
@@ -364,6 +423,11 @@ export function Shell() {
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' as ScrollBehavior })
     setMenuOpen(false)
     clearToasts()
+    // Título da aba muda com a tela (RA-12): leitores de tela e o histórico do navegador mostram onde se está.
+    const step = location.pathname.match(/^\/guiado\/([a-z]+)/)?.[1] as StepId | undefined
+    const entry = ALL_ENTRIES.find((e) => e.path === location.pathname)
+    const page = step && STEP_META[step] ? `${STEP_META[step].label} (guiado)` : entry?.label ?? (location.pathname === '/livre' ? 'Todos os módulos' : null)
+    document.title = page ? `${page} · Atelier UI` : 'Atelier UI — Design System Studio'
   }, [location.pathname])
 
   // Falhas de download na página publicada (ex.: formato não permitido) viram um aviso visível.

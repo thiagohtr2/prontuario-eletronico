@@ -39,8 +39,10 @@ export function themeToCssVariables(theme: ResolvedTheme, selector = ':root'): s
 /** CSS de referência do projeto: tokens + regras base de acessibilidade e responsividade. */
 export function buildProjectCss(project: Project): string {
   const theme = projectTheme(project)
+  // O nome do projeto vai num comentário: “*/” no nome fecharia o comentário e quebraria o CSS (TE-21).
+  const safeName = (project.meta.name || 'Projeto').replace(/\*\//g, '* /').replace(/[\r\n]+/g, ' ')
   return `/*
- * ${project.meta.name || 'Projeto'} — CSS de referência gerado pelo Atelier UI.
+ * ${safeName} — CSS de referência gerado pelo Atelier UI.
  * Tokens da identidade global. Use estas variáveis em todos os componentes.
  */
 ${themeToCssVariables(theme)}

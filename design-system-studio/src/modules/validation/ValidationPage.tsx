@@ -226,7 +226,7 @@ function ReportView() {
                 Baixar .md
               </Button>
             </div>
-            <pre className="ui-code" style={{ maxHeight: 420 }}>
+            <pre className="ui-code" tabIndex={0} style={{ maxHeight: 420 }}>
               {fixPrompt}
             </pre>
           </Section>

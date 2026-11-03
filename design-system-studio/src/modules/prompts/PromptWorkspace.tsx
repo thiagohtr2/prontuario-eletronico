@@ -182,7 +182,7 @@ export function PromptWorkspace() {
             </Button>
             <span className="u-subtle u-small">{text.length.toLocaleString('pt-BR')} caracteres · gerado a partir da especificação JSON</span>
           </div>
-          <pre className="ui-code" style={{ maxHeight: 720 }} data-testid="master-prompt-text">
+          <pre className="ui-code" tabIndex={0} style={{ maxHeight: 720 }} data-testid="master-prompt-text">
             {text}
           </pre>
         </div>
@@ -258,7 +258,7 @@ export function PromptWorkspace() {
             <CopyButton text={json} label="Copiar JSON" />
             <span className="u-subtle u-small">Fonte da verdade: o texto do Master Prompt é gerado a partir deste objeto. Pode ser reimportado.</span>
           </div>
-          <pre className="ui-code" style={{ maxHeight: 720 }}>
+          <pre className="ui-code" tabIndex={0} style={{ maxHeight: 720 }}>
             {json}
           </pre>
         </div>

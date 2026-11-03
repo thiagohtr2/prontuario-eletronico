@@ -26,6 +26,8 @@ import './color.css'
 type Tab = 'paletas' | 'tokens' | 'tipografia' | 'formas'
 
 function PaletteGallery({ guided }: { guided: boolean }) {
+  // “Prompt” em cada cartão só no modo Avançado (UX-22): no Essencial, o prompt da identidade fica no painel.
+  const advanced = useProject((p) => p.depth === 'advanced')
   const paletteId = useProject((p) => p.identity.paletteId)
   const typography = useStudio((s) => s.project.identity.typography)
   const geometry = useStudio((s) => s.project.identity.geometry)
@@ -61,7 +63,7 @@ function PaletteGallery({ guided }: { guided: boolean }) {
             title={p.name}
             meta={`${PALETTE_CATEGORIES.find((c) => c.id === p.category)?.name} · ${themes.get(p.id)!.tokens.mode === 'dark' ? 'escura' : 'clara'}`}
             description={p.description}
-            footer={<PromptButton target={{ kind: 'palette', id: p.id }} label="Prompt" />}
+            footer={advanced ? <PromptButton target={{ kind: 'palette', id: p.id }} label="Prompt" /> : undefined}
           />
         ))}
       </div>

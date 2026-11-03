@@ -5,6 +5,18 @@ import { KIND_LABEL, type PromptItem } from './items'
 import { GLOBAL_RESPONSIVE_RULES, IMPLEMENTATION_RULES, REFERENCE_WIDTHS, rulesFor } from './responsive'
 import { buildProjectSpec, type ProjectSpec } from './spec'
 
+/**
+ * Texto livre do usuário dentro do Markdown (TE-21): uma linha só, sem virar título, lista,
+ * citação ou HTML no meio do prompt.
+ */
+export const inlineText = (s: string) =>
+  s
+    .replace(/[\r\n]+/g, ' ')
+    .replace(/</g, '‹')
+    .replace(/>/g, '›')
+    .replace(/^\s*[#>*\-+]+\s*/, '')
+    .trim()
+
 const bulletList = (lines: string[], indent = '') => lines.filter(Boolean).map((l) => `${indent}- ${l}`).join('\n')
 const bullet = bulletList
 
@@ -70,7 +82,7 @@ export function renderMasterPrompt(spec: ProjectSpec): string {
   const out: string[] = []
   const seen: SeenLines = new Map()
 
-  out.push(`# Master Prompt — ${p.name}`)
+  out.push(`# Master Prompt — ${inlineText(p.name)}`)
   out.push(
     `> Especificação gerada pelo Atelier UI (Design System Studio) em ${new Date(spec.generatedAt).toLocaleString('pt-BR')}.\n> As decisões abaixo foram escolhidas pelo usuário no Studio, exceto as marcadas como “padrão do Studio (não revisado)”, que são sugestões neutras. Implemente exatamente o que está descrito; quando algo não estiver especificado, escolha a opção mais simples e consistente com o restante, sem adicionar decoração. Em caso de dúvida entre dois textos, valem as “Decisões de prioridade”.`,
   )
@@ -78,22 +90,22 @@ export function renderMasterPrompt(spec: ProjectSpec): string {
   out.push('## A. Informações do projeto')
   out.push(
     bullet([
-      `Nome: ${p.name}`,
-      `Tipo de aplicação: ${p.type}`,
-      p.objective && `Objetivo: ${p.objective}`,
-      p.description && `Descrição: ${p.description}`,
-      p.audience && `Público-alvo: ${p.audience}`,
-      p.purpose && `Finalidade principal: ${p.purpose}`,
-      p.features.length ? `Funcionalidades previstas: ${p.features.join('; ')}` : '',
-      p.tech && `Tecnologia desejada: ${p.tech}`,
+      `Nome: ${inlineText(p.name)}`,
+      `Tipo de aplicação: ${inlineText(p.type)}`,
+      p.objective && `Objetivo: ${inlineText(p.objective)}`,
+      p.description && `Descrição: ${inlineText(p.description)}`,
+      p.audience && `Público-alvo: ${inlineText(p.audience)}`,
+      p.purpose && `Finalidade principal: ${inlineText(p.purpose)}`,
+      p.features.length ? `Funcionalidades previstas: ${p.features.map(inlineText).join('; ')}` : '',
+      p.tech && `Tecnologia desejada: ${inlineText(p.tech)}`,
     ].filter(Boolean) as string[]),
   )
 
   const c = spec.content
   out.push(
     `### Conteúdo do projeto\n${bullet([
-      `Marca: ${c.brand ? `“${c.brand}”` : 'ainda não definida (pergunte ao usuário)'}.`,
-      c.navItems.length ? `Itens do menu principal, nesta ordem: ${c.navItems.join(' · ')}.` : 'Itens do menu principal: ainda não definidos.',
+      `Marca: ${c.brand ? `“${inlineText(c.brand)}”` : 'ainda não definida (pergunte ao usuário)'}.`,
+      c.navItems.length ? `Itens do menu principal, nesta ordem: ${c.navItems.map(inlineText).join(' · ')}.` : 'Itens do menu principal: ainda não definidos.',
       c.mobileNav,
       ...c.rules,
     ])}`,

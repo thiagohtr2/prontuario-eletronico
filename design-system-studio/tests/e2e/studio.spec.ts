@@ -17,8 +17,9 @@ test.describe('Color System e herança global', () => {
     await freshStart(page)
     await go(page, '/modulos/cores')
     const target = page.getByTestId('palette-option-noite-na-mata')
-    await target.scrollIntoViewIfNeeded()
-    await page.mouse.wheel(0, -120)
+    // Alvo inteiro dentro da janela: assim o próprio Playwright não rola a página antes do clique.
+    await target.locator('.ui-option__hit').evaluate((el) => el.scrollIntoView({ block: 'center' }))
+    await page.mouse.wheel(0, -40)
     await page.waitForTimeout(150)
     const before = await page.evaluate(() => window.scrollY)
     expect(before).toBeGreaterThan(300)

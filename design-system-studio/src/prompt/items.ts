@@ -108,7 +108,8 @@ function toItem(
     responsive: [...d.responsive],
     responsiveKinds: [...extraResponsiveKinds],
     measurements: { ...(d.measurements ?? {}) },
-    exceptions: [...(d.exceptions ?? []), ...(note ? [`Observação do usuário: ${note}`] : [])],
+    // Observação livre do usuário: uma linha, sem Markdown que quebre a estrutura do prompt (TE-21).
+    exceptions: [...(d.exceptions ?? []), ...(note ? [`Observação do usuário: ${note.replace(/[\r\n]+/g, ' ').replace(/</g, '‹').replace(/>/g, '›').trim()}`] : [])],
     notes: [...(d.notes ?? [])],
     included: !project.prompt.excluded.includes(key),
   }

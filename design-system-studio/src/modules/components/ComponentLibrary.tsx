@@ -108,7 +108,7 @@ export function ComponentLibrary({ guided = false }: { guided?: boolean }) {
                     .filter((c) => c.group === g.id && (showAll || ESSENTIAL_CATEGORY_IDS.includes(c.id) || c.id === category.id))
                     .map((c) => (
                       <option key={c.id} value={c.id}>
-                        {c.number}. {c.name}
+                        {c.name}
                       </option>
                     ))}
                 </optgroup>

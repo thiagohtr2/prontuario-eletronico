@@ -21,6 +21,8 @@ export interface Dimension {
 const px = (value: number): Dimension => ({ value, unit: 'px' })
 const kebab = (s: string) => s.replace(/[A-Z]/g, (m) => `-${m.toLowerCase()}`)
 const isColor = (v: unknown): v is string => typeof v === 'string' && /^#|^rgba?\(/.test(v)
+/** Nome do projeto seguro dentro de comentários de código (`*` + `/` ou quebra de linha não escapam). */
+const commentSafe = (s: string) => s.replace(/\*\//g, '* /').replace(/[\r\n]+/g, ' ')
 
 /** Breakpoints únicos do projeto (os mesmos do Master Prompt e do CSS). */
 export const BREAKPOINT_PX = Object.fromEntries(BREAKPOINTS.map((b) => [b.name, { min: b.min, max: b.max }])) as Record<string, { min: number; max: number | null }>
@@ -159,7 +161,7 @@ export function buildTailwindConfig(project: Project): string {
     .map((b) => `      ${b.name}: '${b.min}px',`)
     .join('\n')
   return `/** @type {import('tailwindcss').Config} */
-// ${project.meta.name || 'Projeto'} — gerado pelo Atelier UI. Use junto com o CSS de referência (variáveis --color-*, --radius-*...).
+// ${commentSafe(project.meta.name || 'Projeto')} — gerado pelo Atelier UI. Use junto com o CSS de referência (variáveis --color-*, --radius-*...).
 module.exports = {
   content: ['./index.html', './src/**/*.{js,jsx,ts,tsx,vue,svelte,html}'],
   theme: {
@@ -197,7 +199,7 @@ export function buildTailwindV4(project: Project): string {
     `  --shadow-surface: ${m.shadow};`,
     ...BREAKPOINTS.filter((b) => b.min > 0).map((b) => `  --breakpoint-${b.name}: ${b.min}px;`),
   ]
-  return `/* ${project.meta.name || 'Projeto'} — Tailwind CSS 4, gerado pelo Atelier UI. */
+  return `/* ${commentSafe(project.meta.name || 'Projeto')} — Tailwind CSS 4, gerado pelo Atelier UI. */
 @import "tailwindcss";
 
 @theme {
@@ -211,7 +213,7 @@ export function buildTokensTs(project: Project): string {
   const theme = projectTheme(project)
   const tokens = Object.fromEntries(colorKeys(theme).map((k) => [k, theme.tokens[k]]))
   const facts = withGridFacts(buildFacts(project), project)
-  return `// ${project.meta.name || 'Projeto'} — gerado pelo Atelier UI. Não edite à mão: gere de novo pelo Studio.
+  return `// ${commentSafe(project.meta.name || 'Projeto')} — gerado pelo Atelier UI. Não edite à mão: gere de novo pelo Studio.
 export const colors = ${JSON.stringify(tokens, null, 2)} as const
 
 export const radius = { sm: ${theme.metrics.radiusSm}, md: ${theme.metrics.radiusMd}, lg: ${theme.metrics.radiusLg} } as const

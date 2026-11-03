@@ -153,12 +153,12 @@ const NavCard = memo(function NavCard({ kind, model, variant, selected, theme, s
         ) : (
           <SidebarStage model={model as SidebarModel} variant={variant} theme={theme} height={SIDEBAR_STAGE_H} />
         )}
-        {showHints && (
-          <span className={kind === 'sidebar' ? 'nvs-card__tag nvs-card__tag--end' : 'nvs-card__tag'}>
-            <MousePointerClick aria-hidden="true" /> Prévia interativa
-          </span>
-        )}
       </div>
+      {showHints && (
+        <span className="nvs-card__tag">
+          <MousePointerClick aria-hidden="true" /> Prévia interativa: abra os menus e clique nos itens
+        </span>
+      )}
       <button type="button" className="nvs-card__select" data-role="select" aria-pressed={selected} onClick={() => selectItem(kind, model.id, variant)}>
         <span className="nvs-card__text">
           <span className="nvs-card__title">{model.name}</span>

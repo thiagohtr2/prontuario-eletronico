@@ -1,5 +1,6 @@
 import type { CSSProperties } from 'react'
 import { Bell, CheckCircle2, Home, Info, LayoutGrid, Search, Settings, TriangleAlert, Users, XCircle } from 'lucide-react'
+import { useProject } from '@/core/store'
 import { surfaceStyle } from '@/core/tokens'
 import type { ResolvedTheme } from '@/core/types'
 
@@ -9,6 +10,10 @@ import type { ResolvedTheme } from '@/core/types'
  */
 export function IdentityPreview({ theme, compact = false }: { theme: ResolvedTheme; compact?: boolean }) {
   const { tokens: t, metrics: m, typography: ty } = theme
+  // Nome e menu do projeto no lugar de “Marca” e de um menu genérico (UX-29).
+  const projectName = useProject((p) => p.meta.name.trim())
+  const navSource = useProject((p) => (p.meta.navItems.some((s) => s.trim()) ? p.meta.navItems : p.meta.features))
+  const menu = navSource.map((s) => s.trim()).filter(Boolean).slice(0, 5)
   // Tamanhos desenhados para a base de 15 px; acompanham o “Tamanho base do texto” escolhido.
   const fs = (px: number) => Math.round(((px * ty.baseSize) / 15) * 10) / 10
   // Estilo dos ícones da identidade: contorno, preenchido ou duotone.
@@ -59,17 +64,14 @@ export function IdentityPreview({ theme, compact = false }: { theme: ResolvedThe
       }}
     >
       {!compact && (
-        <aside style={{ background: t.navBg, color: t.navText, padding: `${pad * 2}px ${pad}px`, display: 'grid', alignContent: 'start', gap: 4, borderRight: `1px solid ${t.border}` }}>
+        <div style={{ background: t.navBg, color: t.navText, padding: `${pad * 2}px ${pad}px`, display: 'grid', alignContent: 'start', gap: 4, borderRight: `1px solid ${t.border}` }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '0 6px 14px', fontFamily: m.headingFont, fontWeight: ty.headingWeight, fontSize: fs(14), color: t.navActiveText === '#ffffff' ? '#fff' : t.text }}>
             <span style={{ width: 20, height: 20, borderRadius: m.radiusSm, background: t.gradientEnabled ? `linear-gradient(135deg, ${t.gradientFrom}, ${t.gradientTo})` : t.primary }} />
-            Marca
+            {projectName || 'Seu projeto'}
           </div>
-          {[
-            { icon: Home, label: 'Início', active: true },
-            { icon: LayoutGrid, label: 'Projetos' },
-            { icon: Users, label: 'Equipe' },
-            { icon: Settings, label: 'Ajustes' },
-          ].map(({ icon: Icon, label, active }) => (
+          {(menu.length ? menu : ['Início', 'Projetos', 'Equipe', 'Ajustes'])
+            .map((label, i) => ({ icon: [Home, LayoutGrid, Users, Settings, Bell][i % 5], label, active: i === 0 }))
+            .map(({ icon: Icon, label, active }) => (
             <div
               key={label}
               style={{
@@ -89,7 +91,7 @@ export function IdentityPreview({ theme, compact = false }: { theme: ResolvedThe
               {label}
             </div>
           ))}
-        </aside>
+        </div>
       )}
       <div style={{ display: 'grid', gap: pad * 2, padding: pad * 2, alignContent: 'start', minWidth: 0 }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, flexWrap: 'wrap' }}>

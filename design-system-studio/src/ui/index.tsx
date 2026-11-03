@@ -9,6 +9,7 @@ import {
   type ReactNode,
   type SelectHTMLAttributes,
   type TextareaHTMLAttributes,
+  type KeyboardEvent as ReactKeyboardEvent,
 } from 'react'
 import { createPortal } from 'react-dom'
 import { create } from 'zustand'
@@ -377,10 +378,32 @@ export function Tabs<T extends string>({
   tabs: { value: T; label: ReactNode; icon?: ReactNode }[]
   label: string
 }) {
+  // Padrão de abas do WAI-ARIA (RA-14): só a aba ativa entra no Tab; setas, Home e End trocam de aba.
+  const onKeyDown = (e: ReactKeyboardEvent<HTMLDivElement>) => {
+    const keys = ['ArrowRight', 'ArrowLeft', 'Home', 'End']
+    if (!keys.includes(e.key)) return
+    e.preventDefault()
+    const i = tabs.findIndex((t) => t.value === value)
+    const next = e.key === 'Home' ? 0 : e.key === 'End' ? tabs.length - 1 : (i + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length
+    onChange(tabs[next].value)
+    const buttons = e.currentTarget.querySelectorAll<HTMLButtonElement>('[role="tab"]')
+    requestAnimationFrame(() => {
+      buttons[next]?.focus()
+      buttons[next]?.scrollIntoView({ block: 'nearest', inline: 'nearest' })
+    })
+  }
   return (
-    <div className="ui-tabs" role="tablist" aria-label={label}>
+    <div className="ui-tabs" role="tablist" aria-label={label} onKeyDown={onKeyDown}>
       {tabs.map((t) => (
-        <button key={t.value} type="button" role="tab" className="ui-tab" aria-selected={t.value === value} onClick={() => onChange(t.value)}>
+        <button
+          key={t.value}
+          type="button"
+          role="tab"
+          className="ui-tab"
+          aria-selected={t.value === value}
+          tabIndex={t.value === value ? 0 : -1}
+          onClick={() => onChange(t.value)}
+        >
           {t.icon}
           {t.label}
         </button>
@@ -678,7 +701,8 @@ export function Toaster() {
   return (
     <div className="ui-toasts" role="status" aria-live="polite">
       {items.map((t) => (
-        <div key={t.id} className={cx('ui-toast', t.tone === 'error' && 'ui-toast--error')}>
+        // Erros são anunciados na hora (role="alert"); os demais avisos, quando o leitor puder (RA-25).
+        <div key={t.id} className={cx('ui-toast', t.tone === 'error' && 'ui-toast--error')} role={t.tone === 'error' ? 'alert' : undefined}>
           {t.tone === 'error' ? <XCircle /> : t.tone === 'success' ? <CheckCircle2 /> : <Info />}
           <span>{t.message}</span>
         </div>

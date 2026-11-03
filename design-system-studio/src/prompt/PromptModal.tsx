@@ -40,7 +40,7 @@ export default function PromptModal({ target, onClose }: { target: PromptTarget;
         ) : undefined
       }
     >
-      {text ? <pre className="ui-code" data-testid="prompt-text">{text}</pre> : <Callout tone="warning">Este elemento não foi encontrado no catálogo.</Callout>}
+      {text ? <pre className="ui-code" tabIndex={0} data-testid="prompt-text">{text}</pre> : <Callout tone="warning">Este elemento não foi encontrado no catálogo.</Callout>}
     </Modal>
   )
 }

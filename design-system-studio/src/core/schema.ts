@@ -1,5 +1,6 @@
 import { z } from 'zod'
 import { createProject, type Project } from './project'
+import { TOKEN_KEYS } from './tokens'
 
 /**
  * Validação de arquivos importados. O arquivo é mesclado sobre um projeto padrão antes de
@@ -8,9 +9,23 @@ import { createProject, type Project } from './project'
  */
 
 const hex = z.string().regex(/^#[0-9a-fA-F]{6}$/, 'cor hexadecimal no formato #RRGGBB')
-const tokenOverrides = z.record(z.string(), hex)
+// Só tokens que existem (TE-12): uma chave desconhecida é recusada com mensagem clara.
+const tokenKey = z.string().refine((k) => (TOKEN_KEYS as string[]).includes(k), { message: 'token desconhecido' })
+const tokenOverrides = z.record(tokenKey, hex)
+// Limites de tamanho: um arquivo com textos gigantes não trava o Studio nem estoura o armazenamento.
+const shortText = z.string().max(200, 'texto longo demais (máximo 200 caracteres)')
+const longText = z.string().max(5000, 'texto longo demais (máximo 5.000 caracteres)')
 const stepId = z.enum(['objetivo', 'entrada', 'desktop', 'mobile', 'revisao', 'preview', 'identidade', 'navegacao', 'componentes', 'entrega'])
 const navChoice = z.object({ id: z.string().min(1), variant: z.union([z.literal(0), z.literal(1)]) })
+
+const validationReportSchema = z.object({
+  tool: z.string(),
+  generatedAt: z.string(),
+  baseUrl: z.string(),
+  widths: z.array(z.number()),
+  pages: z.array(z.string()),
+  issues: z.array(z.object({ page: z.string(), width: z.number(), type: z.string(), severity: z.string(), element: z.string(), description: z.string(), suggestion: z.string() })),
+})
 
 export const projectSchema = z.object({
   schema: z.literal('atelier-ui/project'),
@@ -19,16 +34,16 @@ export const projectSchema = z.object({
   createdAt: z.string(),
   updatedAt: z.string(),
   meta: z.object({
-    name: z.string(),
-    objective: z.string(),
-    description: z.string(),
-    audience: z.string(),
-    purpose: z.string(),
+    name: shortText,
+    objective: longText,
+    description: longText,
+    audience: longText,
+    purpose: longText,
     projectType: z.enum(['saas', 'dashboard', 'loja', 'landing', 'portfolio', 'one-screen', 'outro']).nullable(),
-    projectTypeOther: z.string(),
-    features: z.array(z.string()),
-    navItems: z.array(z.string()),
-    tech: z.string(),
+    projectTypeOther: shortText,
+    features: z.array(shortText).max(60),
+    navItems: z.array(shortText).max(40),
+    tech: shortText,
   }),
   mode: z.enum(['guided', 'free']),
   depth: z.enum(['essential', 'advanced']),
@@ -73,8 +88,8 @@ export const projectSchema = z.object({
       id: z.string().min(1),
       categoryId: z.string().min(1),
       familyId: z.string().min(1),
-      label: z.string(),
-      props: z.record(z.string(), z.union([z.string(), z.number(), z.boolean()])),
+      label: shortText,
+      props: z.record(z.string(), z.union([longText, z.number(), z.boolean()])),
       tokenOverrides,
       createdAt: z.string(),
     }),
@@ -102,7 +117,7 @@ export const projectSchema = z.object({
     .nullable(),
   prompt: z.object({
     excluded: z.array(z.string()),
-    notes: z.record(z.string(), z.string()),
+    notes: z.record(z.string(), longText),
     conflictResolutions: z.record(z.string(), z.string()),
   }),
   validation: z.object({
@@ -121,7 +136,8 @@ export const projectSchema = z.object({
       }),
       minTapTarget: z.number().min(16).max(96),
     }),
-    report: z.any().nullable(),
+    // Relatório validado pelo mesmo esquema da importação; inválido vira null (não quebra o projeto).
+    report: z.unknown().transform((v) => (v ? (validationReportSchema.safeParse(v).success ? v : null) : null)),
   }),
 })
 

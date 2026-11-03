@@ -155,6 +155,16 @@ export function detectPending(project: Project): Pending[] {
     out.push({ id: 'cadastro', message: 'Escolha um fluxo de cadastro ou marque “Não haverá cadastro”.', route: '/modulos/cadastro' })
   if (!project.layout.desktopId) out.push({ id: 'desktop', message: 'Escolha a arquitetura do computador.', route: '/modulos/desktop' })
   if (!project.layout.mobileId) out.push({ id: 'mobile', message: 'Escolha a arquitetura do celular.', route: '/modulos/mobile' })
+  // Ids que não existem nos catálogos (arquivo editado à mão ou de outra versão): avisar, não ignorar.
+  const missing: [string | null | undefined, unknown, string, string][] = [
+    [project.layout.desktopId, desktopById(project.layout.desktopId), 'arquitetura do computador', '/modulos/desktop'],
+    [project.layout.mobileId, mobileById(project.layout.mobileId), 'arquitetura do celular', '/modulos/mobile'],
+    [project.navigation.header?.id, project.navigation.header ? headerById(project.navigation.header.id) : true, 'header', '/modulos/navegacao'],
+    [project.navigation.sidebar?.id, project.navigation.sidebar ? sidebarById(project.navigation.sidebar.id) : true, 'sidebar', '/modulos/navegacao'],
+    [project.identity.paletteId, paletteById(project.identity.paletteId), 'paleta', '/modulos/cores'],
+  ]
+  for (const [id, found, what, route] of missing)
+    if (id && !found) out.push({ id: `nao-encontrado-${what}`, message: `O modelo de ${what} “${id}” não existe neste Studio (arquivo de outra versão ou editado à mão). Escolha outro.`, route })
   const hasNav = Boolean(project.layout.desktopId || project.layout.mobileId || project.navigation.header || project.navigation.sidebar)
   if (hasNav && !project.meta.navItems.some((s) => s.trim()))
     out.push({ id: 'menu', message: 'Defina os itens do menu principal (os menus dos modelos são só exemplo).', route: '/guiado/objetivo' })

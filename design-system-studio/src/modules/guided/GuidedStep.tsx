@@ -28,7 +28,7 @@ const STEP_INTRO: Record<StepId, string> = {
   mobile: 'Escolha como o site se organiza no celular. É uma decisão separada do computador: um menu lateral não precisa virar gaveta no celular.',
   revisao: 'Confira o esqueleto completo. Você pode voltar e mudar qualquer escolha. Ao aprovar, o fluxo segue para o acabamento visual.',
   preview: 'Veja todas as decisões estruturais juntas, no computador, no tablet e no celular. A prévia acompanha cada mudança.',
-  identidade: 'Agora sim, as cores. Escolha uma paleta: todos os componentes herdam esses tokens. Tipografia e cantos vêm em seguida.',
+  identidade: 'Agora sim, as cores. Escolha uma paleta: todos os componentes herdam esses tokens. Nas abas “Tipografia” e “Formas e superfícies”, nesta mesma etapa, você ajusta fontes e cantos.',
   navegacao: 'O layout já definiu onde ficam os menus. Aqui você escolhe como eles se parecem. Etapa opcional.',
   componentes: 'Escolha e personalize as peças da interface: botões, campos, cards, tabelas… Etapa opcional.',
   entrega: 'Tudo o que você aprovou vira um Master Prompt detalhado. Copie, baixe ou exporte em JSON e CSS.',
@@ -73,6 +73,8 @@ function Stepper({ current }: { current: StepId }) {
   const approved = useProject((p) => p.guided.skeletonApproved)
   // Etapas do esqueleto: concluídas pelas escolhas reais (mesma regra do contador “Esqueleto x/5”).
   const skeleton = useStudio(useShallow((s) => skeletonDone(s.project)))
+  const hasNavChoice = useProject((p) => Boolean(p.navigation.header || p.navigation.sidebar))
+  const hasComponents = useProject((p) => p.components.length > 0)
   const phases: { label: string; steps: StepId[]; locked: boolean }[] = [
     { label: 'Esqueleto', steps: SKELETON_STEPS, locked: false },
     { label: 'Acabamento', steps: FINISH_STEPS, locked: !approved },
@@ -90,7 +92,9 @@ function Stepper({ current }: { current: StepId }) {
             {phase.steps.map((s) => {
               const idx = ALL_STEPS.indexOf(s)
               const isDone = SKELETON_STEPS.includes(s) ? skeleton.includes(s) : completed.includes(s)
-              const state = s === current ? 'current' : isDone ? 'done' : 'todo'
+              // Etapas opcionais puladas sem nenhuma escolha aparecem como “pulada”, não como concluídas (UX-44).
+              const skipped = isDone && ((s === 'navegacao' && !hasNavChoice) || (s === 'componentes' && !hasComponents))
+              const state = s === current ? 'current' : skipped ? 'skipped' : isDone ? 'done' : 'todo'
               return (
                 <li key={s}>
                   <button
@@ -113,6 +117,7 @@ function Stepper({ current }: { current: StepId }) {
                     <span className="gd-step__text">
                       {state === 'done' && <Check width={12} height={12} style={{ verticalAlign: '-1px', marginRight: 3 }} aria-hidden="true" />}
                       {idx + 1}. {STEP_META[s].short}
+                      {state === 'skipped' && <span className="gd-step__skip"> (pulada)</span>}
                     </span>
                   </button>
                 </li>
