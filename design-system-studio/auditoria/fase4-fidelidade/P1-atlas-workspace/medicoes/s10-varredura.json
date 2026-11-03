@@ -1,0 +1,2500 @@
+{
+  "dev-1": {
+    "app": {
+      "320": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/pessoas": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "360": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/pessoas": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "375": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/pessoas": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "390": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/pessoas": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "412": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/pessoas": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "430": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/pessoas": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "480": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/pessoas": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "600": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/pessoas": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "768": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/pessoas": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "820": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/pessoas": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1024": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/pessoas": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1280": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/pessoas": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1440": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/pessoas": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1920": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/pessoas": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      }
+    },
+    "auth": {
+      "320": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "360": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "375": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "390": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "412": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "430": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "480": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "600": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "768": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "820": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1024": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1280": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1440": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1920": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      }
+    },
+    "extra": {
+      "320": {
+        "kpiCols": 1,
+        "kpiMinW": 288,
+        "valueClipped": false,
+        "table": {
+          "table": false,
+          "cardsAlt": 16
+        }
+      },
+      "390": {
+        "kpiCols": 1,
+        "kpiMinW": 358,
+        "valueClipped": false,
+        "table": {
+          "table": false,
+          "cardsAlt": 16
+        }
+      },
+      "820": {
+        "kpiCols": 2,
+        "kpiMinW": 338,
+        "valueClipped": false,
+        "table": {
+          "table": true,
+          "scroller": {
+            "cls": "sw-table-wrap",
+            "sw": 698,
+            "cw": 698
+          },
+          "tdDisplay": "table-cell",
+          "theadVis": true,
+          "stickyCol": "static",
+          "tableW": 698
+        }
+      },
+      "1440": {
+        "kpiCols": 3,
+        "kpiMinW": 359,
+        "valueClipped": false,
+        "table": {
+          "table": true,
+          "scroller": {
+            "cls": "sw-table-wrap",
+            "sw": 1122,
+            "cw": 1122
+          },
+          "tdDisplay": "table-cell",
+          "theadVis": true,
+          "stickyCol": "static",
+          "tableW": 1122
+        }
+      }
+    }
+  },
+  "dev-2": {
+    "app": {
+      "320": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "360": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "375": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "390": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "412": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "430": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "480": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "600": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "768": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "820": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1024": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Atlas Workspace",
+            "Marina Alves",
+            "Gerente de produto"
+          ],
+          "clippedN": 3
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Atlas Workspace",
+            "Marina Alves",
+            "Gerente de produto"
+          ],
+          "clippedN": 3
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Atlas Workspace",
+            "Marina Alves",
+            "Gerente de produto"
+          ],
+          "clippedN": 3
+        },
+        "#/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Atlas Workspace",
+            "Marina Alves",
+            "Gerente de produto"
+          ],
+          "clippedN": 3
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Atlas Workspace",
+            "Marina Alves",
+            "Gerente de produto"
+          ],
+          "clippedN": 3
+        }
+      },
+      "1280": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Gerente de produto"
+          ],
+          "clippedN": 1
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Gerente de produto"
+          ],
+          "clippedN": 1
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Gerente de produto"
+          ],
+          "clippedN": 1
+        },
+        "#/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Gerente de produto"
+          ],
+          "clippedN": 1
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Gerente de produto"
+          ],
+          "clippedN": 1
+        }
+      },
+      "1440": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Gerente de produto"
+          ],
+          "clippedN": 1
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Gerente de produto"
+          ],
+          "clippedN": 1
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Gerente de produto"
+          ],
+          "clippedN": 1
+        },
+        "#/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Gerente de produto"
+          ],
+          "clippedN": 1
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Gerente de produto"
+          ],
+          "clippedN": 1
+        }
+      },
+      "1920": {
+        "#/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Gerente de produto"
+          ],
+          "clippedN": 1
+        },
+        "#/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Gerente de produto"
+          ],
+          "clippedN": 1
+        },
+        "#/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Gerente de produto"
+          ],
+          "clippedN": 1
+        },
+        "#/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Gerente de produto"
+          ],
+          "clippedN": 1
+        },
+        "#/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Gerente de produto"
+          ],
+          "clippedN": 1
+        }
+      }
+    },
+    "auth": {
+      "320": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "360": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "375": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "390": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "412": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "430": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "480": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "600": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "768": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "820": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1024": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1280": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1440": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1920": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      }
+    },
+    "extra": {
+      "320": {
+        "kpiCols": 1,
+        "kpiMinW": 288,
+        "valueClipped": false,
+        "table": {
+          "table": true,
+          "scroller": {
+            "cls": "sw-table__scroll",
+            "sw": 620,
+            "cw": 288
+          },
+          "tdDisplay": "table-cell",
+          "theadVis": true,
+          "stickyCol": "sticky",
+          "tableW": 620
+        }
+      },
+      "390": {
+        "kpiCols": 1,
+        "kpiMinW": 358,
+        "valueClipped": false,
+        "table": {
+          "table": true,
+          "scroller": {
+            "cls": "sw-table__scroll",
+            "sw": 620,
+            "cw": 358
+          },
+          "tdDisplay": "table-cell",
+          "theadVis": true,
+          "stickyCol": "sticky",
+          "tableW": 620
+        }
+      },
+      "820": {
+        "kpiCols": 2,
+        "kpiMinW": 330,
+        "valueClipped": false,
+        "table": {
+          "table": true,
+          "scroller": {
+            "cls": "sw-table__scroll",
+            "sw": 684,
+            "cw": 684
+          },
+          "tdDisplay": "table-cell",
+          "theadVis": true,
+          "stickyCol": "static",
+          "tableW": 684
+        }
+      },
+      "1440": {
+        "kpiCols": 3,
+        "kpiMinW": 359,
+        "valueClipped": false,
+        "table": {
+          "table": true,
+          "scroller": {
+            "cls": "sw-table__scroll",
+            "sw": 1124,
+            "cw": 1124
+          },
+          "tdDisplay": "table-cell",
+          "theadVis": true,
+          "stickyCol": "static",
+          "tableW": 1124
+        }
+      }
+    }
+  },
+  "dev-3": {
+    "app": {
+      "320": {
+        "#/app/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "360": {
+        "#/app/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "375": {
+        "#/app/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "390": {
+        "#/app/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "412": {
+        "#/app/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "430": {
+        "#/app/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "480": {
+        "#/app/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "600": {
+        "#/app/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "768": {
+        "#/app/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "820": {
+        "#/app/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1024": {
+        "#/app/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Atlas Workspace"
+          ],
+          "clippedN": 1
+        },
+        "#/app/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Atlas Workspace"
+          ],
+          "clippedN": 1
+        },
+        "#/app/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Atlas Workspace"
+          ],
+          "clippedN": 1
+        },
+        "#/app/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Atlas Workspace"
+          ],
+          "clippedN": 1
+        },
+        "#/app/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [
+            "Atlas Workspace"
+          ],
+          "clippedN": 1
+        }
+      },
+      "1280": {
+        "#/app/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1440": {
+        "#/app/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1920": {
+        "#/app/painel": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/inicio": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/projetos": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/relatorios": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "#/app/ajuda": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      }
+    },
+    "auth": {
+      "320": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "360": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "375": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "390": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "412": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "430": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "480": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "600": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "768": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "820": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1024": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1280": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1440": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      },
+      "1920": {
+        "login": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        },
+        "cadastro": {
+          "overflow": 0,
+          "outside": [],
+          "outsideN": 0,
+          "clipped": [],
+          "clippedN": 0
+        }
+      }
+    },
+    "extra": {
+      "320": {
+        "kpiCols": 1,
+        "kpiMinW": 286,
+        "valueClipped": false,
+        "table": {
+          "table": true,
+          "scroller": {
+            "cls": "sw-table-scroll",
+            "sw": 286,
+            "cw": 286
+          },
+          "tdDisplay": "flex",
+          "theadVis": false,
+          "stickyCol": "static",
+          "tableW": 286
+        }
+      },
+      "390": {
+        "kpiCols": 1,
+        "kpiMinW": 356,
+        "valueClipped": false,
+        "table": {
+          "table": true,
+          "scroller": {
+            "cls": "sw-table-scroll",
+            "sw": 356,
+            "cw": 356
+          },
+          "tdDisplay": "flex",
+          "theadVis": false,
+          "stickyCol": "static",
+          "tableW": 356
+        }
+      },
+      "820": {
+        "kpiCols": 2,
+        "kpiMinW": 353,
+        "valueClipped": false,
+        "table": {
+          "table": true,
+          "scroller": {
+            "cls": "sw-table-scroll",
+            "sw": 706,
+            "cw": 706
+          },
+          "tdDisplay": "table-cell",
+          "theadVis": true,
+          "stickyCol": "static",
+          "tableW": 706
+        }
+      },
+      "1440": {
+        "kpiCols": 3,
+        "kpiMinW": 374,
+        "valueClipped": false,
+        "table": {
+          "table": true,
+          "scroller": {
+            "cls": "sw-table-scroll",
+            "sw": 1122,
+            "cw": 1122
+          },
+          "tdDisplay": "table-cell",
+          "theadVis": true,
+          "stickyCol": "static",
+          "tableW": 1122
+        }
+      }
+    }
+  }
+}
