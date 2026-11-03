@@ -110,6 +110,15 @@ export function AppFrame({ layout, theme, name, nav, header, sidebar, w, h, cont
       <SidebarPreview model={sidebarModel} variant={sidebar.variant} theme={theme} interactive hideBrand={hideBrand} content={{ ...navContent, width: size?.width ? Math.round(size.width) : undefined, rail, cta: sidebar.cta }} onNavigate={onNavigate} />
     ) : null
 
+  // Painel/detalhes (e submenu ao lado de uma sidebar): o conteúdo lateral da página.
+  const panelNode = (region: LayoutRegion, size?: { width: number; height: number }): ReactNode => {
+    if (typeof aside === 'function') return aside({ width: size?.width ?? 320, height: size?.height ?? 200 })
+    if (aside) return aside
+    // Página real sem conteúdo para esta região: superfície vazia (nada de dados de exemplo).
+    if (content) return <div data-empty-region={region.id} style={{ width: '100%', height: '100%', background: theme.tokens.surface }} />
+    return <DetailPanel theme={theme} title={region.label ? region.label.charAt(0) + region.label.slice(1).toLowerCase() : 'Detalhes'} />
+  }
+
   const renderRegion = (region: LayoutRegion, size?: { width: number; height: number }): ReactNode => {
     const hideBrand = hasHeader && !touchesTop(region.id)
     switch (region.kind) {
@@ -133,14 +142,10 @@ export function AppFrame({ layout, theme, name, nav, header, sidebar, w, h, cont
         // conteúdo da página para esta coluna (filtros, pastas…), como um painel.
         if (!hasSideNav) return <Submenu theme={theme} title={region.label ? region.label.charAt(0) + region.label.slice(1).toLowerCase() : 'Seções'} items={nav} active={activeNav} onPick={onNavigate} />
         if (!asideIds.has(region.id)) return <div data-empty-region={region.id} style={{ width: '100%', height: '100%', background: theme.tokens.surface }} />
-      // falls through
+        return panelNode(region, size)
       case 'panel':
       case 'detail':
-        if (typeof aside === 'function') return aside({ width: size?.width ?? 320, height: size?.height ?? 200 })
-        if (aside) return aside
-        // Página real sem conteúdo para esta região: superfície vazia (nada de dados de exemplo).
-        if (content) return <div data-empty-region={region.id} style={{ width: '100%', height: '100%', background: theme.tokens.surface }} />
-        return <DetailPanel theme={theme} title={region.label ? region.label.charAt(0) + region.label.slice(1).toLowerCase() : 'Detalhes'} />
+        return panelNode(region, size)
       case 'chat':
         return <ChatPanel theme={theme} />
       case 'footer':
