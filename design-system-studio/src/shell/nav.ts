@@ -19,6 +19,7 @@ import {
   Sparkles,
   Target,
   UserPlus,
+  AppWindow,
 } from 'lucide-react'
 import type { StepId } from '@/core/project'
 
@@ -52,6 +53,16 @@ export const STEP_META: Record<StepId, { label: string; short: string; descripti
 
 export const MODULE_GROUPS: NavGroup[] = [
   {
+    id: 'inspiracao',
+    label: 'Modelos e inspiração',
+    entries: [
+      { id: 'modelos', label: 'Galeria de inspiração', path: '/modelos', icon: LayoutTemplate, description: 'Sites completos para usar como ponto de partida.', keywords: 'inspiração galeria modelos templates sites prontos começar rápido' },
+      { id: 'site', label: 'Seu site (páginas)', path: '/site', icon: AppWindow, description: 'O site inteiro, página por página, com edição ao clicar.', keywords: 'site páginas editar componentes deste site' },
+      { id: 'inspiracao', label: 'Referências visuais', path: '/modulos/inspiracao', icon: Sparkles, description: '20 conceitos visuais para inspirar a identidade.', keywords: 'inspiração referências conceitos identidade' },
+      { id: 'templates', label: 'Modelos de página', path: '/modulos/templates', icon: PanelsTopLeft, description: 'Modelos reutilizáveis de páginas.', keywords: 'templates modelos páginas' },
+    ],
+  },
+  {
     id: 'estrutura',
     label: 'Estrutura',
     entries: [
@@ -71,14 +82,6 @@ export const MODULE_GROUPS: NavGroup[] = [
       { id: 'cores', label: 'Cores e identidade', path: '/modulos/cores', icon: Palette, description: '60 paletas, tokens, tipografia e geometria.', keywords: 'cores paleta tokens tipografia fonte bordas sombras' },
       { id: 'navegacao', label: 'Header e sidebar (menus)', path: '/modulos/navegacao', icon: Navigation, description: '36 headers e 36 sidebars.', keywords: 'header sidebar navegação menu topbar' },
       { id: 'componentes', label: 'Componentes', path: '/modulos/componentes', icon: Blocks, description: '66 categorias em 16 famílias visuais.', keywords: 'componentes botões inputs cards tabelas editor' },
-    ],
-  },
-  {
-    id: 'inspiracao',
-    label: 'Inspiração',
-    entries: [
-      { id: 'inspiracao', label: 'Galeria de inspiração', path: '/modulos/inspiracao', icon: Sparkles, description: '20 sites fictícios completos.', keywords: 'inspiração galeria sites exemplos identidade' },
-      { id: 'templates', label: 'Modelos de página', path: '/modulos/templates', icon: PanelsTopLeft, description: 'Modelos reutilizáveis de páginas.', keywords: 'templates modelos páginas' },
     ],
   },
   {

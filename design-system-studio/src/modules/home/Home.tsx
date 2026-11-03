@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { ArrowRight, Check, Compass, Wand2 } from 'lucide-react'
+import { ArrowRight, Check, Compass, LayoutTemplate, Wand2 } from 'lucide-react'
 import { SKELETON_STEPS, skeletonDone } from '@/core/project'
 import { useProject, useStudio } from '@/core/store'
 import { STEP_META } from '@/shell/nav'
@@ -89,6 +89,22 @@ export default function Home() {
           </div>
         </div>
       )}
+
+      {/* Caminho 1: o mais rápido. Os três caminhos usam o mesmo projeto e o mesmo Master Prompt. */}
+      <article className="home-quick" data-testid="home-starters">
+        <div>
+          <span className="ui-eyebrow">Caminho mais rápido</span>
+          <h2 className="home-mode__title">
+            <LayoutTemplate width={22} height={22} aria-hidden="true" /> Começar de um site pronto
+          </h2>
+          <p className="u-muted">
+            Escolha um site completo na Galeria de inspiração — páginas, celular, cores e componentes já combinados —, ajuste só o que não gostar e gere o Master Prompt.
+          </p>
+        </div>
+        <Button variant="primary" size="lg" iconRight={<ArrowRight />} onClick={() => navigate('/modelos')} data-testid="start-starters">
+          Ver os modelos
+        </Button>
+      </article>
 
       <div className="home-modes">
         <article className="home-mode" data-current={mode === 'guided'}>

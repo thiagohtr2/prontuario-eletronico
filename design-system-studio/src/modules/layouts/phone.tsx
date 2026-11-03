@@ -82,6 +82,12 @@ export interface PhonePreviewProps {
   className?: string
   /** Marca e itens de menu reais do projeto (prévia integrada). Sem eles, usa o conteúdo de exemplo. */
   content?: { brand?: string; nav?: string[] }
+  /** Conteúdo da tela no lugar do exemplo (página de um modelo de site). Recebe o respiro inferior das barras. */
+  renderContent?: (padBottom: number) => ReactNode
+  /** Toque num destino da navegação do celular (navegação entre páginas da prévia). */
+  onNavigate?: (label: string) => void
+  /** Título da tela atual na barra superior (página aberta da prévia). */
+  screenTitle?: string
 }
 
 /* -------------------------------------------------------------------------- */
@@ -528,6 +534,9 @@ export const PhonePreview = memo(function PhonePreview({
   testId = 'phone-preview',
   className,
   content: projectContent,
+  renderContent,
+  onNavigate,
+  screenTitle,
 }: PhonePreviewProps) {
   const cfg = layout.config
   const { NAV4, NAV5, DOCK, RAIL_ITEMS, DRAWER_ITEMS } = projectLists(projectContent?.nav)
@@ -646,7 +655,7 @@ export const PhonePreview = memo(function PhonePreview({
 
   // Título da tela inicial: o primeiro item do menu do projeto, quando houver.
   const firstNav = projectContent?.nav?.map((s) => s.trim()).find(Boolean)
-  const titleText = firstNav ?? (cfg.oneScreen ? 'Painel' : 'Início')
+  const titleText = screenTitle ?? firstNav ?? (cfg.oneScreen ? 'Painel' : 'Início')
 
   const searchField = (command: boolean) => {
     const p = command ? triggerProps('search') : null
@@ -1127,7 +1136,10 @@ export const PhonePreview = memo(function PhonePreview({
         className="lay-ph-nav-item"
         label={opts.labels ? undefined : it.label}
         current={interactive ? active : undefined}
-        onClick={() => setNav(i)}
+        onClick={() => {
+          setNav(i)
+          onNavigate?.(it.label)
+        }}
         style={{ color: active ? opts.activeColor : opts.color }}
       >
         <span className="lay-ph-nav-ic" style={active && !opts.dot ? { background: 'var(--ph-nav-active)' } : undefined}>
@@ -1843,7 +1855,7 @@ export const PhonePreview = memo(function PhonePreview({
           className={cfg.oneScreen ? 'lay-ph-content lay-ph-content--fit' : 'lay-ph-content'}
           style={{ overflowY: interactive && !cfg.oneScreen ? 'auto' : 'hidden' }}
         >
-          {content}
+          {renderContent ? renderContent(contentPadBottom) : content}
         </div>
         {sideRight}
       </div>

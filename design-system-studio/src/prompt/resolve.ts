@@ -197,6 +197,18 @@ export function resolvePromptItems(items: PromptItem[], project: Project): AutoR
   const navLine = navItems.length
     ? `os ${navItems.length} itens do menu do projeto, nesta ordem (${navTxt})`
     : 'os itens do menu do projeto (ainda não definidos — veja Pendências; os rótulos do modelo eram só exemplo)'
+  // Com sidebar no layout, o menu fica nela: o header não repete os mesmos links (preview e prompt iguais).
+  const sideNav = Boolean(desktop?.regions.some((r) => r.kind === 'sidebar' || r.kind === 'rail'))
+  if (header && sideNav) {
+    header.structure = header.structure.map((l) =>
+      /^Navegação principal com \d+ itens/.test(l) ? 'Sem links de navegação no header: o menu principal fica na sidebar; o header traz busca, ações e perfil.' : l,
+    )
+    out.push({
+      id: 'header-sem-menu',
+      title: 'Menu no header × sidebar',
+      instruction: 'Com sidebar no layout, os itens do menu ficam só na sidebar; o header não repete os mesmos links.',
+    })
+  }
   if (header) {
     header.structure = header.structure.map((l) =>
       l

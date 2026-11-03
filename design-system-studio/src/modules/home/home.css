@@ -198,3 +198,21 @@
 .free-card__status[data-done='true'] {
   color: var(--s-success);
 }
+
+/* Caminho 1: começar de um site pronto (Galeria de inspiração). */
+.home-quick {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-5);
+  padding: var(--sp-5) var(--sp-6);
+  border: 1px solid var(--s-accent-line, var(--s-border));
+  border-radius: 16px;
+  background: var(--s-accent-soft);
+}
+.home-quick p {
+  margin: 4px 0 0;
+  max-width: 680px;
+}

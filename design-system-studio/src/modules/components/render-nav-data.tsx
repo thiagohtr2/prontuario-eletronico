@@ -8,6 +8,7 @@ import {
 import type { Look } from './look'
 import { MiniCalendar } from './render-base'
 import type { RP, RendererMap } from './render-types'
+import type { ComponentValues } from './types'
 
 const NAV_ICONS = ['Home', 'FolderOpen', 'BarChart3', 'Users', 'Settings', 'Inbox', 'Calendar', 'Star']
 const fade: CSSProperties = { maskImage: 'linear-gradient(90deg, #000 82%, transparent)', WebkitMaskImage: 'linear-gradient(90deg, #000 82%, transparent)' }
@@ -716,10 +717,28 @@ const STATUS: [string, Tone][] = [
   ['Pago', 'success'],
 ]
 
+/** Linhas de texto com células separadas por “|” (conteúdo real informado no editor). */
+export const rowsOf = (v: ComponentValues, k: string) =>
+  String(v[k] ?? '')
+    .split('\n')
+    .map((l) => l.split('|').map((x) => x.trim()))
+    .filter((r) => r.some(Boolean))
+
+/** Tom da etiqueta a partir do texto (status em português). */
+export const toneOf = (t: string): Tone =>
+  /pago|ativo|alta\b|conclu|aprovad|em dia|confirmad|dispon|entregue|livre|online|ok\b/i.test(t)
+    ? 'success'
+    : /pend|aguard|observ|an[aá]lise|parcial|agendad|andamento|previst|revis|rascunho/i.test(t)
+      ? 'warning'
+      : /cancel|atras|cr[ií]tic|erro|recus|isol|falh|vencid|bloque|urgente/i.test(t)
+        ? 'error'
+        : 'info'
+
 function Tabela({ v, st }: RP) {
   const { L } = usePv()
   const P = usePart()
   const cols = lines(v, 'colunas').slice(0, 4)
+  const data = rowsOf(v, 'dados').slice(0, 8)
   const rows = Math.max(2, Math.min(6, num(v, 'linhas', 4)))
   const dens = str(v, 'densidade')
   const rowH = dens === 'compacta' ? 32 : dens === 'confortavel' ? 46 : 38
@@ -751,7 +770,45 @@ function Tabela({ v, st }: RP) {
           ))}
           {acts && <span className="cmp-xwide-only" />}
         </div>
-        {Array.from({ length: rows }, (_, r) => {
+        {data.length > 0 &&
+          data.map((row, r) => (
+            <div
+              key={r}
+              role="row"
+              className="cmp-trow"
+              style={withState(L, { ...vars, display: 'grid', gap: 10, alignItems: 'center', padding: '0 12px', height: rowH, borderTop: r === 0 && head !== 'simples' ? undefined : L.divider, background: bool(v, 'zebra') && r % 2 === 1 ? L.zebra : r === 1 && sel ? L.soft : undefined, color: L.text }, r === 0 ? (st === 'normal' ? undefined : st === 'disabled' ? undefined : 'hover') : undefined, 'ghost')}
+            >
+              {sel && <Check on={r === 1} size={15} />}
+              {cols.map((c, i) => {
+                const val = row[i] ?? ''
+                const status = /status|situa[cç][aã]o|estado|etapa/i.test(c)
+                const numeric = /^[R$€\d\s.,%+−-]+$/.test(val) && /\d/.test(val)
+                const person = i === 0 && /paciente|cliente|nome|pessoa|colaborador|aluno|membro|respons|usu[aá]rio|profissional|m[eé]dic/i.test(c)
+                return (
+                  <span key={i} style={{ ...cell, textAlign: numeric && i > 0 ? 'right' : 'left', fontWeight: i === 0 ? 560 : undefined, color: i === 3 ? L.muted : undefined, fontVariantNumeric: numeric ? 'tabular-nums' : undefined }} className={i === 3 ? 'cmp-xwide-only' : undefined}>
+                    {status ? (
+                      <Badge tone={toneOf(val)} variant="soft">
+                        {val}
+                      </Badge>
+                    ) : person ? (
+                      <Row gap={8} style={cell}>
+                        <Avatar name={val} size={22} index={r} />
+                        <span style={{ ...cell, fontWeight: 560 }}>{val}</span>
+                      </Row>
+                    ) : (
+                      val
+                    )}
+                  </span>
+                )
+              })}
+              {acts && (
+                <span className="cmp-xwide-only">
+                  <Ico name="MoreHorizontal" size={15} color={L.muted} />
+                </span>
+              )}
+            </div>
+          ))}
+        {data.length === 0 && Array.from({ length: rows }, (_, r) => {
           const [status, tone] = STATUS[r % STATUS.length]
           return (
             <div
@@ -1165,6 +1222,12 @@ function Kanban({ v }: RP) {
   const P = usePart()
   const cols = lines(v, 'colunas').slice(0, 4)
   const n = Math.max(1, Math.min(3, num(v, 'cartoes', 2)))
+  // Cartões reais (Coluna | Título | Etiqueta | Data), quando informados no editor.
+  const custom = rowsOf(v, 'tarefas')
+  const cardsOf = (col: string, ci: number) =>
+    custom.length
+      ? custom.filter((r) => r[0].toLowerCase() === col.toLowerCase()).slice(0, 3).map((r, k) => ({ title: r[1] ?? '', tag: r[2] ?? '', date: r[3] ?? '', tone: toneOf(r[2] ?? ''), k: ci + k }))
+      : null
   const tasks = ['Revisar proposta', 'Ajustar layout', 'Testes de usabilidade', 'Publicar versão', 'Pesquisa com clientes', 'Atualizar docs', 'Corrigir login', 'Novo onboarding', 'Relatório mensal']
   const tags: [string, Tone][] = [
     ['Design', 'primary'],
@@ -1177,9 +1240,29 @@ function Kanban({ v }: RP) {
         <div key={c + ci} style={{ width: 150, flex: 'none', borderRadius: Math.min(L.rLg, 14), padding: 8, background: L.dark ? withAlpha(L.text, 0.05) : L.style.surface === 'glass' ? withAlpha('#ffffff', 0.3) : mix(L.surfaceSolid, L.text, 0.04), border: L.style.borderTone === 'ink' ? `1px solid ${L.text}` : undefined, display: 'grid', gap: 8 }}>
           <Row justify="space-between" style={{ padding: '0 2px' }}>
             <span style={{ ...textStyle(L, 'label'), fontSize: 12 }}>{c}</span>
-            {bool(v, 'contadores') && <Badge>{n + ci}</Badge>}
+            {bool(v, 'contadores') && <Badge>{cardsOf(c, ci)?.length ?? n + ci}</Badge>}
           </Row>
-          {Array.from({ length: n }, (_, k) => (
+          {cardsOf(c, ci)?.map((t, k) => (
+            <Card key={`c${k}`} pad={10} style={{ display: 'grid', gap: 6 }}>
+              {bool(v, 'etiquetas') && t.tag && (
+                <span>
+                  <Badge tone={t.tone === 'info' ? 'primary' : t.tone}>{t.tag}</Badge>
+                </span>
+              )}
+              <span style={{ ...textStyle(L, 'body'), fontSize: 12.5, fontWeight: 600, lineHeight: 1.3 }}>{t.title}</span>
+              <Row justify="space-between">
+                {t.date ? (
+                  <Row gap={4} style={{ ...textStyle(L, 'small'), fontSize: 11.5 }}>
+                    <Ico name="Calendar" size={12} /> {t.date}
+                  </Row>
+                ) : (
+                  <span />
+                )}
+                {bool(v, 'avatares') && <Avatar name={t.title} size={20} index={t.k} />}
+              </Row>
+            </Card>
+          ))}
+          {!cardsOf(c, ci) && Array.from({ length: n }, (_, k) => (
             <Card key={k} pad={10} style={{ display: 'grid', gap: 6, ...(ci === 1 && k === 0 ? { transform: 'rotate(-1.5deg)', boxShadow: L.shadowFloat } : {}) }}>
               {bool(v, 'etiquetas') && (
                 <span>
@@ -1242,7 +1325,7 @@ function Progresso({ v }: RP) {
               <Bar value={val} height={h} striped={bool(v, 'listrado')} />
             </span>
           )}
-          <span style={textStyle(L, 'small')}>3 de 5 arquivos · cerca de 20 s restantes</span>
+          {str(v, 'detalhe') && <span style={textStyle(L, 'small')}>{str(v, 'detalhe')}</span>}
         </Col>
       )}
       <Card pad={12}>

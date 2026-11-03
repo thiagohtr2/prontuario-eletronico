@@ -1009,7 +1009,9 @@ export function HeaderPreview({ model, variant, theme, interactive = true, compa
   const surface = look.surface === 'transparent' && scrolled ? 'solid' : look.surface
   const colors = headerColors(theme, surface)
   const menus = useMenus(interactive)
-  const [active, setActive] = useState(0)
+  const activeIndex = content?.active ? Math.max(0, look.nav.findIndex((n) => n.label === content.active)) : 0
+  const [active, setActive] = useState(activeIndex)
+  useEffect(() => setActive(activeIndex), [activeIndex])
   const [dismissed, setDismissed] = useState(false)
   const uid = useUid()
   useInert(rootRef, !interactive)

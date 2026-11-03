@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type ReactNode, type RefObject } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { Maximize2, Minimize2, Pencil } from 'lucide-react'
 import { activeEntry, ENTRY_FLOWS } from '@/core/project'
@@ -9,90 +9,22 @@ import type { Device, ResolvedTheme } from '@/core/types'
 import { paletteById } from '@/modules/color/catalog'
 import { AuthPreview, LandingPreview } from '@/modules/entry'
 import { landingById, loginById, signupById } from '@/modules/entry/catalog'
-import { DesktopSchematic, PhonePreview } from '@/modules/layouts'
+import { PhonePreview } from '@/modules/layouts'
 import { desktopById, mobileById } from '@/modules/layouts/catalog'
-import type { DesktopLayout, LayoutRegion } from '@/modules/layouts/types'
-import { HeaderPreview, SidebarPreview } from '@/modules/navigation'
+import type { DesktopLayout } from '@/modules/layouts/types'
 import { headerById, sidebarById } from '@/modules/navigation/catalog'
 import { Button, Callout, DeviceToggle, EmptyState, Segmented } from '@/ui'
-import { ChatPanel, DashboardContent, DefaultHeader, DefaultSidebar, DetailPanel, FooterBar, Rail, Submenu, Toolbar } from './regions'
+import { AppFrame, DEVICE_SIZE, ScaledFrame, useWidth } from './SiteFrame'
 import './preview.css'
 
 type PageKind = 'app' | 'landing' | 'login' | 'signup'
 
-const DEVICE_SIZE: Record<Exclude<Device, 'mobile'>, { w: number; h: number }> = {
-  desktop: { w: 1280, h: 800 },
-  tablet: { w: 834, h: 1040 },
-}
-
-/** Mede a largura disponível de um contêiner (para escalar a prévia sem overflow). */
-function useWidth<T extends HTMLElement>(): [RefObject<T>, number] {
-  const ref = useRef<T>(null)
-  const [width, setWidth] = useState(0)
-  useEffect(() => {
-    if (!ref.current) return
-    const el = ref.current
-    const ro = new ResizeObserver(() => setWidth(el.clientWidth))
-    ro.observe(el)
-    setWidth(el.clientWidth)
-    return () => ro.disconnect()
-  }, [])
-  return [ref, width]
-}
-
-/** Moldura que renderiza o conteúdo em tamanho real e o reduz para caber na largura disponível. */
-function ScaledFrame({ w, h, available, maxH, children, label }: { w: number; h: number; available: number; maxH?: number; children: ReactNode; label: string }) {
-  const byWidth = available > 0 ? Math.min(1, available / w) : 0.5
-  // Em tela cheia a prévia também cabe na altura da janela.
-  const scale = maxH ? Math.min(byWidth, maxH / h) : byWidth
-  return (
-    <div className="lp-frame" style={{ width: w * scale, height: h * scale }} aria-label={label} role="group">
-      <div style={{ width: w, height: h, transform: `scale(${scale})`, transformOrigin: 'top left' }}>{children}</div>
-    </div>
-  )
-}
-
-function AppFrame({ layout, theme, name, w, h }: { layout: DesktopLayout; theme: ResolvedTheme; name: string; w: number; h: number }) {
+/** Quadro do app da Prévia integrada: o mesmo `AppFrame` da galeria de modelos, lido do projeto. */
+function StoreAppFrame({ layout, theme, name, w, h }: { layout: DesktopLayout; theme: ResolvedTheme; name: string; w: number; h: number }) {
   const header = useProject((p) => p.navigation.header)
   const sidebar = useProject((p) => p.navigation.sidebar)
-  const headerModel = header ? headerById(header.id) : undefined
-  const sidebarModel = sidebar ? sidebarById(sidebar.id) : undefined
-
-  const hasHeader = layout.regions.some((r) => r.kind === 'header')
-  // Se há um header acima da sidebar, a marca fica no header (não repetimos o logo).
-  const touchesTop = (id: string) => (layout.grid.areas[0] ?? '').split(/\s+/).includes(id)
-
   const nav = useProjectNav()
-  const content = { brand: name, nav }
-  // Dentro do app: header na altura do layout (a mesma do Master Prompt) e sem botões de site de marketing.
-  const headerContent = { ...content, height: layout.measurements.header, inApp: true }
-
-  const renderRegion = (region: LayoutRegion): ReactNode => {
-    const hideBrand = hasHeader && !touchesTop(region.id)
-    switch (region.kind) {
-      case 'header':
-        return headerModel && header ? <HeaderPreview model={headerModel} variant={header.variant} theme={theme} interactive content={headerContent} /> : <DefaultHeader theme={theme} name={name} nav={nav} />
-      case 'sidebar':
-        return sidebarModel && sidebar ? <SidebarPreview model={sidebarModel} variant={sidebar.variant} theme={theme} interactive hideBrand={hideBrand} content={content} /> : <DefaultSidebar theme={theme} name={name} floating={region.floating} hideBrand={hideBrand} nav={nav} />
-      case 'rail':
-        return <Rail theme={theme} nav={nav} />
-      case 'submenu':
-        return <Submenu theme={theme} />
-      case 'panel':
-      case 'detail':
-        return <DetailPanel theme={theme} title={region.label ? region.label.charAt(0) + region.label.slice(1).toLowerCase() : 'Detalhes'} />
-      case 'chat':
-        return <ChatPanel theme={theme} />
-      case 'footer':
-        return <FooterBar theme={theme} name={name} />
-      case 'toolbar':
-        return <Toolbar theme={theme} />
-      default:
-        return <DashboardContent theme={theme} dense={layout.oneScreen} />
-    }
-  }
-
-  return <DesktopSchematic layout={layout} width={w} height={h} showLegends={false} theme={theme} renderRegion={renderRegion} frame={false} detail="full" />
+  return <AppFrame layout={layout} theme={theme} name={name} nav={nav} header={header} sidebar={sidebar} w={w} h={h} />
 }
 
 /**
@@ -173,7 +105,7 @@ export function LiveSitePreview() {
       const size = DEVICE_SIZE[device]
       stage = desktop ? (
         <ScaledFrame w={size.w} h={size.h} available={available} maxH={maxH} label={`Prévia ${device === 'tablet' ? 'do tablet' : 'do computador'}`}>
-          <AppFrame layout={desktop} theme={theme} name={name} w={size.w} h={size.h} />
+          <StoreAppFrame layout={desktop} theme={theme} name={name} w={size.w} h={size.h} />
         </ScaledFrame>
       ) : (
         <EmptyState

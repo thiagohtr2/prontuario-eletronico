@@ -24,6 +24,9 @@ const PromptCenter = lazy(() => import('@/modules/prompts/PromptCenter'))
 const ExportPage = lazy(() => import('@/modules/prompts/ExportPage'))
 const ValidationPage = lazy(() => import('@/modules/validation/ValidationPage'))
 const ProjectPage = lazy(() => import('@/modules/project/ProjectPage'))
+const StartersGalleryPage = lazy(() => import('@/modules/starters/StarterPages').then((m) => ({ default: m.StartersGalleryPage })))
+const StarterDetailPage = lazy(() => import('@/modules/starters/StarterPages').then((m) => ({ default: m.StarterDetailPage })))
+const MySitePage = lazy(() => import('@/modules/starters/StarterPages').then((m) => ({ default: m.MySitePage })))
 
 function GuidedRedirect() {
   const step = useProject((p) => p.guided.step)
@@ -56,6 +59,9 @@ const router = createHashRouter([
       { path: 'exportar', element: <ExportPage /> },
       { path: 'validacao', element: <ValidationPage /> },
       { path: 'projeto', element: <ProjectPage /> },
+      { path: 'modelos', element: <StartersGalleryPage /> },
+      { path: 'modelos/:id', element: <StarterDetailPage /> },
+      { path: 'site', element: <MySitePage /> },
       { path: '*', element: <Navigate to="/" replace /> },
     ],
   },

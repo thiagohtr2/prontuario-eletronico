@@ -681,6 +681,8 @@ export interface AuthPreviewProps {
   interactive?: boolean
   /** Renderiza apenas o formulário (sem a composição da tela). */
   formOnly?: boolean
+  /** Marca exibida (padrão: o nome do projeto aberto). Usado pela galeria de modelos. */
+  projectName?: string
 }
 
 /**
@@ -707,6 +709,7 @@ function AuthScreen({
   showErrors = false,
   interactive = true,
   formOnly = false,
+  projectName: nameOverride,
   setView,
 }: AuthPreviewProps & { setView: (v: 'login' | 'signup') => void }) {
   const layout = login.layout
@@ -714,8 +717,8 @@ function AuthScreen({
   const m = device === 'mobile'
   const live = interactive
   const uid = useId()
-  const projectName = useProject((p) => p.meta.name)
-  const brand = projectName.trim() || 'Seu sistema'
+  const storeName = useProject((p) => p.meta.name)
+  const brand = (nameOverride ?? storeName).trim() || 'Seu sistema'
   const isSignup = view === 'signup'
   const flow = signup?.flow
 

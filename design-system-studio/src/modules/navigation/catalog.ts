@@ -2775,6 +2775,12 @@ export interface NavContent {
   height?: number
   /** Dentro da aplicação logada: sem “Entrar”, CTAs de marketing, anúncio nem faixa utilitária. */
   inApp?: boolean
+  /** Header sem links de navegação (a sidebar já tem o menu: o header não o repete). */
+  hideNav?: boolean
+  /** Largura da sidebar definida pelo layout (a mesma do Master Prompt). */
+  width?: number
+  /** Item do menu da página aberta (destaque segue a navegação entre páginas da prévia). */
+  active?: string
 }
 
 const SITE_ONLY_ACTIONS = new Set<HeaderAction>(['cta', 'cta-outline', 'login', 'lang', 'phone'])
@@ -2791,6 +2797,7 @@ export function withHeaderContent(look: HeaderLook, content?: NavContent): Heade
     out.height = content.height
     if (out.shrink && out.shrink >= content.height) out.shrink = undefined
   }
+  if (content.hideNav) out.nav = []
   if (content.inApp) {
     out.actions = look.actions.filter((a) => !SITE_ONLY_ACTIONS.has(a))
     out.announcement = undefined

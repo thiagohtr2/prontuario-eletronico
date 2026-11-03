@@ -211,6 +211,20 @@ interface StudioState {
    * recuperação e as preferências de interface guardadas neste navegador. Não pode ser desfeito.
    */
   resetEverything: () => void
+
+  // Modelos de site (galeria)
+  /**
+   * Aplica um projeto gerado a partir de um modelo. `new` guarda o atual em “Seus projetos”;
+   * os demais modos salvam uma versão antes de substituir.
+   */
+  applyStarterProject: (project: Project, mode: 'new' | 'replace' | 'identity' | 'architecture', label: string) => void
+  /**
+   * Troca a família visual com escopo explícito: só esta instância, todas da mesma categoria
+   * ou todos os componentes do projeto.
+   */
+  setFamilyScoped: (instanceId: string, familyId: string, scope: 'instance' | 'category' | 'all') => void
+  /** Troca a paleta global com os ajustes da variante (exceções de cada componente são mantidas). */
+  setPaletteVariant: (paletteId: string, overrides: Partial<Record<TokenKey, string>>) => void
   /** Duplica o projeto atual na biblioteca (ponto de partida para uma variação). */
   duplicateProject: () => void
 }
@@ -355,6 +369,8 @@ export const useStudio = create<StudioState>()(
           edit((p) => ({
             ...p,
             components: p.components.filter((c) => c.id !== id),
+            // A página não fica com um bloco apontando para um componente que não existe mais.
+            pages: p.pages.map((pg) => ({ ...pg, blocks: pg.blocks.filter((b) => b.component !== id), ...(pg.aside ? { aside: pg.aside.filter((b) => b.component !== id) } : {}) })),
             prompt: { ...p.prompt, excluded: p.prompt.excluded.filter((k) => k !== `component:${id}`) },
           })),
 
@@ -436,6 +452,22 @@ export const useStudio = create<StudioState>()(
             return { library: stash(s).filter((e) => e.id !== id), project: parsed.project, history: entry.history }
           }),
         deleteLibraryProject: (id) => set((s) => ({ library: s.library.filter((e) => e.id !== id) })),
+        applyStarterProject: (project, mode, label) => {
+          if (mode === 'new') {
+            set((s) => ({ library: stash(s), project, history: [] }))
+            return
+          }
+          pushSnapshot(`Antes de aplicar o modelo “${label}”`)
+          set({ project })
+        },
+        setFamilyScoped: (instanceId, familyId, scope) =>
+          edit((p) => {
+            const target = p.components.find((c) => c.id === instanceId)
+            if (!target) return p
+            const hit = (c: ComponentInstance) => (scope === 'all' ? true : scope === 'category' ? c.categoryId === target.categoryId : c.id === instanceId)
+            return { ...p, components: p.components.map((c) => (hit(c) ? { ...c, familyId } : c)) }
+          }),
+        setPaletteVariant: (paletteId, overrides) => edit((p) => ({ ...p, identity: { ...p.identity, paletteId, overrides: { ...overrides } } })),
         resetEverything: () => {
           // Tudo do Studio neste navegador (inclusive cópias de recuperação e preferências de interface).
           for (const storage of [localStorage, sessionStorage]) {

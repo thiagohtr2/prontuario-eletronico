@@ -94,6 +94,29 @@ export const projectSchema = z.object({
       createdAt: z.string(),
     }),
   ),
+  pages: z
+    .array(
+      z.object({
+        id: z.string().min(1).max(80),
+        name: shortText,
+        kind: z.enum(['landing', 'login', 'signup', 'app']),
+        purpose: longText,
+        navItem: shortText,
+        blocks: z.array(z.object({ component: z.string().min(1), span: z.number().int().min(1).max(12), height: z.number().min(40).max(1200).optional() })).max(60),
+        aside: z.array(z.object({ component: z.string().min(1), span: z.number().int().min(1).max(12), height: z.number().min(40).max(1200).optional() })).max(12).optional(),
+      }),
+    )
+    .max(40),
+  origin: z
+    .object({
+      templateId: z.string().min(1),
+      templateName: shortText,
+      templateVersion: z.number().int().min(1),
+      paletteVariant: z.string(),
+      appliedAt: z.string(),
+      mode: z.enum(['new', 'replace', 'identity', 'architecture']),
+    })
+    .nullable(),
   inspiration: z
     .object({
       siteId: z.string().min(1),

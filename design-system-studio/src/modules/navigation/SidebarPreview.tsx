@@ -710,7 +710,11 @@ export function SidebarPreview({
     const first = items[0]
     return first?.children?.length ? first.children[0] : first?.label ?? ''
   })()
-  const [active, setActiveState] = useState(firstLabel)
+  const [active, setActiveState] = useState(content?.active || firstLabel)
+  // A página aberta na prévia manda no destaque (navegação pelas abas de páginas).
+  useEffect(() => {
+    if (content?.active) setActiveState(content.active)
+  }, [content?.active])
   const [openSubs, setOpenSubs] = useState<string[]>(() => {
     const first = allItems.find((i) => i.children?.length)
     return first && arr.submenu !== 'flyout' ? [first.label] : []
@@ -731,15 +735,17 @@ export function SidebarPreview({
   const railStatic = !compact && (model.shape === 'rail' || arr.labels === 'hidden' || arr.labels === 'below')
   const rail = railStatic || (collapsedEff && !isDupla)
   const labelsBelow = !compact && arr.labels === 'below'
-  const railW = look.railWidth ?? (arr.labels === 'hidden' && model.shape !== 'rail' && model.width > 100 ? 76 : 72)
+  // Largura do layout (quando informada) no lugar da largura do modelo: a prévia cabe na coluna.
+  const modelWidth = content?.width && model.shape !== 'dupla' ? content.width : model.width
+  const railW = look.railWidth ?? (arr.labels === 'hidden' && model.shape !== 'rail' && modelWidth > 100 ? 76 : 72)
 
-  let width = model.width
-  if (compact) width = Math.min(Math.max(model.width, 272), 304)
-  else if (isDupla) width = collapsedEff ? 64 : model.width
-  else if (railStatic) width = model.shape === 'rail' || model.width < 100 ? model.width : railW
+  let width = modelWidth
+  if (compact) width = Math.min(Math.max(modelWidth, 272), 304)
+  else if (isDupla) width = collapsedEff ? 64 : modelWidth
+  else if (railStatic) width = model.shape === 'rail' || modelWidth < 100 ? modelWidth : railW
   else if (hoverExpand) width = railW
   else if (collapsedEff) width = railW
-  const panelWidth = hoverExpand && !compact ? (hovered ? model.width : railW) : width
+  const panelWidth = hoverExpand && !compact ? (hovered ? modelWidth : railW) : width
 
   const toggleCollapse = () => {
     const next = !collapsedState

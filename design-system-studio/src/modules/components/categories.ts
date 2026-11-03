@@ -495,6 +495,7 @@ const DEFS: Def[] = [
     text('titulo', 'Título', 'Pedidos recentes', 'title'),
     area('colunas', 'Colunas (uma por linha)', 'Cliente\nStatus\nValor\nData', 'columns'),
     num('linhas', 'Linhas de exemplo', 4, 2, 6, 1, undefined, 'Conteúdo'),
+    area('dados', 'Linhas (uma por linha, colunas separadas por “|”)', '', 'rows', 'Vazio = linhas de exemplo. Colunas chamadas Status/Situação viram etiquetas coloridas.'),
     DENSITY(),
     bool('zebra', 'Linhas zebradas', false),
     sel('cabecalho', 'Estilo do cabeçalho', 'destacado', opt(['simples', 'Simples'], ['destacado', 'Destacado'], ['escuro', 'Escuro'])),
@@ -608,6 +609,7 @@ const DEFS: Def[] = [
   [46, 'quadros-kanban', 'Quadros Kanban', 'dados', 'Quadro com colunas (A fazer, Fazendo, Feito) e cartões de tarefas.', [
     area('colunas', 'Colunas (uma por linha)', 'A fazer\nFazendo\nFeito', 'columns'),
     num('cartoes', 'Cartões por coluna', 2, 1, 3, 1, undefined, 'Conteúdo'),
+    area('tarefas', 'Cartões (um por linha: Coluna | Título | Etiqueta | Data)', '', 'columns', 'Vazio = cartões de exemplo.'),
     bool('contadores', 'Contadores', true),
     bool('etiquetas', 'Etiquetas nos cartões', true),
     bool('avatares', 'Avatares nos cartões', true),
@@ -619,6 +621,7 @@ const DEFS: Def[] = [
   }],
   [47, 'barras-progresso', 'Barras de progresso', 'dados', 'Barra que mostra quanto de uma tarefa já foi concluído.', [
     text('rotulo', 'Rótulo', 'Enviando arquivos', 'label'),
+    text('detalhe', 'Texto abaixo da barra', '3 de 5 arquivos · cerca de 20 s restantes', 'label'),
     num('valor', 'Progresso', 68, 0, 100, 1, '%', 'Estados'),
     sel('tipo', 'Tipo', 'linear', opt(['linear', 'Linear'], ['circular', 'Circular'], ['etapas', 'Em segmentos'])),
     bool('percentual', 'Mostrar porcentagem', true),
@@ -723,6 +726,7 @@ const DEFS: Def[] = [
   [55, 'notificacoes', 'Notificações', 'sobreposicoes', 'A central de notificações: o sino com contador e a lista de avisos.', [
     text('titulo', 'Título', 'Notificações', 'title'),
     num('naoLidas', 'Não lidas', 3, 0, 9, 1, undefined, 'Estados'),
+    area('itens', 'Avisos (um por linha: Quem | o quê | quando)', '', 'title', 'Vazio = avisos de exemplo.'),
     bool('abas', 'Abas Todas / Não lidas', true),
     bool('avatares', 'Avatares', true),
     text('marcarTodas', 'Ação "marcar todas"', 'Marcar todas como lidas', 'action'),
@@ -861,6 +865,7 @@ const DEFS: Def[] = [
   }],
   [66, 'pricing-planos', 'Pricing e planos', 'paginas', 'Tabela de preços com planos lado a lado e o plano recomendado em destaque.', [
     num('planos', 'Quantidade de planos', 3, 2, 3, 1, undefined, 'Conteúdo'),
+    area('itens', 'Planos (um por linha: Nome | Preço | recurso; recurso)', '', 'title', 'Vazio = planos de exemplo.'),
     num('destaque', 'Plano em destaque', 2, 1, 3, 1, undefined, 'Estados'),
     sel('periodo', 'Período', 'mensal', opt(['mensal', 'Mensal'], ['anual', 'Anual (com desconto)'])),
     text('botao', 'Botão', 'Assinar', 'button'),

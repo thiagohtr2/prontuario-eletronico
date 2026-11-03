@@ -76,6 +76,48 @@ export interface ComponentInstance {
   createdAt: string
 }
 
+/** Tipo de página do site. Páginas de entrada usam os modelos de landing/login/cadastro do projeto. */
+export type PageKind = 'landing' | 'login' | 'signup' | 'app'
+
+/** Bloco de uma página: uma instância de componente do projeto, com a largura em colunas (de 12). */
+export interface PageBlock {
+  /** Id da instância em `project.components`. */
+  component: string
+  /** Colunas ocupadas no computador (grade de 12). No celular todo bloco ocupa a largura inteira. */
+  span: number
+  /** Altura da prévia em px (o conteúdo real se ajusta; é só a referência visual). */
+  height?: number
+}
+
+/**
+ * Página do site (estrutura do conteúdo). Projetos criados a partir de um modelo trazem as páginas
+ * do modelo; os demais começam sem páginas e o prompt descreve só a navegação.
+ */
+export interface ProjectPage {
+  /** Id estável, ex.: 'agenda'. */
+  id: string
+  name: string
+  kind: PageKind
+  /** Para que serve a página (entra no Master Prompt). */
+  purpose: string
+  /** Item do menu que leva a esta página (vazio = página secundária, aberta a partir de outra). */
+  navItem: string
+  blocks: PageBlock[]
+  /** Blocos do painel lateral do layout (regiões “painel”/“detalhes”), quando o layout tem um. */
+  aside?: PageBlock[]
+}
+
+/** De onde o projeto veio, quando foi criado a partir de um modelo da galeria (rastreabilidade). */
+export interface ProjectOrigin {
+  templateId: string
+  templateName: string
+  templateVersion: number
+  paletteVariant: string
+  appliedAt: string
+  /** Como o modelo foi aplicado. */
+  mode: 'new' | 'replace' | 'identity' | 'architecture'
+}
+
 export interface NavChoice {
   id: string
   /** Proposta de composição: cada modelo tem duas (0 ou 1). */
@@ -201,6 +243,10 @@ export interface Project {
     sidebar: NavChoice | null
   }
   components: ComponentInstance[]
+  /** Páginas do site e os componentes de cada uma (vazio em projetos que não vieram de um modelo). */
+  pages: ProjectPage[]
+  /** Modelo usado como ponto de partida (cópia independente: o catálogo não altera o projeto depois). */
+  origin: ProjectOrigin | null
   inspiration: InspirationChoice | null
   template: TemplateChoice | null
   prompt: {
@@ -271,6 +317,8 @@ export function createProject(): Project {
     },
     navigation: { header: null, sidebar: null },
     components: [],
+    pages: [],
+    origin: null,
     inspiration: null,
     template: null,
     prompt: { excluded: [], notes: {}, conflictResolutions: {} },

@@ -5,7 +5,7 @@ import {
   bool, lines, navItemStyle, num, str, textStyle, toneColors, usePart, usePv, withState,
   type Tone,
 } from './kit'
-import { Ghost, Media, Sparkline, iconBtnBox } from './render-nav-data'
+import { Ghost, Media, Sparkline, iconBtnBox, rowsOf } from './render-nav-data'
 import type { RP, RendererMap } from './render-types'
 
 const TONE_ICON: Record<string, string> = { sucesso: 'CheckCircle2', erro: 'XCircle', info: 'Info', aviso: 'TriangleAlert' }
@@ -207,11 +207,14 @@ function Notificacoes({ v }: RP) {
   const { L } = usePv()
   const P = usePart()
   const unread = num(v, 'naoLidas', 3)
-  const items = [
-    ['Ana Souza', 'comentou em Proposta Q2', '2 min'],
-    ['Bruno Lima', 'atribuiu uma tarefa a você', '1 h'],
-    ['Sistema', 'Backup concluído com sucesso', 'ontem'],
-  ]
+  const custom = rowsOf(v, 'itens').slice(0, 5)
+  const items = custom.length
+    ? custom.map((r) => [r[0] ?? '', r[1] ?? '', r[2] ?? ''])
+    : [
+        ['Ana Souza', 'comentou em Proposta Q2', '2 min'],
+        ['Bruno Lima', 'atribuiu uma tarefa a você', '1 h'],
+        ['Sistema', 'Backup concluído com sucesso', 'ontem'],
+      ]
   return (
     <Col gap={8} style={{ width: '100%', maxWidth: 300, alignItems: 'flex-end' }}>
       <span {...P('bell')} style={{ ...iconBtnBox(L, 'suave', 'familia', 36) }}>
@@ -840,11 +843,15 @@ function Pricing({ v, st }: RP) {
   const n = Math.max(2, Math.min(3, num(v, 'planos', 3)))
   const hi = num(v, 'destaque', 2) - 1
   const annual = str(v, 'periodo') === 'anual'
-  const plans: [string, number, string[]][] = [
-    ['Básico', 29, ['3 projetos', 'Suporte por e-mail']],
-    ['Pro', 79, ['Projetos ilimitados', 'Relatórios']],
-    ['Equipe', 149, ['Tudo do Pro', 'SSO e auditoria']],
-  ]
+  // Planos reais (Nome | Preço | recurso; recurso), quando informados no editor.
+  const custom = rowsOf(v, 'itens').map((r): [string, number, string[]] => [r[0] ?? '', Number(String(r[1] ?? '').replace(/[^\d,]/g, '').replace(',', '.')) || 0, String(r[2] ?? '').split(';').map((x) => x.trim()).filter(Boolean)])
+  const plans: [string, number, string[]][] = custom.length >= 2
+    ? custom.slice(0, 3)
+    : [
+        ['Básico', 29, ['3 projetos', 'Suporte por e-mail']],
+        ['Pro', 79, ['Projetos ilimitados', 'Relatórios']],
+        ['Equipe', 149, ['Tudo do Pro', 'SSO e auditoria']],
+      ]
   return (
     <div style={{ width: '100%', height: '100%', background: L.stage, padding: 10, boxSizing: 'border-box', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
       <div style={{ display: 'inline-flex', padding: 3, borderRadius: L.r >= 999 ? 999 : L.r, background: L.dark ? withAlpha(L.text, 0.08) : mix(L.surfaceSolid, L.text, 0.06), gap: 2 }}>
