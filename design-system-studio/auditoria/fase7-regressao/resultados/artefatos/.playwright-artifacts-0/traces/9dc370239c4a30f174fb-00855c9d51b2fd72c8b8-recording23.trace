@@ -1,0 +1,1 @@
+{"version":9,"type":"context-options","origin":"library","browserName":"","playwrightVersion":"1.63.0","options":{},"platform":"linux","wallTime":1793664345383,"monotonicTime":72110.93,"sdkLanguage":"javascript","title":"regression.spec.ts:777 › REG-15 · O aplicativo sempre carrega › todas as rotas abrem sem erro de JavaScript e sem recurso 4xx/5xx (desktop)"}

@@ -1,0 +1,56 @@
+{
+ "dev-1": {
+  "total": 580,
+  "mult4": 314,
+  "pct": 54.1,
+  "offScale": {
+   "2": 88,
+   "3": 48,
+   "5": 24,
+   "6": 71,
+   "10": 34,
+   "30": 1
+  },
+  "fontWidth": {
+   "site": 614.96875,
+   "inter": 614.96875,
+   "serif": 524.328125
+  },
+  "mainFont": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+ },
+ "dev-2": {
+  "total": 516,
+  "mult4": 241,
+  "pct": 46.7,
+  "offScale": {
+   "2": 18,
+   "3": 48,
+   "5": 20,
+   "6": 48,
+   "10": 8,
+   "11": 132,
+   "30": 1
+  },
+  "fontWidth": {
+   "site": 614.96875,
+   "inter": 614.96875,
+   "serif": 524.328125
+  },
+  "mainFont": "Inter, system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif"
+ },
+ "dev-3": {
+  "total": 496,
+  "mult4": 364,
+  "pct": 73.4,
+  "offScale": {
+   "2": 62,
+   "6": 70
+  },
+  "fontWidth": {
+   "site": 524.328125,
+   "inter": 524.328125,
+   "serif": 524.328125
+  },
+  "mainFont": "\"Times New Roman\""
+ }
+}

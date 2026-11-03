@@ -29,7 +29,7 @@ e o anel de foco têm contraste baixo em todas as telas.
 | Árvore de acessibilidade | 11 telas + 2 modais (`ariaSnapshot`) | 1280 | — | `dados/aria/*.yml` |
 | Outros | perda de seleção ao redimensionar, saltos de rolagem ao selecionar/filtrar, teclado virtual (altura reduzida a 420 px com campo focado), `prefers-reduced-motion`, `forced-colors`, mensagens de erro, paradas de Tab por tela | vários | — | `dados/diversos.json`, `forced-colors.json`, `erros.json`, `paradas-tab.json` |
 
-Total: 777 páginas medidas, 1 125 capturas (`capturas/sw`, `capturas/estados`, `capturas/teclado`, `capturas/detalhes`).
+Total: 777 páginas medidas, 1 130 capturas (`capturas/sw`, `capturas/estados`, `capturas/teclado`, `capturas/detalhes`).
 
 Larguras abaixo de 768 px usam emulação móvel real (`isMobile`, `hasTouch`, `deviceScaleFactor: 2`, user agent Android).
 Paisagem usa emulação móvel. 768 px em diante usa navegador de mesa (DPR 1).
@@ -85,7 +85,7 @@ prévias (miniaturas escaladas e simulações de site) são contados à parte.
 
 | # | Página | Larguras | Componente | Medição | Captura |
 | --- | --- | --- | --- | --- | --- |
-| 1 | Layout mobile (módulo **e** etapa 4 do guiado) | 700–1100 (modo `medium`), também 844×390 e 915×412 | grade `.lay-mob` (lista × palco) | coluna da lista com 0 px (700, 1024), 31 px (1100), 99 px (900). Cartões de 128 px invadem o palco e o texto "Escolhido para o seu projeto / Drawer pela esquerda" fica por cima dos cartões. O palco é sticky, tem 949 px numa viewport de 1024 e fundo transparente | `capturas/detalhes/mobile-768-rolada.png`, `mobile-1024-rolada.png`, `g-mobile-1024-rolada.png`, `mobile-galeria-768-rolada.png` |
+| 1 | Layout mobile (módulo **e** etapa 4 do guiado) | 700–1100 (modo `medium`), também 844×390 e 915×412 | grade `.lay-mob` (lista × palco) | coluna da lista com 0 px (700, 1024), 31 px (1100), 99 px (900). Cartões de 128 px invadem o palco e o texto "Escolhido para o seu projeto / Drawer pela esquerda" fica por cima dos cartões. O palco é sticky, tem 949 px numa viewport de 1024 e fundo transparente | `capturas/detalhes/mobile-900-rolada.png`, `mobile-1024-rolada.png`, `g-mobile-1024-rolada.png`, `mobile-galeria-768-rolada.png` |
 | 2 | Modo livre | 320, 344, 667×375 | `.free-card__status` | o texto "Painel Analítico + Sóbria Corporativa" vai até x = 348 px (sai do cartão e da tela). Com emulação móvel, a viewport de layout passa a 348 px (`innerWidth` 348) e a busca/modais fixos ficam 28 px cortados à direita | `capturas/detalhes/livre-320-status-vazando.png`, `livre-320-busca-cortada.png` |
 | 3 | Guiado, todas as etapas | 1024, 1100 (8 rótulos), 1280/1440 (1–2), 915×412 (5–6) | `.gd-step__text` | `scrollWidth` 67–107 px > `clientWidth` 62 px, cortados com reticências ("2. En…", "3. De…") | `capturas/detalhes/stepper-guiado-1024.png` |
 | 4 | Guiado | ≤ 600 | stepper | rótulos ocultos (`display:none`): só 10 barras sem texto | `capturas/detalhes/guiado-vazio-desktop-320.png` |
@@ -183,7 +183,7 @@ Gravidade: **P0** bloqueia o uso; **P1** grave, afeta um fluxo principal ou um g
 importante; **P3** menor. Esforço estimado para quem conhece o código.
 
 ### RA-01 — Galeria "Layout mobile" sobrepõe cartões e texto entre 700 e 1 279 px (inclui a etapa 4 do guiado)
-* **Evidência:** `capturas/detalhes/mobile-768-rolada.png`, `mobile-1024-rolada.png`, `g-mobile-1024-rolada.png`.
+* **Evidência:** `capturas/detalhes/mobile-galeria-768-rolada.png`, `mobile-900-rolada.png`, `mobile-1024-rolada.png`, `g-mobile-1024-rolada.png`.
   Medição (`scripts/detalhes2.js`): coluna da lista com 0 px a 700 e 1024, 99 px a 900, 31 px a 1100. Os cartões têm
   128 px e invadem o palco. A 1280 (modo `wide`) não há sobreposição.
 * **Passos:** abrir `#/guiado/mobile` ou `#/modulos/mobile` numa janela de 768–1100 px (ou tablet em paisagem 844×390)
@@ -220,7 +220,7 @@ importante; **P3** menor. Esforço estimado para quem conhece o código.
 * **Passos:** em 375 px (ou tablet com teclado), apertar Tab a partir do topo.
 * **Esperado:** o menu fechado fica fora da ordem de foco e da árvore.
 * **Observado:** foco invisível por cerca de 36 paradas; leitores de tela leem o menu como se estivesse aberto.
-* **Causa provável:** `src/shell/shell.css:318-333`: só `transform: translateX(-102%)`, sem `visibility: hidden` nem
+* **Causa provável:** `src/shell/shell.css:316-333`: só `transform: translateX(-102%)`, sem `visibility: hidden` nem
   `inert`. `Shell.tsx:142` não marca o `aside` quando fechado.
 * **Sugestão:** `inert={!open && isMobile}` no `aside` (ou `visibility: hidden` com `transition: visibility 0s .2s`
   quando fechado).
@@ -233,8 +233,8 @@ importante; **P3** menor. Esforço estimado para quem conhece o código.
 * **Passos:** a 375 px, focar "Abrir menu", Enter, Tab, Esc.
 * **Esperado:** foco vai para "Fechar menu"; Tab preso no menu; resto inerte; Esc devolve o foco a "Abrir menu".
 * **Observado:** nada disso; o `aside` não tem `role="dialog"` nem `aria-modal`.
-* **Causa provável:** `src/shell/Shell.tsx:317-323` (só trata Esc) e componente `Sidebar` (`Shell.tsx:126-180`).
-* **Sugestão:** reaproveitar a lógica do `Modal` (`ui/index.tsx:520-560`): focar o botão de fechar, prender Tab, aplicar
+* **Causa provável:** `src/shell/Shell.tsx:331-336` (só trata Esc) e componente `Sidebar` (`Shell.tsx:126-180`).
+* **Sugestão:** reaproveitar a lógica do `Modal` (`ui/index.tsx:529-595`): focar o botão de fechar, prender Tab, aplicar
   `inert` em `header` e `main` enquanto aberto, devolver o foco ao botão.
 * **Gravidade:** P2 · **Esforço:** baixo.
 
@@ -246,7 +246,7 @@ importante; **P3** menor. Esforço estimado para quem conhece o código.
 * **Passos:** em `#/guiado/identidade`, avançar com Tab pela galeria de paletas.
 * **Esperado:** WCAG 2.4.11: o foco nunca fica totalmente escondido.
 * **Observado:** o navegador rola o elemento só até a borda inferior da viewport, onde está a barra sticky.
-* **Causa provável:** `src/modules/guided/guided.css:118-131` (`.gd-footer` sticky) sem `scroll-padding` correspondente.
+* **Causa provável:** `src/modules/guided/guided.css:119-131` (`.gd-footer` sticky) sem `scroll-padding` correspondente.
   A topbar sticky (`shell.css:25-38`) também não tem `scroll-padding-top`.
 * **Sugestão:** `html { scroll-padding-top: calc(var(--topbar-h) + 8px); scroll-padding-bottom: calc(var(--gd-footer-h, 0px) + 8px) }`,
   com a variável definida quando a barra existe. Em `@media (max-height: 520px)`, deixar a barra estática. Ao focar
@@ -302,7 +302,7 @@ importante; **P3** menor. Esforço estimado para quem conhece o código.
 * **Passos:** projeto vazio, `#/guiado/desktop` a 320 px.
 * **Esperado:** barra de uma linha (≤ 64 px) e que não fique fixa em telas baixas.
 * **Observado:** dica + "Voltar" + "Continuar" em 3 linhas; em paisagem sobram 265 px de conteúdo.
-* **Causa provável:** `guided.css:118-136` (flex-wrap sem versão compacta) e `GuidedStep.tsx:200-216`.
+* **Causa provável:** `guided.css:119-136` (flex-wrap sem versão compacta) e `GuidedStep.tsx:198-216`.
 * **Sugestão:** no celular, "Voltar" só com ícone, dica em uma linha truncada acima da barra (ou dentro do botão como
   `aria-describedby`); `@media (max-height: 520px) { .gd-footer { position: static } }`.
 * **Gravidade:** P2 · **Esforço:** baixo.
@@ -315,7 +315,7 @@ importante; **P3** menor. Esforço estimado para quem conhece o código.
 * **Passos:** abrir qualquer prévia ampliada em 844×390.
 * **Esperado:** a prévia ocupa a maior parte da tela.
 * **Observado:** cabeçalho (subtítulo longo) + controles + rodapé deixam cerca de 70 px da prévia visíveis.
-* **Causa provável:** `ui.css:685-748` (modal com cabeçalho e rodapé fixos; só há regra para largura ≤ 600 px, não para
+* **Causa provável:** `ui.css:674-748` (modal com cabeçalho e rodapé fixos; só há regra para largura ≤ 600 px, não para
   altura).
 * **Sugestão:** `@media (max-height: 520px)`: modal em tela cheia, subtítulo oculto ou em 1 linha, rodapé em linha única
   com botões compactos (ícone + rótulo curto, como já faz `ins-short`), controles de dispositivo dentro do corpo rolável.
@@ -341,7 +341,7 @@ importante; **P3** menor. Esforço estimado para quem conhece o código.
 * **Passos:** com leitor de tela/teclado, navegar pelo menu ou pelos botões do guiado.
 * **Esperado:** título da aba por tela (WCAG 2.4.2) e foco/anúncio no novo `h1`.
 * **Observado:** nada indica que a tela mudou.
-* **Causa provável:** `src/shell/Shell.tsx:307-311` (só `scrollTo` e fecha o menu) e título fixo em `index.html`.
+* **Causa provável:** `src/shell/Shell.tsx:307-312` (só `scrollTo` e fecha o menu) e título fixo em `index.html`.
 * **Sugestão:** no mesmo efeito, `document.title = \`${rótulo} · Atelier UI\`` e focar o `h1` (`tabIndex={-1}`) ou o
   `main`, preservando o foco quando a navegação vem do próprio menu no desktop.
 * **Gravidade:** P2 · **Esforço:** baixo.
@@ -352,7 +352,7 @@ importante; **P3** menor. Esforço estimado para quem conhece o código.
 * **Passos:** Ctrl+K, digitar "paleta", apertar seta para baixo.
 * **Esperado:** padrão combobox: o leitor anuncia a opção ativa e a quantidade de resultados.
 * **Observado:** só a mudança visual.
-* **Causa provável:** `src/shell/Shell.tsx:229-283`.
+* **Causa provável:** `src/shell/Shell.tsx:182-275` (`FeatureSearch`; campo em 229-252, lista em 255-272).
 * **Sugestão:** `input role="combobox" aria-expanded aria-controls="lista" aria-activedescendant={id ativo}`; `li role="option" id=…`
   com o clique no próprio `li` (sem `button` dentro, ou `button` com `role="presentation"` e `tabIndex={-1}`); região
   `sr-only` `aria-live="polite"` com "N resultados".
@@ -394,8 +394,8 @@ importante; **P3** menor. Esforço estimado para quem conhece o código.
 * **Evidência:** `dados/axe-contraste-pares.tsv`: branco sobre `#0f9d6b` 3,47:1 (CONTEÚDO, 190 nós), `#d97706` 3,19:1
   (PAINEL, INSPECTOR, CHAT, 60), `#0891b2` 3,68:1 (RAIL, 36). Fonte de 10 px. No celular grande, a etiqueta CONTEÚDO cobre
   o link "Ver tudo" (`capturas/sw/m-mobile--375--full.png`).
-* **Causa provável:** `src/styles/tokens.css:42-50` (`--legend-*`), `src/styles/ui.css:926` e
-  `src/modules/layouts/layouts.css:1212` (10 px); posição fixa das etiquetas em `phone.tsx:1760-1770`.
+* **Causa provável:** `src/styles/tokens.css:43-51` (`--legend-*`), `src/styles/ui.css:926` e
+  `src/modules/layouts/layouts.css:1212` (10 px); posição fixa das etiquetas em `phone.tsx:1750-1770` (CONTEÚDO na linha 1762).
 * **Sugestão:** `--legend-content: #0b7a53`, `--legend-panel: #b45309`, `--legend-rail: #0e7490` (≥ 4,5:1), fonte de
   11–12 px, e etiquetas posicionadas fora de elementos interativos (ou com `pointer-events: none` + opacidade).
 * **Gravidade:** P2 · **Esforço:** baixo.
@@ -404,7 +404,7 @@ importante; **P3** menor. Esforço estimado para quem conhece o código.
 * **Evidência:** `dados/agregado-sweep.tsv`: 5 a 164 alvos < 44 px por tela em 768/820/900 px; campos de 14,5 px nessas
   larguras. No celular: "Remover funcionalidade" 26×26 px, campos de nome das instâncias de componente com 36 px,
   segmentado "Guiado/Livre" do menu com 32 px de altura, termos do glossário com 20 px (em linha, exceção da 2.5.8).
-* **Causa provável:** `src/styles/tokens.css:97-105` (44 px só em `max-width: 720px`); `project.css:90-91`;
+* **Causa provável:** `src/styles/tokens.css:98-106` (44 px só em `max-width: 720px`); `project.css:90-91`;
   `components.css:410-411`; `ui.css:390`.
 * **Sugestão:** aplicar os tokens de toque com `@media (pointer: coarse)` (cobre tablets e notebooks com toque);
   corrigir as três exceções.
@@ -414,8 +414,8 @@ importante; **P3** menor. Esforço estimado para quem conhece o código.
 * **Evidência:** axe `scrollable-region-focusable` ×8 (Master Prompt `<pre style="max-height:720px">`, prompt individual,
   conteúdo do celular interativo, prévia do editor de template).
 * **Esperado:** WCAG 2.1.1: rolar com as setas.
-* **Causa provável:** `src/modules/prompts/PromptWorkspace.tsx:157, 214`, `prompt/PromptButton.tsx` (`pre.ui-code`),
-  `layouts/phone.tsx:1789-1793`.
+* **Causa provável:** `src/modules/prompts/PromptWorkspace.tsx:157, 214`, `prompt/PromptButton.tsx:62` (`pre.ui-code`),
+  `layouts/phone.tsx:1794`.
 * **Sugestão:** `tabIndex={0}`, `role="region"` e `aria-label="Texto do Master Prompt"` no `<pre>`; o mesmo nas áreas
   roláveis das prévias.
 * **Gravidade:** P2 · **Esforço:** baixo.
@@ -445,7 +445,7 @@ importante; **P3** menor. Esforço estimado para quem conhece o código.
 
 ### RA-23 — Nome acessível diferente do texto visível (controle por voz)
 * **Evidência:** axe `label-content-name-mismatch` 516 nós (cartões, marca, botão de busca).
-* **Causa provável:** `ui/index.tsx:432-446` (`aria-label` do `OptionCard` substitui o conteúdo); `Shell.tsx:349, 362`.
+* **Causa provável:** `ui/index.tsx:400-446` (o `aria-label` do `OptionCard`, linha 435, substitui o conteúdo); `Shell.tsx:347, 358`.
 * **Sugestão:** `aria-labelledby` (título) + `aria-describedby` (descrição) em vez de `aria-label`; marca sem
   `aria-label` (o texto já basta); busca com `aria-keyshortcuts="Control+K"` em vez de colocar o atalho no nome.
 * **Gravidade:** P3 · **Esforço:** baixo.
@@ -459,7 +459,7 @@ importante; **P3** menor. Esforço estimado para quem conhece o código.
 ### RA-25 — Toast cobre a barra do guiado; erros anunciados como `polite`
 * **Evidência:** `dados/detalhes5.json`: sobreposição de 45 px sobre o botão "Continuar" por 3,2 s a 375 px
   (`capturas/detalhes/toast-sobre-barra-guiado-375.png`); `Toaster` único com `aria-live="polite"` também para erros
-  (`ui/index.tsx:604-615`).
+  (`ui/index.tsx:654-665`).
 * **Sugestão:** subir os toasts acima da barra quando ela existe (`bottom: calc(var(--gd-footer-h) + 12px)`); erros com
   `role="alert"`.
 * **Gravidade:** P3 · **Esforço:** baixo.
