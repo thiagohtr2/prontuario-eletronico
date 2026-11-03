@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { History, RotateCcw, Save, Trash2 } from 'lucide-react'
 import { useProject, useStudio } from '@/core/store'
-import { relativeTime } from '@/modules/home/status'
+import { relativeTime } from '@/core/time'
 import { Actions, Badge, Button, Callout, Field, Input, Modal, PageHeader, Section, Segmented, Switch, toast } from '@/ui'
 import './project.css'
 

@@ -4,17 +4,12 @@ import { ENTRY_FLOWS, type EntryFlow } from '@/core/project'
 import { studio, useProject } from '@/core/store'
 import { EntryFlowPicker, LandingGallery, LoginGallery, SignupGallery } from '@/modules/entry'
 import { Button, Callout, keepScroll, Tabs } from '@/ui'
+import { SUB_EVENT, type EntrySub } from './entrySub'
 
-export type EntrySub = 'fluxo' | 'landing' | 'login' | 'cadastro'
 type Sub = EntrySub
 const SUB_KEY = 'atelier-ui:ui:entry-subtab'
-const SUB_EVENT = 'atelier-ui:entry-sub'
 const SUB_LABEL: Record<Sub, string> = { fluxo: 'Como as pessoas entram', landing: 'Landing page', login: 'Login', cadastro: 'Cadastro' }
 
-/** Abre uma parte da etapa de entrada (usado pelo botão “Continuar” para levar ao que falta). */
-export function openEntrySub(sub: EntrySub) {
-  window.dispatchEvent(new CustomEvent(SUB_EVENT, { detail: sub }))
-}
 
 /** Fluxo equivalente sem landing page (“Não preciso de landing”). */
 const WITHOUT_LANDING: Partial<Record<EntryFlow, EntryFlow>> = { 'landing-login': 'login-only', 'landing-only': 'app-direct', institutional: 'app-direct' }

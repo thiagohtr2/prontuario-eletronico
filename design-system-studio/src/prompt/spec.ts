@@ -5,6 +5,7 @@ import type { ThemeTokens } from '@/core/types'
 import { paletteById } from '@/modules/color/catalog'
 import { detectConflicts, detectPending, type Conflict, type Pending } from './conflicts'
 import { collectPromptData, projectTypeLabel, type PromptItem } from './items'
+import { buildDesignTokens, buildFacts, withGridFacts } from './devexport'
 import { mobileNavSummary, type AutoResolution } from './resolve'
 import { BREAKPOINTS, COMPONENT_RESPONSIVE_RULES, GLOBAL_RESPONSIVE_RULES, IMPLEMENTATION_RULES, REFERENCE_WIDTHS } from './responsive'
 
@@ -71,6 +72,10 @@ export interface ProjectSpec {
   /** Decisões aplicadas automaticamente pelo modelo de fatos único (precedência fixa). */
   resolutions: AutoResolution[]
   pending: Pending[]
+  /** Fatos com chaves técnicas e valores tipados ({ value, unit }), para consumo por código. */
+  facts: ReturnType<typeof buildFacts>
+  /** Tokens no formato DTCG ($type/$value). */
+  designTokens: ReturnType<typeof buildDesignTokens>
   /** Registro plano de todos os itens, inclusive os retirados do prompt (`included: false`). */
   items: PromptItem[]
   /** Estado completo do projeto, para reimportação. */
@@ -155,6 +160,8 @@ export function buildProjectSpec(project: Project): ProjectSpec {
       ),
     },
     implementationRules: IMPLEMENTATION_RULES,
+    facts: withGridFacts(buildFacts(project), project),
+    designTokens: buildDesignTokens(project, theme),
     conflicts: detectConflicts(project),
     resolutions,
     pending: detectPending(project),

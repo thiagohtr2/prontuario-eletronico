@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom'
 import { BarChart3, Boxes, LayoutDashboard, Megaphone, MonitorSmartphone, Plus, Sparkles, Store, X, type LucideIcon } from 'lucide-react'
 import { useShallow } from 'zustand/react/shallow'
 import { ENTRY_FLOWS, PROJECT_TYPES, SUGGESTIONS, type ProjectType } from '@/core/project'
-import { landings, logins } from '@/modules/entry/catalog'
 import { desktopById, mobileById } from '@/modules/layouts/catalog'
 import { useProject, useStudio } from '@/core/store'
 import { Button, Callout, Field, Input, Section, Textarea, keepScroll } from '@/ui'
@@ -51,8 +50,10 @@ export function ProjectGoalForm({ guided = false }: { guided?: boolean }) {
   const recMobile = suggestion ? mobileById(suggestion.mobile[0]) : undefined
 
   /** Caminho rápido: aplica a combinação recomendada e vai direto para a revisão do esqueleto. */
-  const useRecommended = () => {
+  const useRecommended = async () => {
     if (!suggestion || !suggestedFlow || !recDesktop || !recMobile) return
+    // Catálogos de entrada carregados só quando o atalho é usado (não pesam na etapa 1).
+    const { landings, logins } = await import('@/modules/entry/catalog')
     const st = useStudio.getState()
     st.setEntryFlow(suggestedFlow.id)
     if (suggestedFlow.needsLanding && !st.project.entry.landingId) st.selectLanding(landings[0].id)

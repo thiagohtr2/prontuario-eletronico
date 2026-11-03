@@ -7,6 +7,7 @@ import { projectTheme } from '@/core/theme'
 import { TOKEN_GROUPS } from '@/core/tokens'
 import { IdentityPreview } from '@/modules/color/IdentityPreview'
 import { buildProjectCss } from '@/prompt/css'
+import { buildDesignTokens, buildTailwindConfig, buildTailwindV4, buildTokensTs } from '@/prompt/devexport'
 import { KIND_LABEL } from '@/prompt/items'
 import { buildProjectSpec } from '@/prompt/spec'
 import { renderMasterPrompt } from '@/prompt/text'
@@ -103,6 +104,38 @@ export default function ExportPage() {
       action: () => downloadFile(`${base}-tokens.css`, buildProjectCss(project), 'text/css'),
       copy: () => buildProjectCss(project),
       testId: 'export-css',
+    },
+    {
+      icon: Braces,
+      title: 'Tokens (DTCG JSON)',
+      description: 'Cores, raios, espaços, sombra, tipografia e breakpoints no formato padrão de design tokens (Style Dictionary, Tokens Studio).',
+      action: () => downloadJson(`${base}-tokens.json`, buildDesignTokens(project)),
+      copy: () => JSON.stringify(buildDesignTokens(project), null, 2),
+      testId: 'export-dtcg',
+    },
+    {
+      icon: FileCode2,
+      title: 'Tailwind CSS 3 (tailwind.config.js)',
+      description: 'Utilitários (bg-primary, rounded-md, font-heading, md:/lg:) apontando para as variáveis do CSS de referência.',
+      action: () => downloadFile(`tailwind.config.js`, buildTailwindConfig(project), 'text/javascript'),
+      copy: () => buildTailwindConfig(project),
+      testId: 'export-tailwind',
+    },
+    {
+      icon: FileCode2,
+      title: 'Tailwind CSS 4 (@theme)',
+      description: 'Bloco @theme com os valores dos tokens e os breakpoints do projeto, sem arquivo de configuração.',
+      action: () => downloadFile(`${base}-tailwind.css`, buildTailwindV4(project), 'text/css'),
+      copy: () => buildTailwindV4(project),
+      testId: 'export-tailwind4',
+    },
+    {
+      icon: FileCode2,
+      title: 'TypeScript (tokens.ts)',
+      description: 'Cores, raios, espaços, breakpoints e os fatos do projeto (medidas, menu, navegação móvel) tipados com as const.',
+      action: () => downloadFile(`${base}-tokens.ts`, buildTokensTs(project), 'text/plain'),
+      copy: () => buildTokensTs(project),
+      testId: 'export-ts',
     },
     {
       icon: Globe,

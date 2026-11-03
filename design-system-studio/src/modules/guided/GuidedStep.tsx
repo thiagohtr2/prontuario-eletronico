@@ -1,21 +1,25 @@
-import { useEffect, type ReactNode } from 'react'
+import { lazy, Suspense, useEffect, type ReactNode } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, Check, Lock, ShieldCheck } from 'lucide-react'
 import { useShallow } from 'zustand/react/shallow'
 import { ALL_STEPS, ENTRY_FLOWS, FINISH_STEPS, SKELETON_STEPS, skeletonDone, type StepId } from '@/core/project'
 import { useProject, useStudio } from '@/core/store'
-import { ColorSystem } from '@/modules/color/ColorSystem'
-import { ComponentLibrary } from '@/modules/components'
-import { DesktopGallery, MobileStudio } from '@/modules/layouts'
-import { NavigationShowcase } from '@/modules/navigation'
-import { LiveSitePreview } from '@/modules/preview/LiveSitePreview'
-import { ProjectGoalForm } from '@/modules/project/ProjectGoalForm'
-import { PromptWorkspace } from '@/modules/prompts/PromptWorkspace'
 import { STEP_META } from '@/shell/nav'
 import { Button, toast } from '@/ui'
-import { EntryStep, openEntrySub } from './EntryStep'
-import { SkeletonReview } from './SkeletonReview'
+import { openEntrySub } from './entrySub'
 import './guided.css'
+
+// Cada etapa carrega só o próprio módulo (antes, o guiado carregava as 10 áreas de uma vez: TE-14).
+const ColorSystem = lazy(() => import('@/modules/color/ColorSystem').then((m) => ({ default: m.ColorSystem })))
+const ComponentLibrary = lazy(() => import('@/modules/components').then((m) => ({ default: m.ComponentLibrary })))
+const DesktopGallery = lazy(() => import('@/modules/layouts/galleries').then((m) => ({ default: m.DesktopGallery })))
+const MobileStudio = lazy(() => import('@/modules/layouts/galleries').then((m) => ({ default: m.MobileStudio })))
+const NavigationShowcase = lazy(() => import('@/modules/navigation').then((m) => ({ default: m.NavigationShowcase })))
+const LiveSitePreview = lazy(() => import('@/modules/preview/LiveSitePreview').then((m) => ({ default: m.LiveSitePreview })))
+const ProjectGoalForm = lazy(() => import('@/modules/project/ProjectGoalForm').then((m) => ({ default: m.ProjectGoalForm })))
+const PromptWorkspace = lazy(() => import('@/modules/prompts/PromptWorkspace').then((m) => ({ default: m.PromptWorkspace })))
+const EntryStep = lazy(() => import('./EntryStep').then((m) => ({ default: m.EntryStep })))
+const SkeletonReview = lazy(() => import('./SkeletonReview').then((m) => ({ default: m.SkeletonReview })))
 
 const STEP_INTRO: Record<StepId, string> = {
   objetivo: 'Conte o que você vai construir. Isso ajuda o Studio a sugerir caminhos — você continua livre para escolher.',
@@ -211,7 +215,7 @@ export default function GuidedStep() {
         <p>{STEP_INTRO[step]}</p>
       </header>
 
-      {body}
+      <Suspense fallback={<div className="u-muted" style={{ minHeight: 320 }}>Carregando…</div>}>{body}</Suspense>
 
       <div className="gd-footer">
         <div>

@@ -4,7 +4,7 @@ import { SKELETON_STEPS, skeletonDone } from '@/core/project'
 import { useProject, useStudio } from '@/core/store'
 import { STEP_META } from '@/shell/nav'
 import { Badge, Button } from '@/ui'
-import { relativeTime } from './status'
+import { relativeTime } from '@/core/time'
 import './home.css'
 
 function GuidedArt() {

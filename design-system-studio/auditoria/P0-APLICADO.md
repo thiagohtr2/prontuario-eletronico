@@ -73,3 +73,14 @@ Playwright 77 testes passando.
 | B-24 Padrões únicos | Modais de modelo com rodapé padrão (“Fechar” + prompt + “Escolher este modelo”, que escolhe e fecha); toasts de 3,5 s acima de barras fixas e fechados ao trocar de tela; no guiado, sem breadcrumb nem contador do topo repetindo o stepper; “Master Prompt” secundário até o esqueleto estar quase completo e com rótulo no celular. |
 
 **Verificação:** Vitest 470 testes; Playwright 92 testes (6 novos em `tests/e2e/v422.spec.ts`).
+
+# Versão 4.23 concluída (2026-11-03) — exportações para desenvolvedores
+
+| Item | O que mudou |
+| --- | --- |
+| B-15 JSON consumível | A especificação JSON ganhou `facts` (chaves técnicas em inglês, números com unidade separada `{ value, unit }`: altura do header e se ele atravessa a sidebar, largura da sidebar, breakpoints, vagas da navegação inferior, drawer/trilho/stories, menu, marca, identidade) e `designTokens` no formato DTCG (`$type`/`$value`: cores, raios, espaços, borda, sombra, fontes, alturas de controle, breakpoints). Novos arquivos em Exportar: **Tokens (DTCG JSON)**, **Tailwind 3** (`tailwind.config.js` com cores, raios, fontes, sombras e `screens` 768/1024/1440 apontando para as variáveis), **Tailwind 4** (`@theme`) e **TypeScript** (`tokens.ts` com cores, raios, espaços, breakpoints e fatos `as const`). |
+| B-15 CSS | Sem o breakpoint divergente de 599 px (agora 767 px, igual ao prompt); campos de texto com `input:where(:not([type=checkbox], [type=radio], [type=range], [type=color], [type=file]))` (checkbox e radio voltam ao tamanho nativo); escala de espaço só em múltiplos de 4 (`--density-unit` separado); `--control-h-sm/md/lg` (32/40/48) com 44 px de toque no celular; `--bp-*` documentados. |
+| Prompt | Trechos `calc()/min()/max()/clamp()` saem em CSS válido (`calc(100dvh - 64px)`, sem “−” nem “64 px”). |
+| B-18 Carregamento | O modal de prompt individual (motor + catálogos) só carrega ao abrir; cada etapa do guiado carrega só o próprio módulo; a tela inicial não importa mais os catálogos; os catálogos de entrada do atalho “Usar recomendados” carregam sob demanda. JS por tela: início 884 → 345 KB, cores 1 139 → 381 KB, guiado 1 724 KB → 339 KB + a etapa aberta. Galeria de inspiração: cada site completo só é montado quando o cartão chega perto da tela. |
+
+**Verificação:** Vitest 476 testes (novo `tests/unit/v423.test.ts`, inclusive transpilação do `tokens.ts`); Playwright 92 testes.

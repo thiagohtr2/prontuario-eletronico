@@ -21,8 +21,16 @@ export function themeToCssVariables(theme: ResolvedTheme, selector = ':root'): s
     `  --radius-lg: ${metrics.radiusLg}px;`,
     `  --border-width: ${metrics.borderWidth}px;`,
     `  --shadow-surface: ${metrics.shadow};`,
-    `  --space-unit: ${metrics.spacing}px;`,
+    // Escala de espaço em múltiplos de 4 (a mesma do prompt); a densidade só ajusta o respiro interno.
     ...[4, 8, 12, 16, 20, 24, 32, 40].map((n, i) => `  --space-${i + 1}: ${n}px;`),
+    `  --density-unit: ${metrics.spacing}px;`,
+    '  --control-h-sm: 32px;',
+    '  --control-h-md: 40px;',
+    '  --control-h-lg: 48px;',
+    // Breakpoints únicos (os mesmos do Master Prompt). Variáveis não funcionam em @media: use os valores.
+    '  --bp-tablet: 768px;',
+    '  --bp-desktop: 1024px;',
+    '  --bp-wide: 1440px;',
     `  color-scheme: ${tokens.mode};`,
   ]
   return `${selector} {\n${lines.join('\n')}\n}`
@@ -62,7 +70,7 @@ img, video, svg { max-width: 100%; height: auto; }
 :focus-visible { outline: 2px solid var(--color-focus-ring); outline-offset: 2px; }
 
 .btn-primary {
-  min-height: 44px;
+  min-height: var(--control-h-md);
   padding: 0 var(--space-4);
   border: 0;
   border-radius: var(--radius-md);
@@ -82,9 +90,10 @@ img, video, svg { max-width: 100%; height: auto; }
   box-shadow: var(--shadow-surface);
 }
 
-input, select, textarea {
+/* Campos de texto (checkbox, radio, range, color e file ficam com o tamanho nativo). */
+input:where(:not([type=checkbox], [type=radio], [type=range], [type=color], [type=file], [type=hidden])), select, textarea {
   font: inherit;
-  min-height: 44px;
+  min-height: var(--control-h-md);
   border: var(--border-width) solid var(--color-border-strong);
   border-radius: var(--radius-md);
   background: var(--color-surface);
@@ -92,8 +101,10 @@ input, select, textarea {
 }
 input::placeholder, textarea::placeholder { color: var(--color-placeholder); }
 
-@media (max-width: 599px) {
-  input, select, textarea { font-size: 16px; }
+/* Celular (até 767 px): áreas de toque de 44 px e campos com 16 px (sem zoom automático no iOS). */
+@media (max-width: 767px) {
+  .btn-primary { min-height: 44px; }
+  input:where(:not([type=checkbox], [type=radio], [type=range], [type=color], [type=file], [type=hidden])), select, textarea { min-height: 44px; font-size: 16px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -30,8 +30,25 @@ function useMeasure(initialWidth: number, initialHeight: number) {
  * Miniatura viva: o site é desenhado a 1280 px e reduzido com `transform: scale()` dentro
  * de uma caixa de altura fixa. Ao passar o mouse no cartão, a página desliza devagar.
  */
+/** Verdadeiro quando o elemento chega perto da área visível (uma vez visto, fica verdadeiro). */
+function useNearViewport<T extends HTMLElement>(ref: { current: T | null }, margin = '600px') {
+  const [near, setNear] = useState(() => typeof IntersectionObserver === 'undefined')
+  useEffect(() => {
+    if (near || !ref.current) return
+    const io = new IntersectionObserver((entries) => entries.some((e) => e.isIntersecting) && setNear(true), { rootMargin: margin })
+    io.observe(ref.current)
+    return () => io.disconnect()
+  }, [near, ref, margin])
+  return near
+}
+
+/**
+ * Miniatura do site. O site completo só é montado quando o cartão chega perto da tela (TE-15):
+ * abrir a galeria não renderiza mais os 20 sites inteiros de uma vez.
+ */
 export function SiteThumbnail({ Site, palette, height = 228 }: { Site: ComponentType<SiteProps>; palette: SitePalette; height?: number }) {
   const { outer, inner, w, h } = useMeasure(320, 2400)
+  const near = useNearViewport(outer)
   const scale = w / VIRTUAL_WIDTH
   const travel = Math.max(0, Math.min(h * scale - height, height * 4))
   return (
@@ -42,7 +59,7 @@ export function SiteThumbnail({ Site, palette, height = 228 }: { Site: Component
       style={{ height, background: palette.bg, ['--ins-s' as string]: scale, ['--ins-travel' as string]: `${travel}px` } as CSSProperties}
     >
       <div ref={inner} className="ins-thumb__inner" style={{ width: VIRTUAL_WIDTH }}>
-        <Site palette={palette} device="desktop" />
+        {near ? <Site palette={palette} device="desktop" /> : null}
       </div>
     </div>
   )

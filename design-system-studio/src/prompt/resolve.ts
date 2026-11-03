@@ -241,6 +241,14 @@ export function resolvePromptItems(items: PromptItem[], project: Project): AutoR
     })
   }
 
+  /* 5b. Trechos de CSS válidos: “calc(100dvh − 56 px)” → `calc(100dvh - 56px)` (A3, item 8). */
+  const cssFn: TextFn = (l) =>
+    l.replace(/\b(calc|min|max|clamp)\(((?:[^()]|\([^()]*\))*)\)/g, (_m, fn: string, inner: string) => {
+      const fixed = inner.replace(/−/g, '-').replace(/(\d)\s+(px|vw|vh|dvh|svh|rem|em|%)/g, '$1$2')
+      return `${fn}(${fixed})`
+    })
+  for (const item of items) mapItemText(item, cssFn)
+
   /* 6. Breakpoints únicos (celular até 767, tablet 768–1023, desktop a partir de 1024). */
   const bp: TextFn = (l) => l.replace(/\b600\s?(e|a)\s?1023\b/g, '768 e 1023').replace(/\b600\s?[–-]\s?1023\b/g, '768–1023')
   for (const item of items) mapItemText(item, bp)
