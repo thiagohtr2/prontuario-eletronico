@@ -94,7 +94,7 @@ export const MODULE_GROUPS: NavGroup[] = [
     label: 'Ferramentas',
     entries: [
       { id: 'validacao', label: 'Validação responsiva', path: '/validacao', icon: ScanSearch, description: 'Teste sites reais e gere prompts de correção.', keywords: 'validação responsividade playwright overflow teste' },
-      { id: 'projeto', label: 'Projeto e versões', path: '/projeto', icon: FolderCog, description: 'Histórico, versões e limpar projeto.', keywords: 'projeto versões histórico reset limpar' },
+      { id: 'projeto', label: 'Projeto e versões', path: '/projeto', icon: FolderCog, description: 'Projetos, versões, comparar e recomeçar do zero.', keywords: 'projeto versões histórico reset resetar limpar apagar tudo recomeçar zerar começar de novo' },
     ],
   },
 ]

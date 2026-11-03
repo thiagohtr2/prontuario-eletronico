@@ -206,6 +206,11 @@ interface StudioState {
   /** Guarda o projeto atual na biblioteca e abre outro (com as versões dele). */
   openProject: (id: string) => void
   deleteLibraryProject: (id: string) => void
+  /**
+   * Recomeça do zero: apaga o projeto atual, todas as versões, os outros projetos, as cópias de
+   * recuperação e as preferências de interface guardadas neste navegador. Não pode ser desfeito.
+   */
+  resetEverything: () => void
   /** Duplica o projeto atual na biblioteca (ponto de partida para uma variação). */
   duplicateProject: () => void
 }
@@ -431,6 +436,18 @@ export const useStudio = create<StudioState>()(
             return { library: stash(s).filter((e) => e.id !== id), project: parsed.project, history: entry.history }
           }),
         deleteLibraryProject: (id) => set((s) => ({ library: s.library.filter((e) => e.id !== id) })),
+        resetEverything: () => {
+          // Tudo do Studio neste navegador (inclusive cópias de recuperação e preferências de interface).
+          for (const storage of [localStorage, sessionStorage]) {
+            try {
+              for (const key of Object.keys(storage)) if (key.startsWith('atelier-ui:') && key !== STORAGE_KEY) storage.removeItem(key)
+            } catch {
+              /* armazenamento indisponível */
+            }
+          }
+          useSaveStatus.setState({ failed: false, pruned: false, recoveryKey: null })
+          set({ project: createProject(), history: [], library: [] })
+        },
         duplicateProject: () =>
           set((s) => {
             const copy = { ...structuredClone(s.project), id: uid('prj'), createdAt: new Date().toISOString() }

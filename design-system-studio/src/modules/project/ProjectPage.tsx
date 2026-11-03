@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { Copy, FilePlus2, FolderOpen, GitCompare, History, RotateCcw, Save, Trash2 } from 'lucide-react'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { Copy, Download, FilePlus2, FolderOpen, GitCompare, History, RefreshCcw, RotateCcw, Save, Trash2 } from 'lucide-react'
+import { downloadJson, slugify } from '@/core/download'
 import { useProject, useStudio } from '@/core/store'
 import { relativeTime } from '@/core/time'
 import { diffProjects, diffPrompts } from '@/prompt/diff'
@@ -23,6 +25,11 @@ export default function ProjectPage() {
   const [confirmReset, setConfirmReset] = useState(false)
   const [confirmRestore, setConfirmRestore] = useState<string | null>(null)
   const [compareId, setCompareId] = useState<string | null>(null)
+  // Vindo do “Começar do zero” da tela inicial, a confirmação já abre.
+  const location = useLocation()
+  const [confirmWipe, setConfirmWipe] = useState(() => Boolean((location.state as { wipe?: boolean } | null)?.wipe))
+  const [understood, setUnderstood] = useState(false)
+  const navigate = useNavigate()
   const project = useStudio((s) => s.project)
   const library = useStudio((s) => s.library)
   const { newProject, openProject, deleteLibraryProject, duplicateProject } = useStudio.getState()
@@ -186,7 +193,27 @@ export default function ProjectPage() {
         )}
       </Section>
 
-      <Section title="Limpar projeto" description="Apaga todas as escolhas e começa do zero. Uma versão de segurança é salva antes.">
+      <Section
+        id="recomecar"
+        title="Recomeçar do zero"
+        description="Apaga tudo o que o Studio guardou neste navegador: o projeto atual, todas as versões, os outros projetos e as preferências. O Studio volta exatamente como na primeira vez."
+      >
+        <div>
+          <Button
+            variant="danger"
+            icon={<RefreshCcw />}
+            onClick={() => {
+              setUnderstood(false)
+              setConfirmWipe(true)
+            }}
+            data-testid="reset-everything"
+          >
+            Apagar tudo e começar do zero
+          </Button>
+        </div>
+      </Section>
+
+      <Section title="Limpar só o projeto atual" description="Apaga as escolhas do projeto aberto e mantém as versões e os outros projetos. Uma versão de segurança é salva antes.">
         <div>
           <Button variant="danger" icon={<Trash2 />} onClick={() => setConfirmReset(true)} data-testid="reset-project">
             Limpar projeto
@@ -218,6 +245,52 @@ export default function ProjectPage() {
         }
       >
         <Badge tone="warning">Esta ação substitui o projeto atual</Badge>
+      </Modal>
+
+      <Modal
+        open={confirmWipe}
+        onClose={() => setConfirmWipe(false)}
+        title="Apagar tudo e começar do zero?"
+        subtitle="Isto não pode ser desfeito. Se quiser guardar alguma coisa, baixe um backup antes."
+        width={520}
+        testId="reset-everything-modal"
+        footer={
+          <>
+            <Button onClick={() => setConfirmWipe(false)}>Cancelar</Button>
+            <Button
+              variant="danger"
+              disabled={!understood}
+              onClick={() => {
+                useStudio.getState().resetEverything()
+                setConfirmWipe(false)
+                navigate('/')
+                toast.success('Tudo apagado. O Studio está como na primeira vez.')
+              }}
+              data-testid="confirm-reset-everything"
+            >
+              Apagar tudo
+            </Button>
+          </>
+        }
+      >
+        <div className="u-stack">
+          <ul className="wipe-list">
+            <li>O projeto atual ({name || 'Projeto sem nome'})</li>
+            <li>{history.length} versão(ões) salva(s)</li>
+            <li>{library.length} outro(s) projeto(s) em “Seus projetos”</li>
+            <li>Preferências e cópias de recuperação deste navegador</li>
+          </ul>
+          <div>
+            <Button
+              size="sm"
+              icon={<Download />}
+              onClick={() => downloadJson(`${slugify(name || 'projeto')}-backup.json`, { kind: 'atelier-ui/backup', exportedAt: new Date().toISOString(), project, history, library })}
+            >
+              Baixar backup antes
+            </Button>
+          </div>
+          <Switch checked={understood} onChange={setUnderstood} label="Entendo que tudo será apagado e que não dá para desfazer" id="wipe-understood" />
+        </div>
       </Modal>
 
       <Modal

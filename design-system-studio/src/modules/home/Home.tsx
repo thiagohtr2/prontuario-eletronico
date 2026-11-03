@@ -79,9 +79,14 @@ export default function Home() {
               Esqueleto {doneSkeleton}/{SKELETON_STEPS.length} · próxima etapa: {STEP_META[step].label} · salvo {relativeTime(updatedAt)}
             </span>
           </div>
-          <Button variant="primary" iconRight={<ArrowRight />} onClick={() => start(mode)}>
-            Continuar no modo {mode === 'guided' ? 'guiado' : 'livre'}
-          </Button>
+          <div className="u-row" style={{ gap: 8 }}>
+            <Button variant="ghost" onClick={() => navigate('/projeto', { state: { wipe: true } })} data-testid="home-start-over">
+              Começar do zero
+            </Button>
+            <Button variant="primary" iconRight={<ArrowRight />} onClick={() => start(mode)}>
+              Continuar no modo {mode === 'guided' ? 'guiado' : 'livre'}
+            </Button>
+          </div>
         </div>
       )}
 
