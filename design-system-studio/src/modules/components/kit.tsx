@@ -13,6 +13,10 @@ export interface PreviewCtx {
   state: PreviewState
   onPart?: (part: string) => void
   activePart?: string | null
+  /** Dentro de uma página de site: sem os exemplos extras da vitrine (2º campo, 2º toast, barras…). */
+  inPage?: boolean
+  /** Faixa baixa (ex.: faixa de indicadores do layout): versão compacta, quando o componente tem uma. */
+  compact?: boolean
 }
 
 export const PreviewContext = createContext<PreviewCtx | null>(null)

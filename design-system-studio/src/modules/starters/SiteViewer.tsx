@@ -12,7 +12,7 @@ import { categoryById } from '@/modules/components/catalog'
 import { useWidth } from '@/modules/preview/SiteFrame'
 import { Badge, Button, Callout, DeviceToggle, Modal, Segmented, Tabs, toast, useMediaQuery } from '@/ui'
 import { buildInventory, type InventoryTarget } from './inventory'
-import { SitePreview, type PageState, type PickTarget } from './SitePreview'
+import { SitePreview, pageOverlays, type PageState, type PickTarget } from './SitePreview'
 import { STARTER_GROUPS, type SiteStarter, type StarterPalette } from './types'
 import './starters.css'
 
@@ -71,6 +71,7 @@ export function SiteViewer({ project, mode, starter, paletteVariant, onPaletteVa
   const [editing, setEditing] = useState<InventoryTarget | null>(null)
   const [styleFor, setStyleFor] = useState<string | null>(null)
   const [pageState, setPageState] = useState<PageState>('normal')
+  const [overlay, setOverlay] = useState<string | null>(null)
   const [ref, available] = useWidth<HTMLDivElement>()
   const theme = useMemo(() => projectTheme(project), [project])
   const inventory = useMemo(() => buildInventory(project), [project])
@@ -105,6 +106,9 @@ export function SiteViewer({ project, mode, starter, paletteVariant, onPaletteVa
   }
 
   const page = project.pages.find((p) => p.id === pageId)
+  const overlays = useMemo(() => pageOverlays(project, page), [project, page])
+  // Trocar de página fecha a sobreposição aberta.
+  useEffect(() => setOverlay(null), [pageId])
   const maxH = full ? Math.max(320, window.innerHeight - 140) : undefined
   const group = starter ? STARTER_GROUPS.find((g) => g.id === starter.group) : undefined
   const exceptions = project.components.filter((c) => Object.keys(c.tokenOverrides).length).length
@@ -196,6 +200,15 @@ export function SiteViewer({ project, mode, starter, paletteVariant, onPaletteVa
           </div>
           <div className="sv-toolbar">
             {page && <p className="sv-page-purpose u-subtle u-small">{page.purpose}</p>}
+            {overlays.length > 0 && (
+              <div className="sv-overlays" role="group" aria-label="Sobreposições desta página">
+                {overlays.map((o) => (
+                  <button key={o.id} type="button" className="sv-page-chip" aria-pressed={overlay === o.id} onClick={() => setOverlay((cur) => (cur === o.id ? null : o.id))} data-testid={`overlay-${o.id}`}>
+                    {overlay === o.id ? 'Fechar' : 'Abrir'}: {o.label}
+                  </button>
+                ))}
+              </div>
+            )}
             {page?.kind === 'app' && (
               <div className="sv-states">
                 <Segmented
@@ -214,7 +227,7 @@ export function SiteViewer({ project, mode, starter, paletteVariant, onPaletteVa
           </div>
           <div ref={ref} className="sv-stage" data-testid="site-viewer-stage">
             {available > 0 && (
-              <SitePreview project={project} theme={theme} pageId={pageId} device={device} available={available} maxH={maxH} editMode={site && editMode} onPick={open} onNavigate={onNavigate} state={pageState} />
+              <SitePreview project={project} theme={theme} pageId={pageId} device={device} available={available} maxH={maxH} editMode={site && editMode} onPick={open} onNavigate={onNavigate} state={pageState} overlay={overlay} />
             )}
           </div>
         </section>

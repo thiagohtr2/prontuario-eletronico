@@ -39,7 +39,7 @@ export const folhaVaso: SiteStarter = {
     { id: 'produto-zamioculca', categoryId: 'cards', label: 'Zamioculca', props: { titulo: 'Zamioculca · vaso 18 cm', texto: 'Rega a cada 15 dias. Ideal para escritório. R$ 89,90', etiqueta: 'Pouca luz', botao: 'Adicionar', icone: 'Leaf', layout: 'vertical', midia: true, rodape: true } },
     { id: 'produto-costela', categoryId: 'cards', label: 'Costela-de-adão', props: { titulo: 'Costela-de-adão · vaso 24 cm', texto: 'Folhas grandes para a sala com luz indireta. R$ 149,90', etiqueta: 'Destaque', botao: 'Adicionar', icone: 'Leaf', layout: 'vertical', midia: true, rodape: true } },
     { id: 'paginacao', categoryId: 'paginacao', label: 'Paginação', props: { paginaAtual: 1, totalPaginas: 6, estilo: 'numeros', mostrarTotal: true } },
-    { id: 'produto', categoryId: 'paginas-detalhes', label: 'Página da Costela-de-adão', props: { titulo: 'Costela-de-adão', preco: 'R$ 149,90', status: 'Em estoque · entrega em 2 dias', botao: 'Adicionar à sacola', galeria: true, abas: true } },
+    { id: 'produto', categoryId: 'paginas-detalhes', label: 'Página da Costela-de-adão', props: { titulo: 'Costela-de-adão', preco: 'R$ 149,90', status: 'Em estoque · entrega em 2 dias', botao: 'Adicionar à sacola', caminho: 'Loja\nPlantas\nFolhagens\nCostela-de-adão', icone: 'Leaf', galeria: true, abas: true } },
     { id: 'cuidados', categoryId: 'accordions', label: 'Guia de cuidados', props: { itens: 'Luz\nRega\nVaso e adubo\nPets', resposta: 'Luz indireta e clara. Sol direto da manhã é bem-vindo; à tarde queima as folhas.', aberto: 1, icone: 'chevron', separados: true } },
     { id: 'itens-sacola', categoryId: 'listas', label: 'Itens da sacola', props: { titulo: 'Sua sacola (3 itens)', itens: 'Costela-de-adão 24 cm — R$ 149,90\nVaso de cerâmica areia — R$ 79,90\nSubstrato premium 5 kg — R$ 34,90', avatares: false, divisores: true, acao: 'botao' } },
     { id: 'resumo', categoryId: 'cards', label: 'Resumo do pedido', props: { titulo: 'Total: R$ 264,70', texto: 'Frete grátis acima de R$ 200. Entrega em 2 dias úteis para São Paulo.', etiqueta: 'Frete grátis', botao: 'Finalizar compra', icone: 'ShoppingBag', layout: 'vertical', midia: false, rodape: true } },
@@ -229,6 +229,7 @@ export const verticeArquitetura: SiteStarter = {
     { id: 'projeto-casa', categoryId: 'cards', label: 'Casa Serra', props: { titulo: 'Casa Serra — 2025', texto: 'Residência de 320 m² em encosta, concreto aparente e madeira.', etiqueta: 'Residencial', botao: 'Ver projeto', icone: 'Home', layout: 'vertical', midia: true, rodape: false } },
     { id: 'projeto-loja', categoryId: 'cards', label: 'Loja Atelier', props: { titulo: 'Loja Atelier — 2024', texto: 'Varejo de moda com fachada em vidro e vitrines móveis.', etiqueta: 'Comercial', botao: 'Ver projeto', icone: 'Store', layout: 'vertical', midia: true, rodape: false } },
     { id: 'projeto-apto', categoryId: 'cards', label: 'Apartamento Jardins', props: { titulo: 'Apartamento Jardins — 2024', texto: 'Interiores de 140 m², marcenaria sob medida e luz natural.', etiqueta: 'Interiores', botao: 'Ver projeto', icone: 'Layers', layout: 'vertical', midia: true, rodape: false } },
+    { id: 'destaques', categoryId: 'listas', label: 'Destaques do estúdio', props: { titulo: 'Destaques', itens: 'Prêmio IAB-SP 2025 — Casa Serra\nPublicado na revista Projeto — Loja Atelier\nBienal de Arquitetura 2024 — seleção oficial\nCasa Cor 2023 — ambiente Jardins', avatares: false, divisores: true, acao: 'chevron' } },
     { id: 'etapas-processo', categoryId: 'step-indicators', label: 'Etapas do projeto', props: { passos: 'Conversa\nEstudo\nAnteprojeto\nExecutivo\nObra', atual: 2, orientacao: 'horizontal', numeros: true } },
     { id: 'linha-processo', categoryId: 'timelines', label: 'Prazos de cada etapa', props: { itens: 'Conversa inicial — 1 semana\nEstudo preliminar — 3 semanas\nAnteprojeto — 4 semanas\nProjeto executivo — 6 semanas\nAcompanhamento de obra — conforme a obra', atual: 2, orientacao: 'vertical', icones: false } },
     { id: 'perguntas', categoryId: 'accordions', label: 'Perguntas frequentes', props: { itens: 'Quanto custa um projeto?\nVocês acompanham a obra?\nAtendem fora de São Paulo?', resposta: 'O valor depende da área e do escopo. Depois da conversa inicial enviamos uma proposta com etapas e prazos.', aberto: 1, icone: 'plus', separados: false } },
@@ -246,10 +247,11 @@ export const verticeArquitetura: SiteStarter = {
       navItem: 'Projetos',
       blocks: [
         { component: 'filtro-tipologia', span: 12, height: 52 },
-        { component: 'projeto-casa', span: 4, height: 330 },
-        { component: 'projeto-loja', span: 4, height: 330 },
-        { component: 'projeto-apto', span: 4, height: 330 },
+        { component: 'projeto-casa', span: 6, height: 330 },
+        { component: 'projeto-loja', span: 6, height: 330 },
+        { component: 'projeto-apto', span: 6, height: 330 },
       ],
+      aside: [{ component: 'destaques', span: 12, height: 300 }],
     },
     {
       id: 'processo',
@@ -259,9 +261,9 @@ export const verticeArquitetura: SiteStarter = {
       navItem: 'Processo',
       blocks: [
         { component: 'etapas-processo', span: 12, height: 80 },
-        { component: 'linha-processo', span: 6, height: 320 },
-        { component: 'perguntas', span: 6, height: 320 },
+        { component: 'linha-processo', span: 12, height: 340 },
       ],
+      aside: [{ component: 'perguntas', span: 12, height: 340 }],
     },
     {
       id: 'contato',
@@ -270,9 +272,11 @@ export const verticeArquitetura: SiteStarter = {
       purpose: 'Pedido de orçamento com tipo de projeto e referências.',
       navItem: 'Contato',
       blocks: [
-        { component: 'form-contato', span: 7, height: 420 },
-        { component: 'tipo-projeto', span: 5, height: 100 },
-        { component: 'referencias', span: 5, height: 300 },
+        { component: 'form-contato', span: 12, height: 440 },
+      ],
+      aside: [
+        { component: 'tipo-projeto', span: 12, height: 100 },
+        { component: 'referencias', span: 12, height: 280 },
       ],
     },
   ],

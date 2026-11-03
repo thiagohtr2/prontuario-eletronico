@@ -122,6 +122,8 @@ export interface NavChoice {
   id: string
   /** Proposta de composição: cada modelo tem duas (0 ou 1). */
   variant: 0 | 1
+  /** Texto do botão de criar da sidebar (ex.: “Agendar aula”); vazio usa o do modelo. */
+  cta?: string
 }
 
 export interface InspirationChoice {

@@ -343,15 +343,52 @@
 .sp-fit .cmp-pv__inner {
   align-items: flex-start;
   justify-content: stretch;
-  padding: 0;
+  /* Folga mínima para sombras, anéis de foco e rótulos não serem cortados na borda do bloco. */
+  padding: 4px;
+}
+/* Etapas: o rótulo da primeira e da última etapa fica centrado no círculo e precisa de espaço lateral. */
+.sp-block[data-category='step-indicators'] .sp-fit .cmp-pv__inner {
+  padding: 4px 32px;
 }
 .sp-fit .cmp-pv__inner > * {
-  width: 100%;
-  max-width: none;
+  /* Os componentes trazem largura máxima de vitrine (inline); na página, a célula da grade manda. */
+  width: 100% !important;
+  max-width: none !important;
+}
+/* Altura do bloco = mínimo; o conteúdo define o resto (componentes de palco cheio mantêm a altura fixa). */
+.sp-block {
+  display: flex;
+  flex-direction: column;
+}
+.sp-block > .sp-grow {
+  flex: 1 1 auto;
+}
+.sp-grow:not(.cmp-pv--fill) {
+  height: auto !important;
+  display: flex;
+  flex-direction: column;
+}
+.sp-grow:not(.cmp-pv--fill) > .cmp-pv__inner {
+  position: relative;
+  inset: auto;
+  flex: 1 1 auto;
+}
+/* Cartões lado a lado ficam com a mesma altura. */
+.sp-block[data-category='cards'] .sp-grow > .cmp-pv__inner,
+.sp-block[data-category='kpis-stat-cards'] .sp-grow > .cmp-pv__inner {
+  align-items: stretch;
 }
 .sv-panel .ui-tabs {
   flex-wrap: wrap;
 }
 .sv-states {
   margin-left: auto;
+}
+.sv-overlays {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.sp-overlay[data-editable] {
+  cursor: pointer;
 }

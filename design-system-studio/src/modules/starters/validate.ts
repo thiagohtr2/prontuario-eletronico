@@ -4,6 +4,7 @@ import { paletteById } from '@/modules/color/catalog'
 import { categoryById, familyById } from '@/modules/components/catalog'
 import { landingById, loginById, signupById } from '@/modules/entry/catalog'
 import { desktopById, mobileById } from '@/modules/layouts/catalog'
+import { asideRegions } from '@/modules/preview/SiteFrame'
 import { headerById, sidebarById } from '@/modules/navigation/catalog'
 import type { SiteStarter } from './types'
 
@@ -61,6 +62,10 @@ export function validateStarter(s: SiteStarter): string[] {
   }
 
   // Páginas
+  const desk = desktopById(s.layout.desktopId)
+  const panels = desk ? asideRegions(desk) : []
+  const hasPanel = panels.length > 0
+  const panelNames = panels.map((r) => r.label ?? r.id).join(', ')
   const pageIds = new Set<string>()
   const used = new Set<string>()
   for (const pg of s.pages) {
@@ -68,6 +73,8 @@ export function validateStarter(s: SiteStarter): string[] {
     if (pageIds.has(pg.id)) err(`página repetida: ${pg.id}`)
     pageIds.add(pg.id)
     if (pg.kind === 'app' && pg.blocks.length === 0) err(`página sem conteúdo: ${pg.id}`)
+    // O layout tem painel/detalhes/faixa: cada página do app diz o que vai nele (nada de painel de exemplo).
+    if (pg.kind === 'app' && hasPanel && !pg.aside?.length) err(`a página ${pg.id} não preenche o painel do layout (${panelNames})`)
     if (pg.navItem && !s.navItems.includes(pg.navItem)) err(`a página ${pg.id} aponta para um item de menu que não existe: ${pg.navItem}`)
     for (const b of [...pg.blocks, ...(pg.aside ?? [])]) {
       if (!compIds.has(b.component)) err(`a página ${pg.id} usa um componente que não existe: ${b.component}`)

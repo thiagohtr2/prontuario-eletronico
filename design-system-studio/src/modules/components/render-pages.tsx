@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactNode } from 'react'
+import { Fragment, type CSSProperties, type ReactNode } from 'react'
 import { mix, readableOn, withAlpha } from '@/core/color'
 import {
   Avatar, Badge, Bar, Btn, Card, Check, Col, Divider, Field, Ico, Kbd, Over, Row, Skel, Spinner, Tile, Toggle, Txt,
@@ -19,15 +19,16 @@ function Dim({ children, opacity = 0.38 }: { children?: ReactNode; opacity?: num
 /* ============================== Sobreposições e alertas ============================== */
 
 function Modais({ v, st }: RP) {
-  const { L } = usePv()
+  const { L, inPage } = usePv()
   const type = str(v, 'tipo')
   const tone: Tone = type === 'perigo' ? 'error' : type === 'informativo' ? 'info' : 'primary'
   const tc = toneColors(L, tone)
+  // Na página, o modal abre por cima do conteúdo real (sem a página de exemplo atrás).
   return (
-    <div style={{ position: 'relative', width: '100%', height: '100%', background: L.stage, overflow: 'hidden' }}>
-      <Ghost rows={4} />
+    <div style={{ position: 'relative', width: '100%', height: '100%', background: inPage ? 'transparent' : L.stage, overflow: 'hidden' }}>
+      {!inPage && <Ghost rows={4} />}
       <Dim>
-        <Card raised pad={16} style={{ width: '100%', maxWidth: 330, background: L.style.surface === 'glass' || L.style.surface === 'aurora' ? L.raised : L.dark || L.style.surface === 'neu' || L.style.surface === 'paper' ? L.surfaceSolid : (L.float.background as string), boxShadow: L.shadowFloat }}>
+        <Card raised pad={16} style={{ width: '100%', maxWidth: inPage ? 420 : 330, background: L.style.surface === 'glass' || L.style.surface === 'aurora' ? L.raised : L.dark || L.style.surface === 'neu' || L.style.surface === 'paper' ? L.surfaceSolid : (L.float.background as string), boxShadow: L.shadowFloat }}>
           <Col gap={10}>
             <Row gap={12} align="flex-start">
               <span style={{ width: 36, height: 36, flex: 'none', borderRadius: L.r >= 999 ? '50%' : Math.min(L.r, 10), background: tc.bg, color: tc.fg, display: 'grid', placeItems: 'center', border: L.style.shadow === 'hard' ? `2px solid ${L.text}` : undefined }}>
@@ -129,13 +130,13 @@ function Tooltips({ v, st }: RP) {
 }
 
 function Toasts({ v, st }: RP) {
-  const { L } = usePv()
+  const { L, inPage } = usePv()
   const type = str(v, 'tipo')
   const tone = TONE_OF[type] ?? 'success'
   const tc = toneColors(L, tone)
   const top = str(v, 'posicao') === 'topo'
   const toast = (ghost = false) => (
-    <Card raised pad={12} style={{ width: '100%', maxWidth: 320, overflow: 'hidden', ...(ghost ? { transform: `scale(.94) translateY(${top ? 10 : -10}px)`, opacity: 0.55, position: 'absolute', [top ? 'top' : 'bottom']: -14, left: 0, right: 0, margin: '0 auto', zIndex: 0 } : { position: 'relative', zIndex: 1 }), background: L.style.surface === 'glass' || L.style.surface === 'aurora' ? L.raised : L.dark || L.style.surface === 'neu' || L.style.surface === 'paper' ? L.surfaceSolid : (L.float.background as string) }}>
+    <Card raised pad={12} style={{ width: '100%', maxWidth: inPage ? undefined : 320, overflow: 'hidden', ...(ghost ? { transform: `scale(.94) translateY(${top ? 10 : -10}px)`, opacity: 0.55, position: 'absolute', [top ? 'top' : 'bottom']: -14, left: 0, right: 0, margin: '0 auto', zIndex: 0 } : { position: 'relative', zIndex: 1 }), background: L.style.surface === 'glass' || L.style.surface === 'aurora' ? L.raised : L.dark || L.style.surface === 'neu' || L.style.surface === 'paper' ? L.surfaceSolid : (L.float.background as string) }}>
       <Row gap={10} align="flex-start">
         <Ico name={TONE_ICON[type] ?? 'CheckCircle2'} size={19} color={tc.fg} />
         <Col gap={2} style={{ flex: 1 }}>
@@ -157,15 +158,15 @@ function Toasts({ v, st }: RP) {
     </Card>
   )
   return (
-    <div style={{ position: 'relative', width: '100%', maxWidth: 320, marginTop: top ? 0 : 14, marginBottom: top ? 14 : 0 }}>
-      {toast(true)}
+    <div style={{ position: 'relative', width: '100%', maxWidth: 320, marginTop: inPage ? 0 : top ? 0 : 14, marginBottom: inPage ? 0 : top ? 14 : 0 }}>
+      {!inPage && toast(true)}
       {toast()}
     </div>
   )
 }
 
 function Alertas({ v, st }: RP) {
-  const { L } = usePv()
+  const { L, inPage } = usePv()
   const type = str(v, 'tipo')
   const tone = TONE_OF[type] ?? 'info'
   const tc = toneColors(L, tone)
@@ -198,7 +199,7 @@ function Alertas({ v, st }: RP) {
         </Col>
         {bool(v, 'fechavel') && <Ico name="X" size={15} color={solid ? 'currentColor' : L.muted} />}
       </div>
-      <Ghost rows={1} style={{ padding: 0, opacity: 0.6 }} />
+      {!inPage && <Ghost rows={1} style={{ padding: 0, opacity: 0.6 }} />}
     </Col>
   )
 }
@@ -536,21 +537,28 @@ function Onboarding({ v, st }: RP) {
 }
 
 function Detalhes({ v, st }: RP) {
-  const { L } = usePv()
+  const { L, inPage } = usePv()
+  const path = lines(v, 'caminho')
+  const crumbs = path.length ? path : ['Loja', 'Corrida', 'Tênis']
   return (
-    <div style={{ width: '100%', height: '100%', background: L.dark ? L.bg : L.style.backdrop === 'plain' ? L.surfaceSolid : L.stage, padding: 12, boxSizing: 'border-box', overflow: 'hidden' }}>
-      <Row gap={4} style={{ ...textStyle(L, 'small'), fontSize: 11.5, marginBottom: 8 }}>
-        Loja <Ico name="ChevronRight" size={12} /> Corrida <Ico name="ChevronRight" size={12} /> <span style={{ color: L.text }}>Tênis</span>
+    <div style={{ width: '100%', height: '100%', background: inPage ? 'transparent' : L.dark ? L.bg : L.style.backdrop === 'plain' ? L.surfaceSolid : L.stage, padding: inPage ? 0 : 12, boxSizing: 'border-box', overflow: 'hidden' }}>
+      <Row gap={4} style={{ ...textStyle(L, 'small'), fontSize: 11.5, marginBottom: 8 }} data-part="breadcrumb">
+        {crumbs.map((c, i) => (
+          <Fragment key={c + i}>
+            {i > 0 && <Ico name="ChevronRight" size={12} />}
+            <span style={i === crumbs.length - 1 ? { color: L.text } : undefined}>{c}</span>
+          </Fragment>
+        ))}
       </Row>
       <div className="cmp-detail-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.1fr)', gap: 12 }}>
         <Col gap={6}>
           <div style={{ borderRadius: Math.min(L.rLg, 16), overflow: 'hidden', border: L.card.border }}>
-            <Media icon="ShoppingBag" height={104} />
+            <Media icon={str(v, 'icone') || 'ShoppingBag'} height={inPage ? 230 : 104} />
           </div>
           {bool(v, 'galeria') && (
             <Row gap={5}>
               {[0, 1, 2].map((i) => (
-                <span key={i} style={{ flex: 1, height: 26, borderRadius: Math.min(L.rSm, 6), background: i === 0 ? L.soft : L.dark ? withAlpha(L.text, 0.08) : L.surfaceAlt, boxShadow: i === 0 ? `0 0 0 1.5px ${L.trackOn}` : undefined }} />
+                <span key={i} style={{ flex: 1, height: inPage ? 52 : 26, borderRadius: Math.min(L.rSm, 6), background: i === 0 ? L.soft : L.dark ? withAlpha(L.text, 0.08) : L.surfaceAlt, boxShadow: i === 0 ? `0 0 0 1.5px ${L.trackOn}` : undefined }} />
               ))}
             </Row>
           )}
@@ -837,8 +845,11 @@ function Hero({ v, st }: RP) {
   )
 }
 
+/** Preço no formato brasileiro (19,90; inteiros sem casas). */
+const brl = (n: number) => (Number.isInteger(n) ? String(n) : n.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }))
+
 function Pricing({ v, st }: RP) {
-  const { L } = usePv()
+  const { L, inPage } = usePv()
   const P = usePart()
   const n = Math.max(2, Math.min(3, num(v, 'planos', 3)))
   const hi = num(v, 'destaque', 2) - 1
@@ -853,7 +864,7 @@ function Pricing({ v, st }: RP) {
         ['Equipe', 149, ['Tudo do Pro', 'SSO e auditoria']],
       ]
   return (
-    <div style={{ width: '100%', height: '100%', background: L.stage, padding: 10, boxSizing: 'border-box', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
+    <div style={{ width: '100%', height: '100%', background: inPage ? 'transparent' : L.stage, padding: inPage ? 0 : 10, boxSizing: 'border-box', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
       <div style={{ display: 'inline-flex', padding: 3, borderRadius: L.r >= 999 ? 999 : L.r, background: L.dark ? withAlpha(L.text, 0.08) : mix(L.surfaceSolid, L.text, 0.06), gap: 2 }}>
         {['Mensal', 'Anual −20%'].map((t, i) => (
           <span key={t} style={{ padding: '4px 10px', borderRadius: L.r >= 999 ? 999 : Math.max(0, L.r - 2), fontFamily: L.font, fontSize: 11.5, fontWeight: 600, color: (i === 1) === annual ? L.text : L.muted, background: (i === 1) === annual ? (L.dark ? withAlpha(L.accent, 0.2) : L.surfaceSolid) : undefined, boxShadow: (i === 1) === annual && !L.dark ? '0 1px 2px rgba(0,0,0,.12)' : undefined }}>
@@ -876,7 +887,7 @@ function Pricing({ v, st }: RP) {
               <span style={{ ...textStyle(L, 'label'), fontSize: 12, marginTop: on ? 4 : 0 }}>{name}</span>
               <span style={{ display: 'flex', alignItems: 'baseline', gap: 2, whiteSpace: 'nowrap', minWidth: 0 }}>
                 <span style={{ ...textStyle(L, 'small'), fontSize: 11 }}>R$</span>
-                <span style={{ ...textStyle(L, 'h2'), fontVariantNumeric: 'tabular-nums' }}>{annual ? Math.round(price * 0.8) : price}</span>
+                <span style={{ ...textStyle(L, 'h2'), fontVariantNumeric: 'tabular-nums' }}>{brl(annual ? Math.round(price * 0.8) : price)}</span>
                 <span style={{ ...textStyle(L, 'small'), fontSize: 11 }}>/mês</span>
               </span>
               {bool(v, 'recursos') &&

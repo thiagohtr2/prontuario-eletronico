@@ -259,7 +259,7 @@ function segActive(L: Look): CSSProperties {
 }
 
 function Segmented({ v, st }: RP) {
-  const { L } = usePv()
+  const { L, inPage } = usePv()
   const P = usePart()
   const opts = lines(v, 'opcoes')
   const active = num(v, 'ativa', 1) - 1
@@ -267,7 +267,7 @@ function Segmented({ v, st }: RP) {
   const r = L.r >= 999 ? 999 : L.r
   const icons = ['Sun', 'CalendarDays', 'Calendar', 'LayoutGrid', 'List']
   return (
-    <Col gap={14} style={{ width: full ? '100%' : undefined, maxWidth: 320, alignItems: full ? 'stretch' : 'center' }}>
+    <Col gap={14} style={{ width: full ? '100%' : undefined, maxWidth: 320, alignItems: full ? 'stretch' : inPage ? 'flex-start' : 'center' }}>
       <div {...P('options')} role="radiogroup" style={{ display: full ? 'flex' : 'inline-flex', padding: 3, gap: 3, borderRadius: r, background: L.style.surface === 'neu' ? L.surfaceSolid : L.dark ? withAlpha(L.text, 0.07) : L.style.borderTone === 'ink' ? 'transparent' : mix(L.surfaceSolid, L.text, 0.06), border: L.style.borderTone === 'ink' ? `${Math.min(L.bw, 2)}px solid ${L.text}` : undefined, boxShadow: L.style.surface === 'neu' ? L.inset : undefined }}>
         {opts.map((o, i) => (
           <span
@@ -286,25 +286,23 @@ function Segmented({ v, st }: RP) {
           </span>
         ))}
       </div>
-      <Row gap={6} align="flex-end" style={{ height: 50, justifyContent: 'center' }}>
+      {!inPage && <Row gap={6} align="flex-end" style={{ height: 50, justifyContent: 'center' }}>
         {[30, 48, 22, 40, 36, 50, 28].map((hgt, i) => (
           <span key={i} style={{ width: 16, height: hgt, borderRadius: Math.min(L.rSm, 4), background: i === 5 ? (L.style.fill === 'solid' ? L.trackOn : L.fill) : L.dark ? withAlpha(L.text, 0.15) : mix(L.surfaceSolid, L.text, 0.12) }} />
         ))}
-      </Row>
+      </Row>}
     </Col>
   )
 }
 
 function Breadcrumbs({ v }: RP) {
-  const { L } = usePv()
+  const { L, inPage } = usePv()
   const P = usePart()
   let path = lines(v, 'caminho')
   if (bool(v, 'recolher') && path.length > 3) path = [path[0], '…', path[path.length - 1]]
   const sep = str(v, 'separador')
   const sepEl = sep === 'barra' ? <span style={{ color: L.faint }}>/</span> : sep === 'ponto' ? <span style={{ color: L.faint }}>·</span> : <Ico name="ChevronRight" size={14} color={L.faint} />
-  return (
-    <Card style={{ width: '100%', maxWidth: 340 }}>
-      <Col gap={10}>
+  const trail = (
         <nav {...P('path')} aria-label="Trilha" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 6, fontFamily: L.familyId === 'retro-paper' || L.style.font === 'jetbrains-mono' ? L.labelFont : L.font, fontSize: L.upper ? 11.5 : L.fs - 1, letterSpacing: L.upper ? L.track : 0, textTransform: L.upper ? 'uppercase' : 'none' }}>
           {path.map((p, i) => {
             const last = i === path.length - 1
@@ -319,6 +317,13 @@ function Breadcrumbs({ v }: RP) {
             )
           })}
         </nav>
+  )
+  // Na página, só a trilha (o título já é o da página).
+  if (inPage) return trail
+  return (
+    <Card style={{ width: '100%', maxWidth: 340 }}>
+      <Col gap={10}>
+        {trail}
         <Txt v="h2">{path[path.length - 1]}</Txt>
         <Skel w="80%" h={9} style={{ animation: 'none' }} />
       </Col>
@@ -672,20 +677,22 @@ function Sparkline({ up = true, width = 220, height = 44, color }: { up?: boolea
 }
 
 function Kpi({ v }: RP) {
-  const { L } = usePv()
+  const { L, compact } = usePv()
   const P = usePart()
   const trend = str(v, 'tendencia')
   const tone: Tone = trend === 'alta' ? 'success' : trend === 'baixa' ? 'error' : 'neutral'
   const tc = toneColors(L, tone)
+  // Compacto (faixa de indicadores): valor e variação na mesma linha, ícone menor, sem sparkline.
   return (
-    <Card accentTop style={{ width: '100%', maxWidth: 260 }}>
-      <Col gap={6}>
+    <Card accentTop pad={compact ? 12 : undefined} style={{ width: '100%', maxWidth: 260 }}>
+      <Col gap={compact ? 4 : 6}>
         <Row justify="space-between" align="flex-start">
           <Txt v="label" part="label" color={L.muted}>
             {str(v, 'rotulo')}
           </Txt>
-          <Tile name={str(v, 'icone')} size={32} part="icon" />
+          <Tile name={str(v, 'icone')} size={compact ? 26 : 32} part="icon" />
         </Row>
+        <Row gap={compact ? 10 : 6} align="center" style={{ flexDirection: compact ? 'row' : 'column', alignItems: compact ? 'center' : 'flex-start', flexWrap: compact ? 'wrap' : undefined }}>
         <Txt v="num" part="value">
           {str(v, 'valor')}
         </Txt>
@@ -697,7 +704,8 @@ function Kpi({ v }: RP) {
             {str(v, 'comparativo')}
           </Txt>
         </Row>
-        {bool(v, 'sparkline') && (
+        </Row>
+        {bool(v, 'sparkline') && !compact && (
           <div style={{ marginTop: 4 }}>
             <Sparkline up={trend !== 'baixa'} color={trend === 'baixa' ? L.error : undefined} />
           </div>
@@ -903,22 +911,22 @@ function DataGrid({ v, st }: RP) {
 }
 
 function Badges({ v }: RP) {
-  const { L } = usePv()
+  const { L, inPage } = usePv()
   const texts = lines(v, 'textos')
   const tones: Tone[] = ['success', 'warning', 'error', 'neutral', 'info', 'primary']
   const variant = ({ suave: 'soft', solido: 'solid', contorno: 'outline', ponto: 'dot' } as const)[str(v, 'estilo') as 'suave'] ?? 'soft'
   const shape = str(v, 'formato') as 'familia'
   const custom = hexOr(str(v, 'cor'), '')
   return (
-    <Col gap={16} style={{ width: '100%', maxWidth: 320, alignItems: 'center' }}>
-      <Row gap={8} wrap justify="center">
+    <Col gap={16} style={{ width: '100%', maxWidth: 320, alignItems: inPage ? 'flex-start' : 'center' }}>
+      <Row gap={8} wrap justify={inPage ? 'flex-start' : 'center'}>
         {texts.map((t, i) => (
           <Badge key={t + i} tone={tones[i % tones.length]} variant={variant} shape={shape} removable={bool(v, 'removivel')} color={i === 0 ? custom : undefined} part="badges">
             {t}
           </Badge>
         ))}
       </Row>
-      <Card pad={0} style={{ width: '100%' }}>
+      {!inPage && <Card pad={0} style={{ width: '100%' }}>
         {['Pedido #1042', 'Pedido #1043'].map((p, i) => (
           <Row key={p} justify="space-between" style={{ padding: '10px 12px', borderTop: i ? L.divider : undefined }}>
             <span style={{ ...textStyle(L, 'body'), fontSize: L.fs - 0.5, fontWeight: 560 }}>{p}</span>
@@ -927,7 +935,7 @@ function Badges({ v }: RP) {
             </Badge>
           </Row>
         ))}
-      </Card>
+      </Card>}
     </Col>
   )
 }
@@ -970,18 +978,19 @@ function Listas({ v, st }: RP) {
 }
 
 function Graficos({ v }: RP) {
-  const { L } = usePv()
+  const { L, inPage } = usePv()
   const P = usePart()
   const type = str(v, 'tipo')
   const two = num(v, 'series', 2) > 1
-  const a = [42, 58, 50, 72, 64, 86]
-  const b = [30, 36, 44, 40, 52, 60]
-  const months = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun']
+  // Na página do site o gráfico ocupa a largura do bloco: 12 meses num desenho mais largo.
+  const a = inPage ? [38, 44, 42, 58, 50, 63, 60, 72, 66, 78, 74, 86] : [42, 58, 50, 72, 64, 86]
+  const b = inPage ? [30, 32, 36, 38, 44, 40, 47, 52, 50, 55, 58, 60] : [30, 36, 44, 40, 52, 60]
+  const months = inPage ? ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'] : ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun']
   const c1 = L.dark ? L.accent : L.style.fill === 'accent' ? L.accent : L.brand
   const c2 = L.dark ? withAlpha(L.text, 0.45) : L.style.fill === 'accent' ? L.text : c1 === L.accent ? L.primary : L.accent
-  const W = 260
-  const H = 110
-  const x = (i: number) => 14 + i * ((W - 28) / 5)
+  const W = inPage ? 620 : 260
+  const H = inPage ? 170 : 110
+  const x = (i: number) => 14 + i * ((W - 28) / (a.length - 1))
   const y = (val: number) => H - (val / 100) * (H - 10)
   const path = (s: number[]) => s.map((p, i) => `${i ? 'L' : 'M'}${x(i)},${y(p)}`).join(' ')
   return (
@@ -1006,7 +1015,7 @@ function Graficos({ v }: RP) {
         </Row>
         {type === 'pizza' ? (
           <Row gap={18} justify="center" {...P('chart')}>
-            <svg viewBox="0 0 42 42" width={110} height={110} aria-hidden="true">
+            <svg viewBox="0 0 42 42" width={inPage ? 150 : 110} height={inPage ? 150 : 110} aria-hidden="true">
               {[
                 [45, c1],
                 [25, c2],
@@ -1034,7 +1043,7 @@ function Graficos({ v }: RP) {
             </Col>
           </Row>
         ) : (
-          <svg {...P('chart')} viewBox={`0 0 ${W} ${H + 18}`} width="100%" height={H + 18} aria-hidden="true" style={{ display: 'block', overflow: 'visible' }}>
+          <svg {...P('chart')} viewBox={`0 0 ${W} ${H + 18}`} width="100%" height={inPage ? undefined : H + 18} aria-hidden="true" style={{ display: 'block', overflow: 'visible' }}>
             {bool(v, 'grade') && [0, 1, 2, 3].map((i) => <line key={i} x1={0} x2={W} y1={10 + i * ((H - 10) / 3)} y2={10 + i * ((H - 10) / 3)} stroke={L.dark ? withAlpha(L.text, 0.1) : L.border} strokeDasharray={L.style.surface === 'concrete' ? '3 3' : undefined} />)}
             {type === 'barras' &&
               a.map((val, i) => (
@@ -1168,7 +1177,7 @@ function Avatares({ v }: RP) {
           <Txt v="h3" part="name">
             {name}
           </Txt>
-          <Txt v="small">Product Designer</Txt>
+          <Txt v="small">{str(v, 'cargo')}</Txt>
         </Col>
       </Row>
       {bool(v, 'grupo') && (
@@ -1181,7 +1190,7 @@ function Avatares({ v }: RP) {
             ))}
             <span style={{ marginLeft: -10, width: 36, height: 36, borderRadius: shape === 'quadrado' ? 10 : '50%', background: L.dark ? withAlpha(L.text, 0.12) : L.surfaceAlt, color: L.muted, display: 'grid', placeItems: 'center', fontFamily: L.font, fontSize: 12, fontWeight: 650, boxShadow: `0 0 0 2px ${L.surfaceSolid}` }}>+3</span>
           </Row>
-          <Txt v="small">7 pessoas no projeto</Txt>
+          <Txt v="small">{str(v, 'legendaGrupo')}</Txt>
         </Row>
       )}
     </Col>
@@ -1199,11 +1208,14 @@ function Calendarios({ v, st }: RP) {
           <Txt v="h3" part="title">
             {str(v, 'mes')}
           </Txt>
-          {[
-            ['09:00', 'Reunião de equipe', L.cycle[0].bg],
-            ['11:30', 'Entrevista — Design', L.accent],
-            ['15:00', 'Revisão do sprint', L.secondary],
-          ].map(([t, n, c], i) => (
+          {(rowsOf(v, 'compromissos').length
+            ? rowsOf(v, 'compromissos').slice(0, 6).map((r, i) => [r[0] ?? '', r[1] ?? '', [L.cycle[0].bg, L.accent, L.secondary][i % 3]])
+            : [
+                ['09:00', 'Reunião de equipe', L.cycle[0].bg],
+                ['11:30', 'Entrevista — Design', L.accent],
+                ['15:00', 'Revisão do sprint', L.secondary],
+              ]
+          ).map(([t, n, c], i) => (
             <Row key={t} gap={10} style={withState(L, { padding: '8px 10px', borderRadius: Math.min(L.r, 10), background: L.dark ? withAlpha(L.text, 0.05) : L.surfaceAlt, boxShadow: `inset 3px 0 0 ${c}` }, i === 0 ? st : undefined, 'ghost')}>
               <span style={{ ...textStyle(L, 'small'), fontVariantNumeric: 'tabular-nums', width: 40 }}>{t}</span>
               <span style={{ ...textStyle(L, 'body'), fontWeight: 560, fontSize: L.fs - 0.5 }}>{n}</span>
@@ -1218,7 +1230,7 @@ function Calendarios({ v, st }: RP) {
 }
 
 function Kanban({ v }: RP) {
-  const { L } = usePv()
+  const { L, inPage } = usePv()
   const P = usePart()
   const cols = lines(v, 'colunas').slice(0, 4)
   const n = Math.max(1, Math.min(3, num(v, 'cartoes', 2)))
@@ -1235,9 +1247,9 @@ function Kanban({ v }: RP) {
     ['Pesquisa', 'info'],
   ]
   return (
-    <div {...P('columns')} style={{ display: 'flex', gap: 10, width: '100%', overflow: 'hidden', alignItems: 'flex-start', ...fade }}>
+    <div {...P('columns')} style={{ display: 'flex', gap: 10, width: '100%', overflow: 'hidden', alignItems: 'flex-start', ...(inPage ? {} : fade) }}>
       {cols.map((c, ci) => (
-        <div key={c + ci} style={{ width: 150, flex: 'none', borderRadius: Math.min(L.rLg, 14), padding: 8, background: L.dark ? withAlpha(L.text, 0.05) : L.style.surface === 'glass' ? withAlpha('#ffffff', 0.3) : mix(L.surfaceSolid, L.text, 0.04), border: L.style.borderTone === 'ink' ? `1px solid ${L.text}` : undefined, display: 'grid', gap: 8 }}>
+        <div key={c + ci} style={{ width: inPage ? undefined : 150, flex: inPage ? '1 1 0' : 'none', minWidth: inPage ? 0 : undefined, borderRadius: Math.min(L.rLg, 14), padding: 8, background: L.dark ? withAlpha(L.text, 0.05) : L.style.surface === 'glass' ? withAlpha('#ffffff', 0.3) : mix(L.surfaceSolid, L.text, 0.04), border: L.style.borderTone === 'ink' ? `1px solid ${L.text}` : undefined, display: 'grid', gap: 8 }}>
           <Row justify="space-between" style={{ padding: '0 2px' }}>
             <span style={{ ...textStyle(L, 'label'), fontSize: 12 }}>{c}</span>
             {bool(v, 'contadores') && <Badge>{cardsOf(c, ci)?.length ?? n + ci}</Badge>}
@@ -1285,7 +1297,7 @@ function Kanban({ v }: RP) {
 }
 
 function Progresso({ v }: RP) {
-  const { L } = usePv()
+  const { L, inPage } = usePv()
   const P = usePart()
   const val = Math.max(0, Math.min(100, num(v, 'valor', 68)))
   const type = str(v, 'tipo')
@@ -1328,15 +1340,17 @@ function Progresso({ v }: RP) {
           {str(v, 'detalhe') && <span style={textStyle(L, 'small')}>{str(v, 'detalhe')}</span>}
         </Col>
       )}
-      <Card pad={12}>
-        <Col gap={6}>
-          <Row justify="space-between" style={textStyle(L, 'small')}>
-            <span style={{ color: L.text, fontWeight: 560 }}>Armazenamento</span>
-            <span>4,2 de 10 GB</span>
-          </Row>
-          <Bar value={42} height={6} />
-        </Col>
-      </Card>
+      {!inPage && (
+        <Card pad={12}>
+          <Col gap={6}>
+            <Row justify="space-between" style={textStyle(L, 'small')}>
+              <span style={{ color: L.text, fontWeight: 560 }}>Armazenamento</span>
+              <span>4,2 de 10 GB</span>
+            </Row>
+            <Bar value={42} height={6} />
+          </Col>
+        </Card>
+      )}
     </Col>
   )
 }

@@ -582,6 +582,8 @@ const DEFS: Def[] = [
   }],
   [44, 'avatares', 'Avatares', 'dados', 'A foto ou as iniciais da pessoa, com indicador de online e grupos.', [
     text('nome', 'Nome', 'Ana Souza', 'name'),
+    text('cargo', 'Cargo ou descrição', 'Product Designer', 'role'),
+    text('legendaGrupo', 'Legenda do grupo', '7 pessoas no projeto', 'group'),
     sel('tipo', 'Tipo', 'iniciais', opt(['iniciais', 'Iniciais'], ['ilustracao', 'Ilustração'], ['icone', 'Ícone'])),
     sel('status', 'Status', 'online', opt(['online', 'Online'], ['ausente', 'Ausente'], ['ocupado', 'Ocupado'], ['nenhum', 'Sem status']), 'Estados'),
     sel('formato', 'Formato', 'circulo', opt(['circulo', 'Círculo'], ['quadrado', 'Quadrado arredondado'])),
@@ -598,6 +600,7 @@ const DEFS: Def[] = [
     text('mes', 'Mês', 'Março 2025', 'title'),
     num('diaSelecionado', 'Dia selecionado', 14, 1, 31, 1, undefined, 'Estados'),
     sel('visao', 'Visão', 'mes', opt(['mes', 'Mês'], ['agenda', 'Agenda (lista)'])),
+    area('compromissos', 'Compromissos da agenda (Hora | Título, um por linha; vazio usa o exemplo)', '', 'items'),
     bool('eventos', 'Mostrar eventos', true),
     sel('inicioSemana', 'Semana começa em', 'dom', opt(['dom', 'Domingo'], ['seg', 'Segunda'])),
   ], {
@@ -804,6 +807,8 @@ const DEFS: Def[] = [
     text('preco', 'Preço', 'R$ 499,90', 'price'),
     text('status', 'Status', 'Em estoque', 'badge'),
     text('botao', 'Botão', 'Adicionar ao carrinho', 'button'),
+    area('caminho', 'Trilha (um nível por linha; vazio usa o exemplo)', '', 'breadcrumb'),
+    icon('icone', 'Ícone da mídia', 'ShoppingBag'),
     bool('galeria', 'Galeria de miniaturas', true),
     bool('abas', 'Abas de informações', true),
   ], {

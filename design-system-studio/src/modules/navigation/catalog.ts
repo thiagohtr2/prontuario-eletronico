@@ -2781,9 +2781,38 @@ export interface NavContent {
   width?: number
   /** Item do menu da página aberta (destaque segue a navegação entre páginas da prévia). */
   active?: string
+  /** A região do layout é um trilho: a sidebar aparece recolhida (só ícones, rótulo no tooltip). */
+  rail?: boolean
+  /** Texto do botão de criar (no lugar do exemplo do modelo, ex.: “Novo projeto”). */
+  cta?: string
 }
 
 const SITE_ONLY_ACTIONS = new Set<HeaderAction>(['cta', 'cta-outline', 'login', 'lang', 'phone'])
+
+/**
+ * Altura total que o header ocupa (barra principal + faixas extras: anúncio, utilitários, segunda
+ * linha de navegação, breadcrumbs em faixa, folga do header flutuante).
+ */
+export function headerTotalHeight(look: HeaderLook, layout: string, compact: boolean) {
+  let h = compact ? 56 : look.height
+  if (look.announcement && look.announceStyle !== 'pill') h += compact ? 32 : 36
+  if (!compact && look.utility?.length && layout !== 'stacked' && layout !== 'two-row') h += 32
+  if (!compact && (layout === 'stacked' || layout === 'two-row')) h += 44
+  if (!compact && look.breadcrumbs?.length && look.breadcrumbStyle === 'row') h += 40
+  if (compact && (look.search === 'wide' || look.breadcrumbs?.length)) h += 48
+  if (look.shape === 'floating' || look.shape === 'islands') h += compact ? 8 : 12
+  return h
+}
+
+/**
+ * Altura do header dentro do app (com o conteúdo do projeto) e a linha do layout que o recebe.
+ * Quando o header tem faixas extras e não cabe na linha do layout, a linha cresce até ele.
+ */
+export function headerFitForLayout(model: HeaderModel, variant: 0 | 1, rowHeight: number | undefined, hasSideNav: boolean): { total: number; grows: boolean } {
+  const look = withHeaderContent(headerLookFor(model, variant), { height: rowHeight, inApp: true, hideNav: hasSideNav })
+  const total = headerTotalHeight(look, model.compositions[variant]?.layout ?? '', false)
+  return { total, grows: rowHeight !== undefined && total > rowHeight }
+}
 
 export function withHeaderContent(look: HeaderLook, content?: NavContent): HeaderLook {
   if (!content) return look
@@ -2798,6 +2827,8 @@ export function withHeaderContent(look: HeaderLook, content?: NavContent): Heade
     if (out.shrink && out.shrink >= content.height) out.shrink = undefined
   }
   if (content.hideNav) out.nav = []
+  // Trilha da página aberta (no lugar do exemplo “Projetos / Site institucional / Página inicial”).
+  if (content.active && look.breadcrumbs?.length) out.breadcrumbs = ['Início', content.active]
   if (content.inApp) {
     out.actions = look.actions.filter((a) => !SITE_ONLY_ACTIONS.has(a))
     out.announcement = undefined

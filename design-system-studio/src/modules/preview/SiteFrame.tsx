@@ -4,8 +4,10 @@ import type { ResolvedTheme } from '@/core/types'
 import { DesktopSchematic } from '@/modules/layouts'
 import type { DesktopLayout, LayoutRegion } from '@/modules/layouts/types'
 import { HeaderPreview, SidebarPreview } from '@/modules/navigation'
-import { headerById, sidebarById } from '@/modules/navigation/catalog'
+import { headerById, headerFitForLayout, sidebarById } from '@/modules/navigation/catalog'
 import { ChatPanel, DashboardContent, DefaultHeader, DefaultSidebar, DetailPanel, FooterBar, Rail, Submenu, Toolbar } from './regions'
+// Moldura do celular e rolagem das prévias de página inteira (usadas também fora da Prévia integrada).
+import './preview.css'
 
 /**
  * Peças compartilhadas pelas prévias de site inteiro: a Prévia integrada e a Galeria de modelos
@@ -56,8 +58,11 @@ export interface AppFrameProps {
   h: number
   /** Conteúdo da região principal; sem ele, um painel de exemplo. */
   content?: ReactNode
-  /** Conteúdo das regiões de painel/detalhes do layout; sem ele, um painel de exemplo. */
-  aside?: ReactNode
+  /**
+   * Conteúdo das regiões de painel/detalhes do layout (nó ou função do tamanho da região). Sem ele:
+   * numa página real (`content` presente) a região fica vazia; na vitrine, um painel de exemplo.
+   */
+  aside?: ReactNode | ((size: { width: number; height: number }) => ReactNode)
   /** Clique num item do header/sidebar (navegação entre páginas da prévia). */
   onNavigate?: (label: string) => void
   /** Item do menu da página aberta. */
@@ -98,7 +103,13 @@ export function AppFrame({ layout, theme, name, nav, header, sidebar, w, h, cont
       node
     )
 
-  const renderRegion = (region: LayoutRegion, size?: { width: number }): ReactNode => {
+  const asideIds = new Set(asideRegions(layout).map((r) => r.id))
+  const sidebarNode = (size?: { width: number }, hideBrand = false, rail = false) =>
+    sidebarModel && sidebar ? (
+      <SidebarPreview model={sidebarModel} variant={sidebar.variant} theme={theme} interactive hideBrand={hideBrand} content={{ ...navContent, width: size?.width ? Math.round(size.width) : undefined, rail, cta: sidebar.cta }} onNavigate={onNavigate} />
+    ) : null
+
+  const renderRegion = (region: LayoutRegion, size?: { width: number; height: number }): ReactNode => {
     const hideBrand = hasHeader && !touchesTop(region.id)
     switch (region.kind) {
       case 'header':
@@ -111,21 +122,24 @@ export function AppFrame({ layout, theme, name, nav, header, sidebar, w, h, cont
           ),
         )
       case 'sidebar':
-        return pickable(
-          'sidebar',
-          sidebarModel && sidebar ? (
-            <SidebarPreview model={sidebarModel} variant={sidebar.variant} theme={theme} interactive hideBrand={hideBrand} content={{ ...navContent, width: size?.width ? Math.round(size.width) : undefined }} onNavigate={onNavigate} />
-          ) : (
-            <DefaultSidebar theme={theme} name={name} floating={region.floating} hideBrand={hideBrand} nav={nav} />
-          ),
-        )
+        return pickable('sidebar', sidebarNode(size, hideBrand) ?? <DefaultSidebar theme={theme} name={name} floating={region.floating} hideBrand={hideBrand} nav={nav} />)
       case 'rail':
-        return <Rail theme={theme} nav={nav} />
+        // O trilho é a sidebar escolhida na largura do layout (ex.: “Trilho de ícones”).
+        return pickable('sidebar', sidebarNode(size, hideBrand, true) ?? <Rail theme={theme} nav={nav} />)
       case 'submenu':
-        return <Submenu theme={theme} />
+        if (!content) return <Submenu theme={theme} />
+        // Sem sidebar, o submenu é o índice do site (seções, navegando entre páginas). Com sidebar, recebe o
+        // conteúdo da página para esta coluna (filtros, pastas…), como um painel.
+        if (!hasSideNav) return <Submenu theme={theme} title={region.label ? region.label.charAt(0) + region.label.slice(1).toLowerCase() : 'Seções'} items={nav} active={activeNav} onPick={onNavigate} />
+        if (!asideIds.has(region.id)) return <div data-empty-region={region.id} style={{ width: '100%', height: '100%', background: theme.tokens.surface }} />
+      // falls through
       case 'panel':
       case 'detail':
-        return aside ?? <DetailPanel theme={theme} title={region.label ? region.label.charAt(0) + region.label.slice(1).toLowerCase() : 'Detalhes'} />
+        if (typeof aside === 'function') return aside({ width: size?.width ?? 320, height: size?.height ?? 200 })
+        if (aside) return aside
+        // Página real sem conteúdo para esta região: superfície vazia (nada de dados de exemplo).
+        if (content) return <div data-empty-region={region.id} style={{ width: '100%', height: '100%', background: theme.tokens.surface }} />
+        return <DetailPanel theme={theme} title={region.label ? region.label.charAt(0) + region.label.slice(1).toLowerCase() : 'Detalhes'} />
       case 'chat':
         return <ChatPanel theme={theme} />
       case 'footer':
@@ -137,5 +151,48 @@ export function AppFrame({ layout, theme, name, nav, header, sidebar, w, h, cont
     }
   }
 
-  return <DesktopSchematic layout={layout} width={w} height={h} showLegends={false} theme={theme} renderRegion={renderRegion} frame={false} detail="full" />
+  // Header com faixas extras (ex.: masthead com editorias embaixo) maior que a linha do layout: a linha cresce.
+  const headerRegion = layout.regions.find((r) => r.kind === 'header')
+  const fit = headerModel && header ? headerFitForLayout(headerModel, header.variant, layout.measurements.header, hasSideNav) : null
+  const frameLayout = headerRegion && fit?.grows ? growRow(layout, headerRegion.id, fit.total) : layout
+
+  return <DesktopSchematic layout={frameLayout} width={w} height={h} showLegends={false} theme={theme} renderRegion={renderRegion} frame={false} detail="full" />
+}
+
+/**
+ * Regiões do layout que recebem o conteúdo lateral da página (`aside`): painéis e detalhes; sem eles,
+ * a coluna de submenu ao lado de uma sidebar/trilho (ex.: filtros do kanban). Regra única da prévia e da
+ * validação dos modelos.
+ */
+export function asideRegions(layout: DesktopLayout): LayoutRegion[] {
+  const panels = layout.regions.filter((r) => r.kind === 'panel' || r.kind === 'detail')
+  if (panels.length) return panels
+  const sideNav = layout.regions.some((r) => r.kind === 'sidebar' || r.kind === 'rail')
+  return sideNav ? layout.regions.filter((r) => r.kind === 'submenu') : []
+}
+
+/** Divide a definição de linhas/colunas do grid respeitando parênteses (ex.: `minmax(0, 1fr)`). */
+function splitTracks(def: string): string[] {
+  const out: string[] = []
+  let depth = 0
+  let cur = ''
+  for (const ch of def.trim()) {
+    if (ch === '(') depth++
+    if (ch === ')') depth--
+    if (/\s/.test(ch) && depth === 0) {
+      if (cur) out.push(cur)
+      cur = ''
+    } else cur += ch
+  }
+  if (cur) out.push(cur)
+  return out
+}
+
+/** Layout com a linha da região `id` na altura `px` (só se a linha for uma medida fixa em px). */
+export function growRow(layout: DesktopLayout, id: string, px: number): DesktopLayout {
+  const rows = splitTracks(layout.grid.rows)
+  const idx = layout.grid.areas.findIndex((r) => r.split(/\s+/).includes(id))
+  if (idx < 0 || !/^\d+(\.\d+)?px$/.test(rows[idx] ?? '')) return layout
+  rows[idx] = `${Math.round(px)}px`
+  return { ...layout, grid: { ...layout.grid, rows: rows.join(' ') }, measurements: { ...layout.measurements, header: Math.round(px) } }
 }

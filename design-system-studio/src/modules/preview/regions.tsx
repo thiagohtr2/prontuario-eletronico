@@ -114,8 +114,27 @@ export function Rail({ theme, nav }: { theme: ResolvedTheme; nav?: string[] }) {
   )
 }
 
-export function Submenu({ theme, title = 'Projetos' }: { theme: ResolvedTheme; title?: string }) {
+export function Submenu({ theme, title = 'Projetos', items, active, onPick }: { theme: ResolvedTheme; title?: string; items?: string[]; active?: string; onPick?: (label: string) => void }) {
   const t = theme.tokens
+  if (items?.length) {
+    // Índice do site: as seções reais, com a página aberta em destaque.
+    return (
+      <nav aria-label={title} style={{ ...fill, padding: '18px 12px', background: t.surface, color: t.text, borderRight: `1px solid ${t.border}`, fontFamily: theme.metrics.bodyFont }}>
+        <div style={{ fontFamily: theme.metrics.headingFont, fontWeight: theme.typography.headingWeight, fontSize: 14, padding: '0 8px 12px' }}>{title}</div>
+        {items.map((l) => (
+          <button
+            key={l}
+            type="button"
+            onClick={() => onPick?.(l)}
+            aria-current={l === active ? 'page' : undefined}
+            style={{ display: 'block', width: '100%', textAlign: 'left', border: 0, cursor: 'pointer', padding: '8px', borderRadius: theme.metrics.radiusSm, background: l === active ? t.selected : 'transparent', color: l === active ? t.selectedText : t.textMuted, fontSize: 13.5, fontFamily: 'inherit' }}
+          >
+            {l}
+          </button>
+        ))}
+      </nav>
+    )
+  }
   return (
     <div style={{ ...fill, padding: '18px 12px', background: t.surface, color: t.text, borderRight: `1px solid ${t.border}`, fontFamily: theme.metrics.bodyFont }}>
       <div style={{ fontFamily: theme.metrics.headingFont, fontWeight: theme.typography.headingWeight, fontSize: 14, padding: '0 8px 12px' }}>{title}</div>

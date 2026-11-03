@@ -27,6 +27,21 @@ const mobileHeight = (h: number) => Math.max(96, Math.round(h * 0.86))
 /** Estado demonstrado na página: dados normais, vazio, carregando ou erro. */
 export type PageState = 'normal' | 'vazio' | 'carregando' | 'erro'
 
+/**
+ * Sobreposições: não entram na grade da página. Aparecem por cima do conteúdo quando a pessoa as
+ * abre na barra do visualizador (modal centralizado com véu; toast no canto inferior).
+ */
+export const OVERLAY_CATEGORIES = new Set(['modais', 'toasts'])
+
+/** Instâncias de sobreposição usadas numa página (na ordem dos blocos). */
+export function pageOverlays(project: Project, page: ProjectPage | undefined): ComponentInstance[] {
+  if (!page) return []
+  const ids = [...page.blocks, ...(page.aside ?? [])].map((b) => b.component)
+  return ids
+    .map((id) => project.components.find((c) => c.id === id))
+    .filter((c): c is ComponentInstance => Boolean(c && OVERLAY_CATEGORIES.has(c.categoryId)))
+}
+
 /** Categorias que mostram dados (as que ganham estado vazio/carregando). */
 const DATA_CATEGORIES = new Set(['tabelas', 'grids-de-dados', 'listas', 'graficos', 'calendarios', 'quadros-kanban', 'cards', 'timelines', 'kpis-stat-cards', 'notificacoes'])
 
@@ -57,6 +72,8 @@ export function PageContent({
   state = 'normal',
   blocks,
   bare = false,
+  rowHeight,
+  overlay = null,
 }: {
   project: Project
   page: ProjectPage
@@ -70,9 +87,17 @@ export function PageContent({
   blocks?: PageBlock[]
   /** Sem título da página (painel lateral e celular, onde a barra superior já mostra o título). */
   bare?: boolean
+  /** Faixa horizontal (ex.: faixa de indicadores do layout): blocos lado a lado nesta altura. */
+  rowHeight?: number
+  /** Sobreposição aberta (id da instância), desenhada por cima do conteúdo. */
+  overlay?: string | null
 }) {
-  const list = blocks ?? page.blocks
+  const list = (blocks ?? page.blocks).filter((b) => {
+    const inst = project.components.find((c) => c.id === b.component)
+    return !inst || !OVERLAY_CATEGORIES.has(inst.categoryId)
+  })
   const t = theme.tokens
+  const over = overlay ? project.components.find((c) => c.id === overlay) : undefined
   const root: CSSProperties = {
     height: '100%',
     overflowY: 'auto',
@@ -80,10 +105,43 @@ export function PageContent({
     background: t.bg,
     color: t.text,
     fontFamily: theme.metrics.bodyFont,
-    padding: bare && !mobile ? '14px 12px' : mobile ? `12px 12px ${padBottom + 12}px` : '22px 24px 32px',
+    padding: rowHeight ? '10px 24px' : bare && !mobile ? '14px 12px' : mobile ? `12px 12px ${padBottom + 12}px` : '22px 24px 32px',
   }
   const single = mobile || bare
-  return (
+  const overlayNode = over && (
+    <div
+      className="sp-overlay"
+      data-component-id={over.id}
+      data-overlay={over.categoryId}
+      data-editable={editMode || undefined}
+      style={
+        over.categoryId === 'toasts'
+          ? { position: 'absolute', right: mobile ? 10 : 20, left: mobile ? 10 : 'auto', bottom: mobile ? padBottom + 10 : 20, width: mobile ? 'auto' : 380, zIndex: 6 }
+          : { position: 'absolute', inset: 0, zIndex: 6 }
+      }
+      onClickCapture={
+        editMode
+          ? (e) => {
+              e.preventDefault()
+              e.stopPropagation()
+              onPick?.({ kind: 'component', id: over.id })
+            }
+          : undefined
+      }
+    >
+      <ComponentPreview
+        categoryId={over.categoryId}
+        familyId={over.familyId}
+        theme={Object.keys(over.tokenOverrides).length ? { ...theme, tokens: applyOverrides(theme.tokens, over.tokenOverrides) } : theme}
+        props={over.props}
+        height={over.categoryId === 'toasts' ? 96 : 400}
+        inPage
+        className={over.categoryId === 'toasts' ? 'sp-fit sp-grow' : 'sp-fit'}
+        style={{ background: 'transparent', height: over.categoryId === 'toasts' ? 'auto' : '100%', minHeight: over.categoryId === 'toasts' ? 80 : undefined }}
+      />
+    </div>
+  )
+  const body = (
     <div style={root} className="sp-page" data-page={page.id} data-testid={bare && !mobile ? 'site-aside' : 'site-page'} data-state={state}>
       {!bare && !mobile && (
         <div style={{ marginBottom: 16 }}>
@@ -93,16 +151,22 @@ export function PageContent({
       )}
       {state === 'erro' && !bare && (
         <div style={{ marginBottom: single ? 10 : 16 }}>
-          <ComponentPreview categoryId="alertas" familyId={project.components[0]?.familyId ?? 'swiss-minimal'} theme={theme} props={{ titulo: 'Não foi possível carregar os dados', texto: 'Verifique a conexão e tente de novo. Se o problema continuar, fale com o suporte.', acao: 'Tentar de novo', tipo: 'erro', estilo: 'suave', fechavel: false }} height={single ? 130 : 104} className="sp-fit" style={{ background: 'transparent' }} />
+          <ComponentPreview categoryId="alertas" familyId={project.components[0]?.familyId ?? 'swiss-minimal'} theme={theme} props={{ titulo: 'Não foi possível carregar os dados', texto: 'Verifique a conexão e tente de novo. Se o problema continuar, fale com o suporte.', acao: 'Tentar de novo', tipo: 'erro', estilo: 'suave', fechavel: false }} height={single ? 130 : 104} inPage className="sp-fit" style={{ background: 'transparent' }} />
         </div>
       )}
-      <div style={{ display: 'grid', gridTemplateColumns: single ? 'minmax(0, 1fr)' : 'repeat(12, minmax(0, 1fr))', gap: single ? 10 : 16 }}>
+      <div
+        style={
+          rowHeight
+            ? { display: 'grid', gridAutoFlow: 'column', gridAutoColumns: 'minmax(0, 1fr)', gap: 16 }
+            : { display: 'grid', gridTemplateColumns: single ? 'minmax(0, 1fr)' : 'repeat(12, minmax(0, 1fr))', gap: single ? 10 : 16 }
+        }
+      >
         {list.map((b, i) => {
           const inst = project.components.find((c) => c.id === b.component)
           if (!inst) return null
           const shown = stateBlock(state, inst)
           const own = Object.keys(inst.tokenOverrides).length ? { ...theme, tokens: applyOverrides(theme.tokens, inst.tokenOverrides) } : theme
-          const height = b.height ?? 240
+          const height = rowHeight ?? b.height ?? 240
           return (
             <div
               key={`${b.component}-${i}`}
@@ -111,7 +175,7 @@ export function PageContent({
               data-category={inst.categoryId}
               data-editable={editMode || undefined}
               title={editMode ? `Editar: ${inst.label}` : undefined}
-              style={{ gridColumn: single ? '1 / -1' : `span ${b.span}`, minWidth: 0, position: 'relative' }}
+              style={{ gridColumn: rowHeight ? undefined : single ? '1 / -1' : `span ${b.span}`, minWidth: 0, position: 'relative' }}
               onClickCapture={
                 editMode
                   ? (e) => {
@@ -128,14 +192,24 @@ export function PageContent({
                 theme={own}
                 props={shown.props}
                 height={mobile ? mobileHeight(height) : height}
-                className="sp-fit"
-                style={{ background: 'transparent', borderRadius: theme.metrics.radiusLg }}
+                inPage
+                compact={Boolean(rowHeight)}
+                // Fora das faixas, a altura declarada é o mínimo: o bloco cresce com o conteúdo (nada cortado).
+                className={rowHeight ? 'sp-fit' : 'sp-fit sp-grow'}
+                style={{ background: 'transparent', borderRadius: theme.metrics.radiusLg, minHeight: rowHeight ? undefined : mobile ? mobileHeight(height) : height }}
               />
               {editMode && <span className="sp-block__tag">{inst.label}</span>}
             </div>
           )
         })}
       </div>
+    </div>
+  )
+  if (!overlayNode) return body
+  return (
+    <div style={{ position: 'relative', height: '100%' }}>
+      {body}
+      {overlayNode}
     </div>
   )
 }
@@ -155,6 +229,7 @@ export function SitePreview({
   onPick,
   onNavigate,
   state = 'normal',
+  overlay = null,
 }: {
   project: Project
   theme: ResolvedTheme
@@ -167,6 +242,8 @@ export function SitePreview({
   /** Navegação pelos menus da prévia: recebe o rótulo do item clicado. */
   onNavigate?: (label: string) => void
   state?: PageState
+  /** Sobreposição aberta na página (modal/toast), ou nenhuma. */
+  overlay?: string | null
 }) {
   const page = project.pages.find((p) => p.id === pageId) ?? project.pages[0]
   const name = project.meta.name.trim() || 'Seu projeto'
@@ -228,7 +305,7 @@ export function SitePreview({
     )
   }
 
-  const content = (mobile: boolean, padBottom = 0) => <PageContent project={project} page={page} theme={theme} mobile={mobile} padBottom={padBottom} editMode={editMode} onPick={onPick} state={state} />
+  const content = (mobile: boolean, padBottom = 0) => <PageContent project={project} page={page} theme={theme} mobile={mobile} padBottom={padBottom} editMode={editMode} onPick={onPick} state={state} overlay={overlay} />
   // No celular o painel lateral vira o fim da página (não existe coluna lateral).
   const mobilePage = page.aside?.length ? { ...page, blocks: [...page.blocks, ...page.aside] } : page
 
@@ -244,7 +321,7 @@ export function SitePreview({
           width={Math.min(380, Math.max(300, available - 32))}
           interactive
           content={{ brand: name, nav }}
-          renderContent={(pad) => <PageContent project={project} page={mobilePage} theme={theme} mobile padBottom={pad} editMode={editMode} onPick={onPick} state={state} />}
+          renderContent={(pad) => <PageContent project={project} page={mobilePage} theme={theme} mobile padBottom={pad} editMode={editMode} onPick={onPick} state={state} overlay={overlay} />}
           onNavigate={onNavigate}
           screenTitle={page.name}
         />
@@ -267,7 +344,14 @@ export function SitePreview({
         w={size.w}
         h={size.h}
         content={content(false)}
-        aside={page.aside?.length ? <PageContent project={project} page={page} theme={theme} blocks={page.aside} bare editMode={editMode} onPick={onPick} state={state} /> : undefined}
+        aside={
+          page.aside?.length
+            ? (sz: { width: number; height: number }) => (
+                // Região larga e baixa (faixa de indicadores): blocos lado a lado; coluna lateral: um embaixo do outro.
+                <PageContent project={project} page={page} theme={theme} blocks={page.aside} bare editMode={editMode} onPick={onPick} state={state} rowHeight={sz.width > sz.height * 2.5 ? Math.max(60, Math.round(sz.height - 20)) : undefined} />
+              )
+            : undefined
+        }
         onNavigate={onNavigate}
         activeNav={page.navItem || undefined}
         onRegionPick={editMode ? (kind) => onPick?.({ kind }) : undefined}

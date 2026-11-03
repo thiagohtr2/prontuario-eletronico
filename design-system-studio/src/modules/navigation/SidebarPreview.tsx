@@ -733,7 +733,9 @@ export function SidebarPreview({
   const hoverExpand = arr.expand === 'hover' && !compact
   const collapsedEff = canCollapse && (hoverExpand ? !hovered : collapsedState)
   const railStatic = !compact && (model.shape === 'rail' || arr.labels === 'hidden' || arr.labels === 'below')
-  const rail = railStatic || (collapsedEff && !isDupla)
+  // Coluna estreita do layout (trilho): a sidebar escolhida aparece recolhida, só com ícones.
+  const forcedRail = Boolean(content?.rail) && !compact && !railStatic
+  const rail = railStatic || forcedRail || (collapsedEff && !isDupla)
   const labelsBelow = !compact && arr.labels === 'below'
   // Largura do layout (quando informada) no lugar da largura do modelo: a prévia cabe na coluna.
   const modelWidth = content?.width && model.shape !== 'dupla' ? content.width : model.width
@@ -745,6 +747,7 @@ export function SidebarPreview({
   else if (railStatic) width = model.shape === 'rail' || modelWidth < 100 ? modelWidth : railW
   else if (hoverExpand) width = railW
   else if (collapsedEff) width = railW
+  if (forcedRail) width = content?.width ?? railW
   const panelWidth = hoverExpand && !compact ? (hovered ? modelWidth : railW) : width
 
   const toggleCollapse = () => {
@@ -813,17 +816,18 @@ export function SidebarPreview({
     </button>
   ) : null
 
+  const ctaLabel = arr.cta && arr.cta !== '+' && content?.cta?.trim() ? content.cta.trim() : arr.cta
   const cta = arr.cta ? (
     arr.cta === '+' || rail ? (
       <div className="nvs-scta nvs-scta--round">
-        <button type="button" className="nvs-sbtn nvs-sbtn--round" aria-label={arr.cta === '+' ? 'Criar' : arr.cta}>
+        <button type="button" className="nvs-sbtn nvs-sbtn--round" aria-label={arr.cta === '+' ? 'Criar' : ctaLabel}>
           <Plus size={18} aria-hidden="true" />
         </button>
       </div>
     ) : (
       <div className="nvs-scta">
         <button type="button" className="nvs-sbtn nvs-sbtn--primary nvs-sbtn--block">
-          <Plus size={16} aria-hidden="true" /> {arr.cta}
+          <Plus size={16} aria-hidden="true" /> {ctaLabel}
         </button>
       </div>
     )

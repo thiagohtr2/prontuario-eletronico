@@ -135,8 +135,8 @@ export const alamedaCapital: SiteStarter = {
     { id: 'obsidiana', name: 'Obsidiana (escura)', paletteId: 'obsidiana' },
   ],
   components: [
-    { id: 'kpi-patrimonio', categoryId: 'kpis-stat-cards', label: 'Patrimônio total', props: { rotulo: 'Patrimônio total', valor: 'R$ 284.320', variacao: '+3,8%', comparativo: 'no mês', icone: 'Wallet', tendencia: 'alta', sparkline: true } },
-    { id: 'kpi-rendimento', categoryId: 'kpis-stat-cards', label: 'Rendimento do mês', props: { rotulo: 'Rendimento do mês', valor: 'R$ 2.914', variacao: '+0,9%', comparativo: 'acima do CDI', icone: 'TrendingUp', tendencia: 'alta', sparkline: true } },
+    { id: 'kpi-patrimonio', categoryId: 'kpis-stat-cards', label: 'Patrimônio total', props: { rotulo: 'Patrimônio total', valor: 'R$ 284.320', variacao: '+3,8%', comparativo: 'no mês', icone: 'Wallet', tendencia: 'alta', sparkline: false } },
+    { id: 'kpi-rendimento', categoryId: 'kpis-stat-cards', label: 'Rendimento do mês', props: { rotulo: 'Rendimento do mês', valor: 'R$ 2.914', variacao: '+0,9%', comparativo: 'acima do CDI', icone: 'TrendingUp', tendencia: 'alta', sparkline: false } },
     { id: 'kpi-fatura', categoryId: 'kpis-stat-cards', label: 'Fatura atual', props: { rotulo: 'Fatura atual', valor: 'R$ 3.480', variacao: 'vence 15/11', comparativo: 'limite livre R$ 11.520', icone: 'CreditCard', tendencia: 'neutra', sparkline: false } },
     { id: 'grafico-patrimonio', categoryId: 'graficos', label: 'Evolução do patrimônio', props: { titulo: 'Evolução do patrimônio (12 meses)', tipo: 'linha', series: 2, legenda: true, grade: true, valores: false } },
     { id: 'lista-transacoes', categoryId: 'listas', label: 'Últimas transações', props: { titulo: 'Últimas transações', itens: 'Mercado Bom Preço — −R$ 312,40\nSalário — +R$ 12.800,00\nPix para Ana Lima — −R$ 150,00\nRendimento CDB — +R$ 96,12', avatares: false, divisores: true, acao: 'chevron' } },
@@ -163,11 +163,13 @@ export const alamedaCapital: SiteStarter = {
       purpose: 'Patrimônio, rendimento, fatura e as últimas transações.',
       navItem: 'Visão geral',
       blocks: [
-        { component: 'kpi-patrimonio', span: 4, height: 150 },
-        { component: 'kpi-rendimento', span: 4, height: 150 },
-        { component: 'kpi-fatura', span: 4, height: 150 },
-        { component: 'grafico-patrimonio', span: 8, height: 300 },
-        { component: 'lista-transacoes', span: 4, height: 300 },
+        { component: 'grafico-patrimonio', span: 8, height: 330 },
+        { component: 'lista-transacoes', span: 4, height: 330 },
+      ],
+      aside: [
+        { component: 'kpi-patrimonio', span: 4 },
+        { component: 'kpi-rendimento', span: 4 },
+        { component: 'kpi-fatura', span: 4 },
       ],
     },
     {
@@ -180,6 +182,11 @@ export const alamedaCapital: SiteStarter = {
         { component: 'periodo', span: 12, height: 52 },
         { component: 'grafico-alocacao', span: 5, height: 320 },
         { component: 'tabela-carteira', span: 7, height: 320 },
+      ],
+      aside: [
+        { component: 'kpi-patrimonio', span: 4 },
+        { component: 'kpi-rendimento', span: 4 },
+        { component: 'kpi-fatura', span: 4 },
       ],
     },
     {
@@ -194,6 +201,11 @@ export const alamedaCapital: SiteStarter = {
         { component: 'switch-internacional', span: 6, height: 110 },
         { component: 'slider-limite', span: 12, height: 110 },
       ],
+      aside: [
+        { component: 'kpi-patrimonio', span: 4 },
+        { component: 'kpi-rendimento', span: 4 },
+        { component: 'kpi-fatura', span: 4 },
+      ],
     },
     {
       id: 'pagamentos',
@@ -206,6 +218,11 @@ export const alamedaCapital: SiteStarter = {
         { component: 'campo-codigo', span: 7, height: 120 },
         { component: 'data-pagamento', span: 5, height: 340 },
         { component: 'toast-pago', span: 7, height: 110 },
+      ],
+      aside: [
+        { component: 'kpi-patrimonio', span: 4 },
+        { component: 'kpi-rendimento', span: 4 },
+        { component: 'kpi-fatura', span: 4 },
       ],
     },
   ],
@@ -250,6 +267,7 @@ export const torreControle: SiteStarter = {
     { id: 'tabela-docas', categoryId: 'tabelas', label: 'Docas', props: { titulo: 'Docas agora', colunas: 'Doca\nStatus\nVeículo\nPrevisão', linhas: 5, dados: 'D-01 | Carregando | PLX-2A31 | 14:20\nD-02 | Livre | — | —\nD-03 | Atrasado | RTE-9F02 | 13:55\nD-04 | Carregando | QWA-7C88 | 14:40\nD-05 | Concluído | BHN-1D44 | saiu 13:30', densidade: 'compacta', zebra: true, cabecalho: 'escuro', selecao: false, acoes: false } },
     { id: 'linha-ocorrencias', categoryId: 'timelines', label: 'Ocorrências do turno', props: { itens: 'Interdição Ponte Rio Claro — 13:02\nPneu furado RTE-9F02 — 12:40\nReprogramação rota Sul — 12:15\nTroca de turno — 12:00', atual: 1, orientacao: 'vertical', icones: true } },
     { id: 'filtro-ocorrencias', categoryId: 'badges-tags', label: 'Tipos de ocorrência', props: { textos: 'Via\nVeículo\nCarga\nClima', estilo: 'contorno', formato: 'quadrado' } },
+    { id: 'feed-alertas', categoryId: 'notificacoes', label: 'Alertas ao vivo', props: { titulo: 'Alertas ao vivo', naoLidas: 3, itens: 'Rota Sul | atraso de 18 min na entrega 4471 | agora\nDoca D-03 | veículo RTE-9F02 parado há 25 min | 4 min\nMeteorologia | chuva forte prevista às 15h na região Sul | 12 min\nFrota | PLX-2A31 com manutenção vencendo | 30 min', abas: false, avatares: false, marcarTodas: 'Reconhecer todos' } },
     { id: 'tabela-ocorrencias', categoryId: 'tabelas', label: 'Ocorrências abertas', props: { titulo: 'Ocorrências abertas', colunas: 'Ocorrência\nStatus\nResponsável\nAbertura', linhas: 4, dados: 'Interdição de via | Crítico | Central Sul | 13:02\nPneu furado | Em andamento | Equipe 4 | 12:40\nAvaria na carga | Pendente | Qualidade | 11:58\nChuva forte | Em análise | Meteorologia | 11:20', densidade: 'compacta', zebra: false, cabecalho: 'escuro', selecao: true, acoes: true } },
   ],
   pages: [
@@ -260,12 +278,15 @@ export const torreControle: SiteStarter = {
       purpose: 'Estado da operação em uma tela: indicadores, volume, alertas e docas.',
       navItem: 'Operação',
       blocks: [
-        { component: 'alerta-ponte', span: 12, height: 92 },
         { component: 'kpi-entregas', span: 4, height: 140 },
         { component: 'kpi-frota', span: 4, height: 140 },
         { component: 'kpi-atrasos', span: 4, height: 140 },
-        { component: 'grafico-volume', span: 6, height: 290 },
-        { component: 'tabela-docas', span: 6, height: 290 },
+        { component: 'grafico-volume', span: 6, height: 300 },
+        { component: 'tabela-docas', span: 6, height: 300 },
+      ],
+      aside: [
+        { component: 'alerta-ponte', span: 12, height: 150 },
+        { component: 'feed-alertas', span: 12, height: 420 },
       ],
     },
     {
@@ -276,9 +297,9 @@ export const torreControle: SiteStarter = {
       navItem: 'Ocorrências',
       blocks: [
         { component: 'filtro-ocorrencias', span: 12, height: 44 },
-        { component: 'tabela-ocorrencias', span: 8, height: 300 },
-        { component: 'linha-ocorrencias', span: 4, height: 300 },
+        { component: 'tabela-ocorrencias', span: 12, height: 320 },
       ],
+      aside: [{ component: 'linha-ocorrencias', span: 12, height: 340 }],
     },
   ],
 }

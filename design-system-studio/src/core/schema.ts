@@ -16,7 +16,7 @@ const tokenOverrides = z.record(tokenKey, hex)
 const shortText = z.string().max(200, 'texto longo demais (máximo 200 caracteres)')
 const longText = z.string().max(5000, 'texto longo demais (máximo 5.000 caracteres)')
 const stepId = z.enum(['objetivo', 'entrada', 'desktop', 'mobile', 'revisao', 'preview', 'identidade', 'navegacao', 'componentes', 'entrega'])
-const navChoice = z.object({ id: z.string().min(1), variant: z.union([z.literal(0), z.literal(1)]) })
+const navChoice = z.object({ id: z.string().min(1), variant: z.union([z.literal(0), z.literal(1)]), cta: shortText.optional() })
 
 const validationReportSchema = z.object({
   tool: z.string(),

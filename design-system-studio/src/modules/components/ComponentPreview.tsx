@@ -23,6 +23,10 @@ export interface ComponentPreviewProps {
   /** Altura fixa do palco (px). Padrão: 280. */
   height?: number
   large?: boolean
+  /** Renderização dentro de uma página do site (só o componente configurado, sem exemplos extras). */
+  inPage?: boolean
+  /** Versão compacta para faixas baixas (só muda os componentes que têm uma). */
+  compact?: boolean
   className?: string
   style?: CSSProperties
 }
@@ -47,18 +51,18 @@ class PreviewBoundary extends Component<{ children: ReactNode; resetKey: string 
  * Prévia de um componente (categoria × família) herdando a paleta global. Usada na
  * galeria, no editor e (opcionalmente) na prévia do site ao vivo.
  */
-export function ComponentPreview({ categoryId, familyId, theme, props, state = 'normal', onPartClick, activePart, height = 280, large, className, style }: ComponentPreviewProps) {
+export function ComponentPreview({ categoryId, familyId, theme, props, state = 'normal', onPartClick, activePart, height = 280, large, inPage = false, compact = false, className, style }: ComponentPreviewProps) {
   const category = categoryById(categoryId)
   const family = familyById(familyId) ?? visualFamilies[0]
   const look = useMemo(() => resolveLook(theme, family), [theme, family])
   const values = useMemo(() => resolveValues(category, props), [category, props])
-  const ctx = useMemo<PreviewCtx>(() => ({ L: look, state, onPart: onPartClick, activePart }), [look, state, onPartClick, activePart])
+  const ctx = useMemo<PreviewCtx>(() => ({ L: look, state, onPart: onPartClick, activePart, inPage, compact }), [look, state, onPartClick, activePart, inPage, compact])
   const def = rendererFor(categoryId)
   const frame = def?.frame ?? 'center'
   const classes = ['cmp-pv', `cmp-pv--${frame}`, onPartClick ? 'cmp-pv--editable' : '', large ? 'cmp-pv--large' : '', className ?? ''].filter(Boolean).join(' ')
 
   return (
-    <div className={classes} style={{ height, background: look.stage, color: look.text, fontFamily: look.font, ...style }} data-family={family.id} data-category={categoryId}>
+    <div className={classes} style={{ height, background: look.stage, color: look.text, fontFamily: look.font, ...style }} data-family={family.id} data-category={categoryId} data-in-page={inPage || undefined}>
       {def && category ? (
         <PreviewContext.Provider value={ctx}>
           <PreviewBoundary resetKey={`${categoryId}:${family.id}`}>

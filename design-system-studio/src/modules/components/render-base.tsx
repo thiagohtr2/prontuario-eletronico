@@ -288,6 +288,7 @@ function Busca({ v, st }: RP) {
 }
 
 function TextInput({ v, st }: RP) {
+  const { inPage } = usePv()
   const pos = str(v, 'posicaoIcone')
   const err = bool(v, 'erro')
   return (
@@ -304,7 +305,7 @@ function TextInput({ v, st }: RP) {
         value={err ? 'ana@empresa' : st === 'focus' || st === 'active' ? 'ana@' : ''}
         st={st}
       />
-      <Field label="Nome completo" value="Ana Souza" size={str(v, 'tamanho') as 'sm' | 'md' | 'lg'} icon={pos === 'esquerda' ? 'User' : undefined} labelPart="" helpPart="" part="" iconPart="" />
+      {!inPage && <Field label="Nome completo" value="Ana Souza" size={str(v, 'tamanho') as 'sm' | 'md' | 'lg'} icon={pos === 'esquerda' ? 'User' : undefined} labelPart="" helpPart="" part="" iconPart="" />}
     </Col>
   )
 }
@@ -515,6 +516,7 @@ function Radios({ v, st }: RP) {
 }
 
 function Switches({ v, st }: RP) {
+  const { inPage } = usePv()
   const left = str(v, 'posicao') === 'esquerda'
   const row = (label: string, desc: string, on: boolean, s?: typeof st, main = false) => (
     <Row gap={14} style={{ flexDirection: left ? 'row-reverse' : 'row', justifyContent: left ? 'flex-end' : undefined }}>
@@ -535,10 +537,14 @@ function Switches({ v, st }: RP) {
     <Card style={{ width: '100%', maxWidth: 310 }}>
       <Col gap={12}>
         {row(str(v, 'rotulo'), str(v, 'descricao'), bool(v, 'ligado'), st, true)}
-        <Divider />
-        {row('Modo escuro', '', !bool(v, 'ligado'))}
-        <Divider />
-        {row('Sons do sistema', '', false, 'disabled')}
+        {!inPage && (
+          <>
+            <Divider />
+            {row('Modo escuro', '', !bool(v, 'ligado'))}
+            <Divider />
+            {row('Sons do sistema', '', false, 'disabled')}
+          </>
+        )}
       </Col>
     </Card>
   )

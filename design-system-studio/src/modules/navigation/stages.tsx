@@ -4,7 +4,7 @@ import { mix, withAlpha } from '@/core/color'
 import { fontStack, surfaceStyle } from '@/core/tokens'
 import type { ResolvedTheme } from '@/core/types'
 import { cx } from '@/ui'
-import { headerLookFor, sidebarLookFor } from './catalog'
+import { headerLookFor, headerTotalHeight, sidebarLookFor } from './catalog'
 import { HeaderPreview } from './HeaderPreview'
 import { useWidth } from './menu'
 import { heroColors } from './palette'
@@ -303,16 +303,6 @@ export function PageFragment({
 /* Palco do header                                                             */
 /* -------------------------------------------------------------------------- */
 
-function headerExtraHeight(look: HeaderLook, layout: string, compact: boolean) {
-  let h = compact ? 56 : look.height
-  if (look.announcement && look.announceStyle !== 'pill') h += compact ? 32 : 36
-  if (!compact && look.utility?.length && layout !== 'stacked' && layout !== 'two-row') h += 32
-  if (!compact && (layout === 'stacked' || layout === 'two-row')) h += 44
-  if (!compact && look.breadcrumbs?.length && look.breadcrumbStyle === 'row') h += 40
-  if (compact && (look.search === 'wide' || look.breadcrumbs?.length)) h += 48
-  if (look.shape === 'floating' || look.shape === 'islands') h += compact ? 8 : 12
-  return h
-}
 
 /** Header sobre um trecho de página realista, numa moldura de tamanho fixo. */
 export function HeaderStage({
@@ -345,7 +335,7 @@ export function HeaderStage({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [variant])
   const overlay = look.shape === 'floating' || look.shape === 'islands' || look.surface === 'transparent'
-  const offset = overlay ? headerExtraHeight(look, layout, compact) : 0
+  const offset = overlay ? headerTotalHeight(look, layout, compact) : 0
   const t = theme.tokens
   return (
     <div ref={frameRef} className="nvs-stage" data-nv-frame style={{ height, background: t.bg, color: t.text }}>
@@ -599,7 +589,7 @@ export function ComboStage({
   const headerNode = (
     <HeaderPreview model={header} variant={headerVariant} theme={theme} compact={narrow} scrolled={solid} onNavigate={setTitle} />
   )
-  const offset = overlay ? headerExtraHeight(look, layout, narrow) : 0
+  const offset = overlay ? headerTotalHeight(look, layout, narrow) : 0
 
   if (narrow) {
     return (
