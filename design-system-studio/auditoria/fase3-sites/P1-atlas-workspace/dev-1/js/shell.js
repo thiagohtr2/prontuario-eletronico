@@ -186,6 +186,7 @@
     overlayOpener = trigger || document.activeElement;
     st.overlay = true;
     els.sidebar.classList.add('is-overlay');
+    els.shell.classList.add('is-overlay-open');
     els.scrim.hidden = false;
     applyMode();
     releaseOverlay = u.trapFocus(els.sidebar);
@@ -197,6 +198,7 @@
     if (!st.overlay) return;
     st.overlay = false;
     if (els.sidebar) els.sidebar.classList.remove('is-overlay');
+    if (els.shell) els.shell.classList.remove('is-overlay-open');
     if (els.scrim) els.scrim.hidden = true;
     if (releaseOverlay) releaseOverlay();
     releaseOverlay = null;

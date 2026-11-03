@@ -296,7 +296,7 @@
      ========================================================= */
   P.projetos = function (ctx) {
     var filter = 'todos';
-    var q = ctx.query.q ? decodeURIComponent(ctx.query.q) : '';
+    var q = ctx.query.q ? ctx.query.q : '';
     function counts() {
       var c = { todos: D.projects.length, andamento: 0, novo: 0, pausado: 0, concluido: 0 };
       D.projects.forEach(function (p) { c[p.status]++; });
@@ -541,7 +541,7 @@
      ========================================================= */
   P.tarefas = function (ctx) {
     var filter = 'abertas';
-    var q = ctx.query.q ? decodeURIComponent(ctx.query.q) : '';
+    var q = ctx.query.q ? ctx.query.q : '';
     if (q) filter = 'todas';
     var today = u.isoDate(D.TODAY);
     function items() {

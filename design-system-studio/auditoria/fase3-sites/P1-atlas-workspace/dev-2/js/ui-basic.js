@@ -86,7 +86,7 @@
     const end = opts.href ? 'a' : 'button';
     return `
       <article class="sw-card">
-        <div class="sw-card__media" aria-hidden="true">${icon(c.icon, { size: 48 })}</div>
+        <div class="sw-card__media" aria-hidden="true">${icon(c.icon, { size: 56 })}</div>
         <div class="sw-card__body">
           <p class="sw-label"><span class="sq" aria-hidden="true"></span>${pad2(opts.n || 1)} — ${esc(c.label)}</p>
           <h3 class="sw-card__title">${esc(c.title)}</h3>
@@ -113,7 +113,8 @@
 
   // ---------------------------------------------------------------- KPI + sparkline
   const MONTHS = ['dez', 'jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov'];
-  const valText = (unit, v) => unit.replace('{v}', Number.isInteger(v) ? fmt.int(v) : fmt.num(v, 1));
+  const valText = (unit, v, dec) => unit.replace('{v}', dec ? fmt.num(v, dec) : Number.isInteger(v) ? fmt.int(v) : fmt.num(v, 1));
+  U.valText = valText;
 
   U.kpiHTML = (k, compare, idx) => {
     const tone = k.delta > 0 ? 'up' : k.delta < 0 ? 'down' : 'flat';
@@ -144,7 +145,7 @@
     const pts = vals.map((v, i) => `${(i / (n - 1)) * 100},${Y(v)}`).join(' ');
     const lab = (i) => (k.labels === 'mês' ? MONTHS[i % 12] : `sem. ${i + 1}`);
     host.innerHTML = `
-      <svg viewBox="0 0 100 32" preserveAspectRatio="none" role="img" aria-label="Tendência de ${esc(k.label)}: de ${esc(valText(k.unit, vals[0]))} a ${esc(valText(k.unit, vals[n - 1]))} em ${n} pontos">
+      <svg viewBox="0 0 100 32" preserveAspectRatio="none" role="img" aria-label="Tendência de ${esc(k.label)}: de ${esc(valText(k.unit, vals[0], k.dec))} a ${esc(valText(k.unit, vals[n - 1], k.dec))} em ${n} pontos">
         <line class="spark__base" x1="0" y1="31.5" x2="100" y2="31.5"/>
         <polyline class="spark__line" points="${pts}"/>
       </svg>
@@ -158,7 +159,7 @@
       dot.hidden = false; tip.hidden = false;
       dot.style.left = (i / (n - 1)) * 100 + '%';
       dot.style.top = (Y(vals[i]) / 32) * 100 + '%';
-      tip.textContent = `${lab(i)}: ${valText(k.unit, vals[i])}`;
+      tip.textContent = `${lab(i)}: ${valText(k.unit, vals[i], k.dec)}`;
       const tw = tip.offsetWidth;
       const px = (i / (n - 1)) * r.width;
       tip.style.left = Math.max(0, Math.min(px - tw / 2, r.width - tw)) + 'px';

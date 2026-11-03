@@ -95,12 +95,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 24234,
+                      "duration": 14394,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:56:48.993Z",
+                      "startTime": "2026-11-03T00:02:33.806Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -129,12 +129,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4545,
+                      "duration": 2998,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:56:48.857Z",
+                      "startTime": "2026-11-03T00:02:33.698Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -171,12 +171,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 1,
                           "status": "passed",
-                          "duration": 15680,
+                          "duration": 8372,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:56:48.378Z",
+                          "startTime": "2026-11-03T00:02:33.857Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -215,12 +215,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4013,
+                      "duration": 3135,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:57:13.465Z",
+                      "startTime": "2026-11-03T00:02:48.338Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -257,12 +257,12 @@
                           "workerIndex": 2,
                           "parallelIndex": 2,
                           "status": "passed",
-                          "duration": 19689,
+                          "duration": 11444,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:56:53.751Z",
+                          "startTime": "2026-11-03T00:02:36.867Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -291,12 +291,12 @@
                           "workerIndex": 1,
                           "parallelIndex": 1,
                           "status": "passed",
-                          "duration": 9137,
+                          "duration": 6999,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:57:04.497Z",
+                          "startTime": "2026-11-03T00:02:42.418Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -342,10 +342,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 3919,
+                      "duration": 3328,
                       "error": {
                         "message": "Error: texto \"linha\" da prévia deve crescer com a base de 18 px\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m13\u001b[39m\nReceived:   \u001b[31m13\u001b[39m",
                         "stack": "Error: texto \"linha\" da prévia deve crescer com a base de 18 px\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m13\u001b[39m\nReceived:   \u001b[31m13\u001b[39m\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:268:92",
@@ -369,7 +369,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:57:13.665Z",
+                      "startTime": "2026-11-03T00:02:48.391Z",
                       "annotations": [
                         {
                           "type": "fail",
@@ -426,10 +426,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 2610,
+                      "duration": 1787,
                       "error": {
                         "message": "Error: ícones da prévia devem refletir o estilo \"Preenchido\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"none|none|2;none|none|2;none|none|2;none|none|2;none|none|2;none|none|2;none|none|2;none|none|2;none|none|2;none|none|2\"\u001b[39m",
                         "stack": "Error: ícones da prévia devem refletir o estilo \"Preenchido\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"none|none|2;none|none|2;none|none|2;none|none|2;none|none|2;none|none|2;none|none|2;none|none|2;none|none|2;none|none|2\"\u001b[39m\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:281:88",
@@ -453,7 +453,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:57:13.903Z",
+                      "startTime": "2026-11-03T00:02:49.454Z",
                       "annotations": [
                         {
                           "type": "fail",
@@ -510,10 +510,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 3807,
+                      "duration": 3178,
                       "error": {
                         "message": "Error: densidade no prompt\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"padrão\"\u001b[39m\nReceived: \u001b[31m\"confortável\"\u001b[39m",
                         "stack": "Error: densidade no prompt\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"padrão\"\u001b[39m\nReceived: \u001b[31m\"confortável\"\u001b[39m\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:296:56",
@@ -537,7 +537,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:57:16.565Z",
+                      "startTime": "2026-11-03T00:02:51.290Z",
                       "annotations": [
                         {
                           "type": "fail",
@@ -587,12 +587,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3164,
+                      "duration": 3780,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:57:17.515Z",
+                      "startTime": "2026-11-03T00:02:51.488Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -626,15 +626,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 9739,
+                      "duration": 7903,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:57:17.673Z",
+                      "startTime": "2026-11-03T00:02:51.787Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -668,15 +668,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
                           "status": "passed",
-                          "duration": 9250,
+                          "duration": 7043,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:57:20.419Z",
+                          "startTime": "2026-11-03T00:02:54.491Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -723,7 +723,7 @@
                           "workerIndex": 2,
                           "parallelIndex": 2,
                           "status": "failed",
-                          "duration": 3220,
+                          "duration": 2733,
                           "error": {
                             "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"mobile-option-bottom-nav-classica\",\u001b[39m\n\u001b[31m+ ]\u001b[39m",
                             "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // deep equality\u001b[22m\n\n\u001b[32m- Expected  - 1\u001b[39m\n\u001b[31m+ Received  + 3\u001b[39m\n\n\u001b[32m- Array []\u001b[39m\n\u001b[31m+ Array [\u001b[39m\n\u001b[31m+   \"mobile-option-bottom-nav-classica\",\u001b[39m\n\u001b[31m+ ]\u001b[39m\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:388:27",
@@ -747,7 +747,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:57:20.726Z",
+                          "startTime": "2026-11-03T00:02:55.289Z",
                           "annotations": [
                             {
                               "type": "fail",
@@ -814,12 +814,12 @@
                           "workerIndex": 2,
                           "parallelIndex": 2,
                           "status": "passed",
-                          "duration": 16189,
+                          "duration": 10681,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:57:24.053Z",
+                          "startTime": "2026-11-03T00:02:58.056Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -853,15 +853,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 1,
-                          "parallelIndex": 1,
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 12286,
+                          "duration": 10073,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:57:27.456Z",
+                          "startTime": "2026-11-03T00:02:59.714Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -897,15 +897,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 2465,
+                      "duration": 2191,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:57:29.691Z",
+                      "startTime": "2026-11-03T00:03:01.550Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -939,15 +939,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
                           "status": "passed",
-                          "duration": 1555,
+                          "duration": 1165,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:57:32.185Z",
+                          "startTime": "2026-11-03T00:03:03.768Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -990,15 +990,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
                           "status": "passed",
-                          "duration": 12863,
+                          "duration": 7441,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:57:33.776Z",
+                          "startTime": "2026-11-03T00:03:04.950Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1032,15 +1032,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 1,
-                          "parallelIndex": 1,
+                          "workerIndex": 2,
+                          "parallelIndex": 2,
                           "status": "passed",
-                          "duration": 10341,
+                          "duration": 7358,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:57:39.764Z",
+                          "startTime": "2026-11-03T00:03:08.777Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1076,15 +1076,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5178,
+                      "duration": 4593,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:57:40.287Z",
+                      "startTime": "2026-11-03T00:03:09.818Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1118,15 +1118,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 2,
-                          "parallelIndex": 2,
+                          "workerIndex": 1,
+                          "parallelIndex": 1,
                           "status": "passed",
-                          "duration": 4621,
+                          "duration": 3062,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:57:45.492Z",
+                          "startTime": "2026-11-03T00:03:12.413Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1163,12 +1163,12 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 4693,
+                          "duration": 3356,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:57:46.721Z",
+                          "startTime": "2026-11-03T00:03:14.438Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1207,12 +1207,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 48123,
+                      "duration": 40423,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:57:50.139Z",
+                      "startTime": "2026-11-03T00:03:15.499Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1249,12 +1249,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 3475,
+                      "duration": 2150,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:57:50.140Z",
+                      "startTime": "2026-11-03T00:03:16.150Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1291,12 +1291,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 17131,
+                      "duration": 14852,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:57:51.494Z",
+                      "startTime": "2026-11-03T00:03:17.817Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1335,7 +1335,7 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 4928,
+                      "duration": 3555,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"co\u001b[7mmpacta\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"co\u001b[7mnfortável\u001b[27m\"\u001b[39m",
                         "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"co\u001b[7mmpacta\u001b[27m\"\u001b[39m\nReceived: \u001b[31m\"co\u001b[7mnfortável\u001b[27m\"\u001b[39m\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:644:64",
@@ -1359,7 +1359,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:57:53.640Z",
+                      "startTime": "2026-11-03T00:03:18.314Z",
                       "annotations": [
                         {
                           "type": "fail",
@@ -1417,12 +1417,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 5608,
+                      "duration": 5360,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:57:58.600Z",
+                      "startTime": "2026-11-03T00:03:21.892Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1461,7 +1461,7 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "failed",
-                      "duration": 3321,
+                      "duration": 2527,
                       "error": {
                         "message": "Error: Primária — hover deve acompanhar a nova primária\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"#161618\"\u001b[39m",
                         "stack": "Error: Primária — hover deve acompanhar a nova primária\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mnot\u001b[2m.\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: not \u001b[32m\"#161618\"\u001b[39m\n    at forEach (/home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:683:89)\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:683:10",
@@ -1485,7 +1485,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:58:04.246Z",
+                      "startTime": "2026-11-03T00:03:27.271Z",
                       "annotations": [
                         {
                           "type": "fail",
@@ -1543,12 +1543,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 14963,
+                      "duration": 10818,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:58:07.624Z",
+                      "startTime": "2026-11-03T00:03:29.875Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1585,12 +1585,12 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 6857,
+                      "duration": 4821,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:58:08.654Z",
+                      "startTime": "2026-11-03T00:03:32.713Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1629,7 +1629,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 8471,
+                      "duration": 7000,
                       "error": {
                         "message": "Error: download no primeiro clique (ponto coberto por: ui-btn ui-btn--primary)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
                         "stack": "Error: download no primeiro clique (ponto coberto por: ui-btn ui-btn--primary)\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:771:96",
@@ -1653,7 +1653,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:58:15.560Z",
+                      "startTime": "2026-11-03T00:03:37.549Z",
                       "annotations": [
                         {
                           "type": "fail",
@@ -1711,12 +1711,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 11326,
+                      "duration": 11003,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:58:22.609Z",
+                      "startTime": "2026-11-03T00:03:40.712Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1742,15 +1742,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 4359,
+                      "duration": 4773,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:58:33.678Z",
+                      "startTime": "2026-11-03T00:03:51.734Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -1787,12 +1787,12 @@
                           "workerIndex": 0,
                           "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 9547,
+                          "duration": 9859,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:58:24.090Z",
+                          "startTime": "2026-11-03T00:03:44.590Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -1838,10 +1838,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 3950,
+                      "duration": 3812,
                       "error": {
                         "message": "Error: Prompt da identidade em scrollY=600: coberto por gd-footer\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
                         "stack": "Error: Prompt da identidade em scrollY=600: coberto por gd-footer\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:832:74",
@@ -1865,7 +1865,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:58:33.974Z",
+                      "startTime": "2026-11-03T00:03:54.505Z",
                       "annotations": [
                         {
                           "type": "fail",
@@ -1922,10 +1922,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 3873,
+                      "duration": 3592,
                       "error": {
                         "message": "Error: base do celular grande × topo do rodapé\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m835\u001b[39m\nReceived:    \u001b[31m858\u001b[39m",
                         "stack": "Error: base do celular grande × topo do rodapé\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: <= \u001b[32m835\u001b[39m\nReceived:    \u001b[31m858\u001b[39m\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:845:79",
@@ -1949,7 +1949,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:58:37.964Z",
+                      "startTime": "2026-11-03T00:03:55.939Z",
                       "annotations": [
                         {
                           "type": "fail",
@@ -2004,15 +2004,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
+                          "workerIndex": 2,
+                          "parallelIndex": 2,
                           "status": "passed",
-                          "duration": 6889,
+                          "duration": 7194,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:58:38.064Z",
+                          "startTime": "2026-11-03T00:03:56.535Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -2046,15 +2046,15 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 1,
-                          "parallelIndex": 1,
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
                           "status": "passed",
-                          "duration": 7094,
+                          "duration": 7549,
                           "errors": [],
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:58:38.325Z",
+                          "startTime": "2026-11-03T00:03:58.337Z",
                           "annotations": [],
                           "attachments": []
                         }
@@ -2090,15 +2090,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 6718,
+                      "duration": 5760,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:58:41.860Z",
+                      "startTime": "2026-11-03T00:03:59.548Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2124,15 +2124,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 5366,
+                      "duration": 6185,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:58:44.976Z",
+                      "startTime": "2026-11-03T00:04:03.750Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2161,12 +2161,12 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 6444,
+                      "duration": 7820,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:58:45.436Z",
+                      "startTime": "2026-11-03T00:04:05.363Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2192,15 +2192,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 5464,
+                      "duration": 6591,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:58:48.595Z",
+                      "startTime": "2026-11-03T00:04:05.995Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2244,10 +2244,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 0,
-                          "parallelIndex": 0,
+                          "workerIndex": 2,
+                          "parallelIndex": 2,
                           "status": "failed",
-                          "duration": 2102,
+                          "duration": 3772,
                           "error": {
                             "message": "Error: largura da coluna de miniaturas\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m128\u001b[39m\nReceived:    \u001b[31m0\u001b[39m",
                             "stack": "Error: largura da coluna de miniaturas\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m128\u001b[39m\nReceived:    \u001b[31m0\u001b[39m\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:920:58",
@@ -2271,7 +2271,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:58:50.362Z",
+                          "startTime": "2026-11-03T00:04:09.953Z",
                           "annotations": [
                             {
                               "type": "fail",
@@ -2336,10 +2336,10 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 1,
-                          "parallelIndex": 1,
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
                           "status": "failed",
-                          "duration": 1896,
+                          "duration": 2661,
                           "error": {
                             "message": "Error: largura da coluna de miniaturas\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m128\u001b[39m\nReceived:    \u001b[31m0\u001b[39m",
                             "stack": "Error: largura da coluna de miniaturas\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThanOrEqual\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: >= \u001b[32m128\u001b[39m\nReceived:    \u001b[31m0\u001b[39m\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:920:58",
@@ -2363,7 +2363,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:58:51.903Z",
+                          "startTime": "2026-11-03T00:04:12.607Z",
                           "annotations": [
                             {
                               "type": "fail",
@@ -2430,10 +2430,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 2780,
+                      "duration": 3331,
                       "error": {
                         "message": "Error: larguras de troca citadas no prompt\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m2\u001b[39m\nReceived array:  \u001b[31m[768, 600]\u001b[39m",
                         "stack": "Error: larguras de troca citadas no prompt\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m2\u001b[39m\nReceived array:  \u001b[31m[768, 600]\u001b[39m\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:939:62",
@@ -2442,7 +2442,7 @@
                           "column": 62,
                           "line": 939
                         },
-                        "snippet": "  937 |     for (const m of prompt.matchAll(/Abaixo de (\\d+) px vale a arquitetura mobile/g)) cuts.add(Number(m[1]))\n  938 |     for (const m of prompt.matchAll(/Entre (\\d+) e \\d+ px \\(tablet\\), use a estrutura desktop/g)) cuts.add(Number(m[1]))\n> 939 |     expect([...cuts], 'larguras de troca citadas no prompt').toHaveLength(1)\n      |                                                              ^\n  940 |   })\n  941 |\n  942 |   test('as mesmas escolhas feitas no desktop e no celular geram o mesmo projeto e o mesmo prompt', async ({ browser }) => {"
+                        "snippet": "  937 |     for (const m of prompt.matchAll(/Abaixo de (\\d+) px vale a arquitetura mobile/g)) cuts.add(Number(m[1]))\n  938 |     for (const m of prompt.matchAll(/Entre (\\d+) e \\d+ px \\(tablet\\), use a estrutura desktop/g)) cuts.add(Number(m[1]))\n> 939 |     expect([...cuts], 'larguras de troca citadas no prompt').toHaveLength(1)\n      |                                                              ^\n  940 |   })\n  941 |\n  942 |   test('as mesmas escolhas feitas no desktop e no celular geram o mesmo projeto e o mesmo prompt', async ({ browser, baseURL }) => {"
                       },
                       "errors": [
                         {
@@ -2451,13 +2451,13 @@
                             "column": 62,
                             "line": 939
                           },
-                          "message": "Error: larguras de troca citadas no prompt\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m2\u001b[39m\nReceived array:  \u001b[31m[768, 600]\u001b[39m\n\n  937 |     for (const m of prompt.matchAll(/Abaixo de (\\d+) px vale a arquitetura mobile/g)) cuts.add(Number(m[1]))\n  938 |     for (const m of prompt.matchAll(/Entre (\\d+) e \\d+ px \\(tablet\\), use a estrutura desktop/g)) cuts.add(Number(m[1]))\n> 939 |     expect([...cuts], 'larguras de troca citadas no prompt').toHaveLength(1)\n      |                                                              ^\n  940 |   })\n  941 |\n  942 |   test('as mesmas escolhas feitas no desktop e no celular geram o mesmo projeto e o mesmo prompt', async ({ browser }) => {\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:939:62"
+                          "message": "Error: larguras de troca citadas no prompt\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveLength\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected length: \u001b[32m1\u001b[39m\nReceived length: \u001b[31m2\u001b[39m\nReceived array:  \u001b[31m[768, 600]\u001b[39m\n\n  937 |     for (const m of prompt.matchAll(/Abaixo de (\\d+) px vale a arquitetura mobile/g)) cuts.add(Number(m[1]))\n  938 |     for (const m of prompt.matchAll(/Entre (\\d+) e \\d+ px \\(tablet\\), use a estrutura desktop/g)) cuts.add(Number(m[1]))\n> 939 |     expect([...cuts], 'larguras de troca citadas no prompt').toHaveLength(1)\n      |                                                              ^\n  940 |   })\n  941 |\n  942 |   test('as mesmas escolhas feitas no desktop e no celular geram o mesmo projeto e o mesmo prompt', async ({ browser, baseURL }) => {\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:939:62"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:58:52.489Z",
+                      "startTime": "2026-11-03T00:04:13.203Z",
                       "annotations": [
                         {
                           "type": "fail",
@@ -2504,15 +2504,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 12352,
+                      "duration": 11192,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:58:53.834Z",
+                      "startTime": "2026-11-03T00:04:13.748Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2556,8 +2556,8 @@
                       "projectName": "chromium",
                       "results": [
                         {
-                          "workerIndex": 2,
-                          "parallelIndex": 2,
+                          "workerIndex": 0,
+                          "parallelIndex": 0,
                           "status": "failed",
                           "duration": 5859,
                           "error": {
@@ -2583,7 +2583,7 @@
                           "stdout": [],
                           "stderr": [],
                           "retry": 0,
-                          "startTime": "2026-11-02T23:58:54.082Z",
+                          "startTime": "2026-11-03T00:04:15.304Z",
                           "annotations": [
                             {
                               "type": "fail",
@@ -2650,10 +2650,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 12747,
+                      "duration": 12395,
                       "error": {
                         "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('group', { name: 'Página da prévia' }).getByRole('button', { name: 'Cadastro' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('group', { name: 'Página da prévia' }).getByRole('button', { name: 'Cadastro' }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('group', { name: 'Página da prévia' }).getByRole('button', { name: 'Cadastro' })\u001b[22m\n\u001b[2m    24 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n",
                         "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoHaveCount\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator:  getByRole('group', { name: 'Página da prévia' }).getByRole('button', { name: 'Cadastro' })\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\nTimeout:  10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveCount\" getByRole('group', { name: 'Página da prévia' }).getByRole('button', { name: 'Cadastro' }) with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('group', { name: 'Página da prévia' }).getByRole('button', { name: 'Cadastro' })\u001b[22m\n\u001b[2m    24 × locator resolved to 1 element\u001b[22m\n\u001b[2m       - unexpected value \"1\"\u001b[22m\n\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:989:67",
@@ -2677,7 +2677,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:58:55.296Z",
+                      "startTime": "2026-11-03T00:04:16.566Z",
                       "annotations": [
                         {
                           "type": "fail",
@@ -2724,15 +2724,15 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 2491,
+                      "duration": 2471,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:58:59.966Z",
+                      "startTime": "2026-11-03T00:04:21.209Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2776,13 +2776,13 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 2,
-                      "parallelIndex": 2,
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 2463,
+                      "duration": 2146,
                       "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/Login: nenhum/\u001b[39m\nReceived string:  \u001b[31m\"# Master Prompt — Projeto sem nome·\u001b[39m\n\u001b[31m> Especificação gerada pelo Atelier UI (Design System Studio) em 02/11/2026, 23:59:04.\u001b[39m\n\u001b[31m> Todas as decisões abaixo foram visualizadas e aprovadas pelo usuário. Implemente exatamente o que está descrito; quando algo não estiver especificado, escolha a opção mais simples e consistente com o restante, sem adicionar decoração.·\u001b[39m\n\u001b[31m## A. Informações do projeto·\u001b[39m\n\u001b[31m- Nome: Projeto sem nome\u001b[39m\n\u001b[31m- Tipo de aplicação: Não definido·\u001b[39m\n\u001b[31m## B. Arquitetura geral·\u001b[39m\n\u001b[31m- Fluxo de entrada: **Aplicação diretamente** — O sistema abre direto na tela principal, sem apresentação nem login.\u001b[39m\n\u001b[31m- Landing: nenhuma · Login: Clássico central · Cadastro: nenhum\u001b[39m\n\u001b[31m- Layout desktop: não definido · Layout mobile: não definido·\u001b[39m\n\u001b[31m### Login: Clássico central — Cartão central com a marca acima·\u001b[39m\n\u001b[31m`id: classico-central` · origem: módulo “login”·\u001b[39m\n\u001b[31mLogin centralizado: logotipo acima de um cartão de ≈400 px com e-mail, senha, “Lembrar de mim”, recuperação e botão em largura total.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Fundo em bgAlt de tela cheia; logotipo e nome da marca centralizados acima do cartão.\u001b[39m\n\u001b[31m- Cartão central com título, subtítulo, e-mail, senha, linha “Lembrar de mim” + “Esqueci minha senha” e botão “Entrar” em largura total.\u001b[39m\n\u001b[31m- Abaixo do cartão: “Não tem conta? Criar conta”.\u001b[39m\n\u001b[31m- Rodapé discreto com links de Termos e Privacidade.\u001b[39m\n\u001b[31m- Textos da demonstração: título “Entrar na sua conta”, subtítulo “Use seu e-mail e senha para continuar.”.·\u001b[39m\n\u001b[31m**Medidas recomendadas (adaptáveis)**\u001b[39m\n\u001b[31m- larguraFormulario: ≈360–400 px\u001b[39m\n\u001b[31m- alturaInputs: ≈44 px (desktop) / 48 px (celular)\u001b[39m\n\u001b[31m- larguraCartao: ≈400 px\u001b[39m\n\u001b[31m- paddingCartao: ≈32 px (desktop) / 20 px (celular)·\u001b[39m\n\u001b[31m**Comportamento e estados**\u001b[39m\n\u001b[31m- Labels visíveis associados aos campos (label for/id). E-mail com type=\\\"email\\\", inputMode=\\\"email\\\" e autoComplete=\\\"username\\\" (ou \\\"email\\\"); senha com autoComplete=\\\"current-password\\\".\u001b[39m\n\u001b[31m- Botão de mostrar/ocultar senha dentro do campo, com aria-label alternando “Mostrar senha”/“Ocultar senha” e aria-pressed.\u001b[39m\n\u001b[31m- Validação ao enviar e ao sair do campo: mensagem abaixo do campo (aria-invalid + aria-describedby) e resumo no topo do formulário com role=\\\"alert\\\".\u001b[39m\n\u001b[31m- Erro de credenciais genérico (“E-mail ou senha incorretos”), sem revelar qual dos dois está errado.\u001b[39m\n\u001b[31m- Link “Esqueci minha senha” perto do campo de senha, levando ao fluxo de recuperação por e-mail com mensagem neutra (“Se o e-mail existir, enviaremos um link”).\u001b[39m\n\u001b[31m- Botão principal com estado de carregamento (“Entrando…”) e desabilitado durante o envio para evitar duplo clique.·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- No celular o cartão perde borda e sombra e ocupa a largura total com 20 px de margem; a marca fica no topo.\u001b[39m\n\u001b[31m- Inputs com font-size ≥ 16 px e altura ≥ 48 px no celular (evita o zoom automático do iOS e facilita o toque).\u001b[39m\n\u001b[31m- Com o teclado virtual aberto, o campo focado e o botão “Entrar” continuam visíveis (use 100dvh, sem height: 100vh fixo, e scroll-padding).\u001b[39m\n\u001b[31m- Funciona a partir de 320 px de largura sem rolagem horizontal.\u001b[39m\n\u001b[31m- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).\u001b[39m\n\u001b[31m- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.·\u001b[39m\n\u001b[31m**Observações**\u001b[39m\n\u001b[31m- Esta tela é uma demonstração de interface. A autenticação real deve ser implementada pela IA com backend seguro: senhas com hash (Argon2id ou bcrypt), limitação de tentativas, sessão em cookie httpOnly + Secure + SameSite, proteção CSRF e HTTPS obrigatório.\u001b[39m\n\u001b[31m- Cores, fontes, cantos e superfícies vêm da identidade global do projeto (tokens).\u001b[39m\n\u001b[31m- A tela é uma demonstração de interface. Implemente a autenticação real com backend seguro (hash de senha, rate limit, tokens httpOnly, proteção CSRF).·\u001b[39m\n\u001b[31m## C. Navegação·\u001b[39m\n\u001b[31mNenhum modelo específico de header ou sidebar foi escolhido no Navigation Showcase. Use a estrutura do layout desktop/mobile com aparência derivada da identidade visual, sem decoração extra.·\u001b[39m\n\u001b[31m- Item ativo sempre destacado (cor de navegação ativa) e anunciado a leitores de tela (`aria-current=\\\"page\\\"`).\u001b[39m\n\u001b[31m- Dropdowns e submenus abrem por clique/toque e por teclado (Enter/Espaço), fecham com Esc e clique fora.\u001b[39m\n\u001b[31m- Drawers, bottom sheets e menus de tela cheia prendem o foco enquanto abertos e devolvem o foco ao botão que os abriu.·\u001b[39m\n\u001b[31m## D. Identidade visual·\u001b[39m\n\u001b[31mPaleta global: **Neutro Essencial**. Todos os componentes (botões, inputs, headers, sidebars, cards, tabelas, modais, menus, login, landing e templates) herdam estes tokens por padrão. Exceções só onde estiverem explicitamente listadas.·\u001b[39m\n\u001b[31m| Grupo | Token | Nome | Valor |\u001b[39m\n\u001b[31m| --- | --- | --- | --- |\u001b[39m\n\u001b[31m| Marca | Cor primária | `primary` | #18181b |\u001b[39m\n\u001b[31m| Marca | Primária — hover | `primaryHover` | #161618 |\u001b[39m\n\u001b[31m| Marca | Primária — active | `primaryActive` | #131316 |\u001b[39m\n\u001b[31m| Marca | Texto sobre primária | `onPrimary` | #ffffff |\u001b[39m\n\u001b[31m| Marca | Primária suave | `primarySoft` | #e3e3e4 |\u001b[39m\n\u001b[31m| Marca | Cor secundária | `secondary` | #52525b |\u001b[39m\n\u001b[31m| Marca | Texto sobre secundária | `onSecondary` | #ffffff |\u001b[39m\n\u001b[31m| Marca | Cor de destaque | `accent` | #2563eb |\u001b[39m\n\u001b[31m| Marca | Texto sobre destaque | `onAccent` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Fundo principal | `bg` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Fundo secundário | `bgAlt` | #f6f6f6 |\u001b[39m\n\u001b[31m| Fundos e superfícies | Superfície | `surface` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Superfície alternativa | `surfaceAlt` | #f5f5f5 |\u001b[39m\n\u001b[31m| Texto | Texto principal | `text` | #18181b |\u001b[39m\n\u001b[31m| Texto | Texto secundário | `textMuted` | #707072 |\u001b[39m\n\u001b[31m| Texto | Texto desabilitado | `textDisabled` | #a7a7a8 |\u001b[39m\n\u001b[31m| Texto | Placeholder | `placeholder` | #8c8c8d |\u001b[39m\n\u001b[31m| Bordas e foco | Borda | `border` | #e6e6e6 |\u001b[39m\n\u001b[31m| Bordas e foco | Borda forte | `borderStrong` | #c7c7c7 |\u001b[39m\n\u001b[31m| Bordas e foco | Borda de foco (focus-visible) | `focusRing` | #18181b |\u001b[39m\n\u001b[31m| Estados | Hover | `hover` | #f4f4f4 |\u001b[39m\n\u001b[31m| Estados | Active | `active` | #ebebeb |\u001b[39m\n\u001b[31m| Estados | Pressed | `pressed` | #e0e0e0 |\u001b[39m\n\u001b[31m| Estados | Selected — fundo | `selected` | #e3e3e4 |\u001b[39m\n\u001b[31m| Estados | Selected — texto | `selectedText` | #18181b |\u001b[39m\n\u001b[31m| Estados | Disabled — fundo | `disabled` | #f0f0f0 |\u001b[39m\n\u001b[31m| Estados | Disabled — texto | `disabledText` | #979798 |\u001b[39m\n\u001b[31m| Semânticos | Success | `success` | #117e39 |\u001b[39m\n\u001b[31m| Semânticos | Success — fundo | `successBg` | #e3f4e9 |\u001b[39m\n\u001b[31m| Semânticos | Warning | `warning` | #a85c04 |\u001b[39m\n\u001b[31m| Semânticos | Warning — fundo | `warningBg` | #faefe1 |\u001b[39m\n\u001b[31m| Semânticos | Error | `error` | #dc2626 |\u001b[39m\n\u001b[31m| Semânticos | Error — fundo | `errorBg` | #fbe5e5 |\u001b[39m\n\u001b[31m| Semânticos | Info | `info` | #2563eb |\u001b[39m\n\u001b[31m| Semânticos | Info — fundo | `infoBg` | #e5ecfd |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Link | `link` | #18181b |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Link — hover | `linkHover` | #141417 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Ícones | `icon` | #525254 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — fundo | `navBg` | #ffffff |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — texto | `navText` | #4b4b4d |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — item ativo | `navActive` | #e3e3e4 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — texto ativo | `navActiveText` | #18181b |\u001b[39m\n\u001b[31m| Gradiente | Gradiente — início | `gradientFrom` | #18181b |\u001b[39m\n\u001b[31m| Gradiente | Gradiente — fim | `gradientTo` | #3b73ed |·\u001b[39m\n\u001b[31m### Tipografia: Inter + Inter·\u001b[39m\n\u001b[31m`id: identity.typography` · origem: módulo “cores”·\u001b[39m\n\u001b[31mTítulos em Inter (peso 650) e textos em Inter (peso 400), tamanho base 15 px.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Escala sugerida: 13 / 15 / 18 / 23 / 30 / 39 px.\u001b[39m\n\u001b[31m- Altura de linha de 1.5 para textos e 1.2–1.3 para títulos.\u001b[39m\n\u001b[31m- Nunca use textos menores que 12 px; filtros e botões com pelo menos 14 px.·\u001b[39m\n\u001b[31m**Propriedades**\u001b[39m\n\u001b[31m- fonteTitulos: Inter\u001b[39m\n\u001b[31m- fonteTexto: Inter\u001b[39m\n\u001b[31m- tamanhoBase: 15\u001b[39m\n\u001b[31m- pesoTitulos: 650\u001b[39m\n\u001b[31m- pesoTexto: 400·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- Títulos grandes reduzem proporcionalmente no celular (use clamp()).\u001b[39m\n\u001b[31m- Inputs com 16 px no celular para evitar zoom automático.·\u001b[39m\n\u001b[31m### Geometria e superfícies: Médios (8 px) · Contornada (bordas finas)·\u001b[39m\n\u001b[31m`id: identity.geometry` · origem: módulo “cores”·\u001b[39m\n\u001b[31mCantos médios (8 px), bordas de 1 px, sombra sem sombra, superfícies contornada (bordas finas), densidade confortável.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Escala de espaçamento em múltiplos de 4 px: 4, 8, 12, 16, 20, 24, 32, 40.\u001b[39m\n\u001b[31m- Sem sombras em superfícies de conteúdo. Apenas elementos realmente flutuantes (modais, popovers, menus) podem ter elevação.\u001b[39m\n\u001b[31m- Ícones no estilo contorno (outline), tamanho consistente (16–20 px em interfaces).·\u001b[39m\n\u001b[31m**Propriedades**\u001b[39m\n\u001b[31m- raioPequeno: 6px\u001b[39m\n\u001b[31m- raioMedio: 8px\u001b[39m\n\u001b[31m- raioGrande: 12px\u001b[39m\n\u001b[31m- borda: 1px\u001b[39m\n\u001b[31m- sombra: none\u001b[39m\n\u001b[31m- superficie: outlined\u001b[39m\n\u001b[31m- densidade: comfortable\u001b[39m\n\u001b[31m- unidadeDeEspaco: 8px\u001b[39m\n\u001b[31m- ícones: outline·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- A geometria se mantém em todas as larguras; no celular aumente apenas as áreas de toque.·\u001b[39m\n\u001b[31m### Estados visuais\u001b[39m\n\u001b[31m- hover: fundo `hover` ou primária `primaryHover`; active/pressed: `active`/`pressed`/`primaryActive`.\u001b[39m\n\u001b[31m- focus-visible: anel de 2–3 px na cor `focusRing`, sempre visível ao navegar por teclado.\u001b[39m\n\u001b[31m- selected: fundo `selected` com texto `selectedText`; disabled: fundo `disabled`, texto `disabledText`, sem hover.\u001b[39m\n\u001b[31m- Mensagens: success/warning/error/info com os fundos semânticos correspondentes.·\u001b[39m\n\u001b[31m## E. Componentes·\u001b[39m\n\u001b[31mNenhum componente foi personalizado na biblioteca. Crie os componentes necessários usando os tokens e a geometria da seção D.·\u001b[39m\n\u001b[31m## F. Responsividade·\u001b[39m\n\u001b[31mValide pelo menos nas larguras: 320, 344, 360, 375, 390, 412, 430, 480, 600, 768, 820, 1024, 1280, 1440, 1920 px, além de larguras intermediárias.·\u001b[39m\n\u001b[31mBreakpoints de referência:\u001b[39m\n\u001b[31m- xs: Celulares pequenos (320–359 px)\u001b[39m\n\u001b[31m- sm: Celulares (360–599 px)\u001b[39m\n\u001b[31m- md: Tablets e celulares na horizontal (600–1023 px)\u001b[39m\n\u001b[31m- lg: Notebooks (1024–1439 px)\u001b[39m\n\u001b[31m- xl: Monitores grandes (1440 px ou mais)·\u001b[39m\n\u001b[31m**Regras gerais**\u001b[39m\n\u001b[31m- Nenhum overflow horizontal involuntário em nenhuma largura de 320 px a 1920 px (inclusive larguras intermediárias).\u001b[39m\n\u001b[31m- Nenhum texto cortado: use quebra de linha, `min-width: 0` em itens flex/grid e `overflow-wrap: anywhere` em conteúdos longos (e-mails, URLs, códigos).\u001b[39m\n\u001b[31m- Nenhuma sobreposição indevida entre elementos, inclusive com o teclado virtual aberto.\u001b[39m\n\u001b[31m- Alvos de toque com no mínimo 44 × 44 px no celular e espaçamento de pelo menos 8 px entre alvos adjacentes.\u001b[39m\n\u001b[31m- Campos de formulário com fonte de pelo menos 16 px no celular (evita zoom automático no iOS).\u001b[39m\n\u001b[31m- Imagens e mídias responsivas (`max-width: 100%`, `aspect-ratio` definido) sem distorção.\u001b[39m\n\u001b[31m- Grids adaptáveis: reduza colunas progressivamente; nunca comprima cartões abaixo de uma largura legível.\u001b[39m\n\u001b[31m- Suporte a zoom de até 200% e a fonte ampliada do sistema sem perda de conteúdo ou funcionalidade.\u001b[39m\n\u001b[31m- Respeite as safe areas (`env(safe-area-inset-*)`) em barras fixas, docks e menus inferiores.\u001b[39m\n\u001b[31m- Funcione na orientação horizontal do celular: barras fixas não podem ocupar mais de 25% da altura.\u001b[39m\n\u001b[31m- Use `100dvh` (com fallback) em vez de `100vh` para alturas de tela cheia.\u001b[39m\n\u001b[31m- Menus acessíveis por mouse, toque e teclado (Tab, Enter, Espaço, Esc), com foco visível.\u001b[39m\n\u001b[31m- Respeite `prefers-reduced-motion` reduzindo animações.·\u001b[39m\n\u001b[31m**Regras por componente**\u001b[39m\n\u001b[31m- Headers: compacte a altura no celular e use a navegação móvel escolhida no layout mobile; o logo e a ação principal continuam visíveis.\u001b[39m\n\u001b[31m- Sidebars: no celular, siga exatamente a arquitetura mobile aprovada (não transforme em drawer por conta própria).\u001b[39m\n\u001b[31m- Dropdowns e popovers: reposicione automaticamente para não sair da viewport; no celular podem virar bottom sheet.\u001b[39m\n\u001b[31m- Tabelas: rolagem horizontal local dentro do próprio contêiner ou representação alternativa em cartões no celular; cabeçalho legível.\u001b[39m\n\u001b[31m- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).\u001b[39m\n\u001b[31m- Calendários: no celular, ofereça modo de lista/agenda quando a grade mensal ficar apertada.\u001b[39m\n\u001b[31m- Modais: altura máxima de 90dvh com rolagem interna; botões de ação sempre acessíveis; no celular podem ocupar a tela ou virar bottom sheet.\u001b[39m\n\u001b[31m- Gráficos: adapte eixos, quantidade de rótulos, legendas (abaixo do gráfico no celular) e dimensões; nunca corte valores.\u001b[39m\n\u001b[31m- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.\u001b[39m\n\u001b[31m- Cards: altura definida pelo conteúdo (sem alturas fixas que cortem texto); grade reduz colunas progressivamente.\u001b[39m\n\u001b[31m- Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco ao gatilho.·\u001b[39m\n\u001b[31m## G. Regras de implementação·\u001b[39m\n\u001b[31m- Não modifique escolhas aprovadas nesta especificação sem solicitação explícita do usuário.\u001b[39m\n\u001b[31m- Preserve a identidade global: todos os componentes usam os tokens definidos; exceções só onde estiverem listadas.\u001b[39m\n\u001b[31m- Não adicione decoração por conta própria (sombras, gradientes, vidro, animações, cantos arredondados) além do especificado.\u001b[39m\n\u001b[31m- Respeite a geometria escolhida: se a sidebar é integral, ela vai do topo à base; se é flutuante, tem afastamento das bordas. Não converta uma na outra.\u001b[39m\n\u001b[31m- Evite overflow e colisões; valide em todas as larguras de referência.\u001b[39m\n\u001b[31m- Mantenha consistência de espaçamentos (escala de 4 px), tipografia e estados de interação (hover, focus-visible, active, disabled, selected).\u001b[39m\n\u001b[31m- Implemente estados de carregamento, vazio e erro para listas, tabelas e formulários.\u001b[39m\n\u001b[31m- Use componentes reutilizáveis e tokens centralizados (variáveis CSS ou tema); nada de cores fixas espalhadas pelo código.\u001b[39m\n\u001b[31m- Garanta acessibilidade: HTML semântico, labels, contraste WCAG AA, navegação por teclado e leitores de tela.\u001b[39m\n\u001b[31m- Teste o resultado (visual e funcional) em celular, tablet e desktop antes de concluir.·\u001b[39m\n\u001b[31m## Decisões de prioridade·\u001b[39m\n\u001b[31mContradições ainda não decididas pelo usuário (pergunte antes de implementar):\u001b[39m\n\u001b[31m- Login escolhido, mas o fluxo de entrada não tem login — O fluxo “Aplicação diretamente” não prevê área restrita, mas há um modelo de login selecionado.·\u001b[39m\n\u001b[31m## Pendências·\u001b[39m\n\u001b[31mDecisões que o usuário ainda não tomou. Não invente: pergunte ou use a opção mais neutra.\u001b[39m\n\u001b[31m- Defina o tipo de projeto.\u001b[39m\n\u001b[31m- Dê um nome ao projeto.\u001b[39m\n\u001b[31m- Escolha a arquitetura do computador.\u001b[39m\n\u001b[31m- Escolha a arquitetura do celular.\u001b[39m\n\u001b[31m\"\u001b[39m",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/Login: nenhum/\u001b[39m\nReceived string:  \u001b[31m\"# Master Prompt — Projeto sem nome·\u001b[39m\n\u001b[31m> Especificação gerada pelo Atelier UI (Design System Studio) em 02/11/2026, 23:59:04.\u001b[39m\n\u001b[31m> Todas as decisões abaixo foram visualizadas e aprovadas pelo usuário. Implemente exatamente o que está descrito; quando algo não estiver especificado, escolha a opção mais simples e consistente com o restante, sem adicionar decoração.·\u001b[39m\n\u001b[31m## A. Informações do projeto·\u001b[39m\n\u001b[31m- Nome: Projeto sem nome\u001b[39m\n\u001b[31m- Tipo de aplicação: Não definido·\u001b[39m\n\u001b[31m## B. Arquitetura geral·\u001b[39m\n\u001b[31m- Fluxo de entrada: **Aplicação diretamente** — O sistema abre direto na tela principal, sem apresentação nem login.\u001b[39m\n\u001b[31m- Landing: nenhuma · Login: Clássico central · Cadastro: nenhum\u001b[39m\n\u001b[31m- Layout desktop: não definido · Layout mobile: não definido·\u001b[39m\n\u001b[31m### Login: Clássico central — Cartão central com a marca acima·\u001b[39m\n\u001b[31m`id: classico-central` · origem: módulo “login”·\u001b[39m\n\u001b[31mLogin centralizado: logotipo acima de um cartão de ≈400 px com e-mail, senha, “Lembrar de mim”, recuperação e botão em largura total.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Fundo em bgAlt de tela cheia; logotipo e nome da marca centralizados acima do cartão.\u001b[39m\n\u001b[31m- Cartão central com título, subtítulo, e-mail, senha, linha “Lembrar de mim” + “Esqueci minha senha” e botão “Entrar” em largura total.\u001b[39m\n\u001b[31m- Abaixo do cartão: “Não tem conta? Criar conta”.\u001b[39m\n\u001b[31m- Rodapé discreto com links de Termos e Privacidade.\u001b[39m\n\u001b[31m- Textos da demonstração: título “Entrar na sua conta”, subtítulo “Use seu e-mail e senha para continuar.”.·\u001b[39m\n\u001b[31m**Medidas recomendadas (adaptáveis)**\u001b[39m\n\u001b[31m- larguraFormulario: ≈360–400 px\u001b[39m\n\u001b[31m- alturaInputs: ≈44 px (desktop) / 48 px (celular)\u001b[39m\n\u001b[31m- larguraCartao: ≈400 px\u001b[39m\n\u001b[31m- paddingCartao: ≈32 px (desktop) / 20 px (celular)·\u001b[39m\n\u001b[31m**Comportamento e estados**\u001b[39m\n\u001b[31m- Labels visíveis associados aos campos (label for/id). E-mail com type=\\\"email\\\", inputMode=\\\"email\\\" e autoComplete=\\\"username\\\" (ou \\\"email\\\"); senha com autoComplete=\\\"current-password\\\".\u001b[39m\n\u001b[31m- Botão de mostrar/ocultar senha dentro do campo, com aria-label alternando “Mostrar senha”/“Ocultar senha” e aria-pressed.\u001b[39m\n\u001b[31m- Validação ao enviar e ao sair do campo: mensagem abaixo do campo (aria-invalid + aria-describedby) e resumo no topo do formulário com role=\\\"alert\\\".\u001b[39m\n\u001b[31m- Erro de credenciais genérico (“E-mail ou senha incorretos”), sem revelar qual dos dois está errado.\u001b[39m\n\u001b[31m- Link “Esqueci minha senha” perto do campo de senha, levando ao fluxo de recuperação por e-mail com mensagem neutra (“Se o e-mail existir, enviaremos um link”).\u001b[39m\n\u001b[31m- Botão principal com estado de carregamento (“Entrando…”) e desabilitado durante o envio para evitar duplo clique.·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- No celular o cartão perde borda e sombra e ocupa a largura total com 20 px de margem; a marca fica no topo.\u001b[39m\n\u001b[31m- Inputs com font-size ≥ 16 px e altura ≥ 48 px no celular (evita o zoom automático do iOS e facilita o toque).\u001b[39m\n\u001b[31m- Com o teclado virtual aberto, o campo focado e o botão “Entrar” continuam visíveis (use 100dvh, sem height: 100vh fixo, e scroll-padding).\u001b[39m\n\u001b[31m- Funciona a partir de 320 px de largura sem rolagem horizontal.\u001b[39m\n\u001b[31m- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).\u001b[39m\n\u001b[31m- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.·\u001b[39m\n\u001b[31m**Observações**\u001b[39m\n\u001b[31m- Esta tela é uma demonstração de interface. A autenticação real deve ser implementada pela IA com backend seguro: senhas com hash (Argon2id ou bcrypt), limitação de tentativas, sessão em cookie httpOnly + Secure + SameSite, proteção CSRF e HTTPS obrigatório.\u001b[39m\n\u001b[31m- Cores, fontes, cantos e superfícies vêm da identidade global do projeto (tokens).\u001b[39m\n\u001b[31m- A tela é uma demonstração de interface. Implemente a autenticação real com backend seguro (hash de senha, rate limit, tokens httpOnly, proteção CSRF).·\u001b[39m\n\u001b[31m## C. Navegação·\u001b[39m\n\u001b[31mNenhum modelo específico de header ou sidebar foi escolhido no Navigation Showcase. Use a estrutura do layout desktop/mobile com aparência derivada da identidade visual, sem decoração extra.·\u001b[39m\n\u001b[31m- Item ativo sempre destacado (cor de navegação ativa) e anunciado a leitores de tela (`aria-current=\\\"page\\\"`).\u001b[39m\n\u001b[31m- Dropdowns e submenus abrem por clique/toque e por teclado (Enter/Espaço), fecham com Esc e clique fora.\u001b[39m\n\u001b[31m- Drawers, bottom sheets e menus de tela cheia prendem o foco enquanto abertos e devolvem o foco ao botão que os abriu.·\u001b[39m\n\u001b[31m## D. Identidade visual·\u001b[39m\n\u001b[31mPaleta global: **Neutro Essencial**. Todos os componentes (botões, inputs, headers, sidebars, cards, tabelas, modais, menus, login, landing e templates) herdam estes tokens por padrão. Exceções só onde estiverem explicitamente listadas.·\u001b[39m\n\u001b[31m| Grupo | Token | Nome | Valor |\u001b[39m\n\u001b[31m| --- | --- | --- | --- |\u001b[39m\n\u001b[31m| Marca | Cor primária | `primary` | #18181b |\u001b[39m\n\u001b[31m| Marca | Primária — hover | `primaryHover` | #161618 |\u001b[39m\n\u001b[31m| Marca | Primária — active | `primaryActive` | #131316 |\u001b[39m\n\u001b[31m| Marca | Texto sobre primária | `onPrimary` | #ffffff |\u001b[39m\n\u001b[31m| Marca | Primária suave | `primarySoft` | #e3e3e4 |\u001b[39m\n\u001b[31m| Marca | Cor secundária | `secondary` | #52525b |\u001b[39m\n\u001b[31m| Marca | Texto sobre secundária | `onSecondary` | #ffffff |\u001b[39m\n\u001b[31m| Marca | Cor de destaque | `accent` | #2563eb |\u001b[39m\n\u001b[31m| Marca | Texto sobre destaque | `onAccent` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Fundo principal | `bg` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Fundo secundário | `bgAlt` | #f6f6f6 |\u001b[39m\n\u001b[31m| Fundos e superfícies | Superfície | `surface` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Superfície alternativa | `surfaceAlt` | #f5f5f5 |\u001b[39m\n\u001b[31m| Texto | Texto principal | `text` | #18181b |\u001b[39m\n\u001b[31m| Texto | Texto secundário | `textMuted` | #707072 |\u001b[39m\n\u001b[31m| Texto | Texto desabilitado | `textDisabled` | #a7a7a8 |\u001b[39m\n\u001b[31m| Texto | Placeholder | `placeholder` | #8c8c8d |\u001b[39m\n\u001b[31m| Bordas e foco | Borda | `border` | #e6e6e6 |\u001b[39m\n\u001b[31m| Bordas e foco | Borda forte | `borderStrong` | #c7c7c7 |\u001b[39m\n\u001b[31m| Bordas e foco | Borda de foco (focus-visible) | `focusRing` | #18181b |\u001b[39m\n\u001b[31m| Estados | Hover | `hover` | #f4f4f4 |\u001b[39m\n\u001b[31m| Estados | Active | `active` | #ebebeb |\u001b[39m\n\u001b[31m| Estados | Pressed | `pressed` | #e0e0e0 |\u001b[39m\n\u001b[31m| Estados | Selected — fundo | `selected` | #e3e3e4 |\u001b[39m\n\u001b[31m| Estados | Selected — texto | `selectedText` | #18181b |\u001b[39m\n\u001b[31m| Estados | Disabled — fundo | `disabled` | #f0f0f0 |\u001b[39m\n\u001b[31m| Estados | Disabled — texto | `disabledText` | #979798 |\u001b[39m\n\u001b[31m| Semânticos | Success | `success` | #117e39 |\u001b[39m\n\u001b[31m| Semânticos | Success — fundo | `successBg` | #e3f4e9 |\u001b[39m\n\u001b[31m| Semânticos | Warning | `warning` | #a85c04 |\u001b[39m\n\u001b[31m| Semânticos | Warning — fundo | `warningBg` | #faefe1 |\u001b[39m\n\u001b[31m| Semânticos | Error | `error` | #dc2626 |\u001b[39m\n\u001b[31m| Semânticos | Error — fundo | `errorBg` | #fbe5e5 |\u001b[39m\n\u001b[31m| Semânticos | Info | `info` | #2563eb |\u001b[39m\n\u001b[31m| Semânticos | Info — fundo | `infoBg` | #e5ecfd |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Link | `link` | #18181b |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Link — hover | `linkHover` | #141417 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Ícones | `icon` | #525254 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — fundo | `navBg` | #ffffff |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — texto | `navText` | #4b4b4d |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — item ativo | `navActive` | #e3e3e4 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — texto ativo | `navActiveText` | #18181b |\u001b[39m\n\u001b[31m| Gradiente | Gradiente — início | `gradientFrom` | #18181b |\u001b[39m\n\u001b[31m| Gradiente | Gradiente — fim | `gradientTo` | #3b73ed |·\u001b[39m\n\u001b[31m### Tipografia: Inter + Inter·\u001b[39m\n\u001b[31m`id: identity.typography` · origem: módulo “cores”·\u001b[39m\n\u001b[31mTítulos em Inter (peso 650) e textos em Inter (peso 400), tamanho base 15 px.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Escala sugerida: 13 / 15 / 18 / 23 / 30 / 39 px.\u001b[39m\n\u001b[31m- Altura de linha de 1.5 para textos e 1.2–1.3 para títulos.\u001b[39m\n\u001b[31m- Nunca use textos menores que 12 px; filtros e botões com pelo menos 14 px.·\u001b[39m\n\u001b[31m**Propriedades**\u001b[39m\n\u001b[31m- fonteTitulos: Inter\u001b[39m\n\u001b[31m- fonteTexto: Inter\u001b[39m\n\u001b[31m- tamanhoBase: 15\u001b[39m\n\u001b[31m- pesoTitulos: 650\u001b[39m\n\u001b[31m- pesoTexto: 400·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- Títulos grandes reduzem proporcionalmente no celular (use clamp()).\u001b[39m\n\u001b[31m- Inputs com 16 px no celular para evitar zoom automático.·\u001b[39m\n\u001b[31m### Geometria e superfícies: Médios (8 px) · Contornada (bordas finas)·\u001b[39m\n\u001b[31m`id: identity.geometry` · origem: módulo “cores”·\u001b[39m\n\u001b[31mCantos médios (8 px), bordas de 1 px, sombra sem sombra, superfícies contornada (bordas finas), densidade confortável.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Escala de espaçamento em múltiplos de 4 px: 4, 8, 12, 16, 20, 24, 32, 40.\u001b[39m\n\u001b[31m- Sem sombras em superfícies de conteúdo. Apenas elementos realmente flutuantes (modais, popovers, menus) podem ter elevação.\u001b[39m\n\u001b[31m- Ícones no estilo contorno (outline), tamanho consistente (16–20 px em interfaces).·\u001b[39m\n\u001b[31m**Propriedades**\u001b[39m\n\u001b[31m- raioPequeno: 6px\u001b[39m\n\u001b[31m- raioMedio: 8px\u001b[39m\n\u001b[31m- raioGrande: 12px\u001b[39m\n\u001b[31m- borda: 1px\u001b[39m\n\u001b[31m- sombra: none\u001b[39m\n\u001b[31m- superficie: outlined\u001b[39m\n\u001b[31m- densidade: comfortable\u001b[39m\n\u001b[31m- unidadeDeEspaco: 8px\u001b[39m\n\u001b[31m- ícones: outline·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- A geometria se mantém em todas as larguras; no celular aumente apenas as áreas de toque.·\u001b[39m\n\u001b[31m### Estados visuais\u001b[39m\n\u001b[31m- hover: fundo `hover` ou primária `primaryHover`; active/pressed: `active`/`pressed`/`primaryActive`.\u001b[39m\n\u001b[31m- focus-visible: anel de 2–3 px na cor `focusRing`, sempre visível ao navegar por teclado.\u001b[39m\n\u001b[31m- selected: fundo `selected` com texto `selectedText`; disabled: fundo `disabled`, texto `disabledText`, sem hover.\u001b[39m\n\u001b[31m- Mensagens: success/warning/error/info com os fundos semânticos correspondentes.·\u001b[39m\n\u001b[31m## E. Componentes·\u001b[39m\n\u001b[31mNenhum componente foi personalizado na biblioteca. Crie os componentes necessários usando os tokens e a geometria da seção D.·\u001b[39m\n\u001b[31m## F. Responsividade·\u001b[39m\n\u001b[31mValide pelo menos nas larguras: 320, 344, 360, 375, 390, 412, 430, 480, 600, 768, 820, 1024, 1280, 1440, 1920 px, além de larguras intermediárias.·\u001b[39m\n\u001b[31mBreakpoints de referência:\u001b[39m\n\u001b[31m- xs: Celulares pequenos (320–359 px)\u001b[39m\n\u001b[31m- sm: Celulares (360–599 px)\u001b[39m\n\u001b[31m- md: Tablets e celulares na horizontal (600–1023 px)\u001b[39m\n\u001b[31m- lg: Notebooks (1024–1439 px)\u001b[39m\n\u001b[31m- xl: Monitores grandes (1440 px ou mais)·\u001b[39m\n\u001b[31m**Regras gerais**\u001b[39m\n\u001b[31m- Nenhum overflow horizontal involuntário em nenhuma largura de 320 px a 1920 px (inclusive larguras intermediárias).\u001b[39m\n\u001b[31m- Nenhum texto cortado: use quebra de linha, `min-width: 0` em itens flex/grid e `overflow-wrap: anywhere` em conteúdos longos (e-mails, URLs, códigos).\u001b[39m\n\u001b[31m- Nenhuma sobreposição indevida entre elementos, inclusive com o teclado virtual aberto.\u001b[39m\n\u001b[31m- Alvos de toque com no mínimo 44 × 44 px no celular e espaçamento de pelo menos 8 px entre alvos adjacentes.\u001b[39m\n\u001b[31m- Campos de formulário com fonte de pelo menos 16 px no celular (evita zoom automático no iOS).\u001b[39m\n\u001b[31m- Imagens e mídias responsivas (`max-width: 100%`, `aspect-ratio` definido) sem distorção.\u001b[39m\n\u001b[31m- Grids adaptáveis: reduza colunas progressivamente; nunca comprima cartões abaixo de uma largura legível.\u001b[39m\n\u001b[31m- Suporte a zoom de até 200% e a fonte ampliada do sistema sem perda de conteúdo ou funcionalidade.\u001b[39m\n\u001b[31m- Respeite as safe areas (`env(safe-area-inset-*)`) em barras fixas, docks e menus inferiores.\u001b[39m\n\u001b[31m- Funcione na orientação horizontal do celular: barras fixas não podem ocupar mais de 25% da altura.\u001b[39m\n\u001b[31m- Use `100dvh` (com fallback) em vez de `100vh` para alturas de tela cheia.\u001b[39m\n\u001b[31m- Menus acessíveis por mouse, toque e teclado (Tab, Enter, Espaço, Esc), com foco visível.\u001b[39m\n\u001b[31m- Respeite `prefers-reduced-motion` reduzindo animações.·\u001b[39m\n\u001b[31m**Regras por componente**\u001b[39m\n\u001b[31m- Headers: compacte a altura no celular e use a navegação móvel escolhida no layout mobile; o logo e a ação principal continuam visíveis.\u001b[39m\n\u001b[31m- Sidebars: no celular, siga exatamente a arquitetura mobile aprovada (não transforme em drawer por conta própria).\u001b[39m\n\u001b[31m- Dropdowns e popovers: reposicione automaticamente para não sair da viewport; no celular podem virar bottom sheet.\u001b[39m\n\u001b[31m- Tabelas: rolagem horizontal local dentro do próprio contêiner ou representação alternativa em cartões no celular; cabeçalho legível.\u001b[39m\n\u001b[31m- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).\u001b[39m\n\u001b[31m- Calendários: no celular, ofereça modo de lista/agenda quando a grade mensal ficar apertada.\u001b[39m\n\u001b[31m- Modais: altura máxima de 90dvh com rolagem interna; botões de ação sempre acessíveis; no celular podem ocupar a tela ou virar bottom sheet.\u001b[39m\n\u001b[31m- Gráficos: adapte eixos, quantidade de rótulos, legendas (abaixo do gráfico no celular) e dimensões; nunca corte valores.\u001b[39m\n\u001b[31m- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.\u001b[39m\n\u001b[31m- Cards: altura definida pelo conteúdo (sem alturas fixas que cortem texto); grade reduz colunas progressivamente.\u001b[39m\n\u001b[31m- Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco ao gatilho.·\u001b[39m\n\u001b[31m## G. Regras de implementação·\u001b[39m\n\u001b[31m- Não modifique escolhas aprovadas nesta especificação sem solicitação explícita do usuário.\u001b[39m\n\u001b[31m- Preserve a identidade global: todos os componentes usam os tokens definidos; exceções só onde estiverem listadas.\u001b[39m\n\u001b[31m- Não adicione decoração por conta própria (sombras, gradientes, vidro, animações, cantos arredondados) além do especificado.\u001b[39m\n\u001b[31m- Respeite a geometria escolhida: se a sidebar é integral, ela vai do topo à base; se é flutuante, tem afastamento das bordas. Não converta uma na outra.\u001b[39m\n\u001b[31m- Evite overflow e colisões; valide em todas as larguras de referência.\u001b[39m\n\u001b[31m- Mantenha consistência de espaçamentos (escala de 4 px), tipografia e estados de interação (hover, focus-visible, active, disabled, selected).\u001b[39m\n\u001b[31m- Implemente estados de carregamento, vazio e erro para listas, tabelas e formulários.\u001b[39m\n\u001b[31m- Use componentes reutilizáveis e tokens centralizados (variáveis CSS ou tema); nada de cores fixas espalhadas pelo código.\u001b[39m\n\u001b[31m- Garanta acessibilidade: HTML semântico, labels, contraste WCAG AA, navegação por teclado e leitores de tela.\u001b[39m\n\u001b[31m- Teste o resultado (visual e funcional) em celular, tablet e desktop antes de concluir.·\u001b[39m\n\u001b[31m## Decisões de prioridade·\u001b[39m\n\u001b[31mContradições ainda não decididas pelo usuário (pergunte antes de implementar):\u001b[39m\n\u001b[31m- Login escolhido, mas o fluxo de entrada não tem login — O fluxo “Aplicação diretamente” não prevê área restrita, mas há um modelo de login selecionado.·\u001b[39m\n\u001b[31m## Pendências·\u001b[39m\n\u001b[31mDecisões que o usuário ainda não tomou. Não invente: pergunte ou use a opção mais neutra.\u001b[39m\n\u001b[31m- Defina o tipo de projeto.\u001b[39m\n\u001b[31m- Dê um nome ao projeto.\u001b[39m\n\u001b[31m- Escolha a arquitetura do computador.\u001b[39m\n\u001b[31m- Escolha a arquitetura do celular.\u001b[39m\n\u001b[31m\"\u001b[39m\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:1012:20",
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/Login: nenhum/\u001b[39m\nReceived string:  \u001b[31m\"# Master Prompt — Projeto sem nome·\u001b[39m\n\u001b[31m> Especificação gerada pelo Atelier UI (Design System Studio) em 03/11/2026, 00:04:25.\u001b[39m\n\u001b[31m> Todas as decisões abaixo foram visualizadas e aprovadas pelo usuário. Implemente exatamente o que está descrito; quando algo não estiver especificado, escolha a opção mais simples e consistente com o restante, sem adicionar decoração.·\u001b[39m\n\u001b[31m## A. Informações do projeto·\u001b[39m\n\u001b[31m- Nome: Projeto sem nome\u001b[39m\n\u001b[31m- Tipo de aplicação: Não definido·\u001b[39m\n\u001b[31m## B. Arquitetura geral·\u001b[39m\n\u001b[31m- Fluxo de entrada: **Aplicação diretamente** — O sistema abre direto na tela principal, sem apresentação nem login.\u001b[39m\n\u001b[31m- Landing: nenhuma · Login: Clássico central · Cadastro: nenhum\u001b[39m\n\u001b[31m- Layout desktop: não definido · Layout mobile: não definido·\u001b[39m\n\u001b[31m### Login: Clássico central — Cartão central com a marca acima·\u001b[39m\n\u001b[31m`id: classico-central` · origem: módulo “login”·\u001b[39m\n\u001b[31mLogin centralizado: logotipo acima de um cartão de ≈400 px com e-mail, senha, “Lembrar de mim”, recuperação e botão em largura total.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Fundo em bgAlt de tela cheia; logotipo e nome da marca centralizados acima do cartão.\u001b[39m\n\u001b[31m- Cartão central com título, subtítulo, e-mail, senha, linha “Lembrar de mim” + “Esqueci minha senha” e botão “Entrar” em largura total.\u001b[39m\n\u001b[31m- Abaixo do cartão: “Não tem conta? Criar conta”.\u001b[39m\n\u001b[31m- Rodapé discreto com links de Termos e Privacidade.\u001b[39m\n\u001b[31m- Textos da demonstração: título “Entrar na sua conta”, subtítulo “Use seu e-mail e senha para continuar.”.·\u001b[39m\n\u001b[31m**Medidas recomendadas (adaptáveis)**\u001b[39m\n\u001b[31m- larguraFormulario: ≈360–400 px\u001b[39m\n\u001b[31m- alturaInputs: ≈44 px (desktop) / 48 px (celular)\u001b[39m\n\u001b[31m- larguraCartao: ≈400 px\u001b[39m\n\u001b[31m- paddingCartao: ≈32 px (desktop) / 20 px (celular)·\u001b[39m\n\u001b[31m**Comportamento e estados**\u001b[39m\n\u001b[31m- Labels visíveis associados aos campos (label for/id). E-mail com type=\\\"email\\\", inputMode=\\\"email\\\" e autoComplete=\\\"username\\\" (ou \\\"email\\\"); senha com autoComplete=\\\"current-password\\\".\u001b[39m\n\u001b[31m- Botão de mostrar/ocultar senha dentro do campo, com aria-label alternando “Mostrar senha”/“Ocultar senha” e aria-pressed.\u001b[39m\n\u001b[31m- Validação ao enviar e ao sair do campo: mensagem abaixo do campo (aria-invalid + aria-describedby) e resumo no topo do formulário com role=\\\"alert\\\".\u001b[39m\n\u001b[31m- Erro de credenciais genérico (“E-mail ou senha incorretos”), sem revelar qual dos dois está errado.\u001b[39m\n\u001b[31m- Link “Esqueci minha senha” perto do campo de senha, levando ao fluxo de recuperação por e-mail com mensagem neutra (“Se o e-mail existir, enviaremos um link”).\u001b[39m\n\u001b[31m- Botão principal com estado de carregamento (“Entrando…”) e desabilitado durante o envio para evitar duplo clique.·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- No celular o cartão perde borda e sombra e ocupa a largura total com 20 px de margem; a marca fica no topo.\u001b[39m\n\u001b[31m- Inputs com font-size ≥ 16 px e altura ≥ 48 px no celular (evita o zoom automático do iOS e facilita o toque).\u001b[39m\n\u001b[31m- Com o teclado virtual aberto, o campo focado e o botão “Entrar” continuam visíveis (use 100dvh, sem height: 100vh fixo, e scroll-padding).\u001b[39m\n\u001b[31m- Funciona a partir de 320 px de largura sem rolagem horizontal.\u001b[39m\n\u001b[31m- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).\u001b[39m\n\u001b[31m- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.·\u001b[39m\n\u001b[31m**Observações**\u001b[39m\n\u001b[31m- Esta tela é uma demonstração de interface. A autenticação real deve ser implementada pela IA com backend seguro: senhas com hash (Argon2id ou bcrypt), limitação de tentativas, sessão em cookie httpOnly + Secure + SameSite, proteção CSRF e HTTPS obrigatório.\u001b[39m\n\u001b[31m- Cores, fontes, cantos e superfícies vêm da identidade global do projeto (tokens).\u001b[39m\n\u001b[31m- A tela é uma demonstração de interface. Implemente a autenticação real com backend seguro (hash de senha, rate limit, tokens httpOnly, proteção CSRF).·\u001b[39m\n\u001b[31m## C. Navegação·\u001b[39m\n\u001b[31mNenhum modelo específico de header ou sidebar foi escolhido no Navigation Showcase. Use a estrutura do layout desktop/mobile com aparência derivada da identidade visual, sem decoração extra.·\u001b[39m\n\u001b[31m- Item ativo sempre destacado (cor de navegação ativa) e anunciado a leitores de tela (`aria-current=\\\"page\\\"`).\u001b[39m\n\u001b[31m- Dropdowns e submenus abrem por clique/toque e por teclado (Enter/Espaço), fecham com Esc e clique fora.\u001b[39m\n\u001b[31m- Drawers, bottom sheets e menus de tela cheia prendem o foco enquanto abertos e devolvem o foco ao botão que os abriu.·\u001b[39m\n\u001b[31m## D. Identidade visual·\u001b[39m\n\u001b[31mPaleta global: **Neutro Essencial**. Todos os componentes (botões, inputs, headers, sidebars, cards, tabelas, modais, menus, login, landing e templates) herdam estes tokens por padrão. Exceções só onde estiverem explicitamente listadas.·\u001b[39m\n\u001b[31m| Grupo | Token | Nome | Valor |\u001b[39m\n\u001b[31m| --- | --- | --- | --- |\u001b[39m\n\u001b[31m| Marca | Cor primária | `primary` | #18181b |\u001b[39m\n\u001b[31m| Marca | Primária — hover | `primaryHover` | #161618 |\u001b[39m\n\u001b[31m| Marca | Primária — active | `primaryActive` | #131316 |\u001b[39m\n\u001b[31m| Marca | Texto sobre primária | `onPrimary` | #ffffff |\u001b[39m\n\u001b[31m| Marca | Primária suave | `primarySoft` | #e3e3e4 |\u001b[39m\n\u001b[31m| Marca | Cor secundária | `secondary` | #52525b |\u001b[39m\n\u001b[31m| Marca | Texto sobre secundária | `onSecondary` | #ffffff |\u001b[39m\n\u001b[31m| Marca | Cor de destaque | `accent` | #2563eb |\u001b[39m\n\u001b[31m| Marca | Texto sobre destaque | `onAccent` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Fundo principal | `bg` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Fundo secundário | `bgAlt` | #f6f6f6 |\u001b[39m\n\u001b[31m| Fundos e superfícies | Superfície | `surface` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Superfície alternativa | `surfaceAlt` | #f5f5f5 |\u001b[39m\n\u001b[31m| Texto | Texto principal | `text` | #18181b |\u001b[39m\n\u001b[31m| Texto | Texto secundário | `textMuted` | #707072 |\u001b[39m\n\u001b[31m| Texto | Texto desabilitado | `textDisabled` | #a7a7a8 |\u001b[39m\n\u001b[31m| Texto | Placeholder | `placeholder` | #8c8c8d |\u001b[39m\n\u001b[31m| Bordas e foco | Borda | `border` | #e6e6e6 |\u001b[39m\n\u001b[31m| Bordas e foco | Borda forte | `borderStrong` | #c7c7c7 |\u001b[39m\n\u001b[31m| Bordas e foco | Borda de foco (focus-visible) | `focusRing` | #18181b |\u001b[39m\n\u001b[31m| Estados | Hover | `hover` | #f4f4f4 |\u001b[39m\n\u001b[31m| Estados | Active | `active` | #ebebeb |\u001b[39m\n\u001b[31m| Estados | Pressed | `pressed` | #e0e0e0 |\u001b[39m\n\u001b[31m| Estados | Selected — fundo | `selected` | #e3e3e4 |\u001b[39m\n\u001b[31m| Estados | Selected — texto | `selectedText` | #18181b |\u001b[39m\n\u001b[31m| Estados | Disabled — fundo | `disabled` | #f0f0f0 |\u001b[39m\n\u001b[31m| Estados | Disabled — texto | `disabledText` | #979798 |\u001b[39m\n\u001b[31m| Semânticos | Success | `success` | #117e39 |\u001b[39m\n\u001b[31m| Semânticos | Success — fundo | `successBg` | #e3f4e9 |\u001b[39m\n\u001b[31m| Semânticos | Warning | `warning` | #a85c04 |\u001b[39m\n\u001b[31m| Semânticos | Warning — fundo | `warningBg` | #faefe1 |\u001b[39m\n\u001b[31m| Semânticos | Error | `error` | #dc2626 |\u001b[39m\n\u001b[31m| Semânticos | Error — fundo | `errorBg` | #fbe5e5 |\u001b[39m\n\u001b[31m| Semânticos | Info | `info` | #2563eb |\u001b[39m\n\u001b[31m| Semânticos | Info — fundo | `infoBg` | #e5ecfd |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Link | `link` | #18181b |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Link — hover | `linkHover` | #141417 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Ícones | `icon` | #525254 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — fundo | `navBg` | #ffffff |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — texto | `navText` | #4b4b4d |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — item ativo | `navActive` | #e3e3e4 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — texto ativo | `navActiveText` | #18181b |\u001b[39m\n\u001b[31m| Gradiente | Gradiente — início | `gradientFrom` | #18181b |\u001b[39m\n\u001b[31m| Gradiente | Gradiente — fim | `gradientTo` | #3b73ed |·\u001b[39m\n\u001b[31m### Tipografia: Inter + Inter·\u001b[39m\n\u001b[31m`id: identity.typography` · origem: módulo “cores”·\u001b[39m\n\u001b[31mTítulos em Inter (peso 650) e textos em Inter (peso 400), tamanho base 15 px.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Escala sugerida: 13 / 15 / 18 / 23 / 30 / 39 px.\u001b[39m\n\u001b[31m- Altura de linha de 1.5 para textos e 1.2–1.3 para títulos.\u001b[39m\n\u001b[31m- Nunca use textos menores que 12 px; filtros e botões com pelo menos 14 px.·\u001b[39m\n\u001b[31m**Propriedades**\u001b[39m\n\u001b[31m- fonteTitulos: Inter\u001b[39m\n\u001b[31m- fonteTexto: Inter\u001b[39m\n\u001b[31m- tamanhoBase: 15\u001b[39m\n\u001b[31m- pesoTitulos: 650\u001b[39m\n\u001b[31m- pesoTexto: 400·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- Títulos grandes reduzem proporcionalmente no celular (use clamp()).\u001b[39m\n\u001b[31m- Inputs com 16 px no celular para evitar zoom automático.·\u001b[39m\n\u001b[31m### Geometria e superfícies: Médios (8 px) · Contornada (bordas finas)·\u001b[39m\n\u001b[31m`id: identity.geometry` · origem: módulo “cores”·\u001b[39m\n\u001b[31mCantos médios (8 px), bordas de 1 px, sombra sem sombra, superfícies contornada (bordas finas), densidade confortável.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Escala de espaçamento em múltiplos de 4 px: 4, 8, 12, 16, 20, 24, 32, 40.\u001b[39m\n\u001b[31m- Sem sombras em superfícies de conteúdo. Apenas elementos realmente flutuantes (modais, popovers, menus) podem ter elevação.\u001b[39m\n\u001b[31m- Ícones no estilo contorno (outline), tamanho consistente (16–20 px em interfaces).·\u001b[39m\n\u001b[31m**Propriedades**\u001b[39m\n\u001b[31m- raioPequeno: 6px\u001b[39m\n\u001b[31m- raioMedio: 8px\u001b[39m\n\u001b[31m- raioGrande: 12px\u001b[39m\n\u001b[31m- borda: 1px\u001b[39m\n\u001b[31m- sombra: none\u001b[39m\n\u001b[31m- superficie: outlined\u001b[39m\n\u001b[31m- densidade: comfortable\u001b[39m\n\u001b[31m- unidadeDeEspaco: 8px\u001b[39m\n\u001b[31m- ícones: outline·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- A geometria se mantém em todas as larguras; no celular aumente apenas as áreas de toque.·\u001b[39m\n\u001b[31m### Estados visuais\u001b[39m\n\u001b[31m- hover: fundo `hover` ou primária `primaryHover`; active/pressed: `active`/`pressed`/`primaryActive`.\u001b[39m\n\u001b[31m- focus-visible: anel de 2–3 px na cor `focusRing`, sempre visível ao navegar por teclado.\u001b[39m\n\u001b[31m- selected: fundo `selected` com texto `selectedText`; disabled: fundo `disabled`, texto `disabledText`, sem hover.\u001b[39m\n\u001b[31m- Mensagens: success/warning/error/info com os fundos semânticos correspondentes.·\u001b[39m\n\u001b[31m## E. Componentes·\u001b[39m\n\u001b[31mNenhum componente foi personalizado na biblioteca. Crie os componentes necessários usando os tokens e a geometria da seção D.·\u001b[39m\n\u001b[31m## F. Responsividade·\u001b[39m\n\u001b[31mValide pelo menos nas larguras: 320, 344, 360, 375, 390, 412, 430, 480, 600, 768, 820, 1024, 1280, 1440, 1920 px, além de larguras intermediárias.·\u001b[39m\n\u001b[31mBreakpoints de referência:\u001b[39m\n\u001b[31m- xs: Celulares pequenos (320–359 px)\u001b[39m\n\u001b[31m- sm: Celulares (360–599 px)\u001b[39m\n\u001b[31m- md: Tablets e celulares na horizontal (600–1023 px)\u001b[39m\n\u001b[31m- lg: Notebooks (1024–1439 px)\u001b[39m\n\u001b[31m- xl: Monitores grandes (1440 px ou mais)·\u001b[39m\n\u001b[31m**Regras gerais**\u001b[39m\n\u001b[31m- Nenhum overflow horizontal involuntário em nenhuma largura de 320 px a 1920 px (inclusive larguras intermediárias).\u001b[39m\n\u001b[31m- Nenhum texto cortado: use quebra de linha, `min-width: 0` em itens flex/grid e `overflow-wrap: anywhere` em conteúdos longos (e-mails, URLs, códigos).\u001b[39m\n\u001b[31m- Nenhuma sobreposição indevida entre elementos, inclusive com o teclado virtual aberto.\u001b[39m\n\u001b[31m- Alvos de toque com no mínimo 44 × 44 px no celular e espaçamento de pelo menos 8 px entre alvos adjacentes.\u001b[39m\n\u001b[31m- Campos de formulário com fonte de pelo menos 16 px no celular (evita zoom automático no iOS).\u001b[39m\n\u001b[31m- Imagens e mídias responsivas (`max-width: 100%`, `aspect-ratio` definido) sem distorção.\u001b[39m\n\u001b[31m- Grids adaptáveis: reduza colunas progressivamente; nunca comprima cartões abaixo de uma largura legível.\u001b[39m\n\u001b[31m- Suporte a zoom de até 200% e a fonte ampliada do sistema sem perda de conteúdo ou funcionalidade.\u001b[39m\n\u001b[31m- Respeite as safe areas (`env(safe-area-inset-*)`) em barras fixas, docks e menus inferiores.\u001b[39m\n\u001b[31m- Funcione na orientação horizontal do celular: barras fixas não podem ocupar mais de 25% da altura.\u001b[39m\n\u001b[31m- Use `100dvh` (com fallback) em vez de `100vh` para alturas de tela cheia.\u001b[39m\n\u001b[31m- Menus acessíveis por mouse, toque e teclado (Tab, Enter, Espaço, Esc), com foco visível.\u001b[39m\n\u001b[31m- Respeite `prefers-reduced-motion` reduzindo animações.·\u001b[39m\n\u001b[31m**Regras por componente**\u001b[39m\n\u001b[31m- Headers: compacte a altura no celular e use a navegação móvel escolhida no layout mobile; o logo e a ação principal continuam visíveis.\u001b[39m\n\u001b[31m- Sidebars: no celular, siga exatamente a arquitetura mobile aprovada (não transforme em drawer por conta própria).\u001b[39m\n\u001b[31m- Dropdowns e popovers: reposicione automaticamente para não sair da viewport; no celular podem virar bottom sheet.\u001b[39m\n\u001b[31m- Tabelas: rolagem horizontal local dentro do próprio contêiner ou representação alternativa em cartões no celular; cabeçalho legível.\u001b[39m\n\u001b[31m- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).\u001b[39m\n\u001b[31m- Calendários: no celular, ofereça modo de lista/agenda quando a grade mensal ficar apertada.\u001b[39m\n\u001b[31m- Modais: altura máxima de 90dvh com rolagem interna; botões de ação sempre acessíveis; no celular podem ocupar a tela ou virar bottom sheet.\u001b[39m\n\u001b[31m- Gráficos: adapte eixos, quantidade de rótulos, legendas (abaixo do gráfico no celular) e dimensões; nunca corte valores.\u001b[39m\n\u001b[31m- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.\u001b[39m\n\u001b[31m- Cards: altura definida pelo conteúdo (sem alturas fixas que cortem texto); grade reduz colunas progressivamente.\u001b[39m\n\u001b[31m- Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco ao gatilho.·\u001b[39m\n\u001b[31m## G. Regras de implementação·\u001b[39m\n\u001b[31m- Não modifique escolhas aprovadas nesta especificação sem solicitação explícita do usuário.\u001b[39m\n\u001b[31m- Preserve a identidade global: todos os componentes usam os tokens definidos; exceções só onde estiverem listadas.\u001b[39m\n\u001b[31m- Não adicione decoração por conta própria (sombras, gradientes, vidro, animações, cantos arredondados) além do especificado.\u001b[39m\n\u001b[31m- Respeite a geometria escolhida: se a sidebar é integral, ela vai do topo à base; se é flutuante, tem afastamento das bordas. Não converta uma na outra.\u001b[39m\n\u001b[31m- Evite overflow e colisões; valide em todas as larguras de referência.\u001b[39m\n\u001b[31m- Mantenha consistência de espaçamentos (escala de 4 px), tipografia e estados de interação (hover, focus-visible, active, disabled, selected).\u001b[39m\n\u001b[31m- Implemente estados de carregamento, vazio e erro para listas, tabelas e formulários.\u001b[39m\n\u001b[31m- Use componentes reutilizáveis e tokens centralizados (variáveis CSS ou tema); nada de cores fixas espalhadas pelo código.\u001b[39m\n\u001b[31m- Garanta acessibilidade: HTML semântico, labels, contraste WCAG AA, navegação por teclado e leitores de tela.\u001b[39m\n\u001b[31m- Teste o resultado (visual e funcional) em celular, tablet e desktop antes de concluir.·\u001b[39m\n\u001b[31m## Decisões de prioridade·\u001b[39m\n\u001b[31mContradições ainda não decididas pelo usuário (pergunte antes de implementar):\u001b[39m\n\u001b[31m- Login escolhido, mas o fluxo de entrada não tem login — O fluxo “Aplicação diretamente” não prevê área restrita, mas há um modelo de login selecionado.·\u001b[39m\n\u001b[31m## Pendências·\u001b[39m\n\u001b[31mDecisões que o usuário ainda não tomou. Não invente: pergunte ou use a opção mais neutra.\u001b[39m\n\u001b[31m- Defina o tipo de projeto.\u001b[39m\n\u001b[31m- Dê um nome ao projeto.\u001b[39m\n\u001b[31m- Escolha a arquitetura do computador.\u001b[39m\n\u001b[31m- Escolha a arquitetura do celular.\u001b[39m\n\u001b[31m\"\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/Login: nenhum/\u001b[39m\nReceived string:  \u001b[31m\"# Master Prompt — Projeto sem nome·\u001b[39m\n\u001b[31m> Especificação gerada pelo Atelier UI (Design System Studio) em 03/11/2026, 00:04:25.\u001b[39m\n\u001b[31m> Todas as decisões abaixo foram visualizadas e aprovadas pelo usuário. Implemente exatamente o que está descrito; quando algo não estiver especificado, escolha a opção mais simples e consistente com o restante, sem adicionar decoração.·\u001b[39m\n\u001b[31m## A. Informações do projeto·\u001b[39m\n\u001b[31m- Nome: Projeto sem nome\u001b[39m\n\u001b[31m- Tipo de aplicação: Não definido·\u001b[39m\n\u001b[31m## B. Arquitetura geral·\u001b[39m\n\u001b[31m- Fluxo de entrada: **Aplicação diretamente** — O sistema abre direto na tela principal, sem apresentação nem login.\u001b[39m\n\u001b[31m- Landing: nenhuma · Login: Clássico central · Cadastro: nenhum\u001b[39m\n\u001b[31m- Layout desktop: não definido · Layout mobile: não definido·\u001b[39m\n\u001b[31m### Login: Clássico central — Cartão central com a marca acima·\u001b[39m\n\u001b[31m`id: classico-central` · origem: módulo “login”·\u001b[39m\n\u001b[31mLogin centralizado: logotipo acima de um cartão de ≈400 px com e-mail, senha, “Lembrar de mim”, recuperação e botão em largura total.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Fundo em bgAlt de tela cheia; logotipo e nome da marca centralizados acima do cartão.\u001b[39m\n\u001b[31m- Cartão central com título, subtítulo, e-mail, senha, linha “Lembrar de mim” + “Esqueci minha senha” e botão “Entrar” em largura total.\u001b[39m\n\u001b[31m- Abaixo do cartão: “Não tem conta? Criar conta”.\u001b[39m\n\u001b[31m- Rodapé discreto com links de Termos e Privacidade.\u001b[39m\n\u001b[31m- Textos da demonstração: título “Entrar na sua conta”, subtítulo “Use seu e-mail e senha para continuar.”.·\u001b[39m\n\u001b[31m**Medidas recomendadas (adaptáveis)**\u001b[39m\n\u001b[31m- larguraFormulario: ≈360–400 px\u001b[39m\n\u001b[31m- alturaInputs: ≈44 px (desktop) / 48 px (celular)\u001b[39m\n\u001b[31m- larguraCartao: ≈400 px\u001b[39m\n\u001b[31m- paddingCartao: ≈32 px (desktop) / 20 px (celular)·\u001b[39m\n\u001b[31m**Comportamento e estados**\u001b[39m\n\u001b[31m- Labels visíveis associados aos campos (label for/id). E-mail com type=\\\"email\\\", inputMode=\\\"email\\\" e autoComplete=\\\"username\\\" (ou \\\"email\\\"); senha com autoComplete=\\\"current-password\\\".\u001b[39m\n\u001b[31m- Botão de mostrar/ocultar senha dentro do campo, com aria-label alternando “Mostrar senha”/“Ocultar senha” e aria-pressed.\u001b[39m\n\u001b[31m- Validação ao enviar e ao sair do campo: mensagem abaixo do campo (aria-invalid + aria-describedby) e resumo no topo do formulário com role=\\\"alert\\\".\u001b[39m\n\u001b[31m- Erro de credenciais genérico (“E-mail ou senha incorretos”), sem revelar qual dos dois está errado.\u001b[39m\n\u001b[31m- Link “Esqueci minha senha” perto do campo de senha, levando ao fluxo de recuperação por e-mail com mensagem neutra (“Se o e-mail existir, enviaremos um link”).\u001b[39m\n\u001b[31m- Botão principal com estado de carregamento (“Entrando…”) e desabilitado durante o envio para evitar duplo clique.·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- No celular o cartão perde borda e sombra e ocupa a largura total com 20 px de margem; a marca fica no topo.\u001b[39m\n\u001b[31m- Inputs com font-size ≥ 16 px e altura ≥ 48 px no celular (evita o zoom automático do iOS e facilita o toque).\u001b[39m\n\u001b[31m- Com o teclado virtual aberto, o campo focado e o botão “Entrar” continuam visíveis (use 100dvh, sem height: 100vh fixo, e scroll-padding).\u001b[39m\n\u001b[31m- Funciona a partir de 320 px de largura sem rolagem horizontal.\u001b[39m\n\u001b[31m- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).\u001b[39m\n\u001b[31m- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.·\u001b[39m\n\u001b[31m**Observações**\u001b[39m\n\u001b[31m- Esta tela é uma demonstração de interface. A autenticação real deve ser implementada pela IA com backend seguro: senhas com hash (Argon2id ou bcrypt), limitação de tentativas, sessão em cookie httpOnly + Secure + SameSite, proteção CSRF e HTTPS obrigatório.\u001b[39m\n\u001b[31m- Cores, fontes, cantos e superfícies vêm da identidade global do projeto (tokens).\u001b[39m\n\u001b[31m- A tela é uma demonstração de interface. Implemente a autenticação real com backend seguro (hash de senha, rate limit, tokens httpOnly, proteção CSRF).·\u001b[39m\n\u001b[31m## C. Navegação·\u001b[39m\n\u001b[31mNenhum modelo específico de header ou sidebar foi escolhido no Navigation Showcase. Use a estrutura do layout desktop/mobile com aparência derivada da identidade visual, sem decoração extra.·\u001b[39m\n\u001b[31m- Item ativo sempre destacado (cor de navegação ativa) e anunciado a leitores de tela (`aria-current=\\\"page\\\"`).\u001b[39m\n\u001b[31m- Dropdowns e submenus abrem por clique/toque e por teclado (Enter/Espaço), fecham com Esc e clique fora.\u001b[39m\n\u001b[31m- Drawers, bottom sheets e menus de tela cheia prendem o foco enquanto abertos e devolvem o foco ao botão que os abriu.·\u001b[39m\n\u001b[31m## D. Identidade visual·\u001b[39m\n\u001b[31mPaleta global: **Neutro Essencial**. Todos os componentes (botões, inputs, headers, sidebars, cards, tabelas, modais, menus, login, landing e templates) herdam estes tokens por padrão. Exceções só onde estiverem explicitamente listadas.·\u001b[39m\n\u001b[31m| Grupo | Token | Nome | Valor |\u001b[39m\n\u001b[31m| --- | --- | --- | --- |\u001b[39m\n\u001b[31m| Marca | Cor primária | `primary` | #18181b |\u001b[39m\n\u001b[31m| Marca | Primária — hover | `primaryHover` | #161618 |\u001b[39m\n\u001b[31m| Marca | Primária — active | `primaryActive` | #131316 |\u001b[39m\n\u001b[31m| Marca | Texto sobre primária | `onPrimary` | #ffffff |\u001b[39m\n\u001b[31m| Marca | Primária suave | `primarySoft` | #e3e3e4 |\u001b[39m\n\u001b[31m| Marca | Cor secundária | `secondary` | #52525b |\u001b[39m\n\u001b[31m| Marca | Texto sobre secundária | `onSecondary` | #ffffff |\u001b[39m\n\u001b[31m| Marca | Cor de destaque | `accent` | #2563eb |\u001b[39m\n\u001b[31m| Marca | Texto sobre destaque | `onAccent` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Fundo principal | `bg` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Fundo secundário | `bgAlt` | #f6f6f6 |\u001b[39m\n\u001b[31m| Fundos e superfícies | Superfície | `surface` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Superfície alternativa | `surfaceAlt` | #f5f5f5 |\u001b[39m\n\u001b[31m| Texto | Texto principal | `text` | #18181b |\u001b[39m\n\u001b[31m| Texto | Texto secundário | `textMuted` | #707072 |\u001b[39m\n\u001b[31m| Texto | Texto desabilitado | `textDisabled` | #a7a7a8 |\u001b[39m\n\u001b[31m| Texto | Placeholder | `placeholder` | #8c8c8d |\u001b[39m\n\u001b[31m| Bordas e foco | Borda | `border` | #e6e6e6 |\u001b[39m\n\u001b[31m| Bordas e foco | Borda forte | `borderStrong` | #c7c7c7 |\u001b[39m\n\u001b[31m| Bordas e foco | Borda de foco (focus-visible) | `focusRing` | #18181b |\u001b[39m\n\u001b[31m| Estados | Hover | `hover` | #f4f4f4 |\u001b[39m\n\u001b[31m| Estados | Active | `active` | #ebebeb |\u001b[39m\n\u001b[31m| Estados | Pressed | `pressed` | #e0e0e0 |\u001b[39m\n\u001b[31m| Estados | Selected — fundo | `selected` | #e3e3e4 |\u001b[39m\n\u001b[31m| Estados | Selected — texto | `selectedText` | #18181b |\u001b[39m\n\u001b[31m| Estados | Disabled — fundo | `disabled` | #f0f0f0 |\u001b[39m\n\u001b[31m| Estados | Disabled — texto | `disabledText` | #979798 |\u001b[39m\n\u001b[31m| Semânticos | Success | `success` | #117e39 |\u001b[39m\n\u001b[31m| Semânticos | Success — fundo | `successBg` | #e3f4e9 |\u001b[39m\n\u001b[31m| Semânticos | Warning | `warning` | #a85c04 |\u001b[39m\n\u001b[31m| Semânticos | Warning — fundo | `warningBg` | #faefe1 |\u001b[39m\n\u001b[31m| Semânticos | Error | `error` | #dc2626 |\u001b[39m\n\u001b[31m| Semânticos | Error — fundo | `errorBg` | #fbe5e5 |\u001b[39m\n\u001b[31m| Semânticos | Info | `info` | #2563eb |\u001b[39m\n\u001b[31m| Semânticos | Info — fundo | `infoBg` | #e5ecfd |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Link | `link` | #18181b |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Link — hover | `linkHover` | #141417 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Ícones | `icon` | #525254 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — fundo | `navBg` | #ffffff |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — texto | `navText` | #4b4b4d |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — item ativo | `navActive` | #e3e3e4 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — texto ativo | `navActiveText` | #18181b |\u001b[39m\n\u001b[31m| Gradiente | Gradiente — início | `gradientFrom` | #18181b |\u001b[39m\n\u001b[31m| Gradiente | Gradiente — fim | `gradientTo` | #3b73ed |·\u001b[39m\n\u001b[31m### Tipografia: Inter + Inter·\u001b[39m\n\u001b[31m`id: identity.typography` · origem: módulo “cores”·\u001b[39m\n\u001b[31mTítulos em Inter (peso 650) e textos em Inter (peso 400), tamanho base 15 px.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Escala sugerida: 13 / 15 / 18 / 23 / 30 / 39 px.\u001b[39m\n\u001b[31m- Altura de linha de 1.5 para textos e 1.2–1.3 para títulos.\u001b[39m\n\u001b[31m- Nunca use textos menores que 12 px; filtros e botões com pelo menos 14 px.·\u001b[39m\n\u001b[31m**Propriedades**\u001b[39m\n\u001b[31m- fonteTitulos: Inter\u001b[39m\n\u001b[31m- fonteTexto: Inter\u001b[39m\n\u001b[31m- tamanhoBase: 15\u001b[39m\n\u001b[31m- pesoTitulos: 650\u001b[39m\n\u001b[31m- pesoTexto: 400·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- Títulos grandes reduzem proporcionalmente no celular (use clamp()).\u001b[39m\n\u001b[31m- Inputs com 16 px no celular para evitar zoom automático.·\u001b[39m\n\u001b[31m### Geometria e superfícies: Médios (8 px) · Contornada (bordas finas)·\u001b[39m\n\u001b[31m`id: identity.geometry` · origem: módulo “cores”·\u001b[39m\n\u001b[31mCantos médios (8 px), bordas de 1 px, sombra sem sombra, superfícies contornada (bordas finas), densidade confortável.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Escala de espaçamento em múltiplos de 4 px: 4, 8, 12, 16, 20, 24, 32, 40.\u001b[39m\n\u001b[31m- Sem sombras em superfícies de conteúdo. Apenas elementos realmente flutuantes (modais, popovers, menus) podem ter elevação.\u001b[39m\n\u001b[31m- Ícones no estilo contorno (outline), tamanho consistente (16–20 px em interfaces).·\u001b[39m\n\u001b[31m**Propriedades**\u001b[39m\n\u001b[31m- raioPequeno: 6px\u001b[39m\n\u001b[31m- raioMedio: 8px\u001b[39m\n\u001b[31m- raioGrande: 12px\u001b[39m\n\u001b[31m- borda: 1px\u001b[39m\n\u001b[31m- sombra: none\u001b[39m\n\u001b[31m- superficie: outlined\u001b[39m\n\u001b[31m- densidade: comfortable\u001b[39m\n\u001b[31m- unidadeDeEspaco: 8px\u001b[39m\n\u001b[31m- ícones: outline·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- A geometria se mantém em todas as larguras; no celular aumente apenas as áreas de toque.·\u001b[39m\n\u001b[31m### Estados visuais\u001b[39m\n\u001b[31m- hover: fundo `hover` ou primária `primaryHover`; active/pressed: `active`/`pressed`/`primaryActive`.\u001b[39m\n\u001b[31m- focus-visible: anel de 2–3 px na cor `focusRing`, sempre visível ao navegar por teclado.\u001b[39m\n\u001b[31m- selected: fundo `selected` com texto `selectedText`; disabled: fundo `disabled`, texto `disabledText`, sem hover.\u001b[39m\n\u001b[31m- Mensagens: success/warning/error/info com os fundos semânticos correspondentes.·\u001b[39m\n\u001b[31m## E. Componentes·\u001b[39m\n\u001b[31mNenhum componente foi personalizado na biblioteca. Crie os componentes necessários usando os tokens e a geometria da seção D.·\u001b[39m\n\u001b[31m## F. Responsividade·\u001b[39m\n\u001b[31mValide pelo menos nas larguras: 320, 344, 360, 375, 390, 412, 430, 480, 600, 768, 820, 1024, 1280, 1440, 1920 px, além de larguras intermediárias.·\u001b[39m\n\u001b[31mBreakpoints de referência:\u001b[39m\n\u001b[31m- xs: Celulares pequenos (320–359 px)\u001b[39m\n\u001b[31m- sm: Celulares (360–599 px)\u001b[39m\n\u001b[31m- md: Tablets e celulares na horizontal (600–1023 px)\u001b[39m\n\u001b[31m- lg: Notebooks (1024–1439 px)\u001b[39m\n\u001b[31m- xl: Monitores grandes (1440 px ou mais)·\u001b[39m\n\u001b[31m**Regras gerais**\u001b[39m\n\u001b[31m- Nenhum overflow horizontal involuntário em nenhuma largura de 320 px a 1920 px (inclusive larguras intermediárias).\u001b[39m\n\u001b[31m- Nenhum texto cortado: use quebra de linha, `min-width: 0` em itens flex/grid e `overflow-wrap: anywhere` em conteúdos longos (e-mails, URLs, códigos).\u001b[39m\n\u001b[31m- Nenhuma sobreposição indevida entre elementos, inclusive com o teclado virtual aberto.\u001b[39m\n\u001b[31m- Alvos de toque com no mínimo 44 × 44 px no celular e espaçamento de pelo menos 8 px entre alvos adjacentes.\u001b[39m\n\u001b[31m- Campos de formulário com fonte de pelo menos 16 px no celular (evita zoom automático no iOS).\u001b[39m\n\u001b[31m- Imagens e mídias responsivas (`max-width: 100%`, `aspect-ratio` definido) sem distorção.\u001b[39m\n\u001b[31m- Grids adaptáveis: reduza colunas progressivamente; nunca comprima cartões abaixo de uma largura legível.\u001b[39m\n\u001b[31m- Suporte a zoom de até 200% e a fonte ampliada do sistema sem perda de conteúdo ou funcionalidade.\u001b[39m\n\u001b[31m- Respeite as safe areas (`env(safe-area-inset-*)`) em barras fixas, docks e menus inferiores.\u001b[39m\n\u001b[31m- Funcione na orientação horizontal do celular: barras fixas não podem ocupar mais de 25% da altura.\u001b[39m\n\u001b[31m- Use `100dvh` (com fallback) em vez de `100vh` para alturas de tela cheia.\u001b[39m\n\u001b[31m- Menus acessíveis por mouse, toque e teclado (Tab, Enter, Espaço, Esc), com foco visível.\u001b[39m\n\u001b[31m- Respeite `prefers-reduced-motion` reduzindo animações.·\u001b[39m\n\u001b[31m**Regras por componente**\u001b[39m\n\u001b[31m- Headers: compacte a altura no celular e use a navegação móvel escolhida no layout mobile; o logo e a ação principal continuam visíveis.\u001b[39m\n\u001b[31m- Sidebars: no celular, siga exatamente a arquitetura mobile aprovada (não transforme em drawer por conta própria).\u001b[39m\n\u001b[31m- Dropdowns e popovers: reposicione automaticamente para não sair da viewport; no celular podem virar bottom sheet.\u001b[39m\n\u001b[31m- Tabelas: rolagem horizontal local dentro do próprio contêiner ou representação alternativa em cartões no celular; cabeçalho legível.\u001b[39m\n\u001b[31m- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).\u001b[39m\n\u001b[31m- Calendários: no celular, ofereça modo de lista/agenda quando a grade mensal ficar apertada.\u001b[39m\n\u001b[31m- Modais: altura máxima de 90dvh com rolagem interna; botões de ação sempre acessíveis; no celular podem ocupar a tela ou virar bottom sheet.\u001b[39m\n\u001b[31m- Gráficos: adapte eixos, quantidade de rótulos, legendas (abaixo do gráfico no celular) e dimensões; nunca corte valores.\u001b[39m\n\u001b[31m- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.\u001b[39m\n\u001b[31m- Cards: altura definida pelo conteúdo (sem alturas fixas que cortem texto); grade reduz colunas progressivamente.\u001b[39m\n\u001b[31m- Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco ao gatilho.·\u001b[39m\n\u001b[31m## G. Regras de implementação·\u001b[39m\n\u001b[31m- Não modifique escolhas aprovadas nesta especificação sem solicitação explícita do usuário.\u001b[39m\n\u001b[31m- Preserve a identidade global: todos os componentes usam os tokens definidos; exceções só onde estiverem listadas.\u001b[39m\n\u001b[31m- Não adicione decoração por conta própria (sombras, gradientes, vidro, animações, cantos arredondados) além do especificado.\u001b[39m\n\u001b[31m- Respeite a geometria escolhida: se a sidebar é integral, ela vai do topo à base; se é flutuante, tem afastamento das bordas. Não converta uma na outra.\u001b[39m\n\u001b[31m- Evite overflow e colisões; valide em todas as larguras de referência.\u001b[39m\n\u001b[31m- Mantenha consistência de espaçamentos (escala de 4 px), tipografia e estados de interação (hover, focus-visible, active, disabled, selected).\u001b[39m\n\u001b[31m- Implemente estados de carregamento, vazio e erro para listas, tabelas e formulários.\u001b[39m\n\u001b[31m- Use componentes reutilizáveis e tokens centralizados (variáveis CSS ou tema); nada de cores fixas espalhadas pelo código.\u001b[39m\n\u001b[31m- Garanta acessibilidade: HTML semântico, labels, contraste WCAG AA, navegação por teclado e leitores de tela.\u001b[39m\n\u001b[31m- Teste o resultado (visual e funcional) em celular, tablet e desktop antes de concluir.·\u001b[39m\n\u001b[31m## Decisões de prioridade·\u001b[39m\n\u001b[31mContradições ainda não decididas pelo usuário (pergunte antes de implementar):\u001b[39m\n\u001b[31m- Login escolhido, mas o fluxo de entrada não tem login — O fluxo “Aplicação diretamente” não prevê área restrita, mas há um modelo de login selecionado.·\u001b[39m\n\u001b[31m## Pendências·\u001b[39m\n\u001b[31mDecisões que o usuário ainda não tomou. Não invente: pergunte ou use a opção mais neutra.\u001b[39m\n\u001b[31m- Defina o tipo de projeto.\u001b[39m\n\u001b[31m- Dê um nome ao projeto.\u001b[39m\n\u001b[31m- Escolha a arquitetura do computador.\u001b[39m\n\u001b[31m- Escolha a arquitetura do celular.\u001b[39m\n\u001b[31m\"\u001b[39m\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:1012:20",
                         "location": {
                           "file": "/home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts",
                           "column": 20,
@@ -2797,13 +2797,13 @@
                             "column": 20,
                             "line": 1012
                           },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/Login: nenhum/\u001b[39m\nReceived string:  \u001b[31m\"# Master Prompt — Projeto sem nome·\u001b[39m\n\u001b[31m> Especificação gerada pelo Atelier UI (Design System Studio) em 02/11/2026, 23:59:04.\u001b[39m\n\u001b[31m> Todas as decisões abaixo foram visualizadas e aprovadas pelo usuário. Implemente exatamente o que está descrito; quando algo não estiver especificado, escolha a opção mais simples e consistente com o restante, sem adicionar decoração.·\u001b[39m\n\u001b[31m## A. Informações do projeto·\u001b[39m\n\u001b[31m- Nome: Projeto sem nome\u001b[39m\n\u001b[31m- Tipo de aplicação: Não definido·\u001b[39m\n\u001b[31m## B. Arquitetura geral·\u001b[39m\n\u001b[31m- Fluxo de entrada: **Aplicação diretamente** — O sistema abre direto na tela principal, sem apresentação nem login.\u001b[39m\n\u001b[31m- Landing: nenhuma · Login: Clássico central · Cadastro: nenhum\u001b[39m\n\u001b[31m- Layout desktop: não definido · Layout mobile: não definido·\u001b[39m\n\u001b[31m### Login: Clássico central — Cartão central com a marca acima·\u001b[39m\n\u001b[31m`id: classico-central` · origem: módulo “login”·\u001b[39m\n\u001b[31mLogin centralizado: logotipo acima de um cartão de ≈400 px com e-mail, senha, “Lembrar de mim”, recuperação e botão em largura total.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Fundo em bgAlt de tela cheia; logotipo e nome da marca centralizados acima do cartão.\u001b[39m\n\u001b[31m- Cartão central com título, subtítulo, e-mail, senha, linha “Lembrar de mim” + “Esqueci minha senha” e botão “Entrar” em largura total.\u001b[39m\n\u001b[31m- Abaixo do cartão: “Não tem conta? Criar conta”.\u001b[39m\n\u001b[31m- Rodapé discreto com links de Termos e Privacidade.\u001b[39m\n\u001b[31m- Textos da demonstração: título “Entrar na sua conta”, subtítulo “Use seu e-mail e senha para continuar.”.·\u001b[39m\n\u001b[31m**Medidas recomendadas (adaptáveis)**\u001b[39m\n\u001b[31m- larguraFormulario: ≈360–400 px\u001b[39m\n\u001b[31m- alturaInputs: ≈44 px (desktop) / 48 px (celular)\u001b[39m\n\u001b[31m- larguraCartao: ≈400 px\u001b[39m\n\u001b[31m- paddingCartao: ≈32 px (desktop) / 20 px (celular)·\u001b[39m\n\u001b[31m**Comportamento e estados**\u001b[39m\n\u001b[31m- Labels visíveis associados aos campos (label for/id). E-mail com type=\\\"email\\\", inputMode=\\\"email\\\" e autoComplete=\\\"username\\\" (ou \\\"email\\\"); senha com autoComplete=\\\"current-password\\\".\u001b[39m\n\u001b[31m- Botão de mostrar/ocultar senha dentro do campo, com aria-label alternando “Mostrar senha”/“Ocultar senha” e aria-pressed.\u001b[39m\n\u001b[31m- Validação ao enviar e ao sair do campo: mensagem abaixo do campo (aria-invalid + aria-describedby) e resumo no topo do formulário com role=\\\"alert\\\".\u001b[39m\n\u001b[31m- Erro de credenciais genérico (“E-mail ou senha incorretos”), sem revelar qual dos dois está errado.\u001b[39m\n\u001b[31m- Link “Esqueci minha senha” perto do campo de senha, levando ao fluxo de recuperação por e-mail com mensagem neutra (“Se o e-mail existir, enviaremos um link”).\u001b[39m\n\u001b[31m- Botão principal com estado de carregamento (“Entrando…”) e desabilitado durante o envio para evitar duplo clique.·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- No celular o cartão perde borda e sombra e ocupa a largura total com 20 px de margem; a marca fica no topo.\u001b[39m\n\u001b[31m- Inputs com font-size ≥ 16 px e altura ≥ 48 px no celular (evita o zoom automático do iOS e facilita o toque).\u001b[39m\n\u001b[31m- Com o teclado virtual aberto, o campo focado e o botão “Entrar” continuam visíveis (use 100dvh, sem height: 100vh fixo, e scroll-padding).\u001b[39m\n\u001b[31m- Funciona a partir de 320 px de largura sem rolagem horizontal.\u001b[39m\n\u001b[31m- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).\u001b[39m\n\u001b[31m- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.·\u001b[39m\n\u001b[31m**Observações**\u001b[39m\n\u001b[31m- Esta tela é uma demonstração de interface. A autenticação real deve ser implementada pela IA com backend seguro: senhas com hash (Argon2id ou bcrypt), limitação de tentativas, sessão em cookie httpOnly + Secure + SameSite, proteção CSRF e HTTPS obrigatório.\u001b[39m\n\u001b[31m- Cores, fontes, cantos e superfícies vêm da identidade global do projeto (tokens).\u001b[39m\n\u001b[31m- A tela é uma demonstração de interface. Implemente a autenticação real com backend seguro (hash de senha, rate limit, tokens httpOnly, proteção CSRF).·\u001b[39m\n\u001b[31m## C. Navegação·\u001b[39m\n\u001b[31mNenhum modelo específico de header ou sidebar foi escolhido no Navigation Showcase. Use a estrutura do layout desktop/mobile com aparência derivada da identidade visual, sem decoração extra.·\u001b[39m\n\u001b[31m- Item ativo sempre destacado (cor de navegação ativa) e anunciado a leitores de tela (`aria-current=\\\"page\\\"`).\u001b[39m\n\u001b[31m- Dropdowns e submenus abrem por clique/toque e por teclado (Enter/Espaço), fecham com Esc e clique fora.\u001b[39m\n\u001b[31m- Drawers, bottom sheets e menus de tela cheia prendem o foco enquanto abertos e devolvem o foco ao botão que os abriu.·\u001b[39m\n\u001b[31m## D. Identidade visual·\u001b[39m\n\u001b[31mPaleta global: **Neutro Essencial**. Todos os componentes (botões, inputs, headers, sidebars, cards, tabelas, modais, menus, login, landing e templates) herdam estes tokens por padrão. Exceções só onde estiverem explicitamente listadas.·\u001b[39m\n\u001b[31m| Grupo | Token | Nome | Valor |\u001b[39m\n\u001b[31m| --- | --- | --- | --- |\u001b[39m\n\u001b[31m| Marca | Cor primária | `primary` | #18181b |\u001b[39m\n\u001b[31m| Marca | Primária — hover | `primaryHover` | #161618 |\u001b[39m\n\u001b[31m| Marca | Primária — active | `primaryActive` | #131316 |\u001b[39m\n\u001b[31m| Marca | Texto sobre primária | `onPrimary` | #ffffff |\u001b[39m\n\u001b[31m| Marca | Primária suave | `primarySoft` | #e3e3e4 |\u001b[39m\n\u001b[31m| Marca | Cor secundária | `secondary` | #52525b |\u001b[39m\n\u001b[31m| Marca | Texto sobre secundária | `onSecondary` | #ffffff |\u001b[39m\n\u001b[31m| Marca | Cor de destaque | `accent` | #2563eb |\u001b[39m\n\u001b[31m| Marca | Texto sobre destaque | `onAccent` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Fundo principal | `bg` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Fundo secundário | `bgAlt` | #f6f6f6 |\u001b[39m\n\u001b[31m| Fundos e superfícies | Superfície | `surface` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Superfície alternativa | `surfaceAlt` | #f5f5f5 |\u001b[39m\n\u001b[31m| Texto | Texto principal | `text` | #18181b |\u001b[39m\n\u001b[31m| Texto | Texto secundário | `textMuted` | #707072 |\u001b[39m\n\u001b[31m| Texto | Texto desabilitado | `textDisabled` | #a7a7a8 |\u001b[39m\n\u001b[31m| Texto | Placeholder | `placeholder` | #8c8c8d |\u001b[39m\n\u001b[31m| Bordas e foco | Borda | `border` | #e6e6e6 |\u001b[39m\n\u001b[31m| Bordas e foco | Borda forte | `borderStrong` | #c7c7c7 |\u001b[39m\n\u001b[31m| Bordas e foco | Borda de foco (focus-visible) | `focusRing` | #18181b |\u001b[39m\n\u001b[31m| Estados | Hover | `hover` | #f4f4f4 |\u001b[39m\n\u001b[31m| Estados | Active | `active` | #ebebeb |\u001b[39m\n\u001b[31m| Estados | Pressed | `pressed` | #e0e0e0 |\u001b[39m\n\u001b[31m| Estados | Selected — fundo | `selected` | #e3e3e4 |\u001b[39m\n\u001b[31m| Estados | Selected — texto | `selectedText` | #18181b |\u001b[39m\n\u001b[31m| Estados | Disabled — fundo | `disabled` | #f0f0f0 |\u001b[39m\n\u001b[31m| Estados | Disabled — texto | `disabledText` | #979798 |\u001b[39m\n\u001b[31m| Semânticos | Success | `success` | #117e39 |\u001b[39m\n\u001b[31m| Semânticos | Success — fundo | `successBg` | #e3f4e9 |\u001b[39m\n\u001b[31m| Semânticos | Warning | `warning` | #a85c04 |\u001b[39m\n\u001b[31m| Semânticos | Warning — fundo | `warningBg` | #faefe1 |\u001b[39m\n\u001b[31m| Semânticos | Error | `error` | #dc2626 |\u001b[39m\n\u001b[31m| Semânticos | Error — fundo | `errorBg` | #fbe5e5 |\u001b[39m\n\u001b[31m| Semânticos | Info | `info` | #2563eb |\u001b[39m\n\u001b[31m| Semânticos | Info — fundo | `infoBg` | #e5ecfd |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Link | `link` | #18181b |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Link — hover | `linkHover` | #141417 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Ícones | `icon` | #525254 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — fundo | `navBg` | #ffffff |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — texto | `navText` | #4b4b4d |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — item ativo | `navActive` | #e3e3e4 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — texto ativo | `navActiveText` | #18181b |\u001b[39m\n\u001b[31m| Gradiente | Gradiente — início | `gradientFrom` | #18181b |\u001b[39m\n\u001b[31m| Gradiente | Gradiente — fim | `gradientTo` | #3b73ed |·\u001b[39m\n\u001b[31m### Tipografia: Inter + Inter·\u001b[39m\n\u001b[31m`id: identity.typography` · origem: módulo “cores”·\u001b[39m\n\u001b[31mTítulos em Inter (peso 650) e textos em Inter (peso 400), tamanho base 15 px.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Escala sugerida: 13 / 15 / 18 / 23 / 30 / 39 px.\u001b[39m\n\u001b[31m- Altura de linha de 1.5 para textos e 1.2–1.3 para títulos.\u001b[39m\n\u001b[31m- Nunca use textos menores que 12 px; filtros e botões com pelo menos 14 px.·\u001b[39m\n\u001b[31m**Propriedades**\u001b[39m\n\u001b[31m- fonteTitulos: Inter\u001b[39m\n\u001b[31m- fonteTexto: Inter\u001b[39m\n\u001b[31m- tamanhoBase: 15\u001b[39m\n\u001b[31m- pesoTitulos: 650\u001b[39m\n\u001b[31m- pesoTexto: 400·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- Títulos grandes reduzem proporcionalmente no celular (use clamp()).\u001b[39m\n\u001b[31m- Inputs com 16 px no celular para evitar zoom automático.·\u001b[39m\n\u001b[31m### Geometria e superfícies: Médios (8 px) · Contornada (bordas finas)·\u001b[39m\n\u001b[31m`id: identity.geometry` · origem: módulo “cores”·\u001b[39m\n\u001b[31mCantos médios (8 px), bordas de 1 px, sombra sem sombra, superfícies contornada (bordas finas), densidade confortável.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Escala de espaçamento em múltiplos de 4 px: 4, 8, 12, 16, 20, 24, 32, 40.\u001b[39m\n\u001b[31m- Sem sombras em superfícies de conteúdo. Apenas elementos realmente flutuantes (modais, popovers, menus) podem ter elevação.\u001b[39m\n\u001b[31m- Ícones no estilo contorno (outline), tamanho consistente (16–20 px em interfaces).·\u001b[39m\n\u001b[31m**Propriedades**\u001b[39m\n\u001b[31m- raioPequeno: 6px\u001b[39m\n\u001b[31m- raioMedio: 8px\u001b[39m\n\u001b[31m- raioGrande: 12px\u001b[39m\n\u001b[31m- borda: 1px\u001b[39m\n\u001b[31m- sombra: none\u001b[39m\n\u001b[31m- superficie: outlined\u001b[39m\n\u001b[31m- densidade: comfortable\u001b[39m\n\u001b[31m- unidadeDeEspaco: 8px\u001b[39m\n\u001b[31m- ícones: outline·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- A geometria se mantém em todas as larguras; no celular aumente apenas as áreas de toque.·\u001b[39m\n\u001b[31m### Estados visuais\u001b[39m\n\u001b[31m- hover: fundo `hover` ou primária `primaryHover`; active/pressed: `active`/`pressed`/`primaryActive`.\u001b[39m\n\u001b[31m- focus-visible: anel de 2–3 px na cor `focusRing`, sempre visível ao navegar por teclado.\u001b[39m\n\u001b[31m- selected: fundo `selected` com texto `selectedText`; disabled: fundo `disabled`, texto `disabledText`, sem hover.\u001b[39m\n\u001b[31m- Mensagens: success/warning/error/info com os fundos semânticos correspondentes.·\u001b[39m\n\u001b[31m## E. Componentes·\u001b[39m\n\u001b[31mNenhum componente foi personalizado na biblioteca. Crie os componentes necessários usando os tokens e a geometria da seção D.·\u001b[39m\n\u001b[31m## F. Responsividade·\u001b[39m\n\u001b[31mValide pelo menos nas larguras: 320, 344, 360, 375, 390, 412, 430, 480, 600, 768, 820, 1024, 1280, 1440, 1920 px, além de larguras intermediárias.·\u001b[39m\n\u001b[31mBreakpoints de referência:\u001b[39m\n\u001b[31m- xs: Celulares pequenos (320–359 px)\u001b[39m\n\u001b[31m- sm: Celulares (360–599 px)\u001b[39m\n\u001b[31m- md: Tablets e celulares na horizontal (600–1023 px)\u001b[39m\n\u001b[31m- lg: Notebooks (1024–1439 px)\u001b[39m\n\u001b[31m- xl: Monitores grandes (1440 px ou mais)·\u001b[39m\n\u001b[31m**Regras gerais**\u001b[39m\n\u001b[31m- Nenhum overflow horizontal involuntário em nenhuma largura de 320 px a 1920 px (inclusive larguras intermediárias).\u001b[39m\n\u001b[31m- Nenhum texto cortado: use quebra de linha, `min-width: 0` em itens flex/grid e `overflow-wrap: anywhere` em conteúdos longos (e-mails, URLs, códigos).\u001b[39m\n\u001b[31m- Nenhuma sobreposição indevida entre elementos, inclusive com o teclado virtual aberto.\u001b[39m\n\u001b[31m- Alvos de toque com no mínimo 44 × 44 px no celular e espaçamento de pelo menos 8 px entre alvos adjacentes.\u001b[39m\n\u001b[31m- Campos de formulário com fonte de pelo menos 16 px no celular (evita zoom automático no iOS).\u001b[39m\n\u001b[31m- Imagens e mídias responsivas (`max-width: 100%`, `aspect-ratio` definido) sem distorção.\u001b[39m\n\u001b[31m- Grids adaptáveis: reduza colunas progressivamente; nunca comprima cartões abaixo de uma largura legível.\u001b[39m\n\u001b[31m- Suporte a zoom de até 200% e a fonte ampliada do sistema sem perda de conteúdo ou funcionalidade.\u001b[39m\n\u001b[31m- Respeite as safe areas (`env(safe-area-inset-*)`) em barras fixas, docks e menus inferiores.\u001b[39m\n\u001b[31m- Funcione na orientação horizontal do celular: barras fixas não podem ocupar mais de 25% da altura.\u001b[39m\n\u001b[31m- Use `100dvh` (com fallback) em vez de `100vh` para alturas de tela cheia.\u001b[39m\n\u001b[31m- Menus acessíveis por mouse, toque e teclado (Tab, Enter, Espaço, Esc), com foco visível.\u001b[39m\n\u001b[31m- Respeite `prefers-reduced-motion` reduzindo animações.·\u001b[39m\n\u001b[31m**Regras por componente**\u001b[39m\n\u001b[31m- Headers: compacte a altura no celular e use a navegação móvel escolhida no layout mobile; o logo e a ação principal continuam visíveis.\u001b[39m\n\u001b[31m- Sidebars: no celular, siga exatamente a arquitetura mobile aprovada (não transforme em drawer por conta própria).\u001b[39m\n\u001b[31m- Dropdowns e popovers: reposicione automaticamente para não sair da viewport; no celular podem virar bottom sheet.\u001b[39m\n\u001b[31m- Tabelas: rolagem horizontal local dentro do próprio contêiner ou representação alternativa em cartões no celular; cabeçalho legível.\u001b[39m\n\u001b[31m- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).\u001b[39m\n\u001b[31m- Calendários: no celular, ofereça modo de lista/agenda quando a grade mensal ficar apertada.\u001b[39m\n\u001b[31m- Modais: altura máxima de 90dvh com rolagem interna; botões de ação sempre acessíveis; no celular podem ocupar a tela ou virar bottom sheet.\u001b[39m\n\u001b[31m- Gráficos: adapte eixos, quantidade de rótulos, legendas (abaixo do gráfico no celular) e dimensões; nunca corte valores.\u001b[39m\n\u001b[31m- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.\u001b[39m\n\u001b[31m- Cards: altura definida pelo conteúdo (sem alturas fixas que cortem texto); grade reduz colunas progressivamente.\u001b[39m\n\u001b[31m- Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco ao gatilho.·\u001b[39m\n\u001b[31m## G. Regras de implementação·\u001b[39m\n\u001b[31m- Não modifique escolhas aprovadas nesta especificação sem solicitação explícita do usuário.\u001b[39m\n\u001b[31m- Preserve a identidade global: todos os componentes usam os tokens definidos; exceções só onde estiverem listadas.\u001b[39m\n\u001b[31m- Não adicione decoração por conta própria (sombras, gradientes, vidro, animações, cantos arredondados) além do especificado.\u001b[39m\n\u001b[31m- Respeite a geometria escolhida: se a sidebar é integral, ela vai do topo à base; se é flutuante, tem afastamento das bordas. Não converta uma na outra.\u001b[39m\n\u001b[31m- Evite overflow e colisões; valide em todas as larguras de referência.\u001b[39m\n\u001b[31m- Mantenha consistência de espaçamentos (escala de 4 px), tipografia e estados de interação (hover, focus-visible, active, disabled, selected).\u001b[39m\n\u001b[31m- Implemente estados de carregamento, vazio e erro para listas, tabelas e formulários.\u001b[39m\n\u001b[31m- Use componentes reutilizáveis e tokens centralizados (variáveis CSS ou tema); nada de cores fixas espalhadas pelo código.\u001b[39m\n\u001b[31m- Garanta acessibilidade: HTML semântico, labels, contraste WCAG AA, navegação por teclado e leitores de tela.\u001b[39m\n\u001b[31m- Teste o resultado (visual e funcional) em celular, tablet e desktop antes de concluir.·\u001b[39m\n\u001b[31m## Decisões de prioridade·\u001b[39m\n\u001b[31mContradições ainda não decididas pelo usuário (pergunte antes de implementar):\u001b[39m\n\u001b[31m- Login escolhido, mas o fluxo de entrada não tem login — O fluxo “Aplicação diretamente” não prevê área restrita, mas há um modelo de login selecionado.·\u001b[39m\n\u001b[31m## Pendências·\u001b[39m\n\u001b[31mDecisões que o usuário ainda não tomou. Não invente: pergunte ou use a opção mais neutra.\u001b[39m\n\u001b[31m- Defina o tipo de projeto.\u001b[39m\n\u001b[31m- Dê um nome ao projeto.\u001b[39m\n\u001b[31m- Escolha a arquitetura do computador.\u001b[39m\n\u001b[31m- Escolha a arquitetura do celular.\u001b[39m\n\u001b[31m\"\u001b[39m\n\n  1010 |     const prompt = await masterPrompt(page)\n  1011 |     expect(prompt).toContain('Aplicação diretamente')\n> 1012 |     expect(prompt).toMatch(/Login: nenhum/)\n       |                    ^\n  1013 |     await go(page, '/modulos/preview')\n  1014 |     await expect(page.getByRole('group', { name: 'Página da prévia' }).getByRole('button', { name: 'Login' })).toHaveCount(0)\n  1015 |   })\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:1012:20"
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatch\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected pattern: \u001b[32m/Login: nenhum/\u001b[39m\nReceived string:  \u001b[31m\"# Master Prompt — Projeto sem nome·\u001b[39m\n\u001b[31m> Especificação gerada pelo Atelier UI (Design System Studio) em 03/11/2026, 00:04:25.\u001b[39m\n\u001b[31m> Todas as decisões abaixo foram visualizadas e aprovadas pelo usuário. Implemente exatamente o que está descrito; quando algo não estiver especificado, escolha a opção mais simples e consistente com o restante, sem adicionar decoração.·\u001b[39m\n\u001b[31m## A. Informações do projeto·\u001b[39m\n\u001b[31m- Nome: Projeto sem nome\u001b[39m\n\u001b[31m- Tipo de aplicação: Não definido·\u001b[39m\n\u001b[31m## B. Arquitetura geral·\u001b[39m\n\u001b[31m- Fluxo de entrada: **Aplicação diretamente** — O sistema abre direto na tela principal, sem apresentação nem login.\u001b[39m\n\u001b[31m- Landing: nenhuma · Login: Clássico central · Cadastro: nenhum\u001b[39m\n\u001b[31m- Layout desktop: não definido · Layout mobile: não definido·\u001b[39m\n\u001b[31m### Login: Clássico central — Cartão central com a marca acima·\u001b[39m\n\u001b[31m`id: classico-central` · origem: módulo “login”·\u001b[39m\n\u001b[31mLogin centralizado: logotipo acima de um cartão de ≈400 px com e-mail, senha, “Lembrar de mim”, recuperação e botão em largura total.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Fundo em bgAlt de tela cheia; logotipo e nome da marca centralizados acima do cartão.\u001b[39m\n\u001b[31m- Cartão central com título, subtítulo, e-mail, senha, linha “Lembrar de mim” + “Esqueci minha senha” e botão “Entrar” em largura total.\u001b[39m\n\u001b[31m- Abaixo do cartão: “Não tem conta? Criar conta”.\u001b[39m\n\u001b[31m- Rodapé discreto com links de Termos e Privacidade.\u001b[39m\n\u001b[31m- Textos da demonstração: título “Entrar na sua conta”, subtítulo “Use seu e-mail e senha para continuar.”.·\u001b[39m\n\u001b[31m**Medidas recomendadas (adaptáveis)**\u001b[39m\n\u001b[31m- larguraFormulario: ≈360–400 px\u001b[39m\n\u001b[31m- alturaInputs: ≈44 px (desktop) / 48 px (celular)\u001b[39m\n\u001b[31m- larguraCartao: ≈400 px\u001b[39m\n\u001b[31m- paddingCartao: ≈32 px (desktop) / 20 px (celular)·\u001b[39m\n\u001b[31m**Comportamento e estados**\u001b[39m\n\u001b[31m- Labels visíveis associados aos campos (label for/id). E-mail com type=\\\"email\\\", inputMode=\\\"email\\\" e autoComplete=\\\"username\\\" (ou \\\"email\\\"); senha com autoComplete=\\\"current-password\\\".\u001b[39m\n\u001b[31m- Botão de mostrar/ocultar senha dentro do campo, com aria-label alternando “Mostrar senha”/“Ocultar senha” e aria-pressed.\u001b[39m\n\u001b[31m- Validação ao enviar e ao sair do campo: mensagem abaixo do campo (aria-invalid + aria-describedby) e resumo no topo do formulário com role=\\\"alert\\\".\u001b[39m\n\u001b[31m- Erro de credenciais genérico (“E-mail ou senha incorretos”), sem revelar qual dos dois está errado.\u001b[39m\n\u001b[31m- Link “Esqueci minha senha” perto do campo de senha, levando ao fluxo de recuperação por e-mail com mensagem neutra (“Se o e-mail existir, enviaremos um link”).\u001b[39m\n\u001b[31m- Botão principal com estado de carregamento (“Entrando…”) e desabilitado durante o envio para evitar duplo clique.·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- No celular o cartão perde borda e sombra e ocupa a largura total com 20 px de margem; a marca fica no topo.\u001b[39m\n\u001b[31m- Inputs com font-size ≥ 16 px e altura ≥ 48 px no celular (evita o zoom automático do iOS e facilita o toque).\u001b[39m\n\u001b[31m- Com o teclado virtual aberto, o campo focado e o botão “Entrar” continuam visíveis (use 100dvh, sem height: 100vh fixo, e scroll-padding).\u001b[39m\n\u001b[31m- Funciona a partir de 320 px de largura sem rolagem horizontal.\u001b[39m\n\u001b[31m- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).\u001b[39m\n\u001b[31m- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.·\u001b[39m\n\u001b[31m**Observações**\u001b[39m\n\u001b[31m- Esta tela é uma demonstração de interface. A autenticação real deve ser implementada pela IA com backend seguro: senhas com hash (Argon2id ou bcrypt), limitação de tentativas, sessão em cookie httpOnly + Secure + SameSite, proteção CSRF e HTTPS obrigatório.\u001b[39m\n\u001b[31m- Cores, fontes, cantos e superfícies vêm da identidade global do projeto (tokens).\u001b[39m\n\u001b[31m- A tela é uma demonstração de interface. Implemente a autenticação real com backend seguro (hash de senha, rate limit, tokens httpOnly, proteção CSRF).·\u001b[39m\n\u001b[31m## C. Navegação·\u001b[39m\n\u001b[31mNenhum modelo específico de header ou sidebar foi escolhido no Navigation Showcase. Use a estrutura do layout desktop/mobile com aparência derivada da identidade visual, sem decoração extra.·\u001b[39m\n\u001b[31m- Item ativo sempre destacado (cor de navegação ativa) e anunciado a leitores de tela (`aria-current=\\\"page\\\"`).\u001b[39m\n\u001b[31m- Dropdowns e submenus abrem por clique/toque e por teclado (Enter/Espaço), fecham com Esc e clique fora.\u001b[39m\n\u001b[31m- Drawers, bottom sheets e menus de tela cheia prendem o foco enquanto abertos e devolvem o foco ao botão que os abriu.·\u001b[39m\n\u001b[31m## D. Identidade visual·\u001b[39m\n\u001b[31mPaleta global: **Neutro Essencial**. Todos os componentes (botões, inputs, headers, sidebars, cards, tabelas, modais, menus, login, landing e templates) herdam estes tokens por padrão. Exceções só onde estiverem explicitamente listadas.·\u001b[39m\n\u001b[31m| Grupo | Token | Nome | Valor |\u001b[39m\n\u001b[31m| --- | --- | --- | --- |\u001b[39m\n\u001b[31m| Marca | Cor primária | `primary` | #18181b |\u001b[39m\n\u001b[31m| Marca | Primária — hover | `primaryHover` | #161618 |\u001b[39m\n\u001b[31m| Marca | Primária — active | `primaryActive` | #131316 |\u001b[39m\n\u001b[31m| Marca | Texto sobre primária | `onPrimary` | #ffffff |\u001b[39m\n\u001b[31m| Marca | Primária suave | `primarySoft` | #e3e3e4 |\u001b[39m\n\u001b[31m| Marca | Cor secundária | `secondary` | #52525b |\u001b[39m\n\u001b[31m| Marca | Texto sobre secundária | `onSecondary` | #ffffff |\u001b[39m\n\u001b[31m| Marca | Cor de destaque | `accent` | #2563eb |\u001b[39m\n\u001b[31m| Marca | Texto sobre destaque | `onAccent` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Fundo principal | `bg` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Fundo secundário | `bgAlt` | #f6f6f6 |\u001b[39m\n\u001b[31m| Fundos e superfícies | Superfície | `surface` | #ffffff |\u001b[39m\n\u001b[31m| Fundos e superfícies | Superfície alternativa | `surfaceAlt` | #f5f5f5 |\u001b[39m\n\u001b[31m| Texto | Texto principal | `text` | #18181b |\u001b[39m\n\u001b[31m| Texto | Texto secundário | `textMuted` | #707072 |\u001b[39m\n\u001b[31m| Texto | Texto desabilitado | `textDisabled` | #a7a7a8 |\u001b[39m\n\u001b[31m| Texto | Placeholder | `placeholder` | #8c8c8d |\u001b[39m\n\u001b[31m| Bordas e foco | Borda | `border` | #e6e6e6 |\u001b[39m\n\u001b[31m| Bordas e foco | Borda forte | `borderStrong` | #c7c7c7 |\u001b[39m\n\u001b[31m| Bordas e foco | Borda de foco (focus-visible) | `focusRing` | #18181b |\u001b[39m\n\u001b[31m| Estados | Hover | `hover` | #f4f4f4 |\u001b[39m\n\u001b[31m| Estados | Active | `active` | #ebebeb |\u001b[39m\n\u001b[31m| Estados | Pressed | `pressed` | #e0e0e0 |\u001b[39m\n\u001b[31m| Estados | Selected — fundo | `selected` | #e3e3e4 |\u001b[39m\n\u001b[31m| Estados | Selected — texto | `selectedText` | #18181b |\u001b[39m\n\u001b[31m| Estados | Disabled — fundo | `disabled` | #f0f0f0 |\u001b[39m\n\u001b[31m| Estados | Disabled — texto | `disabledText` | #979798 |\u001b[39m\n\u001b[31m| Semânticos | Success | `success` | #117e39 |\u001b[39m\n\u001b[31m| Semânticos | Success — fundo | `successBg` | #e3f4e9 |\u001b[39m\n\u001b[31m| Semânticos | Warning | `warning` | #a85c04 |\u001b[39m\n\u001b[31m| Semânticos | Warning — fundo | `warningBg` | #faefe1 |\u001b[39m\n\u001b[31m| Semânticos | Error | `error` | #dc2626 |\u001b[39m\n\u001b[31m| Semânticos | Error — fundo | `errorBg` | #fbe5e5 |\u001b[39m\n\u001b[31m| Semânticos | Info | `info` | #2563eb |\u001b[39m\n\u001b[31m| Semânticos | Info — fundo | `infoBg` | #e5ecfd |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Link | `link` | #18181b |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Link — hover | `linkHover` | #141417 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Ícones | `icon` | #525254 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — fundo | `navBg` | #ffffff |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — texto | `navText` | #4b4b4d |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — item ativo | `navActive` | #e3e3e4 |\u001b[39m\n\u001b[31m| Links, ícones e navegação | Navegação — texto ativo | `navActiveText` | #18181b |\u001b[39m\n\u001b[31m| Gradiente | Gradiente — início | `gradientFrom` | #18181b |\u001b[39m\n\u001b[31m| Gradiente | Gradiente — fim | `gradientTo` | #3b73ed |·\u001b[39m\n\u001b[31m### Tipografia: Inter + Inter·\u001b[39m\n\u001b[31m`id: identity.typography` · origem: módulo “cores”·\u001b[39m\n\u001b[31mTítulos em Inter (peso 650) e textos em Inter (peso 400), tamanho base 15 px.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Escala sugerida: 13 / 15 / 18 / 23 / 30 / 39 px.\u001b[39m\n\u001b[31m- Altura de linha de 1.5 para textos e 1.2–1.3 para títulos.\u001b[39m\n\u001b[31m- Nunca use textos menores que 12 px; filtros e botões com pelo menos 14 px.·\u001b[39m\n\u001b[31m**Propriedades**\u001b[39m\n\u001b[31m- fonteTitulos: Inter\u001b[39m\n\u001b[31m- fonteTexto: Inter\u001b[39m\n\u001b[31m- tamanhoBase: 15\u001b[39m\n\u001b[31m- pesoTitulos: 650\u001b[39m\n\u001b[31m- pesoTexto: 400·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- Títulos grandes reduzem proporcionalmente no celular (use clamp()).\u001b[39m\n\u001b[31m- Inputs com 16 px no celular para evitar zoom automático.·\u001b[39m\n\u001b[31m### Geometria e superfícies: Médios (8 px) · Contornada (bordas finas)·\u001b[39m\n\u001b[31m`id: identity.geometry` · origem: módulo “cores”·\u001b[39m\n\u001b[31mCantos médios (8 px), bordas de 1 px, sombra sem sombra, superfícies contornada (bordas finas), densidade confortável.·\u001b[39m\n\u001b[31m**Estrutura**\u001b[39m\n\u001b[31m- Escala de espaçamento em múltiplos de 4 px: 4, 8, 12, 16, 20, 24, 32, 40.\u001b[39m\n\u001b[31m- Sem sombras em superfícies de conteúdo. Apenas elementos realmente flutuantes (modais, popovers, menus) podem ter elevação.\u001b[39m\n\u001b[31m- Ícones no estilo contorno (outline), tamanho consistente (16–20 px em interfaces).·\u001b[39m\n\u001b[31m**Propriedades**\u001b[39m\n\u001b[31m- raioPequeno: 6px\u001b[39m\n\u001b[31m- raioMedio: 8px\u001b[39m\n\u001b[31m- raioGrande: 12px\u001b[39m\n\u001b[31m- borda: 1px\u001b[39m\n\u001b[31m- sombra: none\u001b[39m\n\u001b[31m- superficie: outlined\u001b[39m\n\u001b[31m- densidade: comfortable\u001b[39m\n\u001b[31m- unidadeDeEspaco: 8px\u001b[39m\n\u001b[31m- ícones: outline·\u001b[39m\n\u001b[31m**Responsividade deste item**\u001b[39m\n\u001b[31m- A geometria se mantém em todas as larguras; no celular aumente apenas as áreas de toque.·\u001b[39m\n\u001b[31m### Estados visuais\u001b[39m\n\u001b[31m- hover: fundo `hover` ou primária `primaryHover`; active/pressed: `active`/`pressed`/`primaryActive`.\u001b[39m\n\u001b[31m- focus-visible: anel de 2–3 px na cor `focusRing`, sempre visível ao navegar por teclado.\u001b[39m\n\u001b[31m- selected: fundo `selected` com texto `selectedText`; disabled: fundo `disabled`, texto `disabledText`, sem hover.\u001b[39m\n\u001b[31m- Mensagens: success/warning/error/info com os fundos semânticos correspondentes.·\u001b[39m\n\u001b[31m## E. Componentes·\u001b[39m\n\u001b[31mNenhum componente foi personalizado na biblioteca. Crie os componentes necessários usando os tokens e a geometria da seção D.·\u001b[39m\n\u001b[31m## F. Responsividade·\u001b[39m\n\u001b[31mValide pelo menos nas larguras: 320, 344, 360, 375, 390, 412, 430, 480, 600, 768, 820, 1024, 1280, 1440, 1920 px, além de larguras intermediárias.·\u001b[39m\n\u001b[31mBreakpoints de referência:\u001b[39m\n\u001b[31m- xs: Celulares pequenos (320–359 px)\u001b[39m\n\u001b[31m- sm: Celulares (360–599 px)\u001b[39m\n\u001b[31m- md: Tablets e celulares na horizontal (600–1023 px)\u001b[39m\n\u001b[31m- lg: Notebooks (1024–1439 px)\u001b[39m\n\u001b[31m- xl: Monitores grandes (1440 px ou mais)·\u001b[39m\n\u001b[31m**Regras gerais**\u001b[39m\n\u001b[31m- Nenhum overflow horizontal involuntário em nenhuma largura de 320 px a 1920 px (inclusive larguras intermediárias).\u001b[39m\n\u001b[31m- Nenhum texto cortado: use quebra de linha, `min-width: 0` em itens flex/grid e `overflow-wrap: anywhere` em conteúdos longos (e-mails, URLs, códigos).\u001b[39m\n\u001b[31m- Nenhuma sobreposição indevida entre elementos, inclusive com o teclado virtual aberto.\u001b[39m\n\u001b[31m- Alvos de toque com no mínimo 44 × 44 px no celular e espaçamento de pelo menos 8 px entre alvos adjacentes.\u001b[39m\n\u001b[31m- Campos de formulário com fonte de pelo menos 16 px no celular (evita zoom automático no iOS).\u001b[39m\n\u001b[31m- Imagens e mídias responsivas (`max-width: 100%`, `aspect-ratio` definido) sem distorção.\u001b[39m\n\u001b[31m- Grids adaptáveis: reduza colunas progressivamente; nunca comprima cartões abaixo de uma largura legível.\u001b[39m\n\u001b[31m- Suporte a zoom de até 200% e a fonte ampliada do sistema sem perda de conteúdo ou funcionalidade.\u001b[39m\n\u001b[31m- Respeite as safe areas (`env(safe-area-inset-*)`) em barras fixas, docks e menus inferiores.\u001b[39m\n\u001b[31m- Funcione na orientação horizontal do celular: barras fixas não podem ocupar mais de 25% da altura.\u001b[39m\n\u001b[31m- Use `100dvh` (com fallback) em vez de `100vh` para alturas de tela cheia.\u001b[39m\n\u001b[31m- Menus acessíveis por mouse, toque e teclado (Tab, Enter, Espaço, Esc), com foco visível.\u001b[39m\n\u001b[31m- Respeite `prefers-reduced-motion` reduzindo animações.·\u001b[39m\n\u001b[31m**Regras por componente**\u001b[39m\n\u001b[31m- Headers: compacte a altura no celular e use a navegação móvel escolhida no layout mobile; o logo e a ação principal continuam visíveis.\u001b[39m\n\u001b[31m- Sidebars: no celular, siga exatamente a arquitetura mobile aprovada (não transforme em drawer por conta própria).\u001b[39m\n\u001b[31m- Dropdowns e popovers: reposicione automaticamente para não sair da viewport; no celular podem virar bottom sheet.\u001b[39m\n\u001b[31m- Tabelas: rolagem horizontal local dentro do próprio contêiner ou representação alternativa em cartões no celular; cabeçalho legível.\u001b[39m\n\u001b[31m- Formulários: uma coluna no celular, labels sempre visíveis, botão de envio acessível com o teclado virtual aberto (role o campo focado para a área visível).\u001b[39m\n\u001b[31m- Calendários: no celular, ofereça modo de lista/agenda quando a grade mensal ficar apertada.\u001b[39m\n\u001b[31m- Modais: altura máxima de 90dvh com rolagem interna; botões de ação sempre acessíveis; no celular podem ocupar a tela ou virar bottom sheet.\u001b[39m\n\u001b[31m- Gráficos: adapte eixos, quantidade de rótulos, legendas (abaixo do gráfico no celular) e dimensões; nunca corte valores.\u001b[39m\n\u001b[31m- Botões: altura mínima de 44 px no celular; textos longos quebram de linha ou o botão ocupa a largura toda; ícones não encolhem.\u001b[39m\n\u001b[31m- Cards: altura definida pelo conteúdo (sem alturas fixas que cortem texto); grade reduz colunas progressivamente.\u001b[39m\n\u001b[31m- Navegação móvel: o item ativo é sempre identificável; menus que abrem (drawer, sheet, fullscreen) fecham com Esc, toque fora e botão visível, e devolvem o foco ao gatilho.·\u001b[39m\n\u001b[31m## G. Regras de implementação·\u001b[39m\n\u001b[31m- Não modifique escolhas aprovadas nesta especificação sem solicitação explícita do usuário.\u001b[39m\n\u001b[31m- Preserve a identidade global: todos os componentes usam os tokens definidos; exceções só onde estiverem listadas.\u001b[39m\n\u001b[31m- Não adicione decoração por conta própria (sombras, gradientes, vidro, animações, cantos arredondados) além do especificado.\u001b[39m\n\u001b[31m- Respeite a geometria escolhida: se a sidebar é integral, ela vai do topo à base; se é flutuante, tem afastamento das bordas. Não converta uma na outra.\u001b[39m\n\u001b[31m- Evite overflow e colisões; valide em todas as larguras de referência.\u001b[39m\n\u001b[31m- Mantenha consistência de espaçamentos (escala de 4 px), tipografia e estados de interação (hover, focus-visible, active, disabled, selected).\u001b[39m\n\u001b[31m- Implemente estados de carregamento, vazio e erro para listas, tabelas e formulários.\u001b[39m\n\u001b[31m- Use componentes reutilizáveis e tokens centralizados (variáveis CSS ou tema); nada de cores fixas espalhadas pelo código.\u001b[39m\n\u001b[31m- Garanta acessibilidade: HTML semântico, labels, contraste WCAG AA, navegação por teclado e leitores de tela.\u001b[39m\n\u001b[31m- Teste o resultado (visual e funcional) em celular, tablet e desktop antes de concluir.·\u001b[39m\n\u001b[31m## Decisões de prioridade·\u001b[39m\n\u001b[31mContradições ainda não decididas pelo usuário (pergunte antes de implementar):\u001b[39m\n\u001b[31m- Login escolhido, mas o fluxo de entrada não tem login — O fluxo “Aplicação diretamente” não prevê área restrita, mas há um modelo de login selecionado.·\u001b[39m\n\u001b[31m## Pendências·\u001b[39m\n\u001b[31mDecisões que o usuário ainda não tomou. Não invente: pergunte ou use a opção mais neutra.\u001b[39m\n\u001b[31m- Defina o tipo de projeto.\u001b[39m\n\u001b[31m- Dê um nome ao projeto.\u001b[39m\n\u001b[31m- Escolha a arquitetura do computador.\u001b[39m\n\u001b[31m- Escolha a arquitetura do celular.\u001b[39m\n\u001b[31m\"\u001b[39m\n\n  1010 |     const prompt = await masterPrompt(page)\n  1011 |     expect(prompt).toContain('Aplicação diretamente')\n> 1012 |     expect(prompt).toMatch(/Login: nenhum/)\n       |                    ^\n  1013 |     await go(page, '/modulos/preview')\n  1014 |     await expect(page.getByRole('group', { name: 'Página da prévia' }).getByRole('button', { name: 'Login' })).toHaveCount(0)\n  1015 |   })\n    at /home/user/prontuario-eletronico/design-system-studio/tests/e2e/regression.spec.ts:1012:20"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:59:02.478Z",
+                      "startTime": "2026-11-03T00:04:23.708Z",
                       "annotations": [
                         {
                           "type": "fail",
@@ -2853,12 +2853,12 @@
                       "workerIndex": 2,
                       "parallelIndex": 2,
                       "status": "passed",
-                      "duration": 7778,
+                      "duration": 7707,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-11-02T23:59:04.969Z",
+                      "startTime": "2026-11-03T00:04:24.955Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -2878,8 +2878,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-11-02T23:56:46.495Z",
-    "duration": 146508.777,
+    "startTime": "2026-11-03T00:02:33.009Z",
+    "duration": 119897.627,
     "expected": 51,
     "skipped": 0,
     "unexpected": 0,

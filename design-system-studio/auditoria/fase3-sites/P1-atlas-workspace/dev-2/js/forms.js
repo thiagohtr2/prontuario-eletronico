@@ -125,11 +125,17 @@
       return errors;
     }
 
+    // Ao apertar o botão de envio, a validação "ao sair do campo" não pode deslocar o layout
+    // (a mensagem de erro empurraria o botão e o clique se perderia): o próprio envio valida tudo.
+    let skipBlurUntil = 0;
+    form.addEventListener('pointerdown', (e) => { if (e.target.closest('[type="submit"]')) skipBlurUntil = Date.now() + 700; });
+
     form.addEventListener('focusout', (e) => {
       const w = e.target.closest && e.target.closest('[data-field]');
       if (!w || busy) return;
       const to = e.relatedTarget;
       if (to && w.contains(to)) return; // ex.: foco foi para o botão de mostrar senha
+      if (Date.now() < skipBlurUntil || (to && to.matches && to.matches('[type="submit"]'))) return;
       const n = w.dataset.field;
       if (!rules[n]) return;
       touched.add(n);

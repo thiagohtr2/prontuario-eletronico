@@ -931,6 +931,7 @@ h1[tabindex="-1"]:focus {
 }
 
 .sw-card__media {
+  position: relative;
   aspect-ratio: 16 / 9;
   width: 100%;
   background: var(--surface-alt);

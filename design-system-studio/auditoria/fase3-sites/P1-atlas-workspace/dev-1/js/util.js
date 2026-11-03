@@ -295,7 +295,6 @@
     if (!box) return;
     var t = document.createElement('div');
     t.className = 'toast';
-    t.setAttribute('role', 'status');
     t.innerHTML = '<p>' + u.esc(text) + '</p>' + (action ? '<button type="button">' + u.esc(action.label) + '</button>' : '');
     box.appendChild(t);
     var timer = setTimeout(remove, action ? 7000 : 4000);

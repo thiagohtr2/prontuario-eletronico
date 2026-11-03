@@ -1,0 +1,68 @@
+{
+ "before": {
+  "n": 10,
+  "first": "Crítico 23:59 · há 2 min Fila Suporte técnico acima do limit",
+  "cls": "alert",
+  "anim": "none 0s",
+  "live": "polite",
+  "srLive": "",
+  "shell": [
+   1440,
+   900
+  ],
+  "docV": 0
+ },
+ "spontaneous": {
+  "n": 11,
+  "first": "Atenção 00:02 · agora Pico de pedidos acima do previsto +4% ",
+  "cls": "alert alert--enter",
+  "anim": "alert-enter 0.2s",
+  "live": "polite",
+  "srLive": "",
+  "shell": [
+   1440,
+   900
+  ],
+  "docV": 0,
+  "waitedMs": 36500
+ },
+ "menuItems": [
+  "Gerar novo alerta",
+  "Simular falha de conexão",
+  "Esvaziar dados (estado vazio)"
+ ],
+ "generated": {
+  "n": 12,
+  "first": "Resolvido 00:02 · agora Pedido de Hortifruti Verde entregue ",
+  "cls": "alert alert--enter",
+  "anim": "alert-enter 0.2s",
+  "live": "polite",
+  "srLive": "",
+  "shell": [
+   1440,
+   900
+  ],
+  "docV": 0
+ },
+ "generatedBefore": {
+  "n": 11,
+  "first": "Atenção 00:02 · agora Pico de pedidos acima do previsto +4% ",
+  "cls": "alert alert--enter",
+  "anim": "alert-enter 0.2s",
+  "live": "polite",
+  "srLive": "",
+  "shell": [
+   1440,
+   900
+  ],
+  "docV": 0
+ },
+ "srStatusAfter": {
+  "live": "polite",
+  "text": ""
+ },
+ "errorState": {
+  "text": "Não foi possível carregar os pedidos. Verifique a conexão e tente novamente. Tentar novamente",
+  "waitedMs": 1000
+ }
+}

@@ -49,7 +49,6 @@
 
     function clearSummary() { if (summary) summary.innerHTML = ''; }
 
-    A.forms.showSummary = A.forms.showSummary || showSummary;
     function showSummary(errors) {
       if (!summary) return;
       summary.innerHTML = '<div class="msg msg--error" tabindex="-1">' + A.icon('alert', 20) +
@@ -75,10 +74,29 @@
           if (state.submitted || el(d).getAttribute('aria-invalid') === 'true') check(d);
         });
       });
-      e.addEventListener('blur', function () {
+      e.addEventListener('blur', function (ev) {
+        // se o foco foi para o botão de envio, o envio valida tudo de uma vez
+        // (evita que a mensagem empurre o botão entre o mousedown e o mouseup)
+        var to = ev.relatedTarget;
+        if (state.pressingSubmit || (to && to.type === 'submit' && (to.form === form))) return;
         if (state.dirty[name] || state.submitted) check(name);
       });
     });
+
+    form.addEventListener('pointerdown', function (ev) {
+      if (ev.target.closest('[type="submit"]')) {
+        state.pressingSubmit = true;
+        setTimeout(function () { state.pressingSubmit = false; }, 600);
+      }
+    });
+    var formId = form.id;
+    if (formId) {
+      // botões de envio fora do <form> (rodapé de modal) com atributo form="id"
+      (form.closest('dialog') || document).addEventListener('pointerdown', function (ev) {
+        var b = ev.target.closest && ev.target.closest('[type="submit"][form="' + formId + '"]');
+        if (b) { state.pressingSubmit = true; setTimeout(function () { state.pressingSubmit = false; }, 600); }
+      });
+    }
 
     form.addEventListener('submit', function (ev) {
       ev.preventDefault();

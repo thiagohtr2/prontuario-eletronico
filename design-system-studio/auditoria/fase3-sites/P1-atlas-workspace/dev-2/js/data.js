@@ -141,7 +141,7 @@
     '30d': {
       compare: 'vs. mês anterior',
       kpis: [
-        { id: 'receita', label: 'Receita mensal', icon: 'wallet', value: 'R$ 48,2 mil', delta: 12.4, series: [31.2, 33.0, 32.1, 35.4, 37.8, 36.9, 40.2, 41.5, 43.1, 44.0, 46.3, 48.2], unit: 'R$ {v} mil', labels: 'mês' },
+        { id: 'receita', label: 'Receita mensal', icon: 'wallet', value: 'R$ 48,2 mil', delta: 12.4, series: [31.2, 33.0, 32.1, 35.4, 37.8, 36.9, 40.2, 41.5, 43.1, 44.0, 46.3, 48.2], unit: 'R$ {v} mil', dec: 1, labels: 'mês' },
         { id: 'clientes', label: 'Novos clientes', icon: 'users', value: '1.284', delta: -2.1, series: [132, 128, 140, 135, 138, 129, 124, 131, 126, 122, 127, 123], unit: '{v} clientes', labels: 'mês' },
         { id: 'ticket', label: 'Ticket médio', icon: 'chart-column', value: 'R$ 312', delta: 0, series: [310, 312, 311, 313, 312, 311, 312, 313, 312, 312, 311, 312], unit: 'R$ {v}', labels: 'mês' },
       ],
@@ -157,7 +157,7 @@
     '90d': {
       compare: 'vs. trimestre anterior',
       kpis: [
-        { id: 'receita', label: 'Receita mensal', icon: 'wallet', value: 'R$ 44,7 mil', delta: 6.8, series: [36.4, 37.0, 38.5, 39.1, 40.2, 41.0, 41.9, 42.6, 43.0, 43.8, 44.2, 44.7], unit: 'R$ {v} mil', labels: 'semana' },
+        { id: 'receita', label: 'Receita mensal', icon: 'wallet', value: 'R$ 44,7 mil', delta: 6.8, series: [36.4, 37.0, 38.5, 39.1, 40.2, 41.0, 41.9, 42.6, 43.0, 43.8, 44.2, 44.7], unit: 'R$ {v} mil', dec: 1, labels: 'semana' },
         { id: 'clientes', label: 'Novos clientes', icon: 'users', value: '3.702', delta: 4.3, series: [118, 121, 119, 125, 128, 131, 130, 133, 137, 140, 142, 146], unit: '{v} clientes', labels: 'semana' },
         { id: 'ticket', label: 'Ticket médio', icon: 'chart-column', value: 'R$ 298', delta: -1.2, series: [305, 303, 304, 301, 302, 300, 299, 300, 298, 299, 297, 298], unit: 'R$ {v}', labels: 'semana' },
       ],
@@ -173,7 +173,7 @@
     '12m': {
       compare: 'vs. ano anterior',
       kpis: [
-        { id: 'receita', label: 'Receita mensal', icon: 'wallet', value: 'R$ 39,1 mil', delta: 18.3, series: [22.0, 24.1, 25.3, 27.9, 29.4, 31.0, 33.2, 34.8, 36.5, 37.9, 38.4, 39.1], unit: 'R$ {v} mil', labels: 'mês' },
+        { id: 'receita', label: 'Receita mensal', icon: 'wallet', value: 'R$ 39,1 mil', delta: 18.3, series: [22.0, 24.1, 25.3, 27.9, 29.4, 31.0, 33.2, 34.8, 36.5, 37.9, 38.4, 39.1], unit: 'R$ {v} mil', dec: 1, labels: 'mês' },
         { id: 'clientes', label: 'Novos clientes', icon: 'users', value: '14.906', delta: 9.7, series: [980, 1020, 1090, 1130, 1160, 1210, 1230, 1260, 1240, 1270, 1290, 1284], unit: '{v} clientes', labels: 'mês' },
         { id: 'ticket', label: 'Ticket médio', icon: 'chart-column', value: 'R$ 287', delta: 0, series: [281, 283, 284, 286, 285, 287, 288, 286, 287, 288, 287, 287], unit: 'R$ {v}', labels: 'mês' },
       ],

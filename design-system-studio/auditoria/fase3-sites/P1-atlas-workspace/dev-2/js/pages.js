@@ -334,7 +334,7 @@
         <div class="sw-table__scroll" tabindex="0" role="region" aria-label="Série histórica de ${esc(kpi.label)}">
           <table class="sw-table__table"><caption class="sr-only">Série histórica de ${esc(kpi.label)}</caption>
             <thead><tr><th scope="col">Período</th><th scope="col" class="num">Valor</th></tr></thead>
-            <tbody>${kpi.series.map((v, i) => `<tr><td>${['dez', 'jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov'][i]}</td><td class="num">${esc(kpi.unit.replace('{v}', Number.isInteger(v) ? fmt.int(v) : fmt.num(v, 1)))}</td></tr>`).join('')}</tbody></table>
+            <tbody>${kpi.series.map((v, i) => `<tr><td>${['dez', 'jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov'][i]}</td><td class="num">${esc(U.valText(kpi.unit, v, kpi.dec))}</td></tr>`).join('')}</tbody></table>
         </div>
       </section>` : '';
     host.innerHTML = `

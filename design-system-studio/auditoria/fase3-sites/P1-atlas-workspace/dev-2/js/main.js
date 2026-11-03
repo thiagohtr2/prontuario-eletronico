@@ -21,6 +21,17 @@
     return { path: path === '/' ? '/' : path, query: Object.fromEntries(new URLSearchParams(q || '')), qs: q ? '?' + q : '' };
   }
 
+  /** Restaura a rolagem de um destino; tenta de novo enquanto o conteúdo (assíncrono) ainda não tem altura suficiente. */
+  let userMoved = false;
+  ['wheel', 'touchstart', 'keydown'].forEach((ev) => window.addEventListener(ev, () => { userMoved = true; }, { passive: true }));
+  function restoreScroll(y) {
+    userMoved = false;
+    window.scrollTo(0, y);
+    [250, 600, 1000, 1500].forEach((ms) => setTimeout(() => {
+      if (!userMoved && Math.abs(window.scrollY - y) > 2) window.scrollTo(0, y);
+    }, ms));
+  }
+
   function render() {
     const { path, query, qs } = parse();
     const first = path.split('/').filter(Boolean)[0] || '';
@@ -73,7 +84,7 @@
 
     currentKey = path;
     const saved = scrollPos[path];
-    if (A.isMobile() && saved != null) window.scrollTo(0, saved); else window.scrollTo(0, 0);
+    if (A.isMobile() && saved != null) restoreScroll(saved); else window.scrollTo(0, 0);
 
     if (!firstRender) {
       const h = page.querySelector('h1');

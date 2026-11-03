@@ -201,6 +201,7 @@
   box-shadow: var(--shadow-float);
 }
 .sidebar-scrim { z-index: var(--z-overlay); }
+.shell.is-overlay-open .sidebar-slot { z-index: calc(var(--z-overlay) + 1); }
 
 /* ---------- Coluna principal ---------- */
 .main-col { min-width: 0; display: flex; flex-direction: column; }
@@ -355,6 +356,8 @@
 }
 .content:focus { outline: none; }
 [tabindex="-1"]:focus:not(:focus-visible) { outline: none; }
+/* títulos recebem foco programático na troca de rota (leitores de tela); não são interativos */
+h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: none; }
 
 .crumb-back { display: none; }
 
@@ -394,7 +397,8 @@
   }
   .crumbs, .search, .topbar [data-notif] { display: none; }
   .avatar-btn { width: 44px; height: 44px; margin-right: -4px; }
-  .avatar-btn .count-badge { display: block; top: 0; right: 0; }
+  /* no celular o avatar mostra só um ponto de não lidas (o número vai no aria-label e no menu) */
+  .avatar-btn .count-badge { display: block; top: 5px; right: 5px; min-width: 0; width: 8px; height: 8px; padding: 0; font-size: 0; line-height: 0; }
 
   .content {
     padding: calc(var(--topbar-h) + env(safe-area-inset-top) + var(--sp-4)) var(--sp-4) calc(var(--bottomnav-h) + env(safe-area-inset-bottom) + var(--sp-6));
@@ -473,7 +477,7 @@
 
 /* celular na horizontal: barras fixas somadas ≤ 25% da altura */
 @media (max-width: 767.98px) and (max-height: 499.98px) {
-  :root { --topbar-h: 44px; --bottomnav-h: 48px; }
+  :root { --topbar-h: 44px; --bottomnav-h: 44px; }
   .topbar__logo { width: 44px; height: 44px; }
   .bottom-nav ul { height: var(--bottomnav-h); }
   .bn-item { flex-direction: row; gap: var(--sp-1); }

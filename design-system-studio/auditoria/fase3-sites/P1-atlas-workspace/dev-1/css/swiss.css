@@ -6,7 +6,7 @@
    ========================================================= */
 
 /* ---------- Página ---------- */
-.page { display: grid; gap: var(--sp-10); min-width: 0; font-size: var(--fs-14); }
+.page { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-10); min-width: 0; font-size: var(--fs-14); }
 .page-head {
   display: flex;
   flex-wrap: wrap;
@@ -34,9 +34,9 @@
   overflow-wrap: anywhere;
 }
 .page-desc { margin-top: var(--sp-2); max-width: 64ch; color: var(--text-muted); font-size: var(--fs-15); }
-.page-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2); }
+.page-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--sp-2); min-width: 0; max-width: 100%; }
 
-.section { display: grid; gap: var(--sp-5); min-width: 0; align-content: start; }
+.section { display: grid; grid-template-columns: minmax(0, 1fr); gap: var(--sp-5); min-width: 0; align-content: start; }
 .section-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--sp-2) var(--sp-4); }
 .section-title {
   display: flex;
@@ -568,7 +568,7 @@ th[aria-sort="ascending"] .th-sort .ico, th[aria-sort="descending"] .th-sort .ic
     color: var(--text-muted);
     text-align: left;
   }
-  .sw-table td.cell-wide { grid-column: 2; }
+  .sw-table td.cell-wide { grid-column: 2; justify-content: flex-start; text-align: left; padding-bottom: var(--sp-2); }
   .sw-table td.cell-wide::before { display: none; }
   .sw-table td[colspan] { grid-column: 1 / -1; }
   .sw-table tbody tr.state-row { display: block; padding: 0; }
@@ -593,3 +593,7 @@ th[aria-sort="ascending"] .th-sort .ico, th[aria-sort="descending"] .th-sort .ic
   .sw-panel__head { padding-left: var(--sp-4); }
   .sw-kpi { padding: var(--sp-4); }
 }
+
+/* contêineres de resumo/status vazios não ocupam espaço na grade do formulário */
+.sw-form > [data-summary]:empty,
+.sw-form > [data-status]:empty { display: none; }

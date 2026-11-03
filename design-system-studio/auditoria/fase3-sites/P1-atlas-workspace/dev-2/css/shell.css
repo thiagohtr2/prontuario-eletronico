@@ -383,3 +383,5 @@
   .toasts { bottom: calc(var(--bn-h, 0px) + var(--safe-bottom) + 16px); }
   body:not(:has(.app)) .toasts { bottom: calc(24px + var(--safe-bottom)); }
 }
+
+.notif:hover, .search__list li[role="option"]:hover, .search__list li[aria-selected="true"] { --text-muted: var(--text); }

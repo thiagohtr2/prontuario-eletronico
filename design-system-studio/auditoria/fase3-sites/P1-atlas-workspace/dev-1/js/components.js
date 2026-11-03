@@ -154,14 +154,17 @@
     return m * p;
   }
   function axisFmt(v, fmt) {
-    if (fmt === 'money' || v >= 1000) return v >= 1000 ? u.dec1(v / 1000).replace(',0', '') + ' mil' : u.num(v);
+    if (v >= 1000) return u.dec1(v / 1000).replace(/,0$/, '') + ' mil';
     return u.num(v);
   }
 
   ui.barChart = function (el, o) {
     var bars = o.bars;
-    var max = niceMax(Math.max.apply(null, bars.map(function (b) { return b.value; })));
-    var ticks = [0, 0.25, 0.5, 0.75, 1];
+    var rawMax = Math.max.apply(null, bars.map(function (b) { return b.value; })) || 1;
+    var step = niceMax(rawMax / 4);
+    var max = Math.ceil(rawMax / step) * step;
+    var ticks = [];
+    for (var tv = 0; tv <= max + step / 2; tv += step) ticks.push(tv / max);
     function f(v) { return o.fmt === 'money' ? u.money(v) : u.num(v); }
     var liveId = u.uid('live');
     el.innerHTML = '<div class="chart">' +

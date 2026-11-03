@@ -89,6 +89,7 @@ const width = (page, sel) => page.evaluate((s) => document.querySelector(s).getB
     await page.click('.avatar-btn');
     await page.click('.popover--menu >> text=Sair');
     await page.waitForURL(/#\/entrar/, { timeout: 3000 });
+    await page.waitForSelector('#login-form', { timeout: 3000 });
     log(await page.isVisible('#login-form'), '"Sair" encerra a sessão e volta para entrar');
     log(errors.length === 0, 'popovers sem erros de console: ' + errors.join(' | '));
     await ctx.close();

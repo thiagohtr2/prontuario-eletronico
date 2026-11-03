@@ -110,7 +110,7 @@
             return;
           }
           A.session.start({ name: acc.name, email: acc.email, role: acc.role || 'Membro da equipe' }, f.elements.remember.checked);
-          var next = ctx.query.next ? decodeURIComponent(ctx.query.next) : '#/inicio';
+          var next = ctx.query.next ? ctx.query.next : '#/inicio';
           location.hash = next.indexOf('#/') === 0 ? next : '#/inicio';
         });
       }
