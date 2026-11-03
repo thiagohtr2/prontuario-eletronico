@@ -189,6 +189,8 @@
 }
 .sv-stage {
   display: grid;
+  /* Coluna presa à largura disponível: a moldura do celular (390 px) encolhe em telas menores. */
+  grid-template-columns: minmax(0, 1fr);
   justify-items: center;
   min-width: 0;
 }

@@ -58,7 +58,7 @@ export const folhaVaso: SiteStarter = {
       purpose: 'Catálogo com filtros rápidos, ordenação e paginação.',
       navItem: 'Plantas',
       blocks: [
-        { component: 'trilha', span: 12, height: 36 },
+        { component: 'trilha', span: 12, height: 40 },
         { component: 'filtros', span: 8, height: 56 },
         { component: 'ordenar', span: 4, height: 84 },
         { component: 'produto-jiboia', span: 4, height: 330 },

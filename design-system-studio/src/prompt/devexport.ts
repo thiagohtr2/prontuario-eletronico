@@ -3,7 +3,8 @@ import { projectTheme } from '@/core/theme'
 import { fontName, TOKEN_GROUPS, TOKEN_KEYS } from '@/core/tokens'
 import type { ResolvedTheme, TokenKey } from '@/core/types'
 import { desktopById, mobileById } from '@/modules/layouts/catalog'
-import { headerById, headerLookFor, sidebarById } from '@/modules/navigation/catalog'
+import { headerById, headerFitForLayout, headerLookFor, sidebarById } from '@/modules/navigation/catalog'
+import { planPage } from '@/modules/starters/pages'
 import { isDefaultIdentity } from './items'
 import { mobileSlots } from './resolve'
 import { BREAKPOINTS } from './responsive'
@@ -81,6 +82,9 @@ export function buildFacts(project: Project) {
     : (desktop?.measurements.sidebar ?? null)
   const entry = activeEntry(project.entry)
   const c = mobile?.config
+  // Header com faixas extras (anúncio, editorias embaixo…) ocupa mais que a barra principal.
+  const sideNav = Boolean(desktop?.regions.some((r) => r.kind === 'sidebar' || r.kind === 'rail'))
+  const fit = header && hasHeaderRegion ? headerFitForLayout(header, project.navigation.header!.variant, desktop?.measurements.header, sideNav) : null
   const navItems = project.meta.navItems.map((s) => s.trim()).filter(Boolean)
   return {
     brand: project.meta.name.trim() || null,
@@ -96,8 +100,10 @@ export function buildFacts(project: Project) {
     layout: {
       desktop: desktop?.id ?? null,
       mobile: mobile?.id ?? null,
-      header: headerHeight ? { model: header?.id ?? null, variant: project.navigation.header?.variant ?? null, height: px(headerHeight), spansSidebar: null as boolean | null } : null,
-      sidebar: sidebarWidth ? { model: sidebar?.id ?? null, variant: project.navigation.sidebar?.variant ?? null, width: px(sidebarWidth) } : null,
+      header: headerHeight
+        ? { model: header?.id ?? null, variant: project.navigation.header?.variant ?? null, height: px(headerHeight), totalHeight: px(fit?.grows ? fit.total : headerHeight), spansSidebar: null as boolean | null }
+        : null,
+      sidebar: sidebarWidth ? { model: sidebar?.id ?? null, variant: project.navigation.sidebar?.variant ?? null, width: px(sidebarWidth), cta: project.navigation.sidebar?.cta?.trim() || null } : null,
       wideScreen: project.layout.wide ?? 'centered',
       wideScreenReviewed: project.layout.wide !== null,
       contentMaxWidth: desktop?.measurements.contentMax ? px(desktop.measurements.contentMax) : px(1440),
@@ -131,6 +137,18 @@ export function buildFacts(project: Project) {
       iconStyle: project.identity.geometry.iconStyle,
     },
     components: project.components.map((i) => ({ id: i.id, category: i.categoryId, family: i.familyId, label: i.label || null, props: { ...i.props }, tokenOverrides: { ...i.tokenOverrides } })),
+    pages: project.pages.map((pg) => {
+      const plan = planPage(project, pg)
+      return {
+        id: pg.id,
+        kind: pg.kind,
+        navItem: pg.navItem || null,
+        main: plan.main.map((b) => ({ component: b.component, span: b.span })),
+        aside: plan.aside.map((b) => b.component),
+        overlays: plan.overlays.map((o) => o.id),
+      }
+    }),
+    origin: project.origin ? { template: project.origin.templateId, version: project.origin.templateVersion, palette: project.origin.paletteVariant, mode: project.origin.mode } : null,
   }
 }
 

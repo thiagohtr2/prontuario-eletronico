@@ -293,7 +293,7 @@ export const gazetaAurora: SiteStarter = {
       purpose: 'Página de leitura de uma reportagem.',
       navItem: '',
       blocks: [
-        { component: 'trilha-materia', span: 12, height: 36 },
+        { component: 'trilha-materia', span: 12, height: 40 },
         { component: 'manchete', span: 12, height: 340 },
         { component: 'newsletter', span: 8, height: 120 },
       ],

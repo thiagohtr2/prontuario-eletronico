@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useMemo, useState, type ReactNode } from 'react'
+import { lazy, startTransition, Suspense, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { FileCode2, Maximize2, Minimize2, MousePointerClick, Paintbrush, Wand2 } from 'lucide-react'
 import type { Project } from '@/core/project'
@@ -10,7 +10,7 @@ import { paletteById } from '@/modules/color/catalog'
 import { familyById, visualFamilies } from '@/modules/components/catalog'
 import { categoryById } from '@/modules/components/catalog'
 import { useWidth } from '@/modules/preview/SiteFrame'
-import { Badge, Button, Callout, DeviceToggle, Modal, Segmented, Tabs, toast, useMediaQuery } from '@/ui'
+import { Badge, Button, Callout, DeviceToggle, keepScroll, Modal, Segmented, Tabs, toast, useMediaQuery } from '@/ui'
 import { buildInventory, type InventoryTarget } from './inventory'
 import { SitePreview, pageOverlays, type PageState, type PickTarget } from './SitePreview'
 import { STARTER_GROUPS, type SiteStarter, type StarterPalette } from './types'
@@ -63,8 +63,12 @@ export function SiteViewer({ project, mode, starter, paletteVariant, onPaletteVa
   const navigate = useNavigate()
   const phone = useMediaQuery('(max-width: 700px)')
   const firstPage = project.pages.find((p) => p.kind === 'app') ?? project.pages[0]
-  const [pageId, setPageId] = useState(firstPage?.id ?? '')
-  const [device, setDevice] = useState<Device>(phone ? 'mobile' : 'desktop')
+  const [pageId, setPageIdNow] = useState(firstPage?.id ?? '')
+  const [device, setDeviceNow] = useState<Device>(phone ? 'mobile' : 'desktop')
+  // Trocar de página/dispositivo nunca move a janela: a página atual fica na tela até a próxima estar
+  // pronta (transição, sem o “Carregando…” que encurta a página) e a rolagem é preservada.
+  const setPageId = (id: string) => keepScroll(() => startTransition(() => setPageIdNow(id)))
+  const setDevice = (d: Device) => keepScroll(() => startTransition(() => setDeviceNow(d)))
   const [full, setFull] = useState(false)
   const [panel, setPanel] = useState<Panel>('visao')
   const [editMode, setEditMode] = useState(false)
@@ -349,7 +353,7 @@ export function SiteViewer({ project, mode, starter, paletteVariant, onPaletteVa
                                 if (site) {
                                   useStudio.getState().setPaletteVariant(v.paletteId, v.overrides ?? {})
                                   toast.success(`Paleta “${v.name}” aplicada a todo o site.`)
-                                } else onPaletteVariant?.(v.id)
+                                } else keepScroll(() => startTransition(() => onPaletteVariant?.(v.id)))
                               }}
                             >
                               <PaletteDots palette={v} />

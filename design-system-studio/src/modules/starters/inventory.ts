@@ -83,7 +83,8 @@ export function buildInventory(p: Project): InventoryGroup[] {
 
   const byGroup: Record<string, InventoryItem[]> = { campos: [], navegacao: navegacao, dados: [], sobreposicoes: [], 'paginas-blocos': [], identidade: identidade }
   for (const c of p.components) {
-    const pagesUsing = p.pages.filter((pg) => pg.blocks.some((b) => b.component === c.id)).map((pg) => pg.name)
+    // Área principal, coluna lateral e sobreposições: tudo o que a página realmente usa.
+    const pagesUsing = p.pages.filter((pg) => [...pg.blocks, ...(pg.aside ?? [])].some((b) => b.component === c.id)).map((pg) => pg.name)
     if (p.pages.length && pagesUsing.length === 0) continue
     const cat = categoryById(c.categoryId)
     const fam = familyById(c.familyId)
@@ -100,7 +101,7 @@ export function buildInventory(p: Project): InventoryGroup[] {
   const paginas: InventoryItem[] = p.pages.map((pg) => {
     const model =
       pg.kind === 'landing' ? landingById(entry.landingId)?.name : pg.kind === 'login' ? loginById(entry.loginId)?.name : pg.kind === 'signup' ? signupById(entry.signupId)?.name : undefined
-    const kindLabel = pg.kind === 'app' ? `${pg.blocks.length} bloco(s)` : pg.kind === 'landing' ? 'Landing page' : pg.kind === 'login' ? 'Login' : 'Cadastro'
+    const kindLabel = pg.kind === 'app' ? `${pg.blocks.length + (pg.aside?.length ?? 0)} bloco(s)` : pg.kind === 'landing' ? 'Landing page' : pg.kind === 'login' ? 'Login' : 'Cadastro'
     return { key: `page:${pg.id}`, label: pg.name, detail: model ? `${kindLabel} · ${model}` : kindLabel, target: { kind: 'page', id: pg.id }, pages: [] }
   })
 

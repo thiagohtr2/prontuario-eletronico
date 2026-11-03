@@ -1,5 +1,7 @@
 import { DEFAULT_GEOMETRY, DEFAULT_TYPOGRAPHY } from '@/core/tokens'
-import { DEFAULT_PALETTE_ID, ENTRY_FLOWS, type Project } from '@/core/project'
+import { activeEntry, DEFAULT_PALETTE_ID, ENTRY_FLOWS, type Project } from '@/core/project'
+import { asideRegions } from '@/modules/layouts/fit'
+import { planPage } from '@/modules/starters/pages'
 import { paletteById } from '@/modules/color/catalog'
 import { siteById } from '@/modules/inspiration/catalog'
 import { desktopById, mobileById } from '@/modules/layouts/catalog'
@@ -176,5 +178,39 @@ export function detectPending(project: Project): Pending[] {
     same(project.identity.geometry, DEFAULT_GEOMETRY)
   if (identityUntouched && (project.guided.skeletonApproved || project.mode === 'free'))
     out.push({ id: 'identidade', message: 'Revise a identidade visual: cores, fontes e cantos ainda são o padrão do Studio.', route: '/modulos/cores' })
+  out.push(...pagePending(project))
+  return out
+}
+
+/**
+ * Consistência das páginas do site com o menu, os componentes, o layout e o fluxo de entrada.
+ * Só vale para projetos com páginas (os criados a partir de um modelo ou montados em “Seu site”).
+ */
+function pagePending(project: Project): Pending[] {
+  const out: Pending[] = []
+  const pages = project.pages
+  if (!pages.length) return out
+  const nav = project.meta.navItems.map((s) => s.trim()).filter(Boolean)
+  const desktop = desktopById(project.layout.desktopId)
+  const regions = desktop ? asideRegions(desktop) : []
+  const regionName = regions[0] ? (regions[0].label ? regions[0].label.charAt(0) + regions[0].label.slice(1).toLowerCase() : regions[0].id) : ''
+  for (const item of nav)
+    if (!pages.some((p) => p.navItem === item)) out.push({ id: `pagina-menu-${item}`, message: `O item de menu “${item}” não tem página no site: crie a página ou tire o item do menu.`, route: '/site' })
+  for (const p of pages) {
+    if (p.navItem && !nav.includes(p.navItem))
+      out.push({ id: `pagina-sem-menu-${p.id}`, message: `A página “${p.name}” aponta para o item de menu “${p.navItem}”, que não existe mais no menu.`, route: '/site' })
+    const missing = [...p.blocks, ...(p.aside ?? [])].filter((b) => !project.components.some((c) => c.id === b.component))
+    if (missing.length) out.push({ id: `pagina-componente-${p.id}`, message: `A página “${p.name}” usa ${missing.length} componente(s) que não existem mais no projeto.`, route: '/site' })
+    if (p.kind !== 'app') continue
+    const plan = planPage(project, p)
+    if (!plan.main.length) out.push({ id: `pagina-vazia-${p.id}`, message: `A página “${p.name}” está sem conteúdo na área principal.`, route: '/site' })
+    if (regions.length && !plan.aside.length)
+      out.push({ id: `pagina-regiao-${p.id}`, message: `A página “${p.name}” não diz o que vai na região “${regionName}” do layout: ela ficaria vazia.`, route: '/site' })
+  }
+  const entry = activeEntry(project.entry)
+  const has = (k: string) => pages.some((p) => p.kind === k)
+  if (has('landing') && !entry.landingId) out.push({ id: 'pagina-landing', message: 'O site tem uma página de landing, mas o fluxo de entrada não tem landing.', route: '/guiado/entrada' })
+  if (has('login') && !entry.loginId) out.push({ id: 'pagina-login', message: 'O site tem uma página de login, mas o fluxo de entrada não tem login.', route: '/guiado/entrada' })
+  if (has('signup') && !entry.signupId) out.push({ id: 'pagina-cadastro', message: 'O site tem uma página de cadastro, mas o fluxo de entrada não tem cadastro.', route: '/modulos/cadastro' })
   return out
 }

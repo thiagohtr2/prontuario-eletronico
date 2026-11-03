@@ -4,7 +4,7 @@ import { paletteById } from '@/modules/color/catalog'
 import { categoryById, familyById } from '@/modules/components/catalog'
 import { landingById, loginById, signupById } from '@/modules/entry/catalog'
 import { desktopById, mobileById } from '@/modules/layouts/catalog'
-import { asideRegions } from '@/modules/preview/SiteFrame'
+import { asideRegions } from '@/modules/layouts/fit'
 import { headerById, sidebarById } from '@/modules/navigation/catalog'
 import type { SiteStarter } from './types'
 
@@ -79,6 +79,8 @@ export function validateStarter(s: SiteStarter): string[] {
     for (const b of [...pg.blocks, ...(pg.aside ?? [])]) {
       if (!compIds.has(b.component)) err(`a página ${pg.id} usa um componente que não existe: ${b.component}`)
       if (!Number.isInteger(b.span) || b.span < 1 || b.span > 12) err(`largura inválida (${b.span}) em ${pg.id}/${b.component}`)
+      // Mesmos limites do schema do projeto: o backup de um site criado do modelo precisa reimportar.
+      if (b.height !== undefined && (b.height < 40 || b.height > 1200)) err(`altura fora do limite (40–1200 px): ${pg.id}/${b.component} = ${b.height}`)
       used.add(b.component)
     }
   }

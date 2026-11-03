@@ -1,4 +1,5 @@
 import type { Project } from '@/core/project'
+import { renderPagesSection } from './pages'
 import { TOKEN_GROUPS } from '@/core/tokens'
 import type { ThemeTokens } from '@/core/types'
 import { KIND_LABEL, type PromptItem } from './items'
@@ -98,6 +99,7 @@ export function renderMasterPrompt(spec: ProjectSpec): string {
       p.purpose && `Finalidade principal: ${inlineText(p.purpose)}`,
       p.features.length ? `Funcionalidades previstas: ${p.features.map(inlineText).join('; ')}` : '',
       p.tech && `Tecnologia desejada: ${inlineText(p.tech)}`,
+      spec.origin ? inlineText(spec.origin.note) : '',
     ].filter(Boolean) as string[]),
   )
 
@@ -133,6 +135,8 @@ export function renderMasterPrompt(spec: ProjectSpec): string {
       ])}`,
     )
   }
+  const pagesText = renderPagesSection(spec.pages, inlineText)
+  if (pagesText) out.push(pagesText)
 
   out.push('## C. Navegação')
   if (spec.navigation.header || spec.navigation.sidebar) {

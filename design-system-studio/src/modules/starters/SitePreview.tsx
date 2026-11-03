@@ -9,6 +9,7 @@ import { PhonePreview } from '@/modules/layouts'
 import { desktopById, mobileById } from '@/modules/layouts/catalog'
 import { AppFrame, DEVICE_SIZE, ScaledFrame } from '@/modules/preview/SiteFrame'
 import { EmptyState } from '@/ui'
+import { OVERLAY_CATEGORIES, planPage } from './pages'
 
 /** O que a pessoa clicou na prévia, no modo de edição. */
 export type PickTarget =
@@ -27,19 +28,9 @@ const mobileHeight = (h: number) => Math.max(96, Math.round(h * 0.86))
 /** Estado demonstrado na página: dados normais, vazio, carregando ou erro. */
 export type PageState = 'normal' | 'vazio' | 'carregando' | 'erro'
 
-/**
- * Sobreposições: não entram na grade da página. Aparecem por cima do conteúdo quando a pessoa as
- * abre na barra do visualizador (modal centralizado com véu; toast no canto inferior).
- */
-export const OVERLAY_CATEGORIES = new Set(['modais', 'toasts'])
-
-/** Instâncias de sobreposição usadas numa página (na ordem dos blocos). */
+/** Sobreposições usadas numa página (na ordem dos blocos). */
 export function pageOverlays(project: Project, page: ProjectPage | undefined): ComponentInstance[] {
-  if (!page) return []
-  const ids = [...page.blocks, ...(page.aside ?? [])].map((b) => b.component)
-  return ids
-    .map((id) => project.components.find((c) => c.id === id))
-    .filter((c): c is ComponentInstance => Boolean(c && OVERLAY_CATEGORIES.has(c.categoryId)))
+  return page ? planPage(project, page).overlays : []
 }
 
 /** Categorias que mostram dados (as que ganham estado vazio/carregando). */
@@ -305,7 +296,9 @@ export function SitePreview({
     )
   }
 
-  const content = (mobile: boolean, padBottom = 0) => <PageContent project={project} page={page} theme={theme} mobile={mobile} padBottom={padBottom} editMode={editMode} onPick={onPick} state={state} overlay={overlay} />
+  // Plano da página: área principal, coluna lateral do layout e sobreposições (mesma regra do Master Prompt).
+  const plan = planPage(project, page)
+  const content = (mobile: boolean, padBottom = 0) => <PageContent project={project} page={page} theme={theme} mobile={mobile} padBottom={padBottom} editMode={editMode} onPick={onPick} state={state} overlay={overlay} blocks={plan.main} />
   // No celular o painel lateral vira o fim da página (não existe coluna lateral).
   const mobilePage = page.aside?.length ? { ...page, blocks: [...page.blocks, ...page.aside] } : page
 
@@ -345,10 +338,10 @@ export function SitePreview({
         h={size.h}
         content={content(false)}
         aside={
-          page.aside?.length
+          plan.aside.length
             ? (sz: { width: number; height: number }) => (
                 // Região larga e baixa (faixa de indicadores): blocos lado a lado; coluna lateral: um embaixo do outro.
-                <PageContent project={project} page={page} theme={theme} blocks={page.aside} bare editMode={editMode} onPick={onPick} state={state} rowHeight={sz.width > sz.height * 2.5 ? Math.max(60, Math.round(sz.height - 20)) : undefined} />
+                <PageContent project={project} page={page} theme={theme} blocks={plan.aside} bare editMode={editMode} onPick={onPick} state={state} rowHeight={sz.width > sz.height * 2.5 ? Math.max(60, Math.round(sz.height - 20)) : undefined} />
               )
             : undefined
         }

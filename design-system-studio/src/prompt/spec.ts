@@ -6,6 +6,7 @@ import { paletteById } from '@/modules/color/catalog'
 import { detectConflicts, detectPending, type Conflict, type Pending } from './conflicts'
 import { collectPromptData, projectTypeLabel, type PromptItem } from './items'
 import { buildDesignTokens, buildFacts, withGridFacts } from './devexport'
+import { buildSpecOrigin, buildSpecPages, type SpecOrigin, type SpecPage } from './pages'
 import { mobileNavSummary, type AutoResolution } from './resolve'
 import { BREAKPOINTS, COMPONENT_RESPONSIVE_RULES, GLOBAL_RESPONSIVE_RULES, IMPLEMENTATION_RULES, REFERENCE_WIDTHS } from './responsive'
 
@@ -57,6 +58,10 @@ export interface ProjectSpec {
     items: PromptItem[]
   }
   components: PromptItem[]
+  /** Páginas do site: o que vai na área principal, na coluna lateral do layout e por cima (sobreposições). */
+  pages: SpecPage[]
+  /** Modelo da galeria que deu origem ao projeto (cópia independente), ou null. */
+  origin: SpecOrigin | null
   references: {
     inspiration: PromptItem | null
     template: PromptItem | null
@@ -146,6 +151,8 @@ export function buildProjectSpec(project: Project): ProjectSpec {
       items: items.filter((i) => i.section === 'identity' && i.included),
     },
     components: items.filter((i) => i.kind === 'component' && i.included),
+    pages: buildSpecPages(project),
+    origin: buildSpecOrigin(project),
     references: {
       inspiration: pick('inspiration'),
       template: pick('template'),

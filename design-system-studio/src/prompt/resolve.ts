@@ -2,7 +2,7 @@ import type { Project } from '@/core/project'
 import { siteById } from '@/modules/inspiration/catalog'
 import { desktopById, mobileById } from '@/modules/layouts/catalog'
 import type { MobileLayout } from '@/modules/layouts/types'
-import { headerById, headerLookFor, sidebarById, sidebarLookFor } from '@/modules/navigation/catalog'
+import { headerById, headerFitForLayout, headerLookFor, sidebarById, sidebarLookFor } from '@/modules/navigation/catalog'
 import { templateById } from '@/modules/templates/catalog'
 import type { PromptItem } from './items'
 
@@ -142,6 +142,19 @@ export function resolvePromptItems(items: PromptItem[], project: Project): AutoR
         instruction: `O header tem ${target} px de altura no desktop, como define o layout “${desktop.name}”. O modelo “${headerModel.name}” só define a aparência interna.`,
       })
     }
+    // Header × arquitetura: com faixas extras (ex.: editorias abaixo do logo), a linha do layout cresce.
+    const sideNavForFit = desktop.regions.some((r) => r.kind === 'sidebar' || r.kind === 'rail')
+    const fit = headerFitForLayout(headerModel, project.navigation.header!.variant, target, sideNavForFit)
+    if (fit.grows && target) {
+      const row = desktop.grid.areas.findIndex((r) => r.split(/\s+/).includes(headerRegion.id))
+      const desk = byKind('desktop')
+      if (desk && row === 0) desk.structure = desk.structure.map((l) => l.replace(/grid-template-rows: (\d+)px/, (m, v) => (Number(v) === target ? `grid-template-rows: ${fit.total}px` : m)))
+      out.push({
+        id: 'header-faixas',
+        title: 'Header × layout',
+        instruction: `O header ocupa ${fit.total} px (barra de ${target} px + faixas extras): a linha do header no layout passa a ${fit.total} px.`,
+      })
+    }
     const rows = desktop.grid.areas.map((r) => r.trim().split(/\s+/))
     const spansAll = rows.some((cells) => cells.includes(headerRegion.id) && cells.every((c) => c === headerRegion.id))
     if (!spansAll) {
@@ -228,6 +241,14 @@ export function resolvePromptItems(items: PromptItem[], project: Project): AutoR
       return l
     })
     sidebar.behavior = sidebar.behavior.map((l) => l.replace(/^Submenus \(.*?\): /, 'Submenus (itens com subníveis): '))
+    // Texto do botão de criar definido no projeto (no lugar do exemplo do modelo).
+    const cta = project.navigation.sidebar?.cta?.trim()
+    const ctaModel = sidebarModel?.compositions[project.navigation.sidebar!.variant]?.arrangement.cta
+    if (cta && ctaModel && ctaModel !== '+') {
+      const re = new RegExp(`“${escapeRe(ctaModel)}”`, 'g')
+      mapItemText(sidebar, (l) => l.replace(re, `“${cta}”`))
+      out.push({ id: 'sidebar-cta', title: 'Botão de criar da sidebar', instruction: `O botão de criar da sidebar diz “${cta}” (o “${ctaModel}” do modelo era exemplo).` })
+    }
     sidebar.notes.push('Contadores, nomes de espaço de trabalho, perfil e textos entre aspas são exemplos do modelo: use os dados reais do projeto.')
   }
   if (header || sidebar)
