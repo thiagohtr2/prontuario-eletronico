@@ -1,6 +1,7 @@
 import { lazy } from 'react'
 import { createHashRouter, Navigate, RouterProvider } from 'react-router-dom'
 import { useProject } from '@/core/store'
+import { RouteError } from '@/shell/ErrorBoundary'
 import { Shell } from '@/shell/Shell'
 
 // Cada módulo é carregado sob demanda: um erro em um módulo não derruba o Studio inteiro.
@@ -33,6 +34,7 @@ const router = createHashRouter([
   {
     path: '/',
     element: <Shell />,
+    errorElement: <RouteError />,
     children: [
       { index: true, element: <Home /> },
       { path: 'livre', element: <FreeHome /> },

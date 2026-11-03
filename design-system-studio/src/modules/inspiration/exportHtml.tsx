@@ -19,7 +19,7 @@ ${SITE_BASE_CSS}
 .ia-demo-mobile{display:none}
 @media (max-width: 760px){.ia-demo-desktop{display:none}.ia-demo-mobile{display:block}}
 `
-  const body = `<!-- ${site.brand}: conceito fictício gerado pelo Atelier UI (Inspiration Gallery). Paleta: ${palette.name}. Referência de identidade e composição; não use a marca nem os textos como conteúdo real. -->
+  const body = `<!-- ${site.brand}: conceito fictício gerado pelo Atelier UI (Galeria de inspiração). Paleta: ${palette.name}. Referência de identidade e composição; não use a marca nem os textos como conteúdo real. -->
 <div class="ia-demo-desktop">${desktop}</div>
 <div class="ia-demo-mobile">${mobile}</div>`
   return htmlDocument(`${site.brand} — ${site.segment} (demonstração)`, body, css)

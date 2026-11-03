@@ -1,9 +1,11 @@
 import { Suspense, useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { Check, ChevronDown, Cloud, Compass, FileCode2, FolderDown, Menu, Search, Wand2, X } from 'lucide-react'
-import { ALL_STEPS, SKELETON_STEPS, type StepId } from '@/core/project'
-import { useProject, useStudio } from '@/core/store'
-import { Button, IconButton, Modal, Segmented, Toaster, cx, toast } from '@/ui'
+import { ALL_STEPS, SKELETON_STEPS, skeletonDone, type StepId } from '@/core/project'
+import { useProject, useSaveStatus, useStudio } from '@/core/store'
+import { downloadFile } from '@/core/download'
+import { Button, IconButton, Modal, Segmented, Toaster, cx, toast, useMediaQuery } from '@/ui'
+import { ContentBoundary } from './ErrorBoundary'
 import { ALL_ENTRIES, FREE_HOME_ENTRY, HOME_ENTRY, MODULE_GROUPS, STEP_META, type NavEntry } from './nav'
 import './shell.css'
 
@@ -55,8 +57,7 @@ function ModeToggle() {
 }
 
 function SkeletonProgress() {
-  const completed = useProject((p) => p.guided.completed)
-  const done = SKELETON_STEPS.filter((s) => completed.includes(s)).length
+  const done = useProject((p) => skeletonDone(p).length)
   return (
     <span className="shell-progress" title="Progresso do esqueleto">
       Esqueleto {done}/{SKELETON_STEPS.length}
@@ -127,6 +128,9 @@ function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
   const mode = useProject((p) => p.mode)
   const name = useProject((p) => p.meta.name)
   const [collapsed, setCollapsed] = useState<string[]>(readCollapsed)
+  // Abaixo de 1024 px o menu fechado fica fora da tela: também sai do Tab e da árvore de acessibilidade (RA-03).
+  const isDrawer = useMediaQuery('(max-width: 1023px)')
+  const hidden = isDrawer && !open
   const toggle = (id: string) =>
     setCollapsed((c) => {
       const next = c.includes(id) ? c.filter((x) => x !== id) : [...c, id]
@@ -139,7 +143,7 @@ function Sidebar({ open, onClose }: { open: boolean; onClose: () => void }) {
     })
 
   return (
-    <aside className="shell-sidebar" data-open={open} aria-label="Navegação do Studio" id="studio-sidebar">
+    <aside className="shell-sidebar" data-open={open} aria-label="Navegação do Studio" id="studio-sidebar" {...({ inert: hidden ? '' : undefined } as Record<string, string | undefined>)}>
       <div className="shell-sidebar__head">
         <span className="shell-brand__name">Menu</span>
         <IconButton label="Fechar menu" onClick={onClose}>
@@ -298,6 +302,42 @@ function Breadcrumbs() {
   )
 }
 
+/** Avisos de gravação: falha ao salvar, versões podadas e dados salvos que não puderam ser abertos. */
+function SaveWarning() {
+  const { failed, pruned, recoveryKey, dismissRecovery } = useSaveStatus()
+  const downloadRecovery = () => {
+    try {
+      const raw = recoveryKey ? localStorage.getItem(recoveryKey) : null
+      if (raw) downloadFile('atelier-ui-recuperacao.json', raw, 'application/json')
+    } catch {
+      toast.error('Não foi possível ler a cópia de recuperação.')
+    }
+  }
+  if (!failed && !pruned && !recoveryKey) return null
+  return (
+    <div className="shell-save-warning" role="status" data-testid="save-warning">
+      {failed && (
+        <p>
+          <strong>Suas alterações não estão sendo salvas neste navegador</strong> (armazenamento cheio ou bloqueado). Exporte um backup em{' '}
+          <Link to="/exportar">Exportar e importar</Link> para não perder o trabalho.
+        </p>
+      )}
+      {!failed && pruned && <p>O armazenamento do navegador encheu: as versões mais antigas foram removidas para continuar salvando o projeto atual.</p>}
+      {recoveryKey && (
+        <p>
+          Encontramos dados salvos que não puderam ser abertos. Guardamos uma cópia antes de começar do zero.{' '}
+          <button type="button" className="shell-save-warning__btn" onClick={downloadRecovery}>
+            Baixar a cópia
+          </button>{' '}
+          <button type="button" className="shell-save-warning__btn" onClick={dismissRecovery}>
+            Dispensar
+          </button>
+        </p>
+      )}
+    </div>
+  )
+}
+
 export function Shell() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
@@ -337,7 +377,15 @@ export function Shell() {
 
   return (
     <div className="shell">
-      <a href="#conteudo" className="shell-skip">
+      {/* Com o roteador por hash, seguir o link trocaria de rota: o foco vai direto ao conteúdo (RA-02). */}
+      <a
+        href="#conteudo"
+        className="shell-skip"
+        onClick={(e) => {
+          e.preventDefault()
+          document.getElementById('conteudo')?.focus()
+        }}
+      >
         Pular para o conteúdo
       </a>
       <header className="shell-topbar">
@@ -373,9 +421,12 @@ export function Shell() {
         <Sidebar open={menuOpen} onClose={() => setMenuOpen(false)} />
         <main className="shell-main" id="conteudo" tabIndex={-1}>
           <Breadcrumbs />
-          <Suspense fallback={<div className="ui-page u-muted">Carregando…</div>}>
-            <Outlet />
-          </Suspense>
+          <SaveWarning />
+          <ContentBoundary resetKey={location.pathname}>
+            <Suspense fallback={<div className="ui-page u-muted">Carregando…</div>}>
+              <Outlet />
+            </Suspense>
+          </ContentBoundary>
         </main>
       </div>
       <FeatureSearch open={searchOpen} onClose={() => setSearchOpen(false)} />

@@ -104,6 +104,9 @@ export function renderMasterPrompt(spec: ProjectSpec): string {
     bullet([
       a.entryFlow ? `Fluxo de entrada: **${a.entryFlow.name}** — ${a.entryFlow.description}` : 'Fluxo de entrada: não definido.',
       `Landing: ${a.landing ? a.landing.name : 'nenhuma'} · Login: ${a.login ? a.login.name : 'nenhum'} · Cadastro: ${a.signup ? a.signup.name : 'nenhum'}`,
+      a.login && !a.signup && spec.source.entry.noSignup
+        ? 'Não existe cadastro público (decisão do usuário): as contas são criadas por convite ou por um administrador. Não coloque “Criar conta” no login.'
+        : '',
       `Layout desktop: ${a.desktop ? a.desktop.name : 'não definido'} · Layout mobile: ${a.mobile ? a.mobile.name : 'não definido'}`,
       a.oneScreen ? 'Experiência One Screen: a interface principal cabe em uma viewport, sem rolagem vertical principal; áreas internas rolam localmente e nada importante é escondido.' : '',
     ].filter(Boolean)),

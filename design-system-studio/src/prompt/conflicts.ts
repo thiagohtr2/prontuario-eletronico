@@ -89,29 +89,7 @@ export function detectConflicts(project: Project): Conflict[] {
     }
   }
 
-  const flow = ENTRY_FLOWS.find((f) => f.id === project.entry.flow)
-  if (flow && !flow.needsLogin && project.entry.loginId) {
-    out.push({
-      id: 'login-sem-fluxo',
-      title: 'Login escolhido, mas o fluxo de entrada não tem login',
-      description: `O fluxo “${flow.name}” não prevê área restrita, mas há um modelo de login selecionado.`,
-      options: [
-        { id: 'fluxo', label: 'Manter sem login', instruction: 'Não implemente tela de login; desconsidere o modelo de login selecionado.' },
-        { id: 'login', label: 'Incluir o login', instruction: 'Inclua a tela de login escolhida, acessível por um botão “Entrar” no header.' },
-      ],
-    })
-  }
-  if (flow && !flow.needsLanding && project.entry.landingId) {
-    out.push({
-      id: 'landing-sem-fluxo',
-      title: 'Landing escolhida, mas o fluxo de entrada não tem landing',
-      description: `O fluxo “${flow.name}” não prevê página de apresentação, mas há uma landing selecionada.`,
-      options: [
-        { id: 'fluxo', label: 'Manter sem landing', instruction: 'Não implemente landing page; desconsidere o modelo selecionado.' },
-        { id: 'landing', label: 'Incluir a landing', instruction: 'Inclua a landing escolhida como página inicial pública.' },
-      ],
-    })
-  }
+  // Login ou landing fora do fluxo não são contradição: o fluxo escolhido decide (ver activeEntry).
 
   if (project.meta.projectType === 'one-screen') {
     const notOne = [desktop && !desktop.oneScreen ? `desktop “${desktop.name}”` : null, mobile && !mobile.config.oneScreen ? `mobile “${mobile.name}”` : null].filter(Boolean)
@@ -173,7 +151,8 @@ export function detectPending(project: Project): Pending[] {
   if (!flow) out.push({ id: 'fluxo', message: 'Escolha como as pessoas entram no site (landing, login, direto…).', route: '/guiado/entrada' })
   if (flow?.needsLanding && !project.entry.landingId) out.push({ id: 'landing', message: 'Escolha um modelo de landing page.', route: '/modulos/landing' })
   if (flow?.needsLogin && !project.entry.loginId) out.push({ id: 'login', message: 'Escolha um modelo de login.', route: '/modulos/login' })
-  if (flow?.needsLogin && !project.entry.signupId) out.push({ id: 'cadastro', message: 'Escolha um fluxo de cadastro (ou confirme que não haverá cadastro).', route: '/modulos/cadastro' })
+  if (flow?.needsLogin && !project.entry.signupId && !project.entry.noSignup)
+    out.push({ id: 'cadastro', message: 'Escolha um fluxo de cadastro ou marque “Não haverá cadastro”.', route: '/modulos/cadastro' })
   if (!project.layout.desktopId) out.push({ id: 'desktop', message: 'Escolha a arquitetura do computador.', route: '/modulos/desktop' })
   if (!project.layout.mobileId) out.push({ id: 'mobile', message: 'Escolha a arquitetura do celular.', route: '/modulos/mobile' })
   const hasNav = Boolean(project.layout.desktopId || project.layout.mobileId || project.navigation.header || project.navigation.sidebar)

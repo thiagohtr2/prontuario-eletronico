@@ -389,7 +389,7 @@ function ComboView({
     <div className="nvs-combo-ui">
       {showHints && (
         <Callout title="Combinação:">
-          aqui o header e a sidebar escolhidos aparecem juntos em uma tela de aplicativo. A posição real de cada um é decidida no Layout Studio — esta prévia serve para conferir se os dois combinam.
+          aqui o header e a sidebar escolhidos aparecem juntos em uma tela de aplicativo. A posição real de cada um é decidida nas etapas de arquitetura do computador e do celular — esta prévia serve para conferir se os dois combinam.
         </Callout>
       )}
       <div className="nvs-combo-ui__controls">
@@ -531,7 +531,7 @@ export function NavigationShowcase({ guided = false }: { guided?: boolean }) {
     <div className="nvs-root">
       <div className="nvs-intro">
         <p className="nvs-intro__lead">
-          O <strong>Layout Studio</strong> decide <strong>onde</strong> ficam o <Term id="header" /> (a barra do topo) e a <Term id="sidebar" /> (o menu lateral). Aqui você decide{' '}
+          A <strong>arquitetura do computador</strong> decide <strong>onde</strong> ficam o <Term id="header" /> (a barra do topo) e a <Term id="sidebar" /> (o menu lateral). Aqui você decide{' '}
           <strong>como a navegação se parece</strong>: o estilo dos links, a altura, a busca, os menus que se abrem e o perfil. Tudo herda a identidade visual do projeto — cores,
           fontes e cantos.
         </p>

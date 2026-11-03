@@ -21,7 +21,8 @@
   /* Texto */
   --s-text: #15151a;
   --s-text-2: #55555f;
-  --s-text-3: #7c7c87;
+  /* ≥ 4,5:1 sobre branco e sobre --s-accent-soft (RA-06). */
+  --s-text-3: #6b6b76;
   --s-text-disabled: #b3b3bc;
 
   /* Cor de ação do Studio */
@@ -83,7 +84,8 @@
   --control-sm: 36px;
   --control-md: 40px;
   --control-lg: 46px;
-  --focus-ring: 0 0 0 3px rgba(76, 70, 220, 0.28);
+  /* Anel com contraste ≥ 3:1 em qualquer fundo do Studio (RA-07). */
+  --focus-ring: 0 0 0 2px #fff, 0 0 0 4px var(--s-accent);
 
   /* Elevação (somente flutuantes) */
   --float-shadow: 0 12px 40px rgba(20, 20, 30, 0.14), 0 2px 8px rgba(20, 20, 30, 0.06);

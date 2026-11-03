@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { persist, createJSONStorage } from 'zustand/middleware'
+import { persist, createJSONStorage, type StateStorage } from 'zustand/middleware'
 import {
   createProject,
   uid,
@@ -28,6 +28,94 @@ export interface Snapshot {
 export const STORAGE_KEY = 'atelier-ui:studio:v1'
 const MAX_SNAPSHOTS = 30
 
+/* -------------------------------------------------------------------------- */
+/* Gravação local segura (TE-06/TE-07)                                         */
+/* -------------------------------------------------------------------------- */
+
+interface SaveStatus {
+  /** A última gravação falhou (armazenamento cheio, bloqueado ou indisponível). */
+  failed: boolean
+  /** Versões antigas foram removidas para liberar espaço. */
+  pruned: boolean
+  /** Chave da cópia de recuperação de dados salvos que não puderam ser abertos. */
+  recoveryKey: string | null
+  dismissRecovery: () => void
+}
+
+/** Estado da gravação, fora do projeto (não é salvo). */
+export const useSaveStatus = create<SaveStatus>((set) => ({
+  failed: false,
+  pruned: false,
+  recoveryKey: null,
+  dismissRecovery: () => set({ recoveryKey: null }),
+}))
+
+/** Guarda o conteúdo bruto antes de descartá-lo e avisa a pessoa. */
+function keepRecoveryCopy(raw: string) {
+  const key = `${STORAGE_KEY}:recuperacao-${new Date().toISOString().slice(0, 19)}`
+  try {
+    localStorage.setItem(key, raw)
+    useSaveStatus.setState({ recoveryKey: key })
+  } catch {
+    useSaveStatus.setState({ failed: true })
+  }
+}
+
+const safeStorage: StateStorage = {
+  getItem: (name) => {
+    try {
+      const raw = localStorage.getItem(name)
+      if (raw === null) return null
+      JSON.parse(raw)
+      return raw
+    } catch {
+      // JSON ilegível: guarda uma cópia antes que a próxima gravação o sobrescreva.
+      try {
+        const raw = localStorage.getItem(name)
+        if (raw) keepRecoveryCopy(raw)
+      } catch {
+        /* armazenamento indisponível */
+      }
+      return null
+    }
+  },
+  setItem: (name, value) => {
+    try {
+      localStorage.setItem(name, value)
+      if (useSaveStatus.getState().failed) useSaveStatus.setState({ failed: false })
+      return
+    } catch {
+      // Cota estourada: tenta de novo com menos versões (o projeto atual tem prioridade).
+      try {
+        const data = JSON.parse(value) as { state?: { history?: unknown[] } }
+        for (const keep of [10, 0]) {
+          if (!data.state?.history || data.state.history.length <= keep) continue
+          data.state.history = data.state.history.slice(0, keep)
+          try {
+            localStorage.setItem(name, JSON.stringify(data))
+            const history = data.state.history as Snapshot[]
+            useSaveStatus.setState({ failed: false, pruned: true })
+            queueMicrotask(() => useStudio.setState({ history }))
+            return
+          } catch {
+            /* ainda não coube */
+          }
+        }
+      } catch {
+        /* valor inesperado */
+      }
+      useSaveStatus.setState({ failed: true })
+    }
+  },
+  removeItem: (name) => {
+    try {
+      localStorage.removeItem(name)
+    } catch {
+      /* armazenamento indisponível */
+    }
+  },
+}
+
 interface StudioState {
   project: Project
   history: Snapshot[]
@@ -47,6 +135,7 @@ interface StudioState {
   setEntryFlow: (flow: EntryFlow) => void
   selectLanding: (id: string | null) => void
   setLandingUsesOriginalColors: (value: boolean) => void
+  setNoSignup: (value: boolean) => void
   selectLogin: (id: string | null) => void
   selectSignup: (id: string | null) => void
 
@@ -104,11 +193,12 @@ export const useStudio = create<StudioState>()(
       const edit = (recipe: Recipe) =>
         set((s) => ({ project: { ...recipe(s.project), updatedAt: new Date().toISOString() } }))
 
+      // O relatório de validação (que pode ser grande) fica só no projeto atual, fora das versões (TE-08).
       const snapshotOf = (label: string, project: Project): Snapshot => ({
         id: uid('snap'),
         label,
         createdAt: new Date().toISOString(),
-        project: structuredClone(project),
+        project: structuredClone({ ...project, validation: { ...project.validation, report: null } }),
       })
 
       const pushSnapshot = (label: string) =>
@@ -138,7 +228,9 @@ export const useStudio = create<StudioState>()(
         setLandingUsesOriginalColors: (value) =>
           edit((p) => ({ ...p, entry: { ...p.entry, landingUsesOriginalColors: value } })),
         selectLogin: (id) => edit((p) => ({ ...p, entry: { ...p.entry, loginId: id } })),
-        selectSignup: (id) => edit((p) => ({ ...p, entry: { ...p.entry, signupId: id } })),
+        // Escolher um cadastro desfaz a decisão “sem cadastro”.
+        selectSignup: (id) => edit((p) => ({ ...p, entry: { ...p.entry, signupId: id, noSignup: id ? false : p.entry.noSignup } })),
+        setNoSignup: (value) => edit((p) => ({ ...p, entry: { ...p.entry, noSignup: value } })),
 
         selectDesktop: (id) => edit((p) => ({ ...p, layout: { ...p.layout, desktopId: id } })),
         selectMobile: (id) => edit((p) => ({ ...p, layout: { ...p.layout, mobileId: id } })),
@@ -284,16 +376,27 @@ export const useStudio = create<StudioState>()(
     {
       name: STORAGE_KEY,
       version: 1,
-      storage: createJSONStorage(() => localStorage),
+      storage: createJSONStorage(() => safeStorage),
+      // Estados de outra versão passam pela mesma validação/mesclagem em vez de serem descartados.
+      migrate: (persisted) => persisted as StudioState,
       partialize: (s) => ({ project: s.project, history: s.history }),
       merge: (persisted, current) => {
         const saved = persisted as Partial<Pick<StudioState, 'project' | 'history'>> | undefined
         if (!saved?.project) return current
         const parsed = parseProjectFile(saved.project)
+        // Projeto salvo inválido: nada é descartado sem antes guardar uma cópia de recuperação.
+        if (!parsed.ok) keepRecoveryCopy(JSON.stringify({ state: saved }))
+        // Versões também são validadas; só as inválidas ficam de fora.
+        const history = Array.isArray(saved.history)
+          ? saved.history.flatMap((h) => {
+              const p = h && typeof h === 'object' ? parseProjectFile((h as Snapshot).project) : null
+              return p?.ok ? [{ ...(h as Snapshot), project: p.project }] : []
+            })
+          : []
         return {
           ...current,
           project: parsed.ok ? parsed.project : current.project,
-          history: Array.isArray(saved.history) ? saved.history : [],
+          history,
         }
       },
     },

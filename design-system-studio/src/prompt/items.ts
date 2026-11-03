@@ -1,5 +1,5 @@
 import { describeCatalogItem, type ItemDescription } from '@/core/describe'
-import { DEFAULT_PALETTE_ID, ENTRY_FLOWS, PROJECT_TYPES, type Project, type PropValue } from '@/core/project'
+import { activeEntry, DEFAULT_PALETTE_ID, ENTRY_FLOWS, PROJECT_TYPES, type Project, type PropValue } from '@/core/project'
 import { projectTheme } from '@/core/theme'
 import { DEFAULT_GEOMETRY, DEFAULT_TYPOGRAPHY, DENSITY_SPACING, deriveTokens, fontName, RADIUS_VALUES, SHADOW_VALUES, SURFACE_LABEL, TOKEN_LABEL } from '@/core/tokens'
 import type { ResolvedTheme, TokenKey } from '@/core/types'
@@ -141,6 +141,7 @@ export function describeEntryFlow(project: Project): ItemDescription | null {
     structure: [
       flow.needsLanding ? 'Existe uma página pública de apresentação (landing).' : 'Não existe landing page.',
       flow.needsLogin ? 'Existe uma área restrita acessada pela tela de login.' : 'Não existe login.',
+      flow.needsLogin && project.entry.noSignup ? 'Não existe cadastro público: as contas são criadas por convite ou por um administrador. Não coloque “Criar conta” no login.' : '',
       flow.id === 'landing-login' ? 'O header da landing tem uma ação “Entrar” que leva ao login, e um CTA para criar conta quando houver cadastro.' : '',
       flow.id === 'app-direct' ? 'A rota inicial abre direto a tela principal da aplicação.' : '',
     ].filter(Boolean),
@@ -234,8 +235,9 @@ export function collectPromptData(project: Project): { items: PromptItem[]; reso
   const flow = describeEntryFlow(project)
   if (flow) items.push(toItem('entry.flow', 'entry-flow', 'architecture', 'entrada', project.entry.flow, flow, project))
 
-  const flowDef = ENTRY_FLOWS.find((f) => f.id === project.entry.flow)
-  const landing = landingById(project.entry.landingId)
+  // Só as páginas que existem no fluxo escolhido (seleções antigas ficam guardadas, mas inativas).
+  const entry = activeEntry(project.entry)
+  const landing = landingById(entry.landingId)
   if (landing) {
     const d = describeCatalogItem(landing, {
       variant: landing.segment,
@@ -244,11 +246,11 @@ export function collectPromptData(project: Project): { items: PromptItem[]; reso
       exceptions: project.entry.landingUsesOriginalColors
         ? ['Exceção explícita: a landing usa as cores originais do modelo, não a paleta global.']
         : [],
-      notes: [...(landing.spec.notes ?? []), ...(flowDef && !flowDef.needsLanding ? ['Atenção: o fluxo de entrada escolhido não prevê landing page.'] : [])],
+      notes: landing.spec.notes ?? [],
     })
     items.push(toItem('entry.landing', 'landing', 'architecture', 'landing', landing.id, d, project, ['header', 'button']))
   }
-  const login = loginById(project.entry.loginId)
+  const login = loginById(entry.loginId)
   if (login) {
     const d = describeCatalogItem(login, {
       variant: login.composition,
@@ -259,7 +261,7 @@ export function collectPromptData(project: Project): { items: PromptItem[]; reso
     })
     items.push(toItem('entry.login', 'login', 'architecture', 'login', login.id, d, project, ['form', 'button']))
   }
-  const signup = signupById(project.entry.signupId)
+  const signup = signupById(entry.signupId)
   if (signup) {
     const d = describeCatalogItem(signup, {
       variant: signup.flow,
@@ -407,14 +409,18 @@ export function itemForTarget(target: PromptTarget, project: Project): PromptIte
   let key: string
   switch (target.kind) {
     case 'landing':
+      p.entry.flow = null
       p.entry.landingId = target.id
       key = 'entry.landing'
       break
     case 'login':
+      p.entry.flow = null
       p.entry.loginId = target.id
       key = 'entry.login'
       break
     case 'signup':
+      p.entry.flow = null
+      p.entry.noSignup = false
       p.entry.signupId = target.id
       key = 'entry.signup'
       break

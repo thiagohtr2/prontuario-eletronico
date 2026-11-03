@@ -19,6 +19,10 @@ type Mode = 'wide' | 'medium' | 'narrow'
 const groupName = (id: MobileGroup) => MOBILE_GROUPS.find((g) => g.id === id)?.name ?? id
 const clamp = (n: number, min: number, max: number) => Math.max(min, Math.min(max, n))
 const TOPBAR = 60
+/** Altura reservada para o rodapé fixo do guiado (botões Voltar/Continuar). */
+const GUIDED_FOOTER = 76
+/** Largura mínima da coluna de miniaturas ao lado do celular grande. */
+const MIN_LIST_W = 150
 const THUMB_W = 104
 
 const MobileCard = memo(function MobileCard({
@@ -123,14 +127,13 @@ export function MobileStudio({ guided = false }: { guided?: boolean }) {
   const rootWidth = useElementWidth(rootRef, 1100)
   const vh = useViewportHeight()
 
-  const mode: Mode = rootWidth >= 940 ? 'wide' : rootWidth >= 620 ? 'medium' : 'narrow'
+  // No guiado o rodapé fixo também ocupa a altura da janela: o celular grande não pode ficar sob ele.
+  const reserved = TOPBAR + 44 + (guided ? GUIDED_FOOTER : 0)
+  const mediumPhoneW = clamp(Math.floor((vh - reserved - 168) / 2.06), 240, 340)
+  // Modo médio só quando sobra uma coluna útil de miniaturas ao lado do celular (nada fica coberto).
+  const mode: Mode = rootWidth >= 940 ? 'wide' : rootWidth - (mediumPhoneW + 16) - 24 >= MIN_LIST_W ? 'medium' : 'narrow'
   const infoW = clamp(Math.round(rootWidth * 0.24), 210, 280)
-  const phoneW =
-    mode === 'wide'
-      ? clamp(Math.floor((vh - TOPBAR - 44) / 2.06), 280, 380)
-      : mode === 'medium'
-        ? clamp(Math.floor((vh - TOPBAR - 44 - 168) / 2.06), 240, 340)
-        : clamp(rootWidth - 22, 240, 360)
+  const phoneW = mode === 'wide' ? clamp(Math.floor((vh - reserved) / 2.06), 280, 380) : mode === 'medium' ? mediumPhoneW : clamp(rootWidth - 22, 240, 360)
 
   const suggested = useMemo(() => new Set(projectType ? SUGGESTIONS[projectType].mobile : []), [projectType])
   const selected = mobileById(mobileId)
@@ -180,7 +183,7 @@ export function MobileStudio({ guided = false }: { guided?: boolean }) {
         </p>
       </div>
 
-      <div ref={rootRef} className="lay-mob" data-mode={mode} style={{ '--lay-info-w': `${infoW}px` } as CSSProperties}>
+      <div ref={rootRef} className="lay-mob" data-mode={mode} style={{ '--lay-info-w': `${infoW}px`, '--lay-stage-w': `${phoneW + 16}px` } as CSSProperties}>
         <div className="lay-mob-list">
           {mode === 'narrow' ? (
             <div className="lay-mob-grid" role="group" aria-label="Modelos de navegação móvel">

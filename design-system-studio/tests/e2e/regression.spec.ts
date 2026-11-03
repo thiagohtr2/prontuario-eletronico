@@ -255,7 +255,7 @@ test.describe('REG-03 · Controles da identidade e dos componentes alteram a pr�
   const fontSize = (l: Locator) => l.evaluate((e) => parseFloat(getComputedStyle(e).fontSize))
 
   test('"Tamanho base do texto" muda o corpo do texto da prévia, não só o título', async ({ page }) => {
-    test.fail(true, `REG-03: "Tamanho base do texto" só altera o título da prévia (corpo fica em 13 px) ${VER}`)
+    // Corrigido na v4.21: `REG-03: "Tamanho base do texto" só altera o título da prévia (corpo fica em 13 px) ${VER}`)
     await freshStart(page)
     await go(page, '/modulos/cores')
     await page.getByRole('tab', { name: 'Tipografia' }).click()
@@ -270,7 +270,7 @@ test.describe('REG-03 · Controles da identidade e dos componentes alteram a pr�
   })
 
   test('"Estilo dos ícones" (Preenchido/Duotone) muda os ícones da prévia da identidade', async ({ page }) => {
-    test.fail(true, `REG-03: o estilo dos ícones é salvo e vai ao prompt, mas a prévia da identidade não muda ${VER}`)
+    // Corrigido na v4.21: `REG-03: o estilo dos ícones é salvo e vai ao prompt, mas a prévia da identidade não muda ${VER}`)
     await freshStart(page)
     await go(page, '/modulos/cores')
     await page.getByRole('tab', { name: 'Formas e superfícies' }).click()
@@ -376,7 +376,7 @@ test.describe('REG-04 · Botões grudados ou sobrepostos', () => {
   test.describe('tablet 768×1024', () => {
     test.use({ viewport: { width: 768, height: 1024 } })
     test('"Escolher este modelo" do celular grande não fica por cima das miniaturas', async ({ page }) => {
-      test.fail(true, `REG-04: entre 620 e 939 px de largura útil o painel do celular grande (com o botão) cobre as miniaturas ${VER}`)
+      // Corrigido na v4.21: `REG-04: entre 620 e 939 px de largura útil o painel do celular grande (com o botão) cobre as miniaturas ${VER}`)
       await freshStart(page)
       await go(page, '/modulos/mobile')
       const btn = page.getByRole('button', { name: 'Escolher este modelo' })
@@ -757,7 +757,7 @@ test.describe('REG-14 · Arquivos exportados válidos e downloads no primeiro cl
   })
 
   test('guiado 1440×900: o primeiro clique real em "CSS dos tokens" baixa o arquivo', async ({ page }) => {
-    test.fail(true, `REG-14: no guiado (etapa 7) o botão "CSS dos tokens" fica sob o rodapé fixo; o clique cai em "Continuar" e não baixa nada ${VER}`)
+    // Corrigido na v4.21: `REG-14: no guiado (etapa 7) o botão "CSS dos tokens" fica sob o rodapé fixo; o clique cai em "Continuar" e não baixa nada ${VER}`)
     await seed(page, { guided: { skeletonApproved: true, step: 'identidade' } })
     await go(page, '/guiado/identidade')
     await page.mouse.wheel(0, 1500)
@@ -821,7 +821,7 @@ test.describe('REG-15 · O aplicativo sempre carrega', () => {
 
 test.describe('REG-16 · Conteúdo não fica encoberto pela barra fixa inferior', () => {
   test('guiado 1440×900: "Prompt da identidade" e "CSS dos tokens" ficam acima do rodapé fixo', async ({ page }) => {
-    test.fail(true, `REG-16: o painel fixo da prévia de identidade termina sob o rodapé do guiado (botões cobertos) ${VER}`)
+    // Corrigido na v4.21: `REG-16: o painel fixo da prévia de identidade termina sob o rodapé do guiado (botões cobertos) ${VER}`)
     await seed(page, { guided: { skeletonApproved: true, step: 'identidade' } })
     await go(page, '/guiado/identidade')
     for (const name of ['Prompt da identidade', 'CSS dos tokens']) {
@@ -835,7 +835,7 @@ test.describe('REG-16 · Conteúdo não fica encoberto pela barra fixa inferior'
   })
 
   test('guiado 1440×900 (etapa 4): a base do celular grande fixo não fica sob o rodapé', async ({ page }) => {
-    test.fail(true, `REG-16: a altura do celular grande ignora o rodapé do guiado; 23 px da base (barra inferior da prévia) ficam cobertos ${VER}`)
+    // Corrigido na v4.21: `REG-16: a altura do celular grande ignora o rodapé do guiado; 23 px da base (barra inferior da prévia) ficam cobertos ${VER}`)
     await freshStart(page)
     await go(page, '/guiado/mobile')
     await page.evaluate(() => window.scrollTo(0, 2000))
@@ -913,7 +913,7 @@ test.describe('REG-17 · Sem overflow nas galerias de layouts', () => {
     test.describe(label, () => {
       test.use({ viewport: vp, hasTouch: true })
       test('galeria do celular: coluna de miniaturas com largura útil e nenhuma miniatura coberta', async ({ page }) => {
-        test.fail(true, `REG-17: no modo "medium" (620–939 px úteis) a coluna de miniaturas colapsa para 0 px e as 44 miniaturas transbordam sob o celular grande ${VER}`)
+        // Corrigido na v4.21: `REG-17: no modo "medium" (620–939 px úteis) a coluna de miniaturas colapsa para 0 px e as 44 miniaturas transbordam sob o celular grande ${VER}`)
         await freshStart(page)
         await go(page, '/modulos/mobile')
         const listW = await page.locator('.lay-mob-list').evaluate((e) => e.getBoundingClientRect().width)
@@ -971,7 +971,7 @@ test.describe('REG-18 · Desktop e celular compatíveis', () => {
   test.describe('celular 360×800', () => {
     test.use(MOBILE)
     test('a prévia integrada abre no modo Celular quando a tela é de celular', async ({ page }) => {
-      test.fail(true, `REG-18: no celular a prévia integrada abre em "Computador" (escala ~0,26, texto de 3–5 px) ${VER}`)
+      // Corrigido na v4.21: `REG-18: no celular a prévia integrada abre em "Computador" (escala ~0,26, texto de 3–5 px) ${VER}`)
       await seed(page, { layout: { desktopId: 'sidebar-integral-classica', mobileId: 'bottom-nav-classica' } })
       await go(page, '/modulos/preview')
       await expect(page.getByTestId('live-preview').getByTestId('phone-preview').first()).toBeVisible({ timeout: 3000 })
@@ -981,7 +981,7 @@ test.describe('REG-18 · Desktop e celular compatíveis', () => {
 
 test.describe('REG-19 · Login e cadastro correspondem à seleção', () => {
   test('com "Apenas login" e sem cadastro escolhido, a prévia integrada não oferece a página "Cadastro"', async ({ page }) => {
-    test.fail(true, `REG-19: a aba "Cadastro" aparece sempre que há login e mostra um "Crie sua conta" genérico sem cadastro escolhido ${VER}`)
+    // Corrigido na v4.21: `REG-19: a aba "Cadastro" aparece sempre que há login e mostra um "Crie sua conta" genérico sem cadastro escolhido ${VER}`)
     await seed(page, { entry: { flow: 'login-only', loginId: 'classico-central', signupId: null }, layout: { desktopId: 'sidebar-integral-classica', mobileId: 'bottom-nav-classica' } })
     await go(page, '/modulos/preview')
     const pages = page.getByRole('group', { name: 'Página da prévia' })
@@ -1000,7 +1000,7 @@ test.describe('REG-19 · Login e cadastro correspondem à seleção', () => {
 
 test.describe('REG-20 · Alterar um módulo não quebra outro', () => {
   test('trocar o fluxo para "Aplicação diretamente" tira o login antigo do prompt e da prévia', async ({ page }) => {
-    test.fail(true, `REG-20: o login escolhido antes continua no Master Prompt e na prévia depois de mudar o fluxo para "sem login" ${VER}`)
+    // Corrigido na v4.21: `REG-20: o login escolhido antes continua no Master Prompt e na prévia depois de mudar o fluxo para "sem login" ${VER}`)
     await freshStart(page)
     await go(page, '/modulos/login')
     await hitOf(page.locator('[data-testid^="login-option-"]').first()).click()

@@ -42,3 +42,22 @@ Linhas de conteúdo repetidas (≥ 25 caracteres): de 41–48 por prompt para 0.
 **Verificação:** Vitest 467 testes (novo `tests/unit/v420.test.ts`: 144 composições de header/sidebar, observação
 da paleta, backup com versões, orçamento de tamanho, ausência de repetição, preservação de tokens e regras);
 Playwright 77 testes passando.
+
+# Versão 4.21 concluída (2026-11-03) — guiado sem gargalos, acessível e robusto
+
+| Item | O que mudou |
+| --- | --- |
+| B-13 Fluxo de entrada coerente | Landing/login/cadastro fora do fluxo escolhido ficam guardados, mas inativos (`activeEntry`): não aparecem na prévia nem no prompt; não existe mais “contradição” por isso. Nova decisão explícita “Não haverá cadastro” (`entry.noSignup`), que tira a pendência e avisa a IA para não pôr “Criar conta”. A aba “Cadastro” da prévia só aparece com cadastro escolhido. |
+| B-06 Etapa 2 sem gargalo | Atalho “É um sistema interno?” (apenas login, sem cadastro); “Não preciso de landing” na aba Landing; “Parte x de y” + botão “Próxima parte”; aba atual rolada para a área visível no celular. “Continuar” com pendência continua clicável: explica o que falta e abre a parte certa (aria-disabled + dica associada). |
+| B-07 Recomendados | Bloco “Recomendados para <tipo>” no objetivo com “Usar recomendados e continuar”: aplica fluxo, arquiteturas e modelos de entrada sem apagar escolhas existentes e vai à revisão. |
+| B-08 Entrega | “O que fazer agora”: copiar → abrir a IA num projeto vazio → colar → validar; antes disso, quantas pendências e contradições faltam (com atalho). |
+| B-16 Prompts individuais | Arquivo e título com o nome do elemento (ex.: `prompt-componente-tabela-de-pedidos.md`). |
+| B-17 Contador do esqueleto | `skeletonDone()` calcula as etapas pelas escolhas reais; topo, início e stepper usam a mesma regra; a revisão só diz “Esqueleto aprovado” depois de aprovar. |
+| B-20 Textos | Módulos com nomes em português (Prévia integrada, Cores e identidade, Header e sidebar, Galeria de inspiração, Modelos de página, Validação responsiva, Arquitetura do computador/celular); explicações de termos ficam abertas ao clicar ou tocar (fecham com Esc ou saindo do termo). |
+| B-12 Controles visíveis | Prévia da identidade acompanha o tamanho base do texto e o estilo dos ícones; densidade escolhida no editor prevalece no prompt (v4.20). |
+| B-11 Acessibilidade | Galeria do celular com coluna de miniaturas sempre útil (RA-01, REG-04/17); “Pular para o conteúdo” sem trocar de rota (RA-02); menu fechado `inert` e `visibility: hidden` (RA-03); painéis fixos e celular grande descontam o rodapé do guiado, `scroll-padding` no topo e na base (RA-05, REG-14/16); texto secundário #6b6b76 (RA-06); anel de foco 2 px branco + 4 px de destaque e contorno em alto contraste (RA-07); prévia integrada abre no modo Celular em telas de celular (REG-18). |
+| B-10 Robustez | Error boundary por tela e `errorElement` na rota raiz, em português, com “Tentar de novo”; gravação segura (falha avisada em faixa fixa; com cota cheia, poda versões antigas e continua salvando o projeto); dados salvos ilegíveis ou inválidos viram cópia de recuperação baixável antes de qualquer descarte; versões validadas na abertura; `migrate` para estados de outra versão; relatório de validação fora das versões. |
+
+**Regressão:** os 15 defeitos reproduzidos pela auditoria (`test.fail`) agora são testes normais e passam.
+
+**Verificação:** Vitest 468 testes; Playwright 86 testes (77 anteriores + 9 novos em `tests/e2e/v421.spec.ts`).

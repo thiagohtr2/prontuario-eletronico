@@ -323,12 +323,17 @@
     width: min(86vw, 320px);
     height: 100%;
     transform: translateX(-102%);
-    transition: transform 0.2s ease;
+    visibility: hidden;
+    transition:
+      transform 0.2s ease,
+      visibility 0s linear 0.2s;
     box-shadow: var(--float-shadow);
     padding-top: env(safe-area-inset-top);
   }
   .shell-sidebar[data-open='true'] {
     transform: none;
+    visibility: visible;
+    transition: transform 0.2s ease;
   }
   .shell-sidebar__mode {
     display: block;
@@ -451,4 +456,31 @@
   .shell-brand {
     min-height: 44px;
   }
+}
+
+/* Avisos de gravação (TE-06/TE-07). */
+.shell-save-warning {
+  margin: var(--sp-4) var(--page-pad, 24px) 0;
+  padding: 12px 16px;
+  border: 1px solid var(--s-warning);
+  border-radius: 10px;
+  background: var(--s-warning-soft);
+  color: var(--s-text);
+  font-size: 14px;
+}
+.shell-save-warning p {
+  margin: 0;
+}
+.shell-save-warning p + p {
+  margin-top: 6px;
+}
+.shell-save-warning__btn {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--s-accent);
+  font: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
 }

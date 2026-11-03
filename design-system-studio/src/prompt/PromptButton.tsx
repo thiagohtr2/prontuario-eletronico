@@ -3,7 +3,7 @@ import { Download, FileText } from 'lucide-react'
 import { downloadFile, slugify } from '@/core/download'
 import { useStudio } from '@/core/store'
 import { Button, Callout, CopyButton, Modal } from '@/ui'
-import { itemForTarget, targetTitle, type PromptTarget } from './items'
+import { itemForTarget, KIND_LABEL, targetTitle, type PromptTarget } from './items'
 import { renderItemPrompt } from './text'
 
 /**
@@ -34,11 +34,14 @@ export function PromptButton({
 
 export function PromptModal({ target, onClose }: { target: PromptTarget; onClose: () => void }) {
   const project = useStudio((s) => s.project)
-  const text = useMemo(() => {
+  const { text, title } = useMemo(() => {
     const item = itemForTarget(target, project)
-    return item ? renderItemPrompt(item, project) : null
+    // O nome do arquivo e o título vêm do próprio elemento (nada de “prompt-elemento.md”).
+    return {
+      text: item ? renderItemPrompt(item, project) : null,
+      title: item && (target.kind === 'component' || target.kind === 'item') ? `${KIND_LABEL[item.kind]} ${item.name}` : targetTitle(target),
+    }
   }, [target, project])
-  const title = targetTitle(target)
 
   return (
     <Modal

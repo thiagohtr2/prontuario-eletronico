@@ -149,6 +149,8 @@ export interface Project {
     signupId: string | null
     /** Exceção explícita: a landing mantém as cores originais do modelo em vez da paleta global. */
     landingUsesOriginalColors: boolean
+    /** Decisão explícita: não haverá cadastro público (contas criadas por convite ou administrador). */
+    noSignup: boolean
   }
   layout: {
     desktopId: string | null
@@ -226,7 +228,7 @@ export function createProject(): Project {
     depth: 'essential',
     prefs: { showLegends: true, showHints: true },
     guided: { step: 'objetivo', completed: [], skeletonApproved: false },
-    entry: { flow: null, landingId: null, loginId: null, signupId: null, landingUsesOriginalColors: false },
+    entry: { flow: null, landingId: null, loginId: null, signupId: null, landingUsesOriginalColors: false, noSignup: false },
     layout: { desktopId: null, mobileId: null },
     identity: {
       paletteId: DEFAULT_PALETTE_ID,
@@ -260,6 +262,35 @@ export const ENTRY_FLOWS: { id: EntryFlow; name: string; description: string; ne
   { id: 'app-direct', name: 'Aplicação diretamente', description: 'O sistema abre direto na tela principal, sem apresentação nem login.', needsLanding: false, needsLogin: false },
   { id: 'institutional', name: 'Página institucional', description: 'Site informativo da empresa ou serviço, com várias seções públicas.', needsLanding: true, needsLogin: false },
 ]
+
+/**
+ * Páginas de entrada que valem para o fluxo escolhido. Seleções fora do fluxo continuam guardadas
+ * (a pessoa pode voltar ao fluxo anterior), mas não entram na prévia nem no Master Prompt.
+ */
+export function activeEntry(entry: Project['entry']): { landingId: string | null; loginId: string | null; signupId: string | null } {
+  const flow = ENTRY_FLOWS.find((f) => f.id === entry.flow)
+  return {
+    landingId: !flow || flow.needsLanding ? entry.landingId : null,
+    loginId: !flow || flow.needsLogin ? entry.loginId : null,
+    signupId: (!flow || flow.needsLogin) && !entry.noSignup ? entry.signupId : null,
+  }
+}
+
+/**
+ * Etapas do esqueleto concluídas, calculadas a partir das escolhas reais (e não de cliques em
+ * “Continuar”). É a única fonte dos contadores “Esqueleto x/5” no Studio inteiro.
+ */
+export function skeletonDone(p: Pick<Project, 'meta' | 'entry' | 'layout' | 'guided'>): StepId[] {
+  const flow = ENTRY_FLOWS.find((f) => f.id === p.entry.flow)
+  const done: Partial<Record<StepId, boolean>> = {
+    objetivo: Boolean(p.meta.projectType),
+    entrada: Boolean(flow) && (!flow!.needsLanding || Boolean(p.entry.landingId)) && (!flow!.needsLogin || Boolean(p.entry.loginId)),
+    desktop: Boolean(p.layout.desktopId),
+    mobile: Boolean(p.layout.mobileId),
+    revisao: p.guided.skeletonApproved,
+  }
+  return SKELETON_STEPS.filter((s) => done[s])
+}
 
 /** Sugestões de arquitetura por tipo de projeto. São sugestões — nunca obrigatórias. */
 export const SUGGESTIONS: Record<ProjectType, { entryFlow: EntryFlow; desktop: string[]; mobile: string[]; note: string }> = {

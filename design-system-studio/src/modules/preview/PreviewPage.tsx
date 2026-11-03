@@ -6,7 +6,7 @@ export default function PreviewPage() {
     <div className="ui-page">
       <PageHeader
         eyebrow="Estrutura"
-        title="Live Site Preview"
+        title="Prévia integrada"
         description="Todas as suas escolhas juntas: layout, header, sidebar, paleta, tipografia, landing, login e cadastro. Alterne entre computador, tablet e celular e olhe com calma: é assim que o site deve ficar?"
       />
       <LiveSitePreview />

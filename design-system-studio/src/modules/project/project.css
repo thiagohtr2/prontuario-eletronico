@@ -124,3 +124,16 @@
   gap: 2px;
   min-width: 0;
 }
+
+/* Caminho rápido com a combinação recomendada (B-07). */
+.goal-recommended {
+  margin-top: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--s-border);
+  border-radius: 12px;
+  background: var(--s-surface);
+}
+.goal-recommended ul {
+  margin: 6px 0 4px;
+  padding-left: 18px;
+}

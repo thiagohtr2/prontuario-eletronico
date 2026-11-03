@@ -22,7 +22,7 @@ export function moduleStatus(project: Project): Record<string, ModuleStatus> {
     objetivo: s(project.meta.name ? `${project.meta.name}${type ? ` · ${type.name}` : ''}` : type?.name, 'Defina nome e tipo'),
     landing: flow && !flow.needsLanding ? { done: true, text: 'Sem landing neste fluxo' } : s(landingById(project.entry.landingId)?.name),
     login: flow && !flow.needsLogin ? { done: true, text: 'Sem login neste fluxo' } : s(loginById(project.entry.loginId)?.name),
-    cadastro: flow && !flow.needsLogin ? { done: true, text: 'Sem cadastro neste fluxo' } : s(signupById(project.entry.signupId)?.name),
+    cadastro: flow && !flow.needsLogin ? { done: true, text: 'Sem cadastro neste fluxo' } : project.entry.noSignup ? { done: true, text: 'Não haverá cadastro' } : s(signupById(project.entry.signupId)?.name),
     desktop: s(desktopById(project.layout.desktopId)?.name),
     mobile: s(mobileById(project.layout.mobileId)?.name),
     preview: { done: Boolean(project.layout.desktopId || project.layout.mobileId), text: project.layout.desktopId || project.layout.mobileId ? 'Pronta para visualizar' : 'Escolha os layouts primeiro' },

@@ -9,6 +9,11 @@
   top: calc(var(--topbar-h) + var(--sp-4));
   display: grid;
   gap: var(--sp-3);
+  /* Cabe entre a barra do topo e o rodapé do guiado (REG-16); rola por dentro se precisar. */
+  max-height: calc(100dvh - var(--topbar-h) - var(--footer-h, 0px) - var(--sp-6));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
 }
 @media (max-width: 1180px) {
   .clr-layout {
@@ -17,6 +22,8 @@
   .clr-aside {
     position: static;
     order: -1;
+    max-height: none;
+    overflow: visible;
   }
 }
 

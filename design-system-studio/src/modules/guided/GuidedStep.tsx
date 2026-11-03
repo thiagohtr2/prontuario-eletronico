@@ -1,7 +1,8 @@
 import { useEffect, type ReactNode } from 'react'
 import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { ArrowLeft, ArrowRight, Check, Lock, ShieldCheck } from 'lucide-react'
-import { ALL_STEPS, ENTRY_FLOWS, FINISH_STEPS, SKELETON_STEPS, type StepId } from '@/core/project'
+import { useShallow } from 'zustand/react/shallow'
+import { ALL_STEPS, ENTRY_FLOWS, FINISH_STEPS, SKELETON_STEPS, skeletonDone, type StepId } from '@/core/project'
 import { useProject, useStudio } from '@/core/store'
 import { ColorSystem } from '@/modules/color/ColorSystem'
 import { ComponentLibrary } from '@/modules/components'
@@ -12,7 +13,7 @@ import { ProjectGoalForm } from '@/modules/project/ProjectGoalForm'
 import { PromptWorkspace } from '@/modules/prompts/PromptWorkspace'
 import { STEP_META } from '@/shell/nav'
 import { Button, toast } from '@/ui'
-import { EntryStep } from './EntryStep'
+import { EntryStep, openEntrySub } from './EntryStep'
 import { SkeletonReview } from './SkeletonReview'
 import './guided.css'
 
@@ -29,7 +30,15 @@ const STEP_INTRO: Record<StepId, string> = {
   entrega: 'Tudo o que você aprovou vira um Master Prompt detalhado. Copie, baixe ou exporte em JSON e CSS.',
 }
 
-function useStepRequirement(step: StepId): string | null {
+interface Requirement {
+  message: string
+  /** Leva a pessoa até o que falta. */
+  fix?: () => void
+}
+
+const scrollToMain = () => document.getElementById('conteudo')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+
+function useStepRequirement(step: StepId): Requirement | null {
   const projectType = useProject((p) => p.meta.projectType)
   const flowId = useProject((p) => p.entry.flow)
   const landingId = useProject((p) => p.entry.landingId)
@@ -39,16 +48,16 @@ function useStepRequirement(step: StepId): string | null {
   const flow = ENTRY_FLOWS.find((f) => f.id === flowId)
   switch (step) {
     case 'objetivo':
-      return projectType ? null : 'Escolha o tipo de projeto para continuar.'
+      return projectType ? null : { message: 'Escolha o tipo de projeto para continuar.', fix: () => document.getElementById('tipo')?.scrollIntoView({ behavior: 'smooth' }) }
     case 'entrada':
-      if (!flow) return 'Escolha como as pessoas entram no site.'
-      if (flow.needsLanding && !landingId) return 'Escolha um modelo de landing page.'
-      if (flow.needsLogin && !loginId) return 'Escolha um modelo de login.'
+      if (!flow) return { message: 'Escolha como as pessoas entram no site.', fix: () => openEntrySub('fluxo') }
+      if (flow.needsLanding && !landingId) return { message: 'Escolha um modelo de landing page (ou “Não preciso de landing”).', fix: () => openEntrySub('landing') }
+      if (flow.needsLogin && !loginId) return { message: 'Escolha um modelo de login.', fix: () => openEntrySub('login') }
       return null
     case 'desktop':
-      return desktopId ? null : 'Escolha uma arquitetura para o computador.'
+      return desktopId ? null : { message: 'Escolha uma arquitetura para o computador.', fix: scrollToMain }
     case 'mobile':
-      return mobileId ? null : 'Escolha uma arquitetura para o celular.'
+      return mobileId ? null : { message: 'Escolha uma arquitetura para o celular.', fix: scrollToMain }
     default:
       return null
   }
@@ -58,6 +67,8 @@ function Stepper({ current }: { current: StepId }) {
   const navigate = useNavigate()
   const completed = useProject((p) => p.guided.completed)
   const approved = useProject((p) => p.guided.skeletonApproved)
+  // Etapas do esqueleto: concluídas pelas escolhas reais (mesma regra do contador “Esqueleto x/5”).
+  const skeleton = useStudio(useShallow((s) => skeletonDone(s.project)))
   const phases: { label: string; steps: StepId[]; locked: boolean }[] = [
     { label: 'Esqueleto', steps: SKELETON_STEPS, locked: false },
     { label: 'Acabamento', steps: FINISH_STEPS, locked: !approved },
@@ -74,7 +85,8 @@ function Stepper({ current }: { current: StepId }) {
           <ol className="gd-steps">
             {phase.steps.map((s) => {
               const idx = ALL_STEPS.indexOf(s)
-              const state = s === current ? 'current' : completed.includes(s) ? 'done' : 'todo'
+              const isDone = SKELETON_STEPS.includes(s) ? skeleton.includes(s) : completed.includes(s)
+              const state = s === current ? 'current' : isDone ? 'done' : 'todo'
               return (
                 <li key={s}>
                   <button
@@ -136,6 +148,12 @@ export default function GuidedStep() {
   const meta = STEP_META[step]
 
   const advance = () => {
+    // “Continuar” nunca fica mudo: explica o que falta e leva até lá.
+    if (requirement) {
+      toast.info(requirement.message)
+      requirement.fix?.()
+      return
+    }
     completeStep(step)
     if (step === 'revisao') {
       setSkeletonApproved(true)
@@ -183,7 +201,7 @@ export default function GuidedStep() {
     step === 'revisao' ? (approved ? 'Continuar para o acabamento' : 'Aprovar esqueleto e continuar') : next ? `Continuar: ${STEP_META[next].short}` : 'Abrir Central de Prompts'
 
   return (
-    <div className="ui-page">
+    <div className="ui-page gd-page">
       <Stepper current={step} />
       <header className="gd-head">
         <span className="gd-head__count">
@@ -208,8 +226,20 @@ export default function GuidedStep() {
           )}
         </div>
         <div className="u-row" style={{ justifyContent: 'flex-end' }}>
-          {requirement && <span className="gd-footer__hint">{requirement}</span>}
-          <Button variant="primary" iconRight={<ArrowRight />} disabled={Boolean(requirement)} onClick={advance} data-testid="guided-next">
+          {requirement && (
+            <span className="gd-footer__hint" id="guided-next-hint">
+              {requirement.message}
+            </span>
+          )}
+          <Button
+            variant="primary"
+            iconRight={<ArrowRight />}
+            aria-disabled={requirement ? true : undefined}
+            aria-describedby={requirement ? 'guided-next-hint' : undefined}
+            data-pending={requirement ? 'true' : undefined}
+            onClick={advance}
+            data-testid="guided-next"
+          >
             {nextLabel}
           </Button>
         </div>

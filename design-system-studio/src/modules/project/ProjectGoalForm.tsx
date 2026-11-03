@@ -1,7 +1,10 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { BarChart3, Boxes, LayoutDashboard, Megaphone, MonitorSmartphone, Plus, Sparkles, Store, X, type LucideIcon } from 'lucide-react'
 import { useShallow } from 'zustand/react/shallow'
 import { ENTRY_FLOWS, PROJECT_TYPES, SUGGESTIONS, type ProjectType } from '@/core/project'
+import { landings, logins } from '@/modules/entry/catalog'
+import { desktopById, mobileById } from '@/modules/layouts/catalog'
 import { useProject, useStudio } from '@/core/store'
 import { Button, Callout, Field, Input, Section, Textarea, keepScroll } from '@/ui'
 import './project.css'
@@ -35,6 +38,7 @@ export function ProjectGoalForm({ guided = false }: { guided?: boolean }) {
   const entryFlow = useProject((p) => p.entry.flow)
   const showHints = useProject((p) => p.prefs.showHints)
   const [feature, setFeature] = useState('')
+  const navigate = useNavigate()
 
   const addFeature = (value: string) => {
     const v = value.trim()
@@ -43,6 +47,22 @@ export function ProjectGoalForm({ guided = false }: { guided?: boolean }) {
   }
   const suggestion = meta.projectType ? SUGGESTIONS[meta.projectType] : null
   const suggestedFlow = suggestion ? ENTRY_FLOWS.find((f) => f.id === suggestion.entryFlow) : null
+  const recDesktop = suggestion ? desktopById(suggestion.desktop[0]) : undefined
+  const recMobile = suggestion ? mobileById(suggestion.mobile[0]) : undefined
+
+  /** Caminho rápido: aplica a combinação recomendada e vai direto para a revisão do esqueleto. */
+  const useRecommended = () => {
+    if (!suggestion || !suggestedFlow || !recDesktop || !recMobile) return
+    const st = useStudio.getState()
+    st.setEntryFlow(suggestedFlow.id)
+    if (suggestedFlow.needsLanding && !st.project.entry.landingId) st.selectLanding(landings[0].id)
+    if (suggestedFlow.needsLogin && !st.project.entry.loginId) st.selectLogin(logins[0].id)
+    if (suggestedFlow.needsLogin && !st.project.entry.signupId) st.setNoSignup(true)
+    if (!st.project.layout.desktopId) st.selectDesktop(recDesktop.id)
+    if (!st.project.layout.mobileId) st.selectMobile(recMobile.id)
+    for (const step of ['objetivo', 'entrada', 'desktop', 'mobile'] as const) st.completeStep(step)
+    navigate('/guiado/revisao')
+  }
 
   return (
     <div className="u-stack-lg">
@@ -90,6 +110,20 @@ export function ProjectGoalForm({ guided = false }: { guided?: boolean }) {
               <span>(já aplicada)</span>
             )}
           </Callout>
+        )}
+        {guided && suggestion && suggestedFlow && recDesktop && recMobile && (
+          <div className="goal-recommended" data-testid="recommended-block">
+            <strong>Recomendados para {PROJECT_TYPES.find((t) => t.id === meta.projectType)?.name.toLowerCase()}</strong>
+            <ul>
+              <li>Entrada: {suggestedFlow.name}</li>
+              <li>Computador: {recDesktop.name}</li>
+              <li>Celular: {recMobile.name}</li>
+            </ul>
+            <p className="u-subtle u-small">Escolhas que você já fez são mantidas. Tudo pode ser trocado na revisão.</p>
+            <Button variant="primary" size="sm" onClick={useRecommended} data-testid="use-recommended">
+              Usar recomendados e continuar
+            </Button>
+          </div>
         )}
       </Section>
 

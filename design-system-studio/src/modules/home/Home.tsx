@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { ArrowRight, Check, Compass, Wand2 } from 'lucide-react'
-import { SKELETON_STEPS } from '@/core/project'
+import { SKELETON_STEPS, skeletonDone } from '@/core/project'
 import { useProject, useStudio } from '@/core/store'
 import { STEP_META } from '@/shell/nav'
 import { Badge, Button } from '@/ui'
@@ -52,7 +52,7 @@ export default function Home() {
   const step = useProject((p) => p.guided.step)
   const updatedAt = useProject((p) => p.updatedAt)
   const completed = useProject((p) => p.guided.completed)
-  const doneSkeleton = SKELETON_STEPS.filter((s) => completed.includes(s)).length
+  const doneSkeleton = useProject((p) => skeletonDone(p).length)
   const hasProgress = Boolean(name) || completed.length > 0
 
   const start = (m: 'guided' | 'free') => {

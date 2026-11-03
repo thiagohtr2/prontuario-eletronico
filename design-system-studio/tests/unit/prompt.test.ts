@@ -19,7 +19,7 @@ let project: Project
 function fullProject(): Project {
   const p = createProject()
   p.meta = { ...p.meta, name: 'Agenda Viva', projectType: 'saas', objective: 'Organizar agendamentos', features: ['Agenda', 'Clientes'] }
-  p.entry = { flow: 'landing-login', landingId: landings[0]?.id ?? null, loginId: logins[0]?.id ?? null, signupId: signups[0]?.id ?? null, landingUsesOriginalColors: false }
+  p.entry = { flow: 'landing-login', landingId: landings[0]?.id ?? null, loginId: logins[0]?.id ?? null, signupId: signups[0]?.id ?? null, landingUsesOriginalColors: false, noSignup: false }
   p.layout = { desktopId: desktopLayouts[0]?.id ?? null, mobileId: mobileLayouts[0]?.id ?? null }
   p.navigation = { header: headers[0] ? { id: headers[0].id, variant: 1 } : null, sidebar: sidebars[0] ? { id: sidebars[0].id, variant: 0 } : null }
   if (componentCategories[0] && visualFamilies[0]) {
@@ -126,16 +126,20 @@ describe('Contradições e pendências', () => {
     const ids = detectPending(createProject()).map((p) => p.id)
     expect(ids).toEqual(expect.arrayContaining(['tipo', 'nome', 'fluxo', 'desktop', 'mobile']))
   })
-  it('detecta login escolhido em fluxo sem login e registra a decisão do usuário', () => {
+  it('login escolhido antes de trocar para um fluxo sem login fica guardado, mas inativo (sem contradição)', () => {
     project.entry.flow = 'landing-only'
-    project.entry.loginId = 'qualquer'
-    let c = detectConflicts(project).find((x) => x.id === 'login-sem-fluxo')
-    expect(c).toBeTruthy()
-    expect(c!.resolution).toBeNull()
-    project.prompt.conflictResolutions['login-sem-fluxo'] = 'fluxo'
-    c = detectConflicts(project).find((x) => x.id === 'login-sem-fluxo')
-    expect(c!.resolution?.id).toBe('fluxo')
-    expect(renderMasterPrompt(buildProjectSpec(project))).toContain(c!.resolution!.instruction)
+    expect(detectConflicts(project).some((x) => x.id === 'login-sem-fluxo')).toBe(false)
+    expect(collectPromptItems(project).some((i) => i.kind === 'login' || i.kind === 'signup')).toBe(false)
+    expect(renderMasterPrompt(buildProjectSpec(project))).toMatch(/Login: nenhum/)
+    expect(project.entry.loginId).toBeTruthy()
+    project.entry.flow = 'landing-login'
+    expect(collectPromptItems(project).some((i) => i.kind === 'login')).toBe(true)
+  })
+  it('“Não haverá cadastro” tira o cadastro, a pendência e avisa no fluxo', () => {
+    project.entry.noSignup = true
+    expect(collectPromptItems(project).some((i) => i.kind === 'signup')).toBe(false)
+    expect(detectPending(project).some((x) => x.id === 'cadastro')).toBe(false)
+    expect(renderMasterPrompt(buildProjectSpec(project))).toContain('Não existe cadastro público')
   })
   it('detecta header flutuante sobre layout com header integral', () => {
     const floating = headers.find((h) => h.floating)

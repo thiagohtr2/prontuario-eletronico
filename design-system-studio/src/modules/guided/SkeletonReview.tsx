@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { AlertTriangle, Pencil } from 'lucide-react'
-import { ENTRY_FLOWS, PROJECT_TYPES } from '@/core/project'
+import { activeEntry, ENTRY_FLOWS, PROJECT_TYPES } from '@/core/project'
 import { useStudio } from '@/core/store'
 import { useResolvedTheme } from '@/core/theme'
 import { AuthPreview, LandingPreview } from '@/modules/entry'
@@ -45,9 +45,10 @@ export function SkeletonReview() {
   const type = PROJECT_TYPES.find((t) => t.id === project.meta.projectType)
   const desktop = desktopById(project.layout.desktopId)
   const mobile = mobileById(project.layout.mobileId)
-  const landing = landingById(project.entry.landingId)
-  const login = loginById(project.entry.loginId)
-  const signup = signupById(project.entry.signupId)
+  const entry = activeEntry(project.entry)
+  const landing = landingById(entry.landingId)
+  const login = loginById(entry.loginId)
+  const signup = signupById(entry.signupId)
   const pending = detectPending(project)
   const conflicts = detectConflicts(project)
 
@@ -103,7 +104,7 @@ export function SkeletonReview() {
         </dl>
       </Section>
 
-      <Section title="Esqueleto aprovado">
+      <Section title={project.guided.skeletonApproved ? "Esqueleto aprovado" : "Seu esqueleto (ainda não aprovado)"}>
         <div className="rv-grid">
           <ReviewCard
             kind="Computador"

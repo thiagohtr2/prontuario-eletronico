@@ -98,8 +98,36 @@ export function PromptWorkspace() {
   const base = slugify(project.meta.name || 'projeto')
   const sections = (Object.keys(SECTION_LABEL) as PromptSection[]).map((s) => ({ section: s, items: spec.items.filter((i) => i.section === s) })).filter((g) => g.items.length)
 
+  const ready = spec.pending.length === 0 && openConflicts.length === 0
+
   return (
     <div>
+      <section className="pc-next" data-ready={ready} data-testid="what-now" aria-labelledby="pc-next-title">
+        <h2 id="pc-next-title">{ready ? 'Pronto para usar. O que fazer agora:' : 'Quase pronto. Antes de copiar:'}</h2>
+        {!ready && (
+          <p className="pc-next__check">
+            {spec.pending.length > 0 && <span>{spec.pending.length} decisão(ões) pendente(s) (lista abaixo)</span>}
+            {spec.pending.length > 0 && openConflicts.length > 0 && ' · '}
+            {openConflicts.length > 0 && (
+              <button type="button" className="pc-next__link" onClick={() => setTab('conflitos')}>
+                {openConflicts.length} contradição(ões) para decidir
+              </button>
+            )}
+            . Você pode copiar mesmo assim: a IA vai perguntar sobre o que estiver em aberto.
+          </p>
+        )}
+        <ol className="pc-next__steps">
+          <li>
+            <span>Copie o Master Prompt.</span> <CopyButton text={text} size="sm" label="Copiar" />
+          </li>
+          <li>Abra sua IA de programação (Claude Code, Cursor, Lovable, Bolt, v0…) em um projeto novo e vazio.</li>
+          <li>Cole o prompt e peça: “Construa o projeto seguindo exatamente esta especificação.”</li>
+          <li>
+            Com o site no ar, confira o resultado na <Link to="/validacao">Validação responsiva</Link>.
+          </li>
+        </ol>
+      </section>
+
       <div className="pc-stats">
         <div className="pc-stat">
           <strong>{included.length}</strong>

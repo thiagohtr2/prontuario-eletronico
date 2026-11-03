@@ -531,11 +531,12 @@ export function SignupGallery({ guided = false }: { guided?: boolean }) {
   const theme = useResolvedTheme()
   const selectedId = useProject((p) => p.entry.signupId)
   const loginId = useProject((p) => p.entry.loginId)
+  const noSignup = useProject((p) => p.entry.noSignup)
   const showHints = useProject((p) => p.prefs.showHints)
   const [openId, setOpenId] = useState<string | null>(null)
   const closeModal = useCallback(() => setOpenId(null), [])
   const login = loginById(loginId) ?? logins[0]
-  const selected = signupById(selectedId)
+  const selected = noSignup ? undefined : signupById(selectedId)
   const open = signupById(openId)
 
   return (
@@ -548,16 +549,25 @@ export function SignupGallery({ guided = false }: { guided?: boolean }) {
       )}
       <SelectionSummary
         label="Cadastro selecionado"
-        value={selected?.name}
+        value={noSignup ? 'Não haverá cadastro' : selected?.name}
         detail={selected ? `${selected.fields.length} campo(s)` : undefined}
         onPreview={selected ? () => setOpenId(selected.id) : undefined}
       />
+      <div className="ent-nosignup">
+        <Switch
+          checked={noSignup}
+          onChange={(v) => keepScroll(() => studio().setNoSignup(v))}
+          label="Não haverá cadastro"
+          description="Sistemas internos e contas criadas por convite ou por um administrador não têm tela de criar conta."
+          id="no-signup"
+        />
+      </div>
       <div className="ent-grid" style={{ ['--min' as string]: '290px' }}>
         {signups.map((s) => (
           <OptionCard
             key={s.id}
             testId={`signup-option-${s.id}`}
-            selected={selectedId === s.id}
+            selected={!noSignup && selectedId === s.id}
             onSelect={() => selectSignupModel(s)}
             media={
               <ScaledThumb virtualWidth={430} height={236} fade>

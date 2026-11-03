@@ -310,3 +310,12 @@
     max-width: none;
   }
 }
+
+/* Decisão explícita “Não haverá cadastro” (B-13). */
+.ent-nosignup {
+  margin: 0 0 14px;
+  padding: 10px 14px;
+  border: 1px solid var(--s-border);
+  border-radius: var(--s-radius-md, 10px);
+  background: var(--s-surface);
+}

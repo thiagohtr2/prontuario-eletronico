@@ -207,3 +207,44 @@
     min-height: 44px;
   }
 }
+
+/* “O que fazer agora” e verificação antes de copiar (B-08). */
+.pc-next {
+  margin-bottom: var(--sp-5);
+  padding: 16px 18px;
+  border: 1px solid var(--s-border);
+  border-left: 4px solid var(--s-warning);
+  border-radius: 12px;
+  background: var(--s-surface);
+}
+.pc-next[data-ready='true'] {
+  border-left-color: var(--s-success);
+}
+.pc-next h2 {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+.pc-next__check {
+  margin: 0 0 8px;
+  font-size: 13.5px;
+  color: var(--s-text-2);
+}
+.pc-next__link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--s-accent);
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.pc-next__steps {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+}
+.pc-next__steps li > span {
+  margin-right: 6px;
+}

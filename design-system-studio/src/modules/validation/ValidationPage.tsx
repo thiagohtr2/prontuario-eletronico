@@ -219,7 +219,7 @@ export default function ValidationPage() {
     <div className="ui-page">
       <PageHeader
         eyebrow="Ferramentas"
-        title="Responsive Validation Lab"
+        title="Validação responsiva"
         description="Teste um site já construído em várias larguras de tela, encontre problemas de responsividade e gere um prompt de correção. O teste roda no seu computador, com um executor local em Python + Playwright."
       />
       <div className="u-stack-lg">

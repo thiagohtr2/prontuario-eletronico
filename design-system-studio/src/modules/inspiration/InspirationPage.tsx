@@ -6,7 +6,7 @@ export default function InspirationPage() {
     <div className="ui-page">
       <PageHeader
         eyebrow="Referências"
-        title="Inspiration Gallery"
+        title="Galeria de inspiração"
         description="20 sites fictícios completos, cada um com identidade própria e 8 propostas de paleta. Encontre uma experiência inteira que tenha a cara do seu projeto — não só um menu ou um botão."
       />
       <InspirationGallery />

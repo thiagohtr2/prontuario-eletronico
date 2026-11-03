@@ -99,3 +99,19 @@ button:disabled {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Barras fixas não escondem o elemento focado (RA-05). */
+html {
+  scroll-padding-top: calc(var(--topbar-h) + 8px);
+}
+html:has(.gd-page) {
+  scroll-padding-bottom: 96px;
+}
+
+/* Alto contraste do sistema: box-shadow some, então o foco usa contorno (RA-07). */
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 2px solid Highlight !important;
+    outline-offset: 2px;
+  }
+}

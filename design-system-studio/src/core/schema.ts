@@ -40,6 +40,7 @@ export const projectSchema = z.object({
     loginId: z.string().nullable(),
     signupId: z.string().nullable(),
     landingUsesOriginalColors: z.boolean(),
+    noSignup: z.boolean(),
   }),
   layout: z.object({ desktopId: z.string().nullable(), mobileId: z.string().nullable() }),
   identity: z.object({

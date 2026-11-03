@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode, type RefObject } from 'react'
 import { Link } from 'react-router-dom'
 import { Pencil } from 'lucide-react'
-import { ENTRY_FLOWS } from '@/core/project'
+import { activeEntry, ENTRY_FLOWS } from '@/core/project'
 import { useProject } from '@/core/store'
 import { useResolvedTheme } from '@/core/theme'
 import { fontName } from '@/core/tokens'
@@ -99,15 +99,16 @@ export function LiveSitePreview() {
   const flowId = useProject((p) => p.entry.flow)
   const desktopId = useProject((p) => p.layout.desktopId)
   const mobileId = useProject((p) => p.layout.mobileId)
-  const landingId = useProject((p) => p.entry.landingId)
-  const loginId = useProject((p) => p.entry.loginId)
-  const signupId = useProject((p) => p.entry.signupId)
+  // Só as páginas do fluxo escolhido; sem cadastro escolhido, não há página “Cadastro”.
+  const entry = useProject((p) => p.entry)
+  const { landingId, loginId, signupId } = activeEntry(entry)
   const originalColors = useProject((p) => p.entry.landingUsesOriginalColors)
   const paletteId = useProject((p) => p.identity.paletteId)
   const typography = useProject((p) => p.identity.typography)
   const header = useProject((p) => p.navigation.header)
   const sidebar = useProject((p) => p.navigation.sidebar)
-  const [device, setDevice] = useState<Device>('desktop')
+  // Em tela de celular a prévia abre no modo Celular (no modo Computador o texto ficaria ilegível).
+  const [device, setDevice] = useState<Device>(() => (typeof window !== 'undefined' && window.matchMedia?.('(max-width: 700px)').matches ? 'mobile' : 'desktop'))
   const [page, setPage] = useState<PageKind>('app')
   const [ref, available] = useWidth<HTMLDivElement>()
 
@@ -122,7 +123,7 @@ export function LiveSitePreview() {
     { value: 'app', label: 'Aplicação' },
     ...(landing ? [{ value: 'landing' as PageKind, label: 'Landing' }] : []),
     ...(login ? [{ value: 'login' as PageKind, label: 'Login' }] : []),
-    ...(login ? [{ value: 'signup' as PageKind, label: 'Cadastro' }] : []),
+    ...(login && signup ? [{ value: 'signup' as PageKind, label: 'Cadastro' }] : []),
   ]
   const current = pages.some((p) => p.value === page) ? page : 'app'
 

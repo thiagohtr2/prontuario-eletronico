@@ -1296,8 +1296,8 @@
 .lay-desk[data-wide='true'] .lay-desk-detail {
   position: sticky;
   top: calc(var(--topbar-h) + var(--sp-4));
-  max-height: calc(100vh - var(--topbar-h) - var(--sp-6));
-  max-height: calc(100dvh - var(--topbar-h) - var(--sp-6));
+  max-height: calc(100vh - var(--topbar-h) - var(--footer-h, 0px) - var(--sp-6));
+  max-height: calc(100dvh - var(--topbar-h) - var(--footer-h, 0px) - var(--sp-6));
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-width: thin;
@@ -1517,9 +1517,16 @@
   align-items: start;
   min-width: 0;
 }
-.lay-mob[data-mode='wide'],
-.lay-mob[data-mode='medium'] {
+.lay-mob[data-mode='wide'] {
   grid-template-columns: minmax(0, 1fr) auto;
+}
+/* Médio: o palco tem largura fixa (celular + respiro); a coluna de miniaturas nunca some (REG-04/17). */
+.lay-mob[data-mode='medium'] {
+  grid-template-columns: minmax(150px, 1fr) var(--lay-stage-w, 356px);
+}
+.lay-mob[data-mode='medium'] .lay-mob-stage {
+  width: var(--lay-stage-w, 356px);
+  min-width: 0;
 }
 .lay-mob-list {
   min-width: 0;

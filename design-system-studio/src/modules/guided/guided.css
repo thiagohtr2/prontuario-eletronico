@@ -182,3 +182,37 @@
 .gd-subtabs {
   margin-bottom: var(--sp-6);
 }
+
+/* Etapa de entrada: posição na etapa e atalho para a próxima parte (B-06). */
+.gd-subtabs .ui-tabs {
+  flex-wrap: wrap;
+}
+.gd-subnext {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px 12px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--s-text-2);
+}
+.gd-skip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-bottom: 14px;
+  font-size: 13.5px;
+  color: var(--s-text-2);
+}
+/* “Continuar” com pendência: continua clicável (explica o que falta), mas parece não pronto. */
+.gd-footer [data-pending='true'] {
+  opacity: 0.62;
+}
+
+/* Altura do rodapé fixo, descontada pelos painéis fixos das etapas (prévias, celular grande). */
+.gd-page {
+  --footer-h: 76px;
+  scroll-padding-bottom: 96px;
+}

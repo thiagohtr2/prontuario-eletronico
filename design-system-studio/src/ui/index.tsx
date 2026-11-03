@@ -472,7 +472,10 @@ export function keepScroll(action: () => void) {
 
 /** Termo técnico com explicação simples ao passar o mouse, focar ou tocar. */
 export function Term({ id, children }: { id: keyof typeof GLOSSARY; children?: ReactNode }) {
-  const [open, setOpen] = useState(false)
+  // Passar o mouse mostra; clicar ou tocar fixa a explicação até Esc, outro clique ou sair do termo.
+  const [hover, setHover] = useState(false)
+  const [pinned, setPinned] = useState(false)
+  const open = hover || pinned
   const entry = GLOSSARY[id]
   const tipId = useId()
   return (
@@ -481,11 +484,21 @@ export function Term({ id, children }: { id: keyof typeof GLOSSARY; children?: R
         type="button"
         className="ui-term"
         aria-describedby={open ? tipId : undefined}
-        onMouseEnter={() => setOpen(true)}
-        onMouseLeave={() => setOpen(false)}
-        onFocus={() => setOpen(true)}
-        onBlur={() => setOpen(false)}
-        onClick={() => setOpen((o) => !o)}
+        aria-expanded={pinned}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        onFocus={() => setHover(true)}
+        onBlur={() => {
+          setHover(false)
+          setPinned(false)
+        }}
+        onClick={() => setPinned((p) => !p || hover)}
+        onKeyDown={(e) => {
+          if (e.key === 'Escape') {
+            setHover(false)
+            setPinned(false)
+          }
+        }}
         style={{ all: 'unset', borderBottom: '1px dashed var(--s-text-3)', cursor: 'help' }}
       >
         {children ?? entry.term}

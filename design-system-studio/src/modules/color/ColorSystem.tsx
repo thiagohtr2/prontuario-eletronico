@@ -341,13 +341,14 @@ export function ColorSystem({ guided = false }: { guided?: boolean }) {
           <strong>Prévia da identidade</strong>
           <Badge tone="accent">{theme.tokens.mode === 'dark' ? 'Escura' : 'Clara'}</Badge>
         </div>
-        <IdentityPreview theme={theme} compact={narrow} />
+        {/* Ações logo abaixo do título: sempre visíveis, nunca sob o rodapé fixo do guiado. */}
         <div className="ui-actions">
           <PromptButton target={{ kind: 'identity' }} label="Prompt da identidade" variant="secondary" />
           <Button size="sm" variant="ghost" icon={<Download />} onClick={() => downloadFile(`${slugify(name || 'projeto')}-tokens.css`, buildProjectCss(project), 'text/css')}>
             CSS dos tokens
           </Button>
         </div>
+        <IdentityPreview theme={theme} compact={narrow} />
       </aside>
     </div>
   )

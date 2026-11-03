@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react'
 import { ENTRY_FLOWS, type EntryFlow } from '@/core/project'
 import { studio, useProject } from '@/core/store'
-import { Callout, OptionCard } from '@/ui'
+import { Button, Callout, keepScroll, OptionCard } from '@/ui'
 import './entry.css'
 
 /* ------------------------------------------------------------------------- */
@@ -141,9 +141,30 @@ const PLAIN: Record<EntryFlow, string> = {
  */
 export function EntryFlowPicker({ guided = false }: { guided?: boolean }) {
   const flow = useProject((p) => p.entry.flow)
+  const noSignup = useProject((p) => p.entry.noSignup)
+  const projectType = useProject((p) => p.meta.projectType)
   const showHints = useProject((p) => p.prefs.showHints)
+  const appLike = projectType === 'saas' || projectType === 'dashboard' || projectType === 'one-screen' || projectType === 'outro'
   return (
     <div className="u-stack" data-testid="entry-flow-picker">
+      {appLike && !(flow === 'login-only' && noSignup) && (
+        <Callout title="É um sistema interno, usado só pela sua equipe?">
+          Então não precisa de landing page nem de cadastro: a pessoa abre o endereço e já vê a tela de entrar.{' '}
+          <Button
+            size="sm"
+            variant="soft"
+            data-testid="entry-internal-system"
+            onClick={() =>
+              keepScroll(() => {
+                studio().setEntryFlow('login-only')
+                studio().setNoSignup(true)
+              })
+            }
+          >
+            Usar “Apenas login”, sem cadastro
+          </Button>
+        </Callout>
+      )}
       {showHints && (
         <Callout title="Landing page não é login.">
           A landing apresenta o produto para quem ainda não conhece. O login é a porta da área restrita. Um sistema pode ter os dois, só um deles ou
