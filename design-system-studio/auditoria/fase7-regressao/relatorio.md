@@ -187,8 +187,10 @@ A configuração usa 3 workers, sem webServer, com `baseURL` em http://127.0.0.1
 
 | Execução | Carga da máquina (load avg 1 min) | Resultado | Duração |
 |---|---|---|---|
-| 1 | 6,5 | **51 conforme o esperado**: 36 aprovados + 15 falhas esperadas; 0 inesperados; 0 instáveis | 3,0 min |
-| 2 | 16,2 | **51 conforme o esperado**: 36 aprovados + 15 falhas esperadas; 0 inesperados; 0 instáveis | 2,4 min |
+| 1 | 1,1 (média de 15 min: 9,0) | **51 conforme o esperado**: 36 aprovados + 15 falhas esperadas; 0 inesperados; 0 instáveis | 2,0 min |
+| 2 | 7,4 | **51 conforme o esperado**: 36 aprovados + 15 falhas esperadas; 0 inesperados; 0 instáveis | 2,0 min |
+
+Uma rodada anterior, idêntica exceto por um ajuste no `baseURL` do teste de paridade do REG-18, também deu 51/51 duas vezes, com carga de 6,5 e 16,2.
 
 **Arquivos de resultado:**
 - Saída completa: `resultados/execucao-1.txt` e `execucao-2.txt`.

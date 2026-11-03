@@ -1,0 +1,114 @@
+{
+ "dev-1": {
+  "textColorChars": {
+   "#ffffff": 65,
+   "#18181b": 1005,
+   "color(srgb 1 1 1 / 0.8)": 1,
+   "#707072": 1057,
+   "#117e39": 11,
+   "#dc2626": 5
+  },
+  "selectedRow": [
+   "#e3e3e4",
+   "transparent",
+   "#18181b"
+  ],
+  "sparkStroke": [
+   "#2563eb fill:none",
+   "#2563eb fill:none",
+   "#2563eb fill:none",
+   "#2563eb fill:none"
+  ],
+  "h1": [
+   "Centro Operacional"
+  ],
+  "activeTab": {
+   "active": {
+    "bg": "#e3e3e4",
+    "color": "#18181b",
+    "border": "0px none rgb(24, 24, 27)",
+    "after": null,
+    "boxShadow": "rgb(24, 24, 27) 0px -2px 0px 0px inset"
+   },
+   "inactive": {
+    "bg": "transparent",
+    "color": "#4b4b4d"
+   }
+  }
+ },
+ "dev-2": {
+  "textColorChars": {
+   "#ffffff": 28,
+   "#18181b": 1032,
+   "#707072": 952,
+   "#117e39": 20,
+   "#dc2626": 26,
+   "#a85c04": 35,
+   "#2563eb": 24
+  },
+  "selectedRow": [
+   "#e3e3e4",
+   "transparent",
+   "#18181b"
+  ],
+  "sparkStroke": [
+   "#117e39 fill:none",
+   "#dc2626 fill:none",
+   "#117e39 fill:none",
+   "#707072 fill:none"
+  ],
+  "h1": [],
+  "activeTab": {
+   "active": {
+    "bg": "#e3e3e4",
+    "color": "#18181b",
+    "border": "0px none rgb(24, 24, 27)",
+    "after": "#18181b h2px",
+    "boxShadow": "none"
+   },
+   "inactive": {
+    "bg": "transparent",
+    "color": "#4b4b4d"
+   }
+  }
+ },
+ "dev-3": {
+  "textColorChars": {
+   "#ffffff": 27,
+   "#18181b": 299,
+   "#707072": 420,
+   "#000000": 833,
+   "#117e39": 62,
+   "#dc2626": 49,
+   "#2563eb": 62,
+   "#a85c04": 57
+  },
+  "selectedRow": [
+   "#e3e3e4",
+   "transparent",
+   "#18181b"
+  ],
+  "sparkStroke": [
+   "#18181b fill:none",
+   "#18181b fill:none",
+   "#18181b fill:none",
+   "#18181b fill:none"
+  ],
+  "h1": [
+   "Centro Operacional"
+  ],
+  "activeTab": {
+   "active": {
+    "bg": "#e3e3e4",
+    "color": "#18181b",
+    "border": "0px none rgb(24, 24, 27)",
+    "after": "#18181b h2px",
+    "boxShadow": "none"
+   },
+   "inactive": {
+    "bg": "transparent",
+    "color": "#4b4b4d"
+   }
+  }
+ }
+}
