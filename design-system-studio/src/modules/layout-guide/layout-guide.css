@@ -1,0 +1,473 @@
+/* ==========================================================================
+   Boas práticas de layout (prefixo lg-)
+   Segue a identidade do Studio (White Canvas): bordas finas, espaço em vez de fundos cinza,
+   a cor de destaque só para seleção e foco. A própria ferramenta obedece ao que recomenda:
+   sem larguras fixas, textos que quebram linha, alvos de toque de 44 px em telas de toque.
+   ========================================================================== */
+
+.lg {
+  min-width: 0;
+}
+.lg-label {
+  margin: 0;
+  font-size: var(--fs-md);
+  font-weight: 650;
+  color: var(--s-text);
+}
+.lg-hint {
+  margin: 0;
+  font-size: var(--fs-xs);
+  font-weight: 450;
+  color: var(--s-text-3);
+}
+.lg-count {
+  display: inline-flex;
+  align-items: center;
+  margin-left: var(--sp-2);
+  padding: 1px 8px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--s-border);
+  font-size: var(--fs-xs);
+  font-weight: 560;
+  color: var(--s-text-2);
+  white-space: nowrap;
+}
+
+/* ---------- Atalhos ---------- */
+.lg-presets {
+  display: grid;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-7);
+}
+.lg-preset-list {
+  display: grid;
+  gap: var(--sp-2);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr));
+  margin-top: var(--sp-2);
+}
+.lg-preset {
+  display: grid;
+  gap: 2px;
+  min-height: 44px;
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--s-border-strong);
+  border-radius: var(--r-lg);
+  background: var(--s-surface);
+  color: var(--s-text);
+  text-align: left;
+  cursor: pointer;
+  min-width: 0;
+}
+.lg-preset strong {
+  font-size: var(--fs-sm);
+  font-weight: 620;
+  overflow-wrap: anywhere;
+}
+.lg-preset span {
+  font-size: var(--fs-xs);
+  color: var(--s-text-3);
+  overflow-wrap: anywhere;
+}
+.lg-preset:hover {
+  background: var(--s-hover);
+}
+.lg-preset[aria-pressed='true'] {
+  border-color: var(--s-accent-line);
+  background: var(--s-accent-soft);
+}
+.lg-preset[aria-pressed='true'] strong {
+  color: var(--s-accent);
+}
+.lg-preset:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* ---------- Duas colunas: opções e resultado ---------- */
+.lg-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--sp-7);
+  align-items: start;
+}
+.lg-config {
+  min-width: 0;
+}
+@media (min-width: 1180px) {
+  .lg-jump {
+    display: none;
+  }
+  .lg-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(360px, 440px);
+  }
+  /* O resultado acompanha a rolagem; a área rola por dentro se a janela for baixa. */
+  .lg-result {
+    position: sticky;
+    top: calc(var(--topbar-h) + var(--sp-4));
+    max-height: calc(100dvh - var(--topbar-h) - var(--sp-7));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+}
+
+/* ---------- Fieldsets ---------- */
+.lg-fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: grid;
+  gap: var(--sp-3);
+}
+.lg-legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  font-size: var(--fs-md);
+  font-weight: 620;
+  color: var(--s-text);
+}
+.lg-fieldset + .lg-fieldset {
+  margin-top: var(--sp-5);
+}
+.lg-inline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+/* ---------- 1. Tarefa (rádios em cartões) ---------- */
+.lg-tasks {
+  display: grid;
+  gap: var(--sp-2);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+}
+.lg-choice,
+.lg-tile {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  min-height: 44px;
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--s-border-strong);
+  border-radius: var(--r-lg);
+  background: var(--s-surface);
+  cursor: pointer;
+  min-width: 0;
+}
+.lg-choice:hover,
+.lg-tile:hover {
+  background: var(--s-hover);
+}
+.lg-choice[data-checked='true'],
+.lg-tile[data-checked='true'] {
+  border-color: var(--s-accent-line);
+  background: var(--s-accent-soft);
+}
+.lg-choice input,
+.lg-tile input {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  accent-color: var(--s-accent);
+  cursor: pointer;
+}
+/* O foco aparece no cartão inteiro, não só no círculo pequeno. */
+.lg-choice:has(input:focus-visible),
+.lg-tile:has(input:focus-visible) {
+  box-shadow: var(--focus-ring);
+}
+.lg-choice__text,
+.lg-tile__text {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+}
+.lg-choice__text strong,
+.lg-tile__text strong {
+  font-size: var(--fs-sm);
+  font-weight: 620;
+  color: var(--s-text);
+  overflow-wrap: anywhere;
+}
+.lg-choice__text span,
+.lg-tile__text span {
+  font-size: var(--fs-xs);
+  color: var(--s-text-3);
+  overflow-wrap: anywhere;
+}
+
+/* ---------- 3. Telas e ambientes ---------- */
+.lg-tiles {
+  display: grid;
+  gap: var(--sp-2);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 1fr));
+}
+
+/* ---------- Detalhes expansíveis ---------- */
+.lg-details {
+  min-width: 0;
+}
+.lg-details > summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  font-size: var(--fs-sm);
+  font-weight: 560;
+  color: var(--s-text-2);
+  cursor: pointer;
+  list-style: none;
+  border-radius: var(--r-sm);
+}
+.lg-details > summary::-webkit-details-marker {
+  display: none;
+}
+.lg-details > summary::before {
+  content: '';
+  flex: none;
+  width: 7px;
+  height: 7px;
+  margin: 0 4px 0 2px;
+  border-right: 1.6px solid currentColor;
+  border-bottom: 1.6px solid currentColor;
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+.lg-details[open] > summary::before {
+  transform: rotate(45deg);
+}
+.lg-details > summary:hover {
+  color: var(--s-text);
+}
+.lg-details > summary:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+.lg-details__body {
+  padding-top: var(--sp-2);
+}
+.lg-details--rules > summary {
+  min-height: 36px;
+  font-size: var(--fs-xs);
+}
+
+/* ---------- 4. Módulos ---------- */
+.lg-modbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+.lg-all {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  min-height: 44px;
+  font-size: var(--fs-md);
+  font-weight: 620;
+  cursor: pointer;
+}
+.lg-all input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--s-accent);
+  cursor: pointer;
+}
+.lg-mods {
+  display: grid;
+  gap: var(--sp-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.lg-mod {
+  display: grid;
+  gap: var(--sp-2);
+  padding: var(--sp-3) var(--sp-4) var(--sp-1);
+  border: 1px solid var(--s-border);
+  border-radius: var(--r-lg);
+  min-width: 0;
+}
+.lg-mod[data-on='true'] {
+  border-color: var(--s-accent-line);
+}
+.lg-mod .ui-switch {
+  align-items: flex-start;
+}
+.lg-mod .ui-switch__track {
+  margin-top: 1px;
+}
+.lg-mod__title {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--sp-2);
+  font-weight: 620;
+  overflow-wrap: anywhere;
+}
+.lg-mod__letter {
+  flex: none;
+  display: inline-grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--r-sm);
+  border: 1px solid var(--s-border-strong);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--s-text-2);
+}
+.lg-mod[data-on='true'] .lg-mod__letter {
+  border-color: var(--s-accent-line);
+  color: var(--s-accent);
+}
+.lg-rules {
+  display: grid;
+  gap: 6px;
+  margin: 0 0 var(--sp-3);
+  padding-left: var(--sp-5);
+  font-size: var(--fs-sm);
+  color: var(--s-text-2);
+  line-height: 1.5;
+}
+.lg-rules li {
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Resultado ---------- */
+.lg-result {
+  scroll-margin-top: calc(var(--topbar-h) + var(--sp-3));
+  display: grid;
+  gap: var(--sp-4);
+  padding: var(--sp-5);
+  border: 1px solid var(--s-border);
+  border-radius: var(--r-xl);
+  background: var(--s-surface);
+  min-width: 0;
+}
+@media (max-width: 720px) {
+  .lg-result {
+    padding: var(--sp-4);
+  }
+}
+.lg-result__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-2);
+}
+.lg-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: var(--r-pill);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  border: 1px solid var(--s-border-strong);
+  color: var(--s-text-2);
+}
+.lg-pill[data-tone='success'] {
+  border-color: #bfe3cb;
+  background: var(--s-success-soft);
+  color: var(--s-success);
+}
+.lg-pill[data-tone='warning'] {
+  border-color: #f1d3a8;
+  background: var(--s-warning-soft);
+  color: var(--s-warning);
+}
+.lg-pill[data-tone='accent'] {
+  border-color: var(--s-accent-line);
+  background: var(--s-accent-soft);
+  color: var(--s-accent);
+}
+.lg-summary {
+  display: grid;
+  gap: var(--sp-2);
+  margin: 0;
+}
+.lg-summary > div {
+  display: grid;
+  grid-template-columns: minmax(84px, auto) minmax(0, 1fr);
+  gap: var(--sp-3);
+  align-items: baseline;
+  padding-bottom: var(--sp-2);
+  border-bottom: 1px solid var(--s-divider);
+}
+.lg-summary dt {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--s-text-3);
+}
+.lg-summary dd {
+  margin: 0;
+  font-size: var(--fs-sm);
+  color: var(--s-text);
+  overflow-wrap: anywhere;
+}
+.lg-sub {
+  display: block;
+  font-size: var(--fs-xs);
+  color: var(--s-text-3);
+}
+.lg-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+/* Em telas estreitas, as ações principais ocupam a linha inteira (fáceis de tocar, nunca cortadas). */
+@media (max-width: 480px) {
+  .lg-actions:not(.lg-actions--quiet) > * {
+    flex: 1 1 100%;
+  }
+}
+.lg-actions--quiet {
+  margin-top: calc(var(--sp-2) * -1);
+}
+.lg-status {
+  margin: 0;
+  min-height: 1.2em;
+  font-size: var(--fs-xs);
+  color: var(--s-success);
+  overflow-wrap: anywhere;
+}
+.lg-status:empty {
+  display: none;
+}
+.lg-editor {
+  display: grid;
+  gap: var(--sp-2);
+  min-width: 0;
+}
+.lg-editor .ui-textarea {
+  width: 100%;
+  min-height: 280px;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  line-height: 1.55;
+  resize: vertical;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* Telas de toque largas (tablets): os mesmos 44 px de alvo mínimo do celular. */
+@media (pointer: coarse) {
+  .lg-details--rules > summary {
+    min-height: 44px;
+  }
+  .lg .ui-segmented button {
+    min-height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lg-details > summary::before {
+    transition: none;
+  }
+}

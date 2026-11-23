@@ -744,22 +744,32 @@ export function CopyButton({
   label = 'Copiar',
   variant = 'secondary',
   size = 'md',
+  disabled,
+  onCopied,
+  testId,
 }: {
   text: string | (() => string)
   label?: string
   variant?: ButtonVariant
   size?: 'sm' | 'md' | 'lg'
+  disabled?: boolean
+  /** Chamado depois de uma cópia bem-sucedida (ex.: para registrar a confirmação na tela). */
+  onCopied?: () => void
+  testId?: string
 }) {
   const [done, setDone] = useState(false)
   return (
     <Button
       variant={variant}
       size={size}
+      disabled={disabled}
+      data-testid={testId}
       icon={done ? <Check /> : <Copy />}
       onClick={async () => {
         const ok = await copyText(typeof text === 'function' ? text() : text)
         if (ok) {
           setDone(true)
+          onCopied?.()
           toast.success('Copiado para a área de transferência.')
           setTimeout(() => setDone(false), 1600)
         } else {

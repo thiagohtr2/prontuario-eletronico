@@ -485,3 +485,11 @@
   text-decoration: underline;
   cursor: pointer;
 }
+
+/* Celulares muito estreitos (< 360 px): só o símbolo, para o nome não ser cortado ao lado dos botões.
+   O link continua com o nome acessível “Atelier UI — início”. */
+@media (max-width: 359px) {
+  .shell-brand__text {
+    display: none;
+  }
+}

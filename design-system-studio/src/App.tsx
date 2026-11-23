@@ -23,6 +23,7 @@ const TemplatesPage = lazy(() => import('@/modules/templates/TemplatesPage'))
 const PromptCenter = lazy(() => import('@/modules/prompts/PromptCenter'))
 const ExportPage = lazy(() => import('@/modules/prompts/ExportPage'))
 const ValidationPage = lazy(() => import('@/modules/validation/ValidationPage'))
+const LayoutGuidePage = lazy(() => import('@/modules/layout-guide/LayoutGuidePage'))
 const ProjectPage = lazy(() => import('@/modules/project/ProjectPage'))
 const StartersGalleryPage = lazy(() => import('@/modules/starters/StarterPages').then((m) => ({ default: m.StartersGalleryPage })))
 const StarterDetailPage = lazy(() => import('@/modules/starters/StarterPages').then((m) => ({ default: m.StarterDetailPage })))
@@ -58,6 +59,7 @@ const router = createHashRouter([
       { path: 'prompt', element: <PromptCenter /> },
       { path: 'exportar', element: <ExportPage /> },
       { path: 'validacao', element: <ValidationPage /> },
+      { path: 'boas-praticas', element: <LayoutGuidePage /> },
       { path: 'projeto', element: <ProjectPage /> },
       { path: 'modelos', element: <StartersGalleryPage /> },
       { path: 'modelos/:id', element: <StarterDetailPage /> },

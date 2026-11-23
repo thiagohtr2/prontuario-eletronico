@@ -479,6 +479,8 @@ export const useStudio = create<StudioState>()(
           }
           useSaveStatus.setState({ failed: false, pruned: false, recoveryKey: null })
           set({ project: createProject(), history: [], library: [] })
+          // Ferramentas com estado próprio (ex.: Boas práticas de layout) também voltam ao início.
+          if (typeof window !== 'undefined') window.dispatchEvent(new Event('atelier:reset-all'))
         },
         duplicateProject: () =>
           set((s) => {
