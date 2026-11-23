@@ -471,3 +471,271 @@
     transition: none;
   }
 }
+
+/* ==========================================================================
+   Explicações em português simples
+   ========================================================================== */
+
+/* ---------- Como funciona + dúvidas ---------- */
+.lg-how {
+  display: grid;
+  gap: var(--sp-2);
+  margin-bottom: var(--sp-6);
+  padding: var(--sp-4) var(--sp-5);
+  border: 1px solid var(--s-accent-line);
+  border-radius: var(--r-xl);
+  background: var(--s-accent-soft);
+  min-width: 0;
+}
+@media (max-width: 720px) {
+  .lg-how {
+    padding: var(--sp-4);
+  }
+}
+.lg-steps {
+  display: grid;
+  gap: var(--sp-2);
+  margin: 0;
+  padding-left: var(--sp-5);
+  font-size: var(--fs-md);
+  line-height: 1.5;
+  color: var(--s-text-2);
+}
+.lg-steps li {
+  overflow-wrap: anywhere;
+}
+.lg-steps strong {
+  color: var(--s-text);
+}
+.lg-faq > summary {
+  color: var(--s-accent);
+}
+.lg-faq__list {
+  display: grid;
+  gap: var(--sp-3);
+  margin: 0 0 var(--sp-2);
+}
+.lg-faq__list dt {
+  font-size: var(--fs-sm);
+  font-weight: 650;
+  color: var(--s-text);
+}
+.lg-faq__list dd {
+  margin: 2px 0 0;
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--s-text-2);
+}
+
+/* ---------- Situações prontas ---------- */
+.lg-preset {
+  position: relative;
+  gap: 4px;
+}
+.lg-preset__meta {
+  margin-top: 2px;
+  font-weight: 560;
+  color: var(--s-text-2) !important;
+}
+.lg-preset__on {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 650;
+  color: var(--s-accent) !important;
+}
+.lg-preset__on svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ---------- Resultado de cada tarefa ---------- */
+.lg-outcome {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 4px;
+  padding: 1px 8px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--s-border-strong);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--s-text-2) !important;
+  overflow-wrap: anywhere;
+}
+.lg-outcome[data-code='true'] {
+  border-color: var(--s-accent-line);
+  color: var(--s-accent) !important;
+  background: var(--s-surface);
+}
+
+/* ---------- Quadro “O que o prompt vai pedir” ---------- */
+.lg-plain {
+  display: grid;
+  gap: var(--sp-4);
+  min-width: 0;
+}
+.lg-plain p {
+  margin: 0;
+}
+.lg-plain__k {
+  display: block;
+  margin-bottom: 4px;
+  font-size: var(--fs-xs);
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--s-text-3);
+}
+.lg-plain__does {
+  font-size: var(--fs-md);
+  line-height: 1.5;
+  color: var(--s-text);
+  overflow-wrap: anywhere;
+}
+.lg-plain__does .lg-outcome {
+  display: flex;
+  margin-top: var(--sp-2);
+}
+.lg-screens {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.lg-screens li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-2);
+  font-size: var(--fs-sm);
+  color: var(--s-text);
+  min-width: 0;
+}
+.lg-screens li > svg {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  padding: 2px;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--s-success);
+}
+.lg-screens li[data-included='false'] {
+  color: var(--s-text-3);
+}
+.lg-screens li[data-included='false'] > svg {
+  color: var(--s-text-3);
+  background: var(--s-hover);
+}
+.lg-screens li > span {
+  display: grid;
+  min-width: 0;
+}
+.lg-plain__one {
+  padding: var(--sp-3);
+  border-radius: var(--r-md);
+  border: 1px solid var(--s-border);
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--s-text-2);
+}
+.lg-plain__one strong {
+  color: var(--s-text);
+}
+.lg-plain__rules {
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+  color: var(--s-text);
+  overflow-wrap: anywhere;
+}
+.lg-warnings {
+  display: grid;
+  gap: var(--sp-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.lg-warnings li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-2);
+  padding: var(--sp-2) var(--sp-3);
+  border-radius: var(--r-md);
+  border: 1px solid #f1d3a8;
+  background: var(--s-warning-soft);
+  font-size: var(--fs-sm);
+  line-height: 1.45;
+  color: var(--s-text);
+}
+.lg-warnings svg {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  color: var(--s-warning);
+}
+.lg-details--tech .lg-summary {
+  padding-top: var(--sp-2);
+}
+
+/* ---------- Telas agrupadas por família ---------- */
+.lg-devgroup {
+  display: grid;
+  gap: 6px;
+}
+.lg-devgroup__label {
+  font-size: var(--fs-xs);
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--s-text-3);
+}
+
+/* ---------- Faixa “telas que entram no prompt” (só em telas estreitas) ---------- */
+.lg-picked {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-3);
+  margin: calc(var(--sp-5) * -1) 0 var(--sp-7);
+  padding: var(--sp-3) var(--sp-4);
+  border: 1px solid var(--s-border);
+  border-radius: var(--r-lg);
+  min-width: 0;
+}
+.lg-picked p {
+  margin: 0;
+  min-width: 0;
+}
+.lg-picked__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px var(--sp-3);
+  font-size: var(--fs-sm);
+  font-weight: 560;
+}
+.lg-picked__list > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.lg-picked__list svg {
+  width: 15px;
+  height: 15px;
+  color: var(--s-success);
+}
+.lg-picked__list > span[data-included='false'] {
+  color: var(--s-text-3);
+}
+.lg-picked__list > span[data-included='false'] svg {
+  color: var(--s-text-3);
+}
+@media (min-width: 1180px) {
+  .lg-picked {
+    display: none;
+  }
+}

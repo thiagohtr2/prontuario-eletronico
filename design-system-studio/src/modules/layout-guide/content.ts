@@ -29,6 +29,10 @@ export interface TaskDef {
   goal: string
   /** Como conduzir o trabalho, em passos. */
   steps: string[]
+  /** Em português simples, completando “A IA vai…”. */
+  does: string
+  /** A IA altera o código (true) ou entrega só um relatório/proposta (false). */
+  changesCode: boolean
 }
 
 export const TASKS: TaskDef[] = [
@@ -43,6 +47,8 @@ export const TASKS: TaskDef[] = [
       'Comece pela menor largura selecionada e amplie (mobile-first), definindo como cada região se reorganiza.',
       'Descreva brevemente a estrutura escolhida (regiões, grid e comportamento por faixa de largura) antes ou junto com a implementação.',
     ],
+    does: 'criar a página do zero, já funcionando em todas as telas marcadas',
+    changesCode: true,
   },
   {
     id: 'revisar',
@@ -55,6 +61,8 @@ export const TASKS: TaskDef[] = [
       'Classifique os problemas: bloqueia o uso, prejudica o uso, ou acabamento.',
       'Só altere código se for pedido nas restrições; caso contrário, entregue o relatório e as correções propostas.',
     ],
+    does: 'olhar a página e listar os problemas, sem mudar nada',
+    changesCode: false,
   },
   {
     id: 'corrigir-responsividade',
@@ -67,6 +75,8 @@ export const TASKS: TaskDef[] = [
       'Corrija no ponto de origem, preferindo ajustar o componente ou o token compartilhado a criar exceções locais.',
       'Depois de cada correção, confira as outras larguras para não criar um problema novo.',
     ],
+    does: 'consertar o código para a página funcionar em todas as telas marcadas',
+    changesCode: true,
   },
   {
     id: 'auditar-consistencia',
@@ -79,6 +89,8 @@ export const TASKS: TaskDef[] = [
       'Proponha a unificação usando os tokens existentes; sugira tokens novos apenas quando faltar um valor necessário.',
       'Agrupe as correções por componente para facilitar a revisão.',
     ],
+    does: 'comparar espaçamentos, tamanhos e cores e propor como padronizar',
+    changesCode: false,
   },
   {
     id: 'acessibilidade',
@@ -91,6 +103,8 @@ export const TASKS: TaskDef[] = [
       'Prefira HTML semântico a atributos ARIA; use ARIA só quando não houver elemento nativo adequado.',
       'Mantenha a aparência e o comportamento do projeto; acessibilidade não deve mudar a identidade visual.',
     ],
+    does: 'consertar o que dificulta o uso: teclado, contraste, toque, leitores de tela e zoom',
+    changesCode: true,
   },
   {
     id: 'adaptar-celular',
@@ -103,6 +117,8 @@ export const TASKS: TaskDef[] = [
       'Garanta alvos de toque adequados, campos que não ficam sob o teclado virtual e ações principais sempre alcançáveis.',
       'Confira retrato e paisagem e as áreas seguras de aparelhos com recorte na tela.',
     ],
+    does: 'ajustar uma tela que hoje só fica boa no computador para funcionar bem no celular',
+    changesCode: true,
   },
   {
     id: 'adaptar-desktop',
@@ -115,6 +131,8 @@ export const TASKS: TaskDef[] = [
       'Garanta que interações de mouse (hover, menus, atalhos) tenham equivalentes por teclado.',
       'Confira também janelas estreitas no desktop (janela dividida, zoom alto), não só a tela cheia.',
     ],
+    does: 'ajustar uma tela para aproveitar bem notebooks, monitores e telas grandes',
+    changesCode: true,
   },
   {
     id: 'revisao-completa',
@@ -127,6 +145,8 @@ export const TASKS: TaskDef[] = [
       'Depois revise página por página, em cada largura selecionada, registrando os problemas encontrados.',
       'Entregue uma lista priorizada por gravidade e por quantidade de telas afetadas, e corrija na ordem dessa lista se a correção fizer parte da tarefa.',
     ],
+    does: 'revisar todas as páginas do site, listar os problemas e corrigir na ordem de prioridade',
+    changesCode: true,
   },
 ]
 
@@ -175,17 +195,28 @@ export interface DeviceDef {
   /** Larguras sugeridas para teste. */
   widths: number[]
   note: string
+  /** Família de aparelho (para explicar em português simples o que está incluído). */
+  group: DeviceGroup
 }
 
+export type DeviceGroup = 'celular' | 'tablet' | 'computador' | 'tela-grande'
+
+export const DEVICE_GROUPS: { id: DeviceGroup; label: string }[] = [
+  { id: 'celular', label: 'Celular' },
+  { id: 'tablet', label: 'Tablet' },
+  { id: 'computador', label: 'Computador' },
+  { id: 'tela-grande', label: 'Monitor grande' },
+]
+
 export const DEVICES: DeviceDef[] = [
-  { id: 'cel-pequeno', label: 'Celular pequeno', range: '320–359 px', widths: [320, 344], note: 'telas estreitas e aparelhos dobráveis fechados' },
-  { id: 'cel-padrao', label: 'Celular padrão', range: '360–399 px', widths: [360, 375, 390], note: 'a faixa mais comum' },
-  { id: 'cel-grande', label: 'Celular grande', range: '400–480 px', widths: [412, 430], note: 'modelos “Plus/Max” e Androids grandes' },
-  { id: 'tablet-retrato', label: 'Tablet em retrato', range: '600–900 px', widths: [768, 820], note: 'também janelas estreitas no desktop' },
-  { id: 'tablet-paisagem', label: 'Tablet em paisagem', range: '1000–1200 px', widths: [1024, 1180], note: 'toque com tela larga' },
-  { id: 'notebook', label: 'Notebook', range: '1280–1440 px', widths: [1280, 1366, 1440], note: 'inclui escalonamento de 125–150% do sistema' },
-  { id: 'desktop', label: 'Desktop', range: '1536–1920 px', widths: [1536, 1920], note: 'monitores Full HD' },
-  { id: 'ultrawide', label: 'Monitor grande ou ultrawide', range: '2560 px ou mais', widths: [2560, 3440], note: 'conteúdo não pode esticar sem limite' },
+  { id: 'cel-pequeno', label: 'Celular pequeno', range: '320–359 px', widths: [320, 344], note: 'telas estreitas e aparelhos dobráveis fechados', group: 'celular' },
+  { id: 'cel-padrao', label: 'Celular padrão', range: '360–399 px', widths: [360, 375, 390], note: 'a faixa mais comum', group: 'celular' },
+  { id: 'cel-grande', label: 'Celular grande', range: '400–480 px', widths: [412, 430], note: 'modelos “Plus/Max” e Androids grandes', group: 'celular' },
+  { id: 'tablet-retrato', label: 'Tablet em retrato', range: '600–900 px', widths: [768, 820], note: 'também janelas estreitas no desktop', group: 'tablet' },
+  { id: 'tablet-paisagem', label: 'Tablet em paisagem', range: '1000–1200 px', widths: [1024, 1180], note: 'toque com tela larga', group: 'tablet' },
+  { id: 'notebook', label: 'Notebook', range: '1280–1440 px', widths: [1280, 1366, 1440], note: 'inclui escalonamento de 125–150% do sistema', group: 'computador' },
+  { id: 'desktop', label: 'Desktop', range: '1536–1920 px', widths: [1536, 1920], note: 'monitores Full HD', group: 'computador' },
+  { id: 'ultrawide', label: 'Monitor grande ou ultrawide', range: '2560 px ou mais', widths: [2560, 3440], note: 'conteúdo não pode esticar sem limite', group: 'tela-grande' },
 ]
 
 export type EnvId = 'navegadores' | 'windows' | 'macos' | 'linux' | 'android' | 'ios'
@@ -256,6 +287,8 @@ export interface ModuleDef {
   title: string
   /** Uma linha na tela. */
   summary: string
+  /** Nome em português simples (para a frase “a IA vai cuidar de…”). */
+  plain: string
   /** Ativo na configuração padrão. */
   defaultOn: boolean
   /** Regras que entram no prompt (algumas dependem das opções). */
@@ -270,6 +303,7 @@ export const MODULES: ModuleDef[] = [
     id: 'A',
     title: 'Responsividade e adaptação de tela',
     summary: 'Telas pequenas a ultrawide, retrato e paisagem, zoom e janelas estreitas.',
+    plain: 'adaptar a página a cada tamanho de tela',
     defaultOn: true,
     rules: () => [
       'O layout funciona em telas pequenas, médias, grandes e ultrawide, sem depender de uma resolução única.',
@@ -288,6 +322,7 @@ export const MODULES: ModuleDef[] = [
     id: 'B',
     title: 'Margens, espaçamento e alinhamento',
     summary: 'Escala de espaçamento, respiro, alinhamentos e áreas seguras.',
+    plain: 'espaçamentos e alinhamentos',
     defaultOn: true,
     rules: (o) => [
       SPACING_OPTIONS.find((s) => s.id === o.spacing)!.text,
@@ -305,6 +340,7 @@ export const MODULES: ModuleDef[] = [
     id: 'C',
     title: 'Botões, links e ações',
     summary: 'Sem sobreposição ou corte, toque confortável e estados distintos.',
+    plain: 'botões e links',
     defaultOn: true,
     rules: (o) => [
       'Botões nunca se sobrepõem, colidem ou ficam parcialmente cobertos por outros elementos.',
@@ -323,6 +359,7 @@ export const MODULES: ModuleDef[] = [
     id: 'D',
     title: 'Textos, títulos e conteúdo',
     summary: 'Nada cortado ou sobreposto, quebra de palavras longas, legibilidade.',
+    plain: 'textos e títulos',
     defaultOn: true,
     rules: () => [
       'Nenhum texto fica sobre outro texto ou sobre imagens, botões, campos, ícones ou outros elementos de forma não intencional.',
@@ -343,6 +380,7 @@ export const MODULES: ModuleDef[] = [
     id: 'E',
     title: 'Imagens, ícones e mídia',
     summary: 'Proporções, cortes, alinhamento de ícones e estados de carregamento.',
+    plain: 'imagens e ícones',
     defaultOn: true,
     rules: () => [
       'Imagens nunca aparecem distorcidas.',
@@ -360,6 +398,7 @@ export const MODULES: ModuleDef[] = [
     id: 'F',
     title: 'Fundos, cores e contraste',
     summary: 'Contraste suficiente, hierarquia sem depender de cor, temas.',
+    plain: 'cores e contraste',
     defaultOn: true,
     rules: (o) => [
       'Fundos coerentes com a identidade visual existente; preserve as cores e os tokens do design system do projeto.',
@@ -377,6 +416,7 @@ export const MODULES: ModuleDef[] = [
     id: 'G',
     title: 'Formulários e campos',
     summary: 'Rótulos, mensagens de erro, foco, teclado virtual e estados.',
+    plain: 'formulários',
     defaultOn: true,
     rules: (o) => [
       'Campos alinhados e com espaçamento consistente.',
@@ -396,6 +436,7 @@ export const MODULES: ModuleDef[] = [
     id: 'H',
     title: 'Navegação, cabeçalho e menus',
     summary: 'Menus em telas estreitas, página atual, camadas e elementos fixos.',
+    plain: 'menus e cabeçalho',
     defaultOn: true,
     rules: () => [
       'A navegação é visível, compreensível e utilizável em todas as larguras.',
@@ -414,6 +455,7 @@ export const MODULES: ModuleDef[] = [
     id: 'I',
     title: 'Modais, painéis, notificações e menus flutuantes',
     summary: 'Cabem na tela, rolam por dentro, foco controlado e Esc.',
+    plain: 'janelas e avisos que abrem por cima',
     defaultOn: true,
     rules: () => [
       'Modais cabem na área visível em qualquer largura e altura.',
@@ -432,6 +474,7 @@ export const MODULES: ModuleDef[] = [
     id: 'J',
     title: 'Acessibilidade e interação',
     summary: 'Teclado, foco visível, semântica, leitores de tela, movimento e zoom.',
+    plain: 'acessibilidade (teclado, leitores de tela, zoom)',
     defaultOn: true,
     rules: (o) => [
       'Toda a interface pode ser usada pelo teclado, com ordem de foco lógica (a mesma da leitura).',
@@ -451,6 +494,7 @@ export const MODULES: ModuleDef[] = [
     id: 'K',
     title: 'Compatibilidade e comportamento técnico',
     summary: 'Navegadores, Flexbox/Grid, alturas do celular e saltos de layout.',
+    plain: 'diferenças entre navegadores e sistemas',
     defaultOn: true,
     rules: () => [
       'Teste nos navegadores e sistemas selecionados e nos que o projeto declara suportar.',
@@ -467,6 +511,7 @@ export const MODULES: ModuleDef[] = [
     id: 'L',
     title: 'Estados e conteúdo variável',
     summary: 'Carregando, vazio, erro, sucesso, dados longos, sem permissão…',
+    plain: 'telas de carregando, vazio e erro',
     defaultOn: true,
     rules: () => [
       'Revise a interface nos estados: carregando; vazio; erro; sucesso; dados muito longos; listas grandes; sem imagem; usuário sem permissão; conexão lenta; elementos desabilitados; mensagens inesperadas; conteúdo que aparece ou desaparece após uma interação.',
@@ -479,6 +524,7 @@ export const MODULES: ModuleDef[] = [
     id: 'M',
     title: 'Impressão (opcional)',
     summary: 'Só quando o conteúdo precisa ser impresso.',
+    plain: 'impressão',
     defaultOn: false,
     rules: () => [
       'O conteúdo importante aparece na impressão.',
@@ -492,6 +538,7 @@ export const MODULES: ModuleDef[] = [
     id: 'N',
     title: 'Verificação visual e checklist de saída',
     summary: 'O que a IA deve conferir e relatar antes de concluir.',
+    plain: 'conferência final e relatório do que foi feito',
     defaultOn: true,
     rules: () => [
       'Examine a implementação existente antes de propor alterações.',
@@ -544,7 +591,12 @@ export const defaultConfig = (): GuideConfig => ({ ...defaultSelections(), conte
 
 export interface PresetDef {
   id: string
+  /** Nome técnico do atalho. */
   label: string
+  /** A situação da pessoa, em português simples (título do cartão). */
+  situation: string
+  /** O que acontece, em português simples. */
+  explain: string
   description: string
   task: TaskId
   devices: DeviceId[]
@@ -559,6 +611,8 @@ export const PRESETS: PresetDef[] = [
   {
     id: 'responsivo-completo',
     label: 'Layout responsivo completo',
+    situation: 'Vou criar uma página nova',
+    explain: 'A IA cria a página já funcionando no celular, no tablet e no computador. Não precisa pedir a versão de celular depois.',
     description: 'Do celular pequeno ao ultrawide, com todas as práticas de estrutura.',
     task: 'criar',
     devices: ALL_DEVICES,
@@ -568,6 +622,8 @@ export const PRESETS: PresetDef[] = [
   {
     id: 'celular',
     label: 'Revisão para celular',
+    situation: 'Minha página não fica boa no celular',
+    explain: 'A página já existe e funciona no computador. A IA ajusta para celulares e tablets em pé.',
     description: 'Celulares e tablet em retrato, toque, teclado virtual e áreas seguras.',
     task: 'adaptar-celular',
     devices: ['cel-pequeno', 'cel-padrao', 'cel-grande', 'tablet-retrato'],
@@ -577,6 +633,8 @@ export const PRESETS: PresetDef[] = [
   {
     id: 'desktop',
     label: 'Revisão de desktop',
+    situation: 'Minha página fica estranha em tela grande',
+    explain: 'Conteúdo esticado, espalhado ou pequeno demais no notebook ou no monitor. A IA ajusta para telas grandes.',
     description: 'Tablet em paisagem, notebook, desktop e monitores grandes.',
     task: 'adaptar-desktop',
     devices: ['tablet-paisagem', 'notebook', 'desktop', 'ultrawide'],
@@ -586,6 +644,8 @@ export const PRESETS: PresetDef[] = [
   {
     id: 'sobreposicoes',
     label: 'Auditoria de sobreposições e cortes',
+    situation: 'Tem coisa sobreposta, cortada ou saindo da tela',
+    explain: 'Botão em cima de botão, texto cortado, página que rola para o lado. A IA acha a causa e conserta em todas as telas.',
     description: 'Elementos sobrepostos, textos cortados e conteúdo fora da tela.',
     task: 'corrigir-responsividade',
     devices: ALL_DEVICES,
@@ -595,6 +655,8 @@ export const PRESETS: PresetDef[] = [
   {
     id: 'acessibilidade',
     label: 'Acessibilidade e usabilidade',
+    situation: 'Quero que todo mundo consiga usar',
+    explain: 'Teclado, contraste, tamanho de toque, leitores de tela e zoom. A IA corrige o que dificulta o uso.',
     description: 'Teclado, foco, contraste, toque, leitores de tela e zoom.',
     task: 'acessibilidade',
     devices: ['cel-padrao', 'tablet-retrato', 'notebook', 'desktop'],
@@ -604,6 +666,8 @@ export const PRESETS: PresetDef[] = [
   {
     id: 'site-completo',
     label: 'Revisão completa do site',
+    situation: 'Quero revisar o site inteiro',
+    explain: 'Todas as páginas, em todas as telas e sistemas. A IA lista os problemas e corrige por ordem de importância.',
     description: 'Todas as páginas, larguras, ambientes e práticas (impressão é opcional).',
     task: 'revisao-completa',
     devices: ALL_DEVICES,

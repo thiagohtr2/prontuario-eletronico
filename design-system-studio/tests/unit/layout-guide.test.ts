@@ -10,7 +10,7 @@ import {
   matchingPreset,
   type GuideConfig,
 } from '@/modules/layout-guide/content'
-import { buildLayoutPrompt, sanitizeConfig, summarize, testWidths } from '@/modules/layout-guide/prompt'
+import { buildLayoutPrompt, explainPlain, sanitizeConfig, summarize, testWidths } from '@/modules/layout-guide/prompt'
 import { isStale, useGuide } from '@/modules/layout-guide/store'
 
 /** Boas práticas de layout: o prompt é função pura das opções; nada desligado entra no texto. */
@@ -154,6 +154,42 @@ describe('Atalhos (presets)', () => {
     expect(s.devices).toBe('4 de 8 telas')
     expect(s.widths).toBe('320 a 820 px (9 larguras)')
     expect(s.envs).toBe('Navegadores modernos, Android, iOS e iPadOS')
+  })
+})
+
+describe('Explicação em português simples', () => {
+  it('“Vou criar uma página nova” já inclui celular, tablet, computador e monitor grande', () => {
+    const p = explainPlain(applyPreset(cfg(), 'responsivo-completo'))
+    expect(p.does).toBe('criar a página do zero, já funcionando em todas as telas marcadas')
+    expect(p.changesCode).toBe(true)
+    expect(p.screens.map((s) => [s.label, s.included])).toEqual([
+      ['Celular', true],
+      ['Tablet', true],
+      ['Computador', true],
+      ['Monitor grande', true],
+    ])
+    expect(p.screens[0].detail).toBe('todos os tamanhos · 320 a 430 px')
+    expect(p.warnings).toEqual([])
+  })
+
+  it('situação de celular deixa claro que o computador não entra', () => {
+    const p = explainPlain(applyPreset(cfg(), 'celular'))
+    expect(p.screens.find((s) => s.group === 'computador')!.included).toBe(false)
+    expect(p.screens.find((s) => s.group === 'tablet')!.detail).toBe('retrato · 768 a 820 px')
+    expect(p.warnings).toEqual([])
+  })
+
+  it('avisa quando falta celular, quando a regra de adaptação está desligada ou quando não há regras', () => {
+    expect(explainPlain(cfg({ devices: ['notebook', 'desktop'] })).warnings.join(' ')).toContain('Nenhum celular marcado')
+    expect(explainPlain(cfg({ modules: ['B', 'C'] })).warnings.join(' ')).toContain('regra A')
+    expect(explainPlain(cfg({ modules: [] })).warnings.join(' ')).toContain('Nenhuma regra ligada')
+    expect(explainPlain(cfg({ devices: [] })).warnings.join(' ')).toContain('Nenhuma tela marcada')
+  })
+
+  it('tarefas de revisão dizem que não mexem no código', () => {
+    expect(explainPlain(cfg({ task: 'revisar' })).changesCode).toBe(false)
+    expect(explainPlain(cfg({ task: 'auditar-consistencia' })).changesCode).toBe(false)
+    expect(explainPlain(cfg()).rulesOff).toEqual(['impressão'])
   })
 })
 

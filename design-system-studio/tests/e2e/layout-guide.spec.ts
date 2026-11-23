@@ -36,6 +36,9 @@ test('atalho preenche as opções e o prompt muda conforme as seleções', async
   await page.getByTestId('lg-device-notebook').check()
   await expect(page.getByTestId('lg-preset-celular')).toHaveAttribute('aria-pressed', 'false')
 
+  // O quadro explica em português simples o que entra (e o que fica de fora).
+  await expect(page.getByTestId('lg-screen-celular')).toHaveAttribute('data-included', 'true')
+  await expect(page.getByTestId('lg-summary')).toContainText('um prompt só')
   await page.getByTestId('lg-create').click()
   await expect(editor(page)).toHaveValue(/# Boas práticas de layout — Adaptar uma tela para celular/)
   await expect(editor(page)).toHaveValue(/Notebook \(1280–1440 px\)/)
@@ -49,6 +52,20 @@ test('atalho preenche as opções e o prompt muda conforme as seleções', async
   await expect(page.getByTestId('lg-module-count')).toHaveText('14 de 14 ativos')
   await expect(editor(page)).toHaveValue(/### A\. Responsividade/)
   expect(errors).toEqual([])
+})
+
+test('“Vou criar uma página nova” mostra que já inclui o celular; sem celular, aparece um aviso', async ({ page }) => {
+  await open(page)
+  await page.getByTestId('lg-preset-responsivo-completo').click()
+  for (const g of ['celular', 'tablet', 'computador', 'tela-grande']) await expect(page.getByTestId(`lg-screen-${g}`)).toHaveAttribute('data-included', 'true')
+  await expect(page.getByTestId('lg-summary')).toContainText('A IA vai criar a página do zero, já funcionando em todas as telas marcadas')
+  await expect(page.getByTestId('lg-warnings')).toHaveCount(0)
+  for (const d of ['cel-pequeno', 'cel-padrao', 'cel-grande']) await page.getByTestId(`lg-device-${d}`).uncheck()
+  await expect(page.getByTestId('lg-screen-celular')).toHaveAttribute('data-included', 'false')
+  await expect(page.getByTestId('lg-warnings')).toContainText('Nenhum celular marcado')
+  // Dúvidas comuns respondem a pergunta na própria tela.
+  await page.getByTestId('lg-faq').locator('summary').click()
+  await expect(page.getByTestId('lg-faq')).toContainText('Preciso de um prompt para o computador e outro para o celular?')
 })
 
 test('contexto preenchido entra no prompt; limpar pede confirmação', async ({ page }) => {
@@ -132,6 +149,8 @@ for (const width of [320, 375, 390, 430, 768, 1024, 1440, 1920]) {
     await page.setViewportSize({ width, height: width < 768 ? 800 : 900 })
     await open(page)
     expect(await horizontalOverflow(page)).toBeLessThanOrEqual(0)
+    // Em telas estreitas, a faixa de telas marcadas aparece logo abaixo das situações; na larga, o quadro já está ao lado.
+    await expect(page.getByTestId('lg-picked')).toBeVisible({ visible: width < 1180 })
     if (width < 1180) await page.getByTestId('lg-jump').click()
     await page.getByTestId('lg-create').click()
     await expect(editor(page)).toBeVisible()

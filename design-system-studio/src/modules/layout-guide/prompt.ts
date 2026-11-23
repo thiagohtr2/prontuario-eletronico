@@ -1,6 +1,7 @@
 import {
   CONTEXT_FIELDS,
   DEFAULT_OPTIONS,
+  DEVICE_GROUPS,
   DEVICES,
   ENVS,
   MODULES,
@@ -11,6 +12,7 @@ import {
   emptyContext,
   taskById,
   type ContextKey,
+  type DeviceGroup,
   type DeviceId,
   type EnvId,
   type GuideConfig,
@@ -159,6 +161,65 @@ export function summarize(cfg: GuideConfig): GuideSummary {
     modules: mods.length ? mods.map((m) => m.id).join(' · ') : 'Nenhum',
     moduleCount: mods.length,
     context: filled.length ? `${filled.length} de ${CONTEXT_FIELDS.length} campos preenchidos` : 'Nenhum campo preenchido',
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Explicação em português simples (o que o prompt vai pedir)                  */
+/* -------------------------------------------------------------------------- */
+
+export interface PlainScreen {
+  group: DeviceGroup
+  label: string
+  included: boolean
+  /** Ex.: “pequeno, padrão e grande · 320 a 430 px”. */
+  detail: string
+}
+
+export interface PlainExplanation {
+  /** Completa “A IA vai…”. */
+  does: string
+  changesCode: boolean
+  screens: PlainScreen[]
+  /** Nomes simples das regras ligadas e desligadas. */
+  rulesOn: string[]
+  rulesOff: string[]
+  /** Avisos sobre combinações que provavelmente não são o que a pessoa quer. */
+  warnings: string[]
+}
+
+const joinPt = (items: string[]) => (items.length <= 1 ? items.join('') : `${items.slice(0, -1).join(', ')} e ${items[items.length - 1]}`)
+
+/** Mesma configuração do prompt, explicada para quem não é da área. */
+export function explainPlain(cfg: GuideConfig): PlainExplanation {
+  const task = taskById(cfg.task) ?? TASKS[0]
+  const on = MODULES.filter((m) => cfg.modules.includes(m.id))
+  const screens: PlainScreen[] = DEVICE_GROUPS.map((g) => {
+    const all = DEVICES.filter((d) => d.group === g.id)
+    const picked = all.filter((d) => cfg.devices.includes(d.id))
+    const widths = testWidths(picked.map((d) => d.id))
+    const names = picked.map((d) => d.label.replace(/^(Celular|Tablet em) /, '').replace(/^Monitor grande ou /, ''))
+    const which = picked.length === all.length || all.length === 1 ? (all.length > 1 ? 'todos os tamanhos' : '') : joinPt(names)
+    const range = widths.length ? (widths.length === 1 ? `${widths[0]} px` : `${widths[0]} a ${widths[widths.length - 1]} px`) : ''
+    return { group: g.id, label: g.label, included: picked.length > 0, detail: [which, range].filter(Boolean).join(' · ') }
+  })
+  const has = (g: DeviceGroup) => screens.find((x) => x.group === g)!.included
+  const warnings: string[] = []
+  if (!cfg.devices.length) warnings.push('Nenhuma tela marcada: o prompt vai pedir para a IA testar pelo menos um celular, um tablet e um computador.')
+  else {
+    if (!has('celular') && cfg.task !== 'adaptar-desktop') warnings.push('Nenhum celular marcado: o prompt não vai pedir que a página funcione no celular.')
+    if (!has('computador') && cfg.task !== 'adaptar-celular') warnings.push('Nenhum computador marcado: o prompt não vai pedir que a página funcione no notebook nem no desktop.')
+    if (cfg.task === 'adaptar-desktop' && !has('computador') && !has('tela-grande')) warnings.push('A tarefa é adaptar para desktop, mas nenhum computador ou monitor grande está marcado.')
+  }
+  if (!on.length) warnings.push('Nenhuma regra ligada: o prompt terá só a tarefa, o contexto e as telas.')
+  else if (!cfg.modules.includes('A') && cfg.devices.length > 1) warnings.push('A regra A (adaptar a página a cada tamanho de tela) está desligada: a IA recebe a lista de telas, mas não as instruções de como adaptar.')
+  return {
+    does: task.does,
+    changesCode: task.changesCode,
+    screens,
+    rulesOn: on.map((m) => m.plain),
+    rulesOff: MODULES.filter((m) => !cfg.modules.includes(m.id)).map((m) => m.plain),
+    warnings,
   }
 }
 
